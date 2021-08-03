@@ -7,9 +7,12 @@
 
 ![Client](img/client.png)
 
+
 ### 5G Media Streaming and Broadcast server
 
 ![Server](img/server.png)
+
+
 
 ### RAN and auxiliary processes
 
