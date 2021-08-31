@@ -4,17 +4,20 @@ Everything related to the documentation and architecture
 
 ## Participation
 
-If you want to participate in the 5G-MAG acitvities please checkout the following links:
+If you wish to participate in the 5G-MAG Reference Tools development programme please checkout the following link:
 
-* [5G-MAG Website](https://www.5g-mag.com/)
-* [Linked-In](https://www.linkedin.com/company/5g-mag/)
-* [Twitter](https://twitter.com/5gmagnews)
-* [Youtube](https://www.youtube.com/channel/UCKzSvQnMItdCHelTd9Pg3aQ)
+* [5G-MAG Reference Tools website](https://www.5g-mag.com/reference-tools)
 
 For active contributions to the Github projects please join our Slack Channel and the mailing list:
 
 * [Slack](https://5g-mag.slack.com)
 * [Mailing list](https://groups.google.com/g/5g-mag-reference-tools)
+
+More information about 5G-MAG at:
+* [5G-MAG website](https://www.5g-mag.com/)
+* [Linked-In](https://www.linkedin.com/company/5g-mag/)
+* [Twitter](https://twitter.com/5gmagnews)
+* [Youtube](https://www.youtube.com/channel/UCKzSvQnMItdCHelTd9Pg3aQ)
 
 ## Related Specifications
 ### 5GMS
