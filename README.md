@@ -36,8 +36,16 @@ More information about 5G-MAG at:
 * [36.212 - Multiplexing and channel coding](https://www.3gpp.org/ftp/Specs/archive/36_series/36.212)
 * [36.213 - Physical layer procedures](https://www.3gpp.org/ftp/Specs/archive/36_series/36.213)
 
+## 5G-MAG Reference Tools/Obeca - How to setup
+Open Broadcast Edge Cache Appliance (OBECA) is a platform to
+
+* receive 5G broadcast (5G BC) in dedicated mode, i.e. using 100 % downlink capacity (also known as EnTV/FeMBMS in 3GPP Rel.14 and LTE-based 5G Terrestrial Broadcast in 3GPP Rel.16)
+* combine 5G BC with common (5G) (mobile) broadband, process and cache it for applications
+* develop interactive applications and proof-of-concepts for hybrid distribution for broadcaster
+
+For detailed instructions on how to setup the projects please visit the [Wiki](https://github.com/5G-MAG/Documentation-and-Architecture/wiki). 
 ## Scope
 
 ## Architecture documents
 
-* [Project architecture](architecture/architecture.md)
+* [Project architecture](md/architecture.md)
