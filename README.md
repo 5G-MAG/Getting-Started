@@ -47,9 +47,11 @@ For detailed instructions on how to setup the projects please visit the [Wiki](h
 
 ### Demo video
 
-<video width="640" height="360" controls>
-  <source src="media/wiki/5G-MAGRefToolsDemo.mp4" type="video/mp4">
-</video>
+
+
+https://user-images.githubusercontent.com/2427039/133638464-5692dbe4-c018-4652-a414-c6ca8c2a1785.mp4
+
+
 
 ## Scope
 
