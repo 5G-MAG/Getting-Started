@@ -44,6 +44,13 @@ Open Broadcast Edge Cache Appliance (OBECA) is a platform to
 * develop interactive applications and proof-of-concepts for hybrid distribution for broadcaster
 
 For detailed instructions on how to setup the projects please visit the [Wiki](https://github.com/5G-MAG/Documentation-and-Architecture/wiki). 
+
+### Demo video
+
+<video width="640" height="360" controls>
+  <source src="media/wiki/5G-MAGRefToolsDemo.mp4" type="video/mp4">
+</video>
+
 ## Scope
 
 ## Architecture documents
