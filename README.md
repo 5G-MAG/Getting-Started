@@ -38,6 +38,11 @@ If you have any questions you can also reach out to us via email: [reference-too
 * [36.212 - Multiplexing and channel coding](https://www.3gpp.org/ftp/Specs/archive/36_series/36.212)
 * [36.213 - Physical layer procedures](https://www.3gpp.org/ftp/Specs/archive/36_series/36.213)
 
+## 5G-MAG Reference Tools - How to participate
+We welcome everyone who is willing to contribute to the 5G-MAG Reference Tools. The participation is not limited to 5G-MAG members, quite the contrary we hope to attract researchers and independent developers into the community. 5G-MAG sponsors the coordination of the development by providing a program management support.
+
+Please find all relevant information on how to contribute on our [website](https://www.5g-mag.com/reference-tools)
+
 ## 5G-MAG Reference Tools - How to setup
 Open Broadcast Edge Cache Appliance (OBECA) is a platform to
 
@@ -49,13 +54,8 @@ For detailed instructions on how to setup the projects please visit the [Wiki](h
 
 ### Demo video
 
-
-
 https://user-images.githubusercontent.com/2427039/133638464-5692dbe4-c018-4652-a414-c6ca8c2a1785.mp4
 
-
-
-## Scope
 
 ## Architecture documents
 
