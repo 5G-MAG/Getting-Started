@@ -19,6 +19,8 @@ More information about 5G-MAG at:
 * [Twitter](https://twitter.com/5gmagnews)
 * [Youtube](https://www.youtube.com/channel/UCKzSvQnMItdCHelTd9Pg3aQ)
 
+If you have any questions you can also reach out to us via email: [reference-tools@5g-mag.com](mailto:reference-tools@5g-mag.com)
+
 ## Related Specifications
 ### 5GMS
 * [26.501 - 5G Media Streaming (5GMS); General description and architecture (Release 16)](https://www.3gpp.org/ftp/Specs/archive/26_series/26.501)
