@@ -54,7 +54,7 @@ For detailed instructions on how to setup the projects please visit the [Wiki](h
 
 ### Demo video
 
-https://user-images.githubusercontent.com/2427039/133638464-5692dbe4-c018-4652-a414-c6ca8c2a1785.mp4
+https://user-images.githubusercontent.com/2427039/134352329-f97a69b2-0009-446b-9815-b071b59b4d72.mp4
 
 
 ## Architecture documents
