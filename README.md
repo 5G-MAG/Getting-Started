@@ -52,6 +52,8 @@ The 5G-MAG Reference Tools are a platform to
 
 For detailed instructions on how to setup the projects please visit the [Wiki](https://github.com/5G-MAG/Documentation-and-Architecture/wiki). 
 
+An diagram illustrating the basic code flow can be found [here](https://github.com/5G-MAG/Documentation-and-Architecture/blob/main/media/architecture/rt-mbms-data-flow_kuehnhammer_08102021.png)
+
 ### Demo video
 
 https://user-images.githubusercontent.com/2427039/134352329-f97a69b2-0009-446b-9815-b071b59b4d72.mp4
