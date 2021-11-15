@@ -54,6 +54,8 @@ For detailed instructions on how to setup the projects please visit the [Wiki](h
 
 An diagram illustrating the basic code flow can be found [here](https://github.com/5G-MAG/Documentation-and-Architecture/blob/main/media/architecture/rt-mbms-data-flow_kuehnhammer_08102021.png)
 
+![Architecture](media/architecture/5G-MAG%20RT%20Overview%20v8.png)
+
 ### Demo video
 
 https://user-images.githubusercontent.com/2427039/134352329-f97a69b2-0009-446b-9815-b071b59b4d72.mp4
