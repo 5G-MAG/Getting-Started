@@ -1,19 +1,11 @@
 ## Architecture
 
 ### High level architecture
-![Architecture](../media/architecture/high-level.png)
+![Architecture](../media/architecture/5G-MAG%20RT%20Overview%20v8.png)
 
-### 5G Media Streaming and Broadcast client 
+### Detailed architecture
+![Architecture](../media/architecture/5G-MAG%20RT%20Architecture%20Current%20Architecture%20v8.drawio.png)
 
-![Client](../media/architecture/client.png)
+### Seamless switching use case
 
-
-### 5G Media Streaming and Broadcast server
-
-![Server](../media/architecture/server.png)
-
-
-
-### RAN and auxiliary processes
-
-![RAN](../media/architecture/ran.png)
+![Seamless switching](../media/architecture/5G-MAG%20RT%20Architecture%20Seamless%20Switching%20v8.drawio.png)
