@@ -64,5 +64,7 @@ An diagram illustrating the basic code flow can be found [here](https://github.c
 
 https://user-images.githubusercontent.com/2427039/134352329-f97a69b2-0009-446b-9815-b071b59b4d72.mp4
 
+## 5G-MAG Reference Tools - Seamless switching
+A demo video showcasing the seamless switching use case is available here under the following link (due to file limitations we can not embed it directly)
 
-
+https://github.com/5G-MAG/Documentation-and-Architecture/blob/main/media/wiki/Dynamic%20Switching.mp4
