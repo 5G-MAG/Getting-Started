@@ -1,6 +1,11 @@
 # Documentation-and-Architecture
 
-Everything related to the documentation and architecture
+The 5G-MAG Reference Tools are a platform to
+
+* receive 5G broadcast (5G BC) in dedicated mode, i.e. using 100 % downlink capacity (also known as EnTV/FeMBMS in 3GPP Rel.14 and LTE-based 5G Terrestrial Broadcast in 3GPP Rel.16)
+* combine 5G BC with common (5G) (mobile) broadband, process and cache it for applications
+* develop interactive applications and proof-of-concepts for hybrid distribution for broadcaster
+* dynamically and seamlessly switch between broadcast and broadband content
 
 ## Participation
 
@@ -44,12 +49,6 @@ We welcome everyone who is willing to contribute to the 5G-MAG Reference Tools. 
 Please find all relevant information on how to contribute on our [website](https://www.5g-mag.com/reference-tools).
 
 ## 5G-MAG Reference Tools - How to setup
-The 5G-MAG Reference Tools are a platform to
-
-* receive 5G broadcast (5G BC) in dedicated mode, i.e. using 100 % downlink capacity (also known as EnTV/FeMBMS in 3GPP Rel.14 and LTE-based 5G Terrestrial Broadcast in 3GPP Rel.16)
-* combine 5G BC with common (5G) (mobile) broadband, process and cache it for applications
-* develop interactive applications and proof-of-concepts for hybrid distribution for broadcaster
-
 For detailed instructions on how to setup the projects please visit the [Wiki](https://github.com/5G-MAG/Documentation-and-Architecture/wiki). 
 
 An diagram illustrating the basic code flow can be found [here](https://github.com/5G-MAG/Documentation-and-Architecture/blob/main/media/architecture/rt-mbms-data-flow_kuehnhammer_08102021.png)
