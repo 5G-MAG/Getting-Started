@@ -26,6 +26,22 @@ More information about 5G-MAG at:
 
 If you have any questions you can also reach out to us via email: [reference-tools@5g-mag.com](mailto:reference-tools@5g-mag.com)
 
+## 5G-MAG Reference Tools - How to participate
+We welcome everyone who is willing to contribute to the 5G-MAG Reference Tools. The participation is not limited to 5G-MAG members, quite the contrary we hope to attract researchers and independent developers into the community. 5G-MAG sponsors the coordination of the development by providing a program management support.
+
+Please find all relevant information on how to contribute on our [website](https://www.5g-mag.com/reference-tools).
+
+## 5G-MAG Reference Tools - How to setup
+For detailed instructions on how to setup the projects please visit the [Wiki](https://github.com/5G-MAG/Documentation-and-Architecture/wiki). 
+
+An diagram illustrating the basic code flow can be found [here](https://github.com/5G-MAG/Documentation-and-Architecture/blob/main/media/architecture/rt-mbms-data-flow_kuehnhammer_08102021.png)
+
+![Architecture](media/architecture/5G-MAG%20RT%20Overview%20v8.png)
+
+## 5G-MAG Reference Tools - Architecture documents
+
+* [Project architecture](md/architecture.md)
+
 ## Related Specifications
 ### 5GMS
 * [26.501 - 5G Media Streaming (5GMS); General description and architecture (Release 16)](https://www.3gpp.org/ftp/Specs/archive/26_series/26.501)
@@ -42,22 +58,6 @@ If you have any questions you can also reach out to us via email: [reference-too
 * [36.211 - Physical channels and modulation (Release 16)](https://www.3gpp.org/ftp/Specs/archive/36_series/36.211)
 * [36.212 - Multiplexing and channel coding](https://www.3gpp.org/ftp/Specs/archive/36_series/36.212)
 * [36.213 - Physical layer procedures](https://www.3gpp.org/ftp/Specs/archive/36_series/36.213)
-
-## 5G-MAG Reference Tools - How to participate
-We welcome everyone who is willing to contribute to the 5G-MAG Reference Tools. The participation is not limited to 5G-MAG members, quite the contrary we hope to attract researchers and independent developers into the community. 5G-MAG sponsors the coordination of the development by providing a program management support.
-
-Please find all relevant information on how to contribute on our [website](https://www.5g-mag.com/reference-tools).
-
-## 5G-MAG Reference Tools - How to setup
-For detailed instructions on how to setup the projects please visit the [Wiki](https://github.com/5G-MAG/Documentation-and-Architecture/wiki). 
-
-An diagram illustrating the basic code flow can be found [here](https://github.com/5G-MAG/Documentation-and-Architecture/blob/main/media/architecture/rt-mbms-data-flow_kuehnhammer_08102021.png)
-
-![Architecture](media/architecture/5G-MAG%20RT%20Overview%20v8.png)
-
-## 5G-MAG Reference Tools - Architecture documents
-
-* [Project architecture](md/architecture.md)
 
 ## 5G-MAG Reference Tools - Demo video - Seamless switching
 
