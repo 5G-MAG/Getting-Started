@@ -51,6 +51,7 @@ An diagram illustrating the basic code flow can be found [here](https://github.c
 * [26.347 - Multimedia Broadcast/Multicast Service (MBMS); Application Programming Interface and URL (Release 16)](https://www.3gpp.org/ftp/Specs/archive/26_series/26.347/)
 * [26.346 - Multimedia Broadcast/Multicast Service (MBMS); Protocols and codecs(Release 16)](https://www.3gpp.org/ftp/Specs/archive/26_series/26.346)
 * [29.116 - Representational state transfer over xMB reference point between content provider and BM-SC](https://www.3gpp.org/ftp/Specs/archive/29_series/29.116)
+* [36.976 - Overall description of LTE-based 5G broadcast](https://www.3gpp.org/ftp/Specs/archive/36_series/36.976)
 * [ETSI TS 103 720 - 5G Broadcast System for linear TV and radio services; LTE-based 5G terrestrial broadcast system](https://www.etsi.org/deliver/etsi_ts/103700_103799/103720/01.01.01_60/ts_103720v010101p.pdf)
 * [ETSI TS 123 246 - Multimedia Broadcast/Multicast Service (MBMS); Architecture and functional description ](https://www.etsi.org/deliver/etsi_ts/123200_123299/123246/)
 ### Supplementary
