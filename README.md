@@ -61,7 +61,7 @@ An diagram illustrating the basic code flow can be found [here](https://github.c
 * [36.213 - Physical layer procedures](https://www.3gpp.org/ftp/Specs/archive/36_series/36.213)
 
 ## Related papers
-* [5G MEDIA DISTRIBUTION ‐ STATUS AND ONGOING WORK] (https://www.ibc.org/download?ac=18605)
+* [5G MEDIA DISTRIBUTION ‐ STATUS AND ONGOING WORK](https://www.ibc.org/download?ac=18605)
 
 ## 5G-MAG Reference Tools - Demo video - Seamless switching
 
