@@ -60,8 +60,8 @@ An diagram illustrating the basic code flow can be found [here](https://github.c
 * [36.212 - Multiplexing and channel coding](https://www.3gpp.org/ftp/Specs/archive/36_series/36.212)
 * [36.213 - Physical layer procedures](https://www.3gpp.org/ftp/Specs/archive/36_series/36.213)
 
-## Related papers
-* [5G MEDIA DISTRIBUTION ‐ STATUS AND ONGOING WORK](https://www.ibc.org/download?ac=18605)
+## Recommended Reading
+* [3GPP Enhancements for Television Services: LTE-based 5G Terrestrial Broadcast](https://www.researchgate.net/publication/338777832_3GPP_Enhancements_for_Television_Services_LTE-based_5G_Terrestrial_Broadcast)
 
 ## 5G-MAG Reference Tools - Demo video - Seamless switching
 
