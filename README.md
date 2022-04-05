@@ -24,7 +24,8 @@ More information about 5G-MAG at:
 * [Twitter](https://twitter.com/5gmagnews)
 * [Youtube](https://www.youtube.com/channel/UCKzSvQnMItdCHelTd9Pg3aQ)
 
-If you have any questions you can also reach out to us via email: [reference-tools@5g-mag.com](mailto:reference-tools@5g-mag.com)
+If you run into any issues please use the Github issue tracker.
+If you have any questions that can not be shared publicly you can also reach out to us via email: [reference-tools@5g-mag.com](mailto:reference-tools@5g-mag.com)
 
 ## 5G-MAG Reference Tools - How to setup
 For detailed instructions on how to setup the projects please visit the [Wiki](https://github.com/5G-MAG/Documentation-and-Architecture/wiki). 
