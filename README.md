@@ -57,7 +57,7 @@ An diagram illustrating the basic code flow can be found [here](https://github.c
 * [36.213 - Physical layer procedures](https://www.3gpp.org/ftp/Specs/archive/36_series/36.213)
 
 ## Recommended Reading
-* [3GPP Enhancements for Television Services: LTE-based 5G Terrestrial Broadcast](https://www.researchgate.net/publication/338777832_3GPP_Enhancements_for_Television_Services_LTE-based_5G_Terrestrial_Broadcast)
+A list of recommended articles can be found [here](https://github.com/5G-MAG/Documentation-and-Architecture/wiki/Recommended-Reading)
 
 ## 5G-MAG Reference Tools - Demo video - Seamless switching
 
