@@ -11,7 +11,7 @@ The 5G-MAG Reference Tools are a platform to
 ## 5G-MAG Reference Tools - How to participate
 We welcome everyone who is willing to contribute to the 5G-MAG Reference Tools. The participation is not limited to 5G-MAG members, quite the contrary we hope to attract researchers and independent developers into the community. 5G-MAG sponsors the coordination of the development by providing a program management support.
 
-Please find all relevant information on how to contribute on our [website](https://www.5g-mag.com/reference-tools).
+Please find all relevant information on how to contribute on our [website](https://www.5g-mag.com/reference-tools) and our community [guide](https://www.5g-mag.com/community).
 
 For active contributions to the Github projects please join our Slack Channel and the mailing list:
 
