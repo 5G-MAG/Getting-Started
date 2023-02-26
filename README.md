@@ -16,16 +16,3 @@ An diagram illustrating the basic code flow can be found [here](https://github.c
 ## 5G-MAG Reference Tools - Architecture documents
 
 * [Project architecture](md/architecture.md)
-
-## Recommended Reading
-A list of recommended articles can be found [here](https://github.com/5G-MAG/Documentation-and-Architecture/wiki/Recommended-Reading)
-
-## 5G-MAG Reference Tools - Demo video - Seamless switching
-
-[![Seamless switching](https://img.youtube.com/vi/Jbir8B-gC4c/0.jpg)](https://www.youtube.com/watch?v=Jbir8B-gC4c "Seamless switching")
-
-## 5G-MAG Reference Tools - Demo video - Overview
-
-https://user-images.githubusercontent.com/2427039/134352329-f97a69b2-0009-446b-9815-b071b59b4d72.mp4
-
-
