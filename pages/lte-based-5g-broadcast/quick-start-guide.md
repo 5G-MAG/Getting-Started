@@ -2,7 +2,6 @@
 layout: default
 title: Quick start guide
 parent: MBMS and LTE-based 5G Broadcast
-has_children: true
 ---
 # Quick start guide
 ## Setup Resources
