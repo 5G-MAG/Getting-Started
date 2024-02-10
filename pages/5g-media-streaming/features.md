@@ -1,3 +1,9 @@
+---
+layout: default
+title: 5GMS Standards
+parent: 5G Downlink Media Streaming
+---
+
 # List of 5G Downlink Media Streaming Features
 
 The following describes the features of the Application Function that have been implemented, due to be implemented or not planned
