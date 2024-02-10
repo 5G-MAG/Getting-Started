@@ -23,7 +23,8 @@ Initial implementation of MB-SMF, MB-UPF, AMF and basic multicast support in the
 
 ## ▶️ Using the tools
 Check the [TUTORIALS & DEVELOPER XCHANGES](https://www.5g-mag.com/tutorials) and check the wikis below for more information
-*Developers are working on it... stay tuned for news.
+* We are working on it...
+
 ***
 
 ## ⭐ Related repositories
