@@ -7,6 +7,12 @@ toc: false
 
 # Implementing 5G Downlink Media Streaming (5GMSd)
 Information about 5G Downlink Media Streaming can be found at www.5g-mag.com/streaming
+<iframe
+  src="https://drive.google.com/file/d/105dQMUHnuKxIwn8K7z5rvuPLMU85FQUc/preview"
+  width="640"
+  height="480"
+  allow="autoplay">
+</iframe>
 ***
 ## 📑 Specifications and architecture
 * Information about relevant specifications can be found at the [Standards Wiki](https://github.com/5G-MAG/Standards/wiki/5G-Downlink-Media-Streaming-Architecture-(5GMSd):-Relevant-Specifications)
