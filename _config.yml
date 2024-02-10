@@ -32,6 +32,10 @@ aux_links:
   "5G-MAG Reference Tools on GitHub":
     - "//github.com/5G-MAG/Getting-Started"
 
+aux_links:
+  "5G-MAG Website":
+    - "https://www.5g-mag.com"
+
 # Build settings
 theme: just-the-docs
 color_scheme: custom
