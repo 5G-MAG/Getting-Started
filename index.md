@@ -14,11 +14,11 @@ built with the software packages and also in combination with other platforms.
 For additional details about the 5G-MAG Reference Tools development programme please visit the following links:
 
 * Developer Space ([developer.5g-mag.com](https://developer.5g-mag.com/)).
-* Meet the developer community, participate, contribute, join the public calls: https://www.5g-mag.com/community
-* Learn about the License Model for contributors: https://www.5g-mag.com/license
-* Download installation packages: https://www.5g-mag.com/install
-* Request early access for private repositories: https://www.5g-mag.com/early-access
-* Get additional resources for members: https://www.5g-mag.com/extras
+* Meet the developer community, participate, contribute, join the public calls: [https://www.5g-mag.com/community](https://www.5g-mag.com/community)
+* Learn about the License Model for contributors: [https://www.5g-mag.com/license](https://www.5g-mag.com/license)
+* Download installation packages: [https://www.5g-mag.com/install](https://www.5g-mag.com/install)
+* Request early access for private repositories: [https://www.5g-mag.com/early-access](https://www.5g-mag.com/early-access)
+* Get additional resources for members: [https://www.5g-mag.com/extras](https://www.5g-mag.com/extras)
 
 A summary about what we do can be found below.
 
