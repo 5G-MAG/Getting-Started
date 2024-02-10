@@ -4,21 +4,25 @@ title: AI / ML Evaluation Framework
 has_children: true
 ---
 
-# Implementing Artificial Intelligence and Machine Learning Evaluation Framework
+# Project: Artificial Intelligence and Machine Learning Evaluation Framework
 <iframe width="100%" height="440" src="https://drive.google.com/file/d/1F8H3yCYRcFt27Bxn2g7FH6tvqIe259R1/preview"></iframe>
 
 ***
+
 ## 📑 Specifications and architecture
-* High-level architectures can be found [here](https://www.5g-mag.com/repositories#ai-ml-evaluation)
+* We are working on it...
+
 ***
 
 ## 🚧 On-going projects
-Check the [Projects](https://github.com/5G-MAG/Getting-Started/wiki/AI-ML-Evaluation-Framework-Projects) under development for Artificial Intelligence and Machine Learning
+* We are working on it...
+
 ***
 
 ## ▶️ Using the tools
 Check the [TUTORIALS & DEVELOPER XCHANGES](https://www.5g-mag.com/tutorials) and check the wikis below for more information
-*Developers are working on it... stay tuned for news.
+* We are working on it...
+
 ***
 
 ## ⭐ Related repositories
