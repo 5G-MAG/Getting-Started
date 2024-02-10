@@ -5,7 +5,7 @@ parent: MBMS and LTE-based 5G Broadcast
 ---
 # Quick start guide
 ## Setup Resources
-* [Hardware, OS & SDR Requirements](Hardware-Requirements)
+* [Hardware, OS & SDR Requirements](hardware-requirements)
 * [Sample Files](Sample-Files)
 * [Service Announcement Formats](https://github.com/5G-MAG/rt-common-shared/wiki/MBMS-Service-Announcement-Files)
 
