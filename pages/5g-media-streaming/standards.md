@@ -1,6 +1,6 @@
 ---
 layout: default
-title: 5GMS Standards
+title: Specifications
 parent: 5G Downlink Media Streaming
 ---
 
