@@ -17,7 +17,7 @@ has_children: true
 
 ## 🚧 On-going projects
 
-## MBMS: Public Warning System
+### MBMS: Public Warning System
 Issues and required functionality around support for a Public Warning System as defined in ETSI 103 720.
 * [Kanban board](https://github.com/orgs/5G-MAG/projects/20)
 
