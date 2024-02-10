@@ -30,7 +30,7 @@ logo: "/assets/images/5g-mag-reference-tools.webp"
 
 aux_links:
   "5G-MAG Reference Tools on GitHub":
-    - "//github.com/5G-MAG"
+    - "//github.com/5G-MAG/Getting-Started"
 
 # Build settings
 theme: just-the-docs
