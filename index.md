@@ -15,7 +15,7 @@ A summary about what we do can be found below.
 
 <iframe width="100%" height="440" src="https://drive.google.com/file/d/1tPcMWLeY6QJNH5OfGWDwLmoSyjrqk8gA/preview"></iframe>
 
-# Practical information:
+## Practical information
 The repositories related to the **5G-MAG REFERENCE TOOLS** are usually starting with **rt-**. Some repositories are also allocating dependencies and auxiliary tools. In the case of third party branches, you will find such repositories with its original name from source.
 
 For additional details about the 5G-MAG Reference Tools development programme please visit the following links:
