@@ -15,7 +15,8 @@ These are a series of implementations that may be used in combination with other
 ## 🚧 On-going projects
 ### 5GMS: Network Assistance and Dynamic Policies features
 Addition of Network Assistance and Dynamic Policies features to the 5GMS components, including integration with the BSF and PCF via new, reusable service consumer libraries.
-* [Kanban board](https://github.com/orgs/5G-MAG/projects/11)***
+* [Kanban board](https://github.com/orgs/5G-MAG/projects/11)
+***
 
 ## ▶️ Using the tools
 Check the [TUTORIALS & DEVELOPER XCHANGES](https://www.5g-mag.com/tutorials) and check the wikis below for more information
