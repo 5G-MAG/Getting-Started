@@ -6,6 +6,8 @@ has_children: true
 
 # Implementing XR Media integration in 5G
 Information about 3XR Media integration in 5G can be found at www.5g-mag.com/immersive
+<iframe width="100%" height="440" src="https://drive.google.com/file/d/1D8G_rzx77V_W3d3NB59XcTbdUuBdtKgp/preview"></iframe>
+
 ***
 ## 📑 Specifications and architecture
 * High-level architectures can be found [here](https://www.5g-mag.com/repositories#xr-media-5g)
