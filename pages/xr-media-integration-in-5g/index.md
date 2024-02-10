@@ -5,21 +5,26 @@ has_children: true
 ---
 
 # Implementing XR Media integration in 5G
-Information about 3XR Media integration in 5G can be found at www.5g-mag.com/immersive
 <iframe width="100%" height="440" src="https://drive.google.com/file/d/1D8G_rzx77V_W3d3NB59XcTbdUuBdtKgp/preview"></iframe>
 
 ***
+
 ## 📑 Specifications and architecture
-* High-level architectures can be found [here](https://www.5g-mag.com/repositories#xr-media-5g)
+* We are working on it...
+
 ***
 
 ## 🚧 On-going projects
-Check the [Projects](https://github.com/5G-MAG/Getting-Started/wiki/XR-Media-integration-in-5G-Projects) under development for XR and Immersive Media
+### XR: Repositories with ISO/IEC 23090-14:2023 functionalities - Release 1.0.0
+All issues related to the release of version 1.0.0 of the XR repositories dealing with functionalities defined in ISO/IEC 23090-14
+* [Kanban board](https://github.com/orgs/5G-MAG/projects/22)
+
 ***
 
 ## ▶️ Using the tools
 Check the [TUTORIALS & DEVELOPER XCHANGES](https://www.5g-mag.com/tutorials) and check the wikis below for more information
-*Developers are working on it... stay tuned for news.
+* We are working on it...
+
 ***
 
 ## ⭐ Related repositories
