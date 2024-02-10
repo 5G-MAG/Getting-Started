@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Hardware requirements
-parent: Quick start guide
+parent: MBMS and LTE-based 5G Broadcast
 ---
 # Hardware requirements
 ## Table of content
