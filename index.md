@@ -4,7 +4,7 @@ title: Home
 nav_order: 0
 ---
 
-<img src="{{site.baseurl}}/assets/images/5g-mag-reference-tools.webp" alt="5g-mag" style="width:300px">
+<img src="{{site.baseurl}}/assets/images/5g-mag-reference-tools.png" alt="5g-mag" style="width:300px">
 
 # Overview
 
