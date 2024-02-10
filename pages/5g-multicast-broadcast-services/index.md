@@ -13,7 +13,12 @@ has_children: true
 ***
 
 ## 🚧 On-going projects
-Check the [Projects](https://github.com/5G-MAG/Getting-Started/wiki/5G-Multicast-Broadcast-Services-Projects) under development for 5G Multicast and Broadcast Services
+
+### 5MBS: 5G Core functions
+
+Initial implementation of MB-SMF, MB-UPF, AMF and basic multicast support in the 5G Core
+* [Kanban board](https://github.com/orgs/5G-MAG/projects/19)
+ 
 ***
 
 ## ▶️ Using the tools
