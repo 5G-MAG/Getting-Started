@@ -36,11 +36,11 @@ Project for any improvements to the rt-mbms-wui
 
 ## ▶️ Using the tools
 Check the [TUTORIALS & DEVELOPER XCHANGES](https://www.5g-mag.com/tutorials) and check the wikis below for more information
-* [Quick Start Guide](https://github.com/5G-MAG/Getting-Started/wiki/Configuration-Quick-Start-Guide)
-* [HLS playback over 5G Broadcast](https://github.com/5G-MAG/Getting-Started/wiki/Use-Case:-HLS-playback-over-5G-Broadcast)
-* [RTP playback over 5G Broadcast](https://github.com/5G-MAG/Getting-Started/wiki/Use-Case:-RTP-Playback-over-5G-Broadcast)
-* [Contanerised rt-mbms setup](https://github.com/5G-MAG/Getting-Started/wiki/5G-MAG-Reference-Tools:-Docker-Implementation-of-RT-MBMS-processes)
-* [Seamless switching between unicast and 5G Broadcast](https://github.com/5G-MAG/Getting-Started/wiki/Use-Case:-Seamless-switching)
+* [Quick Start Guide](quick-start-guide.md)
+* [Docker implementation](docker-implementation.md)
+* [HLS playback over 5G Broadcast](Tutorial_1.md)
+* [RTP playback over 5G Broadcast](Tutorial_2.md)
+* [Seamless switching between unicast and 5G Broadcast](Tutorial_3.md)
 
 ***
 
