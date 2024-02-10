@@ -8,13 +8,14 @@ has_children: true
 These are a series of implementations that may be used in combination with other systems.
 <iframe width="100%" height="440" src="https://drive.google.com/file/d/1-TPp-cVL8xW5WD8n8dJ2JyDPIfbbygli/preview"></iframe>
 ***
-## 📑 Specifications and architecture
+## 📑 Specifications and relevant references
 * High-level architectures can be found [here](https://www.5g-mag.com/repositories#5gcore)
 ***
 
 ## 🚧 On-going projects
-Check the [Projects](https://github.com/5G-MAG/Getting-Started/wiki/5G-Core-Network-Projects) under development for 5G Core Network components
-***
+### 5GMS: Network Assistance and Dynamic Policies features
+Addition of Network Assistance and Dynamic Policies features to the 5GMS components, including integration with the BSF and PCF via new, reusable service consumer libraries.
+* [Kanban board](https://github.com/orgs/5G-MAG/projects/11)***
 
 ## ▶️ Using the tools
 Check the [TUTORIALS & DEVELOPER XCHANGES](https://www.5g-mag.com/tutorials) and check the wikis below for more information
