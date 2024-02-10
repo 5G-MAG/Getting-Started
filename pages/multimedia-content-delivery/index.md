@@ -4,23 +4,31 @@ title: Multimedia Content Delivery
 has_children: true
 ---
 
-# Implementing multimedia content delivery protocols
-These are a series of implementations that may be used in combination with other systems.
+# Project: Multimedia content delivery protocols
 <iframe width="100%" height="440" src="https://drive.google.com/file/d/1lBt2d_toxfhqUAMr3YZw9Cm6-ZzsbpOM/preview"></iframe>
 
 ***
+
 ## 📑 Specifications and architecture
 * Information about relevant specifications can be found at the [Standards Wiki](https://github.com/5G-MAG/Standards/wiki/Multimedia-content-delivery:-Relevant-Specifications)
-* High-level architectures can be found [here](https://www.5g-mag.com/repositories#multimedia-protocols)
+
 ***
 
 ## 🚧 On-going projects
-Check the [Projects](https://github.com/5G-MAG/Getting-Started/wiki/Multimedia-content-delivery-Projects) under development for multimedia content delivery protocols.
+### MBMS: Support for ROUTE
+All issues and functionality around ROUTE support for the 5G Broadcast components
+* [Kanban board](https://github.com/orgs/5G-MAG/projects/15)
+
+### MBMS: Support for FLUTE
+All issues and functionality around FLUTE support for the 5G Broadcast components. Includes functionality like Forward Error Correction (FEC).
+* [Kanban board](https://github.com/orgs/5G-MAG/projects/14)
+
 ***
 
 ## ▶️ Using the tools
 Check the [TUTORIALS & DEVELOPER XCHANGES](https://www.5g-mag.com/tutorials) and check the wikis below for more information
-* Developers are working on it... stay tuned for news.
+* We are working on it...
+
 ***
 
 ## ⭐ Related repositories
