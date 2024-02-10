@@ -3,7 +3,7 @@ layout: default
 title: Quick Start Guide
 parent: MBMS and LTE-based 5G Broadcast
 ---
-
+# Quick start guide
 ## Setup Resources
 * [Hardware, OS & SDR Requirements](Hardware-Requirements)
 * [Sample Files](Sample-Files)
