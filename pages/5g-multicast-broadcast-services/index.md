@@ -6,6 +6,7 @@ has_children: true
 
 # Implementing 5MBS: 5G Multicast and Broadcast Services
 Information about 5G Multicast and Broadcast Services can be found at www.5g-mag.com/multicast-broadcast
+<iframe width="100%" height="440" src="https://drive.google.com/file/d/1Hk5hNZsMLksuBHTnDqOcQPwx-kb4KF3q/preview"></iframe>
 ***
 ## 📑 Specifications and architecture
 * Information about relevant specifications can be found at the [Standards Wiki](https://github.com/5G-MAG/Standards/wiki/5G-Multicast-Broadcast-Services-(5MBS):-Relevant-Specifications)
