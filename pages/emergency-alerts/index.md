@@ -16,7 +16,10 @@ has_children: true
 ***
 
 ## 🚧 On-going projects
-Check the [Projects](Emergency-Alerts-5G-Broadcast-Projects) under development for Emergency Alerts over 5G Broadcast
+
+## MBMS: Public Warning System
+Issues and required functionality around support for a Public Warning System as defined in ETSI 103 720.
+* [Kanban board](https://github.com/orgs/5G-MAG/projects/20)
 
 ***
 
