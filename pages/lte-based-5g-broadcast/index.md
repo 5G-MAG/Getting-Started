@@ -1,22 +1,37 @@
 ---
 layout: default
-title: MBMS and LTE based 5G Broadcast
+title: MBMS and LTE-based 5G Broadcast
 has_children: true
 ---
 
-# Implementing MBMS: LTE-based 5G Broadcast
-Information about LTE-based 5G Broadcast can be found at www.5g-mag.com/5gbroadcast
+# Project: MBMS & LTE-based 5G Broadcast
 <iframe width="100%" height="440" src="https://drive.google.com/file/d/1YL6WtnHjkceQQOjh9Y3MsoscjF1OTpPW/preview"></iframe>
 
 ***
+
 ## 📑 Specifications and architecture
 * Information about relevant specifications can be found at the [Standards Wiki](https://github.com/5G-MAG/Standards/wiki/MBMS-&-LTE-based-5G-Broadcast:-Relevant-Specifications)
-* High-level architectures can be found [here](https://www.5g-mag.com/repositories#5gbroadcast)
 * 5G Broadcast Overview Slides by Bitstem can be found [here](https://drive.google.com/file/d/1zkoNpFfhRE91OjFILs7K_t1CJzGoGQLA/view?usp=drive_link)
+
 ***
 
 ## 🚧 On-going projects
-Check the [Projects](MBMS-&-LTE-based-5G-Broadcast-Projects) under development for MBMS & LTE-based 5G Broadcast
+### MBMS: Seamless switching between broadcast and unicast
+Seamless switching between LTE-based 5G Broadcast and OTT unicast
+* [Kanban board](https://github.com/orgs/5G-MAG/projects/7)
+
+### MBMS: MBMS Modem - Rel 17 Support
+The required issues and features requests to make the MBMS Model Rel 17 compliant
+* [Kanban board](https://github.com/orgs/5G-MAG/projects/24)
+
+### MBMS: 5G Broadcast Transmitters
+Project for any improvements to the rt-mbms-tx and rt-mbms-tx-for-qrd-and-crd.
+* [Kanban board](https://github.com/orgs/5G-MAG/projects/29)
+
+### MBMS: Web User Interface
+Project for any improvements to the rt-mbms-wui
+* [Kanban board](https://github.com/orgs/5G-MAG/projects/28)
+
 ***
 
 ## ▶️ Using the tools
@@ -26,6 +41,7 @@ Check the [TUTORIALS & DEVELOPER XCHANGES](https://www.5g-mag.com/tutorials) and
 * [RTP playback over 5G Broadcast](https://github.com/5G-MAG/Getting-Started/wiki/Use-Case:-RTP-Playback-over-5G-Broadcast)
 * [Contanerised rt-mbms setup](https://github.com/5G-MAG/Getting-Started/wiki/5G-MAG-Reference-Tools:-Docker-Implementation-of-RT-MBMS-processes)
 * [Seamless switching between unicast and 5G Broadcast](https://github.com/5G-MAG/Getting-Started/wiki/Use-Case:-Seamless-switching)
+
 ***
 
 ## ⭐ Related repositories
