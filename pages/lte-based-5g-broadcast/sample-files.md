@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Sample files
-parent: Quick start guide
+parent: MBMS and LTE-based 5G Broadcast
 ---
 
 # Sample files
