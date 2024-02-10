@@ -58,7 +58,7 @@ Everything required for the provisioning of media consumption collection and rep
 
 ## ▶️ Using the tools
 Check the [TUTORIALS & DEVELOPER XCHANGES](https://www.5g-mag.com/tutorials) and check the wikis below for more information
-* [End to End Setup for 5G Downlink Media Streaming (Android)](https://github.com/5G-MAG/Getting-Started/wiki/Use-Case:-5G-Downlink-Media-Streaming-End-to-End-Setup)
+* [End to End Setup for 5G Downlink Media Streaming (Android)](Tutorial_1.md)
 ***
 
 ## ⭐ Related repositories
