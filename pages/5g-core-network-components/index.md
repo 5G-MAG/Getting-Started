@@ -6,6 +6,7 @@ has_children: true
 
 # Implementing 5G Core Network components
 These are a series of implementations that may be used in combination with other systems.
+<iframe width="100%" height="440" src="https://drive.google.com/file/d/105dQMUHnuKxIwn8K7z5rvuPLMU85FQUc/preview"></iframe>
 ***
 ## 📑 Specifications and architecture
 * High-level architectures can be found [here](https://www.5g-mag.com/repositories#5gcore)
