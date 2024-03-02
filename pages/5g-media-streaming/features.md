@@ -2,7 +2,7 @@
 layout: default
 title: Features
 parent: 5G Downlink Media Streaming
-has_children: true
+has_children: false
 nav_order: 0
 ---
 
