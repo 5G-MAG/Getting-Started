@@ -2,6 +2,7 @@
 layout: default
 title: XR Media Integration in 5G
 has_children: true
+nav_order: 7
 ---
 
 # Project: XR Media integration in 5G
