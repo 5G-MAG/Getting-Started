@@ -1,7 +1,10 @@
 ---
 layout: default
-title: Tutorial - 5G Downlink Media Streaming End to End Setup
-parent: 5G Downlink Media Streaming
+title:  5G Downlink Media Streaming End to End Setup
+parent: Tutorials
+grand_parent: 5G Downlink Media Streaming
+has_children: false
+nav_order: 0
 ---
 
 # Tutorial - 5G Downlink Media Streaming End to End Setup
