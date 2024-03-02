@@ -2,6 +2,7 @@
 layout: default
 title: 5G Core Network Components
 has_children: true
+nav_order: 2
 ---
 
 # Project: 5G Core Network components
