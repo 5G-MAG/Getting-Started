@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Features under implementation
+title: Features
 parent: 5G Downlink Media Streaming
 has_children: false
 nav_order: 1
