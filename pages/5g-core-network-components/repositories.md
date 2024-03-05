@@ -6,7 +6,6 @@ has_children: false
 nav_order: 3
 ---
 # ⭐ Related repositories
-* Check the Repositories relevant to 5G Core Network components: Code, releases, packages, dockers, guidelines,...
 ## UE Data Collection Application Function: [rt-5gc-data-collection-application-function](https://github.com/5G-MAG/rt-5gc-data-collection-application-function)
 
 ## 5G Core Service Consumers: [rt-5gc-service-consumers](https://github.com/5G-MAG/rt-5gc-service-consumers)
