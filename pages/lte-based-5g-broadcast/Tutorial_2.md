@@ -4,7 +4,7 @@ title:  RTP Playback over 5G Broadcast
 parent: Tutorials
 grand_parent: MBMS and LTE-based 5G Broadcast
 has_children: false
-nav_order: 1
+nav_order: 5
 ---
 
 # Tutorial - RTP Playback over 5G Broadcast
