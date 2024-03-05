@@ -1,8 +1,12 @@
 ---
 layout: default
-title: Quick start guide
-parent: MBMS and LTE-based 5G Broadcast
+title:  Quick start guide
+parent: Tutorials
+grand_parent: MBMS and LTE-based 5G Broadcast
+has_children: false
+nav_order: 1
 ---
+
 # Quick start guide
 ## Setup Resources
 * [Hardware, OS & SDR Requirements](hardware-requirements.md)
