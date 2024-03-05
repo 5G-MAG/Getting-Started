@@ -1,7 +1,10 @@
 ---
 layout: default
-title: Tutorial - Seamless switching
-parent: MBMS and LTE-based 5G Broadcast
+title:  Seamless switching
+parent: Tutorials
+grand_parent: MBMS and LTE-based 5G Broadcast
+has_children: false
+nav_order: 1
 ---
 
 # Tutorial - Seamless switching
