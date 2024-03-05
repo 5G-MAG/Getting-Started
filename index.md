@@ -10,7 +10,7 @@ has_children: true
 # Overview
 
 This website serves as an umbrella for documentation, practical guidelines and examples of applications that can be
-built with the software packages and also in combination with other platforms.
+built with the software packages available as 5G-MAG Reference Tools and also in combination with other platforms.
 
 A summary about what we do can be found below.
 
