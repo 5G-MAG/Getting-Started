@@ -1,13 +1,13 @@
 ---
 layout: default
-title:  5G Downlink Media Streaming End to End Setup
+title:  5G MSd: Basic End-to-End Setup
 parent: Tutorials
 grand_parent: 5G Downlink Media Streaming
 has_children: false
 nav_order: 0
 ---
 
-# Tutorial - 5G Downlink Media Streaming End to End Setup
+# Tutorial - 5G MSd: Basic End-to-End Setup
 This guide describes how to setup and configure the 5G-MAG Reference Tools - 5G Downlink Media Streaming components to create an end to end setup as depicted in the illustration below.
 
 <img width="934" alt="Bildschirm­foto 2023-04-06 um 09 35 46" src="https://user-images.githubusercontent.com/2427039/230307155-c0f71870-a806-4229-966a-41a8f2f838f8.png">
