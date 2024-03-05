@@ -1,7 +1,10 @@
 ---
 layout: default
-title: Docker Implementation
-parent: MBMS and LTE-based 5G Broadcast
+title:  Docker implementation
+parent: Tutorials
+grand_parent: MBMS and LTE-based 5G Broadcast
+has_children: false
+nav_order: 1
 ---
 
 # Docker Implementation for rt-mbms client side
