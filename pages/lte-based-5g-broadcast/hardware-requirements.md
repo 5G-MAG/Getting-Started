@@ -1,8 +1,12 @@
 ---
 layout: default
-title: Hardware requirements
-parent: MBMS and LTE-based 5G Broadcast
+title:  Hardware requirements
+parent: Tutorials
+grand_parent: MBMS and LTE-based 5G Broadcast
+has_children: false
+nav_order: 1
 ---
+
 # Hardware requirements
 ## Table of content
 * <a href="#hardware-requirements"> Hardware requirements</a>
