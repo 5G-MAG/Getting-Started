@@ -1,6 +1,6 @@
 ---
 layout: default
-title:  5G MSd: Basic End-to-End Setup
+title:  5G MSd Basic End-to-End Setup
 parent: Tutorials
 grand_parent: 5G Downlink Media Streaming
 has_children: false
