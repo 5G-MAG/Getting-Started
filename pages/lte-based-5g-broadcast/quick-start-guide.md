@@ -4,7 +4,7 @@ title:  Quick start guide
 parent: Tutorials
 grand_parent: MBMS and LTE-based 5G Broadcast
 has_children: false
-nav_order: 1
+nav_order: 0
 ---
 
 # Quick start guide
