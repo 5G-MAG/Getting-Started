@@ -6,7 +6,7 @@ has_children: false
 nav_order: 1
 ---
 
-# List of 5G Downlink Media Streaming Features
+# List of features under implementation
 
 The following describes the features of the Application Function that have been implemented, due to be implemented or not planned
 yet.
