@@ -6,7 +6,7 @@ has_children: false
 nav_order: 2
 ---
 
-## 🚧 On-going projects
+## 🚧 Related projects
 
 ### 5GMS: Basic Media stream handling (MVP#1)
 The main objective for MVP#1 is to implement a starting point for 5G Media Streaming with DASH-based media streaming using 5GMS formats and protocols as the basis. This includes a basic Media Player talking to a simple 5GMS Application Server.
