@@ -26,11 +26,13 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: dsilhavy
 github_username:  dsilhavy
-logo: "/assets/images/5g-mag-logo-with-text.png"
+logo: "/assets/images/5g-mag-reference-tools.png"
 
 aux_links:
   "5G-MAG Reference Tools on GitHub":
-    - "//github.com/5G-MAG"
+    - "//github.com/5G-MAG/Getting-Started"
+  "5G-MAG Website":
+    - "https://www.5g-mag.com"
 
 # Build settings
 theme: just-the-docs
