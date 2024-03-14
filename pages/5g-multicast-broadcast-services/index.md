@@ -2,7 +2,7 @@
 layout: default
 title: 5G Multicast Broadcast Services
 has_children: true
-nav_order: 5
+nav_order: 6
 ---
 
 # 5G Multicast and Broadcast Services (5MBS)
