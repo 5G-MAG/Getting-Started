@@ -16,6 +16,11 @@ A summary about what we do can be found below.
 
 <iframe width="100%" height="440" src="https://drive.google.com/file/d/1tPcMWLeY6QJNH5OfGWDwLmoSyjrqk8gA/preview"></iframe>
 
+## Join our Public Monthly Call (Last Friday of the month at 13:00 CET/CEST)
+Find all the information how to join here: https://5g-mag.com/community#calendar
+Agendas circulated via the [Google Group](https://groups.google.com/g/5g-mag-reference-tools) mailing list
+
+
 ## Practical information
 The repositories related to the **5G-MAG REFERENCE TOOLS** are usually starting with **rt-**. Some repositories are also allocating dependencies and auxiliary tools. In the case of third party branches, you will find such repositories with its original name from source.
 
