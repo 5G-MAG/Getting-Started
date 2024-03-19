@@ -8,23 +8,91 @@ nav_order: 0
 
 ## XR Player Features
 
-### Features planned for v1.0.0
+### Planned for v1.0.0
 
-| Feature                  |                       | Target   |          |
-|:-------------------------|:----------------------|:---------|:---------|
-|                          |                       | Windows  | Android  |
-| Augmented reality &#x2a; | TRACKABLE_FLOOR       | &#x2611; | &#x2611; |
-|                          | TRACKABLE_VIEWER      | &#x2611; | &#x2611; |
-|                          | TRACKABLE_CONTROLLER  | &#x2610; | &#x2610; |
-|                          | TRACKABLE_PLANE       | &#x2611; | &#x2611; |
-|                          | TRACKABLE_MARKER_2D   | &#x2611; | &#x2611; |
-|                          | TRACKABLE_MARKER_3D   | &#x2610; | &#x2610; |
-|                          | TRACKABLE_MARKER_GEO  | &#x2611; | &#x2611; |
-|                          | TRACKABLE_APPLICATION | &#x2611; | &#x2611; |
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Extension</th>
+<th style="text-align: left;">Property</th>
+<th style="text-align: left;">Requirement</th>
+<th style="text-align: left;">Status</th>
+<th style="text-align: left;">Test content</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">MPEG_anchor</td>
+<td style="text-align: left;">anchors</td>
+<td style="text-align: left;">M</td>
+<td style="text-align: left;">&#x2610;</td>
+<td style="text-align: left;">&#x2610;</td>
+</tr>
+<tr>
+<td style="text-align: left;">MPEG_anchor</td>
+<td style="text-align: left;">trackable</td>
+<td style="text-align: left;">M</td>
+<td style="text-align: left;">&#x2610;</td>
+<td style="text-align: left;">&#x2610;</td>
+</tr>
+<tr>
+<td style="text-align: left;">MPEG_anchor.trackable</td>
+<td style="text-align: left;">TRACKABLE_CONTROLLER</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">&#x2610;</td>
+<td style="text-align: left;">&#x2610;</td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">TRACKABLE_GEOMETRIC</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">&#x2610;</td>
+<td style="text-align: left;">&#x2610;</td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">TRACKABLE_MARKER_2D</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">&#x2610;</td>
+<td style="text-align: left;">&#x2610;</td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">TRACKABLE_MARKER_3D</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">&#x2610;</td>
+<td style="text-align: left;">&#x2610;</td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">TRACKABLE_MARKER_GEO</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">&#x2610;</td>
+<td style="text-align: left;">&#x2610;</td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">TRACKABLE_APPLICATION</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">&#x2610;</td>
+<td style="text-align: left;">&#x2610;</td>
+</tr>
+<tr>
+<td style="text-align: left;">MPEG_anchor</td>
+<td style="text-align: left;">anchors</td>
+<td style="text-align: left;">M</td>
+<td style="text-align: left;">&#x2610;</td>
+<td style="text-align: left;">&#x2610;</td>
+</tr>
+</tbody>
+</table>
+
 
 &#x2a; anchoring and overlay of 3D content on real world
 
 ### Featured in v0.9.0
+
+See also: [detailed implementation status of the scene description format](#scene-description-format).
 
 | Feature                  |                       | Target   |          |
 |:-------------------------|:----------------------|:---------|:---------|
@@ -42,21 +110,20 @@ nav_order: 0
 |                          | ACTION_HAPTIC         | &#x2610; | &#x2610; |
 |                          | ACTION_SET_AVATAR     | &#x2610; | &#x2610; |
 
-&#x2a; Depends on media pipelines, see [supported platforms](#supported-platforms).
 
-See also: [detailed implementation status of the scene description format](#scene-description-format).
+&#x2a; Depends on media pipelines, see [supported platforms](#supported-platforms) below.
+
 
 ### Supported platforms
 
 | Dependency               | Build target platform   | | | | |
 |:-------------------------|:---------|:-------------|:-----------|:---------|:---------|
 |                          | Windows  | Android      | Linux      | OSX      | iOS      |
-| Unity Player             | &#x2611; | &#x2611;     | &#x2a;     | &#x2a;   | &#x2a;   |
+| rt-xr-unity-player       | &#x2611; | &#x2611;     | &#x2a;     | &#x2a;   | &#x2a;   |
 | Media Pipeline factory   | &#x2611; | &#x2610;     | &#x2610;   | &#x2610; | &#x2610; |
 | avpipeline plugin        | &#x2611; | &#x2610;     | &#x2610;   | &#x2610; | &#x2610; |
 
 &#x2a; untested, the application is expected to compile without issues. 
-
 
 #### Tested devices 
 
@@ -71,24 +138,19 @@ See also: [detailed implementation status of the scene description format](#scen
 
 ### Scene Description format
 
-### glTF extensions described in ISO/IEC 23090-14
-
-Implementation status in [rt-xr-unity-player](https://github.com/5G-MAG/rt-xr-unity-player).
+The table below provide the implementation status of the latest stable release of [rt-xr-unity-player](https://github.com/5G-MAG/rt-xr-unity-player).
 
 ### Implemented in v0.9.0
 
-The extensions listed bellow are implemented by the glTFast parser.
-Status is checked when the corresponding behaviors is implememented in the XR reference player.
+Status: 
+
+- &#x2611;  the feature is implemented the XR player.  
+- &#x2610;  the feature is implemented by the glTF parser, but the corresponding behavior is not implemented by the XR player. 
 
 Requirement (as defined in ISO/IEC 23090-14): 
 
 - **O** : Optional 
 - **M** : Mandatory 
-
-Status: 
-
-- &#x2611;  the feature is implemented the XR player.  
-- &#x2610;  the feature is implemented by the glTF parser, but the corresponding behavior is not implemented by the XR player.  
 
 <table>
 <thead>
@@ -608,87 +670,6 @@ Status:
 </tbody>
 </table>
 
-
-### Planned for v1.0.0
-
-The following extensions are planned
-
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">Extension</th>
-<th style="text-align: left;">Property</th>
-<th style="text-align: left;">Requirement</th>
-<th style="text-align: left;">Status</th>
-<th style="text-align: left;">Test content</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;">MPEG_anchor</td>
-<td style="text-align: left;">anchors</td>
-<td style="text-align: left;">M</td>
-<td style="text-align: left;">&#x2610;</td>
-<td style="text-align: left;">&#x2610;</td>
-</tr>
-<tr>
-<td style="text-align: left;">MPEG_anchor</td>
-<td style="text-align: left;">trackable</td>
-<td style="text-align: left;">M</td>
-<td style="text-align: left;">&#x2610;</td>
-<td style="text-align: left;">&#x2610;</td>
-</tr>
-<tr>
-<td style="text-align: left;">MPEG_anchor.trackable</td>
-<td style="text-align: left;">TRACKABLE_CONTROLLER</td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;">&#x2610;</td>
-<td style="text-align: left;">&#x2610;</td>
-</tr>
-<tr>
-<td style="text-align: left;"></td>
-<td style="text-align: left;">TRACKABLE_GEOMETRIC</td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;">&#x2610;</td>
-<td style="text-align: left;">&#x2610;</td>
-</tr>
-<tr>
-<td style="text-align: left;"></td>
-<td style="text-align: left;">TRACKABLE_MARKER_2D</td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;">&#x2610;</td>
-<td style="text-align: left;">&#x2610;</td>
-</tr>
-<tr>
-<td style="text-align: left;"></td>
-<td style="text-align: left;">TRACKABLE_MARKER_3D</td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;">&#x2610;</td>
-<td style="text-align: left;">&#x2610;</td>
-</tr>
-<tr>
-<td style="text-align: left;"></td>
-<td style="text-align: left;">TRACKABLE_MARKER_GEO</td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;">&#x2610;</td>
-<td style="text-align: left;">&#x2610;</td>
-</tr>
-<tr>
-<td style="text-align: left;"></td>
-<td style="text-align: left;">TRACKABLE_APPLICATION</td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;">&#x2610;</td>
-<td style="text-align: left;">&#x2610;</td>
-</tr>
-<tr>
-<td style="text-align: left;">MPEG_anchor</td>
-<td style="text-align: left;">anchors</td>
-<td style="text-align: left;">M</td>
-<td style="text-align: left;">&#x2610;</td>
-<td style="text-align: left;">&#x2610;</td>
-</tr>
-</tbody>
-</table>
 
 
 ### Unimplemented
