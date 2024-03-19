@@ -66,7 +66,7 @@ See also: [detailed implementation status of the scene description format](#scen
 
 **HMD**
 
-- Meta Quest 2, 3, Pro - currently tested through Meta Quest Link on Windows 11. [XR Player - Meta Quest Link tutrial](tutorials/1-xr-player-win11-openXR.md).
+- Meta Quest 2, 3, Pro - currently tested through Meta Quest Link on Windows 11. [XR Player - Meta Quest Link tutrial](tutorials/xr-player-win11-openXR.md).
 
 
 ### Scene Description format
