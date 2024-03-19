@@ -1,0 +1,48 @@
+EXTENSION,Property,Notes
+MPEG_media,startTime,parsed but unused
+,startTimeOffset,
+,endTimeOffset,
+,autoplay,
+,autoplayGroup,
+,loop,
+,controls,
+,alternatives,
+MPEG_media.media.alternative,uri,
+,mimeType,
+,tracks,
+MPEG_media.media.alternative.track,track,needs test content
+,codecs,
+MPEG_buffer_circular,count,
+,media,
+,tracks,needs test content
+MPEG_accessor_timed,immutable,mutable is not implemented
+,bufferView,
+,suggestedUpdateRate,
+MPEG_audio_spatial,sources,
+,listener,
+,reverbs,parsed but not implemented
+MPEG_audio_spatial.sources,id,
+,type,Object sources only. HOA sources not implemented
+,pregain,parsed but unused
+,playbackSpeed,parsed but unused
+,attenuation,Not all attenuation are supported in unity
+,attenuationParameters,
+,referenceDistance,
+,accessors,
+,reverbFeed,
+,reverbFeedGain,
+MPEG_audio_spatial.listener,id,
+MPEG_texture_video,accessor,
+,width,
+,height,
+,format,only one format supported at the moment
+MPEG_texture_video,accessor,
+,width,
+,height,
+,format,only RGB is supported at the moment
+MPEG_scene_interactivity,,work in progress - listed in a separate sheet
+MPEG_node_interactivity,,
+MPEG_mesh_linking,,not parsed
+MPEG_scene_dynamic,,
+MPEG_viewport_recommended,,
+MPEG_animation_timing,,
