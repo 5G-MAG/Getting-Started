@@ -38,6 +38,25 @@ aux_links:
 theme: just-the-docs
 color_scheme: custom
 
+# configures the default callouts described in: https://just-the-docs.github.io/just-the-docs/docs/ui-components/callouts/
+callouts_level: quiet # or loud
+callouts:
+  highlight:
+    color: yellow
+  important:
+    title: Important
+    color: blue
+  new:
+    title: New
+    color: green
+  note:
+    title: Note
+    color: purple
+  warning:
+    title: Warning
+    color: red
+
+
 # Footer content
 # appears at the bottom of every page's main content
 
