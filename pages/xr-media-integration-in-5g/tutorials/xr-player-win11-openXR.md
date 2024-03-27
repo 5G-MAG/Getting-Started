@@ -7,18 +7,31 @@ has_children: false
 nav_order: 0
 ---
 
-The XR Player Windows release supports rendering on an HMD by default if an OpenXR runtime is installed. 
 
-This tutorial covers usage of XR Player on Windows, rendering on a Meta Quest HMD using Meta Quest Link. 
+This tutorial covers usage of XR Player on Windows.
 
-When no OpenXR runtime is detected, the player runs in a regular desktop window.
+1. table of content
+{:toc}
+
+The XR Player Windows release supports rendering on an HMD by default if a supporting OpenXR runtime is available.
+When no supporting OpenXR runtime is detected, the player runs in a regular desktop window. 
+
+The Meta Quest HMDs connected to a PC through Meta Quest Link provide such OpenXR runtimes.
+
+{: .highlight }
+If you do not have a Meta Quest HMD, simply ignore the requirements and optional steps related to Meta Quest in this tutorial.
+
 
 
 ## Requirements
 
 - Windows 11
 
-In order to support Meta Quest link:
+
+In order to use the Meta Quest link:
+{: .d-inline-block }
+optional 
+{: .label .label-yellow }
 
 - a Meta Quest headset ( 2, 3 and Pro are confirmed to work)
 - a machine compatible with the [Meta Quest link requirements](https://www.meta.com/en-gb/help/quest/articles/headsets-and-accessories/oculus-link/requirements-quest-link/)
@@ -26,6 +39,10 @@ In order to support Meta Quest link:
 
 
 ### Meta Quest Link support
+{: .no_toc }
+{: .d-inline-block }
+optional 
+{: .label .label-yellow }
 
 - Follow the instructions on [Meta's support article](https://www.meta.com/en-gb/help/quest/articles/headsets-and-accessories/oculus-rift-s/install-app-for-link/). The step by step [developer tutorial](https://developer.oculus.com/documentation/unity/unity-link/) also provides some usefull screenshots if you aren't familiar with the Meta Quest platform - note that beta features aren't needed.
 - Meta Quest Link supports a USB mode as well as a [WiFi](https://www.meta.com/en-gb/help/quest/articles/headsets-and-accessories/oculus-link/connect-with-air-link/) mode. 
@@ -49,7 +66,10 @@ By default the player expects the `rt-xr-content` directory to be located next t
 
 ![XR player default content location](../images/xr-player-usage-locate-content.png)
 
-**4. [Start the Meta Quest Link Mode](#meta-quest-link-support) on the headset**
+**4.  [Start the Meta Quest Link Mode](#meta-quest-link-support) on the headset**
+{: .d-inline-block }
+optional 
+{: .label .label-yellow }
 
 **5. Launch the `rt-xr-player.exe` application**
 
@@ -79,3 +99,7 @@ pause
 
 ![Drag and drop scene](../images/xr-player-usage-drag-n-drop-scene.png)
 
+
+### Keyboard / Mouse controls 
+
+Refer to the github repository for the [up to date list of available keyboard and mouse controls](https://github.com/5G-MAG/rt-xr-unity-player?tab=readme-ov-file#usage).
