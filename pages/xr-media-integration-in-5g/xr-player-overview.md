@@ -1,8 +1,7 @@
 ---
 layout: default
 title:  XR Player project overview
-parent: Tutorials
-grand_parent: XR Media Integration in 5G
+parent: XR Media Integration in 5G
 has_children: false
 nav_order: 0
 ---
