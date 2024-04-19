@@ -1,6 +1,6 @@
 ---
 layout: default
-title:  5G MSd Basic End-to-End Setup
+title:  Basic End-to-End Setup
 parent: Tutorials
 grand_parent: 5G Downlink Media Streaming
 has_children: false
@@ -32,7 +32,7 @@ In some cases, you might want to work with a reduced setup to develop new functi
 ### 1. Installing the Application Function
 The first component that we need to install is the **5GMSd Application Function (AF)**. The AF is a network function that forms part of the 5G Media Streaming framework as defined in TS 26.501. AF is a logical function which embodies control plane aspects such as provisioning, configuration, and reporting, among others. Such functions can be provisioned by the 5GMSd Application Provider using a RESTful HTTP-based API (M1d). Another RESTful HTTP-based configuration and reporting API (M5d) is exposed to 5GMSd Clients.
 
-The detailed installation guide for the AF can be found in the corresponding [Github repository](https://github.com/5G-MAG/rt-5gms-application-function). Note that for this tutorial we are following the [installation guide](https://github.com/5G-MAG/rt-5gms-application-function/wiki/Testing-as-a-Local-User#running) to run the AF as a local user.
+The detailed installation guide for the AF can be found in the corresponding [Github repository](https://github.com/5G-MAG/rt-5gms-application-function).
 
 ### 2. Installing the Application Server
 Next, we need to install the **5GMSd Application Server (AS)**. The AS provides 5G Media Streaming services to a population of 5GMSd Clients. This logical function embodies the data plane aspects that deal with media content (for instance, a Content Delivery Network). The content is ingested (both HTTP push- or pull-based are supported) from 5GMSd Application Providers at reference point `M2d`. The content is distributed to 5GMSd Clients at reference point `M4d`, which supports standard pull-based content retrieval protocols (e.g. DASH).
@@ -54,7 +54,7 @@ Now that we installed the AF and the AS we can configure the AF. A detailed conf
 #### Configuration of the AF
 For this demo, we will run AF and AS on the same machine. As we want to access the `ServiceAccessInformation` via the `M5d` interface from our Media Session Handler running on an Android device we need to slightly modify the configuration. The goal is to expose the `M5d` interface via the IP address of our machine but have it running on a different port to not interfere with the default port of the `M3`interface on the AS (`Port 7777`). 
 
-1. Open `~/rt-5gms-application-function/install/etc/open5gs/msaf.yaml`
+1. Open `~/usr/local/etc/open5gs/msaf.yaml`
 2. Find the settings for `msaf:m5`
 3. Replace the `addr` field with `0.0.0.0` and choose a different `port`. For instance:
 ````
@@ -69,7 +69,7 @@ msaf:
 
 As we installed the AF as a local user, we start it with the following command:
 ````
-~/rt-5gms-application-function/install/bin/open5gs-msafd
+~/usr/local/bin/open5gs-msafd
 ````
 #### Creating a content hosting configuration
 
@@ -107,13 +107,7 @@ Now we define a JSON file with the streams:
 	    "ingestURL": "https://rdmedia.bbc.co.uk/",
 	    "distributionConfigurations": [
 		    {"domainNameAlias": "<YOUR_MACHINE_IP_HERE>"}
-	    ],
-	    "consumptionReporting": {
-                "reportingInterval": 30,
-                "samplePercentage": 50.00,
-                "locationReporting": true,
-                "accessReporting": true
-            }
+	    ]
 	}
     },
     "vodMedia": [
@@ -162,10 +156,10 @@ Again, replace `<YOUR_MACHINE_IP_HERE>` with the IP address of your machine.
 
 Place this file in `/etc/rt-5gms/streams.json`
 
-Now execute the `msaf-configuration` tool:
+Now [install](https://github.com/5G-MAG/rt-5gms-application-provider/tree/master/python) and execute the `msaf-configuration` tool:
 
 ````
-sudo ~/rt-5gms-application-function/install/bin/msaf-configuration
+sudo ~/usr/local/bin/msaf-configuration
 ````
 
 You should see a message like this:
