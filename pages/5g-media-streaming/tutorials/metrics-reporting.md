@@ -143,7 +143,7 @@ configuration. An example configuration looks the following:
 
 ````json
 {
-   "scheme": "",
+   "scheme": "urn:3GPP:ns:PSS:DASH:QM10",
    "dataNetworkName": "",
    "reportingInterval": 10,
    "samplePercentage": 100,
