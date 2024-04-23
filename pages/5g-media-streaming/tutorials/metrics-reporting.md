@@ -139,7 +139,26 @@ variable with the value from the JSON file:
 
 In Postman navigate to `Collections` and select `5G-MAG M1`. Navigate to `Metrics-Reporting` and
 select `Create Metrics Reporting Configuration`. Then adjust the attributes in the payload section based on the desired
-configuration. Click on `Send` once the configuration is set:
+configuration. An example configuration looks the following:
+
+````json
+{
+   "scheme": "",
+   "dataNetworkName": "",
+   "reportingInterval": 10,
+   "samplePercentage": 100,
+   "urlFilters": [],
+   "samplingPeriod": 5,
+   "metrics": [
+      "urn:3GPP:ns:PSS:DASH:QM10#HTTPList",
+      "urn:3GPP:ns:PSS:DASH:QM10#BufferLevel",
+      "urn:3GPP:ns:PSS:DASH:QM10#RepSwitchList",
+      "urn:3GPP:ns:PSS:DASH:QM10#MPDInformation"
+   ]
+}
+````
+
+Click on `Send` once the configuration is set:
 
 ![Postman M1 Metrics](../../../assets/images/5gms/postman-m1-metrics.png)
 
