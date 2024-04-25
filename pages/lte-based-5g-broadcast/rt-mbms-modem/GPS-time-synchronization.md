@@ -7,6 +7,8 @@ has_children: false
 nav_order: 0
 ---
 
+# GPS Time Synchonization for rt-mbms-modem
+
 Preconditions: install, configure and enable ``gpsd`` by
 following [this guide.](https://github.com/5G-MAG/rt-mbms-modem#measurement-recording-and-gps)
 
