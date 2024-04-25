@@ -11,7 +11,7 @@ nav_order: 0
 ## Setup Resources
 * [Hardware, OS & SDR Requirements](hardware-requirements.md)
 * [Sample Files](sample-files.md)
-* [Service Announcement Formats](MBMS-Service-Announcement-Files.md)
+* [Service Announcement Formats](rt-mbms-common-shared/MBMS-service-announcement-files.md)
 
 ## Preparation
 After each reboot of your machine run:
