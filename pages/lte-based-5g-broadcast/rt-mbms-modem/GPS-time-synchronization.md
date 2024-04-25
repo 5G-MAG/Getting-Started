@@ -12,19 +12,19 @@ nav_order: 0
 Preconditions: install, configure and enable ``gpsd`` by
 following [this guide.](https://github.com/5G-MAG/rt-mbms-modem#measurement-recording-and-gps)
 
-#### Install chrony
+## Install chrony
 
 ````
 sudo apt install chrony
 ````
 
-#### Edit ``/etc/chrony/chrony.conf``, and add the following line at the end:
+## Edit ``/etc/chrony/chrony.conf``, and add the following line at the end:
 
 ````
 refclock SHM 0  delay 0.5 refid NMEA
 ````
 
-#### Edit ``/etc/default/gpsd``, and add options '-n -b':
+## Edit ``/etc/default/gpsd``, and add options '-n -b':
 
 ````
 # Devices gpsd should collect to at boot time.
@@ -34,14 +34,14 @@ DEVICES="/dev/ttyACM0"
 GPSD_OPTIONS="-n -b"
 ````
 
-#### Restart gpsd and chrony:
+## Restart gpsd and chrony:
 
 ````
 sudo systemctl restart gpsd
 sudo systemctl restart chrony
 ````
 
-### Done!
+## Done!
 
 You can check if chrony receives time data from your GPS devices with ``chronyc sources``
 
