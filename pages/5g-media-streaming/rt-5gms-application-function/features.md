@@ -372,3 +372,69 @@ version the feature will be marked with &#x2610;.
 </tbody>
 </table>
 
+# Features
+
+The following describes the features of the Application Function that have been implemented, due to be implemented or not planned
+yet.
+
+## Implemented in the upcoming release (v1.4.1)
+
+- Everything from v1.4.0 plus...
+- Interface at M1 (AP <=> AF)
+  - Metrics Reporting Provisioning (TS 26.512 v17.7.0 + fixes)
+  - Python command line tools moved to [rt-5gms-application-provider](https://github.com/5G-MAG/rt-5gms-application-provider) repository
+- Interface at M5 (UE <=> AF)
+  - Metrics Reporting (TS 26.512 v17.7.0 + fixes)
+
+## Implemented in the latest release (v1.4.0)
+
+- Interface at M1 (AP <=> AF)
+  - Provisioning Sessions (TS 26.512 v17.4.0)
+  - Content Protocols Discovery (TS 26.512 v17.4.0)
+  - Server Certificates Provisioning (TS 26.512 v17.4.0)
+  - Content Hosting Provisioning (TS 26.512 v17.4.0)
+  - Consumption Reporting Provisioning (TS 26.512 v17.7.0)
+  - Dynamic Policy Templates Provisioning (TS 26.512 v17.7.0)
+- Interface at M3 (AS <=> AF)
+  - Server Certificates Provisioning
+  - Content Hosting Provisioning
+- Interface at M5 (UE <=> AF)
+  - Service Access Information (TS 26.512 v17.7.0)
+  - Consumption Reporting (TS 26.512 v17.7.0)
+  - Network Assistance (TS 26.512 v17.7.0)
+    - Delivery Boost only
+  - Dynamic Policies (TS 26.512 v17.7.0)
+    - 5 Tuple Service Flow Description method only.
+- Uplift of other interfaces to TS 26.512 v17.7.0
+
+## Being worked on for pending releases
+
+This is a list of features being worked on for upcoming releases of the 5GMS Application Function (and who is primarily working on that feature):
+
+- Data Collection AF (BBC)
+  - Internal AF interface (originating at M5 (UE <=> AF))
+    - Collection of Metrics Reports
+    - Collection of Consumption Reports
+  - Interface at R4 (AS <=> AF)
+    - Media Streaming Access Reporting
+  - Interface at R5/R6 (AP <=> NWDAF/AF)
+    - Metrics Report Events
+    - Consumption Report Events
+    - Network Assistance Invocation Events
+    - Dynamic Policy Invocation Events
+    - Media Streaming Access Report Events
+- 5GMBS seamless switching ()
+
+## Unimplemented
+
+The following is a list of possible areas of the project to work on noting which interfaces each is for or where a component
+resides:
+
+- Direct Data Collection Client (UE)
+- Interface at M1 (AP <=> AF)
+  - Edge Computing integration
+  - Content Preparation Template Provisioning
+  - Event Data Processing Provisioning
+- Interface at M3 (AS <=> AF)
+  - Lifecycle management (heartbeat/registration/deregistration)
+  - Hosting activation/deactivation
