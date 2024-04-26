@@ -1,3 +1,12 @@
+---
+layout: default
+title:  Testing as Local User
+parent: Testing
+grand_parent: 5G Downlink Media Streaming
+has_children: false
+nav_order: 0
+---
+
 # Testing the 5GMSd Application Function as a Local User
 
 **TODO: Intro**
