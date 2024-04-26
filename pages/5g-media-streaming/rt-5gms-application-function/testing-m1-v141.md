@@ -1,6 +1,6 @@
 ---
 layout: default
-title:  M1 AF v1.4.1
+title:  M1 AF v1.4.x
 parent: Testing
 grand_parent: 5G Downlink Media Streaming
 has_children: false
