@@ -14,40 +14,6 @@ Please note that 5G Media Streaming makes use of other generic [5G Core Network 
 * [Guidelines, development and testing](https://github.com/5G-MAG/rt-5gms-application-function/wiki)
 * [Releases](https://github.com/5G-MAG/rt-5gms-application-function/releases)
 * [Projects](https://github.com/5G-MAG/rt-5gms-application-function/projects?query=is%3Aopen)
-### Testing: M1 Interface
-
-The details of these tests change with different versions of the 5GMSd Application Function.
-
-If you are testing the v1.2.x versions then please visit the [Testing the M1 Interface on v1.2.0](Testing-the-M1-Interface-on-v1.2.0)
-wiki page.
-
-If you are testing the M1 interface on 5GMSd Application Function v1.3.0 to v1.4.0 then please visit the
-[Testing the M1 Interface on v1.3.0](Testing-the-M1-Interface-on-v1.3.0) wiki page.
-
-For testing the M1 interface on 5GMSd Application Function v1.4.1 or later, then please visit the
-[Testing the M1 Interface on v1.4.1](Testing-the-M1-Interface-on-v1.4.1) wiki page.
-
-### Testing the M3 Interface
-
-Depending on which version of the 5GMSd Application Function you wish to test, the commands to test the interface at reference point M3 change.
-
-If you wish to test 5GMSd Application Function v1.1.x then please see the [Testing the M3 Interface on v1.1.0](Testing-the-M3-Interface-on-v1.1.0) page.
-
-For versions after v1.1.x (i.e. v1.2.0 and above) please use the [Testing the M3 Interface on v1.2.0](Testing-the-M3-Interface-on-v1.2.0) page.
-
-### Testing: M5 Interface
-
-The details of these tests change with different versions of the 5GMSd Application Function.
-
-If you are testing versions up to v1.1.x then please visit the [Testing: M5 Interface on v1.0.0](Testing-the-M5-Interface-on-v1.0.0)
-wiki page.
-
-If you are testing the M5 interface on 5GMSd Application Function v1.2.x please visit the
-[Testing the M5 Interface on v1.2.0](Testing-the-M5-Interface-on-v1.2.0) wiki page.
-
-If you are testing the M5 interface on 5GMSd Application Function v1.3.0 or later please visit the
-[Testing the M5 Interface on v1.3.0](Testing-the-M5-Interface-on-v1.3.0) wiki page.
-
 
 ## 5GMSd Application Server: [rt-5gms-application-server](https://github.com/5G-MAG/rt-5gms-application-server)
 * [Information and how to download, build, install and run](https://github.com/5G-MAG/rt-5gms-application-server#readme)
