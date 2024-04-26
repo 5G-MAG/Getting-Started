@@ -1,3 +1,12 @@
+---
+layout: default
+title:  Postman
+parent: Testing
+grand_parent: 5G Downlink Media Streaming
+has_children: false
+nav_order: 1
+---
+
 # Testing with Postman
 [Postman](https://www.postman.com/) is a popular API development and testing tool that allows users to create, send, and manage HTTP requests. It provides a user-friendly interface for building and testing API endpoints, making it easier for developers to collaborate and streamline the API development process. Postman comes in very handy when testing and working with the `M1` and `M5` interfaces of the Application Function.
 
