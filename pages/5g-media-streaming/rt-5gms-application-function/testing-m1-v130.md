@@ -1,3 +1,12 @@
+---
+layout: default
+title:  M1 AF v1.3.x
+parent: Testing
+grand_parent: 5G Downlink Media Streaming
+has_children: false
+nav_order: 1
+---
+
 # Testing: M1 Interface (5GMSd Application Function v1.3.0 to v1.4.0)
 
 To prepare, follow the instructions for [local user building and installation](Testing-as-a-Local-User).
