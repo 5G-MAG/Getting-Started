@@ -1,3 +1,12 @@
+---
+layout: default
+title:  Features 5GMS AF
+parent: Repositories
+grand_parent: 5G Downlink Media Streaming
+has_children: false
+nav_order: 0
+---
+
 # 5GMSd Application Function Supported Features
 
 The release versions of the 5GMSd Application Function support differing sets of interfaces, as described by the different
