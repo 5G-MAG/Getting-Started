@@ -1,4 +1,4 @@
-# 5GMSd Application Function Compatibility
+# Compatibility between 5GMSd components
 
 Some versions of the 5GMSd Application Function will only work with particular versions of the 5GMSd Application Server and 5GMSd Media Session Handler.
 
