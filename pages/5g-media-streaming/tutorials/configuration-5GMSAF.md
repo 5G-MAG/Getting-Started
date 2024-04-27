@@ -4,7 +4,7 @@ title:  Configuration 5GMS AF
 parent: Tutorials
 grand_parent: 5G Downlink Media Streaming
 has_children: false
-nav_order: 0
+nav_order: 1
 ---
 
 # Configuration of the 5GMSd Application Function
