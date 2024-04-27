@@ -1,3 +1,12 @@
+---
+layout: default
+title:  Configuration 5GMS AF
+parent: Tutorials
+grand_parent: 5G Downlink Media Streaming
+has_children: false
+nav_order: 0
+---
+
 # Configuration of the 5GMSd Application Function
 
 The configuration file for the 5GMSd Application function contains several settings
