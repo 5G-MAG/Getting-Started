@@ -1,3 +1,12 @@
+---
+layout: default
+title:  Compability 5GMS components
+parent: Testing
+grand_parent: 5G Downlink Media Streaming
+has_children: false
+nav_order: 0
+---
+
 # Compatibility between 5GMSd components
 
 Some versions of the 5GMSd Application Function will only work with particular versions of the 5GMSd Application Server and 5GMSd Media Session Handler.
