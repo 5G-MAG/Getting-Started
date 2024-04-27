@@ -4,7 +4,7 @@ title:  Installation 5GMS AF as System Service
 parent: Testing
 grand_parent: 5G Downlink Media Streaming
 has_children: false
-nav_order: 0
+nav_order: 2
 ---
 # Installing the 5GMSd Application Function as a System Service
 
