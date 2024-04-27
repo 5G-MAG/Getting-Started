@@ -1,10 +1,10 @@
 ---
 layout: default
-title:  Developing and Testing the 5GMSd Application Server
-parent: Tutorials
+title:  Testing the 5GMS AS
+parent: Testing
 grand_parent: 5G Downlink Media Streaming
 has_children: false
-nav_order: 0
+nav_order: 3
 ---
 
 # Developing and Testing the 5GMSd Application Server
