@@ -6,7 +6,9 @@ has_children: false
 nav_order: 0
 ---
 
-[# 📑 Specifications and relevant references
-* Information about relevant specifications can be found at the [Standards Wiki](https://github.com/5G-MAG/Standards/wiki/5G-Downlink-Media-Streaming-Architecture-(5GMSd):-Relevant-Specifications)
-* A list of relevant 3GPP Work Items can be found at [Standards Wiki](https://github.com/5G-MAG/Standards/wiki/5G-Downlink-Media-Streaming-Architecture-(5GMSd):-Relevant-Work-Items)
-](https://github.com/jordijoangimenez/Standards/edit/main/pages/5g-media-streaming.md)
+# 5G Media Streaming
+## 📑 Specifications and relevant references
+* Information about relevant specifications can be found in this [page](https://5g-mag.github.io/Standards/5g-media-streaming/5g-media-streaming-specifications.html)
+
+## 📑 Relevant Work Items
+* A list of relevant 3GPP Work Items can be found in this [page](https://5g-mag.github.io/Standards/5g-media-streaming/5g-media-streaming-workitems.html)
