@@ -1,10 +1,10 @@
 ---
 layout: default
-title:  M5 AF v1.2.x
+title:  Testing M5 AF v1.2.x
 parent: Testing
 grand_parent: 5G Downlink Media Streaming
 has_children: false
-nav_order: 8
+nav_order: 10
 ---
 
 # Testing: M5 Interface (5GMSd Application Function v1.2.x)
