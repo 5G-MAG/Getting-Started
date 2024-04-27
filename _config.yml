@@ -56,6 +56,8 @@ callouts:
     title: Warning
     color: red
 
+# Sidebar width
+nav-width: 20%
 
 # Footer content
 # appears at the bottom of every page's main content
