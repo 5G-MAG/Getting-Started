@@ -5,7 +5,7 @@ nav_order: 0
 has_children: true
 ---
 
-<img src="{{site.baseurl}}/assets/images/5g-mag-reference-tools.png" alt="5g-mag" style="height:70px">
+<img src="{{site.baseurl}}/assets/images/5g-mag-reference-tools.png" alt="5g-mag" style="height:50px">
 
 # Overview
 
