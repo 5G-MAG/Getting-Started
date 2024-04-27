@@ -1,3 +1,11 @@
+---
+layout: default
+title:  Installation 5GMS AF
+parent: Testing
+grand_parent: 5G Downlink Media Streaming
+has_children: false
+nav_order: 0
+---
 # Installing the 5GMSd Application Function as a System Service
 
 ## Install dependencies
