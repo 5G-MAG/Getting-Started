@@ -11,8 +11,6 @@ nav_order: 4
 
 To prepare, follow the instructions for [local user building and installation](Testing-as-a-Local-User).
 
-# Testing
-
 These tests require a [5GMSd Application Server](https://github.com/5G-MAG/rt-5gms-application-server) to be running. Please follow
 the instructions to [build, install and run the 5GMSd Application Server](https://github.com/5G-MAG/rt-5gms-application-server#readme) as a system service or the [instructions to run the AS as a local user](https://github.com/5G-MAG/rt-5gms-application-server/wiki/Development-and-Testing) for a temporary installation for testing.
 
