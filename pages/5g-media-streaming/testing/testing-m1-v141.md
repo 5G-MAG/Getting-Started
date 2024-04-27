@@ -1,10 +1,10 @@
 ---
 layout: default
-title:  M1 AF v1.4.x
+title:  Testing M1 AF v1.4.x
 parent: Testing
 grand_parent: 5G Downlink Media Streaming
 has_children: false
-nav_order: 4
+nav_order: 6
 ---
 
 # Testing: M1 Interface (5GMSd Application Function v1.4.1 and later)
