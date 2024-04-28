@@ -7,7 +7,12 @@ nav_order: 3
 ---
 
 # ⭐ Related repositories
-Please note that 5G Media Streaming makes use of other generic [5G Core Network components](https://jordijoangimenez.github.io/Getting-Started/pages/5g-core-network-components/)
+Please note that 5G Media Streaming makes use of other generic [5G Core Network components](https://5g-mag.github.io/Getting-Started/pages/5g-core-network-components/)
+
+## 5GMS Application Provider: [rt-5gms-application-provider](https://github.com/5G-MAG/rt-5gms-application-provider)
+* [Information and how to download, build, install and run](https://github.com/5G-MAG/rt-5gms-application-provider#readme)
+* [Releases](https://github.com/5G-MAG/rt-5gms-application-provider/releases)
+* [Projects](https://github.com/5G-MAG/rt-5gms-application-provider/projects?query=is%3Aopen)
 
 ## 5GMSd Application Function: [rt-5gms-application-function](https://github.com/5G-MAG/rt-5gms-application-function)
 * [Information and how to download, build, install and run](https://github.com/5G-MAG/rt-5gms-application-function#readme)
