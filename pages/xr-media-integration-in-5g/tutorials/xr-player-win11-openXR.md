@@ -1,12 +1,13 @@
 ---
 layout: default
-title:  Using the XR Player on Windows
+title:  XR Player on Windows
 parent: Tutorials
 grand_parent: XR Media Integration in 5G
 has_children: false
 nav_order: 1
 ---
 
+## Introduction
 This tutorial covers usage of XR Player on Windows.
 
 1. table of content
@@ -20,12 +21,9 @@ The Meta Quest HMDs connected to a PC through Meta Quest Link provide such OpenX
 {: .highlight }
 If you do not have a Meta Quest HMD, simply ignore the requirements and optional steps related to Meta Quest in this tutorial.
 
-
-
 ## Requirements
 
 - Windows 11
-
 
 In order to use the Meta Quest link:
 {: .d-inline-block }
