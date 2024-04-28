@@ -1,12 +1,11 @@
 ---
 layout: default
-title:  Using the XR Player on windows
+title:  Using the XR Player on Windows
 parent: Tutorials
 grand_parent: XR Media Integration in 5G
 has_children: false
-nav_order: 0
+nav_order: 1
 ---
-
 
 This tutorial covers usage of XR Player on Windows.
 
