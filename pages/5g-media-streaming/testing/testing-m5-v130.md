@@ -4,7 +4,7 @@ title:  Testing M5 AF v1.3.x
 parent: Testing
 grand_parent: 5G Downlink Media Streaming
 has_children: false
-nav_order: 12
+nav_order: 13
 ---
 
 # Testing: M5 Interface (5GMSd Application Function v1.3.0 and above)
