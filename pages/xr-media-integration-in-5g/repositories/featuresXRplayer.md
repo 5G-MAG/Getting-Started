@@ -1,6 +1,6 @@
 ---
 layout: default
-title:  Features
+title:  Features XR Player
 grand_parent: XR Media Integration in 5G
 parent: Repositories
 has_children: false
