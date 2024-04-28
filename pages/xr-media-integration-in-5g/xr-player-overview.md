@@ -17,7 +17,7 @@ It establishes interfaces like the Media Access Function (MAF) API to enable cro
 
 ## XR Player implementation
 
-![Alt text](/images/rt-xr-overview.jpg) 
+![Alt text](images/rt-xr-overview.jpg) 
 
 The XR Player is implemented as a Unity3D project: [rt-xr-unity-player](https://github.com/5G-MAG/rt-xr-unity-player).
 
@@ -55,11 +55,11 @@ The MAF API is protocol and codec agnostic, media can be fetched a remote URL.
 
 The MediaPlayer component is part of the Presentation Engine layer:
 
-![Alt text](/images/rt-xr-presentation-engine.jpg)
+![Alt text](images/rt-xr-presentation-engine.jpg)
 
 The MediaPlayer component uses the MAF API implemented by Media Pipelines:
 
-![Alt text](/images/rt-xr-maf-implementation.jpg)
+![Alt text](images/rt-xr-maf-implementation.jpg)
 
 The XR Player uses a C++ implementation of the MAF API. It uses a factory / plugin pattern to allow development of media pipelines.
 
