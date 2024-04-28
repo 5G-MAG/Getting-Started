@@ -2,7 +2,7 @@
 layout: default
 title: Repositories
 parent: XR Media Integration in 5G
-has_children: false
+has_children: true
 nav_order: 3
 ---
 
