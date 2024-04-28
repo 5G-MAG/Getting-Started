@@ -69,7 +69,7 @@ msaf:
 
 As we installed the AF as a local user, we start it with the following command:
 ````
-~/usr/local/bin/open5gs-msafd
+/usr/local/bin/open5gs-msafd
 ````
 #### Creating a content hosting configuration
 
