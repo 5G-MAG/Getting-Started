@@ -1,5 +1,13 @@
-5G-MAG Reference Tools: 5GMS Application Server - Development
-=============================================================
+---
+layout: default
+title:  Developing the 5GMS AS
+parent: Testing
+grand_parent: 5G Downlink Media Streaming
+has_children: false
+nav_order: 4
+---
+
+CONTENT TO BE CHECKED
 
 In this directory you will find files to assist with development and testing of
 the 5G-MAG Reference Tools 5GMS Application Server (AS).
