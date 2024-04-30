@@ -137,7 +137,7 @@ variable with the value from the JSON file:
 
 #### Step 7.4 Postman - Create Metrics Reporting Configuration
 
-In Postman navigate to `Collections` and select `5G-MAG M1`. Navigate to `Metrics-Reporting` and
+In Postman navigate to `Collections` and select `5G-MAG M1`. Navigate to `Metrics Reporting` and
 select `Create Metrics Reporting Configuration`. Then adjust the attributes in the payload section based on the desired
 configuration. An example configuration looks the following:
 
