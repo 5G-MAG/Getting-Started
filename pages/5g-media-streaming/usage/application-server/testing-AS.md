@@ -1,8 +1,8 @@
 ---
 layout: default
 title:  Testing the 5GMS AS
-parent: Testing
-grand_parent: 5G Downlink Media Streaming
+parent: Application Server
+grand_parent: Usage
 has_children: false
 nav_order: 3
 ---
