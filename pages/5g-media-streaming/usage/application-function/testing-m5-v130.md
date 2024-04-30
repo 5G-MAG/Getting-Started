@@ -1,13 +1,13 @@
 ---
 layout: default
-title:  Testing M5 AF v1.2.x
-parent: Testing
-grand_parent: 5G Downlink Media Streaming
+title:  Testing M5 AF v1.3.x
+parent: Application Function
+grand_parent: Usage
 has_children: false
-nav_order: 12
+nav_order: 13
 ---
 
-# Testing: M5 Interface (5GMSd Application Function v1.2.x)
+# Testing: M5 Interface (5GMSd Application Function v1.3.0 and above)
 
 To prepare, follow the instructions for [local user building and installation](Testing-as-a-Local-User).
 
@@ -118,22 +118,28 @@ If the ContentHostingConfiguration does not contain any `distributionConfigurati
    Expected result:
 
    ```
-   > GET /3gpp-m5/v2/service-access-information/0c5cc9e6-a6dd-41ed-ae90-e781c44d0f0c HTTP/1.1
+   > GET /3gpp-m5/v2/service-access-information/f863831c-daa8-41ed-862b-c1f4c44bccf3 HTTP/1.1
    > Host: 127.0.0.24:7777
    > User-Agent: curl/7.85.0
    > Accept: */*
    > 
    < HTTP/1.1 200 OK
-   < Date: Tue, 07 Feb 2023 12:11:56 GMT
+   < Date: Fri, 14 Apr 2023 09:44:47 GMT
    < Connection: close
    < Content-Type: application/json
-   < Content-Length: 278
-   < 
+   < ETag: 38548172d8eca143db6b4b11af8df6dea66d62acb45f751c9348f257c9682165
+   < Last-Modified: Fri, 14 Apr 2023 09:44:37 GMT
+   < Cache-Control: max-age=60
+   < Server: 5GMSdAF-localhost/17 (info.title=M5_ServiceAccessInformation; info.version=2.2.0) rt-5gms-application-function/1.3.0
+   < Content-Length: 339
    {
-       "provisioningSessionId":	"0c5cc9e6-a6dd-41ed-ae90-e781c44d0f0c",
+       "provisioningSessionId":	"f863831c-daa8-41ed-862b-c1f4c44bccf3",
        "provisioningSessionType":	"DOWNLINK",
        "streamingAccess":	{
-           "mediaPlayerEntry":	"http://localhost/m4d/provisioning-session-0c5cc9e6-a6dd-41ed-ae90-e781c44d0f0c/BigBuckBunny_4s_onDemand_2014_05_09.mpd"
+           "entryPoints":	[{
+               "locator":	"http://localhost/m4d/provisioning-session-f863831c-daa8-41ed-862b-c1f4c44bccf3/BigBuckBunny_4s_onDemand_2014_05_09.mpd",
+               "contentType":	"application/dash+xml"
+           }]
        }
    }
    ```
@@ -173,31 +179,38 @@ for the `mediaPlayerEntry` in the ServiceAccessInformation.
 
 1. Using the provisioning session id, returned from the `m1-session` command, perform a GET request on the interface URL
 
-   Example command if the provisioning session id is 0c5cc9e6-a6dd-41ed-ae90-e781c44d0f0c:
+   Example command if the provisioning session id is 30c20cea-daab-41ed-87fe-93ba2b9b790a:
 
    ```bash
-   curl -v 'http://127.0.0.24:7777/3gpp-m5/v2/service-access-information/0c5cc9e6-a6dd-41ed-ae90-e781c44d0f0c'
+   curl -v 'http://127.0.0.24:7777/3gpp-m5/v2/service-access-information/30c20cea-daab-41ed-87fe-93ba2b9b790a'
    ```
 
-   Expected result:
+   Expected result should look like:
 
    ```
-   > GET /3gpp-m5/v2/service-access-information/0c5cc9e6-a6dd-41ed-ae90-e781c44d0f0c HTTP/1.1
+   > GET /3gpp-m5/v2/service-access-information/30c20cea-daab-41ed-87fe-93ba2b9b790a HTTP/1.1
    > Host: 127.0.0.24:7777
    > User-Agent: curl/7.85.0
    > Accept: */*
-   >
+   > 
    < HTTP/1.1 200 OK
-   < Date: Tue, 07 Feb 2023 12:11:56 GMT
+   < Date: Fri, 14 Apr 2023 10:00:40 GMT
    < Connection: close
+   < ETag: 8c12228d39cd5e015fdab5e7972084a6bbd12747b4c482e0cdc1ce82bbac597e
+   < Last-Modified: Fri, 14 Apr 2023 10:00:31 GMT
+   < Cache-Control: max-age=60
+   < Server: 5GMSdAF-localhost/17 (info.title=M5_ServiceAccessInformation; info.version=2.2.0) rt-5gms-application-function/1.3.0
    < Content-Type: application/json
-   < Content-Length: 278
-   <
+   < Content-Length: 340
+   < 
    {
-       "provisioningSessionId":    "0c5cc9e6-a6dd-41ed-ae90-e781c44d0f0c",
-       "provisioningSessionType":  "DOWNLINK",
-       "streamingAccess":  {
-           "mediaPlayerEntry": "https://localhost/m4d/provisioning-session-0c5cc9e6-a6dd-41ed-ae90-e781c44d0f0c/BigBuckBunny_4s_onDemand_2014_05_09.mpd"
+       "provisioningSessionId":	"30c20cea-daab-41ed-87fe-93ba2b9b790a",
+       "provisioningSessionType":	"DOWNLINK",
+       "streamingAccess":	{
+           "entryPoints":	[{
+               "locator":	"https://localhost/m4d/provisioning-session-30c20cea-daab-41ed-87fe-93ba2b9b790a/BigBuckBunny_4s_onDemand_2014_05_09.mpd",
+               "contentType":	"application/dash+xml"
+           }]
        }
    }
    ```
@@ -240,31 +253,38 @@ To test this:
 
 1. Using the provisioning session id, returned from the `m1-session` command, perform a GET request on the interface URL
 
-   Example command if the provisioning session id is 0c5cc9e6-a6dd-41ed-ae90-e781c44d0f0c:
+   Example command if the provisioning session id is efbff530-daab-41ed-87fe-93ba2b9b790a:
 
    ```bash
-   curl -v 'http://127.0.0.24:7777/3gpp-m5/v2/service-access-information/0c5cc9e6-a6dd-41ed-ae90-e781c44d0f0c'
+   curl -v 'http://127.0.0.24:7777/3gpp-m5/v2/service-access-information/efbff530-daab-41ed-87fe-93ba2b9b790a'
    ```
 
    Expected result:
 
    ```
-   > GET /3gpp-m5/v2/service-access-information/0c5cc9e6-a6dd-41ed-ae90-e781c44d0f0c HTTP/1.1
+   > GET /3gpp-m5/v2/service-access-information/efbff530-daab-41ed-87fe-93ba2b9b790a HTTP/1.1
    > Host: 127.0.0.24:7777
    > User-Agent: curl/7.85.0
    > Accept: */*
-   >
+   > 
    < HTTP/1.1 200 OK
-   < Date: Tue, 07 Feb 2023 12:11:56 GMT
+   < Date: Fri, 14 Apr 2023 10:06:01 GMT
    < Connection: close
+   < ETag: f5dd70a781efeefed1c034bbe640119019e1a46a55dcf50cfcccae8a323139ad
+   < Last-Modified: Fri, 14 Apr 2023 10:05:51 GMT
+   < Cache-Control: max-age=60
+   < Server: 5GMSdAF-localhost/17 (info.title=M5_ServiceAccessInformation; info.version=2.2.0) rt-5gms-application-function/1.3.0
    < Content-Type: application/json
-   < Content-Length: 278
-   <
+   < Content-Length: 347
+   < 
    {
-       "provisioningSessionId":    "0c5cc9e6-a6dd-41ed-ae90-e781c44d0f0c",
-       "provisioningSessionType":  "DOWNLINK",
-       "streamingAccess":  {
-           "mediaPlayerEntry": "https://media.example.com/m4d/provisioning-session-0c5cc9e6-a6dd-41ed-ae90-e781c44d0f0c/BigBuckBunny_4s_onDemand_2014_05_09.mpd"
+       "provisioningSessionId":	"efbff530-daab-41ed-87fe-93ba2b9b790a",
+       "provisioningSessionType":	"DOWNLINK",
+       "streamingAccess":	{
+           "entryPoints":	[{
+               "locator":	"http://media.example.com/m4d/provisioning-session-efbff530-daab-41ed-87fe-93ba2b9b790a/BigBuckBunny_4s_onDemand_2014_05_09.mpd",
+               "contentType":	"application/dash+xml"
+           }]
        }
    }
    ```
@@ -318,6 +338,7 @@ To test this
    < HTTP/1.1 404 Not Found
    < Date: Tue, 07 Feb 2023 14:47:26 GMT
    < Connection: close
+   < Server: 5GMSdAF-localhost/17 (info.title=M5_ServiceAccessInformation; info.version=2.2.0) rt-5gms-application-function/1.3.0
    < Content-Type: application/problem+json
    < Content-Length: 208
    < 
@@ -332,3 +353,16 @@ To test this
    **Note:** There may also be additional HTTP library information lines output by curl starting with a `*` character interspersed with the output.
 
    The HTTP response is a 404 status code with the body containing a ProblemDetail JSON object.
+
+## Consumption Reporting
+
+**TODO!**
+
+## Network Assistance
+
+**TODO!**
+
+## Dynamic Policies
+
+**TODO!**
+

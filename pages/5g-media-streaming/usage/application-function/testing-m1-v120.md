@@ -1,17 +1,15 @@
 ---
 layout: default
-title:  Testing M1 AF v1.4.x
-parent: Testing
-grand_parent: 5G Downlink Media Streaming
+title:  Testing M1 AF v1.2.x
+parent: Application Function
+grand_parent: Usage
 has_children: false
-nav_order: 8
+nav_order: 6
 ---
 
-# Testing: M1 Interface (5GMSd Application Function v1.4.1 and later)
+# Testing: M1 Interface (5GMSd Application Function v1.2.x)
 
 To prepare, follow the instructions for [local user building and installation](Testing-as-a-Local-User).
-
-# Testing
 
 These tests require a [5GMSd Application Server](https://github.com/5G-MAG/rt-5gms-application-server) to be running. Please follow
 the instructions to [build, install and run the 5GMSd Application Server](https://github.com/5G-MAG/rt-5gms-application-server#readme) as a system service or the [instructions to run the AS as a local user](https://github.com/5G-MAG/rt-5gms-application-server/wiki/Development-and-Testing) for a temporary installation for testing.
@@ -39,13 +37,13 @@ This will test the ability of the Application Function to allocate and retrieve 
 1. Create a single Provisioning Session:
 
    ```bash
-   m1-session new-provisioning-session -e MyAppId -a MyASPId
+   ~/rt-5gms-application-function/install/bin/m1-session new-provisioning-session -e MyAppId -a MyASPId
    ```
 
 1. Check the Provisioning Session:
 
    ```bash
-   m1-session list
+   ~/rt-5gms-application-function/install/bin/m1-session list
    ```
 
    This should list a single provisioning session.
@@ -53,13 +51,13 @@ This will test the ability of the Application Function to allocate and retrieve 
 1. Create a second Provisioning Session:
 
    ```bash
-   m1-session new-provisioning-session -e MyAppId -a MyASPId
+   ~/rt-5gms-application-function/install/bin/m1-session new-provisioning-session -e MyAppId -a MyASPId
    ```
 
 1. Check the Provisioning Sessions:
 
    ```bash
-   m1-session list
+   ~/rt-5gms-application-function/install/bin/m1-session list
    ```
 
    This should list the two provisioning sessions.
@@ -83,13 +81,13 @@ This will test the ability of the Application Function to allocate and retrieve 
 1. Create a single Provisioning Session with Content Hosting Configuration
 
    ```bash
-   m1-session new-stream -e MyAppId -a MyASPId -n 'Big Buck Bunny' 'https://ftp.itec.aau.at/datasets/DASHDataset2014/BigBuckBunny/4sec/' 'BigBuckBunny_4s_onDemand_2014_05_09.mpd'
+   ~/rt-5gms-application-function/install/bin/m1-session new-stream -e MyAppId -a MyASPId -n 'Big Buck Bunny' 'https://ftp.itec.aau.at/datasets/DASHDataset2014/BigBuckBunny/4sec/' 'BigBuckBunny_4s_onDemand_2014_05_09.mpd'
    ```
 
 1. Check the Provisioning Session details:
 
    ```bash
-   m1-session list -v
+   ~/rt-5gms-application-function/install/bin/m1-session list -v
    ```
 
    This will list the provisioning session showing the Content Hosting Configuration attached to it.
@@ -97,20 +95,17 @@ This will test the ability of the Application Function to allocate and retrieve 
    For example:
 
    ```
-   39f4f698-daa0-41ed-862b-c1f4c44bccf3:
+   1c961622-c803-41ed-83c5-e304b44dbd7e:
      Certificates:
      ContentHostingConfiguration:
        Name: Big Buck Bunny
+       Entry Point Path: BigBuckBunny_4s_onDemand_2014_05_09.mpd
        Ingest:
-         Type: urn:3gpp:5gms:content-protocol:http-pull-ingest
-         Pull Ingest?: True
-         URL: https://ftp.itec.aau.at/datasets/DASHDataset2014/BigBuckBunny/4sec/
+           Type: urn:3gpp:5gms:content-protocol:http-pull-ingest
+           URL: https://ftp.itec.aau.at/datasets/DASHDataset2014/BigBuckBunny/4sec/
        Distributions:
-       - URL: http://localhost/m4d/provisioning-session-39f4f698-daa0-41ed-862b-c1f4c44bccf3/
-         Canonical Domain Name: localhost
-         Entry point:
-           Relative Path: BigBuckBunny_4s_onDemand_2014_05_09.mpd
-           Content Type: application/dash+xml
+         - URL: http://localhost/m4d/provisioning-session-1c961622-c803-41ed-83c5-e304b44dbd7e/
+           Canonical Domain Name: localhost
    ```
 
 ### Delete a provisioning session
@@ -132,15 +127,13 @@ This will test the ability of the Application Function to allocate and retrieve 
 1. Create a single Provisioning Session:
 
    ```bash
-   m1-session new-provisioning-session -e MyAppId -a MyASPId
+   ~/rt-5gms-application-function/install/bin/m1-session new-provisioning-session -e MyAppId -a MyASPId
    ```
-
-   **Hint:** Set the shell variable `provisioning_session_id` to the returned provisioning session id for use in later commands.
 
 1. Check the Provisioning Session:
 
    ```bash
-   m1-session list
+   ~/rt-5gms-application-function/install/bin/m1-session list
    ```
 
    This should list a single provisioning session.
@@ -148,7 +141,7 @@ This will test the ability of the Application Function to allocate and retrieve 
 1. Delete the Provisioning Session by Id:
 
    ```bash
-   m1-session del-stream -p ${provisioning_session_id}
+   ~/rt-5gms-application-function/install/bin/m1-session del-stream -p ${provisioning_session_id}
    ```
 
    Where `${provisioning_session_id}` is the provisioning session id of the session that was created in the earlier step.
@@ -156,13 +149,13 @@ This will test the ability of the Application Function to allocate and retrieve 
    For example:
 
    ```bash
-   m1-session del-stream -p 1c961622-c803-41ed-83c5-e304b44dbd7e
+   ~/rt-5gms-application-function/install/bin/m1-session del-stream -p 1c961622-c803-41ed-83c5-e304b44dbd7e
    ```
 
 1. Check the Provisioning Session is deleted:
 
    ```bash
-   m1-session list
+   ~/rt-5gms-application-function/install/bin/m1-session list
    ```
 
    There should be no provisioning sessions listed.
@@ -170,158 +163,28 @@ This will test the ability of the Application Function to allocate and retrieve 
 1. Create a single Provisioning Session with a stream identifier:
 
    ```bash
-   m1-session new-stream -e MyAppId -a MyASPId -n 'Test Stream' 'https://ftp.itec.aau.at/datasets/DASHDataset2014/BigBuckBunny/4sec/' 'BigBuckBunny_4s_onDemand_2014_05_09.mpd'
+   ~/rt-5gms-application-function/install/bin/m1-session new-stream -e MyAppId -a MyASPId -n 'Test Stream' 'https://ftp.itec.aau.at/datasets/DASHDataset2014/BigBuckBunny/4sec/' 'BigBuckBunny_4s_onDemand_2014_05_09.mpd'
    ```
 
 1. Check the Provisioning Session:
 
    ```bash
-   m1-session list -v
+   ~/rt-5gms-application-function/install/bin/m1-session list -v
    ```
 
 1. Delete the Provisioning Session by ingest URL and entry point path:
 
    ```bash
-   m1-session del-stream 'https://ftp.itec.aau.at/datasets/DASHDataset2014/BigBuckBunny/4sec/' 'BigBuckBunny_4s_onDemand_2014_05_09.mpd'
+   ~/rt-5gms-application-function/install/bin/m1-session del-stream 'https://ftp.itec.aau.at/datasets/DASHDataset2014/BigBuckBunny/4sec/' 'BigBuckBunny_4s_onDemand_2014_05_09.mpd'
    ```
-
-   **Note:** The entry point (last command line parameter) can be any one of the entry point relative paths present in a
-   distribution configuration for the content hosting configuration of a provisioning session.
 
 1. Check the Provisioning Session is deleted:
 
    ```bash
-   m1-session list
+   ~/rt-5gms-application-function/install/bin/m1-session list
    ```
 
    There should be no provisioning sessions listed.
-
-### Create a hosting configuration with multiple entry points
-
-1. Stop the Application Function if it is already running.
-
-1. Remove previous configurations:
-
-   ```bash
-   rm -rf ~/rt-5gms-application-function/install/var/cache/rt-5gms/af/certificates
-   ```
-
-1. Start the Application Function:
-
-   ```bash
-   ~/rt-5gms-application-function/install/bin/open5gs-msafd
-   ```
-
-1. Create a single Provisioning Session with Content Hosting Configuration containing multiple entry points
-
-   ```bash
-   m1-session new-stream -e MyAppId -a MyASPId -n 'Big Buck Bunny' 'http://amssamples.streaming.mediaservices.windows.net/622b189f-ec39-43f2-93a2-201ac4e31ce1/BigBuckBunny.ism/' 'manifest(format=mpd-time-csf)' 'manifest(format=m3u8-aapl-v3)' 
-   ```
-
-1. Check the Provisioning Session details:
-
-   ```bash
-   m1-session list -v
-   ```
-
-   This will list the provisioning session showing the Content Hosting Configuration attached to it.
-
-   For example:
-
-   ```
-   74f4c492-dacf-41ed-87fe-93ba2b9b790a:
-     Certificates:
-     ContentHostingConfiguration:
-       Name: Big Buck Bunny
-       Ingest:
-         Type: urn:3gpp:5gms:content-protocol:http-pull-ingest
-         Pull Ingest?: True
-         URL: http://amssamples.streaming.mediaservices.windows.net/622b189f-ec39-43f2-93a2-201ac4e31ce1/BigBuckBunny.ism/
-       Distributions:
-       - URL: http://localhost/m4d/provisioning-session-74f4c492-dacf-41ed-87fe-93ba2b9b790a/
-         Canonical Domain Name: localhost
-         Entry point:
-           Relative Path: manifest(format=mpd-time-csf)
-           Content Type: application/dash+xml
-       - URL: http://localhost/m4d/provisioning-session-74f4c492-dacf-41ed-87fe-93ba2b9b790a/
-         Canonical Domain Name: localhost
-         Entry point:
-           Relative Path: manifest(format=m3u8-aapl-v3)
-           Content Type: application/vnd.apple.mpegurl
-   ```
-
-   The output shows that the ContentHostingConfiguration for Provisioning Session 74f4c492-dacf-41ed-87fe-93ba2b9b790a has two
-   distribution configurations. There is one distribution configuration for DASH and one for HLS.
-
-### Create a hosting configuration from a JSON file
-
-1. Stop the Application Function if it is already running.
-
-1. Remove previous configurations:
-
-   ```bash
-   rm -rf ~/rt-5gms-application-function/install/var/cache/rt-5gms/af/certificates
-   ```
-
-1. Start the Application Function:
-
-   ```bash
-   ~/rt-5gms-application-function/install/bin/open5gs-msafd
-   ```
-
-1. Create a single Provisioning Session:
-
-   ```bash
-   m1-session new-provisioning-session -e MyAppId -a MyASPId
-   ```
-
-   **Hint:** Set the shell variable `provisioning_session_id` to the returned provisioning session id for use in later commands.
-
-1. Upload the ContentHostingConfiguration JSON file:
-
-   ```bash
-   m1-session set-stream -p ${provisioning_session_id} ~/rt-5gms-application-function/examples/ContentHostingConfiguration_Big-Buck-Bunny_pull-ingest.json
-   ```
-
-   Where `${provisioning_session_id}` is the Provisioning Session Id reported by the previous step.
-
-   For this step one of the example configuration files from the `~/rt-5gms-application-function/examples` directory was used, but any valid ContentHostingConfiguration JSON file can be used.
-
-1. Check the Provisioning Session:
-
-   ```bash
-   m1-session list -v
-   ```
-
-   The output should show a provisioning session with the contents of the JSON file used as the ContentHostingConfiguration.
-
-   For example:
-
-   ```
-   74f4c492-dacf-41ed-87fe-93ba2b9b790a:
-     Certificates:
-     ContentHostingConfiguration:
-       Name: AMP Demo Stream: Big Buck Bunny
-       Ingest:
-         Type: urn:3gpp:5gms:content-protocol:http-pull-ingest
-         Pull Ingest?: True
-         URL: http://amssamples.streaming.mediaservices.windows.net/622b189f-ec39-43f2-93a2-201ac4e31ce1/BigBuckBunny.ism/
-       Distributions:
-       - URL: http://localhost/m4d/provisioning-session-74f4c492-dacf-41ed-87fe-93ba2b9b790a/
-         Canonical Domain Name: localhost
-         Entry point:
-           Relative Path: manifest(format=mpd-time-csf)
-           Content Type: application/dash+xml
-           Profiles:
-           - urn:mpeg:dash:profile:isoff-live:2011
-       - URL: http://localhost/m4d/provisioning-session-74f4c492-dacf-41ed-87fe-93ba2b9b790a/
-         Canonical Domain Name: localhost
-         Entry point:
-           Relative Path: manifest(format=m3u8-aapl-v3)
-           Content Type: application/vnd.apple.mpegurl
-   ```
-
-   This also tests the use of profile lists in the distribution entry points.
 
 ## Server Certificates
 
@@ -344,15 +207,13 @@ This will test the ability of the Application Function to allocate and retrieve 
 1. Create a single Provisioning Session:
 
    ```bash
-   m1-session new-provisioning-session -e MyAppId -a MyASPId
+   ~/rt-5gms-application-function/install/bin/m1-session new-provisioning-session -e MyAppId -a MyASPId
    ```
-
-   **Hint:** Set the shell variable `provisioning_session_id` to the returned provisioning session id for use in later commands.
 
 1. Create a certificate:
 
    ```bash
-   m1-session new-certificate -p ${provisioning_session_id}
+   ~/rt-5gms-application-function/install/bin/m1-session new-certificate -p ${provisioning_session_id}
    ```
 
    Where `${provisioning_session_id}` is the provisioning session id of the session that was created in the previous step.
@@ -360,7 +221,7 @@ This will test the ability of the Application Function to allocate and retrieve 
 1. Check the Provisioning Session:
 
    ```bash
-   m1-session list -v
+   ~/rt-5gms-application-function/install/bin/m1-session list -v
    ```
 
    The output should show a provisioning session with a single certificate where the subject and issuer of the certificate are
@@ -393,7 +254,7 @@ This will test the ability of the Application Function to allocate and retrieve 
 1. Create a certificate with a domain name:
 
    ```bash
-   m1-session new-certificate -p ${provisioning_session_id} -d as.example.com
+   ~/rt-5gms-application-function/install/bin/m1-session new-certificate -p ${provisioning_session_id} -d as.example.com
    ```
 
    Since a domain name was requested, the `m1-session` tool will request a CSR from the 5GMSd Application Function and sign it
@@ -402,7 +263,7 @@ This will test the ability of the Application Function to allocate and retrieve 
 1. Check the Provisioning Session:
 
    ```bash
-   m1-session list -v
+   ~/rt-5gms-application-function/install/bin/m1-session list -v
    ```
 
    The output should now show an extra certificate on the provisioning session.
@@ -445,7 +306,7 @@ This will test the ability of the Application Function to allocate and retrieve 
 1. Reserve a certificate:
 
    ```bash
-   m1-session new-certificate -p ${provisioning_session_id} --csr
+   ~/rt-5gms-application-function/install/bin/m1-session new-certificate -p ${provisioning_session_id} --csr
    ```
 
    The output includes the new certificate id and a CSR in PEM format.
@@ -453,7 +314,7 @@ This will test the ability of the Application Function to allocate and retrieve 
 1. Check the Provisioning Session:
 
     ```bash
-   m1-session list -v
+   ~/rt-5gms-application-function/install/bin/m1-session list -v
    ```
 
    The output should now show a third certificate id but the certificate detail says "Certificate not yet uploaded".
@@ -511,25 +372,21 @@ This will test the ability of the Application Function to allocate and retrieve 
 1. Create a single Provisioning Session:
 
    ```bash
-   m1-session new-provisioning-session -e MyAppId -a MyASPId
+   ~/rt-5gms-application-function/install/bin/m1-session new-provisioning-session -e MyAppId -a MyASPId
    ```
-
-   **Hint:** Set the shell variable `provisioning_session_id` to the returned provisioning session id for use in later commands.
 
 1. Create a certificate
 
    ```bash
-   m1-session new-certificate -p ${provisioning_session_id}
+   ~/rt-5gms-application-function/install/bin/m1-session new-certificate -p ${provisioning_session_id}
    ```
 
    Where `${provisioning_session_id}` is the provisioning session id of the session that was created in the previous step.
 
-   **Hint:** Set the shell variable `certificate_id` to the returned certificate id for use in later commands.
-
 1. Display the details of the certificate
 
    ```bash
-   m1-session show-certificate -p ${provisioning_session_id} -c ${certificate_id}
+   ~/rt-5gms-application-function/install/bin/m1-session show-certificate -p ${provisioning_session_id} -c ${certificate_id}
    ```
 
    Where `${provisioning_session_id}` is the provisioning session id of the session that was created in step 4 and
@@ -555,7 +412,7 @@ This will test the ability of the Application Function to allocate and retrieve 
 1. Display the public certificate PEM data
 
    ```bash
-   m1-session show-certificate -p ${provisioning_session_id} -c ${certificate_id} -r
+   ~/rt-5gms-application-function/install/bin/m1-session show-certificate -p ${provisioning_session_id} -c ${certificate_id} -r
    ```
 
    The `-r` flag causes the command to display the "raw" output which is the PEM data for the certificate.
@@ -610,15 +467,13 @@ This will test the ability of the Application Function to allocate and retrieve 
 1. Create a single Provisioning Session:
 
    ```bash
-   m1-session new-provisioning-session -e MyAppId -a MyASPId
+   ~/rt-5gms-application-function/install/bin/m1-session new-provisioning-session -e MyAppId -a MyASPId
    ```
-
-   **Hint:** Set the shell variable `provisioning_session_id` to the returned provisioning session id for use in later commands.
 
 1. List the Content Protocols for the Provisioning Session
 
    ```bash
-   m1-session protocols -p ${provisioning_session_id}
+   ~/rt-5gms-application-function/install/bin/m1-session protocols -p ${provisioning_session_id}
    ```
 
    Where `${provisioning_session_id}` is the provisioning session id of the session that was created in the previous step.
@@ -656,15 +511,13 @@ This will test the ability of the Application Function to allocate and retrieve 
 1. Create a single Provisioning Session:
 
    ```bash
-   m1-session new-provisioning-session -e MyAppId -a MyASPId
+   ~/rt-5gms-application-function/install/bin/m1-session new-provisioning-session -e MyAppId -a MyASPId
    ```
-
-   **Hint:** Set the shell variable `provisioning_session_id` to the returned provisioning session id for use in later commands.
 
 1. Create the hosting configuration:
 
    ```bash
-   m1-session set-stream -p ${provisioning_session_id} ~/rt-5gms-application-function/examples/ContentHostingConfiguration_Big-Buck-Bunny_pull-ingest.json
+   ~/rt-5gms-application-function/install/bin/m1-session set-stream -p ${provisioning_session_id} ~/rt-5gms-application-function/examples/ContentHostingConfiguration_Big-Buck-Bunny_pull-ingest.json
    ```
 
    Where `${provisioning_session_id}` is the provisioning session id of the session that was created in the previous step.
@@ -672,7 +525,7 @@ This will test the ability of the Application Function to allocate and retrieve 
 1. Check the provisioning session configuration:
 
    ```bash
-   m1-session list -v
+   ~/rt-5gms-application-function/install/bin/m1-session list -v
    ```
 
    This will display the provisioning session created, showing no certificates and the details from the example
@@ -697,7 +550,7 @@ This will test the ability of the Application Function to allocate and retrieve 
 **Note:** The `m1-session new-stream` command is a convience command that will create a provisioning session, generate the
 ContentHostingConfiguration and set it in the newly created provisioning session. The above can also be done using:
 ```
-m1-session new-stream -e MyAppId -a MyASPId -n 'Big Buck Bunny' 'https://ftp.itec.aau.at/datasets/DASHDataset2014/BigBuckBunny/4sec/' 'BigBuckBunny_4s_onDemand_2014_05_09.mpd'
+~/rt-5gms-application-function/install/bin/m1-session new-stream -e MyAppId -a MyASPId -n 'Big Buck Bunny' 'https://ftp.itec.aau.at/datasets/DASHDataset2014/BigBuckBunny/4sec/' 'BigBuckBunny_4s_onDemand_2014_05_09.mpd'
 ```
 
 ### Add a Content Hosting Configuration which uses an existing certificate
@@ -719,15 +572,13 @@ m1-session new-stream -e MyAppId -a MyASPId -n 'Big Buck Bunny' 'https://ftp.ite
 1. Create a single Provisioning Session:
 
    ```bash
-   m1-session new-provisioning-session -e MyAppId -a MyASPId
+   ~/rt-5gms-application-function/install/bin/m1-session new-provisioning-session -e MyAppId -a MyASPId
    ```
-
-   **Hint:** Set the shell variable `provisioning_session_id` to the returned provisioning session id for use in later commands.
 
 1. Create a certificate:
 
    ```bash
-   m1-session new-certificate -p ${provisioning_session_id}
+   ~/rt-5gms-application-function/install/bin/m1-session new-certificate -p ${provisioning_session_id}
    ```
 
    Where `${provisioning_session_id}` is the provisioning session id of the session that was created in the previous step.
@@ -743,7 +594,7 @@ m1-session new-stream -e MyAppId -a MyASPId -n 'Big Buck Bunny' 'https://ftp.ite
 1. Create the hosting configuration using the generated ContentHostingConfiguration:
 
    ```bash
-   m1-session set-stream -p ${provisioning_session_id} chc.json
+   ~/rt-5gms-application-function/install/bin/m1-session set-stream -p ${provisioning_session_id} chc.json
    ```
 
    Where `${provisioning_session_id}` is the provisioning session id of the session that was created in step 4.
@@ -751,7 +602,7 @@ m1-session new-stream -e MyAppId -a MyASPId -n 'Big Buck Bunny' 'https://ftp.ite
 1. Check the provisioning session configuration:
 
    ```bash
-   m1-session list -v
+   ~/rt-5gms-application-function/install/bin/m1-session list -v
    ```
 
    This will display the provisioning session created, showing no certificates and the details from the example
@@ -787,73 +638,5 @@ m1-session new-stream -e MyAppId -a MyASPId -n 'Big Buck Bunny' 'https://ftp.ite
 **Note:** The `m1-session new-stream` command is a convience command that will create a provisioning session, generate the
 ContentHostingConfiguration and set it in the newly created provisioning session. The above configuration with the `m1-session` tool can also be done using this single command instead:
 ```
-m1-session new-stream -e MyAppId -a MyASPId -n 'Big Buck Bunny' --ssl-only 'https://ftp.itec.aau.at/datasets/DASHDataset2014/BigBuckBunny/4sec/' 'BigBuckBunny_4s_onDemand_2014_05_09.mpd'
+~/rt-5gms-application-function/install/bin/m1-session new-stream -e MyAppId -a MyASPId -n 'Big Buck Bunny' --ssl-only 'https://ftp.itec.aau.at/datasets/DASHDataset2014/BigBuckBunny/4sec/' 'BigBuckBunny_4s_onDemand_2014_05_09.mpd'
 ```
-
-## Consumption Reporting (v1.4.0 and later)
-
-### Add a Consumption Reporting Configuration
-
-1. Stop the Application Function if it is already running.
-
-1. Remove previous configurations:
-
-   ```bash
-   rm -rf ~/rt-5gms-application-function/install/var/cache/rt-5gms/af/certificates
-   ```
-
-1. Start the Application Function:
-
-   ```bash
-   ~/rt-5gms-application-function/install/bin/open5gs-msafd
-   ```
-
-1. Create a single Provisioning Session:
-
-   ```bash
-   m1-session new-provisioning-session -e MyAppId -a MyASPId
-   ```
-
-   **Hint:** Set the shell variable `provisioning_session_id` to the returned provisioning session id for use in later commands.
-
-1. Create a Consumption Reporting Configuration for the Provisioning Session
-   ```bash
-   m1-session set-consumption-reporting -p ${provisioning_session_id} --interval 15 --sample-percentage 66.66 --location-reporting --access-reporting
-   ```
-
-   Where `${provisioning_session_id}` is the provisioning session id of the session that was created in step 4.
-
-   This will set consumption reporting to every 15 seconds for 66.66% of clients and reports should include Location and Access reporting.
-
-   All Consumption Reporting parameters are optional so doing the following:
-   ```bash
-   m1-session set-consumption-reporting -p ${provisioning_session_id}
-   ```
-   ...will request all clients send a single Consumption Report at the end of the media without Location or Access reports (the defaults for consumption reporting).
-
-### Show current Consumption Reporting Configuration
-
-1. Display the current Consumption Reporting Configuration for a Provisioning Session
-   ```bash
-   m1-session show-consumption-reporting -p ${provisioning_session_id}
-   ```
-
-   Where `${provisioning_session_id}` is the provisioning session id of the session you wish to view.
-
-### Remove the Consumption Reporting Configuration
-
-1. Remove Consumption Reporting from a Provisioning Session
-   ```bash
-   m1-session del-consumption-reporting -p ${provisioning_session_id}
-   ```
-
-   Where `${provisioning_session_id}` is the provisioning session id of the session you wish to remove consumption reporting from.
-
-1. Display the current Consumption Reporting Configuration for the Provisioning Session to check it has gone
-   ```bash
-   m1-session show-consumption-reporting -p ${provisioning_session_id}
-   ```
-
-   Where `${provisioning_session_id}` is the provisioning session id of the session you wish to view.
-
-   This will report no Consumption Reporting Configuration is present.

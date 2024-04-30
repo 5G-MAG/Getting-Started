@@ -1,8 +1,8 @@
 ---
 layout: default
 title:  Installation 5GMS AF as Local User
-parent: Testing
-grand_parent: 5G Downlink Media Streaming
+parent: Application Function
+grand_parent: Usage
 has_children: false
 nav_order: 1
 ---

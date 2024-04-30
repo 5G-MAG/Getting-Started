@@ -1,8 +1,8 @@
 ---
 layout: default
 title:  Testing M3 AF v1.1.x
-parent: Testing
-grand_parent: 5G Downlink Media Streaming
+parent: Application Function
+grand_parent: Usage
 has_children: false
 nav_order: 9
 ---

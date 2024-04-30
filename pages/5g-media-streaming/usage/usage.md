@@ -1,11 +1,11 @@
 ---
 layout: default
-title: Testing
+title: Usage
 parent: 5G Downlink Media Streaming
 has_children: true
-nav_order: 3
+nav_order: 4
 ---
-# 🚧 Testing
+# 🚧 Usage
 
 ## Installation of the 5GMS AF as a Local User
 Follow the instructions in this [page](testing/installation-local-user-5GMSAF.html) for setting up a test environment without requiring full

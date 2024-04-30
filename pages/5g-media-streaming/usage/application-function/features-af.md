@@ -1,8 +1,8 @@
 ---
 layout: default
 title:  Features 5GMS AF
-parent: Repositories
-grand_parent: 5G Downlink Media Streaming
+parent: Application Function
+grand_parent: Usage
 has_children: false
 nav_order: 0
 ---

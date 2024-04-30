@@ -1,7 +1,7 @@
 ---
 layout: default
-title:  Compability 5GMS components
-parent: Testing
+title:  Compatibility
+parent: Usage
 grand_parent: 5G Downlink Media Streaming
 has_children: false
 nav_order: 0
