@@ -1,12 +1,13 @@
 ---
 layout: default
-title:  Features
-parent: XR Media Integration in 5G
+title:  Features XR Player
+grand_parent: XR Media Integration in 5G
+parent: Repositories
 has_children: false
 nav_order: 0
 ---
 
-## XR Player Features
+## XR Unity Player Features
 
 ### Planned for v1.0.0
 

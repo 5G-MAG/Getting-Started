@@ -24,6 +24,10 @@ nav_order: 3
 * [Releases](https://github.com/5G-MAG/rt-mbms-mw/releases)
 * [Docker](https://github.com/5G-MAG/rt-mbms-mw/tree/development/middleware)
 
+## MBMS Middleware for Android: [rt-mbms-mw-android](https://github.com/5G-MAG/rt-mbms-mw-android)
+* [Information and how to download, build, install and run](https://github.com/5G-MAG/rt-mbms-mw-android#readme)
+* [Releases](https://github.com/5G-MAG/rt-mbms-mw-android/releases)
+
 ## Tools common to various projects: [rt-common-shared](https://github.com/5G-MAG/rt-common-shared)
 * [Information and how to download, build, install and run](https://github.com/5G-MAG/rt-common-shared#readme)
 
