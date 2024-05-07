@@ -1,6 +1,6 @@
 ---
 layout: default
-title:  Blender Exporter and Unity Player
+title:  Blender glTF Exporter and Unity Player
 grand_parent: XR Media Integration in 5G
 parent: Tutorials
 has_children: false
