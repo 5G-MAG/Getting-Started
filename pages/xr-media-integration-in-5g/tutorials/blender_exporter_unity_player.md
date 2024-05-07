@@ -6,7 +6,7 @@ parent: Tutorials
 has_children: false
 nav_order: 2
 ---
-# Blender Exporter and Unity Player
+# Blender glTF Exporter and Unity Player
 
 This is a tutorial from Nils Duval (Motion Spell) on the usage of the Blender glTF exporter and the XR Unity Player.
 
