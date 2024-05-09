@@ -9,13 +9,9 @@ nav_order: 1
 
 # Application Provider
 
-A 5GMS Application Provider uses the M1 interface of the Application Function to provision the network for media
-streaming sessions
-that are operated by that 5GMS Application Provider. For downlink media streaming, these sessions may be DASH streaming
-sessions, progressive download sessions, or any other type of media streaming or distribution (e.g. HLS) sessions.
+A 5GMS Application Provider uses the M1 interface of the Application Function to provision the network for media streaming sessions that are operated by that 5GMS Application Provider. For downlink media streaming, these sessions may be DASH streaming sessions, progressive download sessions, or any other type of media streaming or distribution (e.g. HLS) sessions.
 
-The 5G-MAG Reference Tools ship with multiple tools to interact with the 5GMS Application Function via the interface at
-reference point M1.
+The 5G-MAG Reference Tools ship with multiple tools to interact with the 5GMS Application Function via the interface at reference point M1.
 
 ## Command Line Interface Tools
 
@@ -42,7 +38,7 @@ found [here](https://github.com/5G-MAG/rt-5gms-application-provider/blob/develop
 
 A demo video showcasing the functionalities of the Management UI can be found below.
 
-[![Introducing the 5GMS Application Provider Management Portal - 5G-MAG Reference Tools](https://img.youtube.com/vi/qewsQhGi8aE/0.jpg)](https://www.youtube.com/watch?v=qewsQhGi8aE)
+<iframe width="560" height="315" src="https://www.youtube.com/embed/qewsQhGi8aE?si=j3aNWafmMtynM0Yo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ## Postman Collection
 
