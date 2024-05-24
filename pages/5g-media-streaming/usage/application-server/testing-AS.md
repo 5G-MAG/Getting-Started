@@ -4,7 +4,7 @@ title:  Testing the 5GMS AS
 parent: Application Server
 grand_parent: Usage
 has_children: false
-nav_order: 0
+nav_order: 1
 ---
 
 # Developing and Testing the 5GMSd Application Server
