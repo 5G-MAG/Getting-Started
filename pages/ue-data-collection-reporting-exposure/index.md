@@ -1,6 +1,6 @@
 ---
 layout: default
-title: UE data collection
+title: UE data collection, reporting & event exposure
 has_children: true
 nav_order: 3
 ---
