@@ -6,6 +6,6 @@ has_children: false
 nav_order: 2
 ---
 # 🚧 Related projects
-## UE data Network Assistance and Dynamic Policies features
-Addition of Network Assistance and Dynamic Policies features to the 5GMS components, including integration with the BSF and PCF via new, reusable service consumer libraries.
-* [Kanban board](https://github.com/orgs/5G-MAG/projects/11)
+## UE data collection, reporting and event exposure
+Reference implementation of the generic Data Collection AF and its instantiation in the 5GMS Application Function.
+* [Kanban board](https://github.com/orgs/5G-MAG/projects/30)
