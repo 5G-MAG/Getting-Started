@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Repositories
-parent: UE data collection
+parent: UE data collection, reporting & event exposure
 has_children: false
 nav_order: 3
 ---
