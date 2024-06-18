@@ -16,7 +16,7 @@ This playground uses Docker Compose to deploy a 5G-MBS capable 5G Core using Doc
 
 ## 5G-MBS architecture using Open5GS
 
-![5G-MBS architecture using Open5GS](docs/images/5G-MBS_5G_Core.png)
+![5G-MBS architecture using Open5GS](../images/5G-MBS_5G_Core.png)
 
 > [!NOTE]
 > Ports `TCP 27017`, `SCTP 38412` and `UDP 2152` are being exposed to the host running this Docker Compose deployment
