@@ -2,7 +2,7 @@
 layout: default
 title: XR Media Integration in 5G
 has_children: true
-nav_order: 7
+nav_order: 9
 ---
 
 # XR Media integration in 5G
