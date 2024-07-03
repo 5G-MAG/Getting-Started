@@ -4,7 +4,6 @@ title:  RTP Playback over 5G Broadcast
 parent: Tutorials
 grand_parent: MBMS and LTE-based 5G Broadcast
 has_children: false
-nav_order: 5
 ---
 
 # Tutorial - RTP Playback over 5G Broadcast
@@ -63,7 +62,7 @@ As described in [Requirements](#Requirements) we need the MBMS Modem, the MBMS M
 enable playback of HLS content in broadcast mode using the 5G-MAG Reference Tools. The basic interaction and output of
 these components are illustrated in the Figure below:
 
-![Architecture](https://github.com/5G-MAG/Documentation-and-Architecture/blob/main/media/architecture/5G-MAG%20RT%20Architecture%20RTP%20example.drawio.png)
+![Architecture](https://github.com/5G-MAG/Getting-Started/blob/main/media/architecture/5G-MAG%20RT%20Architecture%20RTP%20example.drawio.png?raw=true)
 
 The output of the SDR or the sample file serves as the input for the MBMS Modem. The MBMS Modem converts the input data
 to a UDP multicast. The UDP multicast can be played directly in ffplay or VLC. 
@@ -145,7 +144,7 @@ To play the stream in ffplay run the following steps
 
 The output should look like this:
 
-<img src="https://github.com/5G-MAG/Documentation-and-Architecture/blob/main/media/wiki/ffplay-rtp.png" width="800">
+<img src="https://github.com/5G-MAG/Getting-Started/blob/main/media/wiki/ffplay-rtp.png?raw=true" width="800">
 
 ### VLC
 It is also possible to use VLC for playback:
@@ -157,7 +156,7 @@ It is also possible to use VLC for playback:
 
 The output should look like this:
 
-<img src="https://github.com/5G-MAG/Documentation-and-Architecture/blob/main/media/wiki/rtp-vlc.png" width="800">
+<img src="https://github.com/5G-MAG/Getting-Started/blob/main/media/wiki/rtp-vlc.png?raw=true" width="800">
 
 ## Troubleshooting
 
