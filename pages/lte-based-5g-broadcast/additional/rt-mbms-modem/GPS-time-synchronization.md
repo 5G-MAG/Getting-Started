@@ -1,7 +1,7 @@
 ---
 layout: default
 title:  GPS Time Synchonization for rt-mbms-modem
-parent: Tutorials
+parent: Additional Resources
 grand_parent: MBMS and LTE-based 5G Broadcast
 has_children: false
 nav_order: 0

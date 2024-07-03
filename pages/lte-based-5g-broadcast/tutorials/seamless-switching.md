@@ -4,7 +4,6 @@ title:  Seamless switching
 parent: Tutorials
 grand_parent: MBMS and LTE-based 5G Broadcast
 has_children: false
-nav_order: 6
 ---
 
 # Tutorial - Seamless switching
@@ -84,7 +83,7 @@ As described in [Requirements](#Requirements) we need the MBMS Modem, the MBMS M
 enable playback of HLS content in unicast and broadcast mode using the 5G-MAG Reference Tools. The basic interaction and output of
 these components is illustrated in the Figure below:
 
-![Architecture](https://github.com/5G-MAG/Documentation-and-Architecture/blob/main/media/architecture/5G-MAG%20RT%20Architecture%20Seamless%20Switching%20v8.drawio.png)
+![Architecture](https://github.com/5G-MAG/Getting-Started/blob/main/media/architecture/5G-MAG%20RT%20Architecture%20Seamless%20Switching%20v8.drawio.png?raw=true)
 
 The output of the SDR or the sample file serves as the input for the MBMS Modem. The MBMS Modem converts the input data
 to a UDP multicast. The UDP multicast serves as the input for the MBMS Middleware. The FLUTE encoded content is decoded
@@ -189,9 +188,9 @@ In order to use the webinterface for playback perform the following steps:
 
 The output for step 3 and step 4 should look similar to this:
 
-<img src="https://github.com/5G-MAG/Documentation-and-Architecture/blob/main/media/wiki/rt-wui-mw-tab.jpg" width="800">
+<img src="https://github.com/5G-MAG/Getting-Started/blob/main/media/wiki/rt-wui-mw-tab.jpg?raw=true" width="800">
 
-<img src="https://github.com/5G-MAG/Documentation-and-Architecture/blob/main/media/wiki/rt-wui-playback.jpg" width="800">
+<img src="https://github.com/5G-MAG/Getting-Started/blob/main/media/wiki/rt-wui-playback.jpg?raw=true" width="800">
 
 ### VLC
 It is also possible to use other players like VLC. Simply paste the url to the `index.m3u8` into the VLC player. As an example the URL can look the following: `http://localhost/f/00001009f165/index.m3u8`. Replace the `localhost` part with the IP of the machine that is running the MBMS Middleware in order to access the stream from other machines in the same network.
