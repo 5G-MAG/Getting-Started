@@ -6,5 +6,5 @@ has_children: false
 nav_order: 0
 ---
 
-# eXtended Reality (XR)
+# Specifications
 Visit the [Standards repository](https://5g-mag.github.io/Standards/pages/xr.html) for details.
