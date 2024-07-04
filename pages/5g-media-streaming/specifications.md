@@ -6,5 +6,5 @@ has_children: false
 nav_order: 0
 ---
 
-# 5G Media Streaming
+# Specifications
 Visit the [Standards repository](https://5g-mag.github.io/Standards/pages/5g-media-streaming.html) for details.
