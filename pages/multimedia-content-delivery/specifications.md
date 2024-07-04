@@ -6,4 +6,4 @@ has_children: false
 nav_order: 0
 ---
 # 📑 Specifications and relevant references
-* Information about relevant specifications can be found at the [Standards Wiki](https://github.com/5G-MAG/Standards/wiki/Multimedia-content-delivery:-Relevant-Specifications)
+Visit the [Standards repository](https://5g-mag.github.io/Standards/pages/multimedia-content-delivery.html) for details.
