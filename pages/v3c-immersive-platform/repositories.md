@@ -2,7 +2,7 @@
 layout: default
 title: Repositories
 parent: V3C Immersive Platform
-has_children: true
+has_children: false
 nav_order: 3
 ---
 
