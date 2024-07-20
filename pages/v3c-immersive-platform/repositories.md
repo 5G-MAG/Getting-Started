@@ -7,9 +7,7 @@ nav_order: 3
 ---
 
 # ⭐ Related repositories
-Note that these repositories are currently private and under testing. Early access can be requested at: [https://www.5g-mag.com/early-access](https://www.5g-mag.com/early-access)
-
-See also: [xr-player-overview](tutorials/xr-player-overview) 
+Note that these repositories are currently private and under testing. **Early access** can be requested at: [https://www.5g-mag.com/early-access](https://www.5g-mag.com/early-access)
 
 ## V3C Unity Player: [rt-v3c-unity-player](https://github.com/5G-MAG/rt-v3c-unity-player)
 * [Information and how to download, build, install and run](https://github.com/5G-MAG/rt-v3c-unity-player#readme)
