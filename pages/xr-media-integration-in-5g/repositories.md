@@ -7,8 +7,6 @@ nav_order: 3
 ---
 
 # ⭐ Related repositories
-Note that these repositories are currently private and under testing. Early access can be requested at: https://www.5g-mag.com/early-access
-
 See also: [xr-player-overview](tutorials/xr-player-overview) 
 
 ## XR Unity Player: [rt-xr-unity-player](https://github.com/5G-MAG/rt-xr-unity-player)

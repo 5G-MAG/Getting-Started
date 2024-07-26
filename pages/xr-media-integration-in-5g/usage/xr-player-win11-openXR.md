@@ -1,7 +1,7 @@
 ---
 layout: default
 title:  XR Player on Windows
-parent: Tutorials
+parent: Usage
 grand_parent: XR Media Integration in 5G
 has_children: false
 nav_order: 1
