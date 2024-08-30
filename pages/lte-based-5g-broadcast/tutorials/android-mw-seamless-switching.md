@@ -66,7 +66,7 @@ First, we need to install and configure a few components:
 The `express.js` webserver acts as our CDN for unicast delivery. To install the webserver follow the
 instructions [here](https://github.com/5G-MAG/rt-mbms-examples/tree/development/simple-express-server).
 
-## 2. Install flute-ffmpeg
+### 2. Install flute-ffmpeg
 
 We use `flute-ffmpeg` to create an HLS livestream and monitor changes to our watchfolder. Once new files have been added
 to the watchfolder `flute-ffmpeg` will FLUTE encode them and multicast them to the MBMS Gateway.
@@ -83,7 +83,8 @@ described [here](https://github.com/5G-MAG/rt-mbms-tx-for-qrd-and-crd). Do not r
 ### 4. Clone the Android MW
 
 The Android MW is responsible for receiving the media files delivered via 5G Broadcast. In addition, it fetches files
-from the webserver if they are not available via 5G Broadcast.
+from the webserver if they are not available via 5G Broadcast. The Android MW including instructions on how to clone and
+install can be found [here](https://github.com/5G-MAG/rt-mbms-mw-android).
 
 ## Configuration
 
@@ -232,7 +233,6 @@ media player:
 
 When terminating the `enb` process the media files are no longer transmitted via 5G Broadcast. Now the Android
 Middleware falls back to fetching the media files via unicast:
-
 
 ![5GUC Playback](../../../assets/images/5gbc/5guc-playback.png)
 
