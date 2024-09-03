@@ -10,7 +10,7 @@ nav_order: 0
 # Tutorial - 5G Network Setup with COTS UE
 
 ## Introduction
-...
+These are the generic instructions to setup a 5G network using Open5GS and srsRAN. An Ettus X310 USRP and a Pixel 8 phone are used. 
 
 ## 5G Core installation and configuration
 
