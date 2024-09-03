@@ -14,9 +14,10 @@ These are the generic instructions to setup a 5G network using Open5GS and srsRA
 
 ## 5G Core installation and configuration
 
+Follow the installation procedures in the [Open5GS Quickstart guide](https://open5gs.org/open5gs/docs/guide/01-quickstart/).
+
 ### Step 1: Install the 5G Core (Open5GS)
 
-Follow the installation procedures in the [Open5GS Quickstart](https://open5gs.org/open5gs/docs/guide/01-quickstart/) guide.
 We recommend installing for Ubuntu 22.04 with the following instructions:
 
 #### Getting MongoDB
@@ -213,6 +214,8 @@ sudo ufw disable
 ```
 
 ## gNB installation and configuration
+
+Follow the installation procedures in the [srsRAN installation guide](https://docs.srsran.com/projects/project/en/latest/user_manuals/source/installation.html).
 
 ### Step 1: Install the gNB (srsRAN)
 
