@@ -1,4 +1,13 @@
-# Tutorial - End-to-end setup with 5G Network
+---
+layout: default
+title:  5G Network Setup with COTS UE
+parent: Tutorials
+grand_parent: 5G Core Network Components
+has_children: false
+nav_order: 0
+---
+
+# Tutorial - 5G Network Setup with COTS UE
 
 ## Introduction
 ...
