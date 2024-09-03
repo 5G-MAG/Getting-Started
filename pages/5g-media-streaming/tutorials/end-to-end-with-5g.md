@@ -4,7 +4,7 @@ title:  Basic 5GMS Setup with 5G Network
 parent: Tutorials
 grand_parent: 5G Downlink Media Streaming
 has_children: false
-nav_order: 0
+nav_order: 1
 ---
 
 # Tutorial - 5G MSd: Basic End-to-End Setup with 5G Network
