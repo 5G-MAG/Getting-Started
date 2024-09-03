@@ -73,7 +73,7 @@ As we installed the AF as a local user, we start it with the following command:
 ````
 #### Creating a content hosting configuration
 
-There is a guide on how to test the AS with the AF in the [AS Wiki](https://github.com/5G-MAG/rt-5gms-application-server/blob/main/docs/README.md#testing-with-the-application-function). We are following a slightly different approach as we use the `msaf-configuration` tool that ships with version `1.3.0` of the Application Function. The `msaf-configuration` tool creates a `provisioningSession` and a `contentHostingConfiguration` based on a JSON input file. Moreover, it automatically generates the required `M8` information for us that we will later need on the client-side.
+There is a guide on how to test the AS with the AF in the [documentation](../usage/application-server/testing-AS.html#testing-with-the-application-function). We are following a slightly different approach as we use the `msaf-configuration` tool that ships with version `1.3.0` of the Application Function. The `msaf-configuration` tool creates a `provisioningSession` and a `contentHostingConfiguration` based on a JSON input file. Moreover, it automatically generates the required `M8` information for us that we will later need on the client-side.
 
 First we create a configuration file to be used by the `msaf-configuration` tool:
 
