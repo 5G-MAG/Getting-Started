@@ -4,7 +4,7 @@ title: QoE Metrics Reporting
 parent: Tutorials
 grand_parent: 5G Downlink Media Streaming
 has_children: false
-nav_order: 1
+nav_order: 3
 ---
 
 # Tutorial - QoE Metrics Reporting
