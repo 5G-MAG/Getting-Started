@@ -46,15 +46,15 @@ Now start the AS
 sudo 5gms-application-server 
 ````
 
-For additional options, refer to the [Wiki documentation](https://github.com/5G-MAG/rt-5gms-application-server/blob/main/docs/README.md#running-the-example-without-building). Pay attention to the port configuration of the AS as it requires root permission to run on the standard ports (80 & 443).
+For additional options, refer to the [documentation](../usage/application-server/testing-AS.html#running-the-example-without-building). Pay attention to the port configuration of the AS as it requires root permission to run on the standard ports (80 & 443).
 
 ### 4.  Running the Application Function
-Now that we installed the AF and the AS we can configure the AF. A detailed configuration guide is available in the [Wiki documentation](https://github.com/5G-MAG/rt-5gms-application-function/wiki/Configuring-the-Application-Function) of the AF. 
+Now that we installed the AF and the AS we can configure the AF. A detailed configuration guide is available in the [documentation](../usage/application-function/configuration-5GMSAF.html) of the AF. 
 
 #### Configuration of the AF
 For this demo, we will run AF and AS on the same machine. As we want to access the `ServiceAccessInformation` via the `M5d` interface from our Media Session Handler running on an Android device we need to slightly modify the configuration. The goal is to expose the `M5d` interface via the IP address of our machine but have it running on a different port to not interfere with the default port of the `M3`interface on the AS (`Port 7777`). 
 
-1. Open `~/usr/local/etc/open5gs/msaf.yaml`
+1. Open `/usr/local/etc/open5gs/msaf.yaml`
 2. Find the settings for `msaf:m5`
 3. Replace the `addr` field with `0.0.0.0` and choose a different `port`. For instance:
 ````
