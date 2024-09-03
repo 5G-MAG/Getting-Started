@@ -198,10 +198,10 @@ In our Android application we will use this endpoint later to derive the require
 
 #### Optional: Creating a server certificate
 
-Optionally, you can now also [create server certificate](https://github.com/5G-MAG/rt-5gms-application-function/wiki/Testing-the-M1-Interface#server-certificates). For plain `http` based playback we can omit this step.
+Optionally, you can now also [create server certificate](../usage/application-function/testing-m1-v130.html#server-certificates). For plain `http` based playback we can omit this step.
 
 #### Optional: Checking the M5 interface
-The complete documentation on how to test the M5 interface for AF versions 1.2.0 and above can be found [here](https://github.com/5G-MAG/rt-5gms-application-function/wiki/Testing-the-M5-Interface-on-v1.2.0)
+The complete documentation on how to test the M5 interface for AF versions 1.2.0 and above can be found [here](../usage/application-function/testing-m5-v120.html)
 
 What we will need on the client side later is the `ServiceAccessInformation`. This will be requested via `M5d` by our MediaSessionHandler. Since retrieving this information is done via a simple HTTP GET request, we can access the information directly in the browser. For that reason, call the following URL and replace `{provisioningSessionId}` with the corresponding value. For instance,
 
