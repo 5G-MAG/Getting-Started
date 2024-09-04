@@ -1,6 +1,6 @@
 ---
 layout: default
-title:  Basic End-to-End Setup
+title:  Basic 5GMS End-to-End Setup
 parent: Tutorials
 grand_parent: 5G Downlink Media Streaming
 has_children: false
@@ -46,15 +46,15 @@ Now start the AS
 sudo 5gms-application-server 
 ````
 
-For additional options, refer to the [Wiki documentation](https://github.com/5G-MAG/rt-5gms-application-server/blob/main/docs/README.md#running-the-example-without-building). Pay attention to the port configuration of the AS as it requires root permission to run on the standard ports (80 & 443).
+For additional options, refer to the [documentation](../usage/application-server/testing-AS.html#running-the-example-without-building). Pay attention to the port configuration of the AS as it requires root permission to run on the standard ports (80 & 443).
 
 ### 4.  Running the Application Function
-Now that we installed the AF and the AS we can configure the AF. A detailed configuration guide is available in the [Wiki documentation](https://github.com/5G-MAG/rt-5gms-application-function/wiki/Configuring-the-Application-Function) of the AF. 
+Now that we installed the AF and the AS we can configure the AF. A detailed configuration guide is available in the [documentation](../usage/application-function/configuration-5GMSAF.html) of the AF. 
 
 #### Configuration of the AF
 For this demo, we will run AF and AS on the same machine. As we want to access the `ServiceAccessInformation` via the `M5d` interface from our Media Session Handler running on an Android device we need to slightly modify the configuration. The goal is to expose the `M5d` interface via the IP address of our machine but have it running on a different port to not interfere with the default port of the `M3`interface on the AS (`Port 7777`). 
 
-1. Open `~/usr/local/etc/open5gs/msaf.yaml`
+1. Open `/usr/local/etc/open5gs/msaf.yaml`
 2. Find the settings for `msaf:m5`
 3. Replace the `addr` field with `0.0.0.0` and choose a different `port`. For instance:
 ````
@@ -73,7 +73,7 @@ As we installed the AF as a local user, we start it with the following command:
 ````
 #### Creating a content hosting configuration
 
-There is a guide on how to test the AS with the AF in the [AS Wiki](https://github.com/5G-MAG/rt-5gms-application-server/blob/main/docs/README.md#testing-with-the-application-function). We are following a slightly different approach as we use the `msaf-configuration` tool that ships with version `1.3.0` of the Application Function. The `msaf-configuration` tool creates a `provisioningSession` and a `contentHostingConfiguration` based on a JSON input file. Moreover, it automatically generates the required `M8` information for us that we will later need on the client-side.
+There is a guide on how to test the AS with the AF in the [documentation](../usage/application-server/testing-AS.html#testing-with-the-application-function). We are following a slightly different approach as we use the `msaf-configuration` tool that ships with version `1.3.0` of the Application Function. The `msaf-configuration` tool creates a `provisioningSession` and a `contentHostingConfiguration` based on a JSON input file. Moreover, it automatically generates the required `M8` information for us that we will later need on the client-side.
 
 First we create a configuration file to be used by the `msaf-configuration` tool:
 
@@ -198,10 +198,10 @@ In our Android application we will use this endpoint later to derive the require
 
 #### Optional: Creating a server certificate
 
-Optionally, you can now also [create server certificate](https://github.com/5G-MAG/rt-5gms-application-function/wiki/Testing-the-M1-Interface#server-certificates). For plain `http` based playback we can omit this step.
+Optionally, you can now also [create server certificate](../usage/application-function/testing-m1-v130.html#server-certificates). For plain `http` based playback we can omit this step.
 
 #### Optional: Checking the M5 interface
-The complete documentation on how to test the M5 interface for AF versions 1.2.0 and above can be found [here](https://github.com/5G-MAG/rt-5gms-application-function/wiki/Testing-the-M5-Interface-on-v1.2.0)
+The complete documentation on how to test the M5 interface for AF versions 1.2.0 and above can be found [here](../usage/application-function/testing-m5-v120.html)
 
 What we will need on the client side later is the `ServiceAccessInformation`. This will be requested via `M5d` by our MediaSessionHandler. Since retrieving this information is done via a simple HTTP GET request, we can access the information directly in the browser. For that reason, call the following URL and replace `{provisioningSessionId}` with the corresponding value. For instance,
 
