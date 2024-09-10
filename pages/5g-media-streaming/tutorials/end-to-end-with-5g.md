@@ -15,7 +15,33 @@ For details please refer to the [corresponding documentation](../../5g-core-netw
 
 # 5G Media Streaming setup
 ## Server-side Setup
+### Step 0: Using a local server (Skip if your content is hosted in the internet)
+#### Step 0a: Install the express.js webserver
+The express.js webserver acts as our CDN for unicast delivery. To install the webserver follow the instructions [here](https://github.com/5G-MAG/rt-mbms-examples/tree/development/simple-express-server).
 
+#### Step 0b: Configure ffmpeg
+First we configure the `ffmpeg` output. Navigate to `flute-ffmpeg/files` and open `ffmpeg-hls.sh`. Change the following two lines and point them to the path of the local webserver installed previously. If there is no `watchfolder/hls`folder on your webserver yet create that as well.
+
+````
+-hls_segment_filename /home/dsi/5gmag/simple-express-server/public/watchfolder/hls/stream_%v_data%02d.ts \
+-var_stream_map "v:0,a:0" /home/dsi/5gmag/simple-express-server/public/watchfolder/hls/stream_%v.m3u8
+````
+#### Step 0c: Run ffmpeg and the express.js webserver
+
+Navigate to `flute-ffmpeg/files` and run `sh ffmpeg-hls.sh`.
+
+#### Step 0d: Start the express.js webserver
+
+Run `npm start` in `simple-express-server`. Our files created by `ffmpeg` are now hosted and available via unicast. Try
+to query the master manifest to check for the availability of the files:
+
+````
+curl http://192.168.11.1:3333/watchfolder/hls/manifest.m3u8
+#EXTM3U
+#EXT-X-VERSION:6
+#EXT-X-STREAM-INF:BANDWIDTH=2305600,RESOLUTION=1280x720,CODECS="avc1.64001f,mp4a.40.2"
+stream_0.m3u8
+````
 ### Step 1: Install the Application Function
 
 For details please refer to the [corresponding section](end-to-end.html#1-installing-the-application-function) in
