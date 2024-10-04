@@ -14,7 +14,7 @@ built with the software packages available in the 5G-MAG Reference Tools and als
 
 <iframe width="100%" height="440" src="https://drive.google.com/file/d/1tPcMWLeY6QJNH5OfGWDwLmoSyjrqk8gA/preview"></iframe>
 
-[DOWNLOAD THE PRESENTATION](https://drive.google.com/file/d/1tPcMWLeY6QJNH5OfGWDwLmoSyjrqk8gA/preview){: .btn }{: .align-left} 
+[DOWNLOAD THE PRESENTATION](https://drive.google.com/file/d/1tPcMWLeY6QJNH5OfGWDwLmoSyjrqk8gA/preview){: .btn }{: .align-right} 
 
 ## The Projects
 * Access to information on relevant specifications, repositories, projects and tutorials in the lateral menu.
