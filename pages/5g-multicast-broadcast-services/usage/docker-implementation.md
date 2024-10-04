@@ -8,13 +8,9 @@ nav_order: 3
 ---
 
 # Docker Implementation
-Here you will find an easy way to try the current 5G-MBS MVP being developed by the [iTEAM Mobile Communications Group](https://github.com/iTEAM-MCG) as part of the [5G-MAG](https://github.com/5G-MAG), following the 3GPP Release 17 specifications.
+A Docker Compose implementation to deploy an MBS capable 5G Core is available in the [rt-mbs-examples](https://github.com/5G-MAG/rt-mbs-examples/) repository.
 
-This implementation is being developed on top of the [Open5GS](https://github.com/open5gs/open5gs) 5G Core. The repository containing the source code can be found [here](https://github.com/5G-MAG/open5gs/tree/upv-mbs).
-
-This playground uses Docker Compose to deploy a 5G-MBS capable 5G Core using Docker images present in a container repository.
-
-## 5G-MBS architecture using Open5GS
+## Deployment architecture using Open5GS
 
 ![5G-MBS architecture using Open5GS](../images/5G-MBS_5G_Core.png)
 
@@ -31,44 +27,112 @@ These ports are being used for the following:
 
 Add your host's IP address to the `DOCKER_HOST_IP` variable in the `.env` file for the MB-UPF to be reachable by external gNBs.
 
-## Basic usage
+# Testing
 
-<details>
-<summary>Build it</summary>
+This section explains how to use the Python tests present on the `test` directory in the [rt-mbs-examples](https://github.com/5G-MAG/rt-mbs-examples/) repository.
 
-> Note: This method uses the `docker-bake.hcl` file and requires `docker-buildx-plugin`
+The Python modules requirements are preinstalled on the AF container image. This container mounts the `test` directory as read-only to be able to run the tests.
 
-From the top level directory of the repository run:
+To run the tests, execute an interactive session with the AF container and navigate to the test directory:
 ```bash
-docker buildx bake
+docker exec -it af bash
+
+# inside the AF container
+cd test
+
+# to run the tests
+python3 tests.py
 ```
 
-This builds the AF, MB-SMF and MB-UPF images locally.
+The `test` directory contains the following subdirectories:
+- `MB_SMF` the developed tests regarding the MB-SMF Network Function
+- `utils` a Python package containing some common utils for the tests
+- `support` some support files for the tests like JSON files for the requests and JSON schemas to validate them
 
-</details>
+Using the `config.toml` file some parameters can be configured:
+- the log_level for the tests can be adjusted. The values supported are: DEBUG, INFO, WARNING, ERROR, CRITICAL
+- some endpoint parameters like the MB-SMF address, the protocol (HTTP or HTTPS) and the port being used
 
-<details>
-<summary>Deploy it</summary>
-To download the rest of the Docker images from the repository and start everything:
+The file `tests.py` contains the main logic for the tests. In this file the test suites are defined and run by the unittest testing framework.
+
+# Detailed Instructions
+
+## Inspect all the traffic being sent in the network
+
+You can use tcpdump/Wireshark to sniff all the messages being sent between the Network Functions by inspecting the `br-ogs` network bridge. This bridge is created by the Docker Compose network and is used to connect all the Network Functions.
 
 ```bash
-docker compose up -d
+$ tcpdump -i br-ogs
 ```
 
-To stop everything:
+## Connect to the AF container to start sending requests to the Network Functions
+
+The AF container is not Open5GS related, in fact, it is not even an AF, it is just a container called AF being used to send curl requests to the Open5GS APIs.
 
 ```bash
-docker compose down
+# Connect to the AF container
+docker exec -it af bash
 ```
 
-</details>
+Use curl inside the container to send requests to the other Network Functions:
 
-## Find more information
+```bash
+# Inside the AF container, example of the AF sending the MB-SMF the TMGI allocate request
+curl --http2-prior-knowledge \
+  --request POST \
+  --header "Content-Type: application/json" \
+  --data '{ "tmgiNumber": 1 }' \
+  mb-smf.open5gs.org:80/nmbsmf-tmgi/v1/tmgi
+```
 
-- `docs` has extra documentation regarding the project
-  - [docs/Overview](docs/Overview.md) to see the current status and features of the project
-  - [docs/Detailed Instructions](docs/Detailed-Instructions.md) to see how to manage the containers
-  - [docs/Tests](docs/Tests.md) to see how to use the tests present in the `test` directory
-- `configs` to check/modify the Network Function configuration files of the deployment
-- `images` where the Network Function Dockerfiles are present
-- `test` testing suite being developed in Python to test the features present
+## Configure the MB-UPF multicast
+
+Apart from editing the `.env` for the MB-UPF to be reachable by external gNBs, the MB-UPF needs extra configuration. To be able to forward the multicast traffic to the lower layer source specific multicast (LLSSM) address, the MB-UPF needs to udpate the multicast forwarding cache (MFC) in the linux kernel.
+
+For this purpose, the `smcroute` tool is installed on the MB-UPF container. Through the `smcroutectl` command, the MFC can be updated to the desired values. Currently this is done manually but other ways to update the MFC are being studied.
+
+```bash
+# Execute this command inside the MB-UPF container
+smcroutectl add eth0 <n6mb_multicast_destination_address> ogstun
+```
+
+After this, and after creating the MBS Session, the MVP can be tested by using the AF to send multicast traffic to the MB-UPF and inspecting the MB-UPF output:
+```bash
+# Execute this command inside the AF container
+sendip -p ipv4 -is <af_container_ip> -id <n6mb_multicast_destination_address> <mb_upf_container_ip>
+```
+
+### Full example
+
+Create a Broadcast MBS Session using TMGI as identifier but specifying also the SSM address, this SSM will be the address that the AF will use to send the multicast traffic to the MB-UPF through the N6mb interface.
+
+```bash
+# MBS Session Create request with TMGI allocate: /nmbsmf-mbssession/v1/mbs-sessions with multicast source
+curl --http2-prior-knowledge \
+  --request POST \
+  --header "Content-Type: application/json" \
+  --data '{ "mbsSession": { "ssm": { "sourceIpAddr": { "ipv4Addr": "10.33.33.3" }, "destIpAddr": { "ipv4Addr": "239.0.0.20" } },"tmgiAllocReq": true, "serviceType":"BROADCAST" } }' \
+  mb-smf.open5gs.org:80/nmbsmf-mbssession/v1/mbs-sessions
+```
+
+The AF with IP address 10.33.33.3 will send an IP packet to the multicast destination 239.0.0.20. The MB-UPF will receive the traffic being sent to this multicast group and then forward it to the LLSSM.
+
+For this, we will configure the MB-UPF like this:
+```bash
+# Execute this command inside the MB-UPF container
+smcroutectl add eth0 239.0.0.20 ogstun
+```
+
+This command will update the MFC of the MB-UPF to receive the traffic for the multicast group 239.0.0.20 and forward it internally using the `ogstun` interface.
+
+After all of this is configured, the MB-UPF has been configured through PFCP to forward the traffic received to the LLSSM. The LLSSM is uses the multicast destination address `239.0.0.4` and C-TEID `33`.
+
+Now, sending traffic with the AF to the MB-UPF with the addresses configured causes the MB-UPF to forward the traffic using GTPU to the LLSSM:
+
+> [!TIP]
+> Check AF container IP executing `ip address` from the AF container and use the `eth0` interface address as <af_container_ip>
+
+```bash
+# To send traffic from the AF to the MB-UPF
+sendip -p ipv4 -is <af_container_ip> -id 239.0.0.20 mb-upf.open5gs.org
+```

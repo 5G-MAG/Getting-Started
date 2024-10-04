@@ -7,12 +7,11 @@ parent: Home
 # Guidelines for Contributors
 
 If you wish to contribute code to the projects then you will first need **sign the Contributor License Agreement (CLA)**. Only
-individuals and/or companies with a signed CLA can contribute code. Please visit <https://developer.5g-mag.com/> and <https://www.5g-mag.com/license> for more details and to download the CLA form.
+individuals and/or companies with a signed CLA can contribute code. Please visit <https://www.5g-mag.com/license> for more details and to download the CLA form.
 
 ## Raising Issues
 
 Anyone can raise issues against projects, you do not need to have signed the Contributor License Agreement (CLA) to do so.
-
 
 ## Releases
 
