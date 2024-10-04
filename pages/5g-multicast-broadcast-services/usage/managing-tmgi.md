@@ -4,7 +4,7 @@ title: TMGI Management
 parent: Usage
 grand_parent: 5G Multicast Broadcast Services
 has_children: false
-nav_order: 1
+nav_order: 2
 ---
 
 # TMGI Management
