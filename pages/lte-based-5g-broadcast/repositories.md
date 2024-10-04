@@ -40,7 +40,7 @@ nav_order: 3
 * [srsRAN](https://github.com/5G-MAG/srsRAN)
 
 # Auxiliary repositories:
-## MBMS Web User Interface: [rt-wui](https://github.com/5G-MAG/rt-mbms-wui)
+## MBMS Web User Interface: [rt-mbms-wui](https://github.com/5G-MAG/rt-mbms-wui)
 * [Information and how to download, build, install and run](https://github.com/5G-MAG/rt-mbms-wui#readme)
 * [Releases](https://github.com/5G-MAG/rt-mbms-wui/releases)
 * [Docker](https://github.com/5G-MAG/rt-mbms-wui/tree/development/wui)
