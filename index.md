@@ -10,14 +10,12 @@ has_children: true
 # Overview
 
 This website serves as an umbrella for documentation, practical guidelines and examples of applications that can be
-built with the software packages available as 5G-MAG Reference Tools and also in combination with other platforms.
-
-A summary about what we do can be found below.
+built with the software packages available in the 5G-MAG Reference Tools and also in combination with other platforms.
 
 <iframe width="100%" height="440" src="https://drive.google.com/file/d/1tPcMWLeY6QJNH5OfGWDwLmoSyjrqk8gA/preview"></iframe>
 
-## Join our Public Monthly Call (Last Friday of the month at 13:00 CET/CEST)
-Find all the information how to join here: https://5g-mag.com/community#calendar
+## Join our Public Monthly Call (Last Friday of the month at 13:00 CET/CEST - unless communicated otherwise)
+Find all the information how to join here: [https://5g-mag.com/community#calendar](https://5g-mag.com/community#calendar)
 Agendas circulated via the [Google Group](https://groups.google.com/g/5g-mag-reference-tools) mailing list
 
 
