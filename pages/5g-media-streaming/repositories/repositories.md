@@ -5,12 +5,13 @@ parent: 5G Downlink Media Streaming
 has_children: false
 nav_order: 3
 ---
-
-# Related repositories
+# Context of the repositories
 
 <img src="../../../assets/images/projects/5gms_diagram.png">
 
 <img src="../../../assets/images/projects/5gms_repos.png">
+
+# Access to the relevant repositories
 
 Please note that 5G Media Streaming makes use of other generic [5G Core Network components](https://5g-mag.github.io/Getting-Started/pages/5g-core-network-components/)
 
