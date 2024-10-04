@@ -7,9 +7,9 @@ nav_order: 3
 ---
 # Context of the repositories
 
-<img src="../../../assets/images/projects/xr_diagram.png">
+<img src="../../assets/images/projects/xr_diagram.png">
 
-<img src="../../../assets/images/projects/xr_repos.png">
+<img src="../../assets/images/projects/xr_repos.png">
 
 # Access to the relevant repositories
 
