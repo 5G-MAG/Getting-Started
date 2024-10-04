@@ -2,7 +2,7 @@
 layout: default
 title: AI / ML Evaluation Framework
 has_children: true
-nav_order: 8
+nav_order: 11
 ---
 
 # Artificial Intelligence and Machine Learning Evaluation Framework
