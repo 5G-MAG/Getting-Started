@@ -6,7 +6,12 @@ has_children: false
 nav_order: 3
 ---
 
-# ⭐ Related repositories
+# Related repositories
+
+<img src="../../../assets/images/projects/5gms_diagram.png">
+
+<img src="../../../assets/images/projects/5gms_repos.png">
+
 Please note that 5G Media Streaming makes use of other generic [5G Core Network components](https://5g-mag.github.io/Getting-Started/pages/5g-core-network-components/)
 
 ## 5GMS Application Provider: [rt-5gms-application-provider](https://github.com/5G-MAG/rt-5gms-application-provider)
