@@ -8,13 +8,9 @@ nav_order: 3
 ---
 
 # Docker Implementation
-Here you will find an easy way to try the current 5G-MBS MVP being developed by the [iTEAM Mobile Communications Group](https://github.com/iTEAM-MCG) as part of the [5G-MAG](https://github.com/5G-MAG), following the 3GPP Release 17 specifications.
+A Docker Compose implementation to deploy an MBS capable 5G Core is available in the [rt-mbs-examples](https://github.com/5G-MAG/rt-mbs-examples/) repository.
 
-This implementation is being developed on top of the [Open5GS](https://github.com/open5gs/open5gs) 5G Core. The repository containing the source code can be found [here](https://github.com/5G-MAG/open5gs/tree/upv-mbs).
-
-This playground uses Docker Compose to deploy a 5G-MBS capable 5G Core using Docker images present in a container repository.
-
-## 5G-MBS architecture using Open5GS
+## Deployment architecture using Open5GS
 
 ![5G-MBS architecture using Open5GS](../images/5G-MBS_5G_Core.png)
 
@@ -31,44 +27,32 @@ These ports are being used for the following:
 
 Add your host's IP address to the `DOCKER_HOST_IP` variable in the `.env` file for the MB-UPF to be reachable by external gNBs.
 
-## Basic usage
+## Testing
 
-<details>
-<summary>Build it</summary>
+# Tests
 
-> Note: This method uses the `docker-bake.hcl` file and requires `docker-buildx-plugin`
+This section explains how to use the Python tests present on the `test` directory in the [rt-mbs-examples](https://github.com/5G-MAG/rt-mbs-examples/) repository.
 
-From the top level directory of the repository run:
+The Python modules requirements are preinstalled on the AF container image. This container mounts the `test` directory as read-only to be able to run the tests.
+
+To run the tests, execute an interactive session with the AF container and navigate to the test directory:
 ```bash
-docker buildx bake
+docker exec -it af bash
+
+# inside the AF container
+cd test
+
+# to run the tests
+python3 tests.py
 ```
 
-This builds the AF, MB-SMF and MB-UPF images locally.
+The `test` directory contains the following subdirectories:
+- `MB_SMF` the developed tests regarding the MB-SMF Network Function
+- `utils` a Python package containing some common utils for the tests
+- `support` some support files for the tests like JSON files for the requests and JSON schemas to validate them
 
-</details>
+Using the `config.toml` file some parameters can be configured:
+- the log_level for the tests can be adjusted. The values supported are: DEBUG, INFO, WARNING, ERROR, CRITICAL
+- some endpoint parameters like the MB-SMF address, the protocol (HTTP or HTTPS) and the port being used
 
-<details>
-<summary>Deploy it</summary>
-To download the rest of the Docker images from the repository and start everything:
-
-```bash
-docker compose up -d
-```
-
-To stop everything:
-
-```bash
-docker compose down
-```
-
-</details>
-
-## Find more information
-
-- `docs` has extra documentation regarding the project
-  - [docs/Overview](docs/Overview.md) to see the current status and features of the project
-  - [docs/Detailed Instructions](docs/Detailed-Instructions.md) to see how to manage the containers
-  - [docs/Tests](docs/Tests.md) to see how to use the tests present in the `test` directory
-- `configs` to check/modify the Network Function configuration files of the deployment
-- `images` where the Network Function Dockerfiles are present
-- `test` testing suite being developed in Python to test the features present
+The file `tests.py` contains the main logic for the tests. In this file the test suites are defined and run by the unittest testing framework.
