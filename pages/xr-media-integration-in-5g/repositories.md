@@ -2,7 +2,7 @@
 layout: default
 title: Repositories
 parent: XR Media Integration in 5G
-has_children: true
+has_children: false
 nav_order: 3
 ---
 
@@ -20,10 +20,6 @@ See also: [xr-player-overview](tutorials/xr-player-overview)
 ## Media pipelines factory and plugins implementing the Media Access Function (MAF) API: [rt-xr-maf-native](https://github.com/5G-MAG/rt-xr-maf-native)
 * [Information and how to download, build, install and run](https://github.com/5G-MAG/rt-xr-maf-native#readme)
 * [Releases](https://github.com/5G-MAG/rt-xr-maf-native/tags)
-
-## Media Access Function (MAF) API Unity3D packager: [rt-xr-maf-plugin](https://github.com/5G-MAG/rt-xr-maf-plugin)
-* [Information and how to download, build, install and run](https://github.com/5G-MAG/rt-xr-maf-plugin#readme)
-* [Releases](https://github.com/5G-MAG/rt-xr-maf-plugin/tags)
 
 ## Content for the XR Unity Player: [rt-xr-content](https://github.com/5G-MAG/rt-xr-content)
 * [Information](https://github.com/5G-MAG/rt-xr-content#readme)
