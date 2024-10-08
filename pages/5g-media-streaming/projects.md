@@ -36,6 +36,10 @@ Everything required for the provisioning of QoE metrics collection and reporting
 Everything required for the provisioning of media consumption collection and reporting in the 5GMS AF as well as the collection of consumption reports by the 5GMS Client and the reporting by the Media Session Handler to the 5GMS AF.
 * [Kanban board](https://github.com/orgs/5G-MAG/projects/16)
 
+## 5GMS: Application Provider User Interface
+Application Provider user interface to manage 5G Media Streaming operations.
+* [Kanban board](https://github.com/orgs/5G-MAG/projects/40)
+
 ## 5GMS: TS 26.512 V17.5.0 uplift
 * [Kanban board](https://github.com/orgs/5G-MAG/projects/18)
 
