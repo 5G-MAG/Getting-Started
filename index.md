@@ -16,11 +16,6 @@ built with the software packages available in the 5G-MAG Reference Tools and als
 
 [DOWNLOAD THE PRESENTATION](https://drive.google.com/file/d/1tPcMWLeY6QJNH5OfGWDwLmoSyjrqk8gA/preview){: .btn} 
 
-## The Projects
-* Access to information on relevant specifications, repositories, projects and tutorials in the lateral menu.
-
-<img src="./assets/images/projects/projects.png">
-
 ## Developer Community
 * Meet the developer community, participate, contribute, join the public calls: [https://www.5g-mag.com/community](https://www.5g-mag.com/community)
 * Discussion are happening in [Slack](https://5g-mag.slack.com/).
