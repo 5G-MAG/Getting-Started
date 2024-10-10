@@ -6,7 +6,7 @@ has_children: false
 nav_order: 2
 ---
 
-# 🚧 Related projects
+# Projects
 
 ## MBMS: Public Warning System
 Issues and required functionality around support for a Public Warning System as defined in ETSI 103 720.
