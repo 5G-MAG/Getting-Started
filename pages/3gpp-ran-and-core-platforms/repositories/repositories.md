@@ -1,9 +1,9 @@
 ---
 layout: default
 title: Repositories
-parent: 5G Downlink Media Streaming
+parent: 3GPP RAN and Core Platforms
 has_children: false
-nav_order: 3
+nav_order: 1
 ---
 # Context of the repositories
 
