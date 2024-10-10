@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Tutorials
-parent: DVB-I over 5G
+parent: DVB-I Services over 5G
 has_children: true
 nav_order: 4
 ---
