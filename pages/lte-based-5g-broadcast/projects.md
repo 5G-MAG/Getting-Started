@@ -6,7 +6,7 @@ has_children: false
 nav_order: 2
 ---
 
-# 🚧 Related projects
+# Projects
 
 ## MBMS: Seamless switching between broadcast and unicast
 Seamless switching between LTE-based 5G Broadcast and OTT unicast
