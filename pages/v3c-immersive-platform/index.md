@@ -2,7 +2,7 @@
 layout: default
 title: V3C Immersive Platform
 has_children: true
-nav_order: 10
+nav_order: 11
 ---
 
 # V3C Immersive Platform
