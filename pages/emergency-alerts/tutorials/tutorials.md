@@ -11,6 +11,6 @@ nav_order: 4
 ## Our video library
 The section [DEVELOPER XCHANGES & TUTORIALS](https://www.5g-mag.com/tutorials) in the 5G-MAG website contains more information and videos from the 5G-MAG Reference Tools developers on the usage of the tools. Some of the videos are also available here:
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?si=AmxsuFLQ8V_PZD0G&amp;list=PLFqKJZ78_IWUibB6dMiabaVNDFLSGBWlx" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?si=Wwhg80cAZS4Jmjfs&amp;list=PLFqKJZ78_IWVeyD2qw18szZe6zrukVv0e" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ## Using the tools
