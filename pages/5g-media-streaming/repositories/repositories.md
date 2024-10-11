@@ -14,6 +14,7 @@ nav_order: 3
 # Access to the relevant repositories
 
 Note that 5G Media Streaming makes use of other generic [5G Core Network components](https://5g-mag.github.io/Getting-Started/pages/5g-core-network-components/)
+Pre-built APKs are available for the 5GMS Aware Application and the 5GMS Media Session Handler (see below).
 
 ## 5GMS Application Provider: [rt-5gms-application-provider](https://github.com/5G-MAG/rt-5gms-application-provider)
 * [Information and how to download, build, install and run](https://github.com/5G-MAG/rt-5gms-application-provider#readme)
@@ -34,7 +35,7 @@ Note that 5G Media Streaming makes use of other generic [5G Core Network compone
 
 ## 5GMSd Media Session Handler: [rt-5gms-media-session-handler](https://github.com/5G-MAG/rt-5gms-media-session-handler)
 * [Information and how to download, build, install and run](https://github.com/5G-MAG/rt-5gms-media-session-handler#readme)
-* [Releases](https://github.com/5G-MAG/rt-5gms-media-session-handler/releases)
+* [Releases](https://github.com/5G-MAG/rt-5gms-media-session-handler/releases) (pre-built APK available)
 
 ## 5GMSd Media Stream Handler: [rt-5gms-media-stream-handler](https://github.com/5G-MAG/rt-5gms-media-stream-handler)
 * [Information and how to download, build, install and run](https://github.com/5G-MAG/rt-5gms-media-stream-handler#readme)
@@ -43,7 +44,7 @@ Note that 5G Media Streaming makes use of other generic [5G Core Network compone
 
 ## 5GMSd-Aware Applications: [rt-5gms-application](https://github.com/5G-MAG/rt-5gms-application)
 * [Information and how to download, build, install and run](https://github.com/5G-MAG/rt-5gms-application#readme)
-* [Releases](https://github.com/5G-MAG/rt-5gms-application/releases)
+* [Releases](https://github.com/5G-MAG/rt-5gms-application/releases) (pre-built APK available)
 
 # Auxiliary repositories
 
