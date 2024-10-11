@@ -12,4 +12,4 @@ The section [DEVELOPER XCHANGES & TUTORIALS](https://www.5g-mag.com/tutorials) i
 
 ## Using the tools
 ### [Tutorial - 5G Network Setup with COTS UE](./5gnetwork.html)
-This guide describes how to setup and configure the 5G-MAG Reference Tools - 5G Downlink Media Streaming components to create an end to end setup using Application Function, Application Server, 5GMSd Aware Application, Media Session Handler, Media Stream Handler and Common Android Library. These also include generic instructions to setup a 5G network using Open5GS and srsRAN and COTS UEs.
+These are generic instructions to setup a 5G network using Open5GS and srsRAN and COTS UEs.
