@@ -32,3 +32,6 @@ nav_order: 1
 | Feature | rt-mbms-tx | rt-mbms-modem
 | -------- | ------- | -------|
 | PMCH bandwidth of 30, 35 and 40 PRBs (corresponding to 6/7/8MHz) | No | Yes |
+
+## Support of features for rt-mbms-tx-for-qrd-and-crd
+Note that the 5G Broadcast Transmitter for QRD and CRD is an extension of an MBMS-enabled eNodeB tailored to operate as a 5G Broadcast transmitter. Only MBMS/Unicast-mixed cell is supported alongside pre-Rel-14 features. 
