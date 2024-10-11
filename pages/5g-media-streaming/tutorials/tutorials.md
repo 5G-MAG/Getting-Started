@@ -17,7 +17,7 @@ The section [DEVELOPER XCHANGES & TUTORIALS](https://www.5g-mag.com/tutorials) i
 ### [Tutorial: Basic 5G Media Streaming end-to-end setup](./end-to-end.html)
 This guide describes how to setup and configure the 5G-MAG Reference Tools - 5G Downlink Media Streaming components to create an end to end setup using Application Function, Application Server, 5GMSd Aware Application, Media Session Handler, Media Stream Handler and Common Android Library.
 
-### [Tutorial: Basic 5G Media Streaming end-to-end setup](./end-to-end-with-5g.html)
+### [Tutorial: Basic 5G Media Streaming end-to-end setup with 5G network and COTS UE](./end-to-end-with-5g.html)
 This guide describes how to setup and configure the 5G-MAG Reference Tools to create an end to end setup consisting of the 5G Downlink Media Streaming components and a 5G Network based on Open5GS and srsRAN.
 
 ### [Tutorial: 5G Media Streaming with Consumption Reporting](./consumption-reporting.html)
