@@ -5,8 +5,18 @@ parent: MBMS and LTE-based 5G Broadcast
 has_children: false
 nav_order: 3
 ---
+# Context of the repositories
 
-# ⭐ Related repositories
+<img src="../../assets/images/projects/5gbc_diagram.png">
+
+<img src="../../assets/images/projects/5gbc_unicast_diagram.png">
+
+<img src="../../assets/images/projects/5gms5gbc_diagram.png">
+
+<img src="../../assets/images/projects/5gbc_repos.png">
+
+# Access to the relevant repositories
+
 ## 5G Broadcast Transmitter for MBMS-dedicated cells and basic MBMS gateway: [rt-mbms-tx](https://github.com/5G-MAG/rt-mbms-tx)
 * [Information and how to download, build, install and run](https://github.com/5G-MAG/rt-mbms-tx#readme)
 * [Releases](https://github.com/5G-MAG/rt-mbms-tx/releases)
@@ -40,10 +50,10 @@ nav_order: 3
 * [srsRAN](https://github.com/5G-MAG/srsRAN)
 
 # Auxiliary repositories:
-## MBMS Web User Interface: [rt-wui](https://github.com/5G-MAG/rt-wui)
-* [Information and how to download, build, install and run](https://github.com/5G-MAG/rt-wui#readme)
-* [Releases](https://github.com/5G-MAG/rt-wui/releases)
-* [Docker](https://github.com/5G-MAG/rt-wui/tree/development/wui)
+## MBMS Web User Interface: [rt-mbms-wui](https://github.com/5G-MAG/rt-mbms-wui)
+* [Information and how to download, build, install and run](https://github.com/5G-MAG/rt-mbms-wui#readme)
+* [Releases](https://github.com/5G-MAG/rt-mbms-wui/releases)
+* [Docker](https://github.com/5G-MAG/rt-mbms-wui/tree/development/wui)
 
 ## MBMS Examples: [rt-mbms-examples](https://github.com/5G-MAG/rt-mbms-examples)
 * [Information and how to download, build, install and run](https://github.com/5G-MAG/rt-mbms-examples#readme)

@@ -5,8 +5,13 @@ parent: Multimedia Content Delivery
 has_children: false
 nav_order: 3
 ---
+# Context of the repositories
 
-# ⭐ Related repositories
+<img src="../../assets/images/projects/md_diagram.png">
+
+<img src="../../assets/images/projects/md_repos.png">
+
+# Access to the relevant repositories
 
 ## Repositories related to Multicast IP delivery
 

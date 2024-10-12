@@ -6,7 +6,7 @@ has_children: false
 nav_order: 2
 ---
 
-# 🚧 Related projects
+# Projects
 
 ## 5GMS: Basic Media stream handling (MVP#1)
 The main objective for MVP#1 is to implement a starting point for 5G Media Streaming with DASH-based media streaming using 5GMS formats and protocols as the basis. This includes a basic Media Player talking to a simple 5GMS Application Server.
@@ -35,6 +35,10 @@ Everything required for the provisioning of QoE metrics collection and reporting
 ## 5GMS: Consumption collection and reporting feature
 Everything required for the provisioning of media consumption collection and reporting in the 5GMS AF as well as the collection of consumption reports by the 5GMS Client and the reporting by the Media Session Handler to the 5GMS AF.
 * [Kanban board](https://github.com/orgs/5G-MAG/projects/16)
+
+## 5GMS: Application Provider User Interface
+Application Provider user interface to manage 5G Media Streaming operations.
+* [Kanban board](https://github.com/orgs/5G-MAG/projects/40)
 
 ## 5GMS: TS 26.512 V17.5.0 uplift
 * [Kanban board](https://github.com/orgs/5G-MAG/projects/18)

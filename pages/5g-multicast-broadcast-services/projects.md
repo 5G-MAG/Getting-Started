@@ -6,7 +6,7 @@ has_children: false
 nav_order: 2
 ---
 
-# 🚧 Related projects
+# Projects
 
 ## 5MBS: 5G Core functions
 

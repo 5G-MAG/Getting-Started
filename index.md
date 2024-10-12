@@ -14,6 +14,8 @@ built with the software packages available in the 5G-MAG Reference Tools and als
 
 <iframe width="100%" height="440" src="https://drive.google.com/file/d/1tPcMWLeY6QJNH5OfGWDwLmoSyjrqk8gA/preview"></iframe>
 
+[DOWNLOAD THE PRESENTATION](https://drive.google.com/file/d/1tPcMWLeY6QJNH5OfGWDwLmoSyjrqk8gA/preview){: .btn} 
+
 ## Developer Community
 * Meet the developer community, participate, contribute, join the public calls: [https://www.5g-mag.com/community](https://www.5g-mag.com/community)
 * Discussion are happening in [Slack](https://5g-mag.slack.com/).
@@ -27,6 +29,8 @@ built with the software packages available in the 5G-MAG Reference Tools and als
 ## Contributing
 * Learn about the License Model for contributors: [https://www.5g-mag.com/license](https://www.5g-mag.com/license)
 * Guidelines for contributors are available [here](guidelines-contributors.html)
+
+<img src="./assets/images/projects/contributors.png">
 
 ## Practical information
 The repositories related to the **5G-MAG REFERENCE TOOLS** are usually starting with **rt-**. Some repositories are also allocating dependencies and auxiliary tools. In the case of third party branches, you will find such repositories with its original name from source.
