@@ -95,9 +95,9 @@ For each audio source the extension specifies attenuation parameters controling 
 
 [Sample scene with spatial audio source](https://github.com/5G-MAG/rt-xr-content/tree/development/studio_apartment)
 
-
-
 ### Overview of the MPEG extensions to glTF format implemented in v1.0.0
+
+Note that "Unity player" refers to the compiled application, while "Unity editor" refers to the development environment which also allows running the app without actually compiling it for the target platform.
 
 | glTF extension               | Unity player   | Unity editor   |
 |:-----------------------------|:---------------|:---------------|
