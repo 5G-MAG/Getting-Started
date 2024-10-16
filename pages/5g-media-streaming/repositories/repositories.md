@@ -14,7 +14,8 @@ nav_order: 3
 
 ### Repositories
 <img src="../../../assets/images/projects/5gms_repos.png">
-* Check [below]("./repositories.html#access-to-the-5g-media-streaming") the repositories for 5G Media Streaming
+
+ * Check [here]("./repositories.html#access-to-the-5g-media-streaming") the repositories for 5G Media Streaming
 
 ## 5G Media Streaming with 3GPP RAN and Core Platforms
 
