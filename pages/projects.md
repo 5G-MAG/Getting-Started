@@ -8,7 +8,7 @@ parent: Home
 
 ## 5G-MAG Reference Tools for "5G Media Streaming"
 
-<img src="../../../assets/images/projects/projects_1.png">
+<img src="../assets/images/projects/projects_1.png">
 
 ### 5G Downlink Media Streaming
 * [Details of the project](./5g-media-streaming/)
