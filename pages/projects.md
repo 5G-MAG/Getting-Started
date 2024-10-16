@@ -1,10 +1,10 @@
 ---
 layout: default
-title: Overview of the 5G-MAG Reference Tools
+title: Overview of Reference Tools
 parent: Home
 ---
 
-# Overview of the 5G-MAG Reference Tools
+# Overview of Reference Tools
 
 ## 5G-MAG Reference Tools for "5G Media Streaming"
 
