@@ -7,11 +7,50 @@ nav_order: 3
 ---
 # Context of the repositories
 
+## 5G Media Streaming
+
+### High-level architecture
+<img src="../../../assets/images/projects/5gms_diagram.png">
+
+### Repositories
+<img src="../../../assets/images/projects/5gms_repos.png">
+* Check [below]("./repositories.html#access-to-the-5g-media-streaming") the repositories for 5G Media Streaming
+
+## 5G Media Streaming with 3GPP RAN and Core Platforms
+
+### High-level architecture
+
 <img src="../../../assets/images/projects/5gms_diagram.png">
 
 <img src="../../../assets/images/projects/5gms_repos.png">
 
-# Access to the relevant repositories
+ * Check [here]("../3gpp-ran-and-core-platforms/repositories.html#access-to-the-relevant-repositories") the repositories for 3GPP RAN and Core Platforms
+
+## 5G Media Streaming with 5G Core Network Components
+
+### High-level architecture
+
+<img src="../../../assets/images/projects/5gms_diagram.png">
+
+### Repositories
+
+<img src="../../../assets/images/projects/5gms_repos.png">
+
+ * Check [here]("../5g-core-network-components/repositories.html#access-to-the-relevant-repositories") the repositories for 5G Core Network Components
+
+## 5G Media Streaming with UE Data Collection, Reporting and Event Exposure
+
+### High-level architecture
+
+<img src="../../../assets/images/projects/5gms_diagram.png">
+
+### Repositories
+
+<img src="../../../assets/images/projects/5gms_repos.png">
+
+ * Check [here]("../ue-data-collection-reporting-exposure/repositories.html#access-to-the-relevant-repositories") the repositories for UE Data Collection, Reporting and Event Exposure
+
+# Access to the 5G Media Streaming repositories
 
 Note that 5G Media Streaming makes use of other generic [5G Core Network components](https://5g-mag.github.io/Getting-Started/pages/5g-core-network-components/)
 Pre-built APKs are available for the 5GMS Aware Application and the 5GMS Media Session Handler (see below).
