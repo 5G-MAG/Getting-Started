@@ -15,7 +15,7 @@ nav_order: 3
 ### Repositories
 <img src="../../../assets/images/projects/5gms_repos.png">
 
- * Check [here](./repositories.html#access-to-the-5g-media-streaming) the repositories for 5G Media Streaming
+ * Check [here](./repositories.html#access-to-the-5g-media-streaming-repositories) to access the repositories for 5G Media Streaming
 
 ## 5G Media Streaming with 3GPP RAN and Core Platforms
 
@@ -25,7 +25,8 @@ nav_order: 3
 
 <img src="../../../assets/images/projects/5gms_repos.png">
 
- * Check [here](../3gpp-ran-and-core-platforms/repositories.html#access-to-the-relevant-repositories) the repositories for 3GPP RAN and Core Platforms
+ * Check [here](./repositories.html#access-to-the-5g-media-streaming-repositories) to access the repositories for 5G Media Streaming
+ * Check [here](../3gpp-ran-and-core-platforms/repositories.html#access-to-the-3gpp-ran-and-core-platforms-repositories) to access the repositories for 3GPP RAN and Core Platforms
 
 ## 5G Media Streaming with 5G Core Network Components
 
@@ -37,7 +38,8 @@ nav_order: 3
 
 <img src="../../../assets/images/projects/5gms_repos.png">
 
- * Check [here](../5g-core-network-components/repositories.html#access-to-the-relevant-repositories) the repositories for 5G Core Network Components
+ * Check [here](./repositories.html#access-to-the-5g-media-streaming-repositories) to access the repositories for 5G Media Streaming
+ * Check [here](../5g-core-network-components/repositories.html#access-to-the-5g-core-network-components-repositories) to access the repositories for 5G Core Network Components
 
 ## 5G Media Streaming with UE Data Collection, Reporting and Event Exposure
 
@@ -49,7 +51,8 @@ nav_order: 3
 
 <img src="../../../assets/images/projects/5gms_repos.png">
 
- * Check [here](../ue-data-collection-reporting-exposure/repositories.html#access-to-the-relevant-repositories) the repositories for UE Data Collection, Reporting and Event Exposure
+ * Check [here](./repositories.html#access-to-the-5g-media-streaming-repositories) to access the repositories for 5G Media Streaming
+ * Check [here](../ue-data-collection-reporting-exposure/repositories.html#access-to-the-ue-data-collection-reporting-and-event-exposure-repositories) the repositories for UE Data Collection, Reporting and Event Exposure
 
 # Access to the 5G Media Streaming repositories
 
