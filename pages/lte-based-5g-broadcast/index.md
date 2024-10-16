@@ -1,6 +1,6 @@
 ---
 layout: default
-title: 5G Broadcast: MBMS & LTE-based 5G Broadcast
+title: 5G Broadcast - MBMS & LTE-based 5G Broadcast
 has_children: true
 nav_order: 5
 ---
