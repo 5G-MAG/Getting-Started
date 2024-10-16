@@ -27,7 +27,7 @@ parent: Home
 
 ## 5G-MAG Reference Tools for "5G Broadcast"
 
-<img src="../../../assets/images/projects/projects_2.png">
+<img src="../assets/images/projects/projects_2.png">
 
 ### MBMS and LTE-based 5G Broadcast
 * [Details of the project](./lte-based-5g-broadcast/)
@@ -49,7 +49,7 @@ parent: Home
 
 ## 5G-MAG Reference Tools for "5G Multicast Broadcast Services (MBS)"
 
-<img src="../../../assets/images/projects/projects_3.png">
+<img src="../assets/images/projects/projects_3.png">
 
 ### 5G Multicast and Broadcast Services (5MBS)
 * [Details of the project](./5g-multicast-broadcast-services/)
@@ -65,21 +65,21 @@ parent: Home
 
 ## 5G-MAG Reference Tools for "eXtended Reality (XR)"
 
-<img src="../../../assets/images/projects/projects_4.png">
+<img src="../assets/images/projects/projects_4.png">
 
 ### XR Media integration in 5G
 * [Details of the project](./xr-media-integration-in-5g/)
 
 ## 5G-MAG Reference Tools for "Beyond 2D"
 
-<img src="../../../assets/images/projects/projects_5.png">
+<img src="../assets/images/projects/projects_5.png">
 
 ### V3C Immersive Platform
 * [Details of the project](./v3c-immersive-platform/)
 
 ## 5G-MAG Reference Tools supporting standardization
 
-<img src="../../../assets/images/projects/projects_6.png">
+<img src="../assets/images/projects/projects_6.png">
 
 ### Artificial Intelligence and Machine Learning Evaluation Framework
 * [Details of the project](./ai-ml-evaluation-framework/)
