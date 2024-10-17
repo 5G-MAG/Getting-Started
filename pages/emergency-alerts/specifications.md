@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Specifications
+title: Specifications and Architecture
 parent: Emergency Alerts over 5G Broadcast
 has_children: false
 nav_order: 0
