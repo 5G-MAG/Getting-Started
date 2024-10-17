@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Repositories
-parent: DVB-I
+parent: DVB-I Services over 5G
 has_children: false
 nav_order: 3
 ---
