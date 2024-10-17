@@ -12,7 +12,7 @@ nav_order: 3
 
 Note that 5G Media Streaming makes use of other repositories:
 
- * Check [here](../3gpp-ran-and-core-platforms/repositories/repositories.html#access-to-the-3gpp-ran-and-core-platforms-repositories) to access the repositories for 3GPP RAN and Core Platforms
+ * Check [here](../3gpp-ran-and-core-platforms/repositories.html#access-to-the-3gpp-ran-and-core-platforms-repositories) to access the repositories for 3GPP RAN and Core Platforms
  * Check [here](../5g-core-network-components/repositories.html#access-to-the-5g-core-network-components-repositories) to access the repositories for 5G Core Network Components
  * Check [here](../ue-data-collection-reporting-exposure/repositories.html#access-to-the-ue-data-collection-reporting-and-event-exposure-repositories) the repositories for UE Data Collection, Reporting and Event Exposure
 
