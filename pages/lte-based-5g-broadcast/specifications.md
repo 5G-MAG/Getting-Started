@@ -1,10 +1,22 @@
 ---
 layout: default
-title: Specifications and Architecture
+title: Specifications - Architecture
 parent: 5G Broadcast - MBMS & LTE-based 5G Broadcast
 has_children: false
 nav_order: 0
 ---
 
-# Specifications
+# Specifications and Architecture
+
+## Specifications
+
 Visit the [Standards repository](https://5g-mag.github.io/Standards/pages/lte-based-5g-broadcast.html) for details.
+
+## High-level architecture
+
+### High-level architecture: 5G Broadcast with Multimedia delivery protocols
+
+<img src="../../assets/images/projects/5gbc_diagram.png">
+
+ * Check [here](./repositories.html) to access the repositories for Multimedia delivery protocols
+ * Check [here](../lte-based-5g-broadcast/repositories.html) to access the repositories for 5G Broadcast
