@@ -5,13 +5,9 @@ parent: XR Media Integration in 5G
 has_children: false
 nav_order: 3
 ---
-# Context of the repositories
-
-<img src="../../assets/images/projects/xr_diagram.png">
+# Repositories
 
 <img src="../../assets/images/projects/xr_repos.png">
-
-# Access to the relevant repositories
 
 ## XR Unity Player: [rt-xr-unity-player](https://github.com/5G-MAG/rt-xr-unity-player)
 * [Information and how to download, build, install and run](https://github.com/5G-MAG/rt-xr-unity-player#readme)
