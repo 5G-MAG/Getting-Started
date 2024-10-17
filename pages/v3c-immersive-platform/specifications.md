@@ -17,4 +17,4 @@ Visit the [Standards repository](https://5g-mag.github.io/Standards/pages/volume
 
 <img src="../../assets/images/projects/v3c_diagram.png">
 
- * Check [here](.repositories.html) to access the repositories for V3C Immersive Platform
+ * Check [here](./repositories.html) to access the repositories for V3C Immersive Platform
