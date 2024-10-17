@@ -9,6 +9,8 @@ nav_order: 3
 
 <img src="../../assets/images/projects/5gc_repos.png">
 
+---
+
 ## 5G Core Service Consumers: [rt-5gc-service-consumers](https://github.com/5G-MAG/rt-5gc-service-consumers)
 * [Information and how to download, build, install and run](https://github.com/5G-MAG/rt-5gc-service-consumers#readme)
 * [Guidelines, development and testing](https://github.com/5G-MAG/rt-5gc-service-consumers/wiki)
