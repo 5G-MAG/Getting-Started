@@ -27,9 +27,11 @@ nav_order: 3
 * [Information and how to download, build, install and run](https://github.com/5G-MAG/rt-xr-blender-exporter#readme)
 * [Releases](https://github.com/5G-MAG/rt-xr-blender-exporter/releases)
 
+---
+
 ## Auxiliary repositories
 
-## A fork of Unity's glTF parser: [rt-xr-gITFast](https://github.com/5G-MAG/rt-xr-gITFast)
+### A fork of Unity's glTF parser: [rt-xr-gITFast](https://github.com/5G-MAG/rt-xr-gITFast)
 * [Information and how to download, build, install and run](https://github.com/5G-MAG/rt-xr-gITFast#readme)
 * [Releases](https://github.com/5G-MAG/rt-xr-gITFast/releases)
 
