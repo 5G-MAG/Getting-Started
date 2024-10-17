@@ -18,6 +18,8 @@ Note that 5G Media Streaming makes use of other repositories:
 
 Pre-built APKs are available for the 5GMS Aware Application and the 5GMS Media Session Handler (see below).
 
+---
+
 ## 5GMS Application Provider: [rt-5gms-application-provider](https://github.com/5G-MAG/rt-5gms-application-provider)
 * [Information and how to download, build, install and run](https://github.com/5G-MAG/rt-5gms-application-provider#readme)
 * [Releases](https://github.com/5G-MAG/rt-5gms-application-provider/releases)
