@@ -17,6 +17,8 @@ Some 5G-MAG Reference Tools Projects make use of software developed by several O
 
 * [Open5GS Project](https://www.open5gs.org), used primarily as the 5GC to build 5G-MAG Reference Tools demonstrators and PoCs and as the basis for the development of 5GC related components for MBS
 
+---
+
 ## Open5GS: [open5gs](https://github.com/5G-MAG/open5gs)
 
 ## srsRAN Project: [rt-srsRAN_Project](https://github.com/5G-MAG/rt-srsRAN_Project)
