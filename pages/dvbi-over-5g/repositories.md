@@ -7,9 +7,9 @@ nav_order: 3
 ---
 # Repositories
 
-<img src="../../assets/images/projects/dvbi_repos.png">
+<img src="../../assets/images/projects/dvb_repos.png">
 
 ---
 
-## AI/ML Evaluation Framework: [rt-ai-ml-evaluation-framework](https://github.com/5G-MAG/rt-ai-ml-evaluation-framework)
-* [Information and how to download, build, install and run](https://github.com/5G-MAG/rt-ai-ml-evaluation-framework#readme)
+## DVB-I Reference Application: [rt-5gms-application/tree/development/fivegmag_ExoDvbi_player](https://github.com/5G-MAG/rt-5gms-application/tree/development/fivegmag_ExoDvbi_player))
+* [Information and how to download, build, install and run](https://github.com/5G-MAG/rt-5gms-application/tree/development/fivegmag_ExoDvbi_player#readme)
