@@ -19,4 +19,4 @@ Visit the [Standards repository](https://5g-mag.github.io/Standards/pages/5g-mul
 
  * Check [here](.repositories.html) to access the repositories for 5G Multicast Broadcast Services (MBS)
  * Check [here](../3gpp-ran-and-core-platforms/repositories.html) to access the repositories for 3GPP RAN and Core Platforms
- * Check [here](../5g-media-streaming) to access the repositories for 5G Media Streaming
+ * Check [here](../5g-media-streaming/repositories.html) to access the repositories for 5G Media Streaming
