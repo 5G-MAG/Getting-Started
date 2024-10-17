@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Specifications and Architecture
+title: Specifications - Architecture
 parent: V3C Immersive Platform
 has_children: false
 nav_order: 0
