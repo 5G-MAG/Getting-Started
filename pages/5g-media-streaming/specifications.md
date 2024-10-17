@@ -8,9 +8,29 @@ nav_order: 0
 
 # Specifications and Architecture
 
-## 
+## High-level architecture: 5G Downlink Media Streaming (5GMSd)
 
-<img src="../../assets/images/projects/5gms_repos.png">
+<img src="../../assets/images/projects/5gms_diagram.png">
+
+ * Check the relevant [repositories](./repositories.html)
+
+## High-level architecture: 5G Downlink Media Streaming (5GMSd) with 5G Core Network Components
+
+<img src="../../assets/images/projects/5gms_diagram.png">
+
+ * Check the relevant [repositories](./repositories.html)
+
+## High-level architecture: 5G Downlink Media Streaming (5GMSd) with UE Data Collection Reporting and Event Exposure
+
+<img src="../../assets/images/projects/5gms_uedc_diagram.png">
+
+ * Check the relevant [repositories](./repositories.html)
+
+## High-level architecture: 5G Downlink Media Streaming (5GMSd) over eMBMS
+
+<img src="../../assets/images/projects/5gms_5gbc_diagram.png">
+
+ * Check the relevant [repositories](./repositories.html)
 
 ## References
 Visit the [Standards repository](https://5g-mag.github.io/Standards/pages/5g-media-streaming.html) for details.
