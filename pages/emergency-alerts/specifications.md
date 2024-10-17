@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Specifications and Architecture
+title: Specifications - Architecture
 parent: Emergency Alerts over 5G Broadcast
 has_children: false
 nav_order: 0
@@ -16,5 +16,5 @@ Visit the [Standards repository](https://5g-mag.github.io/Standards/) for detail
 
 <img src="../../assets/images/projects/ew_diagram.png">
 
- * Check [here](.repositories.html) to access the repositories for Emergency Alerts over 5G Broadcast
+ * Check [here](./repositories.html) to access the repositories for Emergency Alerts over 5G Broadcast
  * Check [here](../3gpp-ran-and-core-platforms/repositories.html) to access the repositories for 3GPP RAN and Core Platforms
