@@ -7,8 +7,6 @@ nav_order: 3
 ---
 # Repositories
 
-<img src="../../assets/images/projects/aiml_repos.png">
-
 Note that these repositories are currently private and under testing. **Early access** can be requested at: [https://www.5g-mag.com/early-access](https://www.5g-mag.com/early-access)
 
 ---
