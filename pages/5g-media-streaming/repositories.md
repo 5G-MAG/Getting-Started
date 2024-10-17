@@ -5,16 +5,20 @@ parent: 5G Downlink Media Streaming
 has_children: false
 nav_order: 3
 ---
-# Context of the repositories
 
-<img src="../../../assets/images/projects/5gms_diagram.png">
+# Repositories
 
-<img src="../../../assets/images/projects/5gms_repos.png">
+<img src="../../assets/images/projects/5gms_repos.png">
 
-# Access to the relevant repositories
+Note that 5G Media Streaming makes use of other repositories:
 
-Note that 5G Media Streaming makes use of other generic [5G Core Network components](https://5g-mag.github.io/Getting-Started/pages/5g-core-network-components/)
+ * Check [here](../3gpp-ran-and-core-platforms/repositories.html#access-to-the-3gpp-ran-and-core-platforms-repositories) to access the repositories for 3GPP RAN and Core Platforms
+ * Check [here](../5g-core-network-components/repositories.html#access-to-the-5g-core-network-components-repositories) to access the repositories for 5G Core Network Components
+ * Check [here](../ue-data-collection-reporting-exposure/repositories.html#access-to-the-ue-data-collection-reporting-and-event-exposure-repositories) the repositories for UE Data Collection, Reporting and Event Exposure
+
 Pre-built APKs are available for the 5GMS Aware Application and the 5GMS Media Session Handler (see below).
+
+---
 
 ## 5GMS Application Provider: [rt-5gms-application-provider](https://github.com/5G-MAG/rt-5gms-application-provider)
 * [Information and how to download, build, install and run](https://github.com/5G-MAG/rt-5gms-application-provider#readme)
@@ -46,16 +50,18 @@ Pre-built APKs are available for the 5GMS Aware Application and the 5GMS Media S
 * [Information and how to download, build, install and run](https://github.com/5G-MAG/rt-5gms-application#readme)
 * [Releases](https://github.com/5G-MAG/rt-5gms-application/releases) (pre-built APK available)
 
-# Auxiliary repositories
+---
 
-## 5GMSd Common Android Library: [rt-5gms-common-android-library](https://github.com/5G-MAG/rt-5gms-common-android-library)
+## Auxiliary repositories
+
+### 5GMSd Common Android Library: [rt-5gms-common-android-library](https://github.com/5G-MAG/rt-5gms-common-android-library)
 * [Information and how to download, build, install and run](https://github.com/5G-MAG/rt-5gms-common-android-library#readme)
 * [Releases](https://github.com/5G-MAG/rt-5gms-common-android-library/releases)
 * [Packages](https://github.com/orgs/5G-MAG/packages?repo_name=rt-5gms-common-android-library)
 
-## 5GMSd Examples: [rt-5gms-examples](https://github.com/5G-MAG/rt-5gms-examples)
+### 5GMSd Examples: [rt-5gms-examples](https://github.com/5G-MAG/rt-5gms-examples)
 * [Information](https://github.com/5G-MAG/rt-5gms-examples#readme)
 * [Releases](https://github.com/5G-MAG/rt-5gms-examples/releases)
 
-## Tools common to various projects: [rt-common-shared](https://github.com/5G-MAG/rt-common-shared)
+### Tools common to various projects: [rt-common-shared](https://github.com/5G-MAG/rt-common-shared)
 * [Information](https://github.com/5G-MAG/rt-common-shared#readme)

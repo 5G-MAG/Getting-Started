@@ -1,21 +1,18 @@
 ---
 layout: default
 title: Repositories
-parent: MBMS and LTE-based 5G Broadcast
+parent: 5G Broadcast - MBMS & LTE-based 5G Broadcast
 has_children: false
 nav_order: 3
 ---
-# Context of the repositories
-
-<img src="../../assets/images/projects/5gbc_diagram.png">
-
-<img src="../../assets/images/projects/5gbc_unicast_diagram.png">
-
-<img src="../../assets/images/projects/5gms5gbc_diagram.png">
+# Repositories
 
 <img src="../../assets/images/projects/5gbc_repos.png">
 
-# Access to the relevant repositories
+Note that 5G Broadcast makes use of other repositories:
+
+ * Check [here](../3gpp-ran-and-core-platforms/repositories.html#access-to-the-3gpp-ran-and-core-platforms-repositories) to access the repositories for 3GPP RAN and Core Platforms
+ * Check [here](../multimedia-content-delivery/repositories.html#access-to-the-multimedia-content-delivery-repositories) to access the repositories for Multimedia content delivery
 
 ## 5G Broadcast Transmitter for MBMS-dedicated cells and basic MBMS gateway: [rt-mbms-tx](https://github.com/5G-MAG/rt-mbms-tx)
 * [Information and how to download, build, install and run](https://github.com/5G-MAG/rt-mbms-tx#readme)
@@ -38,23 +35,18 @@ nav_order: 3
 * [Information and how to download, build, install and run](https://github.com/5G-MAG/rt-mbms-mw-android#readme)
 * [Releases](https://github.com/5G-MAG/rt-mbms-mw-android/releases)
 
-## Tools common to various projects: [rt-common-shared](https://github.com/5G-MAG/rt-common-shared)
+---
+
+## Auxiliary repositories
+
+### Tools common to various projects: [rt-common-shared](https://github.com/5G-MAG/rt-common-shared)
 * [Information and how to download, build, install and run](https://github.com/5G-MAG/rt-common-shared#readme)
 
-# Repositories related to Multicast IP delivery
-## File Delivery over Unidirectional Transport (FLUTE): [rt-libflute](https://github.com/5G-MAG/rt-libflute)
-* [Information and how to download, build, install and run](https://github.com/5G-MAG/rt-libflute#readme)
-* [Releases](https://github.com/5G-MAG/rt-libflute/releases)
-
-# Repositories with dependencies related to LTE
-* [srsRAN](https://github.com/5G-MAG/srsRAN)
-
-# Auxiliary repositories:
-## MBMS Web User Interface: [rt-mbms-wui](https://github.com/5G-MAG/rt-mbms-wui)
+### MBMS Web User Interface: [rt-mbms-wui](https://github.com/5G-MAG/rt-mbms-wui)
 * [Information and how to download, build, install and run](https://github.com/5G-MAG/rt-mbms-wui#readme)
 * [Releases](https://github.com/5G-MAG/rt-mbms-wui/releases)
 * [Docker](https://github.com/5G-MAG/rt-mbms-wui/tree/development/wui)
 
-## MBMS Examples: [rt-mbms-examples](https://github.com/5G-MAG/rt-mbms-examples)
+### MBMS Examples: [rt-mbms-examples](https://github.com/5G-MAG/rt-mbms-examples)
 * [Information and how to download, build, install and run](https://github.com/5G-MAG/rt-mbms-examples#readme)
 * [Releases](https://github.com/5G-MAG/rt-mbms-examples/releases)

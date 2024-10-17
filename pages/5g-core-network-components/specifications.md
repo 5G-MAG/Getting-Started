@@ -1,8 +1,8 @@
 ---
 layout: default
-title: Specifications
+title: Specifications - Architecture
 parent: 5G Core Network Components
 has_children: false
 nav_order: 0
 ---
-# Specifications
+# Specifications and Architecture
