@@ -12,7 +12,7 @@ nav_order: 3
 Note that 5G Broadcast makes use of other repositories:
 
  * Check [here](../3gpp-ran-and-core-platforms/repositories.html#access-to-the-3gpp-ran-and-core-platforms-repositories) to access the repositories for 3GPP RAN and Core Platforms
- * Check [here](../multimedia-content-delivery/repositories/repositories.html#access-to-the-multimedia-content-delivery-repositories) to access the repositories for Multimedia content delivery
+ * Check [here](../multimedia-content-delivery/repositories.html#access-to-the-multimedia-content-delivery-repositories) to access the repositories for Multimedia content delivery
 
 ## 5G Broadcast Transmitter for MBMS-dedicated cells and basic MBMS gateway: [rt-mbms-tx](https://github.com/5G-MAG/rt-mbms-tx)
 * [Information and how to download, build, install and run](https://github.com/5G-MAG/rt-mbms-tx#readme)
