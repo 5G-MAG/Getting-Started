@@ -5,58 +5,17 @@ parent: 5G Downlink Media Streaming
 has_children: false
 nav_order: 3
 ---
-# Context of the repositories
 
-## 5G Media Streaming
-
-### High-level architecture
-<img src="../../assets/images/projects/5gms_diagram.png">
-
-### Repositories
-<img src="../../assets/images/projects/5gms_repos.png">
-
- * Check [here](./repositories.html#access-to-the-5g-media-streaming-repositories) to access the repositories for 5G Media Streaming
-
-## 5G Media Streaming with 3GPP RAN and Core Platforms
-
-### High-level architecture
-
-<img src="../../assets/images/projects/5gms_diagram.png">
+# Repositories
 
 <img src="../../assets/images/projects/5gms_repos.png">
 
- * Check [here](./repositories.html#access-to-the-5g-media-streaming-repositories) to access the repositories for 5G Media Streaming
+Note that 5G Media Streaming makes use of other repositories:
+
  * Check [here](../3gpp-ran-and-core-platforms/repositories/repositories.html#access-to-the-3gpp-ran-and-core-platforms-repositories) to access the repositories for 3GPP RAN and Core Platforms
-
-## 5G Media Streaming with 5G Core Network Components
-
-### High-level architecture
-
-<img src="../../assets/images/projects/5gms_diagram.png">
-
-### Repositories
-
-<img src="../../assets/images/projects/5gms_repos.png">
-
- * Check [here](./repositories.html#access-to-the-5g-media-streaming-repositories) to access the repositories for 5G Media Streaming
  * Check [here](../5g-core-network-components/repositories.html#access-to-the-5g-core-network-components-repositories) to access the repositories for 5G Core Network Components
-
-## 5G Media Streaming with UE Data Collection, Reporting and Event Exposure
-
-### High-level architecture
-
-<img src="../../assets/images/projects/5gms_diagram.png">
-
-### Repositories
-
-<img src="../../assets/images/projects/5gms_repos.png">
-
- * Check [here](./repositories.html#access-to-the-5g-media-streaming-repositories) to access the repositories for 5G Media Streaming
  * Check [here](../ue-data-collection-reporting-exposure/repositories.html#access-to-the-ue-data-collection-reporting-and-event-exposure-repositories) the repositories for UE Data Collection, Reporting and Event Exposure
 
-# Access to the 5G Media Streaming repositories
-
-Note that 5G Media Streaming makes use of other generic [5G Core Network components](https://5g-mag.github.io/Getting-Started/pages/5g-core-network-components/)
 Pre-built APKs are available for the 5GMS Aware Application and the 5GMS Media Session Handler (see below).
 
 ## 5GMS Application Provider: [rt-5gms-application-provider](https://github.com/5G-MAG/rt-5gms-application-provider)
