@@ -17,14 +17,14 @@ Visit the [Standards repository](https://5g-mag.github.io/Standards/pages/5g-med
 
 <img src="../../assets/images/projects/5gms_diagram.png">
 
- * Check [here](.repositories.html) to access the repositories for 5G Downlink Media Streaming
+ * Check [here](./repositories.html) to access the repositories for 5G Downlink Media Streaming
  * Check [here](../3gpp-ran-and-core-platforms/repositories.html) to access the repositories for 3GPP RAN and Core Platforms
 
 ### High-level architecture: 5G Downlink Media Streaming (5GMSd) with 5G Core Network Components
 
 <img src="../../assets/images/projects/5gms_5gc_diagram.png">
 
- * Check [here](.repositories.html) to access the repositories for 5G Downlink Media Streaming
+ * Check [here](./repositories.html) to access the repositories for 5G Downlink Media Streaming
  * Check [here](../3gpp-ran-and-core-platforms/repositories.html) to access the repositories for 3GPP RAN and Core Platforms
  * Check [here](../5g-core-network-components/repositories.html) to access the repositories for 5G Core Network Components
 
@@ -32,7 +32,7 @@ Visit the [Standards repository](https://5g-mag.github.io/Standards/pages/5g-med
 
 <img src="../../assets/images/projects/5gms_uedc_diagram.png">
 
- * Check [here](.repositories.html) to access the repositories for 5G Downlink Media Streaming
+ * Check [here](./repositories.html) to access the repositories for 5G Downlink Media Streaming
  * Check [here](../3gpp-ran-and-core-platforms/repositories.html) to access the repositories for 3GPP RAN and Core Platforms
  * Check [here](../ue-data-collection-reporting-exposure/repositories.html) the repositories for UE Data Collection, Reporting and Event Exposure
 
@@ -40,6 +40,6 @@ Visit the [Standards repository](https://5g-mag.github.io/Standards/pages/5g-med
 
 <img src="../../assets/images/projects/5gms_5gbc_diagram.png">
 
- * Check [here](.repositories.html) to access the repositories for 5G Downlink Media Streaming
+ * Check [here](./repositories.html) to access the repositories for 5G Downlink Media Streaming
  * Check [here](../3gpp-ran-and-core-platforms/repositories.html) to access the repositories for 3GPP RAN and Core Platforms
  * Check [here](../lte-based-5g-broadcast/repositories.html) the repositories for 5G Broadcast
