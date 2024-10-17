@@ -30,18 +30,11 @@ nav_order: 3
 * [Information and how to download, build, install and run](https://github.com/5G-MAG/rt-mbms-mw-android#readme)
 * [Releases](https://github.com/5G-MAG/rt-mbms-mw-android/releases)
 
-## Tools common to various projects: [rt-common-shared](https://github.com/5G-MAG/rt-common-shared)
+## Auxiliary repositories
+
+### Tools common to various projects: [rt-common-shared](https://github.com/5G-MAG/rt-common-shared)
 * [Information and how to download, build, install and run](https://github.com/5G-MAG/rt-common-shared#readme)
 
-# Repositories related to Multicast IP delivery
-## File Delivery over Unidirectional Transport (FLUTE): [rt-libflute](https://github.com/5G-MAG/rt-libflute)
-* [Information and how to download, build, install and run](https://github.com/5G-MAG/rt-libflute#readme)
-* [Releases](https://github.com/5G-MAG/rt-libflute/releases)
-
-# Repositories with dependencies related to LTE
-* [srsRAN](https://github.com/5G-MAG/srsRAN)
-
-# Auxiliary repositories:
 ## MBMS Web User Interface: [rt-mbms-wui](https://github.com/5G-MAG/rt-mbms-wui)
 * [Information and how to download, build, install and run](https://github.com/5G-MAG/rt-mbms-wui#readme)
 * [Releases](https://github.com/5G-MAG/rt-mbms-wui/releases)
