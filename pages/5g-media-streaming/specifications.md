@@ -21,7 +21,7 @@ Visit the [Standards repository](https://5g-mag.github.io/Standards/pages/5g-med
 
 ### High-level architecture: 5G Downlink Media Streaming (5GMSd) with 5G Core Network Components
 
-<img src="../../assets/images/projects/5gms_diagram.png">
+<img src="../../assets/images/projects/5gms_5gc_diagram.png">
 
  * Check the relevant [repositories](./repositories.html)
 
