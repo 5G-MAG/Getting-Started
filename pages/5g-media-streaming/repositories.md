@@ -50,6 +50,8 @@ Pre-built APKs are available for the 5GMS Aware Application and the 5GMS Media S
 * [Information and how to download, build, install and run](https://github.com/5G-MAG/rt-5gms-application#readme)
 * [Releases](https://github.com/5G-MAG/rt-5gms-application/releases) (pre-built APK available)
 
+---
+
 ## Auxiliary repositories
 
 ### 5GMSd Common Android Library: [rt-5gms-common-android-library](https://github.com/5G-MAG/rt-5gms-common-android-library)
