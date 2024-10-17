@@ -7,6 +7,8 @@ nav_order: 3
 ---
 # Repositories
 
+<img src="../../assets/images/projects/aiml_repos.png">
+
 Note that these repositories are currently under Early Access: https://www.5g-mag.com/early-access
 
 ## AI/ML Evaluation Framework: [rt-ai-ml-evaluation-framework](https://github.com/5G-MAG/rt-ai-ml-evaluation-framework)
