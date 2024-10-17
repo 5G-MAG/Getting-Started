@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Specifications
+title: Specifications and Architecture
 parent: 5G Multicast Broadcast Services
 has_children: false
 nav_order: 0
