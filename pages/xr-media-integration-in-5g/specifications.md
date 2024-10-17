@@ -18,4 +18,3 @@ Visit the [Standards repository](https://5g-mag.github.io/Standards/pages/xr.htm
 <img src="../../assets/images/projects/xr_diagram.png">
 
  * Check [here](.repositories.html) to access the repositories for XR Media Integration in 5G
- * Check [here](../3gpp-ran-and-core-platforms/repositories.html) to access the repositories for 3GPP RAN and Core Platforms
