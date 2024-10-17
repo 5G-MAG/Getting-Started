@@ -48,16 +48,16 @@ Pre-built APKs are available for the 5GMS Aware Application and the 5GMS Media S
 * [Information and how to download, build, install and run](https://github.com/5G-MAG/rt-5gms-application#readme)
 * [Releases](https://github.com/5G-MAG/rt-5gms-application/releases) (pre-built APK available)
 
-# Auxiliary repositories
+## Auxiliary repositories
 
-## 5GMSd Common Android Library: [rt-5gms-common-android-library](https://github.com/5G-MAG/rt-5gms-common-android-library)
+### 5GMSd Common Android Library: [rt-5gms-common-android-library](https://github.com/5G-MAG/rt-5gms-common-android-library)
 * [Information and how to download, build, install and run](https://github.com/5G-MAG/rt-5gms-common-android-library#readme)
 * [Releases](https://github.com/5G-MAG/rt-5gms-common-android-library/releases)
 * [Packages](https://github.com/orgs/5G-MAG/packages?repo_name=rt-5gms-common-android-library)
 
-## 5GMSd Examples: [rt-5gms-examples](https://github.com/5G-MAG/rt-5gms-examples)
+### 5GMSd Examples: [rt-5gms-examples](https://github.com/5G-MAG/rt-5gms-examples)
 * [Information](https://github.com/5G-MAG/rt-5gms-examples#readme)
 * [Releases](https://github.com/5G-MAG/rt-5gms-examples/releases)
 
-## Tools common to various projects: [rt-common-shared](https://github.com/5G-MAG/rt-common-shared)
+### Tools common to various projects: [rt-common-shared](https://github.com/5G-MAG/rt-common-shared)
 * [Information](https://github.com/5G-MAG/rt-common-shared#readme)
