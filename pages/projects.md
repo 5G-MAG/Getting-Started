@@ -25,6 +25,8 @@ parent: Home
 ### 3GPP RAN and Core Platforms
 * [Details of the project](./3gpp-ran-and-core-platforms/)
 
+---
+
 ## 5G-MAG Reference Tools for "5G Broadcast"
 
 <img src="../assets/images/projects/projects_2.png">
@@ -47,6 +49,8 @@ parent: Home
 ### 3GPP RAN and Core Platforms
 * [Details of the project](./3gpp-ran-and-core-platforms/)
 
+---
+
 ## 5G-MAG Reference Tools for "5G Multicast Broadcast Services (MBS)"
 
 <img src="../assets/images/projects/projects_3.png">
@@ -63,6 +67,8 @@ parent: Home
 ### 3GPP RAN and Core Platforms
 * [Details of the project](./3gpp-ran-and-core-platforms/)
 
+---
+
 ## 5G-MAG Reference Tools for "eXtended Reality (XR)"
 
 <img src="../assets/images/projects/projects_4.png">
@@ -70,12 +76,16 @@ parent: Home
 ### XR Media integration in 5G
 * [Details of the project](./xr-media-integration-in-5g/)
 
+---
+
 ## 5G-MAG Reference Tools for "Beyond 2D"
 
 <img src="../assets/images/projects/projects_5.png">
 
 ### V3C Immersive Platform
 * [Details of the project](./v3c-immersive-platform/)
+
+---
 
 ## 5G-MAG Reference Tools supporting standardization
 
