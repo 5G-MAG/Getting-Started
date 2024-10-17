@@ -5,17 +5,9 @@ parent: 5G Broadcast - MBMS & LTE-based 5G Broadcast
 has_children: false
 nav_order: 3
 ---
-# Context of the repositories
-
-<img src="../../assets/images/projects/5gbc_diagram.png">
-
-<img src="../../assets/images/projects/5gbc_unicast_diagram.png">
-
-<img src="../../assets/images/projects/5gms5gbc_diagram.png">
+# Repositories
 
 <img src="../../assets/images/projects/5gbc_repos.png">
-
-# Access to the relevant repositories
 
 ## 5G Broadcast Transmitter for MBMS-dedicated cells and basic MBMS gateway: [rt-mbms-tx](https://github.com/5G-MAG/rt-mbms-tx)
 * [Information and how to download, build, install and run](https://github.com/5G-MAG/rt-mbms-tx#readme)
