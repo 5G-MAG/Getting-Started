@@ -30,16 +30,18 @@ nav_order: 3
 * [Information and how to download, build, install and run](https://github.com/5G-MAG/rt-mbms-mw-android#readme)
 * [Releases](https://github.com/5G-MAG/rt-mbms-mw-android/releases)
 
+---
+
 ## Auxiliary repositories
 
 ### Tools common to various projects: [rt-common-shared](https://github.com/5G-MAG/rt-common-shared)
 * [Information and how to download, build, install and run](https://github.com/5G-MAG/rt-common-shared#readme)
 
-## MBMS Web User Interface: [rt-mbms-wui](https://github.com/5G-MAG/rt-mbms-wui)
+### MBMS Web User Interface: [rt-mbms-wui](https://github.com/5G-MAG/rt-mbms-wui)
 * [Information and how to download, build, install and run](https://github.com/5G-MAG/rt-mbms-wui#readme)
 * [Releases](https://github.com/5G-MAG/rt-mbms-wui/releases)
 * [Docker](https://github.com/5G-MAG/rt-mbms-wui/tree/development/wui)
 
-## MBMS Examples: [rt-mbms-examples](https://github.com/5G-MAG/rt-mbms-examples)
+### MBMS Examples: [rt-mbms-examples](https://github.com/5G-MAG/rt-mbms-examples)
 * [Information and how to download, build, install and run](https://github.com/5G-MAG/rt-mbms-examples#readme)
 * [Releases](https://github.com/5G-MAG/rt-mbms-examples/releases)
