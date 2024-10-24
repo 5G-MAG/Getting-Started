@@ -73,7 +73,18 @@ last_edit_time_format: "%b %e %Y at %I:%M %p" # uses ruby's time format: https:/
 plugins:
   - jekyll-feed
 
+# External navigation links
+nav_external_links:
+  - title: 5G-MAG Developer Space
+    url: https://developer.5g-mag.com
+    hide_icon: false # set to true to hide the external link icon - defaults to false
+    opens_in_new_tab: false # set to true to open this link in a new tab - defaults to false
 
+  - title: Standards & Specifications
+    url: https://5g-mag.github.io/Standards
+    hide_icon: false # set to true to hide the external link icon - defaults to false
+    opens_in_new_tab: false # set to true to open this link in a new tab - defaults to false
+  
 # Exclude from processing.
 # The following items will not be processed, by default.
 # Any item listed under the `exclude:` key here will be automatically added to
