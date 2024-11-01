@@ -11,7 +11,7 @@ nav_order: 0
 
 ## Introduction
 
-These are the generic instructions to setup a 5G network using Open5GS and srsRAN. An Ettus X310 USRP and a Pixel 8
+These are the generic instructions to set up a 5G network using Open5GS and srsRAN. An Ettus X310 USRP and a Pixel 8
 phone are used.
 
 ## 5G Core installation and configuration
@@ -311,7 +311,7 @@ pcap:
 ### Optional: Adding an external GPS reference clock
 
 Ideally the SDR (USRPs) are connected to a 10 MHz external reference clock or GPSDO, although this is not a strict
-requirement. In our tests, many COTS UEs were only able to connect to the gNB without the use of an external reference
+requirement. In our tests, many COTS UEs were only able to connect to the gNB with the use of an external reference
 clock. We recommend using the [Leo Bodnar GPSDO](https://www.leobodnar.com/shop/index.php?main_page=product_info&cPath=107&products_id=234&zenid=5194baec39dbc91212ec4ac755a142b6)
 for that purpose.
 
