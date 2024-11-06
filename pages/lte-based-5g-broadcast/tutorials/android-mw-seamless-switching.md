@@ -64,7 +64,7 @@ First, we need to install and configure a few components:
 ### 1. Install the express.js webserver
 
 The `express.js` webserver acts as our CDN for unicast delivery. To install the webserver follow the
-instructions [here](https://github.com/5G-MAG/rt-mbms-examples/tree/development/simple-express-server).
+instructions [here](https://github.com/5G-MAG/rt-common-shared/tree/main/simple-express-server).
 
 ### 2. Install flute-ffmpeg
 

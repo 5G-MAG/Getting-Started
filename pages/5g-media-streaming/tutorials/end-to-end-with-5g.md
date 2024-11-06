@@ -17,7 +17,7 @@ For details please refer to the [corresponding documentation](../../5g-core-netw
 ## Server-side Setup
 ### Step 0: Using a local server (Skip if your content is hosted in the internet)
 #### Step 0a: Install the express.js webserver
-The express.js webserver acts as our CDN for unicast delivery. To install the webserver follow the instructions [here](https://github.com/5G-MAG/rt-mbms-examples/tree/development/simple-express-server).
+The express.js webserver acts as our CDN for unicast delivery. To install the webserver follow the instructions [here](https://github.com/5G-MAG/rt-common-shared/tree/main/simple-express-server).
 
 #### Step 0b: Configure ffmpeg
 First we configure the `ffmpeg` output. Navigate to `flute-ffmpeg/files` and open `ffmpeg-hls.sh`. Change the following two lines and point them to the path of the local webserver installed previously. If there is no `watchfolder/hls`folder on your webserver yet create that as well.
