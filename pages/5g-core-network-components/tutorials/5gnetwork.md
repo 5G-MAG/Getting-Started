@@ -1,6 +1,6 @@
 ---
 layout: default
-title:  5G Network Setup with COTS UE
+title: 5G Network Setup with COTS UE
 parent: Tutorials
 grand_parent: 5G Core Network Components
 has_children: false
@@ -10,17 +10,21 @@ nav_order: 0
 # Tutorial - 5G Network Setup with COTS UE
 
 ## Introduction
-These are the generic instructions to setup a 5G network using Open5GS and srsRAN. An Ettus X310 USRP and a Pixel 8 phone are used. 
+
+These are the generic instructions to set up a 5G network using Open5GS and srsRAN. An Ettus X310 USRP and a Pixel 8
+phone are used.
 
 ## 5G Core installation and configuration
 
-Follow the installation procedures in the [Open5GS Quickstart guide](https://open5gs.org/open5gs/docs/guide/01-quickstart/).
+Follow the installation procedures in
+the [Open5GS Quickstart guide](https://open5gs.org/open5gs/docs/guide/01-quickstart/).
 
 ### Step 1: Install the 5G Core (Open5GS)
 
 We recommend installing for Ubuntu 22.04 with the following instructions:
 
 #### Getting MongoDB
+
 Import the public key used by the package management system:
 
 ```
@@ -51,6 +55,7 @@ sudo add-apt-repository ppa:open5gs/latest
 sudo apt update
 sudo apt install open5gs
 ```
+
 #### Install the WebUI of Open5GS
 
 The WebUI allows you to interactively edit subscriber data. Node.js is required to install the WebUI of Open5GS:
@@ -76,7 +81,9 @@ curl -fsSL https://open5gs.org/open5gs/assets/webui/install | sudo -E bash -
 
 #### IP:port addresses
 
-The default configurations see all of the Open5GS components fully configured for use on a single computer using the local loopback address space (127.0.0.X):
+The default configurations see all of the Open5GS components fully configured for use on a single computer using the
+local loopback address space (127.0.0.X):
+
 ```
 MongoDB   = 127.0.0.1 (subscriber data) - http://localhost:9999
 
@@ -118,8 +125,11 @@ NSSF-sbi  = 127.0.0.14:7777 for 5G SBI
 BSF-sbi   = 127.0.0.15:7777 for 5G SBI
 UDR-sbi   = 127.0.0.20:7777 for 5G SBI
 ```
+
 #### PLMN ID and TAC information
-Our setup will be using PLMN ID (MCC/MNC) 001/01 and TAC 7. This information needs to be loaded into the NRF and AMF config files (and the gNB).
+
+Our setup will be using PLMN ID (MCC/MNC) 001/01 and TAC 7. This information needs to be loaded into the NRF and AMF
+config files (and the gNB).
 
 Modify `/etc/open5gs/nrf.yaml` to set the Serving PLMN ID:
 
@@ -190,7 +200,8 @@ sudo systemctl restart open5gs-amfd
 
 #### Adding a route for the UE to have WAN connectivity
 
-In order to bridge between the PGWU/UPF and WAN (Internet), you must enable IP forwarding and add a NAT rule to your IP Tables.
+In order to bridge between the PGWU/UPF and WAN (Internet), you must enable IP forwarding and add a NAT rule to your IP
+Tables.
 
 To enable forwarding and add the NAT rule, enter:
 
@@ -202,6 +213,7 @@ sudo sysctl -w net.ipv6.conf.all.forwarding=1
 ```
 
 Add NAT Rule
+
 ```
 sudo iptables -t nat -A POSTROUTING -s 10.45.0.0/16 ! -o ogstun -j MASQUERADE
 sudo ip6tables -t nat -A POSTROUTING -s 2001:db8:cafe::/48 ! -o ogstun -j MASQUERADE
@@ -215,7 +227,8 @@ sudo ufw disable
 
 ## gNB installation and configuration
 
-Follow the installation procedures in the [srsRAN installation guide](https://docs.srsran.com/projects/project/en/latest/user_manuals/source/installation.html).
+Follow the installation procedures in
+the [srsRAN installation guide](https://docs.srsran.com/projects/project/en/latest/user_manuals/source/installation.html).
 
 ### Step 1: Install the gNB (srsRAN)
 
@@ -226,6 +239,7 @@ sudo apt-get install cmake make gcc g++ pkg-config libfftw3-dev libmbedtls-dev l
 ```
 
 Install UHD drivers (e.g. for Ettus USRP)
+
 ```
 sudo add-apt-repository ppa:ettusresearch/uhd
 sudo apt-get update
@@ -254,7 +268,8 @@ sudo ./scripts/srsran_performance
 
 When installed from packages, srsRAN Project example configs can be found in `/usr/share/srsran`.
 
-We've created the following 5gmag_example.yml. We recommend finding the value ARFCN through this [link](https://5g-tools.com/5g-nr-arfcn-calculator/).
+We've created the following 5gmag_example.yml. We recommend finding the value ARFCN through
+this [link](https://5g-tools.com/5g-nr-arfcn-calculator/).
 
 ```
 # This example configuration outlines how to configure the srsRAN Project gNB to create a single TDD cell
@@ -293,10 +308,37 @@ pcap:
   ngap_filename: /tmp/gnb_ngap.pcap   # Path where the NGAP PCAP is stored.
 ```
 
+### Optional: Adding an external GPS reference clock
+
+Ideally the USRPs should be connected to a 10 MHz external reference clock or GPSDO, although this is not a strict
+requirement. In our tests, many COTS UEs were only able to connect to the gNB when using an external reference
+clock. If this is the case, we recommend using the [Leo Bodnar GPSDO](https://www.leobodnar.com/shop/index.php?main_page=product_info&cPath=107&products_id=234&zenid=5194baec39dbc91212ec4ac755a142b6)
+for that purpose.
+
+To configure the Leo Bodnar GPSDO follow
+the [How to Use instructions](https://www.leobodnar.com/shop/index.php?main_page=product_info&cPath=107&products_id=234&zenid=5194baec39dbc91212ec4ac755a142b6)
+on the website. If the configuration is done on MacOSX the configuration Software looks like this:
+
+![5G Core: Leo Bodnar](../../../assets/images/5gcore/leo-bodnar-config.jpeg)
+
+After the GPS signal is locked connect output of the reference clock to your USRP device. For that reason, connect the output plug
+of the reference clock to the `REF IN` connector on the USRP.
+
+Finally adjust the configuration of the srsRAN Project gNB to use an external clock reference:
+
+````
+ru_sdr:
+  device_driver: uhd                  # The RF driver name.
+  device_args: send_frame_size=1472,recv_frame_size=1472,type=x300              # Optionally pass arguments to the selected RF driver.
+  clock: external                     # Specify the clock source used by the RF.
+  srate: 15.36                        # RF sample rate might need to be adjusted according to selected bandwidth.
+  tx_gain: 20                         # Transmit gain of the RF might need to adjusted to the given situation.
+  rx_gain: 20                         # Receive gain of the RF might need to adjusted to the given situation.
+````
+
 ## Running the 5G Core (Open5GS)
 
-When you install the software using the package manager, it is setup to run as a systemd service. 
-
+When you install the software using the package manager, it is setup to run as a systemd service.
 
 ## Running the gNB (srsRAN)
 
@@ -307,9 +349,10 @@ sudo ./gnb -c 5gmag_example.yml
 ## Configure the COTS UE
 
 ### Register Subscriber Information
+
 Connect to http://localhost:9999 and login with admin account.
-    Username : admin
-    Password : 1423
+Username : admin
+Password : 1423
 
 To add subscriber information, you can do WebUI operations in the following order:
 
@@ -318,14 +361,19 @@ To add subscriber information, you can do WebUI operations in the following orde
     Fill the IMSI, security context(K, OPc, AMF), and APN of the subscriber.
     Click SAVE Button
 
-Enter the subscriber details of your SIM cards using this tool, to save the subscriber profile in the HSS and UDR MongoDB database backend.
+Enter the subscriber details of your SIM cards using this tool, to save the subscriber profile in the HSS and UDR
+MongoDB database backend.
 
 ### SIM card and APN
 
-Insert your SIM card to the UE and set the UE’s APN to match the APN you configured in the Open5GS WebUI. We recommend to edit the existing APN.
-Toggle the UE in and out of flight mode. If it doesn’t automatically connect, try manually searching for a network. If the PLMN set on the SIM card does not match the PLMN being used by the radio, you will need to ensure ‘data roaming’ on the UE is switched on.
+Insert your SIM card to the UE and set the UE’s APN to match the APN you configured in the Open5GS WebUI. We recommend
+to edit the existing APN.
+Toggle the UE in and out of flight mode. If it doesn’t automatically connect, try manually searching for a network. If
+the PLMN set on the SIM card does not match the PLMN being used by the radio, you will need to ensure ‘data roaming’ on
+the UE is switched on.
 
 The UE should connect automatically. If you experience trouble, we recommend checking the 5G Core logs, e.g.:
+
 ```
 sudo tail -f /var/log/open5gs/amf.log
 ```
