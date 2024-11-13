@@ -310,9 +310,9 @@ pcap:
 
 ### Optional: Adding an external GPS reference clock
 
-Ideally the SDR (USRPs) are connected to a 10 MHz external reference clock or GPSDO, although this is not a strict
-requirement. In our tests, many COTS UEs were only able to connect to the gNB with the use of an external reference
-clock. We recommend using the [Leo Bodnar GPSDO](https://www.leobodnar.com/shop/index.php?main_page=product_info&cPath=107&products_id=234&zenid=5194baec39dbc91212ec4ac755a142b6)
+Ideally the USRPs should be connected to a 10 MHz external reference clock or GPSDO, although this is not a strict
+requirement. In our tests, many COTS UEs were only able to connect to the gNB when using an external reference
+clock. If this is the case, we recommend using the [Leo Bodnar GPSDO](https://www.leobodnar.com/shop/index.php?main_page=product_info&cPath=107&products_id=234&zenid=5194baec39dbc91212ec4ac755a142b6)
 for that purpose.
 
 To configure the Leo Bodnar GPSDO follow
