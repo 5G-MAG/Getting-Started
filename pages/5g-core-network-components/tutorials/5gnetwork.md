@@ -11,7 +11,7 @@ nav_order: 0
 
 ## Introduction
 
-These are the generic instructions to setup a 5G network using Open5GS and srsRAN. An Ettus X310 USRP and a Pixel 8
+These are the generic instructions to set up a 5G network using Open5GS and srsRAN. An Ettus X310 USRP and a Pixel 8
 phone are used.
 
 ## Prerequisites
@@ -93,7 +93,7 @@ curl -fsSL https://open5gs.org/open5gs/assets/webui/install | sudo -E bash -
 The default configurations see all of the Open5GS components fully configured for use on a single computer using the
 local loopback address space (127.0.0.X):
 
-```bash
+```
 MongoDB   = 127.0.0.1 (subscriber data) - http://localhost:9999
 
 MME-s1ap  = 127.0.0.2 :36412 for S1-MME
@@ -316,6 +316,34 @@ pcap:
   ngap_enable: false                  # Set to true to enable NGAP PCAPs.
   ngap_filename: /tmp/gnb_ngap.pcap   # Path where the NGAP PCAP is stored.
 ```
+
+### Optional: Adding an external GPS reference clock
+
+Ideally the USRPs should be connected to a 10 MHz external reference clock or GPSDO, although this is not a strict
+requirement. In our tests, many COTS UEs were only able to connect to the gNB when using an external reference
+clock. If this is the case, we recommend using the [Leo Bodnar GPSDO](https://www.leobodnar.com/shop/index.php?main_page=product_info&cPath=107&products_id=234&zenid=5194baec39dbc91212ec4ac755a142b6)
+for that purpose.
+
+To configure the Leo Bodnar GPSDO follow
+the [How to Use instructions](https://www.leobodnar.com/shop/index.php?main_page=product_info&cPath=107&products_id=234&zenid=5194baec39dbc91212ec4ac755a142b6)
+on the website. If the configuration is done on MacOSX the configuration Software looks like this:
+
+![5G Core: Leo Bodnar](../../../assets/images/5gcore/leo-bodnar-config.jpeg)
+
+After the GPS signal is locked connect output of the reference clock to your USRP device. For that reason, connect the output plug
+of the reference clock to the `REF IN` connector on the USRP.
+
+Finally adjust the configuration of the srsRAN Project gNB to use an external clock reference:
+
+````
+ru_sdr:
+  device_driver: uhd                  # The RF driver name.
+  device_args: send_frame_size=1472,recv_frame_size=1472,type=x300              # Optionally pass arguments to the selected RF driver.
+  clock: external                     # Specify the clock source used by the RF.
+  srate: 15.36                        # RF sample rate might need to be adjusted according to selected bandwidth.
+  tx_gain: 20                         # Transmit gain of the RF might need to adjusted to the given situation.
+  rx_gain: 20                         # Receive gain of the RF might need to adjusted to the given situation.
+````
 
 ## Running the 5G Core (Open5GS)
 
