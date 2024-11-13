@@ -14,6 +14,15 @@ nav_order: 0
 These are the generic instructions to set up a 5G network using Open5GS and srsRAN. An Ettus X310 USRP and a Pixel 8
 phone are used.
 
+## Prerequisites
+
+* Host machine running Ubuntu
+* UHD SDR like Ettus X310 USRP
+* Android Pixel 8 phone
+
+Note that other Android devices work as well but are not tested by ourselves. For details check
+the [srsRAN documentation](https://docs.srsran.com/projects/project/en/latest/knowledge_base/source/cots_ues/source/index.html#cots-ues).
+
 ## 5G Core installation and configuration
 
 Follow the installation procedures in
@@ -27,7 +36,7 @@ We recommend installing for Ubuntu 22.04 with the following instructions:
 
 Import the public key used by the package management system:
 
-```
+```bash
 sudo apt update
 sudo apt install gnupg
 curl -fsSL https://pgp.mongodb.com/server-6.0.asc | sudo gpg -o /usr/share/keyrings/mongodb-server-6.0.gpg --dearmor
@@ -35,13 +44,13 @@ curl -fsSL https://pgp.mongodb.com/server-6.0.asc | sudo gpg -o /usr/share/keyri
 
 Create the list file /etc/apt/sources.list.d/mongodb-org-6.0.list for Ubuntu 22.04:
 
-```
+```bash
 echo "deb [ arch=amd64,arm64 signed-by=/usr/share/keyrings/mongodb-server-6.0.gpg] https://repo.mongodb.org/apt/ubuntu jammy/mongodb-org/6.0 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-6.0.list
 ```
 
 Install the MongoDB packages.
 
-```
+```bash
 sudo apt update
 sudo apt install -y mongodb-org
 sudo systemctl start mongod (if '/usr/bin/mongod' is not running)
@@ -50,7 +59,7 @@ sudo systemctl enable mongod (ensure to automatically start it on system boot)
 
 #### Install Open5GS
 
-```
+```bash
 sudo add-apt-repository ppa:open5gs/latest
 sudo apt update
 sudo apt install open5gs
@@ -60,7 +69,7 @@ sudo apt install open5gs
 
 The WebUI allows you to interactively edit subscriber data. Node.js is required to install the WebUI of Open5GS:
 
-```
+```bash
 sudo apt update
 sudo apt install -y ca-certificates curl gnupg
 sudo mkdir -p /etc/apt/keyrings
@@ -133,7 +142,7 @@ config files (and the gNB).
 
 Modify `/etc/open5gs/nrf.yaml` to set the Serving PLMN ID:
 
-```
+```yaml
 nrf:
   serving:  # 5G roaming requires PLMN in NRF
     - plmn_id:
@@ -147,7 +156,7 @@ nrf:
 
 Modify `/etc/open5gs/amf.yaml` to set the PLMN ID and TAC:
 
-```
+```yaml
 amf:
   sbi:
     server:
@@ -193,7 +202,7 @@ amf:
 
 After changing config files, please restart Open5GS daemons.
 
-```
+```bash
 sudo systemctl restart open5gs-nrfd
 sudo systemctl restart open5gs-amfd
 ```
@@ -207,21 +216,21 @@ To enable forwarding and add the NAT rule, enter:
 
 Enable IPv4/IPv6 Forwarding
 
-```
+```bash
 sudo sysctl -w net.ipv4.ip_forward=1
 sudo sysctl -w net.ipv6.conf.all.forwarding=1
 ```
 
 Add NAT Rule
 
-```
+```bash
 sudo iptables -t nat -A POSTROUTING -s 10.45.0.0/16 ! -o ogstun -j MASQUERADE
 sudo ip6tables -t nat -A POSTROUTING -s 2001:db8:cafe::/48 ! -o ogstun -j MASQUERADE
 ```
 
 Configure the firewall correctly. Some operating systems (Ubuntu) by default enable firewall rules to block traffic.
 
-```
+```bash
 sudo ufw disable
 ```
 
@@ -234,13 +243,13 @@ the [srsRAN installation guide](https://docs.srsran.com/projects/project/en/late
 
 Install dependencies
 
-```
+```bash
 sudo apt-get install cmake make gcc g++ pkg-config libfftw3-dev libmbedtls-dev libsctp-dev libyaml-cpp-dev libgtest-dev
 ```
 
 Install UHD drivers (e.g. for Ettus USRP)
 
-```
+```bash
 sudo add-apt-repository ppa:ettusresearch/uhd
 sudo apt-get update
 sudo apt-get install libuhd-dev uhd-host
@@ -248,7 +257,7 @@ sudo apt-get install libuhd-dev uhd-host
 
 Download the srsRAN Project packages:
 
-```
+```bash
 sudo add-apt-repository ppa:softwareradiosystems/srsran-project
 sudo apt-get update
 sudo apt-get install srsran-project -y
@@ -260,7 +269,7 @@ sudo apt-get install srsran-project -y
 
 Before running srsRAN Project applications, we recommend tuning your system for best performance:
 
-```
+```bash
 sudo ./scripts/srsran_performance
 ```
 
@@ -271,7 +280,7 @@ When installed from packages, srsRAN Project example configs can be found in `/u
 We've created the following 5gmag_example.yml. We recommend finding the value ARFCN through
 this [link](https://5g-tools.com/5g-nr-arfcn-calculator/).
 
-```
+```yaml
 # This example configuration outlines how to configure the srsRAN Project gNB to create a single TDD cell
 # transmitting in band 77, with 10 MHz bandwidth and 30 kHz sub-carrier-spacing. A USRP X310 is configured 
 # as the RF frontend. Note in this example the internal GPDSO is used.
@@ -344,7 +353,7 @@ When you install the software using the package manager, it is setup to run as a
 
 Run the gNB as follows, passing the YAML configuration file:
 
-sudo ./gnb -c 5gmag_example.yml
+`sudo ./gnb -c 5gmag_example.yml`
 
 ## Configure the COTS UE
 
@@ -374,6 +383,6 @@ the UE is switched on.
 
 The UE should connect automatically. If you experience trouble, we recommend checking the 5G Core logs, e.g.:
 
-```
+```bash
 sudo tail -f /var/log/open5gs/amf.log
 ```

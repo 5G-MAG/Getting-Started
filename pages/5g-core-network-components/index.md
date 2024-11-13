@@ -2,7 +2,7 @@
 layout: default
 title: 5G Core Network Components
 has_children: true
-nav_order: 3
+nav_order: 1
 ---
 # 5G Core Network components
 

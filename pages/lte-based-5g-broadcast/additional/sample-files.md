@@ -6,6 +6,14 @@ grand_parent: 5G Broadcast - MBMS & LTE-based 5G Broadcast
 has_children: false
 nav_order: 2
 ---
+<details open markdown="block">
+  <summary>
+    Table of contents
+  </summary>
+  {: .text-delta }
+1. TOC
+{:toc}
+</details>
 
 # Sample files
 In order to support application developers as well as 5G-MAG contributors for testing their improvements, ORS captured sample files ("raw data" = digitized I/Q data at [LimeSDR Mini](https://www.crowdsupply.com/lime-micro/limesdr-mini/) output) directly from a 5G BC transmitter. You can also capture sample files using the [capture command of the Receive Process](https://github.com/5G-MAG/rt-mbms-modem#capture-and-running-of-sample-files).

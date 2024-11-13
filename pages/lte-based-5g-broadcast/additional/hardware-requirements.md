@@ -7,12 +7,16 @@ has_children: false
 nav_order: 1
 ---
 
+<details open markdown="block">
+  <summary>
+    Table of contents
+  </summary>
+  {: .text-delta }
+1. TOC
+{:toc}
+</details>
+
 # Hardware requirements
-## Table of content
-* <a href="#hardware-requirements"> Hardware requirements</a>
-* <a href="#supported-sdr"> Supported SDR</a>
-* <a href="#os"> OS</a>
-* <a href="#reference-setups"> Reference setups</a>
 
 ## Hardware requirements
 

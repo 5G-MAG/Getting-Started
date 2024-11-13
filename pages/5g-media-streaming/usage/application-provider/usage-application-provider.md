@@ -9,9 +9,13 @@ nav_order: 1
 
 # Application Provider
 
-A 5GMS Application Provider uses the M1 interface of the Application Function to provision the network for media streaming sessions that are operated by that 5GMS Application Provider. For downlink media streaming, these sessions may be DASH streaming sessions, progressive download sessions, or any other type of media streaming or distribution (e.g. HLS) sessions.
+A 5GMS Application Provider uses the M1 interface of the Application Function to provision the network for media
+streaming sessions that are operated by that 5GMS Application Provider. For downlink media streaming, these sessions may
+be DASH streaming sessions, progressive download sessions, or any other type of media streaming or distribution (e.g.
+HLS) sessions.
 
-The 5G-MAG Reference Tools ship with multiple tools to interact with the 5GMS Application Function via the interface at reference point M1.
+The 5G-MAG Reference Tools ship with multiple tools to interact with the 5GMS Application Function via the interface at
+reference point M1.
 
 ## Command Line Interface Tools
 
@@ -51,3 +55,11 @@ found [here](https://github.com/5G-MAG/rt-5gms-application-provider/blob/develop
 
 A detailed guide on how to use the Postman Collection together with the Application Function can be
 found [here](../application-function/testing-postman.html).
+
+## QoE Metrics Reporting UI
+
+A web-based Graphical User Interface that parses a QoE Metrics Report provided in XML format and outputs its content in
+graphical and tabular form.
+
+The installation instructions for the QoE Metrics Reporting UI can be
+found [here](https://github.com/5G-MAG/rt-5gms-application-provider/blob/master/qoe-metrics-reporting-ui/README.md).

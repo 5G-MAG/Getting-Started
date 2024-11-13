@@ -4,7 +4,7 @@ title:  Configuration 5GMS AF
 parent: Application Function
 grand_parent: Usage
 has_children: false
-nav_order: 1
+nav_order: 3
 ---
 
 # Configuration of the 5GMSd Application Function

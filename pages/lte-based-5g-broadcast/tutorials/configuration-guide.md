@@ -1,34 +1,44 @@
 ---
 layout: default
-title:  Quick start guide
+title: Linux stack - Configuration guide
 parent: Tutorials
 grand_parent: 5G Broadcast - MBMS & LTE-based 5G Broadcast
 has_children: false
 nav_order: 0
 ---
 
-# Quick start guide
+# Linux stack - Configuration guide
+
 ## Setup Resources
-* [Hardware, OS & SDR Requirements](hardware-requirements.md)
-* [Sample Files](sample-files.md)
-* [Service Announcement Formats](rt-common-shared/MBMS-service-announcement-files.md)
+
+* [Hardware, OS & SDR Requirements](../additional/hardware-requirements.html)
+* [Sample Files](../additional/sample-files.html)
+* [Service Announcement Formats](../additional/rt-common-shared/MBMS-service-announcement-files.html)
 
 ## Preparation
+
 After each reboot of your machine run:
 
 1. `sudo systemctl start 5gmag-rt-modem`
 2. `sudo systemctl stop 5gmag-rt-modem`
 
-Make sure that you have the latest nginx config enabled in `/etc/nginx/sites-enabled/5gmag-rt-wui`. Compare it to the config that is provided here: https://github.com/5G-MAG/rt-common-shared/blob/feature/mbms/mbms/common-config/5gmag-rt-wui
+Make sure that you have the latest nginx config enabled in `/etc/nginx/sites-enabled/5gmag-rt-wui`. Compare it to the
+config that is provided
+[here](https://github.com/5G-MAG/rt-common-shared/blob/feature/mbms/mbms/common-config/5gmag-rt-wui)
 
 ## Different SA formats
-The 5G-MAG Reference Tools support three different service announcement formats. In the examples below we either use the `5gmag_legacy` format for the recordings or the `default` format for seamless switching. To use the seamless switching format that was agreed in 5G-MAG you have to use `5gmag_bc_uc`. The corresponding service announcement example file is labeled `bootstrap.multipart.seamlessswitching.hls.5gmag`. More details can be found here: https://github.com/5G-MAG/rt-common-shared/wiki/MBMS-Service-Announcement-Files
+
+The 5G-MAG Reference Tools support three different service announcement formats. In the examples below we either use the
+`5gmag_legacy` format for the recordings or the `default` format for seamless switching. To use the seamless switching
+format that was agreed in 5G-MAG you have to use `5gmag_bc_uc`. The corresponding service announcement example file is
+labeled `bootstrap.multipart.seamlessswitching.hls.5gmag`. More details can be found in the
+[Service Announcement Formats](../additional/rt-common-shared/MBMS-service-announcement-files.html) section.
 
 ## Playback of 5GBC together with the MBMS Modem
 
 Set the target configuration in `etc/5gmag-rt-conf`:
 
-```` 
+````
   seamless_switching: {
     enabled: <TRUE OR FALSE>;
     truncate_cdn_playlist_segments: 3
@@ -53,7 +63,8 @@ Set the configuration in `etc/5gmag-rt-conf` to use the legacy format:
   }
 ```` 
 
-If you want to play the recorded content in a loop consider increasing the cache values to avoid segments with the same url being deleted immediately:
+If you want to play the recorded content in a loop consider increasing the cache values to avoid segments with the same
+url being deleted immediately:
 
 ```` 
   cache: { 
@@ -66,6 +77,7 @@ If you want to play the recorded content in a loop consider increasing the cache
 ## FLUTE ffmpeg watchfolder with signaling server
 
 ### HLS seamless switching
+
 Set the config file for the rt-mbms-examples project in `flute-ffmpeg\config\default.cfg` to:
 
 ````
@@ -102,7 +114,7 @@ Enable seamless switching in the `etc/5gmag-rt-conf` file:
   }
 ```` 
 
-### DASH BC
+### DASH Broadcast
 
 Disable seamless switching and set the right SA format in the `etc/5gmag-rt-conf` file:
 
@@ -140,7 +152,7 @@ general : {
 }
 ````  
 
-### HLS BC
+### HLS Broadcast
 
 Disable seamless switching and set the right SA format in the `etc/5gmag-rt-conf` file:
 
@@ -178,12 +190,15 @@ general : {
 }
 ```` 
 
-## FLUTE ffmpeg with local SA
+## FLUTE ffmpeg with local Service Announcement
 
-In this example we dont need the http server that signals the `mch_info.json`. Instead, we start the MBMS Middleware directly with a local service announcement file
+In this example we dont need the http server that signals the `mch_info.json`. Instead, we start the MBMS Middleware
+directly with a local service announcement file
 
 ### General
+
 Enable the local service in the `etc/5gmag-rt-conf` file:
+
 ````
   local_service: {
     enabled: true;
@@ -217,9 +232,10 @@ bootstrap_format: "";
 
 ````
 
-### HLS BC
+### HLS Broadcast
 
 Point to a local service announcement in the `etc/5gmag-rt-conf` file e.g.:
+
 ````
   local_service: {
     bootstrap_file: "/home/dsi/5G-MAG/rt-common-shared/mbms/bootstrap_examples/bootstrap.multipart.legacy.hls";
@@ -237,9 +253,10 @@ bootstrap_format: "5gmag_legacy";
 
 ````
 
-### DASH BC
+### DASH Broadcast
 
 Point to a local service announcement in the `etc/5gmag-rt-conf` file e.g.:
+
 ````
   local_service: {
     bootstrap_file: "/home/dsi/5G-MAG/rt-common-shared/mbms/bootstrap_examples/bootstrap.multipart.legacy.dash";
