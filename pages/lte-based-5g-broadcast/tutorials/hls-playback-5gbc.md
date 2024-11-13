@@ -1,23 +1,26 @@
 ---
 layout: default
-title:  HLS playback over 5G Broadcast
+title: Linux stack - HLS playback over 5G Broadcast
 parent: Tutorials
 grand_parent: 5G Broadcast - MBMS & LTE-based 5G Broadcast
 has_children: false
+nav_order: 2
 ---
 
-# Tutorial - HLS playback over 5G Broadcast
+# Linux stack - HLS playback over 5G Broadcast
 
 ## Introduction
 
-The goal of this documentation is to provide a use-case oriented information, i.e., the required steps to setup the 5G-MAG Reference Tools to playback a HLS video which was received via 5G Broadcast [1] can be viewed by using the 5G-MAG Reference Tools. The final outcome is also illustrated in a short demo video that can be found [here](https://github.com/5G-MAG/Documentation-and-Architecture#5g-mag-reference-tools---demo-video---overview).
+The goal of this documentation is to provide a use-case oriented information, i.e., the required steps to setup the
+5G-MAG Reference Tools to playback a HLS video which was received via 5G Broadcast can be viewed by using the 5G-MAG
+Reference Tools.
 
 ## Background
 
 ### HTTP Live Streaming (HLS)
 
 HTTP Live Streaming (HLS) is an HTTP-based adaptive bitrate streaming communications protocol developed by
-Apple Inc. and released in 2009 [2].
+Apple Inc. and released in 2009.
 HLS is based on master and media playlists (m3u8 files). The master playlist links to media playlists with the media
 playlists describing the content. HLS is mainly used on Apple platforms due to native support. HLS typically uses the
 Transport Stream (TS) media container, but also offers support for f-mp4/CMAF.
@@ -29,7 +32,8 @@ More information can be found in the IETF HLS specification:
 ### Multimedia Broadcast/Multicast Service (MBMS)
 
 MBMS is a point-to-multipoint service in which data is transmitted from a single source entity to multiple recipients.
-The MBMS bearer service offers two modes, namely broadcast mode and multicast mode. This use-case focus on the broadcast reception mode (5G Broadcast).
+The MBMS bearer service offers two modes, namely broadcast mode and multicast mode. This use-case focus on the broadcast
+reception mode (5G Broadcast).
 
 More information about MBMS and the related interfaces and components can be found in the corresponding 3GPP and ETSI
 specifications:
@@ -40,32 +44,24 @@ specifications:
 * [29.116 - Representational state transfer over xMB reference point between content provider and BM-SC](https://www.3gpp.org/ftp/Specs/archive/29_series/29.116)
 * [ETSI TS 123 246 - Multimedia Broadcast/Multicast Service (MBMS); Architecture and functional description ](https://www.etsi.org/deliver/etsi_ts/123200_123299/123246/)
 
-### 5G-MAG Reference Tools 
-
-Detailed information about the architecture of the 5G-MAG Reference Tools and how the MBMS broadcast mode is implemented can
-be found on the Wiki pages of the different projects:
-
-* [MBMS Modem](https://github.com/5G-MAG/Documentation-and-Architecture/wiki/MBMS-Modem)
-* [MBMS Middleware](https://github.com/5G-MAG/Documentation-and-Architecture/wiki/MBMS-Middleware)
-* [Webinterface](https://github.com/5G-MAG/Documentation-and-Architecture/wiki/Webinterface)
-
 ## Requirements
 
-In order to be able to play an HLS video which is received by 5G Broadcast, we need to install and run the following components of the 5G-MAG Reference Tools (make sure you have the suggested [hardware](https://github.com/5G-MAG/Documentation-and-Architecture/wiki/Hardware-Requirements#hardware-requirements) and [OS](https://github.com/5G-MAG/Documentation-and-Architecture/wiki/Hardware-Requirements#os) ready):
+In order to be able to play an HLS video which is received by 5G Broadcast, we need to install and run the following
+components of the 5G-MAG Reference Tools (make sure you have the
+suggested [hardware](https://github.com/5G-MAG/Documentation-and-Architecture/wiki/Hardware-Requirements#hardware-requirements)
+and [OS](https://github.com/5G-MAG/Documentation-and-Architecture/wiki/Hardware-Requirements#os) ready):
 
-
-| Component  | Required/Optional | Min version  | Description |
-| ------------- | ------------- | ------------- | ------------- |
-| [MBMS Modem](https://github.com/5G-MAG/rt-mbms-modem) | Required | v1.1.1  | The MBMS Modem builds the lower part of the 5G-MAG Reference Tools. Its main task is to convert a 5G BC input signal (received either as live I/Q raw data from the SDR or as prerecorded SDR sample file) to multicast IP packets on the output. The MBMS Modem can run as background process or can be started/stopped manually. |
-| [MBMS Middleware](https://github.com/5G-MAG/rt-mbms-mw) | Required | v0.9.1 | The MBMS Middleware presents the heart of the 5G-MAG Reference Tools. Its main task is to provide the best available content to the (internal or external) application at any time. If available, it combines content from (mobile) broadband, WiFi with the 5G broadcast content from the MBMS Modem using an advanced decision logic. The content is presented to the applications in the form of an intelligent edge cache ready for pickup via http(s). Internally, the MBMS Middleware uses the [5G-MAG Reference Tools FLUTE library](https://github.com/5G-MAG/rt-libflute) to decode FLUTE encoded manifest files and media segments. |
-| [RT Webinterace](https://github.com/5G-MAG/rt-wui)| Optional | v0.0.10 | The 5G-MAG Reference Tools WebUserInterface (rt-wui)provides an optional graphical webinterface with a control display for each 5G-MAG Reference Tools process (MBMS Modem, MBMS Middleware). Its main purpose is to collect and display useful information from the MBMS Modem and the MBMS Middleware. The webinterface provides basic browser-based HLS playback of the HLS manifest and segments provided by the MBMS Middlware using [hls.js](https://github.com/video-dev/hls.js/). |
-| [HLS sample recording](https://github.com/5G-MAG/Documentation-and-Architecture/wiki/Sample-Files#hls-payload)  | Optional (setup requires either a sample recoding or a an SDR) | / | In order to support application developers as well as 5G-MAG contributors for testing their improvements, ORS captured sample files ("raw data" = digitized I/Q data at LimeSDR Mini output) directly from a 5G BC transmitter.
-| Software Defined Radio (SDR) | Optional (setup requires either a sample recoding or a an SDR) | / | In case you are able to receive 5G Broadcast live signals, you need a Software Defined Radio (SDR) to convert the radio signal to an digitized I/Q data to feed the MBMS modem. A list of working SDRs can be found [here](https://github.com/5G-MAG/Documentation-and-Architecture/wiki/Hardware-Requirements#supported-sdr)
-
+| Component                                                                                               | Required/Optional                                              | Min version | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+|---------------------------------------------------------------------------------------------------------|----------------------------------------------------------------|-------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| [MBMS Modem](https://github.com/5G-MAG/rt-mbms-modem)                                                   | Required                                                       | v1.1.1      | The MBMS Modem builds the lower part of the 5G-MAG Reference Tools. Its main task is to convert a 5G BC input signal (received either as live I/Q raw data from the SDR or as prerecorded SDR sample file) to multicast IP packets on the output. The MBMS Modem can run as background process or can be started/stopped manually.                                                                                                                                                                                                                                                                                                            |
+| [MBMS Middleware](https://github.com/5G-MAG/rt-mbms-mw)                                                 | Required                                                       | v0.9.1      | The MBMS Middleware presents the heart of the 5G-MAG Reference Tools. Its main task is to provide the best available content to the (internal or external) application at any time. If available, it combines content from (mobile) broadband, WiFi with the 5G broadcast content from the MBMS Modem using an advanced decision logic. The content is presented to the applications in the form of an intelligent edge cache ready for pickup via http(s). Internally, the MBMS Middleware uses the [5G-MAG Reference Tools FLUTE library](https://github.com/5G-MAG/rt-libflute) to decode FLUTE encoded manifest files and media segments. |
+| [RT Webinterace](https://github.com/5G-MAG/rt-wui)                                                      | Optional                                                       | v0.0.10     | The 5G-MAG Reference Tools WebUserInterface (rt-wui)provides an optional graphical webinterface with a control display for each 5G-MAG Reference Tools process (MBMS Modem, MBMS Middleware). Its main purpose is to collect and display useful information from the MBMS Modem and the MBMS Middleware. The webinterface provides basic browser-based HLS playback of the HLS manifest and segments provided by the MBMS Middlware using [hls.js](https://github.com/video-dev/hls.js/).                                                                                                                                                     |
+| [HLS sample recording](../additional/sample-files.html#hls-payload) | Optional (setup requires either a sample recoding or a an SDR) | /           | In order to support application developers as well as 5G-MAG contributors for testing their improvements, ORS captured sample files ("raw data" = digitized I/Q data at LimeSDR Mini output) directly from a 5G BC transmitter.                                                                                                                                                                                                                                                                                                                                                                                                               
+| Software Defined Radio (SDR)                                                                            | Optional (setup requires either a sample recoding or a an SDR) | /           | In case you are able to receive 5G Broadcast live signals, you need a Software Defined Radio (SDR) to convert the radio signal to an digitized I/Q data to feed the MBMS modem. A list of working SDRs can be found [here](../additional/hardware-requirements.html#supported-sdr).                                                                                                                                                                                                                                                                                                                                                                      |
 
 ## Basic workflow
 
-As described in [Requirements](#Requirements) we need the MBMS Modem, the MBMS Middleware and a media player in order to
+As described in [Requirements](#requirements) we need the MBMS Modem, the MBMS Middleware and a media player in order to
 enable playback of HLS content in broadcast mode using the 5G-MAG Reference Tools. The basic interaction and output of
 these components is illustrated in the Figure below:
 
@@ -75,7 +71,7 @@ The output of the SDR or the sample file serves as the input for the MBMS Modem.
 to a UDP multicast. The UDP multicast serves as the input for the MBMS Middleware. The FLUTE encoded content is decoded
 in the MBMS Middleware using the [5G-MAG Reference Tools FLUTE library](https://github.com/5G-MAG/rt-libflute). Once the
 manifest files and media segments are FLUTE decoded they are cached in the middleware and made available to the media
-player via an Nginx proxy. The media player itself is not aware that the content is provided via broadcast. 
+player via an Nginx proxy. The media player itself is not aware that the content is provided via broadcast.
 
 Note that in
 the illustration the media player is depicted as a separate component and not part of the web interface.
@@ -85,28 +81,39 @@ the illustration the media player is depicted as a separate component and not pa
 Detailed installation instructions can be found in the respective Wiki documentation of the different projects. In order
 to enable HLS playback via MBMS the following steps are required:
 
-1. [Install the MBMS Modem](https://github.com/5G-MAG/Documentation-and-Architecture/wiki/MBMS-Modem#Installation)
-2. [Install the MBMS Middleware](https://github.com/5G-MAG/Documentation-and-Architecture/wiki/MBMS-Middleware#Installation)
-3. [Install the Webinterface](https://github.com/5G-MAG/Documentation-and-Architecture/wiki/Webinterface#Installation)
-4. [Download an HLS sample file](https://github.com/5G-MAG/Documentation-and-Architecture/wiki/Sample-Files) or setup an HLS live stream on your transmitting infrastructure
+1. [Install the MBMS Modem](https://github.com/5G-MAG/rt-mbms-modem)
+2. [Install the MBMS Middleware](https://github.com/5G-MAG/rt-mbms-mw)
+3. [Install the Webinterface](https://github.com/5G-MAG/rt-wui)
+4. [Download an HLS sample file](../additional/sample-files.html) or setup an HLS live stream on your transmitting
+   infrastructure
 
 ## Running the components
 
 Once all the required components have been installed, we need to sequentially start all of them. Depending on the
-concrete use case (either a live SDR input or a prerecorded sample file) the concrete calls are slightly different. 
+concrete use case (either a live SDR input or a prerecorded sample file) the concrete calls are slightly different.
 
 ### Using a prerecorded sample file
+
 This Section provides information on how to run the 5G-MAG Reference Tools using a prerecorded HLS sample file.
 
 #### MBMS Modem
-1. Follow the detailed instructions on how to configure multicast routing provided [here](https://github.com/5G-MAG/Documentation-and-Architecture/wiki/mbms-modem#run-the-mbms-modem).
-2. Stop and start the MBMS Modem as a service in order to generate or update the required configurations files. Note that this step might be required again after a reboot. 
-   - `systemctl stop 5gmag-rt-modem`
-   - `systemctl start 5gmag-rt-modem`
-3. Since we don't want to run the MBMS Modem as a service in the background but instead provide a prerecorded sample file, we need to make sure that the service is not running. Calling `systemctl stop 5g-mag-rt-modem` stops the service. 
-4. Start the MBMS Modem with a sample as specified [here](https://github.com/5G-MAG/Documentation-and-Architecture/wiki/mbms-modem#run-a-sample-file). It is important to provide the right bandwidth to the MBMS Modem. Consequently, for a 5 MHz bandwidth sample file, the command looks like this: `./modem -f "PathToSample/samplefile.raw" -b 5`. 
+
+1. Follow the detailed instructions on how to configure multicast routing
+   provided [here](https://github.com/5G-MAG/rt-mbms-modem?tab=readme-ov-file#running-the-mbms-modem).
+2. Stop and start the MBMS Modem as a service in order to generate or update the required configurations files. Note
+   that this step might be required again after a reboot.
+    - `systemctl stop 5gmag-rt-modem`
+    - `systemctl start 5gmag-rt-modem`
+3. Since we don't want to run the MBMS Modem as a service in the background but instead provide a prerecorded sample
+   file, we need to make sure that the service is not running. Calling `systemctl stop 5g-mag-rt-modem` stops the
+   service.
+4. Start the MBMS Modem with a sample as
+   specified [here](https://github.com/5G-MAG/rt-mbms-modem?tab=readme-ov-file#run-a-sample-file). It is important to
+   provide the right bandwidth to the MBMS Modem. Consequently, for a 5 MHz bandwidth sample file, the command looks
+   like this: `./modem -f "PathToSample/samplefile.raw" -b 5`.
 
 The final output on the terminal should now look like similar to the output below:
+
 ````
 modem[7891]: 5g-mag-rt modem v1.1.1 starting up
 modem[7891]: Initialising SDR
@@ -132,11 +139,17 @@ modem[7891]: -----
 ````
 
 #### MBMS Middleware
-Now that the MBMS Modem is running and exposes the FLUTE encoded content via UDP multicast to the MBMS Middleware we can start the latter as well. The MBMS Middleware listens to the local tun interface. Received multicast packets from the Receive Process are FLUTE decoded and the files are stored in the cache.
 
-In this example, we start the MBMS Middleware right from the build folder. That way potential debug output is directly logged to the terminal. 
+Now that the MBMS Modem is running and exposes the FLUTE encoded content via UDP multicast to the MBMS Middleware we can
+start the latter as well. The MBMS Middleware listens to the local tun interface. Received multicast packets from the
+Receive Process are FLUTE decoded and the files are stored in the cache.
 
-Note: Depending on the format of the Service Announcement file you need to adjust the configuration in `/etc/5gmag-rt.conf`. Detailed information can be found [here](https://github.com/5G-MAG/Documentation-and-Architecture/wiki/MBMS-Service-Announcement-Files).
+In this example, we start the MBMS Middleware right from the build folder. That way potential debug output is directly
+logged to the terminal.
+
+Note: Depending on the format of the Service Announcement file you need to adjust the configuration in
+`/etc/5gmag-rt.conf`. Detailed information can be
+found [here](../additional/rt-common-shared/MBMS-service-announcement-files.html).
 
 1. Navigate to the build folder of the MBMS Middleware, for instance: `cd /home/user/rt-mbms-mw/build`
 2. Start the middleware: `./mw`
@@ -147,23 +160,28 @@ The output should look like this:
 mw[6611]: 5g-mag-rt mw v0.9.0 starting up
 ````
 
-
 #### Webinterface
 
-For the purpose of this documentation we use the Webinterface to monitor the MBMS Modem and the MBMS Middleware. Moreover, we use the hls.js integration in the Webinterface to playback the final HLS stream. In order run the Webinterface perform the steps describe [here](https://github.com/5G-MAG/Documentation-and-Architecture/wiki/Webinterface#run-the-webinterface). 
+For the purpose of this documentation we use the Webinterface to monitor the MBMS Modem and the MBMS Middleware.
+Moreover, we use the hls.js integration in the Webinterface to playback the final HLS stream. In order run the
+Webinterface perform the steps
+describe [here](https://github.com/5G-MAG/rt-wui?tab=readme-ov-file#running).
 
 The Webinterface can also be started directly from its root folder:
+
 1. cd `/home/user/rt-wui`
-2. `node app.js` 
+2. `node app.js`
 
 ### Using an SDR card
 
 Todo
 
 ## Playback
+
 The final playback is similar for both use cases _"Using an SDR card"_ and _"Using a prerecorded sample file"_.
 
 ### Webinterface
+
 In order to use the webinterface for playback perform the following steps:
 
 1. Navigate to `http://localhost` in your browser
@@ -178,22 +196,23 @@ The output for step 3 and step 4 should look similar to this:
 <img src="https://github.com/5G-MAG/Getting-Started/blob/main/media/wiki/rt-wui-playback.jpg?raw=true" width="800">
 
 ### VLC
-It is also possible to use other players like VLC. Simply paste the url to the `index.m3u8` into the VLC player. As an example the URL can look the following: `http://localhost/f/00001009f165/index.m3u8`. Replace the `localhost` part with the IP of the machine that is running the MBMS Middleware in order to access the stream from other machines in the same network.
 
+It is also possible to use other players like VLC. Simply paste the url to the `index.m3u8` into the VLC player. As an
+example the URL can look the following: `http://localhost/f/00001009f165/index.m3u8`. Replace the `localhost` part with
+the IP of the machine that is running the MBMS Middleware in order to access the stream from other machines in the same
+network.
 
 ## Troubleshooting
 
 ### I/O errors in the MBMS Modem
+
 If you encounter I/O errors in the MBMS Modem there are a few things to try:
 
-1. Verify that the correct network interface is used to output the UDP multicast. See https://github.com/5G-MAG/Documentation-and-Architecture/wiki/mbms-modem#multicast-routing
-2. Make sure to start/stop the MBMS Modem as a service before launching it from the `build` folder: 
-   - `systemctl start 5g-mag-rt-modem`
-   - `systemctl stop 5g-mag-rt-modem`
-3. Try starting the MBMS Modem with sudo rights: `sudo ./modem -f "PathToSample/samplefile.raw" -b 5
+1. Verify that the correct network interface is used to output the UDP multicast.
+   See https://github.com/5G-MAG/Documentation-and-Architecture/wiki/mbms-modem#multicast-routing
+2. Make sure to start/stop the MBMS Modem as a service before launching it from the `build` folder:
+    - `systemctl start 5g-mag-rt-modem`
+    - `systemctl stop 5g-mag-rt-modem`
+3. Try starting the MBMS Modem with sudo rights: `sudo ./modem -f "PathToSample/samplefile.raw" -b 5`
 
 
-## References
-
-[1] [LTE-based 5G Terrestrial Broadcast](https://github.com/5G-MAG/Documentation-and-Architecture#lte-based-5g-terrestrial-broadcast) <br />
-[2] [https://en.wikipedia.org/wiki/HTTP_Live_Streaming](https://en.wikipedia.org/wiki/HTTP_Live_Streaming)

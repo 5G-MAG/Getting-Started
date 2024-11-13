@@ -6,7 +6,7 @@ grand_parent: 5G Broadcast - MBMS & LTE-based 5G Broadcast
 has_children: false
 ---
 
-# Tutorial - Android Middleware - Seamless Switching
+# Android Middleware - Seamless Switching
 
 ## Introduction
 
