@@ -1,6 +1,6 @@
 ---
 layout: default
-title:  5G Network Setup with COTS UE
+title: 5G Network Setup with COTS UE
 parent: Tutorials
 grand_parent: 5G Core Network Components
 has_children: false
@@ -10,20 +10,33 @@ nav_order: 0
 # Tutorial - 5G Network Setup with COTS UE
 
 ## Introduction
-These are the generic instructions to setup a 5G network using Open5GS and srsRAN. An Ettus X310 USRP and a Pixel 8 phone are used. 
+
+These are the generic instructions to setup a 5G network using Open5GS and srsRAN. An Ettus X310 USRP and a Pixel 8
+phone are used.
+
+## Prerequisites
+
+* Host machine running Ubuntu
+* UHD SDR like Ettus X310 USRP
+* Android Pixel 8 phone
+
+Note that other Android devices work as well but are not tested by ourselves. For details check
+the [srsRAN documentation](https://docs.srsran.com/projects/project/en/latest/knowledge_base/source/cots_ues/source/index.html#cots-ues).
 
 ## 5G Core installation and configuration
 
-Follow the installation procedures in the [Open5GS Quickstart guide](https://open5gs.org/open5gs/docs/guide/01-quickstart/).
+Follow the installation procedures in
+the [Open5GS Quickstart guide](https://open5gs.org/open5gs/docs/guide/01-quickstart/).
 
 ### Step 1: Install the 5G Core (Open5GS)
 
 We recommend installing for Ubuntu 22.04 with the following instructions:
 
 #### Getting MongoDB
+
 Import the public key used by the package management system:
 
-```
+```bash
 sudo apt update
 sudo apt install gnupg
 curl -fsSL https://pgp.mongodb.com/server-6.0.asc | sudo gpg -o /usr/share/keyrings/mongodb-server-6.0.gpg --dearmor
@@ -31,13 +44,13 @@ curl -fsSL https://pgp.mongodb.com/server-6.0.asc | sudo gpg -o /usr/share/keyri
 
 Create the list file /etc/apt/sources.list.d/mongodb-org-6.0.list for Ubuntu 22.04:
 
-```
+```bash
 echo "deb [ arch=amd64,arm64 signed-by=/usr/share/keyrings/mongodb-server-6.0.gpg] https://repo.mongodb.org/apt/ubuntu jammy/mongodb-org/6.0 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-6.0.list
 ```
 
 Install the MongoDB packages.
 
-```
+```bash
 sudo apt update
 sudo apt install -y mongodb-org
 sudo systemctl start mongod (if '/usr/bin/mongod' is not running)
@@ -46,16 +59,17 @@ sudo systemctl enable mongod (ensure to automatically start it on system boot)
 
 #### Install Open5GS
 
-```
+```bash
 sudo add-apt-repository ppa:open5gs/latest
 sudo apt update
 sudo apt install open5gs
 ```
+
 #### Install the WebUI of Open5GS
 
 The WebUI allows you to interactively edit subscriber data. Node.js is required to install the WebUI of Open5GS:
 
-```
+```bash
 sudo apt update
 sudo apt install -y ca-certificates curl gnupg
 sudo mkdir -p /etc/apt/keyrings
@@ -76,8 +90,10 @@ curl -fsSL https://open5gs.org/open5gs/assets/webui/install | sudo -E bash -
 
 #### IP:port addresses
 
-The default configurations see all of the Open5GS components fully configured for use on a single computer using the local loopback address space (127.0.0.X):
-```
+The default configurations see all of the Open5GS components fully configured for use on a single computer using the
+local loopback address space (127.0.0.X):
+
+```bash
 MongoDB   = 127.0.0.1 (subscriber data) - http://localhost:9999
 
 MME-s1ap  = 127.0.0.2 :36412 for S1-MME
@@ -118,12 +134,15 @@ NSSF-sbi  = 127.0.0.14:7777 for 5G SBI
 BSF-sbi   = 127.0.0.15:7777 for 5G SBI
 UDR-sbi   = 127.0.0.20:7777 for 5G SBI
 ```
+
 #### PLMN ID and TAC information
-Our setup will be using PLMN ID (MCC/MNC) 001/01 and TAC 7. This information needs to be loaded into the NRF and AMF config files (and the gNB).
+
+Our setup will be using PLMN ID (MCC/MNC) 001/01 and TAC 7. This information needs to be loaded into the NRF and AMF
+config files (and the gNB).
 
 Modify `/etc/open5gs/nrf.yaml` to set the Serving PLMN ID:
 
-```
+```yaml
 nrf:
   serving:  # 5G roaming requires PLMN in NRF
     - plmn_id:
@@ -137,7 +156,7 @@ nrf:
 
 Modify `/etc/open5gs/amf.yaml` to set the PLMN ID and TAC:
 
-```
+```yaml
 amf:
   sbi:
     server:
@@ -183,50 +202,54 @@ amf:
 
 After changing config files, please restart Open5GS daemons.
 
-```
+```bash
 sudo systemctl restart open5gs-nrfd
 sudo systemctl restart open5gs-amfd
 ```
 
 #### Adding a route for the UE to have WAN connectivity
 
-In order to bridge between the PGWU/UPF and WAN (Internet), you must enable IP forwarding and add a NAT rule to your IP Tables.
+In order to bridge between the PGWU/UPF and WAN (Internet), you must enable IP forwarding and add a NAT rule to your IP
+Tables.
 
 To enable forwarding and add the NAT rule, enter:
 
 Enable IPv4/IPv6 Forwarding
 
-```
+```bash
 sudo sysctl -w net.ipv4.ip_forward=1
 sudo sysctl -w net.ipv6.conf.all.forwarding=1
 ```
 
 Add NAT Rule
-```
+
+```bash
 sudo iptables -t nat -A POSTROUTING -s 10.45.0.0/16 ! -o ogstun -j MASQUERADE
 sudo ip6tables -t nat -A POSTROUTING -s 2001:db8:cafe::/48 ! -o ogstun -j MASQUERADE
 ```
 
 Configure the firewall correctly. Some operating systems (Ubuntu) by default enable firewall rules to block traffic.
 
-```
+```bash
 sudo ufw disable
 ```
 
 ## gNB installation and configuration
 
-Follow the installation procedures in the [srsRAN installation guide](https://docs.srsran.com/projects/project/en/latest/user_manuals/source/installation.html).
+Follow the installation procedures in
+the [srsRAN installation guide](https://docs.srsran.com/projects/project/en/latest/user_manuals/source/installation.html).
 
 ### Step 1: Install the gNB (srsRAN)
 
 Install dependencies
 
-```
+```bash
 sudo apt-get install cmake make gcc g++ pkg-config libfftw3-dev libmbedtls-dev libsctp-dev libyaml-cpp-dev libgtest-dev
 ```
 
 Install UHD drivers (e.g. for Ettus USRP)
-```
+
+```bash
 sudo add-apt-repository ppa:ettusresearch/uhd
 sudo apt-get update
 sudo apt-get install libuhd-dev uhd-host
@@ -234,7 +257,7 @@ sudo apt-get install libuhd-dev uhd-host
 
 Download the srsRAN Project packages:
 
-```
+```bash
 sudo add-apt-repository ppa:softwareradiosystems/srsran-project
 sudo apt-get update
 sudo apt-get install srsran-project -y
@@ -246,7 +269,7 @@ sudo apt-get install srsran-project -y
 
 Before running srsRAN Project applications, we recommend tuning your system for best performance:
 
-```
+```bash
 sudo ./scripts/srsran_performance
 ```
 
@@ -254,9 +277,10 @@ sudo ./scripts/srsran_performance
 
 When installed from packages, srsRAN Project example configs can be found in `/usr/share/srsran`.
 
-We've created the following 5gmag_example.yml. We recommend finding the value ARFCN through this [link](https://5g-tools.com/5g-nr-arfcn-calculator/).
+We've created the following 5gmag_example.yml. We recommend finding the value ARFCN through
+this [link](https://5g-tools.com/5g-nr-arfcn-calculator/).
 
-```
+```yaml
 # This example configuration outlines how to configure the srsRAN Project gNB to create a single TDD cell
 # transmitting in band 77, with 10 MHz bandwidth and 30 kHz sub-carrier-spacing. A USRP X310 is configured 
 # as the RF frontend. Note in this example the internal GPDSO is used.
@@ -295,21 +319,21 @@ pcap:
 
 ## Running the 5G Core (Open5GS)
 
-When you install the software using the package manager, it is setup to run as a systemd service. 
-
+When you install the software using the package manager, it is setup to run as a systemd service.
 
 ## Running the gNB (srsRAN)
 
 Run the gNB as follows, passing the YAML configuration file:
 
-sudo ./gnb -c 5gmag_example.yml
+`sudo ./gnb -c 5gmag_example.yml`
 
 ## Configure the COTS UE
 
 ### Register Subscriber Information
+
 Connect to http://localhost:9999 and login with admin account.
-    Username : admin
-    Password : 1423
+Username : admin
+Password : 1423
 
 To add subscriber information, you can do WebUI operations in the following order:
 
@@ -318,14 +342,19 @@ To add subscriber information, you can do WebUI operations in the following orde
     Fill the IMSI, security context(K, OPc, AMF), and APN of the subscriber.
     Click SAVE Button
 
-Enter the subscriber details of your SIM cards using this tool, to save the subscriber profile in the HSS and UDR MongoDB database backend.
+Enter the subscriber details of your SIM cards using this tool, to save the subscriber profile in the HSS and UDR
+MongoDB database backend.
 
 ### SIM card and APN
 
-Insert your SIM card to the UE and set the UE’s APN to match the APN you configured in the Open5GS WebUI. We recommend to edit the existing APN.
-Toggle the UE in and out of flight mode. If it doesn’t automatically connect, try manually searching for a network. If the PLMN set on the SIM card does not match the PLMN being used by the radio, you will need to ensure ‘data roaming’ on the UE is switched on.
+Insert your SIM card to the UE and set the UE’s APN to match the APN you configured in the Open5GS WebUI. We recommend
+to edit the existing APN.
+Toggle the UE in and out of flight mode. If it doesn’t automatically connect, try manually searching for a network. If
+the PLMN set on the SIM card does not match the PLMN being used by the radio, you will need to ensure ‘data roaming’ on
+the UE is switched on.
 
 The UE should connect automatically. If you experience trouble, we recommend checking the 5G Core logs, e.g.:
-```
+
+```bash
 sudo tail -f /var/log/open5gs/amf.log
 ```
