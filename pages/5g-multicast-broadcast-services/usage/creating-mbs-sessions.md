@@ -47,7 +47,7 @@ The placement of the SSM in the request selects which kind of identifier is bein
 
 The MB-UPF detects the traffic coming from the SSM and forwards it to the gNBs that have joined the multicast group defined by the LLSSM (Lower Layer Source Specific Multicast). Because of the use of GTPU, a TEID must be selected to forward the traffic, in the case of multicast transport, a C-TEID (Common TEID) is selected and is shared between all the gNBs receiving the multicast traffic.
 
-> Warning: Currently, only one LLSSM and C-TEID are being allocated. After sending the request to create the MBS Session, a PDR is configured to detect the traffic coming from the SSM specified on the request and the traffic is forwarded to the LLSSM that is using the multicast destination address `239.0.0.4` and C-TEID `33`.
+> Important note: Currently, there is a limit of 20 MBS Sessions per MB-UPF. The range of IP multicast addresses being used for the MB-UPF to forward the multicast traffic to the gNB using the LLSSM is `239.0.0.4-239.0.0.24`. That is why it is recommended to start the range for the SSM on the IP multicast address `239.0.0.25` onwards.
 
 #### [MB-SMF <-> AMF]: AMF MBS Broadcast ContextCreate side effect
 
@@ -62,15 +62,16 @@ The TMGI can be created by using the `TMGI Service API` or by using the `MBS Ses
 
 ### Method 1: TMGI Service API
 
-With this method, the AF will ask the MB-SMF to allocate the number of TMGIs present on the `tmgiNumber` field in the JSON data of the request.
+With this method, the AF/AS will ask the MB-SMF to allocate the number of TMGIs present on the `tmgiNumber` field in the JSON data of the request.
 
 ```bash
+# Execute this command inside the AF/AS container
 # TMGI Allocate (allocate) request: /nmbsmf-tmgi/v1/tmgi
 curl --http2-prior-knowledge \
   --request POST \
   --header "Content-Type: application/json" \
   --data '{ "tmgiNumber": 1 }' \
-  mb-smf.open5gs.org:80/nmbsmf-tmgi/v1/tmgi
+  smf-mb-smf.5g-mag.org:80/nmbsmf-tmgi/v1/tmgi
 ```
 
 The response of the MB-SMF, should send the list of allocated TMGIs:
@@ -81,15 +82,16 @@ The response of the MB-SMF, should send the list of allocated TMGIs:
 
 ### Method 2: MBS Session Service API
 
-With this method, the AF will ask the MB-SMF to allocate one TMGI and an MBS Session will be created and associated with this TMGI in the same request. The SSM is used for the detection of the multicast transport over N6mb.
+With this method, the AF/AS will ask the MB-SMF to allocate one TMGI and an MBS Session will be created and associated with this TMGI in the same request. The SSM is used for the detection of the multicast transport over N6mb.
 
 ```bash
+# Execute this command inside the AF/AS container
 # MBS Session Create request with TMGI allocate: /nmbsmf-mbssession/v1/mbs-sessions with multicast source
 curl --http2-prior-knowledge \
   --request POST \
   --header "Content-Type: application/json" \
-  --data '{ "mbsSession": { "ssm": { "sourceIpAddr": { "ipv4Addr": "10.33.33.3" }, "destIpAddr": { "ipv4Addr": "239.0.0.20" } },"tmgiAllocReq": true, "serviceType":"BROADCAST" } }' \
-  mb-smf.open5gs.org:80/nmbsmf-mbssession/v1/mbs-sessions
+  --data '{ "mbsSession": { "ssm": { "sourceIpAddr": { "ipv4Addr": "<af_as_container_ip>" }, "destIpAddr": { "ipv4Addr": "<n6mb_ip_multicast_destination_address>" } },"tmgiAllocReq": true, "serviceType":"BROADCAST" } }' \
+  smf-mb-smf.5g-mag.org:80/nmbsmf-mbssession/v1/mbs-sessions
 ```
 
 The response of the MB-SMF, should send the MBS Session with the allocated TMGI:
@@ -102,15 +104,16 @@ The response of the MB-SMF, should send the MBS Session with the allocated TMGI:
 
 ### TMGI Service API
 
-With this method, the AF will ask the MB-SMF to refresh an existing TMGI. This method is only accesible through the `TMGI Service API` but can be combined with the allocation too:
+With this method, the AF/AS will ask the MB-SMF to refresh an existing TMGI. This method is only accesible through the `TMGI Service API` but can be combined with the allocation too:
 
 ```bash
+# Execute this command inside the AF/AS container
 # TMGI Allocate (refresh) request: /nmbsmf-tmgi/v1/tmgi
 curl --http2-prior-knowledge \
   --request POST \
   --header "Content-Type: application/json" \
   --data '{ "tmgiList": [ { "mbsServiceId": "9236F7", "plmnId": { "mcc": "001", "mnc": "01" } } ] }' \
-  mb-smf.open5gs.org:80/nmbsmf-tmgi/v1/tmgi
+  smf-mb-smf.5g-mag.org:80/nmbsmf-tmgi/v1/tmgi
 ```
 
 The response of the MB-SMF, should send the new expiration time for the refreshed TMGIs:
@@ -122,12 +125,13 @@ The response of the MB-SMF, should send the new expiration time for the refreshe
 Combination of TMGI allocate request and TMGI refresh:
 
 ```bash
+# Execute this command inside the AF/AS container
 # TMGI Allocate (allocate + refresh) request: /nmbsmf-tmgi/v1/tmgi
 curl --http2-prior-knowledge \
   --request POST \
   --header "Content-Type: application/json" \
   --data '{ "tmgiNumber": 1, "tmgiList": [ { "mbsServiceId": "9236F7", "plmnId": { "mcc": "001", "mnc": "01" } } ] }' \
-  mb-smf.open5gs.org:80/nmbsmf-tmgi/v1/tmgi
+  smf-mb-smf.5g-mag.org:80/nmbsmf-tmgi/v1/tmgi
 ```
 
 The response of the MB-SMF, should send the allocated TMGIs and the new expiration time for the refreshed TMGIs:
@@ -140,15 +144,16 @@ The response of the MB-SMF, should send the allocated TMGIs and the new expirati
 
 ### Method 1: Creating an MBS Broadcast Session and a TMGI in the same request
 
-With this method, the AF will ask the MB-SMF to allocate one TMGI and an MBS Session will be created and associated with this TMGI in the same request. The SSM is used for the detection of the multicast transport over N6mb.
+With this method, the AF/AS will ask the MB-SMF to allocate one TMGI and an MBS Session will be created and associated with this TMGI in the same request. The SSM is used for the detection of the multicast transport over N6mb.
 
 ```bash
+# Execute this command inside the AF/AS container
 # MBS Session Create request with TMGI allocate: /nmbsmf-mbssession/v1/mbs-sessions with multicast source
 curl --http2-prior-knowledge \
   --request POST \
   --header "Content-Type: application/json" \
-  --data '{ "mbsSession": { "ssm": { "sourceIpAddr": { "ipv4Addr": "10.33.33.3" }, "destIpAddr": { "ipv4Addr": "239.0.0.20" } },"tmgiAllocReq": true, "serviceType":"BROADCAST" } }' \
-  mb-smf.open5gs.org:80/nmbsmf-mbssession/v1/mbs-sessions
+  --data '{ "mbsSession": { "ssm": { "sourceIpAddr": { "ipv4Addr": "<af_as_container_ip>" }, "destIpAddr": { "ipv4Addr": "<n6mb_ip_multicast_destination_address>" } },"tmgiAllocReq": true, "serviceType":"BROADCAST" } }' \
+  smf-mb-smf.5g-mag.org:80/nmbsmf-mbssession/v1/mbs-sessions
 ```
 
 The response of the MB-SMF contains the allocated TMGI as MBS Session identifier and also de SSM specified in the request:
@@ -159,15 +164,16 @@ The response of the MB-SMF contains the allocated TMGI as MBS Session identifier
 
 ### Method 2: Creating a Broadcast MBS Session using an existing TMGI
 
-With this method, the AF will ask the MB-SMF to create an MBS Session and the existing TMGI will be associated with it. The SSM is used for the detection of the multicast transport over N6mb.
+With this method, the AF/AS will ask the MB-SMF to create an MBS Session and the existing TMGI will be associated with it. The SSM is used for the detection of the multicast transport over N6mb.
 
 ```bash
+# Execute this command inside the AF/AS container
 # MBS Session Create request with existing TMGI: /nmbsmf-mbssession/v1/mbs-sessions
 curl --http2-prior-knowledge \
   --request POST \
   --header "Content-Type: application/json" \
-  --data '{ "mbsSession": { "mbsSessionId": { "tmgi": { "mbsServiceId": "9236F7", "plmnId": { "mcc":"001", "mnc":"01" } } }, "ssm": { "sourceIpAddr": { "ipv4Addr": "10.33.33.3" }, "destIpAddr": { "ipv4Addr": "239.0.0.20" } }, "serviceType":"BROADCAST" } }' \
-  mb-smf.open5gs.org:80/nmbsmf-mbssession/v1/mbs-sessions
+  --data '{ "mbsSession": { "mbsSessionId": { "tmgi": { "mbsServiceId": "9236F7", "plmnId": { "mcc":"001", "mnc":"01" } } }, "ssm": { "sourceIpAddr": { "ipv4Addr": "<af_as_container_ip>" }, "destIpAddr": { "ipv4Addr": "<n6mb_ip_multicast_destination_address>" } }, "serviceType":"BROADCAST" } }' \
+  smf-mb-smf.5g-mag.org:80/nmbsmf-mbssession/v1/mbs-sessions
 ```
 
 The response of the MB-SMF contains the specified TMGI and SSM, using the TMGI as MBS Session identifier as specified in the request:
