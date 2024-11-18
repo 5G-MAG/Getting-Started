@@ -1,21 +1,21 @@
 ---
 layout: default
-title: Basic MBS End-to-End Setup
+title: Initial MBS support in the 5GC
 parent: Tutorials
 grand_parent: 5G Multicast Broadcast Services
 has_children: false
 nav_order: 0
 ---
 
-# End-to-end tutorial
+# Initial MBS support in the 5GC
 
-This tutorial showcases the end-to-end function of the current features present on the 5G-MAG MBS implementation. You can check out the video to see more details or follow the write-up tutorial.
+This tutorial showcases the current features present in the 5G-MAG MBS implementation. You can check out the video to see more details or follow the write-up tutorial.
 
-## End-to-end tutorial video
+## Tutorial video
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/lJh2F0xXxpE?si=qtvABXQwNoHkaveH" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-## End-to-end tutorial writte-up
+## Description
 
 In this tutorial a Broadcast MBS Session will be created in order to send traffic from the AF/AS to a multicast group (SSM) and see the traffic going through the 5G Core and leaving the MB-UPF (LLSSM) in order to reach the gNB.
 
