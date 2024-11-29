@@ -112,7 +112,7 @@ LLSSM
 To verify that the traffic is being forwarded to the LLSSM execute the following command on your host machine:
 
 ```bash
-$ tcpdump -i br-5g-mag udp port 2152
+tcpdump -i br-5g-mag udp port 2152
 ```
 
 Connect to test_mbs_af or use the previously connected terminal:
