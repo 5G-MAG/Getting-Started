@@ -19,11 +19,16 @@ see more details or follow the write-up tutorial.
 ## Description
 
 In this tutorial a Broadcast MBS Session will be created in order to send traffic from the AF/AS to a multicast group (
-SSM) and see the traffic going through the 5G Core and leaving the MB-UPF (LLSSM) in order to reach the gNB.
+SSM) and see the traffic going through the 5G Core and leaving the MB-UPF (LLSSM) in order to reach the gNB. The basic
+architecture of the different components/containers is depicted in the illustration below.
+
+![5GUC Playback](../../../assets/images/5mbs/mbs-architecture-tutorial.png)
+
 
 > Note: Currently there is no way to receive the multicast traffic on the gNB, that feature is under development, but
-> while performing the MBS Session setup you can see an MBS related message being sent between the AMF and the gNB through
-> the N2 interface
+> while performing the MBS Session setup you can see an MBS related message being sent between the AMF and the gNB
+> through
+> the N2 interface!
 
 In order to create a Broadcast MBS Session a TMGI will be used as identifier but an SSM address needs to be specified
 too. This SSM will be the address that the AF/AS will use to send the multicast traffic to the MB-UPF through the N6mb
