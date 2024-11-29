@@ -16,6 +16,16 @@ see more details or follow the write-up tutorial.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/lJh2F0xXxpE?si=qtvABXQwNoHkaveH" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
+## Prerequisites
+
+Before starting with this tutorial please follow
+the [Docker installation instructions](https://github.com/5G-MAG/rt-mbs-examples?tab=readme-ov-file#running) for the
+5MBS stack. This tutorial assumes that you have cloned
+the [rt-mbms-examples repository](https://github.com/5G-MAG/rt-mbs-examples) and started the 5MBS Docker images with the
+internal deployment mode.
+
+You can verify that all Docker containers are running execute `docker ps -a`.
+
 ## Description
 
 In this tutorial a Broadcast MBS Session will be created in order to send traffic from the AF/AS to a multicast group (
@@ -39,9 +49,14 @@ multicast traffic.
 > used for the MB-UPF to forward the multicast traffic to the gNB using the LLSSM is `239.0.0.4-239.0.0.24`. That is why
 > it is recommended to start the range for the SSM on the IP multicast address `239.0.0.25` onwards
 
-To start, deploy the `internal` Docker Compose deployment and check everything is up and running.
+### Step 1: Creating an MBS Session
 
-From the AF/AS container execute:
+Connect to the shell of the `test_mbs_af_as` container: `docker exec -it test_mbs_af_as sh`.
+
+From the `test_mbs_af_as` container execute the following command to create an MBS session.
+Replace `<af_as_container_ip>` with the IP of the `test_mbs_af_as` container. You can derive the IP by
+calling `ip address` in the shell and copying the `eth0` interface address. In addition,
+replace `<n6mb_ip_multicast_destination_address>`  with a valid multicast address such as `239.0.0.25` or higher.
 
 ```bash
 # Execute this command inside the AF/AS container
@@ -53,20 +68,25 @@ curl --http2-prior-knowledge \
   smf-mb-smf.5g-mag.org:80/nmbsmf-mbssession/v1/mbs-sessions
 ```
 
-> Tip: Check AF/AS container IP executing `ip address` from the AF/AS container and use the `eth0` interface address
-> as `<af_as_container_ip>`
-
 This command will create an MBS Session of type `BROADCAST`, specifying the SSM address from which the MB-UPF will
-receive the traffic from the AF/AS. With the parameter `tmgiAllocReq` set to `true`, the request also tells the MB-SMF
+receive the traffic from `test_mbs_af_as`. With the parameter `tmgiAllocReq` set to `true`, the request also tells the
+MB-SMF
 to create a TMGI for this MBS Session.
+
+### Step 2: MB-UPF traffic configuration
 
 In order for the MB-UPF to receive the traffic being sent to this multicast group (SSM) and then forward it to the
 LLSSM, we need to execute the following command to configure the MB-UPF:
 
 ```bash
+# Connect to the MB-UPF container
+docker exec -it upf_mb-upf sh
 # Execute this command inside the MB-UPF container
 smcroutectl add eth0 <n6mb_ip_multicast_destination_address> ogstun
 ```
+
+Replace `n6mb_ip_multicast_destination_address` with the multicast address that you chose in the previous step,
+e.g. `239.0.0.25`.
 
 This command will update the MFC of the MB-UPF to receive the traffic for the multicast
 group `<n6mb_ip_multicast_destination_address>` and forward it internally using the `ogstun` interface.
@@ -74,20 +94,28 @@ group `<n6mb_ip_multicast_destination_address>` and forward it internally using 
 After all of this is configured, the MB-UPF has been configured through PFCP to forward the traffic received to the
 LLSSM. The first LLSSM created uses the multicast destination address `239.0.0.4` and random C-TEID.
 
-Through the AF/AS with IP address `<af_as_container_ip>` you can send an IP packet to the multicast
+### Step3: Sending multicast IP packets
+
+Through the `test_mbs_af_as` with IP address `<af_as_container_ip>` you can send an IP packet to the multicast
 destination `<n6mb_ip_multicast_destination_address>`. This causes the MB-UPF to forward the traffic using GTPU to the
-LLSSM:
+LLSSM
 
-```bash
-# To send traffic from the AF/AS to the MB-UPF
-sendip -p ipv4 -is <af_as_container_ip> -id <n6mb_ip_multicast_destination_address> upf-mb-upf.5g-mag.org
-```
-
-You can check the traffic is being forwarded to the LLSSM executing:
+To verify that the traffic is being forwarded to the LLSSM execute the following command on your host machine:
 
 ```bash
 $ tcpdump -i br-5g-mag udp port 2152
 ```
+
+Then send traffic from the test_mbs_af_as container:
+
+```bash
+# Connect to test_mbs_af or use the previously connected terminal
+docker exec -it test_mbs_af_as sh
+# To send traffic from the AF/AS to the MB-UPF
+sendip -p ipv4 -is <af_as_container_ip> -id <n6mb_ip_multicast_destination_address> upf-mb-upf.5g-mag.org
+```
+
+Again replace `<af_as_container_ip>` and `<n6mb_ip_multicast_destination_address>` with the respective IP addresses.
 
 > Note: When the gNB part is done, this traffic will be received by the gNBs configured to listen to the LLSSM and
 > forward it to the UEs using PTM.
