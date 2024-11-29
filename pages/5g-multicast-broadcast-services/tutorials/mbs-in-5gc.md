@@ -24,7 +24,7 @@ the [Docker installation instructions](https://github.com/5G-MAG/rt-mbs-examples
 the [rt-mbms-examples repository](https://github.com/5G-MAG/rt-mbs-examples) and started the 5MBS Docker images with the
 internal deployment mode.
 
-You can verify that all Docker containers are running execute `docker ps -a`.
+You can verify that all Docker containers are running by executing `docker ps -a` on the host machine.
 
 ## Description
 
@@ -51,7 +51,12 @@ multicast traffic.
 
 ### Step 1: Creating an MBS Session
 
-Connect to the shell of the `test_mbs_af_as` container: `docker exec -it test_mbs_af_as sh`.
+Connect to the shell of the `test_mbs_af_as` container:
+
+```bash
+# Connect to the test_mbs_af_as container
+docker exec -it test_mbs_af_as sh
+```
 
 From the `test_mbs_af_as` container execute the following command to create an MBS session.
 Replace `<af_as_container_ip>` with the IP of the `test_mbs_af_as` container. You can derive the IP by
@@ -59,7 +64,6 @@ calling `ip address` in the shell and copying the `eth0` interface address. In a
 replace `<n6mb_ip_multicast_destination_address>`  with a valid multicast address such as `239.0.0.25` or higher.
 
 ```bash
-# Execute this command inside the AF/AS container
 # MBS Session Create request with TMGI allocate: /nmbsmf-mbssession/v1/mbs-sessions with multicast source
 curl --http2-prior-knowledge \
   --request POST \
@@ -76,11 +80,16 @@ to create a TMGI for this MBS Session.
 ### Step 2: MB-UPF traffic configuration
 
 In order for the MB-UPF to receive the traffic being sent to this multicast group (SSM) and then forward it to the
-LLSSM, we need to execute the following command to configure the MB-UPF:
+LLSSM, we need to connect to the `MB-UPF` container
 
 ```bash
 # Connect to the MB-UPF container
 docker exec -it upf_mb-upf sh
+```
+
+and then execute the following command to configure the MB-UPF:
+
+```bash
 # Execute this command inside the MB-UPF container
 smcroutectl add eth0 <n6mb_ip_multicast_destination_address> ogstun
 ```
@@ -106,12 +115,16 @@ To verify that the traffic is being forwarded to the LLSSM execute the following
 $ tcpdump -i br-5g-mag udp port 2152
 ```
 
-Then send traffic from the test_mbs_af_as container:
+Connect to test_mbs_af or use the previously connected terminal:
 
 ```bash
 # Connect to test_mbs_af or use the previously connected terminal
 docker exec -it test_mbs_af_as sh
-# To send traffic from the AF/AS to the MB-UPF
+```
+
+Then send traffic from the test_mbs_af_as container:
+
+```bash
 sendip -p ipv4 -is <af_as_container_ip> -id <n6mb_ip_multicast_destination_address> upf-mb-upf.5g-mag.org
 ```
 
