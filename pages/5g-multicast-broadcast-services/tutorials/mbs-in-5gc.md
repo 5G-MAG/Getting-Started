@@ -103,7 +103,7 @@ group `<n6mb_ip_multicast_destination_address>` and forward it internally using 
 After all of this is configured, the MB-UPF has been configured through PFCP to forward the traffic received to the
 LLSSM. The first LLSSM created uses the multicast destination address `239.0.0.4` and random C-TEID.
 
-### Step3: Sending multicast IP packets
+### Step 3: Sending multicast IP packets
 
 Through the `test_mbs_af_as` with IP address `<af_as_container_ip>` you can send an IP packet to the multicast
 destination `<n6mb_ip_multicast_destination_address>`. This causes the MB-UPF to forward the traffic using GTPU to the
