@@ -7,6 +7,15 @@ has_children: false
 nav_order: 0
 ---
 
+<details open markdown="block">
+  <summary>
+    Table of contents
+  </summary>
+  {: .text-delta }
+1. TOC
+{:toc}
+</details>
+
 # Tutorial - 5G MSd: Basic End-to-End Setup
 
 This guide describes how to setup and configure the 5G-MAG Reference Tools - 5G Downlink Media Streaming components to
@@ -29,17 +38,59 @@ components.
 | Common Android Library  | `1.0.0`         |
 
 # Requirements
+
 * A host machine running Ubuntu 22.04 LTS
 * A smartphone running Android 10 or later
 
 # Server-side setup
 
-In some cases, you might want to work with a reduced setup to develop new functionality on the client-side. For that
-reason, the server-side setup guide is divided into two sections
-the [Option 1: Common server-side setup](#option-1-common-server-side-setup)
-and [Option 2: Server-side development setup](#option-2-server-side-development-setup).
+We provide multiple ways to do the server-side setup. The easiest way is to use the Docker setup. However, in some
+cases, you might want to work with a native installation or even with a reduced setup to develop new functionality on
+the client-side. For that reason, the server-side setup guide is divided into three alternative sections:
 
-## Option 1: Common server-side setup
+* [Option 1: Docker Compose setup](#option-1-docker-compose-setup)
+* [Option 2: Native common server-side setup](#option-2-common-server-side-setup)
+* [Option 3: Server-side development setup](#option-3-server-side-development-setup).
+
+## Option 1: Docker Compose setup
+
+The required files for the Docker Compose setup are located in
+the [rt-5gms-examples project](https://github.com/5G-MAG/rt-5gms-examples/tree/development/5gms-docker-setup).
+
+The `5gms-docker-setup` provides multiple Docker Compose setups to run the 5GMS Application Function, the 5GMS
+Application Server and the
+5GMS Application Provider in Docker container environments. This tutorial, assumes you are using Docker Compose recipe
+
+### Setup
+
+First, clone the [rt-5g-examples](https://github.com/5G-MAG/rt-5gms-examples/tree/development) repository:
+
+````bash
+git clone https://github.com/5G-MAG/rt-5gms-examples.git
+````
+
+Now switch to the `5gms-docker-setup/recipe1` folder:
+
+````bash
+cd rt-5gms-examples/5gms-docker-setup/recipe1
+````
+
+Follow
+the [required configuration](https://github.com/5G-MAG/rt-5gms-examples/tree/development/5gms-docker-setup/recipe1#required-configuration)
+and
+the [installation](https://github.com/5G-MAG/rt-5gms-examples/tree/development/5gms-docker-setup/recipe1#installation)
+instructions in
+the [Readme](https://github.com/5G-MAG/rt-5gms-examples/blob/development/5gms-docker-setup/recipe1/Readme.md) file.
+
+Once completed, verify that the `m8.json` has been created and can be accessed. Open the following URLs in your browser
+and verify that a valid `JSON` file is returned:
+
+* `http://localhost/m8.json`
+* `http://<<ENTER_YOUR_IP_HERE>>/m8.json`
+
+After that you can directly jump to the [client-side setup](#client-side-setup).
+
+## Option 2: Common server-side setup
 
 ### 1. Installing the Application Function
 
@@ -94,8 +145,8 @@ different port to not interfere with the default port of the `M3`interface on th
 ````yaml
 msaf:
     m5:
-      - addr: 0.0.0.0
-      - port: 7778
+        -   addr: 0.0.0.0
+        -   port: 7778
 ```` 
 
 #### Starting the AF
@@ -118,9 +169,9 @@ the client-side.
 First we create a configuration file to be used by the `msaf-configuration` tool:
 
 ````yaml
-[af-sync]
-m5_authority = <YOUR_MACHINE_IP_HERE>:<M5_PORT_HERE>
-#docroot = /var/cache/rt-5gms/as/docroots
+[ af-sync ]
+    m5_authority = <YOUR_MACHINE_IP_HERE>:<M5_PORT_HERE>
+  #docroot = /var/cache/rt-5gms/as/docroots
 #default_docroot = /usr/share/nginx/html
 ````
 
@@ -128,9 +179,9 @@ Replace `<YOUR_MACHINE_IP_HERE>` with the IP address of your machine and `<M5_PO
 interface is running on. For instance:
 
 ````yaml
-[af-sync]
-m5_authority = 192.168.178.55:7778
-#docroot = /var/cache/rt-5gms/as/docroots
+[ af-sync ]
+    m5_authority = 192.168.178.55:7778
+  #docroot = /var/cache/rt-5gms/as/docroots
 #default_docroot = /usr/share/nginx/html
 ````
 
@@ -275,15 +326,15 @@ The output should look like the following:
 
 ````json
 {
-	"provisioningSessionId":	"a0b5a258-d5da-41ed-b62f-cdd2806778b0",
-	"provisioningSessionType":	"DOWNLINK",
-	"streamingAccess":	{
-		"mediaPlayerEntry":	"http://192.168.178.55/m4d/provisioning-session-a0b5a258-d5da-41ed-b62f-cdd2806778b0/BigBuckBunny_4s_onDemand_2014_05_09.mpd"
-	}
+  "provisioningSessionId": "a0b5a258-d5da-41ed-b62f-cdd2806778b0",
+  "provisioningSessionType": "DOWNLINK",
+  "streamingAccess": {
+    "mediaPlayerEntry": "http://192.168.178.55/m4d/provisioning-session-a0b5a258-d5da-41ed-b62f-cdd2806778b0/BigBuckBunny_4s_onDemand_2014_05_09.mpd"
+  }
 }
 ````
 
-## Option 2: Server-side development setup
+## Option 3: Server-side development setup
 
 For development purposes, it can be useful to mock the functionality of the AF and the AS. For that reason, 5G-MAG
 provides a [simple static webserver](https://github.com/5G-MAG/rt-5gms-examples/tree/main/express-mock-af). The server
@@ -382,7 +433,8 @@ For our local AS and AF setup we only need to extend this list with the `M8` end
 <!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
 <properties>
     <entry key="m8LocalAfAndAs">m8/config_local_af.json</entry>
-    <entry key="m85LocalHost">http://<YOUR_MACHINE_IP_HERE>/</entry>
+    <entry key="m85LocalHost">http://<YOUR_MACHINE_IP_HERE>/
+    </entry>
 </properties>
 ````
 
@@ -419,7 +471,7 @@ following line and replace the IP address with the IP address of your machine.
 ````xml
 <!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
 <properties>
-   <entry key="m8LocalDummyHost">http://192.168.178.55:3003/m8/</entry>
+    <entry key="m8LocalDummyHost">http://192.168.178.55:3003/m8/</entry>
 </properties>
 ````
 
