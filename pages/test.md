@@ -5,9 +5,11 @@ parent: Home
 nav_order: 0
 ---
 
-The list below includes the 3GPP Release 18 5G Media Streaming APIs (from TS 26.510 & TS 26.512). However, the 5GMS AF and AS are only on Release 17 5GMS  APIs (TS 26.512 only - TS 26.510 does not exist in Release 17). In 5GMS Release 18 a lot of the APIs were renamed and moved from TS 26.512 to become more generic versions in TS 26.510 to handle both uplink and downlink for unicast and MBS services. This means that for some APIs there's a direct mapping, but other parts of the APIs are only in the new in TS 26.510 or updated TS 26.512 for Release 18.
+# List of 3GPP APIs supported in the 5G-MAG Reference Tools projects
+The list below includes 3GPP APIs supported in the different project.
 
-The following is a rough mapping of Release 17 to Release 18.
+## 5G Media Streaming 
+The table contains the 3GPP 5G Media Streaming APIs for Release 17 (TS 26.512) and Release 18 (TS 26.510 & TS 26.512). Note that the current 5G-MAG Reference Tools 5GMS AF and AS are only base on Release 17 (i.e. TS 26.510 does not exist in Release 17). Note that in 5GMS Release 18 many APIs were renamed and moved from TS 26.512 to become more generic versions in TS 26.510 to handle both uplink and downlink for unicast and MBS services.
 
 Scope | Release 17 | Release 18
 ----- | ---------- | ----------
@@ -43,5 +45,5 @@ DC | N/A | **TS26512_EventExposure.yaml**
 
 PreStd* = We have implemented a pre-standardisation variant of the 5GMS AS configuration API at reference point M3d that is quite similar to what eventually appeared in Release 18. It's not fully compliant because the service name is different and so are some details.
  
-{: note}
+{: .note }
 Note that not all aspects of these APIs are implemented. For example Content Preparation, Edge resources, Geo-fencing and URL signing in TS26512_M1_ContentHostingProvisioning.yaml are not implemented
