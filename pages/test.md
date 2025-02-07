@@ -1,8 +1,8 @@
 ---
 layout: default
-title: Test
+title: Supported 3GPP APIs
 parent: Home
-nav_order: 0
+nav_order: 3
 ---
 
 # List of 3GPP APIs supported in the 5G-MAG Reference Tools projects
