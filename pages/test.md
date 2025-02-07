@@ -43,5 +43,5 @@ DC | N/A | **TS26512_EventExposure.yaml**
 
 PreStd* = We have implemented a pre-standardisation variant of the 5GMS AS configuration API at reference point M3d that is quite similar to what eventually appeared in Release 18. It's not fully compliant because the service name is different and so are some details.
  
-{note :}
+{: note}
 Note that not all aspects of these APIs are implemented. For example Content Preparation, Edge resources, Geo-fencing and URL signing in TS26512_M1_ContentHostingProvisioning.yaml are not implemented
