@@ -1,3 +1,10 @@
+---
+layout: default
+title: Test
+parent: Home
+nav_order: 0
+---
+
 The list below includes the 3GPP Release 18 5G Media Streaming APIs (from TS 26.510 & TS 26.512). However, the 5GMS AF and AS are only on Release 17 5GMS  APIs (TS 26.512 only - TS 26.510 does not exist in Release 17). In 5GMS Release 18 a lot of the APIs were renamed and moved from TS 26.512 to become more generic versions in TS 26.510 to handle both uplink and downlink for unicast and MBS services. This means that for some APIs there's a direct mapping, but other parts of the APIs are only in the new in TS 26.510 or updated TS 26.512 for Release 18.
 
 The following is a rough mapping of Release 17 to Release 18.
