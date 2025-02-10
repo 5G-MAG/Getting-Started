@@ -1,21 +1,19 @@
 ---
 layout: default
-title: Specifications - Supported APIs
+title: Supported APIs
 parent: 5G Downlink Media Streaming
 has_children: false
 nav_order: 1
 ---
 
-# Specifications and Architecture
-
-## Specifications
-Visit the [Standards repository](https://5g-mag.github.io/Standards/pages/5g-media-streaming.html) for details.
-
-# List of 3GPP APIs supported in the 5G-MAG Reference Tools projects
-The list below includes 3GPP APIs supported in the different project.
-
-## 5G Media Streaming 
+# Supported APIs for 5G Media Streaming
 The table contains the 3GPP 5G Media Streaming APIs for Release 17 (TS 26.512) and Release 18 (TS 26.510 & TS 26.512). Note that the current 5G-MAG Reference Tools 5GMS AF and AS are only base on Release 17 (i.e. TS 26.510 does not exist in Release 17). Note that in 5GMS Release 18 many APIs were renamed and moved from TS 26.512 to become more generic versions in TS 26.510 to handle both uplink and downlink for unicast and MBS services.
+
+More information about the relevant specifications can be found in the following pages:
+ - 5G Media Streaming Architecture: [Standards pages](https://5g-mag.github.io/Standards/pages/5g-media-streaming.html)
+ - UE Data Collection and Event Exposure: [Standards pages](https://5g-mag.github.io/Standards/pages/data-collection-event-exposure.html)
+
+# Classification
 
  Release 17 | Release 18
  ---------- | ----------
