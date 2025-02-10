@@ -9,6 +9,7 @@ nav_order: 1
 # Supported APIs for 5G Media Streaming
 The table contains the 3GPP 5G Media Streaming APIs for Release 17 (TS 26.512) and Release 18 (TS 26.510 & TS 26.512). Note that the current 5G-MAG Reference Tools 5GMS AF and AS are only base on Release 17 (i.e. TS 26.510 does not exist in Release 17). Note that in 5GMS Release 18 many APIs were renamed and moved from TS 26.512 to become more generic versions in TS 26.510 to handle both uplink and downlink for unicast and MBS services.
 
+## Relevant specifications
 More information about the relevant specifications can be found in the following pages:
  - 5G Media Streaming Architecture: [Standards pages](https://5g-mag.github.io/Standards/pages/5g-media-streaming.html)
  - UE Data Collection and Event Exposure: [Standards pages](https://5g-mag.github.io/Standards/pages/data-collection-event-exposure.html)
@@ -43,9 +44,13 @@ More information about the relevant specifications can be found in the following
  TS26512_R4_DataReporting.yaml | **TS26512_R4_DataReporting.yaml**
  N/A | **TS26512_EventExposure.yaml**
 
-### Legend
-**BOLD** = Implemented in 5G-MAG Reference Tools
-PreStd* = We have implemented a pre-standardisation variant of the 5GMS AS configuration API at reference point M3d that is quite similar to what eventually appeared in Release 18. It's not fully compliant because the service name is different and so are some details.
+## Legend
+
+<span style="color: green;font-weight:bold;">TEXT</span> = Already implemented in 5G-MAG Reference Tools
+
+<span style="color: orange;font-weight:bold;">TEXT</span> = In the implementation roadmap in 5G-MAG Reference Tools
+
+PreStd* = Implementatio of a pre-standardisation variant of the 5GMS AS configuration API at reference point M3d that is similar to what eventually appeared in Release 18. The service name is different and so are some details.
  
 {: .note }
 Note that not all aspects of these APIs are implemented. For example Content Preparation, Edge resources, Geo-fencing and URL signing in TS26512_M1_ContentHostingProvisioning.yaml are not implemented.
