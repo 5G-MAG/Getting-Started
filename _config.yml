@@ -18,19 +18,17 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: 5G-MAG Reference Tools - Documentation
-email: daniel.silhavy@fokus.fraunhofer.de
+title: 5G-MAG - Reference Tools
+email: info@5g-mag.com
 description: >- # this means to ignore newlines until "baseurl:"
   5G-MAG Reference Tools
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: dsilhavy
-github_username:  dsilhavy
+url: "http://www.5g-mag.com" # the base hostname & protocol for your site, e.g. http://example.com
 logo: "/assets/images/5g-mag-reference-tools.png"
 
 aux_links:
-  "5G-MAG Reference Tools on GitHub":
-    - "//github.com/5G-MAG/Getting-Started"
+  "5G-MAG Reference Tools in GitHub":
+    - "https://5g-mag.github.io/Getting-Started"
   "5G-MAG Website":
     - "https://www.5g-mag.com"
 
@@ -75,13 +73,23 @@ plugins:
 
 # External navigation links
 nav_external_links:
-  - title: 5G-MAG Developer Space
-    url: https://developer.5g-mag.com
+  - title: 5G-MAG - Technology
+    url: https://5g-mag.github.io/Tech
+    hide_icon: false # set to true to hide the external link icon - defaults to false
+    opens_in_new_tab: false # set to true to open this link in a new tab - defaults to false
+    
+  - title: 5G-MAG - Standards
+    url: https://5g-mag.github.io/Standards
     hide_icon: false # set to true to hide the external link icon - defaults to false
     opens_in_new_tab: false # set to true to open this link in a new tab - defaults to false
 
-  - title: Standards & Specifications
-    url: https://5g-mag.github.io/Standards
+  - title: 5G-MAG - Reference Tools
+    url: https://5g-mag.github.io/Getting-Started
+    hide_icon: false # set to true to hide the external link icon - defaults to false
+    opens_in_new_tab: false # set to true to open this link in a new tab - defaults to false
+
+  - title: 5G-MAG - Requests for Feedback
+    url: https://5g-mag.github.io/Requests-for-Feedback
     hide_icon: false # set to true to hide the external link icon - defaults to false
     opens_in_new_tab: false # set to true to open this link in a new tab - defaults to false
   
