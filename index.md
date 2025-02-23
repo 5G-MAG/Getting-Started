@@ -5,9 +5,7 @@ nav_order: 0
 has_children: true
 ---
 
-<img src="{{site.baseurl}}/assets/images/5g-mag-reference-tools.png" alt="5g-mag" style="height:50px">
-
-# Welcome to the 5G-MAG Reference Tools
+<img src="/assets/images/Banner_RT.png" /> 
 
 This website serves as an umbrella for documentation, practical guidelines and examples of applications that can be
 built with the software packages available in the 5G-MAG Reference Tools and also in combination with other platforms.
