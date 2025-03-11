@@ -21,7 +21,7 @@ see more details or follow the write-up tutorial.
 Before starting with this tutorial please follow
 the [Docker installation instructions](https://github.com/5G-MAG/rt-mbs-examples?tab=readme-ov-file#running) for the
 5MBS stack. This tutorial assumes that you have cloned
-the [rt-mbms-examples repository](https://github.com/5G-MAG/rt-mbs-examples) and started the 5MBS Docker images with the
+the [rt-mbs-examples repository](https://github.com/5G-MAG/rt-mbs-examples) and started the 5MBS Docker images with the
 internal deployment mode.
 
 You can verify that all Docker containers are running by executing `docker ps -a` on the host machine.
