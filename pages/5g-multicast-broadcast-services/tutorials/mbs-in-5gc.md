@@ -69,7 +69,7 @@ curl --http2-prior-knowledge \
   --request POST \
   --header "Content-Type: application/json" \
   --data '{ "mbsSession": { "ssm": { "sourceIpAddr": { "ipv4Addr": "<af_as_container_ip>" }, "destIpAddr": { "ipv4Addr": "<n6mb_ip_multicast_destination_address>" } },"tmgiAllocReq": true, "serviceType":"BROADCAST" } }' \
-  smf-mb-smf.5g-mag.org:80/nmbsmf-mbssession/v1/mbs-sessions
+  smf_mb-smf.5g-mag.org:80/nmbsmf-mbssession/v1/mbs-sessions
 ```
 
 This command will create an MBS Session of type `BROADCAST`, specifying the SSM address from which the MB-UPF will
