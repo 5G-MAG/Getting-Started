@@ -1,8 +1,8 @@
 ---
 layout: default
 title: Testing the 5GMS AS
-parent: Application Server
-grand_parent: Usage
+parent: Tutorials
+grand_parent: 5G Media Streaming
 has_children: false
 nav_order: 1
 ---
