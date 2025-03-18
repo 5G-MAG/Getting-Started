@@ -17,20 +17,43 @@ This section assumes [adb](https://developer.android.com/tools/adb) is installed
 
 
 
+
 ## 1. Get the source code
 
-Clone the code for the first time: 
+Clone the XR Player unity project code: 
 ```
 git clone --recursive https://github.com/5G-MAG/rt-xr-unity-player.git
 ```
 
-or pull latest changes: 
+Clone the media pipelines source code:
 ```
-git pull --recurse-submodules
+git clone git@github.com:5G-MAG/rt-xr-maf-native.git
 ```
 
+## 2. Build and install media pipeline plugins
 
-## 2. Build the project & install it on an Android device
+When targeting android, the easiest way to build and install media pipelines is by using the `.Dockerfile` in the `rt-xr-unity-package`. 
+The dockerfile build steps setup the build environment, then build the media pipeline and all of their dependencies, so that the build artifacts are stored in the resulting container:
+```
+cd rt-xr-unity-package
+docker build -t rtxrmaf:builder .
+```
+
+The build artifacts can then be copied from the container to the unity project:
+```
+docker run --mount=type=bind,source=$(pwd)/Packages/rt.xr.maf,target=/install -it maf:builder
+```
+
+Now the unity project contains all dependencies to support media pipelines.
+
+
+**Other platforms**
+
+Refer to the [git repository](https://github.com/5G-MAG/rt-xr-maf-native/tree/feature/android) for more informations on the build process.
+
+
+## 3. Build the project & install the unity project on an Android device
+
 
 <img src="../images/unity-build-player.png" alt="Build the Unity project for Android" width="840" />
 
@@ -42,7 +65,7 @@ git pull --recurse-submodules
 
 
 
-## 3. Push content to an Android device & configure the player
+## 4. Push content to an Android device & configure the player
 
 Clone the `rt-xr-content` repository:
 ```
@@ -67,8 +90,7 @@ adb push ./Paths /storage/emulated/0/Android/data/com.fivegmag.rtxrplayer/files/
 ```
 
 
-
-## 4. Launch the player
+## 5. Launch the player
 
 Locate and launch the player. 
 A menu to select scenes in the configured content will be listed by the player at startup.

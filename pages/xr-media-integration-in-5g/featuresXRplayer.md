@@ -6,23 +6,23 @@ has_children: false
 nav_order: 1
 ---
 
-## XR Unity Player v1.0.0 features
+## XR Unity Player features
 
-* Adds **support for augmented reality scenes** using the `MPEG_anchor` glTF extensions which enables anchoring nodes and scenes to real world features. Anchored nodes are composited with the runtime device's camera stream. The implementation currently targets Mobile XR scenarios on Android devices such as smartphones, leveraging Google's ARCore API. 
+The XR Player takes 3D scenes in glTF format, supporting extensions that enable extended reality use cases. 
+These extensions enable features such as XR anchoring, interactivity behaviors, and media pipelines.
 
-* Adds a basic player configuration file to list multiple glTF documents, and a simple menu to load/unload and switch between scenes.
-
-[View Changelog](https://github.com/5G-MAG/rt-xr-unity-player/releases)
+- [View Changelog](https://github.com/5G-MAG/rt-xr-unity-player/releases)
 
 
-### Anchoring
+### XR Anchoring
 
-Supports augmented reality scenes using the `MPEG_anchor` glTF extensions which enables anchoring nodes and scenes to **Trackable** real world features. 
+The XR Player supports XR anchoring using the `MPEG_anchor` glTF extension which enables anchoring nodes and scenes to features (*Trackable*) tracked by the XR device. In augmented reality applications, anchored nodes are composited with the XR device's environment. 
 
-The implementation targets Android devices, anchored nodes are composited with the runtime device's camera stream. 
+The XR player leverages Unity's ARFoundation to support both handled mobile devices such as smartphones and head mounted devices.
 
-| Trackable type | Status | Test content |
-|:---------------|:-------|:-------------|
+
+| Trackable type | Status | XR plugins | Test content |
+|:---------------|:-------|:-------------|:-------------|
 | TRACKABLE_VIEWER | &#x2611; | [anchoring/anchorTest_viewer_n.gltf](https://github.com/5G-MAG/rt-xr-content/tree/development/anchoring/) |
 | TRACKABLE_FLOOR | &#x2611; | [awards/scene_floor_anchoring.gltf](https://github.com/5G-MAG/rt-xr-content/tree/development/awards/) |
 | TRACKABLE_PLANE | &#x2611; | [awards/scene_plane_anchoring.gltf](https://github.com/5G-MAG/rt-xr-content/tree/development/awards/) |
@@ -35,9 +35,9 @@ The implementation targets Android devices, anchored nodes are composited with t
 
 ### Interactivity
 
-Supports specifying interactive **behaviors** to gltf documents through the `MPEG_scene_interactivity` and `MPEG_node_interactivity` extensions. 
+The XR Player supports specifying interactive **behaviors** in a 3D scene through the `MPEG_scene_interactivity` and `MPEG_node_interactivity` glTF extensions. 
 
-An interactivity behavior combines one or more **triggers** that condition the execution one or more **actions**.
+An interactivity behavior combines one or more **triggers** that condition the execution of one or more **actions**.
 
 The table below provide an overview of the supported triggers and actions:
 
@@ -64,44 +64,35 @@ The table below provide an overview of the supported triggers and actions:
 
 ### Media pipelines
 
-{: .highlight }
-Android support is planned in [#54](https://github.com/5G-MAG/rt-xr-unity-player/issues/54).
-
 Support for media sources (eg. mp4, dash, rtp, ...) exposing media buffers to the presentation engine through the `MPEG_media`, `MPEG_accessor_timer`, `MPEG_buffer_circular` glTF extensions.
 
-Media buffers expose decoded data not limited to video texture or audio sources.
+The media pipelines APIs are designed to fetch and decode timed media such as video textures, audio sources, geometry streams ...
 
 [Sample scene with media pipelines](https://github.com/5G-MAG/rt-xr-content/tree/development/studio_apartment)
 
 
 ### Video texture
 
-{: .highlight }
-Android support is planned in [#54](https://github.com/5G-MAG/rt-xr-unity-player/issues/54).
-
-Supports video textures buffers through the `MPEG_texture_video` glTF video extension is supported on Windows as of `v0.9.0`, Android support is planned for `v1.1.0`.
+Supports video textures buffers through the `MPEG_texture_video` glTF video extension. Video decoding is implemented by media pipelines.
 
 [Sample scene with video texture](https://github.com/5G-MAG/rt-xr-content/tree/development/studio_apartment)
 
 
 ### Spatial audio
 
-{: .highlight }
-Android support is planned in [#54](https://github.com/5G-MAG/rt-xr-unity-player/issues/54).
-
-Supports audio sources positionned in 3D through the `MPEG_audio_spatial` glTF extension is supported on Windows as of `v0.9.0`, Android support is planned for `v1.1.0`.
+Supports audio sources positionned in 3D through the `MPEG_audio_spatial`.
 
 For each audio source the extension specifies attenuation parameters controling the audio source loudness as a function of the viewer's distance.
 
 [Sample scene with spatial audio source](https://github.com/5G-MAG/rt-xr-content/tree/development/studio_apartment)
 
-### Overview of the MPEG extensions to glTF format implemented in v1.0.0
+
+### Overview of the MPEG extensions to glTF format implemented in v1.1.0
 
 Note that "Unity player" refers to the compiled application, while "Unity editor" refers to the development environment which also allows running the app without actually compiling it for the target platform.
 
 | glTF extension               | Unity player   | Unity editor   |
 |:-----------------------------|:---------------|:---------------|
-|                              | *Android*      |                |
 | MPEG_media                   | &#x2610;       | &#x2611;       |
 | MPEG_buffer_circular         | &#x2610;       | &#x2611;       |
 | MPEG_accessor_timed          | &#x2610;       | &#x2611;       |
