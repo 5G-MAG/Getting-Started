@@ -14,6 +14,10 @@ The section [DEVELOPER XCHANGES & TUTORIALS](https://www.5g-mag.com/tutorials) i
 <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?si=AmxsuFLQ8V_PZD0G&amp;list=PLFqKJZ78_IWUibB6dMiabaVNDFLSGBWlx" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ## Using the tools
+### [Testing the 5GMS Application Server](./tutorials/testing-AS.html)
+
+### [Testing the 5GMS Application Function](./tutorials/testing-AF.html)
+
 ### [Tutorial: Basic 5G Media Streaming end-to-end setup](./tutorials/end-to-end.html)
 This guide describes how to setup and configure the 5G-MAG Reference Tools - 5G Downlink Media Streaming components to create an end to end setup using Application Function, Application Server, 5GMSd Aware Application, Media Session Handler, Media Stream Handler and Common Android Library.
 
