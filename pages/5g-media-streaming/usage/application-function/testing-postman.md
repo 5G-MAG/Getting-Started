@@ -1,8 +1,8 @@
 ---
 layout: default
 title: Testing with Postman
-parent: Application Function
-grand_parent: Usage
+parent: Testing the AF
+grand_parent: Tutorials
 has_children: false
 nav_order: 5
 ---
