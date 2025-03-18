@@ -1,7 +1,7 @@
 ---
 layout: default
 title:  Configuration 5GMS AF
-parent: Testing AFn
+parent: Testing the AF
 grand_parent: Tutorial
 has_children: false
 nav_order: 3
