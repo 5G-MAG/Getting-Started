@@ -30,7 +30,7 @@ built with the software packages available in the 5G-MAG Reference Tools and als
 * Find all the information how to join here: [https://5g-mag.com/community#calendar](https://5g-mag.com/community#calendar)
 * Agendas circulated via the [Google Group](https://groups.google.com/g/5g-mag-reference-tools) mailing list
 
-## Contributing
+### Contributing
 * Learn about the Contributor License Agreement for contributors: [https://www.5g-mag.com/license](https://www.5g-mag.com/license)
 * Guidelines for contributors are available [here](guidelines-contributors.html)
 
