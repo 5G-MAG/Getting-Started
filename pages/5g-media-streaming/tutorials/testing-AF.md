@@ -1,10 +1,10 @@
 ---
 layout: default
-title: Testing the AF
+title: Testing the 5GMS AF
 parent: Tutorials
 grand_parent: 5G Media Streaming
 has_children: true
-nav_order: 2
+nav_order: 1
 ---
 
 # Testing the 5GMS Application Function
