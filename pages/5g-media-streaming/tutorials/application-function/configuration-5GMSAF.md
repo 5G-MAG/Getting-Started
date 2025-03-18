@@ -1,8 +1,8 @@
 ---
 layout: default
 title:  Configuration 5GMS AF
-parent: Application Function
-grand_parent: Usage
+parent: Testing AFn
+grand_parent: Tutorial
 has_children: false
 nav_order: 3
 ---
