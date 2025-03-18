@@ -2,7 +2,7 @@
 layout: default
 title:  Testing M1 AF v1.4.x
 parent: Application Function
-grand_parent: Usage
+grand_parent: Tutorials
 has_children: false
 nav_order: 8
 ---
