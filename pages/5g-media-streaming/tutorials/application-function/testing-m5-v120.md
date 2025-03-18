@@ -2,7 +2,7 @@
 layout: default
 title:  Testing M5 AF v1.2.x
 parent: Application Function
-grand_parent: Usage
+grand_parent: Tutorials
 has_children: false
 nav_order: 12
 ---
