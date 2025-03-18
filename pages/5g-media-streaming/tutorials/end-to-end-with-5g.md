@@ -2,7 +2,7 @@
 layout: default
 title: Basic 5GMS Setup with 5G Network
 parent: Tutorials
-grand_parent: 5G Downlink Media Streaming
+grand_parent: 5G Media Streaming
 has_children: false
 nav_order: 1
 ---
