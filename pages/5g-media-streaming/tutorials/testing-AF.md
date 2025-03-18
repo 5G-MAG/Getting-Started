@@ -7,10 +7,7 @@ has_children: true
 nav_order: 2
 ---
 
-# Application Function
-
-## Features of the 5GMS AF
-For a list of supported features please visit the [Features 5GMS AF](./application-function/features-af.html) page.
+# Testing the 5GMS Application Function
 
 ## Installation of the 5GMS AF as a Local User
 
