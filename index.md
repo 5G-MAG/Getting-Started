@@ -10,9 +10,15 @@ has_children: true
 This website serves as an umbrella for documentation, practical guidelines and examples of applications that can be
 built with the software packages available in the 5G-MAG Reference Tools and also in combination with other platforms.
 
-<iframe width="100%" height="440" src="https://drive.google.com/file/d/1tPcMWLeY6QJNH5OfGWDwLmoSyjrqk8gA/preview"></iframe>
+<iframe width="60%" height="440" src="https://drive.google.com/file/d/1tPcMWLeY6QJNH5OfGWDwLmoSyjrqk8gA/preview"></iframe>
 
 [DOWNLOAD THE PRESENTATION](https://drive.google.com/file/d/1tPcMWLeY6QJNH5OfGWDwLmoSyjrqk8gA/preview){: .btn} 
+
+## 5G-MAG Reference Tools under development
+* Get an overview about the tools under development and their scope [here](./projects.html)
+
+## How to use this documentation
+* Find here some practical information about this documentation [here](./how-to-use.html)
 
 ## Developer Community
 * Meet the developer community, participate, contribute, join the public calls: [https://www.5g-mag.com/community](https://www.5g-mag.com/community)
@@ -25,16 +31,7 @@ built with the software packages available in the 5G-MAG Reference Tools and als
 * Agendas circulated via the [Google Group](https://groups.google.com/g/5g-mag-reference-tools) mailing list
 
 ## Contributing
-* Learn about the License Model for contributors: [https://www.5g-mag.com/license](https://www.5g-mag.com/license)
+* Learn about the Contributor License Agreement for contributors: [https://www.5g-mag.com/license](https://www.5g-mag.com/license)
 * Guidelines for contributors are available [here](guidelines-contributors.html)
 
 <img src="./assets/images/projects/contributors.png">
-
-## Practical information
-The repositories related to the **5G-MAG REFERENCE TOOLS** are usually starting with **rt-**. Some repositories are also allocating dependencies and auxiliary tools. In the case of third party branches, you will find such repositories with its original name from source.
-
-For additional details about the 5G-MAG Reference Tools development programme please visit the following links:
-* Developer Space ([developer.5g-mag.com](https://developer.5g-mag.com/)).
-* Download installation packages: [https://www.5g-mag.com/install](https://www.5g-mag.com/install)
-* Request early access for private repositories: [https://www.5g-mag.com/early-access](https://www.5g-mag.com/early-access)
-* Get additional resources for members: [https://www.5g-mag.com/extras](https://www.5g-mag.com/extras)
