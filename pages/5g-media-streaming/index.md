@@ -11,8 +11,8 @@ nav_order: 1
 [DOWNLOAD THE PRESENTATION](https://drive.google.com/file/d/105dQMUHnuKxIwn8K7z5rvuPLMU85FQUc/preview){: .btn}
 
 ## Resources
-### Which are the tools under implementation?
-* Find [here](./under-implementation.html) information about Specifications and Architecture.
+### Which are the tools under development?
+* Find [here](./under-development.html) information about specifications, architecture, APIs, etc.
 ### What is the status of the Projects?
 * Find [here](./projects.html) information about the Projects.
 ### Where can I find the Repositories?
