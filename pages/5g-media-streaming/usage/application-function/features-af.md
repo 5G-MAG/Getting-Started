@@ -1,8 +1,8 @@
 ---
 layout: default
 title:  Features 5GMS AF
-parent: Application Function
-grand_parent: Usage
+parent: Under Development
+grand_parent: 5G Media Streaming
 has_children: false
 nav_order: 0
 ---
