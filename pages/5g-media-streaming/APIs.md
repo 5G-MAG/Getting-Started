@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Supported APIs
-parent: 5G Downlink Media Streaming
+parent: 5G Media Streaming
 has_children: false
 nav_order: 1
 ---
