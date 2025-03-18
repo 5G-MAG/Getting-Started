@@ -2,7 +2,7 @@
 layout: default
 title:  Installation 5GMS AF as System Service
 parent: Application Function
-grand_parent: Usage
+grand_parent: Tutorials
 has_children: false
 nav_order: 2
 ---
