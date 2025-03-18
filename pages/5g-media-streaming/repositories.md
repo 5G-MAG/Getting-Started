@@ -21,6 +21,15 @@ Pre-built APKs are available for the 5GMS Aware Application and the 5GMS Media S
 ---
 
 ## 5GMS Application Provider: [rt-5gms-application-provider](https://github.com/5G-MAG/rt-5gms-application-provider)
+
+A 5GMS Application Provider uses the M1 interface of the Application Function to provision the network for media
+streaming sessions that are operated by that 5GMS Application Provider. For downlink media streaming, these sessions may
+be DASH streaming sessions, progressive download sessions, or any other type of media streaming or distribution (e.g.
+HLS) sessions.
+
+The 5G-MAG Reference Tools ship with multiple tools to interact with the 5GMS Application Function via the interface at
+reference point M1.
+
 * [Information and how to download, build, install and run](https://github.com/5G-MAG/rt-5gms-application-provider#readme)
 * [Releases](https://github.com/5G-MAG/rt-5gms-application-provider/releases)
 * [Projects](https://github.com/5G-MAG/rt-5gms-application-provider/projects?query=is%3Aopen)
