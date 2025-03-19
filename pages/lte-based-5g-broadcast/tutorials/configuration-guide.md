@@ -2,7 +2,7 @@
 layout: default
 title: Linux stack - Configuration guide
 parent: Tutorials
-grand_parent: 5G Broadcast - MBMS & LTE-based 5G Broadcast
+parent: 5G Broadcast & MBMS
 has_children: false
 nav_order: 0
 ---
