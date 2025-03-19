@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Repositories
-parent: Emergency Alerts over 5G Broadcast
+parent: Emergency Alerts 5G Broadcast
 has_children: false
 nav_order: 3
 ---
