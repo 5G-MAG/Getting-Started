@@ -1,11 +1,11 @@
 ---
 layout: default
-title: Specifications - Architecture
+title: Under Development
 parent: Multimedia Content Delivery
 has_children: false
 nav_order: 0
 ---
-# Specifications and Architecture
+# Under Development
 
 ## Specifications
 
