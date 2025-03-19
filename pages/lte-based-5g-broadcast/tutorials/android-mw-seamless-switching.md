@@ -2,7 +2,7 @@
 layout: default
 title: Android Middleware - Seamless Switching
 parent: Tutorials
-grand_parent: 5G Broadcast & MBMS
+grand_parent: 5G Broadcast (MBMS)
 has_children: false
 ---
 
