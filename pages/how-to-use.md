@@ -2,7 +2,7 @@
 layout: default
 title: How to use these pages
 parent: Home
-nav_order: 2
+nav_order: 0
 ---
 
 # How to use these pages
