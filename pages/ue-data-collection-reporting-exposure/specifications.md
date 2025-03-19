@@ -1,12 +1,12 @@
 ---
 layout: default
-title: Specifications - Architecture
-parent: UE data collection, reporting & event exposure
+title: Under Development
+parent: UE Data Collection
 has_children: false
 nav_order: 0
 ---
 
-# Specifications and Architecture
+# Under Development
 
 ## Specifications
 Visit the [Standards repository](https://5g-mag.github.io/Standards/pages/data-collection-event-exposure.html) for details.
