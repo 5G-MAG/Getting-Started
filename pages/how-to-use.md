@@ -5,7 +5,7 @@ parent: Home
 nav_order: 2
 ---
 
-# How to use this documentation
+# How to use these pages
 
 This documentation is organized in a hierarchical structure. The main topics are listed in the left sidebar. Each topic
 has subcategories, which are listed in the dropdown menu of the main topic.
