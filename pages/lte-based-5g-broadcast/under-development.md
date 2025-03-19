@@ -1,12 +1,12 @@
 ---
 layout: default
-title: Specifications - Architecture
-parent: 5G Broadcast - MBMS & LTE-based 5G Broadcast
+title: Under Development
+parent: 5G Broadcast & MBMS
 has_children: false
 nav_order: 0
 ---
 
-# Specifications and Architecture
+# Under Development
 
 ## Specifications
 
