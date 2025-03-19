@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Creating TMGI and MBS Broadcast Session
-parent: Usage
+parent: Tutorials
 grand_parent: 5G Multicast Broadcast Services
 has_children: false
 nav_order: 1
