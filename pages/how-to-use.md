@@ -15,20 +15,12 @@ the corresponding repositories, usage instructions and end-to-end tutorials.
 
 # Subcategories
 
-## Subcategory: Specifications - Architecture
+## Subcategory: Under Development
 
-The `Specifications-Architecture` subcategory provides information about the high-level architecture of the respective
+The `Under Development` subcategory provides information about the high-level architecture of the respective
 project. It includes links to the relevant specifications and standards as well as high-level architecture diagrams
 about the technology. It is a good starting point to understand the relevant technologies and to identify the right
-specifications to study for a deeper
-understanding.
-
-## Subcategory: Features
-
-Some of the main topics contain a `Features` subcategory. This subcategory provides a detailed description of the
-features that are implemented in a release. Most of the implementations in the 5G-MAG Reference Tools are based on 3GPP
-specifications. The work in 3GPP is divided into releases. The `Features` subcategory provides a mapping of 3GPP
-features/releases to 5G-MAG Reference Tools repositories and release versions.
+specifications to study for a deeper understanding. This subcategory also contains information about the tools under development in relation to the specifications, features and release versions. 
 
 ## Subcategory: Projects
 
@@ -45,33 +37,22 @@ releases and the project boards of a repository are provided. Many of the main t
 topics. Therefore, the links to other related repositories are also provided in this subcategory. As an example, 5G
 Media Streaming is linked to topics such as 5G Core Networks and UE Data Collection.
 
-## Subcategory: Usage
-
-The `Usage` subcategory provides detailed instructions on how to use single repositories and components. These
-instructions and
-guidelines focus on the usage and the testing of a single repository and typically do not provide information on how to
-plug multiple components together. For end-to-end setup instructions refer to the `Tutorials` subcategory.
-
 ## Subcategory: Tutorials
 
 The `Tutorials` subcategory provides end-to-end setup instructions. These instructions guide you through the setup of a
-specific technology or feature of a technology such as "5G Media Streaming" or "Consumption Reporting for 5G Media
-Streaming".
-Typically, the tutorials combine multiple repositories and components to create an end-to-end setup. Some tutorials
-reference tutorials of a related topic.
+specific technology or feature of a technology. Typically, the tutorials combine multiple repositories and components to create an end-to-end setup. Some tutorials
+reference tutorials of a related topic. This subcategory also provides detailed instructions on how to use single repositories and components.
 
 # Suggested Workflow
 
 Depending on your interest and your level of knowledge, we suggest to follow this workflow:
 
-1. Make yourself familiar with the high-level architecture of the technology you are interested in by following the
-   `Specifications-Architecture` subcategory. Also consider looking into the relevant specifications to understand the
+1. Make yourself familiar with the high-level architecture of the technology you are interested in and the development status by following the
+   `Under Development` subcategory. Also consider looking into the relevant specifications to understand the
    details of the technology.
-2. Check the `Projects`, `Repositories` and `Features` subcategories to get an overview of the development status and
-   the features that are implemented in the 5G-MAG Reference Tools. This is also a good starting point to map features
+2. Check the `Projects` and `Repositories` subcategories to get an overview of the 5G-MAG Reference Tools. This is also a good starting point to map features
    from a specification to the corresponding repository and implementation.
-3. If you are interested in trying out a single component of a technology check the documentation in the `Usage`
-   subcategory. In case you are interested to implement a technology end-to-end, check the `Tutorials` subcategory.
+3. If you are interested in trying out the tools, check the `Tutorials` subcategory.
 
 # Feedback / Questions
 
