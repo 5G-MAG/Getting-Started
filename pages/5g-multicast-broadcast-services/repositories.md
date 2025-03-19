@@ -7,7 +7,7 @@ nav_order: 3
 ---
 # Repositories
 
-<img src="../../assets/images/projects/mbs_repos.png">
+<img src="../../assets/images/projects/mbs_repos.png" style="width: 80%">
 
 Please note that 5G Multicast Broadcast Services is implemented as an extension of [Open5GS](https://github.com/5G-MAG/open5gs)
 
