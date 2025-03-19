@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Under Development
-parent: 5G Multicast Broadcast Services
+parent: 5G Multicast Broadcast (MBS)
 has_children: false
 nav_order: 0
 ---
