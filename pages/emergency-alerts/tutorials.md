@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Tutorials
-parent: Emergency Alerts over 5G Broadcast
+parent: Emergency Alerts 5G Broadcast
 has_children: true
 nav_order: 4
 ---
@@ -18,7 +18,7 @@ available here:
 
 ## Using the tools
 
-### [Tutorial: Emergency Alerts end-to-end setup](./end-to-end.html)
+### [Tutorial: Emergency Alerts end-to-end setup](./tutorials/end-to-end.html)
 
 This guide describes how to transmit emergency alerts over 5G Broadcast to a 5G Broadcast capable device using
 the [rt-mbms-tx-for-qrd-and-crd](https://github.com/5G-MAG/rt-mbms-tx-for-qrd-and-crd).
