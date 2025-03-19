@@ -8,7 +8,7 @@ nav_order: 1
 
 # Repositories
 
-<img src="../../assets/images/projects/3gpp_repos.png">
+<img src="../../assets/images/projects/3gpp_repos.png"  style="width: 80%">
 
 ## Description
 
