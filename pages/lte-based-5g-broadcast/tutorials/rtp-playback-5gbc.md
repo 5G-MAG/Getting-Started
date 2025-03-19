@@ -2,7 +2,7 @@
 layout: default
 title: Linux stack - RTP Playback over 5G Broadcast
 parent: Tutorials
-parent: 5G Broadcast & MBMS
+grand_parent: 5G Broadcast & MBMS
 has_children: false
 nav_order: 1
 ---
