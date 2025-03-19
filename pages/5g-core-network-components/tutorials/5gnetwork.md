@@ -2,7 +2,7 @@
 layout: default
 title: 5G Network Setup with COTS UE
 parent: Tutorials
-grand_parent: 5G Core Network Components
+grand_parent: 3GPP RAN and Core Platforms
 has_children: false
 nav_order: 0
 ---
