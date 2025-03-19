@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Emergency Alerts over 5G Broadcast
+title: Emergency Alerts on 5G Broadcast
 has_children: true
 nav_order: 6
 ---
