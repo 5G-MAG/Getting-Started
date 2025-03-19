@@ -14,11 +14,11 @@ built with the software packages available in the 5G-MAG Reference Tools and als
 
 [DOWNLOAD THE PRESENTATION](https://drive.google.com/file/d/1tPcMWLeY6QJNH5OfGWDwLmoSyjrqk8gA/preview){: .btn} 
 
-## 5G-MAG Reference Tools under development
-* Get an overview about the tools under development and their scope [here](./pages/projects.html).
-
 ## How to use these pages
 * Find here some practical information about this documentation [here](./pages/how-to-use.html).
+
+## Overview of 5G-MAG Reference Tools under development
+* Get an overview about the tools under development and their scope [here](./pages/projects.html).
 
 ## Developer Community
 * Meet the developer community, participate, contribute, join the public calls: [https://www.5g-mag.com/community](https://www.5g-mag.com/community)
@@ -34,4 +34,4 @@ built with the software packages available in the 5G-MAG Reference Tools and als
 * Learn about the Contributor License Agreement for contributors: [https://www.5g-mag.com/license](https://www.5g-mag.com/license)
 * Guidelines for contributors are available [here](guidelines-contributors.html)
 
-<img src="./assets/images/projects/contributors.png">
+<img src="./assets/images/projects/contributors.png" style="width: 80%">
