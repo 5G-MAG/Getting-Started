@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Projects
-parent: UE data collection, reporting & event exposure
+parent: UE Data Collection
 has_children: false
 nav_order: 2
 ---
