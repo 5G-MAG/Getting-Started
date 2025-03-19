@@ -18,7 +18,7 @@ available here:
 
 ## Using the tools
 
-### [Tutorial: Immersive 3D Media Message](./immersive-3d-media-message.html)
+### [Tutorial: Immersive 3D Media Message](./tutorials/immersive-3d-media-message.html)
 
 This tutorial provides an overview of different use cases related to VR, XR, 3D scenes and AR scenes. It also
 provides information on how to share 3D assets using 3GPP conforming messaging MMS and third-party applications.
