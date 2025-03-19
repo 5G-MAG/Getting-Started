@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Projects
-title: 5G Broadcast (MBMS)
+parent: 5G Broadcast (MBMS)
 has_children: false
 nav_order: 2
 ---
