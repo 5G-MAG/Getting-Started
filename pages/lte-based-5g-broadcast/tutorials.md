@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Tutorials
-title: 5G Broadcast (MBMS)
+parent: 5G Broadcast (MBMS)
 has_children: true
 nav_order: 4
 ---
