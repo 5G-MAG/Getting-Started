@@ -8,7 +8,7 @@ nav_order: 3
 
 # Repositories
 
-<img src="../../assets/images/projects/5gms_repos.png"  style="width: 80%">
+<img src="../../assets/images/projects/5gms_repos.png" style="width: 80%">
 
 Note that 5G Media Streaming makes use of other repositories:
 
