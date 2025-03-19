@@ -1,11 +1,11 @@
 ---
 layout: default
-title: Specifications - Architecture
-parent: Emergency Alerts over 5G Broadcast
+title: Under Development
+parent: Emergency Alerts 5G Broadcast
 has_children: false
 nav_order: 0
 ---
-# Specifications and Architecture
+# Under Development
 
 ## Specifications
 Visit the [Standards repository](https://5g-mag.github.io/Standards/) for details.
