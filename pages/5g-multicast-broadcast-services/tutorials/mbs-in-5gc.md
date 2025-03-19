@@ -2,7 +2,7 @@
 layout: default
 title: Initial MBS support in the 5GC
 parent: Tutorials
-grand_parent: 5G Multicast Broadcast Services
+grand_parent: 5G Multicast Broadcast (MBS)
 has_children: false
 nav_order: 0
 ---
