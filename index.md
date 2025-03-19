@@ -17,7 +17,7 @@ built with the software packages available in the 5G-MAG Reference Tools and als
 ## 5G-MAG Reference Tools under development
 * Get an overview about the tools under development and their scope [here](./pages/projects.html).
 
-## How to use this documentation
+## How to use these pages
 * Find here some practical information about this documentation [here](./pages/how-to-use.html).
 
 ## Developer Community
