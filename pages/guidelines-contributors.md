@@ -2,7 +2,7 @@
 layout: default
 title: Guidelines for Contributors
 parent: Home
-nav_order: 1
+nav_order: 2
 ---
 
 # Guidelines for Contributors
