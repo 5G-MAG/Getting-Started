@@ -2,7 +2,7 @@
 layout: default
 title: End to End setup
 parent: Tutorials
-grand_parent: Emergency Alerts over 5G Broadcast
+grand_parent: Emergency Alerts 5G Broadcast
 has_children: false
 nav_order: 1
 ---

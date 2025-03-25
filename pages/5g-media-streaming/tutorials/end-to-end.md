@@ -2,9 +2,9 @@
 layout: default
 title: Basic 5GMS End-to-End Setup
 parent: Tutorials
-grand_parent: 5G Downlink Media Streaming
+grand_parent: 5G Media Streaming
 has_children: false
-nav_order: 0
+nav_order: 2
 ---
 
 <details open markdown="block">

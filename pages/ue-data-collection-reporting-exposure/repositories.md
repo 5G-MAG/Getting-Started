@@ -1,13 +1,13 @@
 ---
 layout: default
 title: Repositories
-parent: UE data collection, reporting & event exposure
+parent: UE Data Collection
 has_children: false
 nav_order: 3
 ---
 # Repositories
 
-<img src="../../assets/images/projects/uedc_repos.png">
+<img src="../../assets/images/projects/uedc_repos.png" style="width: 80%">
 
 ---
 

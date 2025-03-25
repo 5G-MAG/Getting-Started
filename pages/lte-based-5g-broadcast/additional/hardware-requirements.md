@@ -2,7 +2,7 @@
 layout: default
 title:  Hardware requirements
 parent: Additional Resources
-grand_parent: 5G Broadcast - MBMS & LTE-based 5G Broadcast
+grand_parent: 5G Broadcast (MBMS)
 has_children: false
 nav_order: 1
 ---

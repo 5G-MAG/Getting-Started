@@ -2,9 +2,9 @@
 layout: default
 title: Consumption Reporting
 parent: Tutorials
-grand_parent: 5G Downlink Media Streaming
+grand_parent: 5G Media Streaming
 has_children: false
-nav_order: 2
+nav_order: 4
 ---
 
 # Tutorial - Consumption Reporting

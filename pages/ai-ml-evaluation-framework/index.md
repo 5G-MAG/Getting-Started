@@ -2,10 +2,16 @@
 layout: default
 title: AI / ML Evaluation Framework
 has_children: true
-nav_order: 12
+nav_order: 11
 ---
 
 # Artificial Intelligence and Machine Learning Evaluation Framework
-<iframe width="100%" height="440" src="https://drive.google.com/file/d/1F8H3yCYRcFt27Bxn2g7FH6tvqIe259R1/preview"></iframe>
+<iframe width="60%" height="440" src="https://drive.google.com/file/d/1F8H3yCYRcFt27Bxn2g7FH6tvqIe259R1/preview"></iframe>
 
 [DOWNLOAD THE PRESENTATION](https://drive.google.com/file/d/1F8H3yCYRcFt27Bxn2g7FH6tvqIe259R1/preview){: .btn} 
+
+## Resources
+### Which are the tools under development?
+* Find [here](./under-development.html) information about specifications, architecture, APIs, etc.
+### Where can I find the Repositories?
+* Find [here](./repositories.html) information about the GitHub Repositories.

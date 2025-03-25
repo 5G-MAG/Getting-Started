@@ -7,7 +7,7 @@ nav_order: 3
 ---
 # Repositories
 
-<img src="../../assets/images/projects/v3c_repos.png">
+<img src="../../assets/images/projects/v3c_repos.png" style="width: 80%">
 
 Note that these repositories are currently private and under testing. **Early access** can be requested at: [https://www.5g-mag.com/early-access](https://www.5g-mag.com/early-access)
 

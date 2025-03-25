@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Tutorials
-parent: 5G Multicast Broadcast Services
+parent: 5G Multicast Broadcast (MBS)
 has_children: true
 nav_order: 5
 ---

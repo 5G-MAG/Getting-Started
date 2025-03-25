@@ -2,9 +2,9 @@
 layout: default
 title: Basic 5GMS Setup with 5G Network
 parent: Tutorials
-grand_parent: 5G Downlink Media Streaming
+grand_parent: 5G Media Streaming
 has_children: false
-nav_order: 1
+nav_order: 3
 ---
 
 # Tutorial - 5G MSd: Basic End-to-End Setup with 5G Network
@@ -15,7 +15,7 @@ the 5G Downlink Media Streaming components and a 5G Network based on Open5GS and
 # 5G Network with COTS UE setup
 
 To setup the 5G Network and connect a COTS device please refer to
-the [corresponding documentation](../../5g-core-network-components/tutorials/5gnetwork.html).
+the [corresponding documentation](../../3gpp-ran-and-core-platforms/tutorials/5gnetwork.html).
 
 # 5G Media Streaming setup
 

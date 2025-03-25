@@ -2,7 +2,7 @@
 layout: default
 title:  GPS Time Synchonization for rt-mbms-modem
 parent: Additional Resources
-grand_parent: MBMS and LTE-based 5G Broadcast
+grand_parent: 5G Broadcast (MBMS)
 has_children: false
 nav_order: 0
 ---

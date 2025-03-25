@@ -1,13 +1,13 @@
 ---
 layout: default
 title: Repositories
-parent: 5G Broadcast - MBMS & LTE-based 5G Broadcast
+parent: 5G Broadcast (MBMS)
 has_children: false
 nav_order: 3
 ---
 # Repositories
 
-<img src="../../assets/images/projects/5gbc_repos.png">
+<img src="../../assets/images/projects/5gbc_repos.png" style="width: 80%">
 
 Note that 5G Broadcast makes use of other repositories:
 
