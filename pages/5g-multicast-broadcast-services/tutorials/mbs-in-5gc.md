@@ -28,26 +28,20 @@ You can verify that all Docker containers are running by executing `docker ps -a
 
 ## Description
 
-In this tutorial a Broadcast MBS Session will be created in order to send traffic from the AF/AS to a multicast group (
-SSM) and see the traffic going through the 5G Core and leaving the MB-UPF (LLSSM) in order to reach the gNB. The basic
+In this tutorial an MBS Broadcast Session will be created in order to send traffic from the AF/AS to a multicast group (
+Source-Specific Multicast - SSM) and see the traffic going through the 5G Core and leaving the MB-UPF (Lower Layer SSM) in order to reach the gNB. The basic
 architecture of the different components/containers is depicted in the illustration below.
 
 ![5GUC Playback](../../../assets/images/5mbs/mbs-architecture-tutorial.png)
 
-
 > Note: Currently there is no way to receive the multicast traffic on the gNB, that feature is under development, but
 > while performing the MBS Session setup you can see an MBS related message being sent between the AMF and the gNB
-> through
-> the N2 interface!
+> through the N2 interface!
 
-In order to create a Broadcast MBS Session a TMGI will be used as identifier but an SSM address needs to be specified
-too. This SSM will be the address that the AF/AS will use to send the multicast traffic to the MB-UPF through the N6mb
-interface. The LLSSM is the lower layer SSM that the MB-UPF will use in order to reach the gNBs that need to receive the
+In order to create an MBS Broadcast Session a TMGI will be used as identifier alongside an SSM address. This SSM will be the address that the AF/AS will use to send the multicast traffic to the MB-UPF through the N6mb interface. The LLSSM is the lower layer SSM that the MB-UPF will use in order to reach the gNBs that need to receive the
 multicast traffic.
 
-> Important note: Currently, there is a limit of 20 MBS Sessions per MB-UPF. The range of IP multicast addresses being
-> used for the MB-UPF to forward the multicast traffic to the gNB using the LLSSM is `239.0.0.4-239.0.0.24`. That is why
-> it is recommended to start the range for the SSM on the IP multicast address `239.0.0.25` onwards
+> Important note: Currently, there is a limit of 20 MBS Sessions per MB-UPF. The range of IP multicast addresses being used for the MB-UPF to forward the multicast traffic to the gNB using the LLSSM is `239.0.0.4-239.0.0.24`. That is why it is recommended to start the range for the SSM on the IP multicast address `239.0.0.25` onwards.
 
 ### Step 1: Creating an MBS Session
 
