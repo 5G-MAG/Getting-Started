@@ -19,7 +19,7 @@ see more details or follow the write-up tutorial.
 ## Prerequisites
 
 Before starting with this tutorial please follow
-the [Docker installation instructions](https://github.com/5G-MAG/rt-mbs-examples?tab=readme-ov-file#running) for the
+the [Docker installation instructions](https://github.com/5G-MAG/rt-mbs-examples) for the
 5MBS stack. This tutorial assumes that you have cloned
 the [rt-mbs-examples repository](https://github.com/5G-MAG/rt-mbs-examples) and started the 5MBS Docker images with the
 internal deployment mode.
