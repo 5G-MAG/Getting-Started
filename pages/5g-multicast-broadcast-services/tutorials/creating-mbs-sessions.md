@@ -7,9 +7,9 @@ has_children: false
 nav_order: 2
 ---
 
-## Managing MBS Broadcast Session
+# Managing MBS Broadcast Session
 
-### Method 1: Creating an MBS Broadcast Session and a TMGI in the same request
+## Method 1: Creating an MBS Broadcast Session and a TMGI in the same request
 
 With this method, the AF/AS will ask the MB-SMF to allocate one TMGI and an MBS Session will be created and associated
 with this TMGI in the same request. The SSM is used for the detection of the multicast transport over N6mb.
@@ -51,7 +51,7 @@ request:
 }
 ```
 
-### Method 2: Creating a Broadcast MBS Session using an existing TMGI
+## Method 2: Creating a Broadcast MBS Session using an existing TMGI
 
 With this method, the AF/AS will ask the MB-SMF to create an MBS Session and the existing TMGI will be associated with
 it. The SSM is used for the detection of the multicast transport over N6mb.
@@ -93,7 +93,7 @@ the request:
 }
 ```
 
-### Method 3: Creating a Broadcast MBS Session using SSM as identifier
+## Method 3: Creating a Broadcast MBS Session using SSM as identifier
 
 > Note: To be documented
 
