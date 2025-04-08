@@ -1,21 +1,21 @@
 ---
 layout: default
-title: Creating TMGI and MBS Broadcast Session
+title: Managing MBS Sessions & TMGI
 parent: Tutorials
 grand_parent: 5G Multicast Broadcast (MBS)
 has_children: false
 nav_order: 1
 ---
 
-# Creating TMGI and MBS Broadcast Session
-
-![MBS Broadcast Session Create call flow](../../../assets/images/5mbs/MBS_Broadcast_Session_Create_call_flow.png)
+# Managing MBS Sessions and TMGIs
 
 MBS Sessions can be of two different types, Broadcast MBS Sessions and Multicast MBS Sessions. Broadcast MBS Sessions
 can be seen as a subset of the Multicast MBS Sessions functionality. In the MBS Sessions context, two kinds of
 identifiers exist, TMGI (Temporary Mobile Group Identifier) and SSM (Source Specific Multicast). Broadcast MBS Sessions
 are identified by a TMGI, while Multicast MBS Sessions can be identified by using TMGI or SSM. Even if SSM is selected
 as identifier, a TMGI is **always** allocated.
+
+![MBS Broadcast Session Create call flow](../../../assets/images/5mbs/MBS_Broadcast_Session_Create_call_flow.png)
 
 The current implementation lets you create a TMGI by sending an HTTP/2 request to the MB-SMF.
 
@@ -89,6 +89,8 @@ the gNBs receiving the multicast traffic.
 #### [AMF <-> gNBs]: NGAP BROADCAST SESSION SETUP side effect
 
 > Note: To be implemented and to be documented
+
+# Managing TMGI
 
 ## Creating/Allocating a TMGI
 
@@ -222,8 +224,7 @@ The response of the MB-SMF, should send the allocated TMGIs and the new expirati
   "expirationTime": "2024-06-04T17:03:01.036961+00:00"
 }
 ```
-
-## Creating an MBS Broadcast Session
+## Managing MBS Broadcast Session
 
 ### Method 1: Creating an MBS Broadcast Session and a TMGI in the same request
 

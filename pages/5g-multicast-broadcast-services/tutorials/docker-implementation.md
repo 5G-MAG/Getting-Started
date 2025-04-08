@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Docker implementation details
-parent: Usage
+parent: Tutorials
 grand_parent: 5G Multicast Broadcast (MBS)
 has_children: false
 nav_order: 0
