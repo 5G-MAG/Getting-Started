@@ -4,7 +4,7 @@ title: Managing MBS Sessions & TMGI
 parent: Tutorials
 grand_parent: 5G Multicast Broadcast (MBS)
 has_children: false
-nav_order: 2
+nav_order: 1
 ---
 
 # Managing MBS Sessions and TMGIs
