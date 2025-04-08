@@ -37,6 +37,7 @@ In order to create an MBS Broadcast Session a TMGI will be used as identifier al
 
 > Important note: Currently, there is a limit of 20 MBS Sessions per MB-UPF. The range of IP multicast addresses being used for the MB-UPF to forward the multicast traffic to the gNB using the LLSSM is `239.0.0.4-239.0.0.24`. It is recommended to start the range for the SSM on the IP multicast address `239.0.0.25` onwards.
 
+Note that this tutorial makes use of methods to manage MBS Session and TMGI as described in this [tutorial](./managing-mbs-sessions-tmgi.html).
 ### Step 1: Creating an MBS Session
 
 Connect to the shell of the `test_mbs_af_as` container:
