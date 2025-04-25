@@ -28,7 +28,7 @@ In this tutorial an MBS Broadcast Session will be created in order to send traff
 Source-Specific Multicast - SSM) and see the traffic going through the 5G Core and leaving the MB-UPF (Lower Layer SSM) reaching the gNB. The basic
 architecture of the different components/containers is depicted in the illustration below.
 
-![5GUC Playback](../../../assets/images/5mbs/mbs-architecture-tutorial.png)
+![5GUC Playback](../../../assets/images/5mbs/5G-MBS_container_names.png)
 
 > Note: Currently receiving multicast traffic on the gNB is not supported. However while performing the MBS Session setup you can sinaling between between the AMF and the gNB
 > through the N2 interface.
