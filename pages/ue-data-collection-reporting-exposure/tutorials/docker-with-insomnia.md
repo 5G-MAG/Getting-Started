@@ -65,12 +65,9 @@ the corresponding ports on the host machine:
 ```yml
     dcaf:
         ports:
-            - "5000:5000"
-            - "5100:5100"
-            - "5101:5101"
-            - "5102:5102"
-            - "5200:5200"
-            - "5201:5201"
+            - "5000:5000" # Provisioning API (R1)
+            - "5100:5100" # Direct Data Reporting API (R2)
+            - "5201:5201" # Event Consumer Application Function Event Exposure API (R6)
 ```
 
 If you run into any issues with ports already being in use, you can change the port mappings in the
@@ -227,16 +224,6 @@ requests as an Application Provider to the DCAF.
 For that reason, navigate to the `R6 - Event Subscription` folder in the Insomnia workspace and select the
 `Creates a new Individual Application Event Exposure Subscription resource` option.
 
-As the port of the server that is receiving the event notifications is dynamic we need to adjust the `notifUri` in the
-request body. Navigate to the `notifications` folder located in
-`rt-data-collection-application-function/docker/local/logs`. The active log file will contain a line like this:
-`"0.0.0.0:41875"`. Copy the port number (in our example the port is set to `41875`) and replace the existing port in the
-`notifUri` field of the request body. For instance:
-
-````text
-"notifUri": "http://h2-server:41875/dcaf/notification/handler",
-````
-
 Send the request after adjusting the remaining fields of the `body` as desired.
 
 Again, an `After-Response` script will handle the response and save the event subscription id in the corresponding
@@ -256,6 +243,30 @@ if (locationHeader) {
     }
 } 
 ````
+
+#### Optional: Changing the HTTP/2 server port
+
+By default, the HTTP/2 server that is receiving the reports is started on port `8888`. If you want to change the port
+open `h2_svr-docker.py` and edit the following line:
+
+```python
+server = await loop.create_server(H2Protocol, '0.0.0.0', 8888)
+```
+
+Replace `8888` with the port you want to use. For instance
+
+```python
+server = await loop.create_server(H2Protocol, '0.0.0.0', 4444)
+```
+
+As the port of the server that is receiving the event notifications is preconfigured we need to adjust the `notifUri` in the
+request body. Copy the port number (in our example the port is set to `4444`) and replace the existing port in the
+`notifUri` field of the request body. For instance:
+
+````text
+"notifUri": "http://h2-server:4444/dcaf/notification/handler",
+````
+
 
 #### Data Reporting Phase
 
