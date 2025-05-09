@@ -19,3 +19,7 @@ Visit the [Standards repository](https://5g-mag.github.io/Standards/pages/volume
 <img src="../../assets/images/projects/v3c_diagram.png" style="width: 80%">
 
  * Check [here](./repositories.html) to access the repositories for V3C Immersive Platform
+
+## Supported devices
+
+ * A non-exhaustive list of supported devices is available [here](./supported-devices.html).
