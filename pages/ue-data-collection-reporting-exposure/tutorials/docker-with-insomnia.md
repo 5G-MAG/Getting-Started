@@ -22,6 +22,8 @@ In this tutorial we will show you how to setup
 the [Data Collection Application Function](https://github.com/5G-MAG/rt-data-collection-application-function) (DCAF)
 with Docker and use its REST API with the [Insomnia REST client](https://insomnia.rest/).
 
+<img src="../../../assets/images/dcaf/uedc_docker_1.png" style="width: 80%">
+
 ## Requirements
 
 To follow this tutorial you need to have Docker installed on your machine. You can download Docker
