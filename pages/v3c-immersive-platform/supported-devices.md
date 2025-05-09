@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Supported Devices
+title: Hardware/Device Support
 parent: V3C Immersive Platform
 has_children: false
 nav_order: 1
