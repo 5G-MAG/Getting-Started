@@ -1,3 +1,11 @@
+---
+layout: default
+title: Supported Devices
+parent: V3C Immersive Platform
+has_children: false
+nav_order: 1
+---
+
 # Android devices
 
 Please [open an issue](https://github.com/5G-MAG/Getting-Started/issues) to report support for new devices or problems with currently listed devices.
