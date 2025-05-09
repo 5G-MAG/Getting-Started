@@ -22,4 +22,4 @@ Visit the [Standards repository](https://5g-mag.github.io/Standards/pages/volume
 
 ## Supported devices
 
- * A non-exhaustive list of supported devices is available [here](./ssupported-devices.html).
+ * A non-exhaustive list of supported devices is available [here](./supported-devices.html).
