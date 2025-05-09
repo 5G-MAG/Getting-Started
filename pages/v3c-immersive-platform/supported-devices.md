@@ -24,7 +24,7 @@ The following devices OS/firmware versions have been reported to work:
 
 | Device | Android version | API level | GPU | 
 |--------|-----------------|-----------|-----|
-|OnePlus10T |Android 12 |API level 32 |Adreno 730 |
-|Samsung S21 |Android 14 |API level 34 |Adreno 660 |
-|Samsung galaxy tab |Android 14 |API level 34 |Adreno 740 |
+| OnePlus10T | Android 12 | API level 32 | Adreno 730 |
+| Samsung S21 | Android 14 | API level 34 | Adreno 660 |
+| Samsung Galaxy Tab | Android 14 | API level 34 | Adreno 740 |
 
