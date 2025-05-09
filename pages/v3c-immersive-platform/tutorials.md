@@ -3,7 +3,7 @@ layout: default
 title: Tutorials
 parent: V3C Immersive Platform
 has_children: true
-nav_order: 4
+nav_order: 5
 ---
 
 # Tutorials
