@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Basic 5GMS End-to-End Setup
+title: Basic 5GMS End-to-End Setup (with Docker)
 parent: Tutorials
 grand_parent: 5G Media Streaming
 has_children: false
@@ -16,7 +16,7 @@ nav_order: 2
 {:toc}
 </details>
 
-# Tutorial - 5G MSd: Basic End-to-End Setup
+# Tutorial - 5G MSd: Basic End-to-End Setup (with Docker)
 
 This guide describes how to setup and configure the 5G-MAG Reference Tools - 5G Downlink Media Streaming components to
 create an end to end setup as depicted in the illustration below.
@@ -59,7 +59,9 @@ the [rt-5gms-examples project](https://github.com/5G-MAG/rt-5gms-examples/tree/d
 
 The `5gms-docker-setup` provides multiple Docker Compose setups to run the 5GMS Application Function, the 5GMS
 Application Server and the
-5GMS Application Provider in Docker container environments. This tutorial, assumes you are using Docker Compose recipe
+5GMS Application Provider in Docker container environments. This tutorial, assumes you are using Docker Compose recipe.
+
+<img src="../../../assets/images/5gms/5gms-docker-recipe1.png" style="width: 80%">
 
 ### Setup
 
