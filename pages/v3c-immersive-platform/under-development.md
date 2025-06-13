@@ -1,12 +1,16 @@
 ---
 layout: default
-title: Under Development
+title: Roadmap
 parent: V3C Immersive Platform
 has_children: false
 nav_order: 0
 ---
+<img src="../../assets/images/Banner_Roadmap.png" /> 
 
-# Under Development
+1. TOC
+{:toc}
+
+# Roadmap
 This page contains information such as the specifications within the scope of the tools, high-level architecture, APIs under implementation,...
 
 ## Specifications
