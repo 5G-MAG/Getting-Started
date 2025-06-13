@@ -11,11 +11,18 @@ nav_order: 6
 [DOWNLOAD THE PRESENTATION](https://drive.google.com/file/d/1Hk5hNZsMLksuBHTnDqOcQPwx-kb4KF3q/preview){: .btn} 
 
 ## Resources
-### Which are the tools under development?
+
+### Which is this project about?
 * Find [here](./under-development.html) information about specifications, architecture, APIs, etc.
-### What is the status of the Projects?
+
+### What is the roadmap and development status?
 * Find [here](./projects.html) information about the Projects.
-### Where can I find the Repositories?
+ 
+### Where can I find the repositories and relevant resources?
 * Find [here](./repositories.html) information about the GitHub Repositories.
+
 ### How can I use the tools?
 * Find [here](./tutorials.html) practical guidelines to use the tools.
+
+### What are the requirements to run the tools?
+* Find [here](./requirements.html) practical information about hardware and device support. 
