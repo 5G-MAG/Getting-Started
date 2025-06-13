@@ -10,7 +10,7 @@ nav_order: 1
 1. TOC
 {:toc}
 
-# Tutorials
+# Using the tools
 
 ## [Tutorial - 5G Network Setup with COTS UE](./tutorials/5gnetwork.html)
 These are generic instructions to setup a 5G network using Open5GS and srsRAN and COTS UEs.
