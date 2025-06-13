@@ -3,7 +3,7 @@ layout: default
 title: Roadmap
 parent: V3C Immersive Platform
 has_children: false
-nav_order: 2
+nav_order: 1
 ---
 <img src="../../assets/images/Banner_Roadmap.png" /> 
 

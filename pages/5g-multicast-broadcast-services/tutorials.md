@@ -3,7 +3,7 @@ layout: default
 title: Tutorials
 parent: 5G Multicast Broadcast (MBS)
 has_children: true
-nav_order: 5
+nav_order: 3
 ---
 <img src="../../assets/images/Banner_Tutorials.png" /> 
 
