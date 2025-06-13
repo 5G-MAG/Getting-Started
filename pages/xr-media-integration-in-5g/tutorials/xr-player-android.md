@@ -15,6 +15,7 @@ Mobile XR refers to augmented or mixed reality applications running on handheld 
 
 This section assumes [adb](https://developer.android.com/tools/adb) is installed on the machine, and an Android smartphone with [developer options and USB debugging](https://developer.android.com/studio/debug/dev-options#enable) enabled is connected.
 
+The project requires Unity 3D 2022.3 with Android and iOS support modules installed.
 
 
 
@@ -35,21 +36,22 @@ git clone git@github.com:5G-MAG/rt-xr-maf-native.git
 When targeting android, the easiest way to build and install media pipelines is by using the `.Dockerfile` in the `rt-xr-unity-package`. 
 The dockerfile build steps setup the build environment, then build the media pipeline and all of their dependencies, so that the build artifacts are stored in the resulting container:
 ```
-cd rt-xr-unity-package
+cd rt-xr-maf-native
 docker build -t rtxrmaf:builder .
 ```
 
 The build artifacts can then be copied from the container to the unity project:
 ```
+cd rt-xr-unity-player
 docker run --mount=type=bind,source=$(pwd)/Packages/rt.xr.maf,target=/install -it maf:builder
 ```
 
 Now the unity project contains all dependencies to support media pipelines.
 
 
-**Other platforms**
+**Compiling media pipelines without Docker**
 
-Refer to the [git repository](https://github.com/5G-MAG/rt-xr-maf-native/tree/feature/android) for more informations on the build process.
+Refer to the [media pipeline's git repository](https://github.com/5G-MAG/rt-xr-maf-native/) for more informations on the build process.
 
 
 ## 3. Build the project & install the unity project on an Android device
@@ -67,7 +69,8 @@ Refer to the [git repository](https://github.com/5G-MAG/rt-xr-maf-native/tree/fe
 
 ## 4. Push content to an Android device & configure the player
 
-Clone the `rt-xr-content` repository:
+Clone the `rt-xr-content` repository. This **requires [git lfs](https://git-lfs.com/)** to be installed on your system.
+
 ```
 git clone https://github.com/5G-MAG/rt-xr-content.git
 ```
