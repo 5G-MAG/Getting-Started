@@ -10,14 +10,12 @@ nav_order: 0
 1. TOC
 {:toc}
 
-# Scope
-
-## Specifications
+# Specifications
 Visit the [Standards repository](https://5g-mag.github.io/Standards/) for details.
 
-## High-level architecture
+# High-level architecture
 
-### High-level architecture: 5G Broadcast extended with Emergency Alerts
+## High-level architecture: 5G Broadcast extended with Emergency Alerts
 
 <img src="../../assets/images/projects/ew_diagram.png" style="width: 80%">
 
