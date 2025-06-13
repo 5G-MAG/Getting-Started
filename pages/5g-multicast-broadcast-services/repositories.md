@@ -5,6 +5,20 @@ parent: 5G Multicast Broadcast (MBS)
 has_children: false
 nav_order: 3
 ---
+<img src="../../assets/images/Banner_Repositories.png" /> 
+
+1. TOC
+{:toc}
+
+# High-level architecture
+
+## 5G Downlink Media Streaming (5GMSd) over 5G Multicast Broadcast Services (MBS)
+
+<img src="../../assets/images/projects/mbs_diagram.png" style="width: 80%">
+
+ * Check [here](../3gpp-ran-and-core-platforms/repositories.html) to access the repositories for 3GPP RAN and Core Platforms
+ * Check [here](../5g-media-streaming/repositories.html) to access the repositories for 5G Media Streaming
+
 # Repositories
 
 <img src="../../assets/images/projects/mbs_repos.png" style="width: 80%">
