@@ -15,26 +15,23 @@ nav_order: 3
 
 # High-level architecture
 
-## High-level architecture: 5G Downlink Media Streaming (5GMSd)
+## 5G Downlink Media Streaming (5GMSd)
 
 <img src="../../assets/images/projects/5gms_diagram.png" style="width: 80%">
 
- * Check [here](./repositories.html) to access the repositories for 5G Downlink Media Streaming
  * Check [here](../3gpp-ran-and-core-platforms/repositories.html) to access the repositories for 3GPP RAN and Core Platforms
 
-## High-level architecture: 5G Downlink Media Streaming (5GMSd) with UE Data Collection Reporting and Event Exposure
+## 5G Downlink Media Streaming (5GMSd) with UE Data Collection Reporting and Event Exposure
 
 <img src="../../assets/images/projects/5gms_uedc_diagram.png" style="width: 80%">
 
- * Check [here](./repositories.html) to access the repositories for 5G Downlink Media Streaming
  * Check [here](../3gpp-ran-and-core-platforms/repositories.html) to access the repositories for 3GPP RAN and Core Platforms
  * Check [here](../ue-data-collection-reporting-exposure/repositories.html) the repositories for UE Data Collection, Reporting and Event Exposure
 
-## High-level architecture: 5G Downlink Media Streaming (5GMSd) over eMBMS
+## 5G Downlink Media Streaming (5GMSd) over eMBMS
 
 <img src="../../assets/images/projects/5gms_5gbc_diagram.png" style="width: 80%">
 
- * Check [here](./repositories.html) to access the repositories for 5G Downlink Media Streaming
  * Check [here](../3gpp-ran-and-core-platforms/repositories.html) to access the repositories for 3GPP RAN and Core Platforms
  * Check [here](../lte-based-5g-broadcast/repositories.html) the repositories for 5G Broadcast
 
