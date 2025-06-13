@@ -13,7 +13,7 @@ nav_order: 3
 
 # High-level architecture
 
-## High-level architecture: 5G Broadcast with Multimedia delivery protocols
+## 5G Broadcast with Multimedia delivery protocols
 
 <img src="../../assets/images/projects/5gbc_diagram.png" style="width: 80%">
 
