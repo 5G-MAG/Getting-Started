@@ -1,10 +1,14 @@
 ---
 layout: default
-title: Hardware/Device Support
+title: Requirements
 parent: V3C Immersive Platform
 has_children: false
 nav_order: 1
 ---
+<img src="../../assets/images/Banner_Requirements.png" /> 
+
+1. TOC
+{:toc}
 
 # Android devices
 
