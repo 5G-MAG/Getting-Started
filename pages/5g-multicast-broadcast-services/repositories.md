@@ -27,9 +27,15 @@ Please note that 5G Multicast Broadcast Services is implemented as an extension 
 
 ---
 
-## 5GC (with MBS components): [open5gs/tree/5mbs (5mbs branch)](https://github.com/5G-MAG/open5gs/tree/5mbs)
-## NG-RAN (with MBS components): [rt-srsRAN_Project (5mbs branch)](https://github.com/5G-MAG/rt-srsRAN_Project/tree/5mbs)
 ## 5G UE (with MBS components): [srsRAN_4G (5mbs branch)](https://github.com/5G-MAG/srsRAN_4G/tree/5mbs)
+
+## NG-RAN (with MBS components): [rt-srsRAN_Project (5mbs branch)](https://github.com/5G-MAG/rt-srsRAN_Project/tree/5mbs)
+
+## 5GC (with MBS components): [open5gs/tree/5mbs (5mbs branch)](https://github.com/5G-MAG/open5gs/tree/5mbs)
+
+## MBS User Service: MBS Function (MBSF): [https://github.com/5G-MAG/rt-mbs-function](https://github.com/5G-MAG/rt-mbs-function)
+
+## MBS User Services: MBS Transport Function (MBSTF): [https://github.com/5G-MAG/rt-mbs-transport-function](https://github.com/5G-MAG/rt-mbs-transport-function)
 
 ## Auxiliary repositories:
 
