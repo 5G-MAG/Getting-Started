@@ -5,6 +5,17 @@ parent: V3C Immersive Platform
 has_children: false
 nav_order: 3
 ---
+<img src="../../assets/images/Banner_Repositories.png" /> 
+
+1. TOC
+{:toc}
+
+# High-level architecture
+
+## V3C Immersive Platform
+
+<img src="../../assets/images/projects/v3c_diagram.png" style="width: 80%">
+
 # Repositories
 
 <img src="../../assets/images/projects/v3c_repos.png" style="width: 80%">
@@ -20,3 +31,5 @@ Note that these repositories are currently private and under testing. **Early ac
 ## V3C Decoder Plugin: [rt-v3c-decoder-plugin](https://github.com/5G-MAG/rt-v3c-decoder-plugin)
 * [Information and how to download, build, install and run](https://github.com/5G-MAG/rt-v3c-decoder-plugin#readme)
 * [Releases](https://github.com/5G-MAG/rt-v3c-decoder-plugin/releases)
+
+## V3C Content: [rt-v3c-content](https://github.com/5G-MAG/rt-v3c-content)

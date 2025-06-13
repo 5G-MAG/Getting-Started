@@ -6,19 +6,62 @@ has_children: false
 nav_order: 3
 ---
 
-# Repositories
+<img src="../../assets/images/Banner_Repositories.png" /> 
 
-<img src="../../assets/images/projects/5gms_repos.png" style="width: 80%">
+1. TOC
+{:toc}
 
-Note that 5G Media Streaming makes use of other repositories:
+<img src="../../assets/images/projects/5gms_repos.png" style="width: 90%">
 
- * Check [here](../3gpp-ran-and-core-platforms/repositories.html#access-to-the-3gpp-ran-and-core-platforms-repositories) to access the repositories for 3GPP RAN and Core Platforms
- * Check [here](../5g-core-network-components/repositories.html#access-to-the-5g-core-network-components-repositories) to access the repositories for 5G Core Network Components
- * Check [here](../ue-data-collection-reporting-exposure/repositories.html#access-to-the-ue-data-collection-reporting-and-event-exposure-repositories) the repositories for UE Data Collection, Reporting and Event Exposure
+# High-level architecture
 
-Pre-built APKs are available for the 5GMS Aware Application and the 5GMS Media Session Handler (see below).
+## 5G Downlink Media Streaming (5GMSd)
+
+<img src="../../assets/images/projects/5gms_diagram.png" style="width: 80%">
+
+ * Check [here](../3gpp-ran-and-core-platforms/repositories.html) to access the repositories for 3GPP RAN and Core Platforms
+
+## 5G Downlink Media Streaming (5GMSd) with UE Data Collection Reporting and Event Exposure
+
+<img src="../../assets/images/projects/5gms_uedc_diagram.png" style="width: 80%">
+
+ * Check [here](../3gpp-ran-and-core-platforms/repositories.html) to access the repositories for 3GPP RAN and Core Platforms
+ * Check [here](../ue-data-collection-reporting-exposure/repositories.html) the repositories for UE Data Collection, Reporting and Event Exposure
+
+## 5G Downlink Media Streaming (5GMSd) over eMBMS
+
+<img src="../../assets/images/projects/5gms_5gbc_diagram.png" style="width: 80%">
+
+ * Check [here](../3gpp-ran-and-core-platforms/repositories.html) to access the repositories for 3GPP RAN and Core Platforms
+ * Check [here](../lte-based-5g-broadcast/repositories.html) the repositories for 5G Broadcast
 
 ---
+# Repositories
+
+## 5GMS-Aware Application: [rt-5gms-application](https://github.com/5G-MAG/rt-5gms-application)
+
+The 5GMS Aware Application is an Android application that serves as a reference implementation for 5GMS downlink
+media streaming. It uses the Media Stream Handler for playback and communication with the Media Session Handler.
+
+* [Information and how to download, build, install and run](https://github.com/5G-MAG/rt-5gms-application#readme)
+* [Releases](https://github.com/5G-MAG/rt-5gms-application/releases) (pre-built APK available)
+
+## 5GMS Media Session Handler: [rt-5gms-media-session-handler](https://github.com/5G-MAG/rt-5gms-media-session-handler)
+The 5GMS Media Session Handler is a 5GMS Client component that forms part of the 5G Media Services framework as defined
+in ETSI TS 126.501.
+
+A Media Session Handler first retrieves its configuration (“Service Access Information”) from the 5GMSd AF at reference
+point M5d and then uses this configuration information to activate and exploit the currently provisioned 5GMSd features.
+In addition, the Media Session Handler exposes APIs via M6 to the 5GMSd-Aware Application and to the Media Player (for
+downlink streaming).
+
+* [Information and how to download, build, install and run](https://github.com/5G-MAG/rt-5gms-media-session-handler#readme)
+* [Releases](https://github.com/5G-MAG/rt-5gms-media-session-handler/releases) (pre-built APK available)
+
+## 5GMSd Media Stream Handler: [rt-5gms-media-stream-handler](https://github.com/5G-MAG/rt-5gms-media-stream-handler)
+* [Information and how to download, build, install and run](https://github.com/5G-MAG/rt-5gms-media-stream-handler#readme)
+* [Releases](https://github.com/5G-MAG/rt-5gms-media-stream-handler/releases)
+* [Packages](https://github.com/orgs/5G-MAG/packages?repo_name=rt-5gms-media-stream-handler)
 
 ## 5GMS Application Provider: [rt-5gms-application-provider](https://github.com/5G-MAG/rt-5gms-application-provider)
 
@@ -58,41 +101,16 @@ reference point.
 * [Releases](https://github.com/5G-MAG/rt-5gms-application-server/releases)
 * [Projects](https://github.com/5G-MAG/rt-5gms-application-server/projects?query=is%3Aopen)
 
-## 5GMSd Media Session Handler: [rt-5gms-media-session-handler](https://github.com/5G-MAG/rt-5gms-media-session-handler)
-The 5GMS Media Session Handler is a 5GMS Client component that forms part of the 5G Media Services framework as defined
-in ETSI TS 126.501.
-
-A Media Session Handler first retrieves its configuration (“Service Access Information”) from the 5GMSd AF at reference
-point M5d and then uses this configuration information to activate and exploit the currently provisioned 5GMSd features.
-In addition, the Media Session Handler exposes APIs via M6 to the 5GMSd-Aware Application and to the Media Player (for
-downlink streaming).
-
-* [Information and how to download, build, install and run](https://github.com/5G-MAG/rt-5gms-media-session-handler#readme)
-* [Releases](https://github.com/5G-MAG/rt-5gms-media-session-handler/releases) (pre-built APK available)
-
-## 5GMSd Media Stream Handler: [rt-5gms-media-stream-handler](https://github.com/5G-MAG/rt-5gms-media-stream-handler)
-* [Information and how to download, build, install and run](https://github.com/5G-MAG/rt-5gms-media-stream-handler#readme)
-* [Releases](https://github.com/5G-MAG/rt-5gms-media-stream-handler/releases)
-* [Packages](https://github.com/orgs/5G-MAG/packages?repo_name=rt-5gms-media-stream-handler)
-
-## 5GMSd-Aware Application: [rt-5gms-application](https://github.com/5G-MAG/rt-5gms-application)
-
-The 5GMS Aware Application is an Android application that serves as a reference implementation for 5GMS downlink
-media streaming. It uses the Media Stream Handler for playback and communication with the Media Session Handler.
-
-* [Information and how to download, build, install and run](https://github.com/5G-MAG/rt-5gms-application#readme)
-* [Releases](https://github.com/5G-MAG/rt-5gms-application/releases) (pre-built APK available)
-
 ---
 
 ## Auxiliary repositories
 
-### 5GMSd Common Android Library: [rt-5gms-common-android-library](https://github.com/5G-MAG/rt-5gms-common-android-library)
+### 5GMS Common Android Library: [rt-5gms-common-android-library](https://github.com/5G-MAG/rt-5gms-common-android-library)
 * [Information and how to download, build, install and run](https://github.com/5G-MAG/rt-5gms-common-android-library#readme)
 * [Releases](https://github.com/5G-MAG/rt-5gms-common-android-library/releases)
 * [Packages](https://github.com/orgs/5G-MAG/packages?repo_name=rt-5gms-common-android-library)
 
-### 5GMSd Examples: [rt-5gms-examples](https://github.com/5G-MAG/rt-5gms-examples)
+### 5GMS Examples: [rt-5gms-examples](https://github.com/5G-MAG/rt-5gms-examples)
 * [Information](https://github.com/5G-MAG/rt-5gms-examples#readme)
 * [Releases](https://github.com/5G-MAG/rt-5gms-examples/releases)
 
