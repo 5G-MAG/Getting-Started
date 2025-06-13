@@ -1,12 +1,12 @@
 ---
 layout: default
-title: Under Development
+title: Scope
 parent: 5G Media Streaming
 has_children: false
 nav_order: 0
 ---
 
-# Under Development
+# Scope
 This page contains information such as the specifications within the scope of the tools, high-level architecture, APIs under implementation,...
 
 ## Specifications
