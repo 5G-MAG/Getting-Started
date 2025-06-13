@@ -1,20 +1,23 @@
 ---
 layout: default
-title: Under Development
+title: Scope
 parent: 5G Multicast Broadcast (MBS)
 has_children: false
 nav_order: 0
 ---
+<img src="../../assets/images/Banner_Scope.png" /> 
 
-# Under Development
+1. TOC
+{:toc}
+
 This page contains information such as the specifications within the scope of the tools, high-level architecture, APIs under implementation,...
 
-## Specifications
+# Specifications
 Visit the [Standards repository](https://5g-mag.github.io/Standards/pages/5g-multicast-broadcast-services.html) for more details on the specifications within the scope of the tools.
 
-## High-level architecture
+# High-level architecture
 
-### High-level architecture: 5G Downlink Media Streaming (5GMSd) over 5G Multicast Broadcast Services (MBS)
+## High-level architecture: 5G Downlink Media Streaming (5GMSd) over 5G Multicast Broadcast Services (MBS)
 
 <img src="../../assets/images/projects/mbs_diagram.png" style="width: 80%">
 
@@ -23,6 +26,7 @@ Visit the [Standards repository](https://5g-mag.github.io/Standards/pages/5g-mul
  * Check [here](../5g-media-streaming/repositories.html) to access the repositories for 5G Media Streaming
 
 # Features under implementation
+
 ## MBS development over Open5GS
 
 The 5G-MAG Reference Tools for MBS currently target:

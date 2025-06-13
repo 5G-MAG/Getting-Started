@@ -1,20 +1,23 @@
 ---
 layout: default
-title: Under Development
+title: Scope
 parent: XR Media Integration in 5G
 has_children: false
 nav_order: 0
 ---
+<img src="../../assets/images/Banner_Scope.png" /> 
 
-# Under Development
+1. TOC
+{:toc}
+
 This page contains information such as the specifications within the scope of the tools, high-level architecture, APIs under implementation,...
 
-## Specifications
+# Specifications
 Visit the [Standards repository](https://5g-mag.github.io/Standards/pages/xr.html) for more details on the specifications within the scope of the tools.
 
-## High-level architecture
+# High-level architecture
 
-### High-level architecture: XR Media Integration in 5G
+## High-level architecture: XR Media Integration in 5G
 
 <img src="../../assets/images/projects/xr_diagram.png" style="width: 80%">
 

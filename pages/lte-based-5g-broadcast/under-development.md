@@ -1,27 +1,29 @@
 ---
 layout: default
-title: Under Development
+title: Scope
 parent: 5G Broadcast (MBMS)
 has_children: false
 nav_order: 0
 ---
+<img src="../../assets/images/Banner_Scope.png" /> 
 
-# Under Development
+1. TOC
+{:toc}
 
-## Specifications
+# Specifications
 
 Visit the [Standards repository](https://5g-mag.github.io/Standards/pages/lte-based-5g-broadcast.html) for details.
 
-## High-level architecture
+# High-level architecture
 
-### High-level architecture: 5G Broadcast with Multimedia delivery protocols
+## High-level architecture: 5G Broadcast with Multimedia delivery protocols
 
 <img src="../../assets/images/projects/5gbc_diagram.png" style="width: 80%">
 
  * Check [here](./repositories.html) to access the repositories for 5G Broadcast
  * Check [here](../multimedia-content-delivery/repositories.html) to access the repositories for Multimedia Content Delivery Protocols
 
-### High-level architecture: 5G Downlink Media Streaming (5GMSd) over eMBMS
+## High-level architecture: 5G Downlink Media Streaming (5GMSd) over eMBMS
 
 <img src="../../assets/images/projects/5gms_5gbc_diagram.png" style="width: 80%">
 

@@ -1,18 +1,21 @@
 ---
 layout: default
-title: Under Development
+title: Scope
 parent: Emergency Alerts 5G Broadcast
 has_children: false
 nav_order: 0
 ---
-# Under Development
+<img src="../../assets/images/Banner_Scope.png" /> 
 
-## Specifications
+1. TOC
+{:toc}
+
+# Specifications
 Visit the [Standards repository](https://5g-mag.github.io/Standards/) for details.
 
-## High-level architecture
+# High-level architecture
 
-### High-level architecture: 5G Broadcast extended with Emergency Alerts
+## High-level architecture: 5G Broadcast extended with Emergency Alerts
 
 <img src="../../assets/images/projects/ew_diagram.png" style="width: 80%">
 
