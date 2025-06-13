@@ -10,22 +10,21 @@ nav_order: 0
 1. TOC
 {:toc}
 
-# Scope
 This page contains information such as the specifications within the scope of the tools, high-level architecture, APIs under implementation,...
 
-## Specifications
+# Specifications
 Visit the [Standards repository](https://5g-mag.github.io/Standards/pages/5g-media-streaming.html) for more details on the specifications within the scope of the tools.
 
-## High-level architecture
+# High-level architecture
 
-### High-level architecture: 5G Downlink Media Streaming (5GMSd)
+## High-level architecture: 5G Downlink Media Streaming (5GMSd)
 
 <img src="../../assets/images/projects/5gms_diagram.png" style="width: 80%">
 
  * Check [here](./repositories.html) to access the repositories for 5G Downlink Media Streaming
  * Check [here](../3gpp-ran-and-core-platforms/repositories.html) to access the repositories for 3GPP RAN and Core Platforms
 
-### High-level architecture: 5G Downlink Media Streaming (5GMSd) with UE Data Collection Reporting and Event Exposure
+## High-level architecture: 5G Downlink Media Streaming (5GMSd) with UE Data Collection Reporting and Event Exposure
 
 <img src="../../assets/images/projects/5gms_uedc_diagram.png" style="width: 80%">
 
@@ -33,7 +32,7 @@ Visit the [Standards repository](https://5g-mag.github.io/Standards/pages/5g-med
  * Check [here](../3gpp-ran-and-core-platforms/repositories.html) to access the repositories for 3GPP RAN and Core Platforms
  * Check [here](../ue-data-collection-reporting-exposure/repositories.html) the repositories for UE Data Collection, Reporting and Event Exposure
 
-### High-level architecture: 5G Downlink Media Streaming (5GMSd) over eMBMS
+## High-level architecture: 5G Downlink Media Streaming (5GMSd) over eMBMS
 
 <img src="../../assets/images/projects/5gms_5gbc_diagram.png" style="width: 80%">
 
@@ -41,13 +40,13 @@ Visit the [Standards repository](https://5g-mag.github.io/Standards/pages/5g-med
  * Check [here](../3gpp-ran-and-core-platforms/repositories.html) to access the repositories for 3GPP RAN and Core Platforms
  * Check [here](../lte-based-5g-broadcast/repositories.html) the repositories for 5G Broadcast
 
-## 5GMS Application Function Supported Features
+# 5GMS Application Function Supported Features
 
 The release versions of the 5GMSd Application Function support differing sets of interfaces, as described by the different
 versions of the 3GPP specifications, and differing levels of feature support for those interfaces. The page attempts to capture
 the feature sets and specification versions for each release, starting with the most recent release or upcoming releases.
 
-### Key
+## Key
 
 Where a feature of the specifications is supported the entry will be marked with &#x2611;, where it is being worked on and slated for the next release the feature will be marked with &#x270E; and where it is unimplemented in that
 version the feature will be marked with &#x2610;.
@@ -170,15 +169,15 @@ version the feature will be marked with &#x2610;.
 </tfoot>
 </table>
 
-## Supported APIs for 5G Media Streaming
+# Supported APIs for 5G Media Streaming
 
-### Relevant specifications
+## Relevant specifications
 The table contains the 3GPP 5G Media Streaming APIs for Release 17 (TS 26.512) and Release 18 (TS 26.510 & TS 26.512). Note that the current reference implementation of the 5GMSd AF and 5GMSd AS are based on Release 17 (TS 26.510 does not exist in Release 17). In Release 18, the media session handling APIs were moved from TS 26.512 into TS 26.510 to generalise them to support the Real-Time media Communication (RTC) System as well as the 5G Media Streaming (5GMS) System.
 More information about the relevant specifications can be found in the following pages:
  - 5G Media Streaming Architecture: [Standards pages](https://5g-mag.github.io/Standards/pages/5g-media-streaming.html)
  - UE Data Collection and Event Exposure: [Standards pages](https://5g-mag.github.io/Standards/pages/data-collection-event-exposure.html)
 
-### Classification
+## Classification
 
  Release 17 | Release 18
  ---------- | ----------
@@ -208,7 +207,7 @@ More information about the relevant specifications can be found in the following
  TS26512_R4_DataReporting.yaml | <span style="color: orange;font-weight:bold;">TS26512_R4_DataReporting.yaml</span>
  N/A | <span style="color: orange;font-weight:bold;">TS26512_EventExposure.yaml</span>
 
-### Legend
+## Legend
 
 <span style="color: green;font-weight:bold;">TEXT</span> = Already implemented in 5G-MAG Reference Tools
 
