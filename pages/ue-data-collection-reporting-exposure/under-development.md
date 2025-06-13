@@ -1,12 +1,16 @@
 ---
 layout: default
-title: Under Development
+title: Scope
 parent: UE Data Collection
 has_children: false
 nav_order: 0
 ---
+<img src="../../assets/images/Banner_Scope.png" /> 
 
-# Under Development
+1. TOC
+{:toc}
+
+# Scope
 This page contains information such as the specifications within the scope of the tools, high-level architecture, APIs under implementation,...
 
 ## Specifications
