@@ -10,7 +10,7 @@ nav_order: 5
 1. TOC
 {:toc}
 
-# Tutorials
+# Using the tools
 
 ## Our video library
 
