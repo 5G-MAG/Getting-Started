@@ -3,7 +3,7 @@ layout: default
 title: Repositories
 parent: 3GPP RAN and Core Platforms
 has_children: false
-nav_order: 1
+nav_order: 2
 ---
 <img src="../../assets/images/Banner_Repositories.png" /> 
 
