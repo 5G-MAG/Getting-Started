@@ -3,7 +3,7 @@ layout: default
 title: Repositories
 parent: UE Data Collection
 has_children: false
-nav_order: 3
+nav_order: 2
 ---
 <img src="../../assets/images/Banner_Repositories.png" /> 
 
