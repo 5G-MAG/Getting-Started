@@ -87,6 +87,6 @@ Note that you will need to manually install the content and/or configuration fil
 
 In Unity Hub, import the "rt-v3c-unity-player/V3CImmersiveTest" project. Make sure that the scene V3C-Simple Player.unity is loaded.
 
-## Step 5: Setting up DASH streaming server
+## Step 5: Setting up a DASH streaming server
 
 In Unity Hub, import the "rt-v3c-unity-player/V3CImmersiveTest" project. Make sure that the scene V3C-Simple Player.unity is loaded.
