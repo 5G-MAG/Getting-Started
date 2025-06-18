@@ -23,7 +23,7 @@ As indicated in the instructions in the [rt-v3c-decoder-plugin](https://github.c
 - Android Studio - [Download from Android](https://developer.android.com/studio) - Once downloaded make sure you install NDK r27c (27.2.12479018), and API 35.
 - Docker Desktop
 
-### Step 1: Clone the Unity Player Repository
+## Step 1: Clone the Unity Player Repository
 
 ```
 git clone https://github.com/5G-MAG/rt-v3c-unity-player  
@@ -31,7 +31,7 @@ git clone https://github.com/5G-MAG/rt-v3c-unity-player
 
 Although not immerdiately used, this will create the directories where the decoder plugin files will be copied.
 
-### Step 2: Install the Decoder Plugin
+## Step 2: Install the Decoder Plugin
 
 Clone the repository:
 
@@ -72,7 +72,7 @@ cd rt-v3c-unity-player
 ../rt-v3c-decoder-plugin/Scripts/copy_libs.sh ./Packages/V3CDecoder/Runtime/Plugins release Android
 ```
 
-### Step 3: Building the Unity Player for Android
+## Step 3: Building the Unity Player for Android
 
 In Unity Hub, import the "rt-v3c-unity-player/V3CImmersiveTest" project. Make sure that the scene V3C-Simple Player.unity is loaded.
 
@@ -82,10 +82,10 @@ Unity will generate a .apk file that you can copy and install on your phone. To 
 
 Note that you will need to manually install the content and/or configuration files on your device. Run the application once on your device to ensure the creation of the folder.
 
-### Step 4: Importing configuration files
+## Step 4: Importing configuration files
 
 In Unity Hub, import the "rt-v3c-unity-player/V3CImmersiveTest" project. Make sure that the scene V3C-Simple Player.unity is loaded.
 
-### Step 5: Setting up DASH streaming server
+## Step 5: Setting up DASH streaming server
 
 In Unity Hub, import the "rt-v3c-unity-player/V3CImmersiveTest" project. Make sure that the scene V3C-Simple Player.unity is loaded.
