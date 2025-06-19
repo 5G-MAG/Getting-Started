@@ -47,13 +47,13 @@ cd rt-v3c-decoder-plugin
 ./Scripts/dl_deps.sh
 ```
 
-Add the additional dependency regarding avcodec libraries. For this, instructions are provided in [rt-common-shared](https://github.com/5G-MAG/rt-common-shared). We can use the Docker build instructions.
+Add the additional dependency regarding avcodec libraries. For this, instructions are provided in [rt-common-shared](https://github.com/5G-MAG/rt-common-shared). We can use the Docker build instructions with Git Bash.
 
 ```
 git clone --recurse-submodules https://github.com/5G-MAG/rt-common-shared.git
 cd rt-common-shared/avcodec-build/
 docker build -t ffmpeg-builder:27 --build-arg NDK_VERSION=27.2.12479018 .
-docker run -v $(pwd)/build/ffmpeg/aarch64:/usr/build/ffmpeg --env TARGET_ABI=aarch64 --env ANDROID_API_LEVEL=35 ffmpeg-builder:27
+docker run -v /$(PWD)/build/ffmpeg/aarch64:/usr/build/ffmpeg --env TARGET_ABI=aarch64 --env ANDROID_API_LEVEL=35 ffmpeg-builder:27
 ```
 
 In Windows, the build artifacts can be found in your user folder `C:\Users\<your_user_name>\build\ffmpeg\aarch64`.
