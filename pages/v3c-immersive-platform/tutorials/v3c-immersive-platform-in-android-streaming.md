@@ -86,6 +86,20 @@ Note that you will need to manually install the content and/or configuration fil
 
 ## Step 4: Importing configuration files
 
-In Unity Hub, import the "rt-v3c-unity-player/V3CImmersiveTest" project. Make sure that the scene V3C-Simple Player.unity is loaded.
+With the application already installed in the Android device and the directories automatically created we can now download the V3C Content for testing locally in the device and for streaming.
+
+```
+git clone --recurse-submodules https://github.com/5G-MAG/rt-v3c-content.git
+```
+
+The content of the folder "on-device-data" can be copied into the device (in our case: "\Internal storage\Android\data\com.InterDigital.V3CSimplePlayer\files").
 
 ## Step 5: Setting up a DASH streaming server
+
+Before copying the content in the device, you can modify the config.json file to insert the IP address of the machine hosting the DASH server and the port.
+
+We recommend using the simple express server available in [https://github.com/5G-MAG/rt-common-shared/](https://github.com/5G-MAG/rt-common-shared/).
+
+Just install the server following the instructions copy the content of the "on-server-data" inside the public folder of the DASH server. Make sure to unzip the packages containing the segments and mpd for each test sequence.
+
+Streaming can be started from the Unity player.
