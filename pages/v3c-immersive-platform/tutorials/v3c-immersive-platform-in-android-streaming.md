@@ -63,6 +63,7 @@ As we are targeting an Android device, once compiled, the .so libraries from the
 At this point, back in the directory of the rt-v3c-decoder-plugin, we can compile for Android:
 
 ```
+cd rt-v3c-decoder-plugin
 ./Scripts/build_android.sh release all  
 ```
 
