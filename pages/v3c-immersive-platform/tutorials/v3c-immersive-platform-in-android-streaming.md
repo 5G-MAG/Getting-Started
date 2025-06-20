@@ -13,7 +13,7 @@ nav_order: 0
 
 This tutorials provides the instructions to setup the V3C Immersive Platform for an Android device using content streamed from a DASH server.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/oGV6jMisg0M?si=kwUJ6gsP7Zt1IxW6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/4Mj_eJnYVjE?si=DGY8rmDpl-mAJBfH" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ## Step 0: Setting up the environment
 We are doing the installation and building the platform in Windows. The target device to install the apk with the Unity Player will be an Android phone (in this example a Samsung S21).
