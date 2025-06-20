@@ -4,15 +4,15 @@ title: 5G Core Network Components
 has_children: true
 nav_order: 2
 ---
-# 5G Core Network components
 
-<iframe width="60%" height="440" src="https://drive.google.com/file/d/1-TPp-cVL8xW5WD8n8dJ2JyDPIfbbygli/preview"></iframe>
+# 5G Core Network components
+<iframe width="60%" height="520" src="https://drive.google.com/file/d/1-TPp-cVL8xW5WD8n8dJ2JyDPIfbbygli/preview"></iframe>
 
 [DOWNLOAD THE PRESENTATION](https://drive.google.com/file/d/1-TPp-cVL8xW5WD8n8dJ2JyDPIfbbygli/preview){: .btn}
 
-## Resources
+## Contents of this project
 
-### Which is this project about?
+### What is this project about?
 * Find [here](./under-development.html) information about specifications, architecture, APIs, etc.
 
 ### What is the roadmap and development status?
