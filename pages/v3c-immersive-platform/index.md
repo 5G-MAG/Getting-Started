@@ -6,7 +6,7 @@ nav_order: 10
 ---
 
 # V3C Immersive Platform
-<iframe width="60%" src="https://drive.google.com/file/d/14diIIl503hnVZhabz4B8Y25mCWvbYS3w/preview"></iframe>
+<iframe width="60%" height="540" src="https://drive.google.com/file/d/14diIIl503hnVZhabz4B8Y25mCWvbYS3w/preview"></iframe>
 
 [DOWNLOAD THE PRESENTATION](https://drive.google.com/file/d/14diIIl503hnVZhabz4B8Y25mCWvbYS3w/preview){: .btn} 
 
