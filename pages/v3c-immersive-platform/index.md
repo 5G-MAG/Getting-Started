@@ -10,9 +10,9 @@ nav_order: 10
 
 [DOWNLOAD THE PRESENTATION](https://drive.google.com/file/d/14diIIl503hnVZhabz4B8Y25mCWvbYS3w/preview){: .btn} 
 
-## Resources
+## Contents of this project
 
-### Which is this project about?
+### What is this project about?
 * Find [here](./under-development.html) information about specifications, architecture, APIs, etc.
 
 ### What is the roadmap and development status?
