@@ -6,13 +6,13 @@ nav_order: 7
 ---
 
 # Multimedia content delivery protocols
-<iframe width="60%" height="440" src="https://drive.google.com/file/d/1lBt2d_toxfhqUAMr3YZw9Cm6-ZzsbpOM/preview"></iframe>
+<iframe width="60%" height="520" src="https://drive.google.com/file/d/1lBt2d_toxfhqUAMr3YZw9Cm6-ZzsbpOM/preview"></iframe>
 
 [DOWNLOAD THE PRESENTATION](https://drive.google.com/file/d/1lBt2d_toxfhqUAMr3YZw9Cm6-ZzsbpOM/preview){: .btn} 
 
-## Resources
+## Contents of this project
 
-### Which is this project about?
+### What is this project about?
 * Find [here](./under-development.html) information about specifications, architecture, APIs, etc.
 
 ### What is the roadmap and development status?
