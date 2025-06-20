@@ -6,13 +6,13 @@ nav_order: 5
 ---
 
 # Emergency Alerts over 5G Broadcast
-<iframe width="60%" height="440" src="https://drive.google.com/file/d/1XzvNDadtrwxrCoLIpuQQntv6JzOVMn2_/preview"></iframe>
+<iframe width="60%" height="520" src="https://drive.google.com/file/d/1XzvNDadtrwxrCoLIpuQQntv6JzOVMn2_/preview"></iframe>
 
 [DOWNLOAD THE PRESENTATION](https://drive.google.com/file/d/1XzvNDadtrwxrCoLIpuQQntv6JzOVMn2_/preview){: .btn} 
 
-## Resources
+## Contents of this project
 
-### Which is this project about?
+### What is this project about?
 * Find [here](./under-development.html) information about specifications, architecture, APIs, etc.
 
 ### What is the roadmap and development status?
