@@ -1,6 +1,6 @@
 ---
 layout: default
-title: AI / ML Evaluation Framework
+title: AI / ML Evaluation
 has_children: true
 nav_order: 11
 ---
