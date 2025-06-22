@@ -2,7 +2,7 @@
 layout: default
 title: 3GPP RAN and Core Platforms
 has_children: true
-nav_order: 12
+nav_order: 13
 ---
 
 # 3GPP RAN and Core Platforms
