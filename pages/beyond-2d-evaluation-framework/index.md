@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Beyond2D Evaluation Framework
+title: Beyond 2D Evaluation
 has_children: true
 nav_order: 10
 ---
