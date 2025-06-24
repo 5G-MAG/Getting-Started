@@ -2,17 +2,17 @@
 layout: default
 title: 3GPP RAN and Core Platforms
 has_children: true
-nav_order: 12
+nav_order: 13
 ---
 
 # 3GPP RAN and Core Platforms
-<iframe width="60%" height="440" src="https://drive.google.com/file/d/1fLY8WCmGNQiA9BI4eva6mwAAB5ZNufrY/preview"></iframe>
+<iframe width="60%" height="520" src="https://drive.google.com/file/d/1fLY8WCmGNQiA9BI4eva6mwAAB5ZNufrY/preview"></iframe>
 
 [DOWNLOAD THE PRESENTATION](https://drive.google.com/file/d/1fLY8WCmGNQiA9BI4eva6mwAAB5ZNufrY/preview){: .btn}
 
-## Resources
+## Contents of this project
 
-### Which is this project about?
+### What is this project about?
 * Find [here](./under-development.html) information about specifications, architecture, APIs, etc.
 
 ### What is the roadmap and development status?

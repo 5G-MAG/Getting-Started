@@ -2,17 +2,17 @@
 layout: default
 title: V3C Immersive Platform
 has_children: true
-nav_order: 10
+nav_order: 9
 ---
 
 # V3C Immersive Platform
-<iframe width="60%" height="440" src="https://drive.google.com/file/d/14diIIl503hnVZhabz4B8Y25mCWvbYS3w/preview"></iframe>
+<iframe width="60%" height="520" src="https://drive.google.com/file/d/14diIIl503hnVZhabz4B8Y25mCWvbYS3w/preview"></iframe>
 
 [DOWNLOAD THE PRESENTATION](https://drive.google.com/file/d/14diIIl503hnVZhabz4B8Y25mCWvbYS3w/preview){: .btn} 
 
-## Resources
+## Contents of this project
 
-### Which is this project about?
+### What is this project about?
 * Find [here](./under-development.html) information about specifications, architecture, APIs, etc.
 
 ### What is the roadmap and development status?
