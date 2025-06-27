@@ -21,4 +21,7 @@ The section [DEVELOPER XCHANGES & TUTORIALS](https://www.5g-mag.com/tutorials) i
 ## Using the tools
 
 ### [Tutorial: Initial MBS support in the 5GC](./tutorials/mbs-in-5gc.html)
-This tutorial provides an oveview on the initial implementation of MBS in Open5GS Core.
+This tutorial provides an overview on the initial implementation of MBS in Open5GS Core.
+
+### [Tutorial: Initial MBS Transport Services](./tutorials/mbstf.html)
+This tutorial provides an overview on the initial implementation of the MBSTF.
