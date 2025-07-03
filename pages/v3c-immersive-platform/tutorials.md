@@ -10,11 +10,17 @@ nav_order: 3
 1. TOC
 {:toc}
 
-# Using the tools
+# Tutorials
+Find here the following tutorials:
+- [V3C Unity Player for Android with DASH Streaming Server](./tutorials/v3c-immersive-platform-in-android-streaming.html)
 
-## Our video library
-The section [DEVELOPER XCHANGES & TUTORIALS](https://www.5g-mag.com/tutorials) in the 5G-MAG website contains more information and videos from the 5G-MAG Reference Tools developers on the usage of the tools. Some of the videos are also available here:
+# Video library
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?si=y0nJdRsI5cvERsvM&amp;list=PLFqKJZ78_IWUNBlJetfmlc_873F3O2-0l" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+## Introduction to the V3C Immersive Platform (V-PCC, MIV, Haptics)
+<iframe width="560" height="315" src="https://www.youtube.com/embed/gFiNKcQKVuU?si=9F4lcLZusH9pmcDY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-## Using the tools
+## Introduction on support for MPEG Haptics
+<iframe width="560" height="315" src="https://www.youtube.com/embed/13O2lJHs_jo?si=JuJ7KWs_2rDs4xwz" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+## Building up the Unity Player for Android with DASH Streaming Server
+<iframe width="560" height="315" src="https://www.youtube.com/embed/4Mj_eJnYVjE?si=kYTIfT_Fu1NgXphA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
