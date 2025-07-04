@@ -4,7 +4,7 @@ title:  Blender glTF Exporter and Unity Player
 grand_parent: XR Media Integration in 5G
 parent: Tutorials
 has_children: false
-nav_order: 2
+nav_order: 1
 ---
 # Blender glTF Exporter and Unity Player
 
