@@ -26,12 +26,6 @@ The tutorial covers the following steps:
 5. [Launch the player](#5-launch-the-player)
 
 
-
-1. 
-2. Compile the XR Player sample Unity 3D application
-3. Configure the XR Player to load a glTF document
-
-
 ## 1. Clone the XR Player unity project
 ```
 git clone --recursive https://github.com/5G-MAG/rt-xr-unity-player.git
