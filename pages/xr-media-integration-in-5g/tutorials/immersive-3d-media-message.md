@@ -26,7 +26,7 @@ Example: A house rental agency offers rooms that you can walk through their asse
 
 #### Reference 5G-MAG assets
 To realize this use case, 5G-MAG has selected the following assets, which are provided with the relevant glTF extensions:
-* 🚧 [Studio apartment](https://github.com/5G-MAG/rt-xr-content/blob/development/studio_apartment/studio_apartment.gltf)
+* [Studio apartment](https://github.com/5G-MAG/rt-xr-content/blob/development/studio_apartment/studio_apartment.gltf)
 
 Follow [these instructions](../usage/xr-player-android) to build and configure the player for Android.
 
@@ -36,8 +36,7 @@ Example: An extension of use case 2 provides the ability to add your family pict
 
 #### Reference 5G-MAG assets
 To realize this use case, 5G-MAG has selected the following assets, which are provided with the relevant glTF extensions:
-* x
-* x
+* 🚧 [support manipulation of 3D node (MPEG_scene_interactivity) with anchoring constraints (MPEG_anchor)](https://github.com/5G-MAG/rt-xr-unity-player/issues/41)
 
 
 ---
@@ -50,7 +49,7 @@ Example: 3GPP shares the 3GPP Emmy Statue as 3GPP conforming messaging MMS to al
 #### Reference 5G-MAG assets
 To realize this use case, 5G-MAG has selected the following assets, which are provided with the relevant glTF extensions to signal AR anchoring:
 * [academy awards model with explicit floor anchoring](https://github.com/5G-MAG/rt-xr-content/blob/development/awards/awards_floor_anchoring.gltf)
-* 🚧 [academy awards model with explicit horizontal anchoring](https://github.com/5G-MAG/rt-xr-content/blob/development/awards/awards_plane_anchoring.gltf)
+* [academy awards model with explicit horizontal plane anchoring](https://github.com/5G-MAG/rt-xr-content/blob/development/awards/awards_plane_anchoring.gltf)
 
 Follow [these instructions](../usage/xr-player-android) to build and configure the player for Android.
 
@@ -60,5 +59,5 @@ Example: Ikea offers furnitures on their webpage that you can request. They shar
 
 #### Reference 5G-MAG assets
 To realize this use case, 5G-MAG has selected the following assets, which are provided with the relevant glTF extensions:
-* 🚧 [enable user to manipulate a 3D model anchored to the floor](https://github.com/5G-MAG/rt-xr-unity-player/issues/41)
+* 🚧 [support manipulation of 3D node (MPEG_scene_interactivity) with anchoring constraints (MPEG_anchor)](https://github.com/5G-MAG/rt-xr-unity-player/issues/41)
  
