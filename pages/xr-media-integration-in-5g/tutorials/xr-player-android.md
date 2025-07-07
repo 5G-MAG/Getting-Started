@@ -13,36 +13,34 @@ This guide covers compiling the XR player sample Unity project for Android and c
 
 This section assumes [adb](https://developer.android.com/tools/adb) is installed on the machine, and an Android device with [developer options and USB debugging](https://developer.android.com/studio/debug/dev-options#enable) enabled is connected.
 
-
-- [Building and using XR Player on Android](#building-and-using-xr-player-on-android)
-- [Overview](#overview)
-- [Clone the XR Player unity project](#clone-the-xr-player-unity-project)
-- [Build and install media pipelines](#build-and-install-media-pipelines)
-- [Build and run the unity project](#build-and-run-the-unity-project)
-- [Configure the XR player sample application](#configure-the-xr-player-sample-application)
-- [Launch the player](#launch-the-player)
-
-
-## Overview
-
 The project requires Unity 3D 2022.3 with both Android and iOS support modules installed.
+
 While this guide assumes a Windows environment with a git-bash terminal (eg. to run shell scripts), the same instructions apply to other platoforms.
 
-The tutorial covers 2 steps:
-* 1. Compile & install media pipeline library and plugins for Android
-* 2. Compile the XR Player sample Unity 3D application
-* 3. Configure the XR Player to load a glTF document
+The tutorial covers the following steps:
+
+1. [Clone the XR Player unity project](#1-clone-the-xr-player-unity-project)
+2. [Compile & install media pipeline library and plugins for Android](#2-build-and-install-media-pipelines)
+3. [Build and run the unity project](#3-build-and-run-the-unity-project)
+4. [Configure the XR player sample application](#4-configure-the-xr-player-sample-application)
+5. [Launch the player](#5-launch-the-player)
 
 
-## Clone the XR Player unity project
+
+1. 
+2. Compile the XR Player sample Unity 3D application
+3. Configure the XR Player to load a glTF document
+
+
+## 1. Clone the XR Player unity project
 ```
 git clone --recursive https://github.com/5G-MAG/rt-xr-unity-player.git
 ```
 
-Note: --recursive is critical to get all submodules checked out. 
+Note: --recursive is required to get all submodules checked out. 
 
 
-## 1. Build and install media pipelines
+## 2. Build and install media pipelines
 
 ### Clone and install the source code
 ```
@@ -118,7 +116,7 @@ Make sure all the *.so libraries are configured properly in the Unity editor. Fo
 The configuration is stored in Unity's *.meta sidecar files and are tracked in the Unity repository. Unity removes the *.meta files if the ressource they reference are not found when opening a project.  
 
 
-## 2. Build and run the unity project
+## 3. Build and run the unity project
 
 Open the `rt-xr-unity-player` directory as an existing project from Unity Hub. Then in the Unity Editor:
 
@@ -132,7 +130,7 @@ Open the `rt-xr-unity-player` directory as an existing project from Unity Hub. T
 
 
 
-## Configure the XR player sample application
+## 4. Configure the XR player sample application
 
 Clone the `rt-xr-content` repository. This **requires [git lfs](https://git-lfs.com/)** to be installed on your system.
 
@@ -158,7 +156,7 @@ adb push ./Paths /storage/emulated/0/Android/data/com.fivegmag.rtxrplayer/files/
 ```
 
 
-## Launch the player
+## 5. Launch the player
 
 Locate and launch the player. 
 A menu to select scenes in the configured content will be listed by the player at startup.
