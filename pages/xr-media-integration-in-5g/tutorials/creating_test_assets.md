@@ -26,6 +26,66 @@ The 5G-MAG Reference Tools also provides a Blender add-on to support [MPEG_* glT
 The repository is available here: [https://github.com/5G-MAG/rt-xr-blender-exporter](https://github.com/5G-MAG/rt-xr-blender-exporter)
 A tutorial is available here: [Blender glTF Exporter and Unity Player](./blender_exporter_unity_player.html)
 
+# List of available assets
+
+## MPEG_anchor
+The `MPEG_anchor` glTF extension enables anchoring nodes and scenes to features (*Trackable*) tracked by the XR device.
+
+| Trackable type | Test content |
+|:---------------|:-------|
+| TRACKABLE_VIEWER | [anchoring/anchorTest_viewer_n.gltf](https://github.com/5G-MAG/rt-xr-content/tree/development/anchoring/) |
+| TRACKABLE_FLOOR | [awards/scene_floor_anchoring.gltf](https://github.com/5G-MAG/rt-xr-content/tree/development/awards/) |
+| TRACKABLE_PLANE | [awards/scene_plane_anchoring.gltf](https://github.com/5G-MAG/rt-xr-content/tree/development/awards/) |
+| TRACKABLE_CONTROLLER | [anchoring/anchorTest_ctrl_n.gltf](https://github.com/5G-MAG/rt-xr-content/tree/development/anchoring/) |
+| TRACKABLE_MARKER_2D | [anchoring/anchorTest_m2D_n.gltf](https://github.com/5G-MAG/rt-xr-content/tree/development/anchoring/) |
+| TRACKABLE_MARKER_3D | [anchoring/anchorTest_m3D_n.gltf](https://github.com/5G-MAG/rt-xr-content/tree/development/anchoring/) |
+| TRACKABLE_MARKER_GEO | [anchoring/anchorTest_geoSpatial_n_cs.gltf](https://github.com/5G-MAG/rt-xr-content/tree/development/anchoring/) |
+| TRACKABLE_APPLICATION | [anchoring/anchorTest_app_n.gltf](https://github.com/5G-MAG/rt-xr-content/tree/development/anchoring/) |
+
+## MPEG_scene_interactivity and MPEG_node_interactivity
+
+**Behaviors** in a 3D scene can be defined through the `MPEG_scene_interactivity` and `MPEG_node_interactivity` glTF extensions. An interactivity behavior combines one or more **triggers** that condition the execution of one or more **actions**.
+
+| Trigger type          | Test content |
+|:----------------------|:-|
+| TRIGGER_COLLISION     |[gravity/gravity.gltf](https://github.com/5G-MAG/rt-xr-content/tree/development/gravity)|
+| TRIGGER_PROXIMITY     |[gravity/gravity.gltf](https://github.com/5G-MAG/rt-xr-content/tree/development/gravity), [geometry/UseCase_03-variant1-geometry.gltf](https://github.com/5G-MAG/rt-xr-content/tree/development/geometry)|
+| TRIGGER_USER_INPUT    |[gravity/gravity.gltf](https://github.com/5G-MAG/rt-xr-content/tree/development/gravity), [geometry/UseCase_03-variant3-geometry.gltf](https://github.com/5G-MAG/rt-xr-content/tree/development/geometry)|
+| TRIGGER_VISIBILITY    |[geometry/UseCase_03-variant3-geometry.gltf](https://github.com/5G-MAG/rt-xr-content/tree/development/geometry)|
+
+
+| Action type           | Test content |
+|:----------------------|:-|
+| ACTION_ACTIVATE       |[gravity/gravity.gltf](https://github.com/5G-MAG/rt-xr-content/tree/development/gravity)|
+| ACTION_TRANSFORM      |[gravity/gravity.gltf](https://github.com/5G-MAG/rt-xr-content/tree/development/gravity)|
+| ACTION_BLOCK          |[gravity/gravity.gltf](https://github.com/5G-MAG/rt-xr-content/tree/development/gravity)|
+| ACTION_ANIMATION      |[geometry/UseCase_03-variant1-geometry.gltf](https://github.com/5G-MAG/rt-xr-content/tree/development/geometry)|
+| ACTION_SET_MATERIAL   |[gravity/gravity.gltf](https://github.com/5G-MAG/rt-xr-content/tree/development/gravity)|
+| ACTION_MANIPULATE     | |
+| ACTION_MEDIA          |[geometry/UseCase_02-variant3-geometry.gltf](https://github.com/5G-MAG/rt-xr-content/tree/development/geometry)|
+| ACTION_HAPTIC         | |
+| ACTION_SET_AVATAR     | |
+
+### MPEG_media, MPEG_accessor_timer, MPEG_buffer_circular
+
+Support for media sources (eg. mp4, dash, rtp, ...) exposing media buffers to the presentation engine through the `MPEG_media`, `MPEG_accessor_timer`, `MPEG_buffer_circular` glTF extensions. 
+
+[Sample scene with media pipelines](https://github.com/5G-MAG/rt-xr-content/tree/development/studio_apartment)
+
+### MPEG_texture_video
+
+Supports video textures buffers through the `MPEG_texture_video` glTF video extension. Video decoding is implemented by media pipelines.
+
+[Sample scene with video texture](https://github.com/5G-MAG/rt-xr-content/tree/development/studio_apartment)
+
+
+### MPEG_audio_spatial
+
+Supports audio sources positionned in 3D through the `MPEG_audio_spatial`. For each audio source the extension specifies attenuation parameters controling the audio source loudness as a function of the viewer's distance.
+
+[Sample scene with spatial audio source](https://github.com/5G-MAG/rt-xr-content/tree/development/studio_apartment)
+
+
 # Generation of MPEG-I SD compliant glTF2.0 assets
 
 ## MPEG_anchor
