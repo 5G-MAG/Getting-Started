@@ -22,6 +22,12 @@ available here:
 
 ## Using the tools
 
+### [Tutorial: Compile the Unity project for Android](./tutorials/xr-player-android.html)
+
+This tutorial provides step by step instructions to compile the `rt-xr-unity-player` and `rt-xr-maf` projects for Android.
+The compiled application loads glTF documents, with support got MPEG glTF extensions.
+
+
 ### [Tutorial: Immersive 3D Media Message](./tutorials/immersive-3d-media-message.html)
 
 This tutorial provides an overview of different use cases related to VR, XR, 3D scenes and AR scenes. It also
