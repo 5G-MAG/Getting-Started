@@ -9,6 +9,9 @@ nav_order: 0
 
 # MPEG-I Scene Description Test Asset Creation
 
+1. TOC
+{:toc}
+
 ## Content repositories
 
 5G-MAG is hosting a repository with test assets implementing some of the core extensions defined in MPEG-I Scene Description (ISO/IEC 23090-14): [https://github.com/5G-MAG/rt-xr-content](https://github.com/5G-MAG/rt-xr-content).
@@ -23,22 +26,16 @@ The 5G-MAG Reference Tools also provides a Blender add-on to support [MPEG_* glT
 The repository is available here: [https://github.com/5G-MAG/rt-xr-blender-exporter](https://github.com/5G-MAG/rt-xr-blender-exporter)
 A tutorial is available here: [Blender glTF Exporter and Unity Player](./blender_exporter_unity_player.html)
 
+# Generation of MPEG-I SD compliant glTF2.0 assets
 
-
-
-
-
-
-
-### MPEG_anchor
+## MPEG_anchor
 
 ### Configure anchoring of a node
 
-![configure anchor](/doc/img/anchoring-configrure-anchor.png)
+<img src="../../../assets/images/xr/anchoring-configrure-anchor.png" style="width:80%;">
 
 1. select the node to be anchored
 2. locate the XR Anchoring panel in object properties, select an anchor type and configure the anchor
-
 
 The following anchor types can be configured:
 - TRACKABLE_FLOOR
@@ -51,13 +48,12 @@ The following anchor types can be configured:
 
 ### Creating a 2D marker node
 
-![configure anchor](/doc/img/anchoring-create-marker-2d.png)
+<img src="../../../assets/images/xr/anchoring-create-marker-2d.png" style="width:80%;">
 
 1. locate the XR Anchoring panel (press N while the UI is focused on the 3D view)
 2. select an image and hit 'create marker node', the marker 2D node is added to the scene and can now be used to configure an anchor
 
-
-### MPEG_texture_video
+## MPEG_texture_video
 
 To add a video and export it as MPEG_texture_video, first make sure that the blender's [scene output format](https://docs.blender.org/manual/en/3.6/render/output/properties/format.html) matches the framerate of the videos used as texture.
 
@@ -67,11 +63,11 @@ To add a video and export it as MPEG_texture_video, first make sure that the ble
 
 All Image textures with a movie source are exported as MPEG_texture_video extensions:
 
-![image texture](/doc/img/image-texture.jpg)
+<img src="../../../assets/images/xr/image-texture.jpg" style="width:80%;">
 
-### MPEG_audio_spatial
+## MPEG_audio_spatial
 
-#### Audio sources 
+### Audio sources 
 
 To add an audio source to the scene:
 
@@ -85,7 +81,6 @@ All other parameters are ignored.
 
 The **audio attenuation model** is configured as [a scene property](https://docs.blender.org/manual/en/latest/scene_layout/scene/properties.html#data-scenes-audio) in Blender.
 
-![audio source](/doc/img/audio-source.jpg)
+<img src="../../../assets/images/xr/audio-source.jpg" style="width:80%;">
 
-![audio attenuation model](/doc/img/audio-attenuation-model.jpg)
-
+<img src="../../../assets/images/xr/audio-attenuation-model.jpg" style="width:80%;">
