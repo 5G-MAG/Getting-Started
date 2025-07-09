@@ -5,7 +5,7 @@ has_children: true
 nav_order: 6
 ---
 
-<img src="../assets/images/Banner_5MBS.png" /> 
+<img src="../../assets/images/Banner_5MBS.png" /> 
 
 # 5G Multicast Broadcast Services - Reference Tools Project
 
