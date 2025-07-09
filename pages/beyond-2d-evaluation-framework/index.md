@@ -5,7 +5,7 @@ has_children: true
 nav_order: 10
 ---
 
-<img src="../assets/images/Banner_B2D.png" /> 
+<img src="../../assets/images/Banner_B2D.png" /> 
 
 # Beyond 2D Evaluation Framework - Reference Tools Project
 
