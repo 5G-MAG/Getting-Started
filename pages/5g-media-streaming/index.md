@@ -5,7 +5,7 @@ has_children: true
 nav_order: 1
 ---
 
-<img src="../assets/images/Banner_5GMS.png" /> 
+<img src="../../assets/images/Banner_5GMS.png" /> 
 
 # 5G Media Streaming Architecture - Reference Tools Project
 
