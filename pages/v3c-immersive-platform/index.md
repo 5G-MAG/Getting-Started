@@ -5,7 +5,11 @@ has_children: true
 nav_order: 9
 ---
 
-# V3C Immersive Platform
+<img src="../assets/images/Banner_V3C.png" /> 
+
+# V3C Immersive Platform - Reference Tools Project
+
+# Overview
 <iframe width="60%" height="520" src="https://drive.google.com/file/d/14diIIl503hnVZhabz4B8Y25mCWvbYS3w/preview"></iframe>
 
 [DOWNLOAD THE PRESENTATION](https://drive.google.com/file/d/14diIIl503hnVZhabz4B8Y25mCWvbYS3w/preview){: .btn} 
