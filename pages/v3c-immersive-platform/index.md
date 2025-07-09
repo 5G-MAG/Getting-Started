@@ -5,7 +5,7 @@ has_children: true
 nav_order: 9
 ---
 
-<img src="../assets/images/Banner_V3C.png" /> 
+<img src="../../assets/images/Banner_V3C.png" /> 
 
 # V3C Immersive Platform - Reference Tools Project
 
