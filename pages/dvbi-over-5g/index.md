@@ -5,7 +5,7 @@ has_children: true
 nav_order: 12
 ---
 
-<img src="../assets/images/Banner_DVBI.png" /> 
+<img src="../../assets/images/Banner_DVBI.png" /> 
 
 # DVB-I Services over 5G Systems - Reference Tools Project
 
