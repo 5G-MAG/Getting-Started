@@ -5,7 +5,7 @@ has_children: true
 nav_order: 7
 ---
 
-<img src="../assets/images/Banner_MD.png" /> 
+<img src="../../assets/images/Banner_MD.png" /> 
 
 # Multimedia Delivery Protocols - Reference Tools Project
 
