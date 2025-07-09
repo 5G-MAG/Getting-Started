@@ -5,7 +5,7 @@ has_children: true
 nav_order: 11
 ---
 
-<img src="../assets/images/Banner_AIML.png" /> 
+<img src="../../assets/images/Banner_AIML.png" /> 
 
 # AI & ML Evaluation Framework - Reference Tools Project
 
