@@ -1,11 +1,15 @@
 ---
 layout: default
-title: Multimedia Content Delivery
+title: Multimedia Delivery Protocols
 has_children: true
 nav_order: 7
 ---
 
-# Multimedia content delivery protocols
+<img src="../../assets/images/Banner_MD.png" /> 
+
+# Multimedia Delivery Protocols - Reference Tools Project
+
+# Overview
 <iframe width="60%" height="520" src="https://drive.google.com/file/d/1lBt2d_toxfhqUAMr3YZw9Cm6-ZzsbpOM/preview"></iframe>
 
 [DOWNLOAD THE PRESENTATION](https://drive.google.com/file/d/1lBt2d_toxfhqUAMr3YZw9Cm6-ZzsbpOM/preview){: .btn} 

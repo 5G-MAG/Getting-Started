@@ -5,7 +5,11 @@ has_children: true
 nav_order: 8
 ---
 
-# XR Media integration in 5G
+<img src="../../assets/images/Banner_XR.png" /> 
+
+# XR Media with MPEG-I Scene Description - Reference Tools Project
+
+# Overview
 <iframe width="60%" height="520" src="https://drive.google.com/file/d/1D8G_rzx77V_W3d3NB59XcTbdUuBdtKgp/preview"></iframe>
 
 [DOWNLOAD THE PRESENTATION](https://drive.google.com/file/d/1D8G_rzx77V_W3d3NB59XcTbdUuBdtKgp/preview){: .btn} 

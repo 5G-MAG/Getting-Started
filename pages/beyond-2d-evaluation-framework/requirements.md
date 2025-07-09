@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Requirements
-parent: Multimedia Delivery Protocols
+parent: Beyond 2D Evaluation
 has_children: false
 nav_order: 4
 ---

@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Repositories
-parent: Multimedia Content Delivery
+parent: Multimedia Delivery Protocols
 has_children: false
 nav_order: 2
 ---

@@ -5,7 +5,11 @@ has_children: true
 nav_order: 3
 ---
 
-# UE data collection, reporting and event exposure
+<img src="../../assets/images/Banner_UEDC.png" /> 
+
+# UE data collection, reporting and event exposure - Reference Tools Project
+
+# Overview
 <iframe width="60%" height="520" src="https://drive.google.com/file/d/1U_hUtHC-kr9_Ydq-VeH-ESIeEeJh0xEd/preview"></iframe>
 
 [DOWNLOAD THE PRESENTATION](https://drive.google.com/file/d/1U_hUtHC-kr9_Ydq-VeH-ESIeEeJh0xEd/preview){: .btn} 
