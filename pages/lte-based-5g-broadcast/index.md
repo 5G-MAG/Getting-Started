@@ -5,7 +5,7 @@ has_children: true
 nav_order: 4
 ---
 
-<img src="../assets/images/Banner_5GBC.png" /> 
+<img src="../../assets/images/Banner_5GBC.png" /> 
 
 # 5G Broadcast - Reference Tools Project
 
