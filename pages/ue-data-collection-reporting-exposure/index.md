@@ -5,7 +5,7 @@ has_children: true
 nav_order: 3
 ---
 
-<img src="../assets/images/Banner_UEDC.png" /> 
+<img src="../../assets/images/Banner_UEDC.png" /> 
 
 # UE data collection, reporting and event exposure - Reference Tools Project
 
