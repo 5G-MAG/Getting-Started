@@ -34,3 +34,6 @@ gem "http_parser.rb", "~> 0.6.0", :platforms => [:jruby]
 
 gem "webrick"
 gem 'just-the-docs', '~> 0.10.1'
+gem "csv"
+gem "logger"
+gem "base64"

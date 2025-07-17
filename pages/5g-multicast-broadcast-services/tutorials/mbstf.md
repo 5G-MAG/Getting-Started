@@ -87,12 +87,170 @@ The command to create a tunnel at 127.0.0.1:5678 is:
 nc -u -l -o /dev/null 127.0.0.1 5678 &
 ```
 
-### Step 2: Create a single shot MBS Distribution Session for pull operation
+### Step 2: Start the mock media express server
 
+The start the express mock media server for MBSTF testing you will need to do the following things.
 
+1. To clone the rt-mbs-examples repository:
+   ```bash
+   cd ~
+   git clone -b development https://github.com/5G-MAG/rt-mbs-examples.git
+   ```
 
-### Step 3: Create a single shot MBS Distribution Session for push operation
+1. To prepare the express server for running
+   ```bash
+   cd ~/rt-mbs-examples/express-mock-media-server
+   npm install
+   ```
 
-### Step 4: Create a streaming MBS Distribution Session for pull operation on the DASH manifest
+1. Run the express server
+   ```bash
+   cd ~/rt-mbs-examples/express-mock-media-server
+   npm start
+   ```
 
-### Step 5: Create a streaming MBS Distribution Session for push operation on the DASH manifest
+The mock media server is now running on TCP port 3004 and ready to serve objects for the following tests.
+
+### Step 4: Build and run the MBSTF
+
+1. Clone the rt-mbs-transport-function repository
+   ```bash
+   cd ~
+   git clone https://github.com/5G-MAG/rt-mbs-transport-function.git
+   ```
+
+1. Build the MBSTF
+   ```bash
+   cd ~/rt-mbs-transport-function
+   meson setup build --prefix `pwd`/install
+   ninja -C build install
+   ```
+
+1. Run the MBSTF
+   ```bash
+   cd ~/rt-mbs-transport-function
+   LD_LIBRARY_PATH=`pwd`/install/lib64 export LD_LIBRARY_PATH
+   install/bin/open5gs-mbstfd
+   ```
+
+### Step 3: Create a single shot MBS Distribution Session for pull operation
+
+With the express server, from Step 2 (above), running and the MBSTF, from Step 3 (above), running, perform the following actions to test a single shot distribution from *PULL* requested media objects.
+
+Copy the following into DistSession-PULL-request.json:
+```json
+{
+    "distSession": {
+        "distSessionId": "976236ec-d35a-41ef-8575-37171d5304be",
+        "distSessionState": "ACTIVE",
+        "mbUpfTunAddr": {
+            "ipv4Addr": "127.0.0.7",
+            "portNumber": 5678
+        },
+        "upTrafficFlowInfo": {
+            "destIpAddr": { "ipv4Addr": "232.0.0.1" },
+            "portNumber": 5000
+        },
+        "mbr": "10 Mbps",
+        "objDistributionData": {
+            "objDistributionOperatingMode": "SINGLE",
+            "objAcquisitionMethod": "PULL",
+            "objAcquisitionIdsPull": ["object1", "object2", "object3", "object4"],
+            "objIngestBaseUrl": "http://127.0.0.1:3004/",
+            "objDistributionBaseUrl": "http://127.0.0.2/"
+        }
+    }
+}
+```
+
+If you are using the option to use a running MB-SMF/MB-UPF (Step 1a) then make the following changes to the JSON above:
+- The tunnel IP address for `distSession.mbUpfTunAddr.ipv4Addr` from 127.0.0.7 to the IP address for the tunnel, which was returned in the MB-SMF response.
+- The port number for `distSession.mbUpfTunAddr.portNumber` from 5678 to the port number for the tunnel, which was returned in the MB-SMF response.
+
+Then push the *DistSession* to the MBSTF to configure it:
+
+```bash
+curl --http2-prior-knowledge -H 'Content-Type: application/json' --data-binary @DistSession-PULL-request.json http://127.0.0.62:7777/nmbstf-distsession/v1/dist-sessions
+```
+
+The result should look like:
+
+**TODO: insert response JSON here**
+
+### Step 4: Create a single shot MBS Distribution Session for push operation
+
+```json
+{
+    "distSession": {
+        "distSessionId": "976236ec-d35a-41ef-8575-37171d5304be",
+        "distSessionState": "ACTIVE",
+        "mbUpfTunAddr": {
+            "ipv4Addr": "127.0.0.7",
+            "portNumber": 37423
+        },
+        "upTrafficFlowInfo": {
+            "destIpAddr": { "ipv4Addr": "232.0.0.1" },
+            "portNumber": 5000
+        },
+        "mbr": "10 Mbps",
+        "objDistributionData": {
+            "objDistributionOperatingMode": "SINGLE",
+            "objAcquisitionMethod": "PUSH",
+            "objDistributionBaseUrl": "http://127.0.0.2/"
+        }
+    }
+}
+```
+
+### Step 5: Create a streaming MBS Distribution Session for pull operation on the DASH manifest
+
+```json
+{
+    "distSession": {
+        "distSessionId": "A76236ec-d35a-41ef-8575-37171d5304be",
+        "distSessionState": "ACTIVE",
+        "mbUpfTunAddr": {
+            "ipv4Addr": "127.0.0.7",
+            "portNumber": 37423
+        },
+        "upTrafficFlowInfo": {
+            "destIpAddr": { "ipv4Addr": "232.0.0.1" },
+            "portNumber": 5000
+        },
+        "mbr": "10 Mbps",
+        "objDistributionData": {
+            "objDistributionOperatingMode": "STREAMING",
+            "objAcquisitionMethod": "PULL",
+            "objIngestBaseUrl": "https://pub-c4-b6-thdow-bbc.live.bidi.net.uk/vs-cmaf-pushb-uk/x=4/i=urn:bbc:pips:service:bbc_one_north_west/",
+            "objAcquisitionIdsPull": ["pc_hd_abr_v2.mpd"],
+            "objDistributionBaseUrl": "http://127.0.0.2/"
+        }
+    }
+}
+```
+
+### Step 6: Create a streaming MBS Distribution Session for push operation on the DASH manifest
+
+```json
+{
+    "distSession": {
+        "distSessionId": "A76236ec-d35a-41ef-8575-37171d5304be",
+        "distSessionState": "ACTIVE",
+        "mbUpfTunAddr": {
+            "ipv4Addr": "127.0.0.7",
+            "portNumber": 37423
+        },
+        "upTrafficFlowInfo": {
+            "destIpAddr": { "ipv4Addr": "232.0.0.1" },
+            "portNumber": 5000
+        },
+        "mbr": "10 Mbps",
+        "objDistributionData": {
+            "objDistributionOperatingMode": "STREAMING",
+            "objAcquisitionMethod": "PUSH",
+            "objAcquisitionIdPush": "manifest.mpd",
+            "objDistributionBaseUrl": "http://127.0.0.2/"
+        }
+    }
+}
+```
