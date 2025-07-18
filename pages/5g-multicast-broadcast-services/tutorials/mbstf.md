@@ -21,25 +21,29 @@ see more details or follow the write-up tutorial.
 ```mermaid
 ---
 title: "MBSTF and associated 5G NFs"
+block:
+  padding: 16
+  useMaxWidth: false
 ---
 block-beta
-  columns 3
-  block:g1
+  columns 10
+  block:g1:7
     columns 7
-    space space NEF["&nbsp;\nNEF\n&nbsp;"]:5
-    space space space space space space space
-    AMF["&nbsp;\nAMF\n&nbsp;"] space SMF["&nbsp;\nSMF\n&nbsp;"] space MBSMF["&nbsp;\nMB-SMF\n&nbsp;"] space MBSF["&nbsp;\nMBSF\n&nbsp;"]
-    space space space space space space space
-    RAN["&nbsp;\nNG-RAN\n&nbsp;"] space UPF["&nbsp;\nUPF\n&nbsp;"] space MBUPF["&nbsp;\nMB-UPF\n&nbsp;"] space MBSTF["&nbsp;\nMBSTF\n&nbsp;"]
-    space space invis1(("&nbsp;")) space space space space
+    space:3 text1["5MBS reference points"] space:3
+    space:2 NEF["NEF"]:5
+    space:7
+    AMF["AMF"] space SMF["SMF"] space MBSMF["MB-SMF"] space MBSF["MBSF"]
+    space:7
+    RAN["NG-RAN"] space UPF["UPF"] space MBUPF["MB-UPF"] space MBSTF["MBSTF"]
+    space:2 invis1(("&nbsp;")) space:4
   end
-  space AP["AP\nAF/AS"]
-  NEF<-- "N29mb" ---MBSMF
-  NEF<-- "Nmb5" ---MBSF
-  MBSF<-- "Nmb1" ---MBSMF
-  MBSMF<-- "N16mb" ---SMF
-  MBSF<-- "Nmb2" ---MBSTF
-  MBSMF<-- "N4mb" ---MBUPF
+  space AP["AP\nAF/AS"]:2
+  NEF-- "N29mb" ---MBSMF
+  NEF-- "Nmb5" ---MBSF
+  MBSF-- "Nmb1" ---MBSMF
+  MBSMF-- "N16mb" ---SMF
+  MBSF-- "Nmb2" ---MBSTF
+  MBSMF-- "N4mb" ---MBUPF
   MBSTF-- "Nmb9" ---MBUPF
   MBUPF-- "N19mb" ---UPF
   SMF-- "N4" ---UPF
@@ -48,10 +52,11 @@ block-beta
   AMF-- "N2" ---RAN
   MBUPF---invis1
   invis1-- "N3mb" ---RAN
-  AP<-- "N33" ---NEF
-  AP<-- "Nmb10" ---MBSF
-  AP<-- "Nmb8" ---MBSTF
+  AP-- "N33" ---NEF
+  AP-- "Nmb10" ---MBSF
+  AP-- "Nmb8" ---MBSTF
   style invis1 fill:#0000,stroke:#0000,color:#0000
+  style text1 fill:#0000,stroke:#0000
 ```
 
 ```mermaid
