@@ -16,6 +16,88 @@ see more details or follow the write-up tutorial.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/GSc6fcO6cvo?si=4-uf_4Cn6i1J9Cs6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
+## Architecture
+
+```mermaid
+---
+title: "MBSTF and associated 5G NFs"
+---
+block-beta
+  columns 3
+  block:g1
+    columns 7
+    space space NEF["&nbsp;\nNEF\n&nbsp;"]:5
+    space space space space space space space
+    AMF["&nbsp;\nAMF\n&nbsp;"] space SMF["&nbsp;\nSMF\n&nbsp;"] space MBSMF["&nbsp;\nMB-SMF\n&nbsp;"] space MBSF["&nbsp;\nMBSF\n&nbsp;"]
+    space space space space space space space
+    RAN["&nbsp;\nNG-RAN\n&nbsp;"] space UPF["&nbsp;\nUPF\n&nbsp;"] space MBUPF["&nbsp;\nMB-UPF\n&nbsp;"] space MBSTF["&nbsp;\nMBSTF\n&nbsp;"]
+    space space invis1(("&nbsp;")) space space space space
+  end
+  space AP["AP\nAF/AS"]
+  NEF<-- "N29mb" ---MBSMF
+  NEF<-- "Nmb5" ---MBSF
+  MBSF<-- "Nmb1" ---MBSMF
+  MBSMF<-- "N16mb" ---SMF
+  MBSF<-- "Nmb2" ---MBSTF
+  MBSMF<-- "N4mb" ---MBUPF
+  MBSTF-- "Nmb9" ---MBUPF
+  MBUPF-- "N19mb" ---UPF
+  SMF-- "N4" ---UPF
+  SMF-- "N11" ---AMF
+  UPF-- "N3" ---RAN
+  AMF-- "N2" ---RAN
+  MBUPF---invis1
+  invis1-- "N3mb" ---RAN
+  AP<-- "N33" ---NEF
+  AP<-- "Nmb10" ---MBSF
+  AP<-- "Nmb8" ---MBSTF
+  style invis1 fill:#0000,stroke:#0000,color:#0000
+```
+
+```mermaid
+---
+title: "MBSTF Distribution Session Creation"
+---
+sequenceDiagram
+  participant RAN as NG-RAN
+  participant MBUPF as MB-UPF
+  participant MBSMF as MB-SMF
+  participant MBSF
+  participant MBSTF
+  participant AP as AF/AS
+
+  activate RAN
+  activate MBSMF
+  activate MBUPF
+  activate MBSF
+  activate MBSTF
+
+  AP->>MBSF : Create MBS User Service
+  MBSF-->>AP : MBS User Service created
+  AP->>MBSF : Add User Data to MBS User Service
+  MBSF->>MBSMF : Add MBS Session and request tunnel
+  MBSMF->>MBUPF : Setup Multicast/Broadcast service and<br/>create an ingress tunnel
+  MBUPF-->>MBSMF : MBS created and tunnel details
+  MBSMF-->>MBSF : MBS Session created and tunnel details
+  MBSF->>MBSTF : Create Distribution Session<br/>using tunnel from MB-SMF
+  MBSTF-->>MBSF : Distribution Session created<br/>include push service URL if requested
+  MBSF-->>AP : MBS User Data Session created<br/>include push service URL if requested
+  alt Push Distribution Session
+    AP->>MBSTF : Push object(s) for Distribution Session
+    MBSTF-->>AP : Object received OK
+  else Pull Distribution Session
+    MBSTF->>AP : Fetch object(s) described<br/>in Distribution Session
+    AP-->>MBSTF : Response with object(s)
+  end
+  MBSTF->>MBUPF : Package object(s) in multicast FLUTE session packets and send to tunnel at given rate.
+
+  deactivate MBSTF
+  deactivate MBSF
+  deactivate MBSMF
+  deactivate MBUPF
+  deactivate RAN
+```
+
 ## Prerequisites
 
 This tutorial assumes that you have cloned and built the [rt-mbs-transport-function repository](https://github.com/5G-MAG/rt-mbs-transport-function).
@@ -82,9 +164,9 @@ This can be useful if you don't want to start up 5G core functions and just want
 
 For this we will need the `netcat` or `nc` command from the *netcat* package (*nmap-ncat* on RHEL based systems).
 
-The command to create a tunnel at 127.0.0.1:5678 is:
+The command to create a tunnel at 127.0.0.7:5678 is:
 ```sh
-nc -u -l -o /dev/null 127.0.0.1 5678 &
+nc -u -l 127.0.0.7 5678 > /dev/null &
 ```
 
 ### Step 2: Start the mock media express server
@@ -111,29 +193,31 @@ The start the express mock media server for MBSTF testing you will need to do th
 
 The mock media server is now running on TCP port 3004 and ready to serve objects for the following tests.
 
-### Step 4: Build and run the MBSTF
+### Step 3: Run the MBSTF
 
-1. Clone the rt-mbs-transport-function repository
-   ```bash
-   cd ~
-   git clone https://github.com/5G-MAG/rt-mbs-transport-function.git
-   ```
+If the build and install instructions from [rt-mbs-transport-function](https://github.com/5G-MAG/rt-mbs-transport-function) have been followed, then the MBSTF can be run using:
+```bash
+sudo /usr/local/bin/open5gs-mbstfd &
+```
 
-1. Build the MBSTF
-   ```bash
-   cd ~/rt-mbs-transport-function
-   meson setup build --prefix `pwd`/install
-   ninja -C build install
-   ```
+### Step 4: Start and configure Wireshark to capture the encapsulated FLUTE
 
-1. Run the MBSTF
-   ```bash
-   cd ~/rt-mbs-transport-function
-   LD_LIBRARY_PATH=`pwd`/install/lib64 export LD_LIBRARY_PATH
-   install/bin/open5gs-mbstfd
-   ```
+1. Set up the packet decoding:
+   - In the *Analyze* menu, select *Decode As...* to open the "Decode As..." dialog.
+   - If a rule does not exist for UDP with a port number matching the UDP tunnel (the port number given for the first tunnel in the response in Step 1a or `5678` for Step 1b), then create a new rule, set the field to `UDP port`, set the port number to the tunnel port and set the Current decoding as `IPv4`.
+   - If a rule does not exist for the UDP port `5000` (the port we will use for the multicast) then create a new rule for a "UDP port", set the port number to `5000` and the Current decoding to `ALC`.
+   - Select the *Save* or *OK* button to close the dialog. Saving will store the rules for next time Wireshark is started.
+   ![wireshark Decode As dialog example](../../../assets/images/5mbs/wireshark-decode-as-dialog.png)
 
-### Step 3: Create a single shot MBS Distribution Session for pull operation
+2. Select (but don't start) the correct interface for capture. This will usually be the ethernet interface if you used Step 1a or the local loopback (lo) interface if you are using Step 1b.
+
+3. Enter the filter expression if...:
+   - You followed Step 1a, enter a filter of `host <tunnel-ip-address>`, where `<tunnel-ip-address>` is the IP address of the tunnel given in the response for 1a.
+   - You followed Step 1b, enter a filter of `host 127.0.0.7`.
+
+4. Then start the capture.
+
+### Step 5: Create a single shot MBS Distribution Session for pull operation
 
 With the express server, from Step 2 (above), running and the MBSTF, from Step 3 (above), running, perform the following actions to test a single shot distribution from *PULL* requested media objects.
 
@@ -175,9 +259,13 @@ curl --http2-prior-knowledge -H 'Content-Type: application/json' --data-binary @
 
 The result should look like:
 
-**TODO: insert response JSON here**
+**TODO**: insert response JSON here
 
-### Step 4: Create a single shot MBS Distribution Session for push operation
+The wireshark capture will look like:
+
+**TODO**: wireshark screen shots showing FDT and media packets
+
+### Step 6: Create a single shot MBS Distribution Session for push operation
 
 ```json
 {
@@ -202,7 +290,7 @@ The result should look like:
 }
 ```
 
-### Step 5: Create a streaming MBS Distribution Session for pull operation on the DASH manifest
+### Step 7: Create a streaming MBS Distribution Session for pull operation on the DASH manifest
 
 ```json
 {
@@ -229,7 +317,7 @@ The result should look like:
 }
 ```
 
-### Step 6: Create a streaming MBS Distribution Session for push operation on the DASH manifest
+### Step 8: Create a streaming MBS Distribution Session for push operation on the DASH manifest
 
 ```json
 {

@@ -39,6 +39,10 @@ aux_links:
 theme: just-the-docs
 color_scheme: custom
 
+# Just-the-docs mermaid diagrams configuration
+mermaid:
+  version: "11.9.0"
+
 # configures the default callouts described in: https://just-the-docs.github.io/just-the-docs/docs/ui-components/callouts/
 callouts_level: quiet # or loud
 callouts:
