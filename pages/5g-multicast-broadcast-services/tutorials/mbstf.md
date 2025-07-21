@@ -278,7 +278,7 @@ Copy the following into DistSession-PULL-request.json:
 ```json
 {
     "distSession": {
-        "distSessionId": "976236ec-d35a-41ef-8575-37171d5304be",
+        "distSessionId": "cab87e4b-01b1-4138-9018-7d30bcb1606b",
         "distSessionState": "ACTIVE",
         "mbUpfTunAddr": {
             "ipv4Addr": "127.0.0.7",
@@ -312,11 +312,35 @@ curl --http2-prior-knowledge -H 'Content-Type: application/json' --data-binary @
 
 The result should look like:
 
-**TODO**: insert response JSON here
+```json
+{
+	"distSession":	{
+		"distSessionId":	"cab87e4b-01b1-4138-9018-7d30bcb1606b",
+		"distSessionState":	"ACTIVE",
+		"objDistributionData":	{
+			"objDistributionOperatingMode":	"SINGLE",
+			"objAcquisitionMethod":	"PULL",
+			"objAcquisitionIdsPull":	["object1", "object2", "object3", "object4"],
+			"objIngestBaseUrl":	"http://127.0.0.1:3004/",
+			"objDistributionBaseUrl":	"http://127.0.0.2/"
+		}
+	}
+}
+```
 
 The wireshark capture will look like (sequence step 11):
 
-**TODO**: wireshark screen shots showing FDT and media packets
+![Wireshark capture showing the FDT (TOI 0) packet for the first object from the PULL SINGLE Distribution Session](../../../assets/images/5mbs/wireshark-object1-fdt.png)
+
+This shows the FDT entry for the first object pulled from the express server. Examining the packet it can be noticed that:
+1. There is an outer IP and UDP protocol headers showing the packet is sent from 127.0.0.1:58158 to 127.0.0.7:49484 because an MB-UPF was used for this example which presented its tunnel at 127.0.0.7:49484.
+1. The next pair of IP and UDP headers show that this encapculated packet is from 127.0.0.1:5000 to multicast address 232.0.0.1:5000, as requested in the DistributionSession creation request.
+1. The packet contents are a FLUTE packet for "TSI: 0 TOI: 0" (from the packet summary) which indicates an FDT packet. The FDT contents show that it is currently sending a 39 byte file referenced as `TOI="1"` with a content location of "http://127.0.0.2/object1". The "http://127.0.0.2" prefix is the one requested by the *objDistributionBaseUrl* field in the DistributionSession request, and has replaced the origin prefix of "http://127.0.0.1:3004" (*objIngestBaseUrl* field).
+1. The next packet contains the GTP encapsulated version of this packet. That packet is being multicast to the RAN from the MB-UPF.
+
+![Wireshark capture showing the FDT (TOI 0) packet for the first object from the PULL SINGLE Distribution Session](../../../assets/images/5mbs/wireshark-object1-file.png)
+
+This screenshot shows the FLUTE packet for TOI 1, the *object1* media object itself.
 
 ### Step 6: Create a single shot MBS Distribution Session for push operation
 
@@ -379,7 +403,7 @@ Copy the following into DistSession-PUSH-request.json:
 ```json
 {
     "distSession": {
-        "distSessionId": "976236ec-d35a-41ef-8575-37171d5304be",
+        "distSessionId": "3e3dc3fb-0677-42a3-86c6-bc44e3544b0f",
         "distSessionState": "ACTIVE",
         "mbUpfTunAddr": {
             "ipv4Addr": "127.0.0.7",
@@ -508,7 +532,7 @@ sequenceDiagram
 ```json
 {
     "distSession": {
-        "distSessionId": "A76236ec-d35a-41ef-8575-37171d5304be",
+        "distSessionId": "541ebbd2-ebf9-496b-a3b8-dcd1c17fbc9d",
         "distSessionState": "ACTIVE",
         "mbUpfTunAddr": {
             "ipv4Addr": "127.0.0.7",
@@ -595,7 +619,7 @@ sequenceDiagram
 ```json
 {
     "distSession": {
-        "distSessionId": "A76236ec-d35a-41ef-8575-37171d5304be",
+        "distSessionId": "33acd99a-8564-42a1-a96c-9f293d90c41e",
         "distSessionState": "ACTIVE",
         "mbUpfTunAddr": {
             "ipv4Addr": "127.0.0.7",
