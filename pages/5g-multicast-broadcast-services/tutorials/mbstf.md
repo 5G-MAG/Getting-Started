@@ -36,7 +36,7 @@ block-beta
     AMF["AMF"] space SMF["SMF"] space MBSMF["MB-SMF"] space MBSF["MBSF"]
     space:7
     RAN["NG-RAN"] space UPF["UPF"] space MBUPF["MB-UPF"] space MBSTF["MBSTF"]
-    space:2 invis1(("-")) space:4
+    invis1((" ")) space:3 invis2((" ")) space:2
   end
   space AP["AP\nAF/AS"]
 
@@ -52,13 +52,15 @@ block-beta
   SMF-- "N11" ---AMF
   UPF-- "N3" ---RAN
   AMF-- "N2" ---RAN
-  MBUPF---invis1
-  invis1-- "N3mb" ---RAN
+  MBUPF---invis2
+  invis2-- "N3mb" ---invis1
+  invis1---RAN
   AP-- "N33" ---NEF
   AP-- "Nmb10" ---MBSF
   AP-- "Nmb8" ---MBSTF
 
   style invis1 fill:#0000,stroke:#0000,color:#0000
+  style invis2 fill:#0000,stroke:#0000,color:#0000
   style text1 fill:#0000,stroke:#0000
 ```
 
@@ -97,10 +99,10 @@ sequenceDiagram
 
   AP->>MBSF : Create MBS User Service
   MBSF-->>AP : MBS User Service created
-  AP->>MBSF : Add User Data to MBS User Service
+  AP->>MBSF : Add MBS User Data Ingest<br/>Session to MBS User Service
   rect rgb(160, 255, 160)
     MBSF->>MBSMF : Add MBS Session and request tunnel
-    MBSMF->>MBUPF : Setup Multicast/Broadcast service and<br/>create an ingress tunnel
+    MBSMF->>MBUPF : Set up Multicast/Broadcast service and<br/>create an ingress tunnel
     MBUPF-->>MBSMF : MBS created and tunnel details
     MBSMF-->>MBSF : MBS Session created and tunnel details
   end
@@ -226,6 +228,8 @@ provisioning using the command line to perform the actions that the MBSF would o
 ---
 title: "MBS User Service Creation: PULL Single Shot Distribution Session creation on the MBSTF"
 config:
+  themeCSS: |
+    .loopLine { stroke-width: 4px; stroke-dasharray: 5,5; }
   sequence:
     showSequenceNumbers: true
 ---
@@ -233,8 +237,8 @@ sequenceDiagram
   participant RAN as NG-RAN
   participant MBUPF as MB-UPF
   participant MBSMF as MB-SMF
-  participant MBSF
   participant MBSTF
+  participant MBSF
   participant AP as AF/AS
 
   activate RAN
@@ -243,9 +247,9 @@ sequenceDiagram
   activate MBSF
   activate MBSTF
 
-  AP->>MBSF : Add User Data to MBS User Service
+  AP->>MBSF : Add MBS User Data Ingest<br/>Session to MBS User Service
   MBSF->>MBSMF : Add MBS Session and request tunnel
-  MBSMF->>MBUPF : Setup Multicast/Broadcast service and<br/>create an ingress tunnel
+  MBSMF->>MBUPF : Set up Multicast/Broadcast service and<br/>create an ingress tunnel
   MBUPF-->>MBSMF : MBS created and tunnel details
   MBSMF-->>MBSF : MBS Session created and tunnel details
   rect rgb(160,255,160)
@@ -333,10 +337,10 @@ The wireshark capture will look like (sequence step 11):
 ![Wireshark capture showing the FDT (TOI 0) packet for the first object from the PULL SINGLE Distribution Session](../../../assets/images/5mbs/wireshark-object1-fdt.png)
 
 This shows the FDT entry for the first object pulled from the express server. Examining the packet it can be noticed that:
-1. There is an outer IP and UDP protocol headers showing the packet is sent from 127.0.0.1:58158 to 127.0.0.7:49484 because an MB-UPF was used for this example which presented its tunnel at 127.0.0.7:49484.
-1. The next pair of IP and UDP headers show that this encapculated packet is from 127.0.0.1:5000 to multicast address 232.0.0.1:5000, as requested in the DistributionSession creation request.
-1. The packet contents are a FLUTE packet for "TSI: 0 TOI: 0" (from the packet summary) which indicates an FDT packet. The FDT contents show that it is currently sending a 39 byte file referenced as `TOI="1"` with a content location of "http://127.0.0.2/object1". The "http://127.0.0.2" prefix is the one requested by the *objDistributionBaseUrl* field in the DistributionSession request, and has replaced the origin prefix of "http://127.0.0.1:3004" (*objIngestBaseUrl* field).
-1. The next packet contains the GTP encapsulated version of this packet. That packet is being multicast to the RAN from the MB-UPF.
+1. There is an outer IP and UDP protocol headers showing the packet is sent from 127.0.0.1:58158 to 127.0.0.7:49484 &#x2780; because an MB-UPF was used for this example which presented its tunnel at 127.0.0.7:49484.
+1. The next pair of IP and UDP headers show that this encapculated packet is from 127.0.0.1:5000 to multicast address 232.0.0.1:5000 &#x2781;, as requested in the DistributionSession creation request.
+1. The packet contents are a FLUTE packet for "TSI: 0 TOI: 0" (from the packet summary &#x2782;) which indicates an FDT packet. The FDT contents show that it is currently sending a 39 byte file &#x2785; referenced as `TOI="1"` &#x2783; with a content location of "http://127.0.0.2/object1" &#x2784;. The "http://127.0.0.2" prefix is the one requested by the *objDistributionBaseUrl* field in the DistributionSession request, and has replaced the origin prefix of "http://127.0.0.1:3004" (*objIngestBaseUrl* field).
+1. The next packet contains the GTP encapsulated version of this packet &#x2786;. That packet is being multicast to the RAN from the MB-UPF.
 
 ![Wireshark capture showing the FDT (TOI 0) packet for the first object from the PULL SINGLE Distribution Session](../../../assets/images/5mbs/wireshark-object1-file.png)
 
@@ -351,6 +355,8 @@ provisioning using the command line to perform the actions that the MBSF and AP 
 ---
 title: "MBS User Service Creation: PUSH Single Shot Distribution Session creation on the MBSTF"
 config:
+  themeCSS: |
+    .loopLine { stroke-width: 4px; stroke-dasharray: 5,5; }
   sequence:
     showSequenceNumbers: true
 ---
@@ -358,8 +364,8 @@ sequenceDiagram
   participant RAN as NG-RAN
   participant MBUPF as MB-UPF
   participant MBSMF as MB-SMF
-  participant MBSF
   participant MBSTF
+  participant MBSF
   participant AP as AF/AS
 
   activate RAN
@@ -368,9 +374,9 @@ sequenceDiagram
   activate MBSF
   activate MBSTF
 
-  AP->>MBSF : Add User Data to MBS User Service
+  AP->>MBSF : Add MBS User Data Ingest<br/>Session to MBS User Service
   MBSF->>MBSMF : Add MBS Session and request tunnel
-  MBSMF->>MBUPF : Setup Multicast/Broadcast service and<br/>create an ingress tunnel
+  MBSMF->>MBUPF : Set up Multicast/Broadcast service and<br/>create an ingress tunnel
   MBUPF-->>MBSMF : MBS created and tunnel details
   MBSMF-->>MBSF : MBS Session created and tunnel details
   rect rgb(160, 255, 160)
@@ -407,7 +413,7 @@ Copy the following into DistSession-PUSH-request.json:
         "distSessionState": "ACTIVE",
         "mbUpfTunAddr": {
             "ipv4Addr": "127.0.0.7",
-            "portNumber": 37423
+            "portNumber": 5678
         },
         "upTrafficFlowInfo": {
             "destIpAddr": { "ipv4Addr": "232.0.0.1" },
@@ -459,6 +465,8 @@ The wireshark capture will look like (sequence step 11):
 ---
 title: "MBS User Service Creation: PULL STREAMING Distribution Session creation on the MBSTF"
 config:
+  themeCSS: |
+    .loopLine { stroke-width: 4px; stroke-dasharray: 5,5; }
   sequence:
     showSequenceNumbers: true
 ---
@@ -466,8 +474,8 @@ sequenceDiagram
   participant RAN as NG-RAN
   participant MBUPF as MB-UPF
   participant MBSMF as MB-SMF
-  participant MBSF
   participant MBSTF
+  participant MBSF
   participant AP as AF/AS
 
   activate RAN
@@ -476,9 +484,9 @@ sequenceDiagram
   activate MBSF
   activate MBSTF
 
-  AP->>MBSF : Add User Data to MBS User Service
+  AP->>MBSF : Add MBS User Data Ingest<br/>Session to MBS User Service
   MBSF->>MBSMF : Add MBS Session and request tunnel
-  MBSMF->>MBUPF : Setup Multicast/Broadcast service and<br/>create an ingress tunnel
+  MBSMF->>MBUPF : Set up Multicast/Broadcast service and<br/>create an ingress tunnel
   MBUPF-->>MBSMF : MBS created and tunnel details
   MBSMF-->>MBSF : MBS Session created and tunnel details
   rect rgb(160, 255, 160)
@@ -536,7 +544,7 @@ sequenceDiagram
         "distSessionState": "ACTIVE",
         "mbUpfTunAddr": {
             "ipv4Addr": "127.0.0.7",
-            "portNumber": 37423
+            "portNumber": 5678
         },
         "upTrafficFlowInfo": {
             "destIpAddr": { "ipv4Addr": "232.0.0.1" },
@@ -546,8 +554,8 @@ sequenceDiagram
         "objDistributionData": {
             "objDistributionOperatingMode": "STREAMING",
             "objAcquisitionMethod": "PULL",
-            "objIngestBaseUrl": "https://pub-c4-b6-thdow-bbc.live.bidi.net.uk/vs-cmaf-pushb-uk/x=4/i=urn:bbc:pips:service:bbc_one_north_west/",
-            "objAcquisitionIdsPull": ["pc_hd_abr_v2.mpd"],
+            "objIngestBaseUrl": "https://livesim2.dashif.org/livesim2/WAVE/vectors/cfhd_sets/12.5_25_50/t1/2022-10-17/",
+            "objAcquisitionIdsPull": ["stream.mpd"],
             "objDistributionBaseUrl": "http://127.0.0.2/"
         }
     }
@@ -560,6 +568,8 @@ sequenceDiagram
 ---
 title: "MBS User Service Creation: PUSH STREAMING Distribution Session creation on the MBSTF"
 config:
+  themeCSS: |
+    .loopLine { stroke-width: 4px; stroke-dasharray: 10,5; }
   sequence:
     showSequenceNumbers: true
 ---
@@ -567,8 +577,8 @@ sequenceDiagram
   participant RAN as NG-RAN
   participant MBUPF as MB-UPF
   participant MBSMF as MB-SMF
-  participant MBSF
   participant MBSTF
+  participant MBSF
   participant AP as AF/AS
 
   activate RAN
@@ -577,9 +587,9 @@ sequenceDiagram
   activate MBSF
   activate MBSTF
 
-  AP->>MBSF : Add User Data to MBS User Service
+  AP->>MBSF : Add MBS User Data Ingest<br/>Session to MBS User Service
   MBSF->>MBSMF : Add MBS Session and request tunnel
-  MBSMF->>MBUPF : Setup Multicast/Broadcast service and<br/>create an ingress tunnel
+  MBSMF->>MBUPF : Set up Multicast/Broadcast service and<br/>create an ingress tunnel
   MBUPF-->>MBSMF : MBS created and tunnel details
   MBSMF-->>MBSF : MBS Session created and tunnel details
   rect rgb(160, 255, 160)
@@ -623,7 +633,7 @@ sequenceDiagram
         "distSessionState": "ACTIVE",
         "mbUpfTunAddr": {
             "ipv4Addr": "127.0.0.7",
-            "portNumber": 37423
+            "portNumber": 5678
         },
         "upTrafficFlowInfo": {
             "destIpAddr": { "ipv4Addr": "232.0.0.1" },
