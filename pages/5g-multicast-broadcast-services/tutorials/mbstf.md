@@ -76,6 +76,8 @@ You should follow the build instructions for the [rt-mbs-transport-function repo
 
 For these examples you will also need Wireshark, to view the results, and either build the 5G-MAG version of Open5GS with UDP tunnelling or the install the *netcat* package to fake an MB-UPF UDP tunnel.
 
+---
+
 ### Step 1a: (Optional) Create an MBS Session on the MB-UPF with UDP tunnel
 
 This is the first option for creating a UDP tunnel for multicast distribution. This implements the following highlighted steps from creating an MBS User Service.
@@ -157,6 +159,8 @@ curl --http2-prior-knowledge -H 'Content-Type: application/json' --data @create-
 
 The response will contain the UDP tunnel details at JSON path `.mbsSession.ingressTunAddr`. These will need to be substituted in the `.distSession.mbUpfTunAddr` object in the Distribution Session JSON objects in the following steps in order to direct the output to the MB-UPF.
 
+---
+
 ### Step 1b: (Optional) Fake a UDP tunnel
 
 This can be useful if you don't want to start up 5G core functions and just want to examine the multicast coming out of the MBSTF. This will simulate a UDP tunnel as would be provided by the MB-UPF.
@@ -167,6 +171,8 @@ The command to create a tunnel at 127.0.0.7:5678 is:
 ```sh
 nc -u -l 127.0.0.7 5678 > /dev/null &
 ```
+
+---
 
 ### Step 2: Start the mock media express server
 
@@ -195,12 +201,16 @@ To start the express mock media server you will need to do the following things.
 
 The mock media server is now running on TCP port 3004 and ready to serve objects for the following tutorial examples.
 
+---
+
 ### Step 3: Run the MBSTF
 
 If the build and install instructions from [rt-mbs-transport-function](https://github.com/5G-MAG/rt-mbs-transport-function) have been followed, then the MBSTF can be run using:
 ```bash
 sudo /usr/local/bin/open5gs-mbstfd &
 ```
+
+---
 
 ### Step 4: Start and configure Wireshark to capture the encapsulated FLUTE
 
@@ -218,6 +228,8 @@ sudo /usr/local/bin/open5gs-mbstfd &
    - You followed Step 1b, enter a filter of `host 127.0.0.7`.
 
 4. Then start the capture.
+
+---
 
 ### Step 5: Create a single shot MBS Distribution Session for pull operation
 
@@ -346,6 +358,8 @@ This shows the FDT entry for the first object pulled from the express server. Ex
 
 This screenshot shows the FLUTE packet for TOI 1, the *object1* media object itself.
 
+---
+
 ### Step 6: Create a single shot MBS Distribution Session for push operation
 
 This tests the SINGLE distribution mode for *PUSH*ed content. This executes the following highlighted steps from MBS User Service
@@ -441,23 +455,46 @@ curl --http2-prior-knowledge -H 'Content-Type: application/json' --data-binary @
 
 The result should look like:
 
-**TODO**: insert response JSON here
+```json
+{
+    "distSession": {
+        "distSessionId": "3e3dc3fb-0677-42a3-86c6-bc44e3544b0f",
+        "distSessionState": "ACTIVE",
+        "objDistributionData": {
+            "objDistributionOperatingMode": "SINGLE",
+            "objAcquisitionMethod": "PUSH",
+            "objIngestBaseUrl": "http://127.0.0.1:33945/",
+            "objDistributionBaseUrl": "http://127.0.0.2/"
+        }
+    }
+}
+```
 
 Take note of the *objAcquisitionBaseUrl* prefix URL for pushing the media objects to, e.g.:
 ```bash
-push_prefix_url="http://127.0.0.1:12345"
+push_prefix_url="http://127.0.0.1:33945/"
 ```
 
 Then we can send objects to be packaged and sent via the multicast channel (sequence steps 9 and 10). For example to send the `meson.build` file from the rt-mbs-transport-function repository that was cloned earlier we perform an HTTP PUT of the file to a URL with the prefix we remembered earlier:
 ```bash
-curl -H 'Content-Type: text/plain' -X PUT --data-binary @${HOME}/rt-mbs-transport-function/meson.build "${push_prefix_url}/example/path/to/object.txt"
+curl -H 'Content-Type: text/plain' -X PUT --data-binary @"${HOME}/rt-mbs-transport-function/meson.build" "${push_prefix_url}example/path/to/object.txt"
 ```
 
-Once pushed the object is packaged as FLUTE and sent to the UDP tunnel.
+Once pushed, the object is packaged as FLUTE and sent to the UDP tunnel.
 
-The wireshark capture will look like (sequence step 11):
+The wireshark capture will look something like (sequence step 11):
 
-**TODO**: wireshark screen shots showing FDT and media packets
+![Wireshark showing FDT packet for SINGLE PUSH distribution](../../../assets/images/5mbs/wireshark-push-single-fdt.png)
+
+This shows the FDT for the pushed file. This is encapsulated in the same way as the PULL example in Step 5. The *Content-Location* field in the FDT File entry shows it using the *objDistributionBaseUrl* followed by the path that the object was `PUT` to following the *objIngestBaseUrl*.
+
+The file packet will look something like:
+
+![Wireshark showing first file object packet for SINGLE PUSH distribution](../../../assets/images/5mbs/wireshark-push-single-file.png)
+
+This packet (packet number 9 in the above image), containing the first bytes of the `meson.build` file, is followed by the rest of the file in packet number 11.
+
+---
 
 ### Step 7: Create a streaming MBS Distribution Session for pull operation on the DASH manifest
 
@@ -561,6 +598,38 @@ sequenceDiagram
     }
 }
 ```
+
+```json
+{
+    "distSession": {
+        "distSessionId": "541ebbd2-ebf9-496b-a3b8-dcd1c17fbc9d",
+        "distSessionState": "ACTIVE",
+        "objDistributionData": {
+            "objDistributionOperatingMode": "STREAMING",
+            "objAcquisitionMethod": "PULL",
+            "objAcquisitionIdsPull": [
+                "stream.mpd"
+            ],
+            "objIngestBaseUrl": "https://livesim2.dashif.org/livesim2/WAVE/vectors/cfhd_sets/12.5_25_50/t1/2022-10-17/",
+            "objDistributionBaseUrl": "http://127.0.0.2/"
+        }
+    }
+}
+```
+
+![Wireshark screenshot showing the FDT with File entry for the MPD sent as part of a PULL STREAMING Distribution Session](../../../assets/images/5mbs/wireshark-pull-streaming-mpd-fdt.png)
+
+![Wireshark screenshot showing the MPD file contents sent as part of a PULL STREAMING Distribution Session](../../../assets/images/5mbs/wireshark-pull-streaming-mpd-file.png)
+
+![Wireshark screenshot showing the FDT with File entry for the initialization segment sent as part of a PULL STREAMING Distribution Session](../../../assets/images/5mbs/wireshark-pull-streaming-init-seg-fdt.png)
+
+![Wireshark screenshot showing the initialization segment file contents sent as part of a PULL STREAMING Distribution Session](../../../assets/images/5mbs/wireshark-pull-streaming-init-seg-file.png)
+
+![Wireshark screenshot showing the FDT with File entry for the first live media segment sent as part of a PULL STREAMING Distribution Session](../../../assets/images/5mbs/wireshark-pull-streaming-media-seg-fdt.png)
+
+![Wireshark screenshot showing the FDT with File entry for the second live media segment sent as part of a PULL STREAMING Distribution Session](../../../assets/images/5mbs/wireshark-pull-streaming-media-seg2-fdt.png)
+
+---
 
 ### Step 8: Create a streaming MBS Distribution Session for push operation on the DASH manifest
 
