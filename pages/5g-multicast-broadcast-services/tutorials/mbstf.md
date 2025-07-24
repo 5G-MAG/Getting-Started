@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: default-codewrap
 title: Initial MBS Transport Function API examples
 parent: Tutorials
 grand_parent: 5G Multicast Broadcast (MBS)
@@ -413,7 +413,6 @@ sequenceDiagram
 ```
 
 With the following processes running:
-- express server from Step 2
 - the MBSTF from Step 3
 - Wireshark from step 4
 
@@ -498,6 +497,9 @@ This packet (packet number 9 in the above image), containing the first bytes of 
 
 ### Step 7: Create a streaming MBS Distribution Session for pull operation on the DASH manifest
 
+This tests the STREAMING distribution mode for *PULL*ed DASH manifest file (MPD). This executes the following highlighted steps
+from MBS User Service provisioning using the command line to perform the actions that the MBSF would otherwise perform.
+
 ```mermaid
 ---
 title: "MBS User Service Creation: PULL STREAMING Distribution Session creation on the MBSTF"
@@ -574,6 +576,13 @@ sequenceDiagram
   deactivate RAN
 ```
 
+With the following processes running:
+- the MBSTF from Step 3
+- Wireshark from step 4
+
+...perform the following actions to test a streaming distribution from *PULL* of a DASH MPD.
+
+Copy the following into a file called `DistSession-DASH-PULL-request.json`:
 ```json
 {
     "distSession": {
@@ -599,6 +608,20 @@ sequenceDiagram
 }
 ```
 
+If you are using the option to use a running MB-SMF/MB-UPF (Step 1a) then make the following changes to the JSON above:
+- The tunnel IP address for `distSession.mbUpfTunAddr.ipv4Addr` from 127.0.0.7 to the IP address for the tunnel, which was returned in the MB-SMF response.
+- The port number for `distSession.mbUpfTunAddr.portNumber` from 5678 to the port number for the tunnel, which was returned in the MB-SMF response.
+
+When pushed as a configuration for the MBSTF, this will configure a Distribution Session based on a single media manifest file. This implementation of the MBSTF will only handle `live-profile` MPD files. When the MBSTF is configured for *STREAMING* using a DASH MPD the MBSTF will then queue, for inclusion in the FLUTE stream, the MPD, the initialization segments and then, as they become available, each media segment for each *Representation* in the MPD. 
+
+To push the *DistSession* to the MBSTF to configure it (sequence steps 6 and 7), use the following command:
+
+```bash
+curl --http2-prior-knowledge -H 'Content-Type: application/json' --data-binary @DistSession-DASH-PULL-request.json http://127.0.0.62:7777/nmbstf-distsession/v1/dist-sessions
+```
+
+The result should look like:
+
 ```json
 {
     "distSession": {
@@ -617,21 +640,50 @@ sequenceDiagram
 }
 ```
 
+The MBSTF will now send the MPD followed by the initialization segments (if present in the MPD) and then queue each media segment at its availability time. If the MPD indicates a refresh time, then the MPD will be re-*PULL*ed at that time, and if it has changed then the new MPD and any initialization segments will be included in the FLUTE stream again.
+
+The wireshark capture will look like (sequence step 11 onwards):
+
 ![Wireshark screenshot showing the FDT with File entry for the MPD sent as part of a PULL STREAMING Distribution Session](../../../assets/images/5mbs/wireshark-pull-streaming-mpd-fdt.png)
+
+This packet contains the FDT with a File entry for the MPD. The *objIngestBaseUrl* from the Distribution Session configuration has been substituted for the *objDistributionBaseUrl* in the FDT File entry, resulting in "http://127.0.0.2/stream.mpd" being the advertised path of the MPD file.
+
+---
 
 ![Wireshark screenshot showing the MPD file contents sent as part of a PULL STREAMING Distribution Session](../../../assets/images/5mbs/wireshark-pull-streaming-mpd-file.png)
 
+The file contents for this example are contained in packets 7 and 9, the screenshot above shows the first packet of the MPD being carried as TOI 1 in the FLUTE stream. Packets 8 and 10 are the MB-UPF forwarding packets 7 and 9 in GTP encapsulation via multicast channel to the NG-RAN (gNodeB).
+
+---
+
 ![Wireshark screenshot showing the FDT with File entry for the initialization segment sent as part of a PULL STREAMING Distribution Session](../../../assets/images/5mbs/wireshark-pull-streaming-init-seg-fdt.png)
+
+This packet shows the initialization segment FDT File entry. Because this is fetched from the same source as the MPD, the *objDistributionBaseUrl* substitution happens to this URL too, resulting in the avertised path being "http://127.0.0.2/1/init.mp4".
+
+---
 
 ![Wireshark screenshot showing the initialization segment file contents sent as part of a PULL STREAMING Distribution Session](../../../assets/images/5mbs/wireshark-pull-streaming-init-seg-file.png)
 
+The screenshot above shows the initialization segment contents being sent in the FLUTE stream as TOI 2 (as indicated by the FDT File entry for the initialization segment).
+
+---
+
 ![Wireshark screenshot showing the FDT with File entry for the first live media segment sent as part of a PULL STREAMING Distribution Session](../../../assets/images/5mbs/wireshark-pull-streaming-media-seg-fdt.png)
 
+The FDT File entry for the first media segment (TOI=3 in this example) shows the media segment that was the next live segment at the time. This is advertised in the FDT File entry being for the "http://127.0.0.2/1/876641739.m4s" location.
+
+---
+
 ![Wireshark screenshot showing the FDT with File entry for the second live media segment sent as part of a PULL STREAMING Distribution Session](../../../assets/images/5mbs/wireshark-pull-streaming-media-seg2-fdt.png)
+
+The FDT File entry for the second media segment (TOI=4 in this example) shows the media segment that was the next being sent at a segment duration after the first (just after it became available). This is advertised in the FDT File entry being for the "http://127.0.0.2/1/876641740.m4s" location.
 
 ---
 
 ### Step 8: Create a streaming MBS Distribution Session for push operation on the DASH manifest
+
+This tests the STREAMING distribution mode for *PUSH*ed DASH manifest file (MPD). This executes the following highlighted steps
+from MBS User Service provisioning using the command line to perform the actions that the MBSF would otherwise perform.
 
 ```mermaid
 ---
@@ -695,6 +747,17 @@ sequenceDiagram
   deactivate RAN
 ```
 
+This configuration behaves in a similar manner as the *PULL* *STREAMING* configuration in Step 7 except that:
+1. The MPD is the only file whose distribution URL, as given in the *Content-Location* attribute in the distributed FDT File entry, is subject to substitution with the *objDistributionBaseUrl* value from the configuration (it is the only file pushed to the *objIngestBaseUrl* URL prefix). All initialization segments and media segments will be distributed with the *Content-Location* attribute set to the original media server URL.
+1. The MPD is not automatically refreshed. To refresh, push another MPD to the ingest URL.
+
+With the following processes running:
+- the MBSTF from Step 3
+- Wireshark from step 4
+
+...perform the following actions to test a streaming distribution from the *PUSH* of a DASH MPD.
+
+Copy the following into a file called `DistSession-DASH-PUSH-request.json`:
 ```json
 {
     "distSession": {
@@ -718,3 +781,52 @@ sequenceDiagram
     }
 }
 ```
+
+If you are using the option to use a running MB-SMF/MB-UPF (Step 1a) then make the following changes to the JSON above:
+- The tunnel IP address for `distSession.mbUpfTunAddr.ipv4Addr` from 127.0.0.7 to the IP address for the tunnel, which was returned in the MB-SMF response.
+- The port number for `distSession.mbUpfTunAddr.portNumber` from 5678 to the port number for the tunnel, which was returned in the MB-SMF response.
+
+When pushed as a configuration for the MBSTF, this will configure a Distribution Session that will provide an ingest URL and will wait for an MPD to be *PUT* to the ingest URL. The ingest URL is the concatenation of *objIngestBaseUrl* and *objAcquisitionIdPush* from the response.
+
+To push the *DistSession* to the MBSTF to configure it (sequence steps 6 and 7), use the following command:
+
+```bash
+curl --http2-prior-knowledge -H 'Content-Type: application/json' --data-binary @DistSession-DASH-PUSH-request.json http://127.0.0.62:7777/nmbstf-distsession/v1/dist-sessions
+```
+
+The result should look something like:
+
+```json
+{
+    "distSession": {
+        "distSessionId": "33acd99a-8564-42a1-a96c-9f293d90c41e",
+        "distSessionState": "ACTIVE",
+        "objDistributionData": {
+            "objDistributionOperatingMode": "STREAMING",
+            "objAcquisitionMethod": "PUSH",
+            "objAcquisitionIdPush": "manifest.mpd",
+            "objIngestBaseUrl": "http://127.0.0.1:12345/",
+            "objDistributionBaseUrl": "http://127.0.0.2/"
+        }
+    }       
+}
+```
+
+In this example response, the ingest URL will be `http://127.0.0.1:12345/manifest.mpd`.
+This can be stored in a shell variable for ease of use later:
+
+```bash
+ingest_url="http://127.0.0.1:12345/manifest.mpd"
+```
+
+The MBSTF will now wait for a live profile DASH MPD to be *PUT* to `http://127.0.0.1:12345/manifest.mpd` with *Content-Type* `application/dash+xml`. We will simulate this push from the AP (sequence step 9).
+
+To push an MPD we can use the command:
+```bash
+curl -H 'Content-Type: application/dash+xml' -X PUT --data-binary @"${HOME}/rt-mbs-transport-function/tests/tutorial/push-croatia-live.mpd" "${ingest_url}"
+```
+
+Once pushed the MBSTF will add the MPD to the distribution FLUTE stream and proceed to pull the initialization segments and media segments as happened in Step 7 above for the *PULL* *STREAMING* Distribution Session.
+
+The Wireshark capture will show that the MPD has a *Content-Location* in its FDT File entry which is the concatenation of the *objDistrubutionBaseUrl* and *objAcquisitionIdPush*. All other objects sent on the FLUTE stream will have *Content-Location* entries showing a URL from the origin media server. For this example they will all begin with `https://livesim2.dashif.org/livesim2/WAVE/vectors/cfhd_sets/12.5_25_50/t1/2022-10-17/`.
+
