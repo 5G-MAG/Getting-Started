@@ -830,3 +830,12 @@ Once pushed the MBSTF will add the MPD to the distribution FLUTE stream and proc
 
 The Wireshark capture will show that the MPD has a *Content-Location* in its FDT File entry which is the concatenation of the *objDistrubutionBaseUrl* and *objAcquisitionIdPush*. All other objects sent on the FLUTE stream will have *Content-Location* entries showing a URL from the origin media server. For this example they will all begin with `https://livesim2.dashif.org/livesim2/WAVE/vectors/cfhd_sets/12.5_25_50/t1/2022-10-17/`.
 
+![Wireshark screenshot showing the FDT File entry for the pushed MPD](../../../assets/images/5mbs/wireshark-push-streaming-mpd-fdt.png)
+
+The Wireshark screenshot above shows the FDT File entry for the MPD with a *Content-Location* URL of "http://127.0.0.2/manifest.mpd". This comes from the *objDistributionBaseURL* concatenated with the *objAcquisitionIdPush* value.
+
+---
+
+![Wireshark screenshot showing the FDT File entry for the initialization segment after pushing an MPD](../../../assets/images/5mbs/wireshark-push-streaming-init-seg-fdt.png)
+
+The Wireshark screenshot above shows the FDT File entry for the first initialization segment after an MPD has been pushed. Because the MPD included a *BaseURL* element, directing the rest of the fetches to the original media server, the *Content-Location* URL is the URL the initialization segment was pulled from.
