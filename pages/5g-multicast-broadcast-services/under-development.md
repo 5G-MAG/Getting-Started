@@ -30,15 +30,18 @@ Visit the [Standards repository](https://5g-mag.github.io/Standards/pages/5g-mul
 ## MBS development over Open5GS
 
 The 5G-MAG Reference Tools for MBS currently target:
-- Multicast transport over N6mb (from AF to MB-UPF).
-- Shared delivery on the 5G Core (from MB-UPF to gNBs).
-- Point to Multipoint (PTM) delivery on RAN (from gNBs to UE).
-- Media transport over Nmb9 (from MBSTF to MB-UPF).
-- MBS Session provisioning over Nmb1 (from MBSF to MB-SMF).
-- Distribution Session management over Nmb2 (from MBSF to MBSTF).
+- MBS Session provisioning in the MB-SMF (e.g. by an MBSF) via reference point Nmb1.
+- Direct multicast data ingest by the MB-UPF from an AF/AS via reference point N6mb.
+- Shared delivery of multicast packets from the MB-UPF via individual GTP-U tunnels to one or more gNodeBs in the 5G Core.
+- Point-to-Multipoint (PTM) delivery of multicast packets from a gNodeB to UEs via the RAN.
+
+The 5G-MAG Reference Tools for **MBS User Services** add the following functionality:
+- MBSTF Distribution Session management (e.g. by an MBSF) via reference point Nmb2.
+- Ingest of objects by the MBSTF from the MBS Application Provider (AF/AS) via reference point Nmb8, using either a pull- or push-based object acquisition method.
+- Delivery of ingested objects in a FLUTE Session multicast sent as multicast ALC packets from an MBSTF to an MB-UPF via a reference point Nmb9 unicast tunnel.
 
 The following features are supported:
-- `MB-SMF TMGI Service API` (Following 3GPP TS 29.532 - Release 17.4.0)
+- `MB-SMF TMGI Service API` (Following 3GPP TS 29.532 V17.4.0)
   - TMGI Allocate Service operation
   - TMGI Deallocate Service operation
 - `MB-SMF MBS Session Service API` (Following 3GPP TS 29.532 - Release 17.4.0)
@@ -48,18 +51,19 @@ The following features are supported:
   - PFCP Session Establishment Request extensions
 - `MB-UPF PFCP Session Establishment extensions` (Following 3GPP TS 29.244 - Release 17.9.0)
   - PFCP Session Establishment Response extensions
-- `Multicast/Broadcast Service Transport Services (MBSTF)` (Following 3GPP TS 29.581 - Release 18.5.0)
-  - Object distribution mode
-    - Single shot mode (Individual objects are sent once)
-      - Pull (MBSTF pulls objects from a media server)
-      - Push (media objects are pushed to the MBSTF by the AP)
-    - Streaming mode (Objects are scheduled and sent in real-time)
-      - Pull (MBSTF pulls the manifest and then schedules pulls for media segment objects and updates of the manifest)
-      - Push (MBSTF waits for a manifest to be pushed and schedules pulls for media segment objects)
-      - DASH live profile MPD manifests
+- `Multicast/Broadcast Service Transport Services (MBSTF)` (Following 3GPP TS 29.581 V18.5.0)
+  - Object distribution method
+    - **Single shot operating mode**: Individual objects are sent once in a FLUTE Session by the MBSTF
+      - Pull-based object acquisition (MBSTF pulls objects from a media server)
+      - Push-based object acquisition (objects are pushed into the MBSTF)
+    - **Streaming operating mode**: Objects are scheduled and sent in real time according to a presentation manifest, such as a DASH MPD.
+      - Pull-based object acquisition (MBSTF pulls a Service Entry Point object, such as a presentation manifest, and then schedules the pulling of further objects, such as media segments and updates of the presentation manifest)
+      - Push-based object acquisition (MBSTF waits for a Service Entry Point object, such as a presentation manifest, to be pushed to it, and then schedules the pulling of media segment objects)
+      - For this operating mode, the supported Service Entry Point formats are:
+         - MPEG-DASH MPD (live profile only).
 
 The following features are not yet supported:
-- `AMF MBS Broadcast Service API` (Following 3GPP TS 29.518 - Release 17.11.0)
+- `AMF MBS Broadcast Service API` (Following 3GPP TS 29.518 V17.11.0)
   - MBS Broadcast ContextCreate Service operation
   - MBS Broadcast ContextRelease Service operation
 - `AMF NGAP extensions` (Following 3GPP TS 38.413 - Release 17.6.0)
@@ -70,12 +74,13 @@ The following features are not yet supported:
   - MB-SMF TMGI Service API extensions
   - MB-SMF MBS Session Service API extensions
   - AMF MBS Broadcast Service API extensions
-- `MBSTF Distribution Session management` (Following 3GPP TS 29.581 - Release 18.5.0)
-  - Packet distribution mode
-  - Object distribution mode
-    - Carousel mode (One or more objects are repeatedly sent based on a provided schedule)
-    - Collection mode (All objects in a simple manifest are sent once)
-    - Streaming mode (Objects are scheduled and sent in real-time)
-      - Manifest types other than a DASH live profile MPD
+- `MBSTF Distribution Session management` (Following 3GPP TS 29.581 V18.5.0)
+  - **Packet distribution method**
+    - Use direct multicast packet ingest by the MB-UPF at reference point N6mb instead for now.
+  - **Object distribution method**
+    - **Collection operating mode**: One or more objects described by a simple manifest are sent once in the FLUTE Session.
+    - **Carousel operating mode**: One or more objects described by a simple manifest are repeatedly sent in the FLUTE Session according to a schedule.
+    - **Streaming operating mode**: Objects are sent in a FLUTE Session in real time according to a schedule specified in a streaming presentation manifest.
+      - Presentation manifest types other than MPEG-DASH MPD (live profile).
   - Status notification subscription
 

@@ -19,5 +19,5 @@ Initial implementation of MB-SMF, MB-UPF, AMF and basic multicast support in the
 
 ## 5MBS: MBS User Services
 
-Initial implementation of MBSF, MBSTF, MBS-AF and MBS-AS for supporting media multicast/broadcast. This builds on top of the 5G Core functions indicated above.
+Initial implementation of MBSF, MBSTF, MBS AF and MBS AS for supporting media multicast/broadcast. This builds on top of the 5G Core functions indicated above.
 * [Kanban board](https://github.com/orgs/5G-MAG/projects/43/views/1)
