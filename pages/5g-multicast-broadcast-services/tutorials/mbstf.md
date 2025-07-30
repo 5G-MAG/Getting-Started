@@ -537,7 +537,7 @@ sequenceDiagram
     MBSTF->>AP : Pull DASH manifest
     AP-->>MBSTF : DASH manifest
     MBSTF->>MBUPF : DASH manifest packaged in multicast FLUTE session packets and send to tunnel at given rate
-    MBUPF->>RAN : Multicast FLUTE packets forwarded<br/>to gNodeB(s) via multicast GTP-U tunnel
+    MBUPF->>RAN : Multicast FLUTE packets<br/>forwarded to gNodeB(s) via multicast GTP-U tunnel
     loop For each initialization segment in the DASH manifest
       MBSTF->>AP : Pull Initialization Segment
       AP-->>MBSTF : Initialization Segment
