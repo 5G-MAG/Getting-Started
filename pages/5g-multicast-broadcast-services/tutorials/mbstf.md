@@ -266,9 +266,9 @@ sequenceDiagram
   MBSMF-->>MBSF : MBS Session created and Nmb9 tunnel details
   rect rgb(160,255,160)
     MBSF->>MBSTF : Create Distribution Session<br/>using tunnel from MB-SMF
-    MBSTF-->>MBSF : Distribution Session created<br/>include push service URL if requested
+    MBSTF-->>MBSF : Distribution Session created
   end
-    MBSF-->>AP : MBS User Data Session created<br/>including push Service Entry Point URL, <br/>if requested
+    MBSF-->>AP : MBS User Data Session created
   rect rgb(160,255,160)
     MBSTF->>AP : Fetch object(s) described<br/>in Distribution Session
     AP-->>MBSTF : Response with object(s)
@@ -530,9 +530,9 @@ sequenceDiagram
   MBSMF-->>MBSF : MBS Session created<br/>and Nmb9 ingress tunnel details
   rect rgb(160, 255, 160)
     MBSF->>MBSTF : Create Distribution Session<br/>using Nmb9 tunnel details from MB-SMF
-    MBSTF-->>MBSF : Distribution Session created,<br/>including push Service Entry Point URL, if requested
+    MBSTF-->>MBSF : Distribution Session created
   end
-  MBSF-->>AP : MBS User Data Session created<br/>include push service URL if requested
+  MBSF-->>AP : MBS User Data Session created
   rect rgb(160, 255, 160)
     MBSTF->>AP : Pull DASH manifest
     AP-->>MBSTF : DASH manifest
