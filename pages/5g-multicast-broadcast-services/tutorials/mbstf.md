@@ -542,7 +542,7 @@ sequenceDiagram
       MBSTF->>AP : Pull Initialization Segment
       AP-->>MBSTF : Initialization Segment
       MBSTF->>MBUPF : Initialization Segment packaged in multicast FLUTE session packets and send to tunnel at given rate
-      MBUPF->>Multicast FLUTE packets forwarded<br/>to gNodeB(s) via multicast GTP-U tunnel
+      MBUPF->>RAN : Multicast FLUTE packets forwarded<br/>to gNodeB(s) via multicast GTP-U tunnel
     end
     par If the DASH manifest has a refresh period
       loop If the DASH manifest has a refresh period
