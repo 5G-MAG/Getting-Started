@@ -70,7 +70,7 @@ Components | Package
 Components | Package
  --|--
  UPF and MB-UPF | [https://github.com/5G-MAG/rt-mbs-examples/pkgs/container/upf_mb-upf](https://github.com/5G-MAG/rt-mbs-examples/pkgs/container/upf_mb-upf)
- Test MBS AF/AS | [https://github.com/5G-MAG/rt-mbs-examples/pkgs/container/test_mbs_af_as](https://github.com/5G-MAG/rt-mbs-examples/pkgs/container/test_mbs_af_as)
+ Test AF/AS for MBS | [https://github.com/5G-MAG/rt-mbs-examples/pkgs/container/test_mbs_af_as](https://github.com/5G-MAG/rt-mbs-examples/pkgs/container/test_mbs_af_as)
  SMF and MB-SMF | [https://github.com/5G-MAG/rt-mbs-examples/pkgs/container/smf_mb-smf](https://github.com/5G-MAG/rt-mbs-examples/pkgs/container/smf_mb-smf)
  gNB with MBS | [https://github.com/5G-MAG/rt-mbs-examples/pkgs/container/gnb_with_mbs](https://github.com/5G-MAG/rt-mbs-examples/pkgs/container/gnb_with_mbs)
  AMF with MBS | [https://github.com/5G-MAG/rt-mbs-examples/pkgs/container/amf_with_mbs](https://github.com/5G-MAG/rt-mbs-examples/pkgs/container/amf_with_mbs)
