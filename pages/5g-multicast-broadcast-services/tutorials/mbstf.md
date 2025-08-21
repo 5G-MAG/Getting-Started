@@ -118,7 +118,7 @@ sequenceDiagram
 ```
 
 To use this you will need a 5G Core with an MB-UPF and an MB-SMF that are both capable of allocating an ingress tunnel
-at reference point Nmb9, such as the one found in
+at reference point Nmb9. An example of such a 5G Core can be found in
 the [5G-MAG/open5gs](https://github.com/5G-MAG/open5gs/tree/feature/mbs-udp-tunnel-creation) repository in the
 `feature/mbs-udp-tunnel-creation` branch.<!-- Change this to the 5mbs branch when tunnelling is merged -->
 
@@ -167,9 +167,15 @@ Then we send this file to the MB-SMF to request that it creates a new multicast 
 curl --http2-prior-knowledge -H 'Content-Type: application/json' --data @create-mbs-session.json http://127.0.0.4:7777/nmbsmf-mbssession/v1/mbs-sessions
 ```
 
-The response will contain the UDP tunnel details at JSON path `.mbsSession.ingressTunAddr`. These will need to be
+The response will look similar to this TODO:
+
+````json
+
+````
+
+It contains the UDP tunnel details at JSON path `.mbsSession.ingressTunAddr`. These will need to be
 substituted in the `.distSession.mbUpfTunAddr` object in the Distribution Session JSON objects in the following steps in
-order to direct the output to the MB-UPF.
+order to direct the output to the MB-UPF. 
 
 ---
 
@@ -237,7 +243,7 @@ sudo /usr/local/bin/open5gs-mbstfd &
 1. Set up packet decoding:
     - In the *Analyze* menu, select *Decode As...* to open the "Decode As..." dialog.
     - **Dissect the reference point Nmb9 unicast tunnel.** If a rule does not exist for UDP with a port number matching
-      the UDP tunnel (the port number given for the first tunnel in the response in Step 1a or `5678` for Step 1b), then
+      the UDP tunnel (the `portNumber` given for the first tunnel in the response in Step 1a or `5678` for Step 1b), then
       create a new rule, set the field to `UDP port`, set the port number to the tunnel port and set the Current
       decoding as `IPv4`.
     - **Dissect the multicast packets carried inside the reference point Nmb9 unicast tunnel.** If a rule does not exist
@@ -249,6 +255,7 @@ sudo /usr/local/bin/open5gs-mbstfd &
 
 2. Select (but don't start) the correct interface for capture. This will usually be the Ethernet interface if you used
    Step 1a or the local loopback (lo) interface if you are using Step 1b.
+TODO add image
 
 3. Enter the filter expression if...:
     - You followed Step 1a, enter a filter of `host <tunnel-ip-address>`, where `<tunnel-ip-address>` is the IP address
