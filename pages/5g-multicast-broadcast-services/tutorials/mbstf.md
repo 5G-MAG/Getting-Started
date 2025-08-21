@@ -167,10 +167,45 @@ Then we send this file to the MB-SMF to request that it creates a new multicast 
 curl --http2-prior-knowledge -H 'Content-Type: application/json' --data @create-mbs-session.json http://127.0.0.4:7777/nmbsmf-mbssession/v1/mbs-sessions
 ```
 
-The response will look similar to this TODO:
+The response will look similar to this:
 
 ````json
-
+{
+  "mbsSession": {
+    "mbsSessionId": {
+      "ssm": {
+        "sourceIpAddr": {
+          "ipv4Addr": "127.0.0.1"
+        },
+        "destIpAddr": {
+          "ipv4Addr": "232.0.0.1"
+        }
+      }
+    },
+    "tmgi": {
+      "mbsServiceId": "D8AA35",
+      "plmnId": {
+        "mcc": "000",
+        "mnc": "000"
+      }
+    },
+    "serviceType": "MULTICAST",
+    "ingressTunAddr": [
+      {
+        "ipv4Addr": "127.0.0.7",
+        "portNumber": 42497
+      }
+    ],
+    "ssm": {
+      "sourceIpAddr": {
+        "ipv4Addr": "127.0.0.1"
+      },
+      "destIpAddr": {
+        "ipv4Addr": "232.0.0.1"
+      }
+    }
+  }
+}
 ````
 
 It contains the UDP tunnel details at JSON path `.mbsSession.ingressTunAddr`. These will need to be
@@ -255,12 +290,13 @@ sudo /usr/local/bin/open5gs-mbstfd &
 
 2. Select (but don't start) the correct interface for capture. This will usually be the Ethernet interface if you used
    Step 1a or the local loopback (lo) interface if you are using Step 1b.
-TODO add image
+
+    Note: If Wireshark is not showing your Ethernet interface try starting it with sudo rights: `sudo wireshark`
 
 3. Enter the filter expression if...:
-    - You followed Step 1a, enter a filter of `host <tunnel-ip-address>`, where `<tunnel-ip-address>` is the IP address
+    - You followed Step 1a, enter a filter of `ip.src == <tunnel-ip-address>`, where `<tunnel-ip-address>` is the IP address
       of the tunnel given in the response for 1a.
-    - You followed Step 1b, enter a filter of `host 127.0.0.7`.
+    - You followed Step 1b, enter a filter of `ip.src == 127.0.0.7`.
 
 4. Then start the capture.
 
