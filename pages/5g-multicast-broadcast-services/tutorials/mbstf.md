@@ -210,7 +210,7 @@ The response will look similar to this:
 
 It contains the UDP tunnel details at JSON path `.mbsSession.ingressTunAddr`. These will need to be
 substituted in the `.distSession.mbUpfTunAddr` object in the Distribution Session JSON objects in the following steps in
-order to direct the output to the MB-UPF. 
+order to direct the output to the MB-UPF.
 
 ---
 
@@ -278,7 +278,8 @@ sudo /usr/local/bin/open5gs-mbstfd &
 1. Set up packet decoding:
     - In the *Analyze* menu, select *Decode As...* to open the "Decode As..." dialog.
     - **Dissect the reference point Nmb9 unicast tunnel.** If a rule does not exist for UDP with a port number matching
-      the UDP tunnel (the `portNumber` given for the first tunnel in the response in Step 1a or `5678` for Step 1b), then
+      the UDP tunnel (the `portNumber` given for the first tunnel in the response in Step 1a or `5678` for Step 1b),
+      then
       create a new rule, set the field to `UDP port`, set the port number to the tunnel port and set the Current
       decoding as `IPv4`.
     - **Dissect the multicast packets carried inside the reference point Nmb9 unicast tunnel.** If a rule does not exist
@@ -291,10 +292,11 @@ sudo /usr/local/bin/open5gs-mbstfd &
 2. Select (but don't start) the correct interface for capture. This will usually be the Ethernet interface if you used
    Step 1a or the local loopback (lo) interface if you are using Step 1b.
 
-    Note: If Wireshark is not showing your Ethernet interface try starting it with sudo rights: `sudo wireshark`
+   Note: If Wireshark is not showing your Ethernet interface try starting it with sudo rights: `sudo wireshark`
 
 3. Enter the filter expression if...:
-    - You followed Step 1a, enter a filter of `ip.src == <tunnel-ip-address>`, where `<tunnel-ip-address>` is the IP address
+    - You followed Step 1a, enter a filter of `ip.src == <tunnel-ip-address>`, where `<tunnel-ip-address>` is the IP
+      address
       of the tunnel given in the response for 1a.
     - You followed Step 1b, enter a filter of `ip.src == 127.0.0.7`.
 
@@ -823,6 +825,24 @@ as shown in the screenshot below.
 
 ---
 
+### Step 7a: (Optional) Destroying the MBS Distribution Session
+
+As the MPD is constantly updated the MBSTF will keep sending MPD, initialization segments and media segments until the
+process is killed or the MBS distribution session is destroyed.
+
+To destroy the MBS distribution session run the following command replacing `distSessionId` in the URL below with the
+`distSessionId` you used when pushing the *DistSession* to the MBSTF.
+
+````
+curl --http2-prior-knowledge -X DELETE http://127.0.0.62:7777/nmbstf-distsession/v1/dist-sessions/{distSessionId}
+````
+
+Based on our example above the REST call looks like this:
+
+````
+curl --http2-prior-knowledge -X DELETE http://127.0.0.62:7777/nmbstf-distsession/v1/dist-sessions/541ebbd2-ebf9-496b-a3b8-dcd1c17fbc9d
+````
+
 ### Step 8: Create a streaming MBS Distribution Session for push operation on the DASH manifest
 
 This tests the STREAMING distribution mode for *PUSH*ed DASH manifest file (MPD). This executes the following
@@ -1007,3 +1027,22 @@ pushed. Because the MPD included a *BaseURL* element, directing the rest of the 
 the *Content-Location* URL is the URL the initialization segment was pulled from.
 
 ![Wireshark screenshot showing the FDT File entry for the initialization segment after pushing an MPD](../../../assets/images/5mbs/wireshark-push-streaming-init-seg-fdt.png)
+
+### Step 8a: (Optional) Destroying the MBS Distribution Session
+
+Based on the structure of the MPD (for instance when `SegmentTemplate` without `SegmentTimeline` addressing is used) the
+MBSTF will keep sending initialization segments and media segments until the process is killed or the MBS distribution session is
+destroyed.
+
+To destroy the MBS distribution session run the following command replacing `distSessionId` in the URL below with the
+`distSessionId` you used when pushing the *DistSession* to the MBSTF.
+
+````
+curl --http2-prior-knowledge -X DELETE http://127.0.0.62:7777/nmbstf-distsession/v1/dist-sessions/{distSessionId}
+````
+
+Based on our example above the REST call looks like this:
+
+````
+curl --http2-prior-knowledge -X DELETE http://127.0.0.62:7777/nmbstf-distsession/v1/dist-sessions/33acd99a-8564-42a1-a96c-9f293d90c41e
+````
