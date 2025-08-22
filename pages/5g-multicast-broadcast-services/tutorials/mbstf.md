@@ -122,7 +122,7 @@ at reference point Nmb9. An example of such a 5G Core can be found in
 the [5G-MAG/open5gs](https://github.com/5G-MAG/open5gs/tree/feature/mbs-udp-tunnel-creation) repository in the
 `feature/mbs-udp-tunnel-creation` branch.<!-- Change this to the 5mbs branch when tunnelling is merged -->
 
-Start the NRF, SCP, AMF, MB-UPF and MB-SMF.
+Start the NRF, SCP, AMF, MB-SMF and MB-UPF.
 
 ```sh
 git clone --depth 1 --recurse-submodules -b feature/mbs-udp-tunnel-creation https://github.com/5G-MAG/open5gs.git ~/open5gs
@@ -278,7 +278,7 @@ sudo /usr/local/bin/open5gs-mbstfd &
 1. Set up packet decoding:
     - In the *Analyze* menu, select *Decode As...* to open the "Decode As..." dialog.
     - **Dissect the reference point Nmb9 unicast tunnel.** If a rule does not exist for UDP with a port number matching
-      the UDP tunnel (the `portNumber` given for the first tunnel in the response in Step 1a or `5678` for Step 1b),
+      the UDP tunnel (the `portNumber` given for the first tunnel (`ingressTunAddr`) in the response in Step 1a or `5678` for Step 1b),
       then
       create a new rule, set the field to `UDP port`, set the port number to the tunnel port and set the Current
       decoding as `IPv4`.
@@ -297,7 +297,7 @@ sudo /usr/local/bin/open5gs-mbstfd &
 3. Enter the filter expression if...:
     - You followed Step 1a, enter a filter of `ip.src == <tunnel-ip-address>`, where `<tunnel-ip-address>` is the IP
       address
-      of the tunnel given in the response for 1a.
+      of the tunnel given in the response for 1a (`ingressTunAddr`).
     - You followed Step 1b, enter a filter of `ip.src == 127.0.0.7`.
 
 4. Then start the capture.
