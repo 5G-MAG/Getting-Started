@@ -2,7 +2,7 @@
 layout: default
 title: AI / ML Evaluation
 has_children: true
-nav_order: 11
+nav_order: 10
 ---
 
 <img src="../../assets/images/Banner_AIML.png" /> 
