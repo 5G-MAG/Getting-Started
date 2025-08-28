@@ -119,13 +119,13 @@ sequenceDiagram
 
 To use this you will need a 5G Core with an MB-UPF and an MB-SMF that are both capable of allocating an ingress tunnel
 at reference point Nmb9. An example of such a 5G Core can be found in
-the [5G-MAG/open5gs](https://github.com/5G-MAG/open5gs/tree/feature/mbs-udp-tunnel-creation) repository in the
-`feature/mbs-udp-tunnel-creation` branch.<!-- Change this to the 5mbs branch when tunnelling is merged -->
+the [5G-MAG/open5gs](https://github.com/5G-MAG/open5gs/tree/5mbs) repository in the
+`5mbs` branch.<!-- Change this to the 5mbs branch when tunnelling is merged -->
 
 Start the NRF, SCP, AMF, MB-SMF and MB-UPF.
 
 ```sh
-git clone --depth 1 --recurse-submodules -b feature/mbs-udp-tunnel-creation https://github.com/5G-MAG/open5gs.git ~/open5gs
+git clone --depth 1 --recurse-submodules -b 5mbs https://github.com/5G-MAG/open5gs.git ~/open5gs
 cd ~/open5gs
 meson setup --prefix=$PWD/install build
 ninja -C build install
