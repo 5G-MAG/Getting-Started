@@ -2,7 +2,7 @@
 layout: default
 title: XR with MPEG-I SD
 has_children: true
-nav_order: 8
+nav_order: 7
 ---
 
 <img src="../../assets/images/Banner_XR.png" /> 
