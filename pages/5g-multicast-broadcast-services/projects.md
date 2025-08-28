@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Roadmap
-parent: 5G Multicast Broadcast (MBS)
+parent: 5G Multicast Broadcast Services
 has_children: false
 nav_order: 1
 ---
