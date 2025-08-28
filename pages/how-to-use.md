@@ -15,19 +15,18 @@ the corresponding repositories, usage instructions and end-to-end tutorials.
 
 # Subcategories
 
-## Subcategory: Under Development
+## Subcategory: Scope
 
-The `Under Development` subcategory provides information about the high-level architecture of the respective
+The `Scope` subcategory provides information about the high-level architecture of the respective
 project. It includes links to the relevant specifications and standards as well as high-level architecture diagrams
 about the technology. It is a good starting point to understand the relevant technologies and to identify the right
-specifications to study for a deeper understanding. This subcategory also contains information about the tools under development in relation to the specifications, features and release versions. 
+specifications to study for a deeper understanding.
 
-## Subcategory: Projects
+## Subcategory: Roadmap
 
-The `Projects` subcategory links to GitHub project boards relevant in the context of a main topic. Typically, the
-development process of major features in the 5G-MAG Reference Tools is tracked in dedicated project boards.
-As an example, the development of 5G Media Streaming features was divided into multiple minimum viable products (MVPs)
-and tracked in dedicated project boards.
+The `Roadmap` subcategory links to the relevant GitHub project boards. Typically, the
+development process of major features in the 5G-MAG Reference Tools is tracked in the "5G-MAG Reference Tools Roadmaps" boards.
+Developers may use specific boards to track progress on sub-projects.
 
 ## Subcategory: Repositories
 
@@ -48,9 +47,8 @@ reference tutorials of a related topic. This subcategory also provides detailed 
 Depending on your interest and your level of knowledge, we suggest to follow this workflow:
 
 1. Make yourself familiar with the high-level architecture of the technology you are interested in and the development status by following the
-   `Under Development` subcategory. Also consider looking into the relevant specifications to understand the
-   details of the technology.
-2. Check the `Projects` and `Repositories` subcategories to get an overview of the 5G-MAG Reference Tools. This is also a good starting point to map features
+   `Scope` subcategory.
+2. Check the `Roadmap` and `Repositories` subcategories to get an overview of the 5G-MAG Reference Tools. This is also a good starting point to map features
    from a specification to the corresponding repository and implementation.
 3. If you are interested in trying out the tools, check the `Tutorials` subcategory.
 
