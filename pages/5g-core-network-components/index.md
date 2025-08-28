@@ -5,6 +5,8 @@ has_children: true
 nav_order: 2
 ---
 
+<img src="../../assets/images/Banner_5GC.png" /> 
+
 # 5G Core Network components - Reference Tools Project
 
 * Check the [**Roadmap**](https://github.com/orgs/5G-MAG/projects/48/views/17) for 5G Core Network components
