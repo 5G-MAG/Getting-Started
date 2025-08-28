@@ -1,6 +1,6 @@
 ---
 layout: default
-title: 5G Broadcast - TV/Radio Services
+title: 5G Broadcast - TV/Radio
 has_children: true
 nav_order: 4
 ---
