@@ -1,6 +1,6 @@
 ---
 layout: default
-title: XR Media Integration in 5G
+title: XR with MPEG-I SD
 has_children: true
 nav_order: 8
 ---
