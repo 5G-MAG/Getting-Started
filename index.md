@@ -7,7 +7,7 @@ has_children: true
 
 <img src="{{site.baseurl}}/assets/images/Banner_RT.png" /> 
 
-This website serves as an umbrella for documentation, practical guidelines and examples of applications that can be
+This website serves as an umbrella for documentation, practical tutorials and examples of applications that can be
 built with the software packages available in the 5G-MAG Reference Tools and also in combination with other platforms.
 
 <iframe width="60%" height="440" src="https://drive.google.com/file/d/1tPcMWLeY6QJNH5OfGWDwLmoSyjrqk8gA/preview"></iframe>
