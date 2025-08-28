@@ -1,7 +1,7 @@
 ---
 layout: default
 title:  MPEG-I SD Test Assets
-grand_parent: XR Media Integration in 5G
+grand_parent: XR with MPEG-I SD
 parent: Tutorials
 has_children: false
 nav_order: 0
