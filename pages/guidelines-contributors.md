@@ -7,8 +7,13 @@ nav_order: 2
 
 # Guidelines for Contributors
 
-If you wish to contribute code to the projects then you will first need **sign the Contributor License Agreement (CLA)**. Only
-individuals and/or companies with a signed CLA can contribute code. Please visit <https://www.5g-mag.com/license> for more details and to download the CLA form.
+If you wish to contribute code to the projects then you will first need to send us a signed version of the **Contributor License Agreement (CLA)**.
+
+Only individuals and/or companies with a signed CLA can contribute code. Please visit <https://www.5g-mag.com/license> for more details. The 5G-MAG Public License and CLAs can be downloaded from the following links:
+
+* [5G-MAG Public License v1.0](http://5g-mag.github.io/Getting-Started/OFFICIAL_5G-MAG_Public_License_v1.0.pdf)
+* [5G-MAG Individual Contributor License Agreement (CLA)](https://5g-mag.github.io/Getting-Started/OFFICIAL_5G-MAG_Contributor_License_Agreement.pdf)
+* [5G-MAG Corporate Contributor License Agreement (CCLA)](https://5g-mag.github.io/Getting-Started/OFFICIAL_5G-MAG_Corporate_Contributor_License_Agreement.pdf)
 
 ## Raising Issues
 
@@ -30,7 +35,7 @@ Anyone can raise issues against projects, you do not need to have signed the Con
 
 ### Testing release candidates
 
-**TODO: How releases are tested**
+Availability of a RC for testing is announned in the Google Group and/or during the 5G-MAG Developers Calls. Feedback can be provided via issues during the testing period.
 
 ## Git Branching strategy
 We are using a slightly modified version of Gitflow as a branching model. A detailed introduction to Gitflow can be found [here](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow).
@@ -101,4 +106,3 @@ Once a feature or a hotfix branch is completed a new pull request against the _d
    * For `hotfix` branches select the `main` branch
 4. Provide a summary of your changes in the textfield
 5. Click on "Create pull request"
-

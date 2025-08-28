@@ -1,10 +1,11 @@
 ---
 layout: default
 title: Scope
-parent: 5G Multicast Broadcast (MBS)
+parent: 5G Multicast Broadcast Services
 has_children: false
 nav_order: 0
 ---
+
 <img src="../../assets/images/Banner_Scope.png" /> 
 
 1. TOC

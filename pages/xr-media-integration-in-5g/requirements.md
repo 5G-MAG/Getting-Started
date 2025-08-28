@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Requirements
-parent: XR Media Integration in 5G
+parent: XR with MPEG-I SD
 has_children: false
 nav_order: 4
 ---

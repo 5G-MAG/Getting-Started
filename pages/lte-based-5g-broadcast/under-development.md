@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Scope
-parent: 5G Broadcast (MBMS)
+parent: 5G Broadcast - TV/Radio
 has_children: false
 nav_order: 0
 ---

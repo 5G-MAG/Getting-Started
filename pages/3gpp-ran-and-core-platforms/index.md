@@ -5,6 +5,8 @@ has_children: true
 nav_order: 13
 ---
 
+<img src="../../assets/images/Banner_3GPP_Platforms.png" /> 
+
 # 3GPP RAN and Core Platforms
 <iframe width="60%" height="520" src="https://drive.google.com/file/d/1fLY8WCmGNQiA9BI4eva6mwAAB5ZNufrY/preview"></iframe>
 

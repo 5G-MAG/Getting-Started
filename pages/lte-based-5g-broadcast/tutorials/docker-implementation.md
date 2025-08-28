@@ -2,7 +2,7 @@
 layout: default
 title: Linux stack - Docker support
 parent: Tutorials
-grand_parent: 5G Broadcast (MBMS)
+grand_parent: 5G Broadcast - TV/Radio
 has_children: false
 nav_order: 4
 ---

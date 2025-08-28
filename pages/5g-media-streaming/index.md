@@ -9,7 +9,13 @@ nav_order: 1
 
 # 5G Media Streaming Architecture - Reference Tools Project
 
-# Overview
+* Check the [**Roadmap**](https://github.com/orgs/5G-MAG/projects/48/views/6) for 5G Media Streaming
+* Check the [**Roadmap**](https://github.com/orgs/5G-MAG/projects/48/views/17) for 5G Core Network components
+* **Reference Tools** available:
+   * [**Project: 5G Media Streaming Architecture**](https://5g-mag.github.io/Getting-Started/pages/5g-media-streaming/)
+   * [**Project: 5G Core Network components**](https://5g-mag.github.io/Getting-Started/pages/5g-core-network-components/)
+
+## Overview
 <iframe width="60%" height="520" src="https://drive.google.com/file/d/105dQMUHnuKxIwn8K7z5rvuPLMU85FQUc/preview"></iframe>
 
 [DOWNLOAD THE PRESENTATION](https://drive.google.com/file/d/105dQMUHnuKxIwn8K7z5rvuPLMU85FQUc/preview){: .btn}

@@ -1,11 +1,19 @@
 ---
 layout: default
-title: Emergency Alerts 5G Broadcast
+title: 5G Broadcast - Emergency Alerts
 has_children: true
 nav_order: 5
 ---
 
-# Emergency Alerts over 5G Broadcast
+<img src="../../assets/images/Banner_5GBCEA.png" /> 
+
+# 5G Broadcast: Emergency Alerts
+
+* Check the [**Roadmap**](https://github.com/orgs/5G-MAG/projects/48/views/12) for 5G Broadcast: Emergency Alerts
+* **Reference Tools** available:
+    * [**Project: Emergency Alerts over 5G Broadcast**](https://5g-mag.github.io/Getting-Started/pages/emergency-alerts/)
+
+## Overview
 <iframe width="60%" height="520" src="https://drive.google.com/file/d/1XzvNDadtrwxrCoLIpuQQntv6JzOVMn2_/preview"></iframe>
 
 [DOWNLOAD THE PRESENTATION](https://drive.google.com/file/d/1XzvNDadtrwxrCoLIpuQQntv6JzOVMn2_/preview){: .btn} 

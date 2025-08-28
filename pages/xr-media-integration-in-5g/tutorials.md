@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Tutorials
-parent: XR Media Integration in 5G
+parent: XR with MPEG-I SD
 has_children: true
 nav_order: 3
 ---

@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Scope
-parent: Emergency Alerts 5G Broadcast
+parent: 5G Broadcast - Emergency Alerts
 has_children: false
 nav_order: 0
 ---

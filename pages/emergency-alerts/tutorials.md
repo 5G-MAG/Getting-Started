@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Tutorials
-parent: Emergency Alerts 5G Broadcast
+parent: 5G Broadcast - Emergency Alerts
 has_children: true
 nav_order: 3
 ---

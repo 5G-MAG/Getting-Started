@@ -2,7 +2,7 @@
 layout: default
 title: Managing MBS Sessions & TMGI
 parent: Tutorials
-grand_parent: 5G Multicast Broadcast (MBS)
+grand_parent: 5G Multicast Broadcast Services
 has_children: false
 nav_order: 1
 ---

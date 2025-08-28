@@ -5,92 +5,114 @@ parent: Home
 nav_order: 1
 ---
 
-# Overview of Reference Tools
+# Overview of 5G-MAG Reference Tools
 
-## 5G-MAG Reference Tools for "5G Media Streaming"
+<iframe width="60%" height="520" src="https://drive.google.com/file/d/1tPcMWLeY6QJNH5OfGWDwLmoSyjrqk8gA/preview"></iframe>
 
-<img src="../assets/images/projects/projects_1.png">
-
-### 5G Downlink Media Streaming
-* [Details of the project](./5g-media-streaming/)
-
-### 5G Core Network Components
-* [Details of the project](./5g-core-network-components/)
-
-### UE Data Collection, Reporting and Event Exposure
-* [Details of the project](./ue-data-collection-reporting-exposure/)
-
-### DVB-I Services over 5G
-* [Details of the project](./dvbi-over-5g/)
-
-### 3GPP RAN and Core Platforms
-* [Details of the project](./3gpp-ran-and-core-platforms/)
+[DOWNLOAD THE PRESENTATION](https://drive.google.com/file/d/1tPcMWLeY6QJNH5OfGWDwLmoSyjrqk8gA/preview){: .btn}
 
 ---
 
-## 5G-MAG Reference Tools for "5G Broadcast"
+# The Projects
 
-<img src="../assets/images/projects/projects_2.png">
-
-### MBMS and LTE-based 5G Broadcast
-* [Details of the project](./lte-based-5g-broadcast/)
-
-### Emergency Alerts over 5G Broadcast
-* [Details of the project](./emergency-alerts/)
-
-### Multimedia content delivery protocols
-* [Details of the project](./multimedia-content-delivery/)
-
-### 5G Downlink Media Streaming
-* [Details of the project](./5g-media-streaming/)
-
-### DVB-I Services over 5G
-* [Details of the project](./dvbi-over-5g/)
-
-### 3GPP RAN and Core Platforms
-* [Details of the project](./3gpp-ran-and-core-platforms/)
+<img src="../assets/images/projects/projects.png">
 
 ---
 
-## 5G-MAG Reference Tools for "5G Multicast Broadcast Services (MBS)"
+<img src="../assets/images/Banner_5GMS.png"/> 
 
-<img src="../assets/images/projects/projects_3.png">
-
-### 5G Multicast and Broadcast Services (5MBS)
-* [Details of the project](./5g-multicast-broadcast-services/)
-
-### Multimedia content delivery protocols
-* [Details of the project](./multimedia-content-delivery/)
-
-### 5G Downlink Media Streaming
-* [Details of the project](./5g-media-streaming/)
-
-### 3GPP RAN and Core Platforms
-* [Details of the project](./3gpp-ran-and-core-platforms/)
+## Project: 5G Media Streaming Architecture
+* Check the [**Roadmap**](https://github.com/orgs/5G-MAG/projects/48/views/6) for 5G Media Streaming
+* Check the [**Roadmap**](https://github.com/orgs/5G-MAG/projects/48/views/17) for 5G Core Network components
+* **Reference Tools** available:
+   * [**Project: 5G Media Streaming Architecture**](https://5g-mag.github.io/Getting-Started/pages/5g-media-streaming/)
+   * [**Project: 5G Core Network components**](https://5g-mag.github.io/Getting-Started/pages/5g-core-network-components/)
 
 ---
 
-## 5G-MAG Reference Tools for "eXtended Reality (XR)"
+<img src="../assets/images/Banner_UEDC.png"/> 
 
-<img src="../assets/images/projects/projects_4.png">
-
-### XR Media integration in 5G
-* [Details of the project](./xr-media-integration-in-5g/)
-
----
-
-## 5G-MAG Reference Tools for "Beyond 2D"
-
-<img src="../assets/images/projects/projects_5.png">
-
-### V3C Immersive Platform
-* [Details of the project](./v3c-immersive-platform/)
+## Project: UE Data Collection, Reporting & Event Exposure
+* Check the [**Roadmap**](https://github.com/orgs/5G-MAG/projects/48/views/8)
+* **Reference Tools** available:
+   * [**Project: UE data collection, reporting and event exposure**](https://5g-mag.github.io/Getting-Started/pages/ue-data-collection-reporting-exposure/)
 
 ---
 
-## 5G-MAG Reference Tools supporting standardization
+<img src="../assets/images/Banner_5GBC.png"/> 
 
-<img src="../assets/images/projects/projects_6.png">
+## Project: 5G Broadcast
+* Check the [**Roadmap**](https://github.com/orgs/5G-MAG/projects/48/views/7) for 5G Broadcast: TV and Radio Services
+* Check the [**Roadmap**](https://github.com/orgs/5G-MAG/projects/48/views/12) for 5G Broadcast: Emergency Alerts
+* **Reference Tools** available:
+    * [**Project: 5G Broadcast Hybrid Services**](https://5g-mag.github.io/Getting-Started/pages/lte-based-5g-broadcast/)
+    * [**Project: Emergency Alerts over 5G Broadcast**](https://5g-mag.github.io/Getting-Started/pages/emergency-alerts/)
 
-### Artificial Intelligence and Machine Learning Evaluation Framework
-* [Details of the project](./ai-ml-evaluation-framework/)
+---
+
+<img src="../assets/images/Banner_5MBS.png"/> 
+
+## Project: 5G Multicast Broadcast Services
+* Check the [**Roadmap**](https://github.com/orgs/5G-MAG/projects/48/views/13)
+* **Reference Tools** available:
+    * [**Project: 5G Multicast Broadcast Services**](https://5g-mag.github.io/Getting-Started/pages/5g-multicast-broadcast-services/)
+
+---
+
+<img src="../assets/images/Banner_XR.png"/> 
+
+## Project: XR Media with MPEG-I Scene Description
+* Check the [**Roadmap**](https://github.com/orgs/5G-MAG/projects/48/views/16)
+* **Reference Tools** available:
+   * [**Project: XR Media with MPEG-I Scene Description**](https://5g-mag.github.io/Getting-Started/pages/xr-media-integration-in-5g/)
+
+---
+
+<img src="../assets/images/Banner_V3C.png"/> 
+
+## Project: Volumetric Video Experiences with MPEG V3C
+* Check the [**Roadmap**](https://github.com/orgs/5G-MAG/projects/48/views/15)
+* **Reference Tools** available:
+   * [**Project: V3C Immersive Platform**](https://5g-mag.github.io/Getting-Started/pages/v3c-immersive-platform/)
+
+---
+
+<img src="../assets/images/Banner_B2D.png"/> 
+
+## Project: Beyond 2D Video Experiences
+* Check the [**Roadmap**](https://github.com/orgs/5G-MAG/projects/48/views/10)
+* **Reference Tools** available:
+   * [**Project: Beyond 2D Evaluation Framework**](https://5g-mag.github.io/Getting-Started/pages/beyond-2d-evaluation-framework/)
+
+---
+
+<img src="../assets/images/Banner_AIML.png"/> 
+
+## Project: AI/ML in Mobile Media Services
+* Check the [**Roadmap**](https://github.com/orgs/5G-MAG/projects/48/views/9)
+* **Reference Tools** available:
+   * [**Project: AI & ML Evaluation Framework**](https://5g-mag.github.io/Getting-Started/pages/ai-ml-evaluation-framework/)
+
+---
+
+<img src="../assets/images/Banner_MD.png"/> 
+
+## Project: Multimedia Content Delivery Protocols
+* Check the [**Roadmap**](https://github.com/orgs/5G-MAG/projects/48/views/14)
+* **Reference Tools** available:
+   * [**Project: Multimedia Content Delivery Protocols**](https://5g-mag.github.io/Getting-Started/pages/multimedia-content-delivery/)
+
+---
+
+<img src="../assets/images/Banner_DVBI.png"/> 
+
+## Project: DVB-I Services over 5G Systems
+* Check the [**Roadmap**](https://github.com/orgs/5G-MAG/projects/48/views/11)
+* **Reference Tools** available:
+   * [**Project: DVB-I Services over 5G Systems**](https://5g-mag.github.io/Getting-Started/pages/dvbi-over-5g/)
+
+---
+
+{: .note }
+Copyright: 5G Media Action Group (5G-MAG)
+Please refer to the [Tech](https://github.com/5G-MAG/Tech/tree/main/pages) repository to provide updates to this documentation.

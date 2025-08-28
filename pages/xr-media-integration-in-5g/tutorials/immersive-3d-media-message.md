@@ -1,7 +1,7 @@
 ---
 layout: default
 title:  Immersive and 3D Media message
-grand_parent: XR Media Integration in 5G
+grand_parent: XR with MPEG-I SD
 parent: Tutorials
 has_children: false
 nav_order: 2
