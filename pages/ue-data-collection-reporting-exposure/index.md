@@ -9,7 +9,11 @@ nav_order: 3
 
 # UE data collection, reporting and event exposure - Reference Tools Project
 
-# Overview
+* Check the [**Roadmap**](https://github.com/orgs/5G-MAG/projects/48/views/8)
+* **Reference Tools** available:
+   * [**Project: UE data collection, reporting and event exposure**](https://5g-mag.github.io/Getting-Started/pages/ue-data-collection-reporting-exposure/)
+
+## Overview
 <iframe width="60%" height="520" src="https://drive.google.com/file/d/1U_hUtHC-kr9_Ydq-VeH-ESIeEeJh0xEd/preview"></iframe>
 
 [DOWNLOAD THE PRESENTATION](https://drive.google.com/file/d/1U_hUtHC-kr9_Ydq-VeH-ESIeEeJh0xEd/preview){: .btn} 
