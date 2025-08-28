@@ -10,8 +10,6 @@ nav_order: 12
 # DVB-I Services over 5G Systems - Reference Tools Project
 
 * Check the [**Roadmap**](https://github.com/orgs/5G-MAG/projects/48/views/11)
-* **Reference Tools** available:
-   * [**Project: DVB-I Services over 5G Systems**](https://5g-mag.github.io/Getting-Started/pages/dvbi-over-5g/)
 
 ## Overview
 <iframe width="60%" height="520" src="https://drive.google.com/file/d/1iZimmem_SSWODbREopaNPs3Y5FbA9k7v/preview"></iframe>

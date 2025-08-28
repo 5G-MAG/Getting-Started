@@ -2,7 +2,7 @@
 layout: default
 title: XR with MPEG-I SD
 has_children: true
-nav_order: 8
+nav_order: 7
 ---
 
 <img src="../../assets/images/Banner_XR.png" /> 
@@ -10,8 +10,6 @@ nav_order: 8
 # XR Media with MPEG-I Scene Description - Reference Tools Project
 
 * Check the [**Roadmap**](https://github.com/orgs/5G-MAG/projects/48/views/16)
-* **Reference Tools** available:
-   * [**Project: XR Media with MPEG-I Scene Description**](https://5g-mag.github.io/Getting-Started/pages/xr-media-integration-in-5g/)
 
 ## Overview
 <iframe width="60%" height="520" src="https://drive.google.com/file/d/1D8G_rzx77V_W3d3NB59XcTbdUuBdtKgp/preview"></iframe>

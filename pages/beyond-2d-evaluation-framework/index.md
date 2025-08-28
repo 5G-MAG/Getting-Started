@@ -2,7 +2,7 @@
 layout: default
 title: Beyond 2D Evaluation
 has_children: true
-nav_order: 10
+nav_order: 9
 ---
 
 <img src="../../assets/images/Banner_B2D.png" /> 
@@ -10,8 +10,6 @@ nav_order: 10
 # Beyond 2D Evaluation Framework - Reference Tools Project
 
 * Check the [**Roadmap**](https://github.com/orgs/5G-MAG/projects/48/views/10)
-* **Reference Tools** available:
-   * [**Project: Beyond 2D Evaluation Framework**](https://5g-mag.github.io/Getting-Started/pages/beyond-2d-evaluation-framework/)
 
 ## Overview
 <iframe width="60%" height="520" src="https://drive.google.com/file/d/1v9Z6qig8Sc3-fw3LP3XqsmZJ8KuE7zWa/preview"></iframe>
