@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Roadmap
-parent: 5G Broadcast - TV/Radio Services
+parent: 5G Broadcast - TV/Radio
 has_children: false
 nav_order: 1
 ---
