@@ -2,7 +2,7 @@
 layout: default-codewrap
 title: Initial MBS Transport Function API examples
 parent: Tutorials
-grand_parent: 5G Multicast Broadcast (MBS)
+grand_parent: 5G Multicast Broadcast Services
 has_children: false
 nav_order: 2
 ---
