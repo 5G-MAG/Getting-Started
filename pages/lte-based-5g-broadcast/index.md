@@ -5,9 +5,9 @@ has_children: true
 nav_order: 4
 ---
 
-<img src="../../assets/images/Banner_5GBC.png" /> 
+<img src="../../assets/images/Banner_5GBCTVR.png" /> 
 
-# 5G Broadcast - Reference Tools Project
+# 5G Broadcast: TV and Radio Hybrid Services - Reference Tools Project
 
 * Check the [**Roadmap**](https://github.com/orgs/5G-MAG/projects/48/views/7) for 5G Broadcast: TV and Radio Services
 * **Reference Tools** available:
