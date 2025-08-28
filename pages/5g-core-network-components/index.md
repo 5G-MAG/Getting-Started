@@ -5,7 +5,13 @@ has_children: true
 nav_order: 2
 ---
 
-# 5G Core Network components
+# 5G Core Network components - Reference Tools Project
+
+* Check the [**Roadmap**](https://github.com/orgs/5G-MAG/projects/48/views/17) for 5G Core Network components
+* **Reference Tools** available:
+   * [**Project: 5G Core Network components**](https://5g-mag.github.io/Getting-Started/pages/5g-core-network-components/)
+
+## Overview
 <iframe width="60%" height="520" src="https://drive.google.com/file/d/1-TPp-cVL8xW5WD8n8dJ2JyDPIfbbygli/preview"></iframe>
 
 [DOWNLOAD THE PRESENTATION](https://drive.google.com/file/d/1-TPp-cVL8xW5WD8n8dJ2JyDPIfbbygli/preview){: .btn}
