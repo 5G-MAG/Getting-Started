@@ -29,7 +29,9 @@ Follow the installation procedures in
 the [Open5GS Quickstart guide](https://open5gs.org/open5gs/docs/guide/01-quickstart/).
 
 For the **config** files go to: `/etc/open5gs/*.yaml`
+
 For the **logs** go to: `/var/log/open5gs/*.log`
+
 The Open5GS Subscriber portal is located in: `http://localhost:9999` (by default admin:1423 as user:password)
 
 ### Step 1: Install the 5G Core (Open5GS)
