@@ -28,9 +28,13 @@ the [srsRAN documentation](https://docs.srsran.com/projects/project/en/latest/kn
 Follow the installation procedures in
 the [Open5GS Quickstart guide](https://open5gs.org/open5gs/docs/guide/01-quickstart/).
 
+For the **config** files go to: `/etc/open5gs/*.yaml`
+For the **logs** go to: `/var/log/open5gs/*.log`
+The Open5GS Subscriber portal is located in: `http://localhost:9999` (by default admin:1423 as user:password)
+
 ### Step 1: Install the 5G Core (Open5GS)
 
-We recommend installing for Ubuntu 22.04 with the following instructions:
+We recommend installing for Ubuntu 24.04 with the following instructions:
 
 #### Getting MongoDB
 
@@ -42,10 +46,10 @@ sudo apt install gnupg
 curl -fsSL https://pgp.mongodb.com/server-6.0.asc | sudo gpg -o /usr/share/keyrings/mongodb-server-6.0.gpg --dearmor
 ```
 
-Create the list file /etc/apt/sources.list.d/mongodb-org-6.0.list for Ubuntu 22.04:
+Create the list file /etc/apt/sources.list.d/mongodb-org-6.0.list for Ubuntu 24.04:
 
 ```bash
-echo "deb [ arch=amd64,arm64 signed-by=/usr/share/keyrings/mongodb-server-6.0.gpg] https://repo.mongodb.org/apt/ubuntu jammy/mongodb-org/6.0 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-6.0.list
+echo "deb [ arch=amd64,arm64 signed-by=/usr/share/keyrings/mongodb-server-8.0.gpg ] https://repo.mongodb.org/apt/ubuntu noble/mongodb-org/8.0 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-8.0.list
 ```
 
 Install the MongoDB packages.
@@ -80,8 +84,6 @@ echo "deb [signed-by=/etc/apt/keyrings/nodesource.gpg] https://deb.nodesource.co
 
 sudo apt update
 sudo apt install nodejs -y
-
-sudo zypper install nodejs8
 
 curl -fsSL https://open5gs.org/open5gs/assets/webui/install | sudo -E bash -
 ```
