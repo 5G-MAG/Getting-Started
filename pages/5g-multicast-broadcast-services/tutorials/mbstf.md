@@ -237,7 +237,9 @@ will use a simple HTTP server based on the *NodeJS* [*Express*](https://expressj
 to serve some simple media objects. This simulates a media server or CDN that would be provided by the MBS Application
 Provider (AF/AS).
 
-To start the *Express* mock media server you will need to do the following things.
+You can install and run the *Express* mock media server directly or via Docker:
+
+#### Option 1: Running the Express server outside of Docker
 
 1. Clone the rt-mbs-examples repository:
    ```bash
@@ -255,6 +257,24 @@ To start the *Express* mock media server you will need to do the following thing
    ```bash
    cd ~/rt-mbs-examples/express-mock-media-server
    npm start
+   ```
+
+The mock media server is now running on TCP port 3004 and ready to serve objects for the following tutorial examples.
+
+#### Option 2: Running the Express server in Docker
+
+1. Clone the rt-mbs-examples repository:
+   ```bash
+   cd ~
+   git clone -b development https://github.com/5G-MAG/rt-mbs-examples.git
+   ```
+1. Navigate to the Docker directory:
+   ```bash
+   cd ~/rt-mbs-examples/express-mock-media-server/docker
+   ```
+1. Start the Express server:
+   ```bash
+   docker compose up --build 
    ```
 
 The mock media server is now running on TCP port 3004 and ready to serve objects for the following tutorial examples.
@@ -278,7 +298,8 @@ sudo /usr/local/bin/open5gs-mbstfd &
 1. Set up packet decoding:
     - In the *Analyze* menu, select *Decode As...* to open the "Decode As..." dialog.
     - **Dissect the reference point Nmb9 unicast tunnel.** If a rule does not exist for UDP with a port number matching
-      the UDP tunnel (the `portNumber` given for the first tunnel (`ingressTunAddr`) in the response in Step 1a or `5678` for Step 1b),
+      the UDP tunnel (the `portNumber` given for the first tunnel (`ingressTunAddr`) in the response in Step 1a or
+      `5678` for Step 1b),
       then
       create a new rule, set the field to `UDP port`, set the port number to the tunnel port and set the Current
       decoding as `IPv4`.
@@ -1031,7 +1052,8 @@ the *Content-Location* URL is the URL the initialization segment was pulled from
 ### Step 8a: (Optional) Destroying the MBS Distribution Session
 
 Based on the structure of the MPD (for instance when `SegmentTemplate` without `SegmentTimeline` addressing is used) the
-MBSTF will keep sending initialization segments and media segments until the process is killed or the MBS distribution session is
+MBSTF will keep sending initialization segments and media segments until the process is killed or the MBS distribution
+session is
 destroyed.
 
 To destroy the MBS distribution session run the following command replacing `distSessionId` in the URL below with the
