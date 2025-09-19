@@ -48,10 +48,18 @@ sudo apt install gnupg
 curl -fsSL https://pgp.mongodb.com/server-6.0.asc | sudo gpg -o /usr/share/keyrings/mongodb-server-6.0.gpg --dearmor
 ```
 
-Create the list file /etc/apt/sources.list.d/mongodb-org-6.0.list for Ubuntu 24.04:
+Create the list file /etc/apt/sources.list.d/mongodb-org-6.0.list.
+
+For Ubuntu 24.04 (noble):
 
 ```bash
 echo "deb [ arch=amd64,arm64 signed-by=/usr/share/keyrings/mongodb-server-8.0.gpg ] https://repo.mongodb.org/apt/ubuntu noble/mongodb-org/8.0 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-8.0.list
+```
+
+For Ubuntu 22.04 (jammy):
+
+```bash
+echo "deb [ arch=amd64,arm64 signed-by=/usr/share/keyrings/mongodb-server-8.0.gpg ] https://repo.mongodb.org/apt/ubuntu jammy/mongodb-org/8.0 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-8.0.list
 ```
 
 Install the MongoDB packages.
@@ -141,7 +149,7 @@ UDR-sbi   = 127.0.0.20:7777 for 5G SBI
 
 #### PLMN ID and TAC information
 
-Our setup will be using PLMN ID (MCC/MNC) 001/01 and TAC 7. This information needs to be loaded into the NRF and AMF
+Our setup will be using PLMN ID (MCC/MNC) 001/01 and TAC 7. 5GC and gNodeB will be running in the same machine (we use the default binding addresses). This information needs to be loaded into the NRF and AMF
 config files (and the gNB).
 
 Modify `/etc/open5gs/nrf.yaml` to set the Serving PLMN ID:
@@ -200,8 +208,8 @@ amf:
     integrity_order : [ NIA2, NIA1, NIA0 ]
     ciphering_order : [ NEA0, NEA1, NEA2 ]
   network_name:
-    full: 5GMAG
-    short: 5GMAG
+    full: 5G-MAG
+    short: 5G-MAG
 ```
 
 After changing config files, please restart Open5GS daemons.
@@ -251,7 +259,7 @@ Install dependencies
 sudo apt-get install cmake make gcc g++ pkg-config libfftw3-dev libmbedtls-dev libsctp-dev libyaml-cpp-dev libgtest-dev
 ```
 
-Install UHD drivers (e.g. for Ettus USRP)
+Install UHD drivers (e.g. for Ettus USRP). More information at the Ettus [website](https://files.ettus.com/manual/page_build_guide.html).
 
 ```bash
 sudo add-apt-repository ppa:ettusresearch/uhd
@@ -259,7 +267,7 @@ sudo apt-get update
 sudo apt-get install libuhd-dev uhd-host
 ```
 
-Download the srsRAN Project packages:
+Download the srsRAN Project packages. If there are no packages for your Ubuntu version, a manual build would be required.
 
 ```bash
 sudo add-apt-repository ppa:softwareradiosystems/srsran-project
