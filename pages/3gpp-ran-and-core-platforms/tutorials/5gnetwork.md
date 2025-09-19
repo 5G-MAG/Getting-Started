@@ -294,39 +294,53 @@ this [link](https://5g-tools.com/5g-nr-arfcn-calculator/).
 
 ```yaml
 # This example configuration outlines how to configure the srsRAN Project gNB to create a single TDD cell
-# transmitting in band 77, with 10 MHz bandwidth and 30 kHz sub-carrier-spacing. A USRP X310 is configured 
-# as the RF frontend. Note in this example the internal GPDSO is used.
+# transmitting in band 77, with 10 MHz bandwidth and 30 kHz sub-carrier-spacing. A USRP N310 is configured
+# as the RF frontend using split 8. Note in this example the internal clock of the N310 is used.
 
-amf:
-  addr: 127.0.0.5                     # The address or hostname of the AMF.
-  bind_addr: 127.0.1.5                # A local IP that the gNB binds to for traffic from the AMF.
+cu_cp:
+  amf:
+    addr: 127.0.0.5
+    port: 38412
+    bind_addr: 127.0.1.5
+    supported_tracking_areas:
+      - tac: 7
+        plmn_list:
+          - plmn: "00101"
+            tai_slice_support_list:
+              - sst: 1
 
 ru_sdr:
-  device_driver: uhd                  # The RF driver name.
-  device_args: send_frame_size=1472,recv_frame_size=1472,type=x300              # Optionally pass arguments to the selected RF driver.
-  clock: gpsdo                        # Specify the clock source used by the RF.
-  srate: 15.36                        # RF sample rate might need to be adjusted according to selected bandwidth.
-  tx_gain: 20                         # Transmit gain of the RF might need to adjusted to the given situation.
-  rx_gain: 20                         # Receive gain of the RF might need to adjusted to the given situation.
+  device_driver: uhd
+  device_args: send_frame_size=1472,recv_frame_size=1472,type=x300
+  clock: internal
+  sync: internal
+  srate: 15.36
+  tx_gain: 20
+  rx_gain: 20
 
 cell_cfg:
-  dl_arfcn: 653668                    # ARFCN of the downlink carrier (center frequency).
-  band: 77                            # The NR band.
-  channel_bandwidth_MHz: 10           # Bandwith in MHz. Number of PRBs will be automatically derived.
-  common_scs: 30                      # Subcarrier spacing in kHz used for data.
-  plmn: "00101"                       # PLMN broadcasted by the gNB.
-  tac: 7                              # Tracking area code (needs to match the core configuration).
-  pci: 1                              # Physical cell ID.
+  dl_arfcn: 653668
+  band: 77
+  channel_bandwidth_MHz: 10
+  common_scs: 30
+  plmn: "00101"
+  tac: 7
+  pci: 1
+
+  pucch:
+    nof_ue_res_harq_per_set: 2
+    f0_or_f1_nof_cell_res_sr: 2
+    f2_or_f3_or_f4_nof_cell_res_csi: 2
 
 log:
-  filename: /tmp/gnb.log              # Path of the log file.
-  all_level: info                     # Logging level applied to all layers.
+  filename: /tmp/gnb.log
+  all_level: info
 
 pcap:
-  mac_enable: false                   # Set to true to enable MAC-layer PCAPs.
-  mac_filename: /tmp/gnb_mac.pcap     # Path where the MAC PCAP is stored.
-  ngap_enable: false                  # Set to true to enable NGAP PCAPs.
-  ngap_filename: /tmp/gnb_ngap.pcap   # Path where the NGAP PCAP is stored.
+  mac_enable: false
+  mac_filename: /tmp/gnb_mac.pcap
+  ngap_enable: false
+  ngap_filename: /tmp/gnb_ngap.pcap
 ```
 
 ### Optional: Adding an external GPS reference clock
