@@ -60,7 +60,7 @@ docker run -v /$(PWD)/build/ffmpeg/aarch64:/usr/build/ffmpeg --env TARGET_ABI=aa
 
 In Windows, the build artifacts can be found in your user folder `.\build\ffmpeg\aarch64`.
 
-As we are targeting an Android device, once compiled, the .so libraries from the build artifacts' lib directory can be included into the ./External/avcodec/7.1/Android/arm64-v8a/lib directory of the rt-v3c-unity-player.
+As we are targeting an Android device, once compiled, the .so libraries from the build artifacts' lib directory can be included into the ./External/ffmpeg/7.1/Android/arm64-v8a/lib directory of the rt-v3c-decoder-plugin.
 
 At this point, back in the directory of the rt-v3c-decoder-plugin, we can compile for Android:
 
