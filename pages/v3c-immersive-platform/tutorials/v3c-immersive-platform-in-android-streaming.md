@@ -45,7 +45,7 @@ git clone --recurse-submodules https://github.com/5G-MAG/rt-v3c-decoder-plugin.g
 Install the dependencies:
 
 ```
-cd rt-v3c-decoder-plugin
+cd ~/rt-v3c-decoder-plugin
 ./Scripts/dl_deps.sh
 ```
 
@@ -53,7 +53,7 @@ Add the additional dependency regarding avcodec libraries. For this, instruction
 
 ```
 git clone --recurse-submodules https://github.com/5G-MAG/rt-common-shared.git
-cd rt-common-shared/avcodec-build/
+cd ~/rt-common-shared/avcodec-build/
 docker build -t ffmpeg-builder:27 --build-arg NDK_VERSION=27.2.12479018 .
 docker run -v /$(PWD)/build/ffmpeg/aarch64:/usr/build/ffmpeg --env TARGET_ABI=aarch64 --env ANDROID_API_LEVEL=35 ffmpeg-builder:27
 ```
@@ -67,14 +67,14 @@ Make sure the ndk is available in the Android directory.
 At this point, back in the directory of the rt-v3c-decoder-plugin, we can compile for Android:
 
 ```
-cd rt-v3c-decoder-plugin
+cd ~/rt-v3c-decoder-plugin
 ./Scripts/build_android.sh release all  
 ```
 
 We can now copy the plugins into the rt-v3c-unity-player directories:
 
 ```
-cd rt-v3c-unity-player
+cd ~/rt-v3c-unity-player
 ../rt-v3c-decoder-plugin/Scripts/copy_libs.sh ./Packages/V3CDecoder/Runtime/Plugins release Android
 ```
 
