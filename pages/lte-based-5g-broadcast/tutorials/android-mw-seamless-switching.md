@@ -63,21 +63,23 @@ First, we need to install and configure a few components:
 The `express.js` webserver acts as our CDN node for unicast delivery. To install the webserver follow the
 instructions [here](https://github.com/5G-MAG/rt-common-shared/tree/main/simple-express-server).
 
-### 2. Install flute-ffmpeg
+This will prepare the server so contents can be stored in the `simple-express-server\public\watchfolder`path.
+
+### Step 2: Install flute-ffmpeg
 
 We use `flute-ffmpeg` to create an HLS livestream and monitor changes to our watchfolder. Once new files have been added
 to the watchfolder `flute-ffmpeg` will FLUTE encode them and multicast them to the MBMS Gateway.
 
 To install `flute-ffmpeg` follow the installation and build
-instructions [here](https://github.com/5G-MAG/rt-mbms-examples/tree/development/flute-ffmpeg). Do not apply the
+instructions [here](https://github.com/5G-MAG/rt-mbms-examples/tree/main/flute-ffmpeg). Do not apply the
 configuration and running steps yet. We will do this later as part of this tutorial.
 
-### 3. Install rt-mbms-tx-for-qrd-and-crd
+### Step 3: Install rt-mbms-tx-for-qrd-and-crd
 
 Next we install our 5G Broadcast transmitter. For that reason follow the steps
 described [here](https://github.com/5G-MAG/rt-mbms-tx-for-qrd-and-crd). Do not run the transmitter yet.
 
-### 4. Clone the Android MW
+### Step 4: Clone the Android MW
 
 The Android MW is responsible for receiving the media files delivered via 5G Broadcast. In addition, it fetches files
 from the webserver if they are not available via 5G Broadcast. The Android MW including instructions on how to clone and
@@ -85,9 +87,9 @@ install can be found [here](https://github.com/5G-MAG/rt-mbms-mw-android).
 
 ## Configuration
 
-Before putting the pieces together and running all components we to run some configuration steps:
+Before putting the pieces together and running all components we need to run some configuration steps:
 
-### 1. Configure ffmpeg
+### Step 1: Configure ffmpeg
 
 First we configure the `ffmpeg` output. Navigate to `flute-ffmpeg/files` and open `ffmpeg-hls.sh`. Change the following
 two lines and point them to the path of the local webserver installed previously. If there is no `watchfolder/hls`
@@ -98,7 +100,7 @@ folder on your webserver yet create that as well.
 -var_stream_map "v:0,a:0" /home/dsi/5gmag/simple-express-server/public/watchfolder/hls/stream_%v.m3u8
 ````
 
-### 2. Configure flute-ffmpeg
+### Step 2: Configure flute-ffmpeg
 
 Next we configure `flute-ffmpeg` to monitor the watchfolder on our webserver and also to multicast the resulting packets
 to the right address. Open `flute-ffmpeg/config/default.cfg` and edit the following lines:
@@ -116,10 +118,10 @@ Set the `multicast_ip` and the `multicast_port` to the multicast IP that you wil
 the MBMS Gateway later. The configuration above matches the default configuration of the 5G Broadcast Transmitter. If
 you are unsure what to do use the default `multicast_ip` and `multicast_port` as defined in the example above.
 
-Set the `watchfolder_path` to the path of your watchdfolder located on the local webserver. `path_to_transmit` should be
+Set the `watchfolder_path` to the path of your watchfolder located on the local webserver. `path_to_transmit` should be
 set to `"watchfolder/hls/"`.
 
-### Configure rt-mbms-tx-for-qrd-and-crd
+### Step 3: Configure rt-mbms-tx-for-qrd-and-crd
 
 Now we need to configure our 5G Broadcast transmitter. For that reason follow the
 instructions [here](https://github.com/5G-MAG/rt-mbms-tx-for-qrd-and-crd?tab=readme-ov-file#configuration-after-installation).
@@ -142,12 +144,12 @@ device_args = id=2
 `device_name` and `device_args`might be different in your setup. Make sure that the `enb` process later uses the right
 SDR.
 
-### Configure rt-mbms-mw-android
+### Step 4: Configure rt-mbms-mw-android
 
 In the current implementation the Android Middleware uses a static MBMS Service Announcement file. We need to add the
 right unicast endpoint to this static service announcement. For that reason open the `bootstrap.multipart.hls` file
 located in the `assets` folder. Search for all occurrences of `watchfolder/hls` that contain an IP. For
-instance: `http://192.168.2.2:3333/watchfolder/hls/manifest.m3u8`. Now replace the IP with the IP of your machine that
+instance: `http://192.168.0.101:3333/watchfolder/hls/manifest.m3u8`. Now replace the IP with the IP of your machine that
 is running the local webserver. The MW will use this address later to fetch manifest and media files via unicast from
 our webserver.
 
@@ -155,7 +157,7 @@ our webserver.
 
 After the configuration we are now ready to run all components and put all the pieces together:
 
-### Start ffmpeg
+### Step1: Start ffmpeg
 
 Navigate to `flute-ffmpeg/files` and run `sh ffmpeg-hls.sh`. You should now see files being added to your watchfolder,
 e.g.:
@@ -180,26 +182,26 @@ stream_0_data12771.ts  stream_0_data26.ts
 stream_0_data12772.ts  stream_0_data27.ts
 ````
 
-### Start the express.js webserver
+### Step 2: Start the express.js webserver
 
 Run `npm start` in `simple-express-server`. Our files created by `ffmpeg` are now hosted and available via unicast. Try
 to query the master manifest to check for the availability of the files:
 
 ````
-curl http://192.168.178.33:3333/watchfolder/hls/manifest.m3u8
+curl http://192.168.0.101:3333/watchfolder/hls/manifest.m3u8
 #EXTM3U
 #EXT-X-VERSION:6
 #EXT-X-STREAM-INF:BANDWIDTH=2305600,RESOLUTION=1280x720,CODECS="avc1.64001f,mp4a.40.2"
 stream_0.m3u8
 ````
 
-### Start the rt-mbms-tx-for-qrd-and-crd
+### Step 3: Start the rt-mbms-tx-for-qrd-and-crd
 
 Next we start our 5G Broadcast transmitter. For that reason, we need to start three different processes. In addition, we
 need to create the `sgi_mb` interface. Follow the steps
 described [here](https://github.com/5G-MAG/rt-mbms-tx-for-qrd-and-crd?tab=readme-ov-file#running) to start everything.
 
-### Start flute-ffmpeg
+### Step 4: Start flute-ffmpeg
 
 Now that we are ready to transmit files via 5G Broadcast we can start our `flute-ffmpeg` process to multicast all data
 that is written to the `watchfolder` to `srsmbms`(MBMS Gateway).
@@ -214,12 +216,11 @@ files written to the watchfolder are processed:
 [2024-07-03 13:52:10.812] [info] Queued /home/dsi/5gmag/simple-express-server/public/watchfolder/hls/stream_0.m3u8  for transmission, TOI is 41
 ````
 
-### Start the rt-mbms-mw-android
+### Step 5: Start the rt-mbms-mw-android
 
 The final step is to start our Android Middleware to receive the files we are broadcasting now with our transmitter.
 Follow the instructions [here](https://github.com/5G-MAG/rt-mbms-mw-android) to deploy the Android Middleware to your
-QRC/CRD device. As an alternative, the Android
-Middleware can also be deployed to the device using Android Studio.
+QRC/CRD device. As an alternative, the Android Middleware can also be deployed to the device using Android Studio.
 
 After the Android Middleware has started click on "Start Middleware". Then click on the play icon in the middle of the
 screen. Since the 5G broadcast is active the HLS media playlist and the HLS media segments are now received via 5G
