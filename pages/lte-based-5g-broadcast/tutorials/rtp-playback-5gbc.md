@@ -17,7 +17,7 @@ More information about the Real-Time Transport Protocol (RTP) can be found in th
 
 This tutorial makes use of the rt-mbms-modem and a media player such as VLC or ffplay. Additional details on hardware requirements can be found in [Hardware Requirements](../additional/hardware-requirements.html). The basic workflow of these components is illustrated in the Figure below:
 
-![Architecture](https://github.com/5G-MAG/Getting-Started/blob/main/media/architecture/5G-MAG%20RT%20Architecture%20RTP%20example.drawio.png?raw=true)
+![RTP](../../../assets/images/5gbc/rtp_example.png)
 
 The output of the SDR or the sample file serves as the input for the MBMS Modem. The MBMS Modem exposes the input data to a UDP multicast address. The content can be played directly in ffplay or VLC.
 
@@ -92,7 +92,7 @@ To play the stream in **ffplay** run the following steps:
 
 The output should look like this:
 
-<img src="https://github.com/5G-MAG/Getting-Started/blob/main/media/wiki/ffplay-rtp.png?raw=true" width="800">
+<img src="../../../assets/images/5gbc/ffplay-rtp.png?raw=true" width="800">
 
 To play the stream in **VLC** run the following steps:
 
@@ -103,4 +103,4 @@ To play the stream in **VLC** run the following steps:
 
 The output should look like this:
 
-<img src="https://github.com/5G-MAG/Getting-Started/blob/main/media/wiki/rtp-vlc.png?raw=true" width="800">
+<img src="../../../assets/images/5gbc/rtp-vlc.png?raw=true" width="800">
