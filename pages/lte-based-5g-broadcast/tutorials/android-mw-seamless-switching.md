@@ -91,25 +91,26 @@ Before putting the pieces together and running all components we need to run som
 
 ### Step 1: Configure ffmpeg
 
-First we configure the `ffmpeg` output. Navigate to `flute-ffmpeg/files` and open `ffmpeg-hls.sh`. Change the following
+First we configure the `ffmpeg` output. Navigate to `rt-mbms-examples/flute-ffmpeg/files` and open `ffmpeg-hls.sh`. Change the following
 two lines and point them to the path of the local webserver installed previously. If there is no `watchfolder/hls`
 folder on your webserver yet create that as well.
 
 ````
--hls_segment_filename /home/dsi/5gmag/simple-express-server/public/watchfolder/hls/stream_%v_data%02d.ts \
--var_stream_map "v:0,a:0" /home/dsi/5gmag/simple-express-server/public/watchfolder/hls/stream_%v.m3u8
+-hls_segment_filename /home/fivegmag/rt-common-shared/simple-express-server/public/watchfolder/hls/stream_%v_data%02d.ts \
+-master_pl_name manifest.m3u8 \
+-var_stream_map "v:0,a:0 v:1,a:1" /home/fivegmag/rt-common-shared/simple-express-server/public/watchfolder/hls/stream_%v.m3u8
 ````
 
 ### Step 2: Configure flute-ffmpeg
 
 Next we configure `flute-ffmpeg` to monitor the watchfolder on our webserver and also to multicast the resulting packets
-to the right address. Open `flute-ffmpeg/config/default.cfg` and edit the following lines:
+to the right address. Open `re-mbms-examples/flute-ffmpeg/config/default.cfg` and edit the following lines:
 
 ````
 general : {
    multicast_ip = "239.11.4.50";
    multicast_port = 9988;
-   watchfolder_path = "/home/dsi/5gmag/simple-express-server/public/watchfolder/hls";
+   watchfolder_path = "/home/fivegmag/rt-common-shared/simple-express-server/public/watchfolder/hls";
    path_to_transmit = "watchfolder/hls/"
 }
 ````
