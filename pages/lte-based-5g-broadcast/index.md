@@ -1,0 +1,34 @@
+---
+layout: default
+title: 5G Broadcast - TV/Radio
+has_children: true
+nav_order: 4
+---
+
+<img src="../../assets/images/Banner_5GBCTVR.png" /> 
+
+# 5G Broadcast: TV and Radio Hybrid Services - Reference Tools Project
+
+* Check the [**Roadmap**](https://github.com/orgs/5G-MAG/projects/48/views/7) for 5G Broadcast: TV and Radio Services
+
+## Overview
+<iframe width="60%" height="520" src="https://drive.google.com/file/d/1YL6WtnHjkceQQOjh9Y3MsoscjF1OTpPW/preview"></iframe>
+
+[DOWNLOAD THE PRESENTATION](https://drive.google.com/file/d/1YL6WtnHjkceQQOjh9Y3MsoscjF1OTpPW/preview){: .btn} 
+
+## Contents of this project
+
+### What is this project about?
+* Find [here](./under-development.html) information about specifications, architecture, APIs, etc.
+
+### What is the roadmap and development status?
+* Find [here](./projects.html) information about the Projects.
+ 
+### Where can I find the repositories and relevant resources?
+* Find [here](./repositories.html) information about the GitHub Repositories.
+
+### How can I use the tools?
+* Find [here](./tutorials.html) practical guidelines to use the tools.
+
+### What are the requirements to run the tools?
+* Find [here](./requirements.html) practical information about hardware and device support. 
