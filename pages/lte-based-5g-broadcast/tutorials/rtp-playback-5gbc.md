@@ -1,6 +1,6 @@
 ---
 layout: default
-title: RTP over 5G Broadcast (Linux)
+title: Linux - RTP over 5G Broadcast
 parent: Tutorials
 grand_parent: 5G Broadcast - TV/Radio
 has_children: false
