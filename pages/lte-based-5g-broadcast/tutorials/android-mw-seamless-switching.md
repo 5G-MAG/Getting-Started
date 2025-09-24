@@ -1,24 +1,22 @@
 ---
 layout: default
-title: Android Middleware - Seamless Switching
+title: Android - Seamless BC-UC Switching
 parent: Tutorials
 grand_parent: 5G Broadcast - TV/Radio
 has_children: false
 ---
 
-# Android Middleware - Seamless Switching
+# Tutorial - Seamless Switching between Unicast and Broadcast (Android)
 
-## Introduction
+This tutorial describes the end-to-end setup for showcasing seamless switching between 5G Broadcast and unicast delivery on an Android device.
 
-This tutorial describes the end-to-end setup for seamless switching between 5G Broadcast and unicast delivery on an
-Android device. The basic architecture of the setup is depicted in the Figure below:
+The basic architecture of the setup is depicted in the Figure below:
 
 ![Android Seamless Switching](../../../assets/images/5gbc/android-seamless-switching-architecture.png)
 
 We use `ffmpeg` to create an HLS livestream from a plain .mp4 file. The resulting manifest files and media segments are
 stored on a `watchfolder` located on a simple `express.js webserver`. From this webserver the files are accessible to
-media
-players located in the same network. This setup corresponds to a classic OTT and CDN based workflow. As an example, the
+media players located in the same network. This setup corresponds to a classic OTT and CDN based workflow. As an example, the
 HLS
 stream can be played natively in a Safari Web-browser by simply pasting the URL to the primary or the media playlist
 into the URL address bar:
@@ -28,13 +26,12 @@ into the URL address bar:
 Whenever a new file is added to the `watchfolder` located on the webserver, a background process called `flute-ffmpeg`
 is notified. `flute-ffmpeg` uses the `rt-libflute` library to FLUTE encode the files and sends them via a dedicated
 network tunnel as a multicast to the `srsmbms` process. For that reason the `srsmbms` process acts as an MBMS gateway
-and
-exposes the `sgi_mb` interface.
-The `rt-mbms-tx-for-qrd-and-crd` repository acts as a 5G Broadcast transmitter hosting the `srsmbms`, `srsepc`
-and `srsenb` processes. It is based on srsRAN with additional changes from 5G-MAG to support LTE-based 5G Broadcast
-transmission.
+and exposes the `sgi_mb` interface.
 
-Finally on the receiver side the `rt-mbms-mw-android` is running on a QRD or CRD device. It is responsible for receiving
+The `rt-mbms-tx-for-qrd-and-crd` repository acts as a 5G Broadcast transmitter hosting the `srsmbms`, `srsepc`
+and `srsenb` processes. It is based on srsRAN with additional changes from the 5G-MAG developer community to support transmission to LTE-based 5G Broadcast enabled UEs.
+
+On the receiver side the `rt-mbms-mw-android` is running on a QRD or CRD device. It is responsible for receiving
 the media files delivered via 5G Broadcast. The files are exposed to a media player such as the Exoplayer via a local
 webserver. In cases in which no 5G Broadcast is available the Android Middleware fetches the required manifest and media
 files directly from the CDN via unicast and exposes them again via the local webserver. From a media player's
@@ -61,9 +58,9 @@ A photo of the basic setup is depicted below:
 
 First, we need to install and configure a few components:
 
-### 1. Install the express.js webserver
+### Step 1: Install the express.js webserver
 
-The `express.js` webserver acts as our CDN for unicast delivery. To install the webserver follow the
+The `express.js` webserver acts as our CDN node for unicast delivery. To install the webserver follow the
 instructions [here](https://github.com/5G-MAG/rt-common-shared/tree/main/simple-express-server).
 
 ### 2. Install flute-ffmpeg
