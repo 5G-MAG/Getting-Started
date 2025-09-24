@@ -1,13 +1,13 @@
 ---
 layout: default
-title: RTP over 5G Broadcast
+title: RTP over 5G Broadcast (Linux)
 parent: Tutorials
 grand_parent: 5G Broadcast - TV/Radio
 has_children: false
 nav_order: 1
 ---
 
-# Tutorial - RTP Playback over 5G Broadcast
+# Tutorial - RTP Playback over 5G Broadcast (Linux)
 
 This tutorial provides the required steps to test the reception of an RTP stream processed by the [MBMS Modem](https://github.com/5G-MAG/rt-mbms-modem) and played in a third-party media player such as ffplay or VLC.
 
