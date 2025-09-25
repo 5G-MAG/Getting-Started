@@ -155,7 +155,7 @@ mcs = 16
 nof_phy_threads      = 2
 extended_cp         = true
 
-````
+```
 
 ## Running
 ### Step 1: Running the 5G Broadcast Transmitter
@@ -165,6 +165,7 @@ Start the MBMS Gateway, EPC and eNodeB:
 sudo srsmbms
 sudo srsepc
 cd rt-mbms-tx-for-qrd-and-crd/build && sudo srsenb/src/srsenb
+```
 
 ### Step 2: Start the UE
 
