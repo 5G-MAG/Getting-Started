@@ -101,19 +101,19 @@ turned on. The output looks similar to this:
 
 ### Step 3: Changing the type of the alert
 
-With the current implementation, the SIB 12 payload is static and defined in `build/sib.conf.mbsfn`. To change the type
-of the alert you need to open `build/sib.conf.mbsfn` and change the `message_identifier`. A list of possible values is
-defined in TS 23041 Section 9.4.1.2.2. For example:
+With the current implementation, the SIB 12 payload is static and defined in `Config-Templates/sib.conf.mbsfn`. To change the type
+of the alert you need to open `Config-Templates/sib.conf.mbsfn` and change the `message_identifier`. A list of possible values is
+defined in [3GPP TS 23.041](https://www.3gpp.org/dynareport/23041.htm) Section 9.4.1.2.2. For example:
 
 ````
 sib12 =
 {
-    message_identifier = 0x1100;
-    serial_number = 0x3005;
+    message_identifier = 0x1102;
+    serial_number = 0x0001;
     data_coding_scheme = 01;
     warning_msg_segment_type = "lastSegment";
     warning_msg_segment_num = 0;
-    warning_msg_segment_r9 = "01C576597E2EBBC7F950A8D168341A8D46A3D168341A8D46A>
+    warning_msg_segment_r9 = "01C576597E2EBBC7F950A8D168341A8D46A3D168341A8D46A3D168341A8D46A3D168341A8D46A3D168341A8D46A3D168341A8D46A3D168341A8D46A3D168341A8D46A3D168341A8D46A3D168341A8D46A3D1000A";
 };
 ````
 
