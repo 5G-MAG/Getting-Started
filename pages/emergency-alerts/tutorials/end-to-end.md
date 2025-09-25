@@ -65,7 +65,7 @@ Example configuration files are located under the directory Config-Templates. Th
 
 Start the MBMS Gateway, EPC and eNodeB:
 ```
-cd rt-mbms-tx-for-qrd-and-crd/build 
+cd ~/rt-mbms-tx-for-qrd-and-crd-emergency-alerts/build 
 sudo ./srsepc/src/srsmbms ../Config-Template/mbms.conf
 sudo ./srsepc/src/srsepc ../Config-Template/epc.conf
 sudo ./srsenb/src/srsenb ../Config-Template/enb.conf
