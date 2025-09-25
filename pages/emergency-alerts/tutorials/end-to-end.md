@@ -61,7 +61,7 @@ this [tool](https://5g-tools.com/4g-lte-earfcn-calculator/). Note also that Soap
 
 As an example, this is how the `enb.conf` file looks like for a device operating at a frequency of 626 MHz.
 
-```` 
+```
 #####################################################################
 #                   srsENB configuration file
 #####################################################################
