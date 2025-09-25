@@ -46,7 +46,8 @@ Now build the transmitter running the following commands:
 cd rt-mbms-tx-for-qrd-and-crd-emergency-alerts
 git submodule update
 mkdir build && cd build
-cmake ..
+cmake -GNinja ..
+ninja
 ```
 
 ## Configuration
