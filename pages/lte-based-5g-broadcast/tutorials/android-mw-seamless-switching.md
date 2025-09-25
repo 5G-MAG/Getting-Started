@@ -223,6 +223,8 @@ The final step is to start our Android Middleware to receive the files we are br
 Follow the instructions [here](https://github.com/5G-MAG/rt-mbms-mw-android) to deploy the Android Middleware to your
 QRC/CRD device. As an alternative, the Android Middleware can also be deployed to the device using Android Studio.
 
+The phones will have to retrieve the manifest over unicast. For this make sure they have access e.g. over WiFi to the watchfolder where the manifest is located. This can be done by opening a hotspot on the same PC running the watchfolder or by means of a router serving all the equipment.
+
 After the Android Middleware has started click on "Start Middleware". Then click on the play icon in the middle of the
 screen. Since the 5G broadcast is active the HLS media playlist and the HLS media segments are now received via 5G
 broadcast and placed on the local webserver of the Android Middleware. From there they are consumed by the underlying
