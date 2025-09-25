@@ -64,7 +64,7 @@ Example configuration files are located under the directory Config-Templates. Th
 
 ### Step 1: Running the 5G Broadcast Transmitter
 
-Start the MBMS Gateway, EPC and eNodeB:
+Start the MBMS Gateway, EPC and eNodeB in different terminals:
 ```
 cd ~/rt-mbms-tx-for-qrd-and-crd-emergency-alerts/build 
 sudo ./srsepc/src/srsmbms ../Config-Template/mbms.conf
