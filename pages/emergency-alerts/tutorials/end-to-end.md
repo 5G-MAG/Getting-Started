@@ -49,6 +49,7 @@ mkdir build && cd build
 cmake -DCMAKE_INSTALL_PREFIX=/usr -GNinja ..
 ninja
 sudo ninja install
+```
 
 ## Configuration
 
