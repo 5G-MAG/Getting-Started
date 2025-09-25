@@ -105,7 +105,7 @@ With the current implementation, the SIB 12 payload is static and defined in `Co
 of the alert you need to open `Config-Templates/sib.conf.mbsfn` and change the `message_identifier`. A list of possible values is
 defined in [3GPP TS 23.041](https://www.3gpp.org/dynareport/23041.htm) Section 9.4.1.2.2. For example:
 
-````
+```
 sib12 =
 {
     message_identifier = 0x1102;
@@ -115,7 +115,15 @@ sib12 =
     warning_msg_segment_num = 0;
     warning_msg_segment_r9 = "01C576597E2EBBC7F950A8D168341A8D46A3D168341A8D46A3D168341A8D46A3D168341A8D46A3D168341A8D46A3D168341A8D46A3D168341A8D46A3D168341A8D46A3D168341A8D46A3D168341A8D46A3D1000A";
 };
-````
+```
+| message_identifier | Description |
+| ------------------ | ----------- |
+| 0x1100             | ETWS CBS Message Identifier for earthquake warning message |
+| 0x1101             | ETWS CBS Message Identifier for tsunami warning message |
+| 0x1102             | ETWS CBS Message Identifier for earthquake and tsunami combined warning message |
+| 0x1104             | ETWS CBS Message Identifier for messages related to other emergency types |
+| 0x1112-1130        | CMAS CBS Message Identifier |
+| 0x1131-113B        | Non-ETWS CBS Message Identifier |
 
 ### Step 4: Triggering multiple alerts
 
