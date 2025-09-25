@@ -74,10 +74,19 @@ sudo route add -net 239.11.4.0 netmask 255.255.255.0 dev sgi_mb
 ```
 
 Start the MBMS Gateway, EPC and eNodeB in different terminals:
+
 ```
 cd ~/rt-mbms-tx-for-qrd-and-crd-emergency-alerts/build 
 sudo ./srsepc/src/srsmbms ../Config-Template/mbms.conf
+```
+
+```
+cd ~/rt-mbms-tx-for-qrd-and-crd-emergency-alerts/build 
 sudo ./srsepc/src/srsepc ../Config-Template/epc.conf
+```
+
+```
+cd ~/rt-mbms-tx-for-qrd-and-crd-emergency-alerts/build 
 sudo ./srsenb/src/srsenb ../Config-Template/enb.conf
 ```
 
