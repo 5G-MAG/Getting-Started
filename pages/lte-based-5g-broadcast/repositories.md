@@ -43,11 +43,13 @@ Note that 5G Broadcast makes use of other repositories:
 * [Information and how to download, build, install and run](https://github.com/5G-MAG/rt-mbms-tx-for-qrd-and-crd#readme)
 
 ## MBMS Modem: [rt-mbms-modem](https://github.com/5G-MAG/rt-mbms-modem)
+The MBMS Modem main task is to convert a 5G BC input signal (received either as live I/Q raw data from the SDR or as prerecorded SDR sample file) to multicast IP packets on the output. The MBMS Modem can run as background process or can be started/stopped manually.
 * [Information and how to download, build, install and run](https://github.com/5G-MAG/rt-mbms-modem#readme)
 * [Releases](https://github.com/5G-MAG/rt-mbms-modem/releases)
 * [Docker](https://github.com/5G-MAG/rt-mbms-modem/tree/development/modem)
 
 ## MBMS Middleware: [rt-mbms-mw](https://github.com/5G-MAG/rt-mbms-mw)
+The MBMS Middleware main task is to provide the best available content to the (internal or external) application at any time. If available, it combines content from (mobile) broadband, WiFi with the 5G broadcast content from the MBMS Modem using an advanced decision logic. The content is presented to the applications in the form of an intelligent edge cache ready for pickup via http(s). Internally, the MBMS Middleware uses the 5G-MAG Reference Tools FLUTE library to decode FLUTE encoded manifest files and media segments.
 * [Information and how to download, build, install and run](https://github.com/5G-MAG/rt-mbms-mw#readme)
 * [Releases](https://github.com/5G-MAG/rt-mbms-mw/releases)
 * [Docker](https://github.com/5G-MAG/rt-mbms-mw/tree/development/middleware)
@@ -63,10 +65,11 @@ Note that 5G Broadcast makes use of other repositories:
 ### Tools common to various projects: [rt-common-shared](https://github.com/5G-MAG/rt-common-shared)
 * [Information and how to download, build, install and run](https://github.com/5G-MAG/rt-common-shared#readme)
 
-### MBMS Web User Interface: [rt-mbms-wui](https://github.com/5G-MAG/rt-mbms-wui)
-* [Information and how to download, build, install and run](https://github.com/5G-MAG/rt-mbms-wui#readme)
-* [Releases](https://github.com/5G-MAG/rt-mbms-wui/releases)
-* [Docker](https://github.com/5G-MAG/rt-mbms-wui/tree/development/wui)
+### MBMS Web User Interface: [rt-mbms-wui](https://github.com/5G-MAG/rt-wui)
+The 5G-MAG Reference Tools Webinterface (rt-wui) provides an optional graphical webinterface with a control display for each 5G-MAG Reference Tools process (MBMS Modem, MBMS Middleware). Its main purpose is to collect and display useful information from the MBMS Modem and the MBMS Middleware. The webinterface provides basic browser-based HLS playback of the HLS manifest and segments provided by the MBMS Middleare using hls.js.
+* [Information and how to download, build, install and run](https://github.com/5G-MAG/rt-wui#readme)
+* [Releases](https://github.com/5G-MAG/rt-wui/releases)
+* [Docker](https://github.com/5G-MAG/rt-wui/tree/development/wui)
 
 ### MBMS Examples: [rt-mbms-examples](https://github.com/5G-MAG/rt-mbms-examples)
 * [Information and how to download, build, install and run](https://github.com/5G-MAG/rt-mbms-examples#readme)

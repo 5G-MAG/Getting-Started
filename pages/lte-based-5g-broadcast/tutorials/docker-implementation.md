@@ -1,13 +1,13 @@
 ---
 layout: default
-title: Linux stack - Docker support
+title: Linux - Docker support for clients
 parent: Tutorials
 grand_parent: 5G Broadcast - TV/Radio
 has_children: false
 nav_order: 4
 ---
 
-# Linux stack - Docker support for rt-mbms client side
+# Tutorial - Docker support for rt-mbms client components (Linux)
 
 ## Introduction
 

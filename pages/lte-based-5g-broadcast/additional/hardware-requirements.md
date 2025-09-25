@@ -43,7 +43,6 @@ Each has to be connected via USB to the computer and to your antenna via SMA con
 * LimeSDR Mini can be ordered e.g. at [CrowdSupply](https://www.crowdsupply.com/lime-micro/limesdr-mini/)  for around
   160 EUR
 * BladeRF can be ordered e.g. at [nuand](https://www.nuand.com/product/bladeRF-xA4) for around 480 EUR.
-* HackRF One are widely available. Please see [their website](https://greatscottgadgets.com/hackrf/one/) for availability, typically around 250 EUR.
 * Ettus USRP N310
 * Ettus USRP B210
 
