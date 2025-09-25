@@ -36,10 +36,6 @@ Next, clone the transmitter repository using the `emergency-alerts` branch:
 git clone --recurse-submodules -b emergency-alerts https://github.com/5G-MAG/rt-mbms-tx-for-qrd-and-crd.git rt-mbms-tx-for-qrd-and-crd-emergency-alerts
 ```
 
-Next, copy the `bytecode` file located in the root of the project in the folder.
-
-!!!!!!!!!!!!!!!!!!!!!!`cp bytecode /home/fivegmag/bytecode`
-
 Now build the transmitter running the following commands:
 
 ```
@@ -60,9 +56,22 @@ this [tool](https://5g-tools.com/4g-lte-earfcn-calculator/). Note also that Soap
 
 Example configuration files are located under the directory Config-Templates. These will be called when running.
 
+Copy the `bytecode` file to a foder `/home/fivegmag`.
+
+```
+cd ~/rt-mbms-tx-for-qrd-and-crd-emergency-alerts/Config-Template
+cp bytecode /home/fivegmag/bytecode
+```
+
 ## Running
 
 ### Step 1: Running the 5G Broadcast Transmitter
+
+The MBMS-GW receives multicast packets on one tunnel interface, packages them to GTP-U-Packets and sends them to ENB over another tunnel interface. This command creates the sgi_mb interface.
+
+```
+sudo route add -net 239.11.4.0 netmask 255.255.255.0 dev sgi_mb
+```
 
 Start the MBMS Gateway, EPC and eNodeB in different terminals:
 ```
