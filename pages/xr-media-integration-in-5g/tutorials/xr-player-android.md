@@ -60,7 +60,7 @@ cp ./rt-common-shared/avcodec-build/build/ffmpeg/aarch64/LICENSE ./rt-xr-maf-nat
 
 #### configure cross compilation configuration 
 
-* Download and install the Android NDK. In the next steps, we assume a Windows x86_64 environment with the Android NDK *27.2.12479018* installed in `C:\Users\fivegmag\AppData\Local\Android\Sdk\ndk`.
+* Download and install the Android NDK. In the next steps, we assume a Windows x86_64 environment with the Android NDK *27.2.12479018* installed in `C:\Users\<your_user_name>\AppData\Local\Android\Sdk\ndk`.
 * Locate the `./rt-xr-maf-native/crossfile/android-arm64-v8a` and modify it to point to your local NDK installation, for instance: 
 ```
 [binaries]
