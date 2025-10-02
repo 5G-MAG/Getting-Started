@@ -61,16 +61,16 @@ cp ./rt-common-shared/avcodec-build/build/ffmpeg/aarch64/LICENSE ./rt-xr-maf-nat
 
 #### configure cross compilation configuration 
 
-* Download and install the Android NDK. In the next steps, we assume a Windows x86_64 environment with the Android NDK *28.0.12674087* installed in `C:\Users\fivegmag\AppData\Local\Android\Sdk\ndk`.
+* Download and install the Android NDK. In the next steps, we assume a Windows x86_64 environment with the Android NDK *27.2.12479018* installed in `C:\Users\fivegmag\AppData\Local\Android\Sdk\ndk`.
 * Locate the `./rt-xr-maf-native/crossfile/android-arm64-v8a` and modify it to point to your local NDK installation, for instance: 
 ```
 [binaries]
-ar = ['C:\Users\fivegmag\AppData\Local\Android\Sdk\ndk\28.0.12674087\toolchains\llvm\prebuilt\windows-x86_64\bin\llvm-ar']
-c = ['C:\Users\fivegmag\AppData\Local\Android\Sdk\ndk\28.0.12674087\toolchains\llvm\prebuilt\windows-x86_64\bin\aarch64-linux-android28-clang.cmd']
-cpp = ['C:\Users\fivegmag\AppData\Local\Android\Sdk\ndk\28.0.12674087\toolchains\llvm\prebuilt\windows-x86_64\bin\aarch64-linux-android28-clang++.cmd']
-c_ld = ['C:\Users\fivegmag\AppData\Local\Android\Sdk\ndk\28.0.12674087\toolchains\llvm\prebuilt\windows-x86_64\bin\ld.lld']
-cpp_ld = ['C:\Users\fivegmag\AppData\Local\Android\Sdk\ndk\28.0.12674087\toolchains\llvm\prebuilt\windows-x86_64\bin\ld.lld']
-strip = ['C:\Users\fivegmag\AppData\Local\Android\Sdk\ndk\28.0.12674087\toolchains\llvm\prebuilt\windows-x86_64\bin\llvm-strip']
+ar = ['C:\Users\fivegmag\AppData\Local\Android\Sdk\ndk\27.2.12479018\toolchains\llvm\prebuilt\windows-x86_64\bin\llvm-ar']
+c = ['C:\Users\fivegmag\AppData\Local\Android\Sdk\ndk\27.2.12479018\toolchains\llvm\prebuilt\windows-x86_64\bin\aarch64-linux-android28-clang.cmd']
+cpp = ['C:\Users\fivegmag\AppData\Local\Android\Sdk\ndk\27.2.12479018\toolchains\llvm\prebuilt\windows-x86_64\bin\aarch64-linux-android28-clang++.cmd']
+c_ld = ['C:\Users\fivegmag\AppData\Local\Android\Sdk\ndk\27.2.12479018\toolchains\llvm\prebuilt\windows-x86_64\bin\ld.lld']
+cpp_ld = ['C:\Users\fivegmag\AppData\Local\Android\Sdk\ndk\27.2.12479018\toolchains\llvm\prebuilt\windows-x86_64\bin\ld.lld']
+strip = ['C:\Users\fivegmag\AppData\Local\Android\Sdk\ndk\27.2.12479018\toolchains\llvm\prebuilt\windows-x86_64\bin\llvm-strip']
 ```
 
 
