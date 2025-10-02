@@ -38,7 +38,7 @@ Note: --recursive is required to get all submodules checked out.
 
 ### Clone and install the source code
 ```
-git clone git@github.com:5G-MAG/rt-xr-maf-native.git
+git clone https://github.com/5G-MAG/rt-xr-maf-native.git
 cd rt-xr-maf-native
 ```
 
