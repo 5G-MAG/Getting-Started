@@ -1,19 +1,19 @@
 ---
 layout: default
-title: XR Player on Android
+title: XR Player on Android Smartphone
 grand_parent: XR with MPEG-I SD
 parent: Tutorials
 has_children: false
 nav_order: 3
 ---
 
-# Building and using XR Player on Android
+# Building and using XR Player on Android Smartphone
 
 This guide covers compiling the XR player sample Unity project for Android and configuring it with specific glTF content.
 
 This section assumes [adb](https://developer.android.com/tools/adb) is installed on the machine, and an Android device with [developer options and USB debugging](https://developer.android.com/studio/debug/dev-options#enable) enabled is connected.
 
-The project requires Unity 3D 2022.3 with both Android and iOS support modules installed.
+The project requires **Unity 3D 2022.3.34f1** with both Android and iOS support modules installed. Note that **Android API 26** and **NDK 27.2.12479018** are used.
 
 While this guide assumes a Windows environment with a git-bash terminal (eg. to run shell scripts), the same instructions apply to other platoforms.
 
@@ -38,7 +38,7 @@ Note: --recursive is required to get all submodules checked out.
 
 ### Clone and install the source code
 ```
-git clone git@github.com:5G-MAG/rt-xr-maf-native.git
+git clone https://github.com/5G-MAG/rt-xr-maf-native.git
 cd rt-xr-maf-native
 ```
 
@@ -53,26 +53,24 @@ Copy the generated libraries into the avpipeline subproject:
 mkdir -p ./rt-xr-maf-native/subprojects/avpipeline/external/avcodec/android/arm64-v8a/lib
 cp ./rt-common-shared/avcodec-build/build/ffmpeg/aarch64/lib/*.so ./rt-xr-maf-native/subprojects/avpipeline/external/avcodec/android/arm64-v8a/lib
 
-mkdir -p ./rt-xr-maf-native/subprojects/avpipeline/external/avcodec/android/arm64-v8a/include
-cp ./rt-common-shared/avcodec-build/build/ffmpeg/aarch64/include/* ./rt-xr-maf-native/subprojects/avpipeline/external/avcodec/android/arm64-v8a/include
+cp -r ./rt-common-shared/avcodec-build/build/ffmpeg/aarch64/include ./rt-xr-maf-native/subprojects/avpipeline/external/avcodec/android/arm64-v8a/include/
 
 cp ./rt-common-shared/avcodec-build/build/ffmpeg/aarch64/LICENSE ./rt-xr-maf-native/subprojects/avpipeline/external/avcodec/android/arm64-v8a/LICENSE
 ```
 
 #### configure cross compilation configuration 
 
-* Download and install the Android NDK. In the next steps, we assume a Windows x86_64 environment with the Android NDK *28.0.12674087* installed in `C:\Users\fivegmag\AppData\Local\Android\Sdk\ndk`.
+* Download and install the Android NDK. In the next steps, we assume a Windows x86_64 environment with the Android NDK *27.2.12479018* installed in `C:\Users\<your_user_name>\AppData\Local\Android\Sdk\ndk`.
 * Locate the `./rt-xr-maf-native/crossfile/android-arm64-v8a` and modify it to point to your local NDK installation, for instance: 
 ```
 [binaries]
-ar = ['C:\Users\fivegmag\AppData\Local\Android\Sdk\ndk\28.0.12674087\toolchains\llvm\prebuilt\windows-x86_64\bin\llvm-ar']
-c = ['C:\Users\fivegmag\AppData\Local\Android\Sdk\ndk\28.0.12674087\toolchains\llvm\prebuilt\windows-x86_64\bin\aarch64-linux-android28-clang.cmd']
-cpp = ['C:\Users\fivegmag\AppData\Local\Android\Sdk\ndk\28.0.12674087\toolchains\llvm\prebuilt\windows-x86_64\bin\aarch64-linux-android28-clang++.cmd']
-c_ld = ['C:\Users\fivegmag\AppData\Local\Android\Sdk\ndk\28.0.12674087\toolchains\llvm\prebuilt\windows-x86_64\bin\ld.lld']
-cpp_ld = ['C:\Users\fivegmag\AppData\Local\Android\Sdk\ndk\28.0.12674087\toolchains\llvm\prebuilt\windows-x86_64\bin\ld.lld']
-strip = ['C:\Users\fivegmag\AppData\Local\Android\Sdk\ndk\28.0.12674087\toolchains\llvm\prebuilt\windows-x86_64\bin\llvm-strip']
+ar = ['C:\Users\<your_user_name>\AppData\Local\Android\Sdk\ndk\27.2.12479018\toolchains\llvm\prebuilt\windows-x86_64\bin\llvm-ar']
+c = ['C:\Users\<your_user_name>\AppData\Local\Android\Sdk\ndk\27.2.12479018\toolchains\llvm\prebuilt\windows-x86_64\bin\aarch64-linux-android28-clang.cmd']
+cpp = ['C:\Users\<your_user_name>\AppData\Local\Android\Sdk\ndk\27.2.12479018\toolchains\llvm\prebuilt\windows-x86_64\bin\aarch64-linux-android28-clang++.cmd']
+c_ld = ['C:\Users\<your_user_name>\AppData\Local\Android\Sdk\ndk\27.2.12479018\toolchains\llvm\prebuilt\windows-x86_64\bin\ld.lld']
+cpp_ld = ['C:\Users\<your_user_name>\AppData\Local\Android\Sdk\ndk\27.2.12479018\toolchains\llvm\prebuilt\windows-x86_64\bin\ld.lld']
+strip = ['C:\Users\<your_user_name>\AppData\Local\Android\Sdk\ndk\27.2.12479018\toolchains\llvm\prebuilt\windows-x86_64\bin\llvm-strip']
 ```
-
 
 #### configure and compile the MAF library and media pipeline plugins
 
@@ -87,9 +85,9 @@ meson compile -C build/android/arm64-v8a
 
 ### install the media pipeline factory and plugins into the Unity project
 
-Assuming *rt-xr-unity-player* repository has been cloned in a sibling directory `../rt-xr-unity-player`:
+Assuming *rt-xr-unity-player* repository has been cloned in a sibling directory `../rt-xr-unity-player`, run the following commands making sure of the correct path that applies to your installation:
 ```
-export ANDROID_NDK_HOME='/c/Users/fivegmag/AppData/Local/Android/Sdk/ndk/28.0.12674087'
+export ANDROID_NDK_HOME='/c/Users/<your_user_name>/AppData/Local/Android/Sdk/ndk/27.2.12479018'
 cd rt-xr-maf-native
 scripts/install_android.sh ../rt-xr-unity-player/Packages/rt.xr.maf
 ```
