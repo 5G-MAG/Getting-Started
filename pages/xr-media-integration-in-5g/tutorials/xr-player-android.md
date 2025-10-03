@@ -13,7 +13,7 @@ This guide covers compiling the XR player sample Unity project for Android and c
 
 This section assumes [adb](https://developer.android.com/tools/adb) is installed on the machine, and an Android device with [developer options and USB debugging](https://developer.android.com/studio/debug/dev-options#enable) enabled is connected.
 
-The project requires Unity 3D 2022.3.34f1 with both Android and iOS support modules installed. Note that Android API version is set to 26 with NDK 27.2.12479018.
+The project requires **Unity 3D 2022.3.34f1** with both Android and iOS support modules installed. Note that **Android API 26** and **NDK 27.2.12479018** are used.
 
 While this guide assumes a Windows environment with a git-bash terminal (eg. to run shell scripts), the same instructions apply to other platoforms.
 
@@ -64,14 +64,13 @@ cp ./rt-common-shared/avcodec-build/build/ffmpeg/aarch64/LICENSE ./rt-xr-maf-nat
 * Locate the `./rt-xr-maf-native/crossfile/android-arm64-v8a` and modify it to point to your local NDK installation, for instance: 
 ```
 [binaries]
-ar = ['C:\Users\fivegmag\AppData\Local\Android\Sdk\ndk\27.2.12479018\toolchains\llvm\prebuilt\windows-x86_64\bin\llvm-ar']
-c = ['C:\Users\fivegmag\AppData\Local\Android\Sdk\ndk\27.2.12479018\toolchains\llvm\prebuilt\windows-x86_64\bin\aarch64-linux-android28-clang.cmd']
-cpp = ['C:\Users\fivegmag\AppData\Local\Android\Sdk\ndk\27.2.12479018\toolchains\llvm\prebuilt\windows-x86_64\bin\aarch64-linux-android28-clang++.cmd']
-c_ld = ['C:\Users\fivegmag\AppData\Local\Android\Sdk\ndk\27.2.12479018\toolchains\llvm\prebuilt\windows-x86_64\bin\ld.lld']
-cpp_ld = ['C:\Users\fivegmag\AppData\Local\Android\Sdk\ndk\27.2.12479018\toolchains\llvm\prebuilt\windows-x86_64\bin\ld.lld']
-strip = ['C:\Users\fivegmag\AppData\Local\Android\Sdk\ndk\27.2.12479018\toolchains\llvm\prebuilt\windows-x86_64\bin\llvm-strip']
+ar = ['C:\Users\<your_user_name>\AppData\Local\Android\Sdk\ndk\27.2.12479018\toolchains\llvm\prebuilt\windows-x86_64\bin\llvm-ar']
+c = ['C:\Users\<your_user_name>\AppData\Local\Android\Sdk\ndk\27.2.12479018\toolchains\llvm\prebuilt\windows-x86_64\bin\aarch64-linux-android28-clang.cmd']
+cpp = ['C:\Users\<your_user_name>\AppData\Local\Android\Sdk\ndk\27.2.12479018\toolchains\llvm\prebuilt\windows-x86_64\bin\aarch64-linux-android28-clang++.cmd']
+c_ld = ['C:\Users\<your_user_name>\AppData\Local\Android\Sdk\ndk\27.2.12479018\toolchains\llvm\prebuilt\windows-x86_64\bin\ld.lld']
+cpp_ld = ['C:\Users\<your_user_name>\AppData\Local\Android\Sdk\ndk\27.2.12479018\toolchains\llvm\prebuilt\windows-x86_64\bin\ld.lld']
+strip = ['C:\Users\<your_user_name>\AppData\Local\Android\Sdk\ndk\27.2.12479018\toolchains\llvm\prebuilt\windows-x86_64\bin\llvm-strip']
 ```
-
 
 #### configure and compile the MAF library and media pipeline plugins
 
@@ -86,9 +85,9 @@ meson compile -C build/android/arm64-v8a
 
 ### install the media pipeline factory and plugins into the Unity project
 
-Assuming *rt-xr-unity-player* repository has been cloned in a sibling directory `../rt-xr-unity-player`:
+Assuming *rt-xr-unity-player* repository has been cloned in a sibling directory `../rt-xr-unity-player`, run the following commands making sure of the correct path that applies to your installation:
 ```
-export ANDROID_NDK_HOME='/c/Users/fivegmag/AppData/Local/Android/Sdk/ndk/27.2.12479018'
+export ANDROID_NDK_HOME='/c/Users/<your_user_name>/AppData/Local/Android/Sdk/ndk/27.2.12479018'
 cd rt-xr-maf-native
 scripts/install_android.sh ../rt-xr-unity-player/Packages/rt.xr.maf
 ```
