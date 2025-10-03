@@ -1,13 +1,13 @@
 ---
 layout: default
-title: XR Player on Android Phone
+title: XR Player on Android Smartphone
 grand_parent: XR with MPEG-I SD
 parent: Tutorials
 has_children: false
 nav_order: 3
 ---
 
-# Building and using XR Player on Android
+# Building and using XR Player on Android Smartphone
 
 This guide covers compiling the XR player sample Unity project for Android and configuring it with specific glTF content.
 
