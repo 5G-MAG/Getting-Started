@@ -1,6 +1,6 @@
 ---
 layout: default
-title: XR Player on Android
+title: XR Player on Android Phone
 grand_parent: XR with MPEG-I SD
 parent: Tutorials
 has_children: false
