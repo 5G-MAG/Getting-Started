@@ -88,7 +88,7 @@ meson compile -C build/android/arm64-v8a
 
 Assuming *rt-xr-unity-player* repository has been cloned in a sibling directory `../rt-xr-unity-player`:
 ```
-export ANDROID_NDK_HOME='/c/Users/fivegmag/AppData/Local/Android/Sdk/ndk/28.0.12674087'
+export ANDROID_NDK_HOME='/c/Users/fivegmag/AppData/Local/Android/Sdk/ndk/27.2.12479018'
 cd rt-xr-maf-native
 scripts/install_android.sh ../rt-xr-unity-player/Packages/rt.xr.maf
 ```
