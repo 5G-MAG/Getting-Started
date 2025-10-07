@@ -11,14 +11,9 @@ nav_order: 0
 
 ## Introduction
 
-Consumption Collection and Reporting executes the collection of content consumption measurement logs
-from the Media Player and sending of consumption reports to a 5GMSd AF about the currently consumed media
-within the available presentation, about the UE capabilities and about the environment of the media session for
-potential transport optimizations by the network or consumption report analysis.
+This tutorial provides information to test the 5GC Service Consumer libraries available in [rt-5gc-service-consumers](https://github.com/5G-MAG/rt-5gc-service-consumers) repository.
 
-To setup and enable Consumption Reporting we must first configure the 5GMS Application Function and the 5GMS Application
-Server. Next, we start a 5GMS media streaming downlink session on the client-side. The resulting Consumption Reporting
-reports can then be accessed from the local hard-drive.
+This collection of reusable service consumer libraries are designed to talk to the 5G Core Network Functions using some of their defined service interfaces. The command line tools below are provided to demonstrate the use of these service consumer libraries.
 
 ## Setup the relevant Open5GS network functions
 
