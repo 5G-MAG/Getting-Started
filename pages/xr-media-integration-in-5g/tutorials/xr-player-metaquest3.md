@@ -1,6 +1,6 @@
 ---
 layout: default
-title: XR Player on Meta Quest 3
+title: XR Player - Meta Quest 3
 grand_parent: XR with MPEG-I SD
 parent: Tutorials
 has_children: false
