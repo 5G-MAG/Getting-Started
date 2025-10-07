@@ -7,15 +7,13 @@ has_children: false
 nav_order: 0
 ---
 
-TODO
+# Building and using XR Player on Meta Quest 3
 
-# Building and using XR Player on Android Smartphone
+This guide covers compiling the XR player sample Unity project for Meta Quest 3 and configuring it with specific glTF content.
 
-This guide covers compiling the XR player sample Unity project for Android and configuring it with specific glTF content.
+This section assumes [adb](https://developer.android.com/tools/adb) is installed on the machine, and a Meta Quest 3 with [developer options and USB debugging](https://developer.android.com/studio/debug/dev-options#enable) enabled is connected.
 
-This section assumes [adb](https://developer.android.com/tools/adb) is installed on the machine, and an Android device with [developer options and USB debugging](https://developer.android.com/studio/debug/dev-options#enable) enabled is connected.
-
-The project requires **Unity 3D 2022.3.34f1** with both Android and iOS support modules installed. Note that **Android API 26** and **NDK 27.2.12479018** are used.
+The project requires **Unity 3D 2022.3.34f1** with both Android and iOS support modules installed. Note that **Android API 28** and **NDK 27.2.12479018** are used.
 
 While this guide assumes a Windows environment with a git-bash terminal (eg. to run shell scripts), the same instructions apply to other platoforms.
 
@@ -112,20 +110,7 @@ For each library, in the inspector panel:
 
 The configuration is stored in Unity's *.meta sidecar files and are tracked in the Unity repository. Unity removes the *.meta files if the resource they reference is not found when opening a project.  
 
-## Step 3: Build and run the Unity project
-
-Open the `rt-xr-unity-player` directory as an existing project from Unity Hub.
-
-<img src="../images/unity-build-player.png" alt="Build the Unity project for Android" width="640" />
-
-Then in the Unity Editor:
-1. Locate the `File > Build Settings` menu 
-2. Make sure that Android is the selected platform, Switch Platform if needed
-3. Ensure that `XRScene` is the default scene.
-4. Select the device on which the application will be installed.
-5. Hit `Build and Run` to compile the project and install it on the mobile device
-
-## Step 4: Configure the XR player sample application
+## Step 3: Configure the glTF asset to be loaded by the XR Unity player
 
 Clone the `rt-xr-content` repository. This **requires [git LFS](https://git-lfs.com/)** to be installed on your system.
 
@@ -133,32 +118,38 @@ Clone the `rt-xr-content` repository. This **requires [git LFS](https://git-lfs.
 git clone https://github.com/5G-MAG/rt-xr-content.git
 ```
 
-Push glTF content to the smartphone:
+Push glTF content to the Meta Quest 3, for instance the "Studio Apartment":
 
 ```
 cd rt-xr-content
-adb push ./awards /storage/emulated/0/Android/data/com.fivegmag.rtxrplayer/files/awards
+adb push ./studio_apartment /storage/emulated/0/Android/data/com.fivegmag.rtxrplayer/files/studio_apartment
 ```
 
-Create a file named *'Paths'* listing glTF documents to be exposed in the player, one per line:
+Open the `rt-xr-unity-player` directory as an existing project from Unity Hub.
 
-```
-/storage/emulated/0/Android/data/com.fivegmag.rtxrplayer/files/awards/awards.gltf
-/storage/emulated/0/Android/data/com.fivegmag.rtxrplayer/files/awards/awards_floor_anchoring.gltf
-```
+Now configure the glTF asset in the Unity project by adding the path, e.g. `/storage/emulated/0/Android/data/com.fivegmag.rtxrplayer/files/studio_apartment/studio_apartment.gltf`
 
-Upload the *'Paths'* file to the Android device:
+![Meta Quest scene configuration](images/dev-meta-quest-scene-configuration.png)
 
-```
-adb push ./Paths /storage/emulated/0/Android/data/com.fivegmag.rtxrplayer/files/Paths
-```
+## Step 4: Build and run the Unity project
+
+In the Unity Editor:
+1. Locate the `File > Build Settings` menu 
+2. Make sure that Android is the selected platform, Switch Platform if needed
+3. Ensure that `MetaQuestARF` is the default scene.
+4. Select the device on which the application will be installed.
+5. Hit `Build and Run` to compile the project and install it on the mobile device
+
+![Meta Quest build settings](images/dev-meta-quest-build-settings.png)
 
 ## Step 5: Launch the player
 
-Locate and launch the player.
+Locate and launch the player in the Meta Quest 3.
 
-A menu to select scenes in the configured content will be listed by the player at startup.
+## Troubleshooting
 
-<img src="../images/rt-xr-player-android-icon.jpg" alt="android icon" width="280"/>
+Ensure the project is configured for OpenXR with Meta Quest support:
+![Unity project XR configuration](images/dev-meta-quest-openxr-features-settings.png)
 
-<img src="../images/rt-xr-player-android-menu.jpg" alt="content selection menu" width="290"/>
+Ensure the Meta Quest interaction profiles are configured:
+![Meta Quest XR configuration](images/dev-meta-quest-openxr-project-settings.png)
