@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Roadmap
-parent: 5G Core Network Components
+parent: 5GC Service Consumers
 has_children: false
 nav_order: 1
 ---
