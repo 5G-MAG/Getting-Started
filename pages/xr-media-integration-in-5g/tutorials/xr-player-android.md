@@ -13,7 +13,7 @@ This guide covers compiling the XR player sample Unity project for Android and c
 
 This section assumes [adb](https://developer.android.com/tools/adb) is installed on the machine, and an Android device with [developer options and USB debugging](https://developer.android.com/studio/debug/dev-options#enable) enabled is connected.
 
-The project requires **Unity 3D 2022.3.34f1** with both Android and iOS support modules installed. Note that **Android API 26** and **NDK 27.2.12479018** are used.
+The project requires **Unity 3D 2022.3.34f1** with both Android and iOS support modules installed. Note that **Android API 28** and **NDK 27.2.12479018** are used.
 
 While this guide assumes a Windows environment with a git-bash terminal (eg. to run shell scripts), the same instructions apply to other platoforms.
 
