@@ -4,7 +4,7 @@ title: XR Player on Android Smartphone
 grand_parent: XR with MPEG-I SD
 parent: Tutorials
 has_children: false
-nav_order: 0
+nav_order: 1
 ---
 
 # Building and using XR Player on Android Smartphone
