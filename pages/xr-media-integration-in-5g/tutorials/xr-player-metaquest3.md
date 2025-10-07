@@ -102,7 +102,8 @@ The script copies the following:
 * *libc++* from `$ANDROID_NDK_HOME/toolchains/llvm/prebuilt/$ANDROID_NDK_HOSTNAME/sysroot/usr/lib/aarch64-linux-android/libc++_shared.so` to `rt-xr-unity-player/Packages/rt.xr.maf/dependencies/libc++/android/arm64`
 
 Make sure all the *.so libraries are configured properly in the Unity Editor.
-<img src="../images/unity-configure-shared-libraries.png" alt="Configure shared libraries in Unity project" width="640" />
+
+<img src="../../../assets/images/xr/unity-configure-shared-libraries.png" alt="Configure shared libraries in Unity project" style="width:80%;">
 
 For each library, in the inspector panel:
 * *Android* platform must be checked
@@ -129,7 +130,7 @@ Open the `rt-xr-unity-player` directory as an existing project from Unity Hub.
 
 Now configure the glTF asset in the Unity project by adding the path, e.g. `/storage/emulated/0/Android/data/com.fivegmag.rtxrplayer/files/studio_apartment/studio_apartment.gltf`
 
-![Meta Quest scene configuration](images/dev-meta-quest-scene-configuration.png)
+<img src="../../../assets/images/xr/dev-meta-quest-scene-configuration.png" alt="Meta Quest scene configuration" style="width:80%;">
 
 ## Step 4: Build and run the Unity project
 
@@ -140,7 +141,7 @@ In the Unity Editor:
 4. Select the device on which the application will be installed.
 5. Hit `Build and Run` to compile the project and install it on the mobile device
 
-![Meta Quest build settings](images/dev-meta-quest-build-settings.png)
+<img src="../../../assets/images/xr/dev-meta-quest-build-settings.png" alt="Meta Quest build settings" style="width:80%;">
 
 ## Step 5: Launch the player
 
@@ -149,7 +150,7 @@ Locate and launch the player in the Meta Quest 3.
 ## Troubleshooting
 
 Ensure the project is configured for OpenXR with Meta Quest support:
-![Unity project XR configuration](images/dev-meta-quest-openxr-features-settings.png)
+<img src="../../../assets/images/xr//dev-meta-quest-openxr-features-settings.png" alt="Unity project XR configuration" style="width:80%;">
 
 Ensure the Meta Quest interaction profiles are configured:
-![Meta Quest XR configuration](images/dev-meta-quest-openxr-project-settings.png)
+<img src="../../../assets/images/xr/dev-meta-quest-openxr-project-settings.png" alt="Meta Quest XR configuration" style="width:80%;">
