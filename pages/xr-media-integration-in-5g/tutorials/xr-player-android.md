@@ -102,7 +102,8 @@ The script copies the following:
 * *libc++* from `$ANDROID_NDK_HOME/toolchains/llvm/prebuilt/$ANDROID_NDK_HOSTNAME/sysroot/usr/lib/aarch64-linux-android/libc++_shared.so` to `rt-xr-unity-player/Packages/rt.xr.maf/dependencies/libc++/android/arm64`
 
 Make sure all the *.so libraries are configured properly in the Unity Editor.
-<img src="../images/unity-configure-shared-libraries.png" alt="Configure shared libraries in Unity project" width="640" />
+
+<img src="../../../assets/images/xr/unity-configure-shared-libraries.png" alt="Configure shared libraries in Unity project" style="width:80%;">
 
 For each library, in the inspector panel:
 * *Android* platform must be checked
@@ -114,7 +115,7 @@ The configuration is stored in Unity's *.meta sidecar files and are tracked in t
 
 Open the `rt-xr-unity-player` directory as an existing project from Unity Hub.
 
-<img src="../images/unity-build-player.png" alt="Build the Unity project for Android" width="640" />
+<img src="../../../assets/images/xr/unity-build-player.png" alt="Build the Unity project for Android" style="width:80%;">
 
 Then in the Unity Editor:
 1. Locate the `File > Build Settings` menu 
@@ -157,6 +158,6 @@ Locate and launch the player.
 
 A menu to select scenes in the configured content will be listed by the player at startup.
 
-<img src="../images/rt-xr-player-android-icon.jpg" alt="android icon" width="280"/>
+<img src="../../../assets/images/xr/rt-xr-player-android-icon.jpg" alt="android icon" style="width:80%;">
 
-<img src="../images/rt-xr-player-android-menu.jpg" alt="content selection menu" width="290"/>
+<img src="../../../assets/images/xr/rt-xr-player-android-menu.jpg" alt="Content selection menu" style="width:80%;">
