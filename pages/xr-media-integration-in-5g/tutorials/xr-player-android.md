@@ -158,6 +158,6 @@ Locate and launch the player.
 
 A menu to select scenes in the configured content will be listed by the player at startup.
 
-<img src="../../../assets/images/xr/rt-xr-player-android-icon.jpg" alt="android icon" style="width:80%;">
+<img src="../../../assets/images/xr/rt-xr-player-android-icon.jpg" alt="android icon" style="width:20%;">
 
-<img src="../../../assets/images/xr/rt-xr-player-android-menu.jpg" alt="Content selection menu" style="width:80%;">
+<img src="../../../assets/images/xr/rt-xr-player-android-menu.jpg" alt="Content selection menu" style="width:20%;">
