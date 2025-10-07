@@ -4,7 +4,7 @@ title:  Blender glTF Exporter and Unity Player
 grand_parent: XR with MPEG-I SD
 parent: Tutorials
 has_children: false
-nav_order: 3
+nav_order: 4
 ---
 # Blender glTF Exporter and Unity Player
 
