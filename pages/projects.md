@@ -26,7 +26,7 @@ nav_order: 1
 * Check the [**Roadmap**](https://github.com/orgs/5G-MAG/projects/48/views/17) for 5G Core Network components
 * **Reference Tools** available:
    * [**Project: 5G Media Streaming Architecture**](https://5g-mag.github.io/Getting-Started/pages/5g-media-streaming/)
-   * [**Project: 5G Core Network components**](https://5g-mag.github.io/Getting-Started/pages/5g-core-network-components/)
+   * [**Project: 5GC Service Consumers**](https://5g-mag.github.io/Getting-Started/pages/5g-core-service-consumers/)
 
 ---
 
