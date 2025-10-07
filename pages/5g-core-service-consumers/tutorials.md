@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Tutorials
-parent: 5G Core Network Components
+parent: 5GC Service Consumers
 has_children: true
 nav_order: 3
 ---
