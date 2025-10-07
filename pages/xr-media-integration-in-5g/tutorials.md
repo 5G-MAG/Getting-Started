@@ -22,12 +22,12 @@ available here:
 
 ## Using the tools
 
-### [Tutorial: Compile the Unity project for Android](./tutorials/xr-player-metaquest3.html)
+### [Tutorial: Compile the Unity project for Meta Quest 3](./tutorials/xr-player-metaquest3.html)
 
 This tutorial provides step by step instructions to compile the `rt-xr-unity-player` and `rt-xr-maf-native` projects for Meta Quest 3.
 The compiled application loads glTF documents with support for MPEG glTF extensions.
 
-### [Tutorial: Compile the Unity project for Android](./tutorials/xr-player-android.html)
+### [Tutorial: Compile the Unity project for Android smartphones](./tutorials/xr-player-android.html)
 
 This tutorial provides step by step instructions to compile the `rt-xr-unity-player` and `rt-xr-maf-native` projects for Android smartphone.
 The compiled application loads glTF documents with support for MPEG glTF extensions.
