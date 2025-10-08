@@ -18,9 +18,16 @@ Visit the [Standards repository](https://5g-mag.github.io/Standards/pages/5g-mul
 
 # High-level architecture
 
-## High-level architecture: 5G Downlink Media Streaming (5GMSd) over 5G Multicast Broadcast Services (MBS)
+## High-level architecture: 5G Multicast Broadcast Services (MBS)
 
 <img src="../../assets/images/projects/mbs_diagram.png" style="width: 80%">
+
+ * Check [here](./repositories.html) to access the repositories for 5G Multicast Broadcast Services (MBS)
+ * Check [here](../3gpp-ran-and-core-platforms/repositories.html) to access the repositories for 3GPP RAN and Core Platforms
+
+## High-level architecture: 5G Media Streaming (5GMS) over 5G Multicast Broadcast Services (MBS)
+
+<img src="../../assets/images/projects/5gms_mbs_diagram.png" style="width: 80%">
 
  * Check [here](./repositories.html) to access the repositories for 5G Multicast Broadcast Services (MBS)
  * Check [here](../3gpp-ran-and-core-platforms/repositories.html) to access the repositories for 3GPP RAN and Core Platforms
