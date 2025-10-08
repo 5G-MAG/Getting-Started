@@ -1,13 +1,13 @@
 ---
 layout: default
-title: Using the libraries
+title: Using libscMBSMF
 parent: Tutorials
 grand_parent: 5GC Service Consumers
 has_children: false
-nav_order: 0
+nav_order: 1
 ---
 
-# Tutorial - Using the 5GC Service Consumer libraries
+# Tutorial - Using the 5GC Service Consumer libraries: libscMBSMF
 
 ## Introduction
 
@@ -19,37 +19,11 @@ This collection of reusable service consumer libraries are designed to talk to t
 
 We recommend a local installation of Open5GS following the instructions provided [here](../../3gpp-ran-and-core-platforms/tutorials/5gnetwork.html).
 
-Note that the tools interacting with MBS-related network functions will require installing such components from other 5G-MAG repositories.
-
-The following are the requirements for the different tools:
-
-* PCF Policy Authorization tool: Requires regular Open5GS v2.7.2
-
-* TMGI Allocation/Deallocation tool: Requires the MBS components under the `5mbs` branch of 5G-MAG's Open5GS repository. This can be cloned with: `git clone --recurse-submodules -b 5mbs https://github.com/5G-MAG/open5gs.git ~/open5gs`. The MBS Transport Function can be installed from the [rt-mbs-transport-function](https://github.com/5G-MAG/rt-mbs-transport-function) repository.
-
-* MBS Service tool: Requires the MBS components under the `5mbs` branch of 5G-MAG's Open5GS repository. This can be cloned with: `git clone --recurse-submodules -b 5mbs https://github.com/5G-MAG/open5gs.git ~/open5gs`. The MBS Transport Function can be installed from the [rt-mbs-transport-function](https://github.com/5G-MAG/rt-mbs-transport-function) repository.
+Note that the **TMGI Allocation/Deallocation tool** and the **MBS Service tool** requires the MBS components under the `5mbs` branch of 5G-MAG's Open5GS repository. This can be cloned with: `git clone --recurse-submodules -b 5mbs https://github.com/5G-MAG/open5gs.git ~/open5gs`. The MBS Transport Function can be installed from the [rt-mbs-transport-function](https://github.com/5G-MAG/rt-mbs-transport-function) repository.
 
 In the following examples 127.0.0.10:7777 is used as the address and port number for the NRF API (Open5GS default). The address 12.34.56.78 is the UE's IP address as assigned by the 5G Core.
 
 Please substitute these IP addresses for the ones you are using with your network.
-
-## Using the PCF PolicyAuthorization tool
-
-The PCF PolicyAuthorization tool can request a QoS policy and will then wait and report notifications for the QoS policy session.
-
-The PCF PolicyAuthorization tool can be run with a command like (requests QoS settings for video Media-Type with a minimum guarenteed 2.5Mbps downlink):
-
-```
-/usr/local/bin/pcf-policyauthorization -a 12.34.56.78 -n 127.0.0.10:7777 -t video -d 2.5e6
-```
-
-Note: This will only work if you have defined a PCC Rule for 5QI 2 (video) defaults
-
-To get the full command help for the PCF PolicyAuthorization tool use the command:
-
-```
-/usr/local/bin/pcf-policyauthorization -h
-```
 
 ## Using the TMGI Allocation/Deallocation tool
 
