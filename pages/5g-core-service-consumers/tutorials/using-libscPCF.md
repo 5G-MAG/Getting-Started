@@ -37,6 +37,8 @@ The PCF PolicyAuthorization tool can be run with a command like the follwing one
 
 Note: This will only work if you have defined a PCC Rule for 5QI 2 (video) defaults.
 
+<img src="../../../assets/images/5gcsc/PCC_rules.png" style="width:80%;">
+
 To get the full command help for the PCF PolicyAuthorization tool use the command:
 
 ```
