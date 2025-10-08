@@ -21,14 +21,14 @@ Visit the [Standards repository](https://5g-mag.github.io/Standards/pages/5g-cor
 
 <img src="../../assets/images/projects/5gms_5gc_diagram.png" style="width: 80%">
 
- * Check [here](../5g-media-streaming/repositories.html) to access the repositories for 5G Downlink Media Streaming
- * Check [here](../3gpp-ran-and-core-platforms/repositories.html) to access the repositories for 3GPP RAN and Core Platforms
- * Check [here](./repositories.html) to access the repositories for 5GC Service Consumers
+ * Check [here](../5g-media-streaming/repositories.html) to access the repositories for **5G Downlink Media Streaming**
+ * Check [here](../3gpp-ran-and-core-platforms/repositories.html) to access the repositories for **3GPP RAN and Core Platforms**
+ * Check [here](./repositories.html) to access the repositories for **5GC Service Consumers**
 
 ## 5G Multicast Broadcast Services (MBS) with 5GC Service Consumers
 
 <img src="../../assets/images/projects/mbs_5gc_diagram.png" style="width: 80%">
 
- * Check [here](../5g-multicast-broadcast-services/repositories.html) to access the repositories for 5G Multicast Broadcast services
- * Check [here](../3gpp-ran-and-core-platforms/repositories.html) to access the repositories for 3GPP RAN and Core Platforms
- * Check [here](./repositories.html) to access the repositories for 5GC Service Consumers
+ * Check [here](../5g-multicast-broadcast-services/repositories.html) to access the repositories for **5G Multicast Broadcast services**
+ * Check [here](../3gpp-ran-and-core-platforms/repositories.html) to access the repositories for **3GPP RAN and Core Platforms**
+ * Check [here](./repositories.html) to access the repositories for **5GC Service Consumers**
