@@ -21,7 +21,7 @@ Visit the [Standards repository](https://5g-mag.github.io/Standards/pages/5g-cor
 
 <img src="../../assets/images/projects/5gms_5gc_diagram.png" style="width: 80%">
 
- * Check [here](../5g-media-streaming/repositories.html) to access the repositories for **5G Downlink Media Streaming**
+ * Check [here](../5g-media-streaming/repositories.html) to access the repositories for **5G Media Streaming**
  * Check [here](../3gpp-ran-and-core-platforms/repositories.html) to access the repositories for **3GPP RAN and Core Platforms**
  * Check [here](./repositories.html) to access the repositories for **5GC Service Consumers**
 
