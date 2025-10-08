@@ -10,15 +10,6 @@ nav_order: 2
 1. TOC
 {:toc}
 
-# High-level architecture
-
-## 5G Downlink Media Streaming (5GMSd) with 5GC Service Consumers
-
-<img src="../../assets/images/projects/5gms_5gc_diagram.png" style="width: 80%">
-
- * Check [here](../5g-media-streaming/repositories.html) to access the repositories for 5G Downlink Media Streaming
- * Check [here](../3gpp-ran-and-core-platforms/repositories.html) to access the repositories for 3GPP RAN and Core Platforms
-
 # Repositories
 
 <img src="../../assets/images/projects/5gc_repos.png" style="width: 80%">
