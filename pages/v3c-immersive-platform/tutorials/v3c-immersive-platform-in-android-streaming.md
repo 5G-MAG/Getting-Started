@@ -11,7 +11,7 @@ nav_order: 0
 
 ## Introduction
 
-This tutorials provides the instructions to setup the V3C Immersive Platform for an Android device using content streamed from a DASH server.
+This tutorial provides the instructions to setup the V3C Immersive Platform for an Android device using content streamed from a DASH server.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/4Mj_eJnYVjE?si=DGY8rmDpl-mAJBfH" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
