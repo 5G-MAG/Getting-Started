@@ -10,17 +10,16 @@ nav_order: 3
 1. TOC
 {:toc}
 
-# Tutorials
+# How to use the Reference Tools
 
-## Our video library
+## Check our video library
 The section [DEVELOPER XCHANGES & TUTORIALS](https://www.5g-mag.com/tutorials) in the 5G-MAG website contains more information and videos from the 5G-MAG Reference Tools developers on the usage of the tools. Some of the videos are also available here:
 
-## Using the tools
+## Tutorials, Tests and Examples
 
 ### [Tutorial: Using the 5GC Service Consumer libraries: libscBSF](./tutorials/using-libscPCF.html)
 
 This tutorial provides guidelines how to test the PCF service consumer library.
-
 
 ### [Tutorial: Using the 5GC Service Consumer libraries: libscMBSMF](./tutorials/using-libscMBSMF.html)
 
