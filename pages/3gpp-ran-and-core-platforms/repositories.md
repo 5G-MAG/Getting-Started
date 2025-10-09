@@ -12,7 +12,9 @@ nav_order: 2
 
 # Description
 
-Some 5G-MAG Reference Tools Projects make use of software developed by several Open-Source initiatives. In particular:
+Some 5G-MAG Reference Tools Projects make use of software developed by other Open-Source Software initiatives.
+
+In particular:
 
 * [srsRAN Project](https://www.srsran.com/), in its two variants:
   * `srsran/srsRAN_Project`: Open source O-RAN 5G CU/DU solution from Software Radio Systems (SRS), used primarily as the NG-RAN to build 5G-MAG Reference Tools demonstrators and PoCs and as the basis for the development of NG-RAN related components for MBS
@@ -27,9 +29,13 @@ Some 5G-MAG Reference Tools Projects make use of software developed by several O
 <img src="../../assets/images/projects/3gpp_repos.png"  style="width: 80%">
 
 ## Open5GS: [open5gs](https://github.com/5G-MAG/open5gs)
+5G-MAG maintains a fork of open5gs which enables development of 5GC network functions an APIs to support other Reference Tools. Please check the branches available under this repository for more details.
 
 ## srsRAN Project: [rt-srsRAN_Project](https://github.com/5G-MAG/rt-srsRAN_Project)
+5G-MAG maintains a fork of srsRAN_Project which enables development of NG-RAN procedures to support other Reference Tools. Please check the branches available under this repository for more details.
 
 ## srsRAN_4G: [srsRAN_4G](https://github.com/5G-MAG/srsRAN_4G)
+5G-MAG maintains a fork of srsRAN_4G which enables development of MBMS, EPC and E-UTRAN procedures to support other Reference Tools. Note that this project also contains a basic implmentation of a 5G-NR UE. Please check the branches available under this repository for more details.
 
 ## srsRAN (discontinued version prior to srsRAN_4G): [srsRAN](https://github.com/5G-MAG/srsRAN)
+This is a legacy/discontinued version of srsRAN prior to its conversion into srsRAN_4G.
