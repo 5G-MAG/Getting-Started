@@ -10,12 +10,6 @@ nav_order: 2
 1. TOC
 {:toc}
 
-# High-level architecture
-
-## XR Media Integration in 5G
-
-<img src="../../assets/images/projects/xr_diagram.png" style="width: 80%">
-
 # Repositories
 
 <img src="../../assets/images/projects/xr_repos.png" style="width: 80%">
