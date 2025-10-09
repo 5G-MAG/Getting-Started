@@ -9,7 +9,7 @@ nav_order: 2
 
 # 5G Core Service Consumers - Reference Tools Project
 
-* Check the [**Roadmap**](https://github.com/orgs/5G-MAG/projects/48/views/17) for 5G Core Service Consumers
+* Check the [**Roadmap**](https://github.com/orgs/5G-MAG/projects/48/views/17) for 5G Core Service Consumers.
 
 ## Overview
 <iframe width="60%" height="520" src="https://drive.google.com/file/d/1-TPp-cVL8xW5WD8n8dJ2JyDPIfbbygli/preview"></iframe>
