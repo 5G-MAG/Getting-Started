@@ -13,7 +13,7 @@ nav_order: 3
 # How to use the Reference Tools
 
 ## Check our video library
-Our [YouTube channel](www.youtube.com/@5GMAG) hosts some practical videos provided by developers on the use of the 5G-MAG Reference Tools.
+Our [YouTube channel](https://www.youtube.com/@5GMAG) hosts some practical videos provided by developers on the use of the 5G-MAG Reference Tools.
 
 ## Tutorials, Tests and Examples
 
