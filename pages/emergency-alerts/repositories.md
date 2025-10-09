@@ -10,14 +10,6 @@ nav_order: 2
 1. TOC
 {:toc}
 
-# High-level architecture
-
-## 5G Broadcast extended with Emergency Alerts
-
-<img src="../../assets/images/projects/ew_diagram.png" style="width: 80%">
-
- * Check [here](../3gpp-ran-and-core-platforms/repositories.html) to access the repositories for 3GPP RAN and Core Platforms
-
 # Repositories
 
 <img src="../../assets/images/projects/ew_repos.png" style="width: 80%">
