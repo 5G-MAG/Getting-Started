@@ -17,7 +17,7 @@ Visit the [Standards repository](https://5g-mag.github.io/Standards/pages/data-c
 
 # High-level architecture
 
-## High-level architecture: 5G Broadcast with Multimedia delivery protocols
+## 5G Broadcast with Multimedia delivery protocols
 
 <img src="../../assets/images/projects/5gbc_diagram.png" style="width: 80%">
 
