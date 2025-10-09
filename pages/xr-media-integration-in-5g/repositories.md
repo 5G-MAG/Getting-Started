@@ -16,8 +16,6 @@ nav_order: 2
 
 ---
 
-* [XR Player overview](https://5g-mag.github.io/Getting-Started/pages/xr-media-integration-in-5g/usage/xr-player-overview.html)
-
 ## XR Unity Player Unity project: [rt-xr-unity-player](https://github.com/5G-MAG/rt-xr-unity-player)
 * [Information and how to download, build, install and run](https://github.com/5G-MAG/rt-xr-unity-player#readme)
 * [Releases](https://github.com/5G-MAG/rt-xr-unity-player/releases)
