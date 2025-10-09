@@ -17,7 +17,7 @@ Visit the [Standards repository](https://5g-mag.github.io/Standards/pages/volume
 
 # High-level architecture
 
-## High-level architecture: V3C Immersive Platform
+## V3C Immersive Platform
 
 <img src="../../assets/images/projects/v3c_diagram.png" style="width: 80%">
 
