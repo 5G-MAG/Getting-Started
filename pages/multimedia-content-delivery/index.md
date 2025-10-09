@@ -32,3 +32,6 @@ nav_order: 11
 
 ### What are the requirements to run the tools?
 * Find [here](./requirements.html) practical information about hardware and device support. 
+
+### What are the requirements to run the tools?
+* Find [here](./external.html) external tools brought to our attendion and useful in relation to this project. 
