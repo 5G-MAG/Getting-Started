@@ -10,7 +10,12 @@ nav_order: 1
 1. TOC
 {:toc}
 
-# Projects
+# Roadmap
+
+* Check the [**Roadmap**](https://github.com/orgs/5G-MAG/projects/48/views/8) for UE data collection, reporting and event exposure.
+
+# Related Projects
+
 ## UE data collection, reporting and event exposure
 Reference implementation of the generic Data Collection AF and its instantiation in the 5GMS Application Function.
 * [Kanban board](https://github.com/orgs/5G-MAG/projects/30)
