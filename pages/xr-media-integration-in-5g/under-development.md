@@ -17,7 +17,7 @@ Visit the [Standards repository](https://5g-mag.github.io/Standards/pages/xr.htm
 
 # High-level architecture
 
-## High-level architecture: XR Media Integration in 5G
+## XR Media Integration in 5G
 
 <img src="../../assets/images/projects/xr_diagram.png" style="width: 80%">
 
