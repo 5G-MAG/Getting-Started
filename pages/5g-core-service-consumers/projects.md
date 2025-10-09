@@ -12,7 +12,7 @@ nav_order: 1
 
 # Roadmap
 
-* Check the [**Roadmap**](https://github.com/orgs/5G-MAG/projects/48/views/17) for 5G Core Service Consumers
+* Check the [**Roadmap**](https://github.com/orgs/5G-MAG/projects/48/views/17) for 5G Core Service Consumers.
 
 # Related Projects
 
