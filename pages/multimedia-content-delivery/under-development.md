@@ -10,7 +10,7 @@ nav_order: 0
 1. TOC
 {:toc}
 
-This page contains information such as the specifications within the scope of the tools, high-level architecture, APIs under implementation,...
+This page contains information such as the specifications within the scope of the tools, high-level architecture, features and APIs under implementation,...
 
 # Specifications
 Visit the [Standards repository](https://5g-mag.github.io/Standards/pages/data-collection-event-exposure.html) for more details on the specifications within the scope of the tools.
