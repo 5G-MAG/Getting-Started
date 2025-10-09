@@ -19,8 +19,8 @@ Our [YouTube channel](https://www.youtube.com/@5GMAG) hosts some practical video
 
 ### [Tutorial: Using the 5GC Service Consumer libraries: libscBSF](./tutorials/using-libscPCF.html)
 
-This tutorial provides guidelines how to test the PCF service consumer library.
+This tutorial provides guidelines on how to test the PCF service consumer library.
 
 ### [Tutorial: Using the 5GC Service Consumer libraries: libscMBSMF](./tutorials/using-libscMBSMF.html)
 
-This tutorial provides guidelines how to test the MBSMF service consumer library.
+This tutorial provides guidelines on how to test the MBSMF service consumer library.
