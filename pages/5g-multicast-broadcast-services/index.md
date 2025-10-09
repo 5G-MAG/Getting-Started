@@ -9,7 +9,7 @@ nav_order: 6
 
 # 5G Multicast Broadcast Services - Reference Tools Project
 
-* Check the [**Roadmap**](https://github.com/orgs/5G-MAG/projects/48/views/13) for 5G Multicast Broadcast Services
+* Check the [**Roadmap**](https://github.com/orgs/5G-MAG/projects/48/views/13) for 5G Multicast Broadcast Services.
 
 ## Overview
 
