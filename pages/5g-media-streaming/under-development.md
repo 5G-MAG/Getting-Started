@@ -17,9 +17,6 @@ Visit the [Standards repository](https://5g-mag.github.io/Standards/pages/5g-med
 
 # High-level architecture
 
-
-# High-level architecture
-
 ## 5G Downlink Media Streaming (5GMSd)
 
 <img src="../../assets/images/projects/5gms_diagram.png" style="width: 80%">
