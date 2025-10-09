@@ -18,7 +18,7 @@ Visit the [Standards repository](https://5g-mag.github.io/Standards/) for more d
 
 # High-level architecture
 
-## High-level architecture: DVB-I Services over 5G Systems: 5GMSd with 5G Broadcast
+## DVB-I Services over 5G Systems: 5GMSd with 5G Broadcast
 
 <img src="../../assets/images/projects/dvb_diagram.png" style="width: 80%">
 
