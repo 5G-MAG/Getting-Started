@@ -15,7 +15,7 @@ Visit the [Standards repository](https://5g-mag.github.io/Standards/) for detail
 
 # High-level architecture
 
-## High-level architecture: 5G Broadcast extended with Emergency Alerts
+## 5G Broadcast extended with Emergency Alerts
 
 <img src="../../assets/images/projects/ew_diagram.png" style="width: 80%">
 
