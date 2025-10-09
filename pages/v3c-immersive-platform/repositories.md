@@ -10,8 +10,6 @@ nav_order: 2
 1. TOC
 {:toc}
 
-# High-level architecture
-
 # Repositories
 
 <img src="../../assets/images/projects/v3c_repos.png" style="width: 80%">
