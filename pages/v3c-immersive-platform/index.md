@@ -9,7 +9,7 @@ nav_order: 8
 
 # V3C Immersive Platform - Reference Tools Project
 
-* Check the [**Roadmap**](https://github.com/orgs/5G-MAG/projects/48/views/15)
+* Check the [**Roadmap**](https://github.com/orgs/5G-MAG/projects/48/views/15) for the V3C Immersive Platform.
 
 ## Overview
 <iframe width="60%" height="520" src="https://drive.google.com/file/d/14diIIl503hnVZhabz4B8Y25mCWvbYS3w/preview"></iframe>
