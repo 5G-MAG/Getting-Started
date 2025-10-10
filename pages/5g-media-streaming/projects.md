@@ -12,7 +12,7 @@ nav_order: 1
 
 # Roadmap
 
-* Check the [**Roadmap**](https://github.com/orgs/5G-MAG/projects/48/views/16) for 5G Media Streaming.
+* Check the [**Roadmap**](https://github.com/orgs/5G-MAG/projects/48/views/6) for 5G Media Streaming.
 
 # Related Projects
 
