@@ -16,9 +16,13 @@ nav_order: 1
 
 # Related Projects
 
-## 5GMS: Network Assistance and Dynamic Policies features
-Addition of Network Assistance and Dynamic Policies features to the 5GMS components, including integration with the BSF and PCF via reusable service consumer libraries.
-* [Kanban board](https://github.com/orgs/5G-MAG/projects/11)
+## 5GMS: Network Assitance
+Addition of Network Assistance features to the 5GMS components, including integration with the BSF and PCF via reusable service consumer libraries.
+* [Kanban board](https://github.com/orgs/5G-MAG/projects/51)
+
+## 5GMS: Dynamic QoS Policies
+Addition of Dynamic QoS Policies features to the 5GMS components, including integration with the BSF and PCF via reusable service consumer libraries.
+* [Kanban board](https://github.com/orgs/5G-MAG/projects/52)
 
 ## 5MBS: User Services initial release
 Initial implementation of MBS User Services, including integration with the MB-SMF via reusable service consumer libraries.
