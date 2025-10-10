@@ -9,7 +9,7 @@ nav_order: 4
 
 # 5G Broadcast: TV and Radio Hybrid Services - Reference Tools Project
 
-* Check the [**Roadmap**](https://github.com/orgs/5G-MAG/projects/48/views/7) for 5G Broadcast: TV and Radio Services
+* Check the [**Roadmap**](https://github.com/orgs/5G-MAG/projects/48/views/7) for 5G Broadcast: TV and Radio Services.
 
 ## Overview
 <iframe width="60%" height="520" src="https://drive.google.com/file/d/1YL6WtnHjkceQQOjh9Y3MsoscjF1OTpPW/preview"></iframe>

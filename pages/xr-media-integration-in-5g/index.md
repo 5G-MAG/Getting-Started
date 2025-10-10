@@ -9,7 +9,7 @@ nav_order: 7
 
 # XR Media with MPEG-I Scene Description - Reference Tools Project
 
-* Check the [**Roadmap**](https://github.com/orgs/5G-MAG/projects/48/views/16)
+* Check the [**Roadmap**](https://github.com/orgs/5G-MAG/projects/48/views/16) for XR Media with MPEG-I Scene Description.
 
 ## Overview
 <iframe width="60%" height="520" src="https://drive.google.com/file/d/1D8G_rzx77V_W3d3NB59XcTbdUuBdtKgp/preview"></iframe>

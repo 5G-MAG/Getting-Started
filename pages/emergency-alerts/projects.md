@@ -10,7 +10,11 @@ nav_order: 1
 1. TOC
 {:toc}
 
-# Projects
+# Roadmap
+
+* Check the [**Roadmap**](https://github.com/orgs/5G-MAG/projects/48/views/12) for 5G Broadcast: Emergency Alerts
+
+# Related Projects
 
 ## MBMS: Public Warning System
 Issues and required functionality around support for a Public Warning System as defined in ETSI 103 720.

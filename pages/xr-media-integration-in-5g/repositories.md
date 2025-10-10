@@ -10,19 +10,11 @@ nav_order: 2
 1. TOC
 {:toc}
 
-# High-level architecture
-
-## XR Media Integration in 5G
-
-<img src="../../assets/images/projects/xr_diagram.png" style="width: 80%">
-
 # Repositories
 
 <img src="../../assets/images/projects/xr_repos.png" style="width: 80%">
 
 ---
-
-* [XR Player overview](https://5g-mag.github.io/Getting-Started/pages/xr-media-integration-in-5g/usage/xr-player-overview.html)
 
 ## XR Unity Player Unity project: [rt-xr-unity-player](https://github.com/5G-MAG/rt-xr-unity-player)
 * [Information and how to download, build, install and run](https://github.com/5G-MAG/rt-xr-unity-player#readme)

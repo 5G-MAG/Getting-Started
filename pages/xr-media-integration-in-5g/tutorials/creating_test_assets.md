@@ -4,7 +4,7 @@ title:  MPEG-I SD Test Assets
 grand_parent: XR with MPEG-I SD
 parent: Tutorials
 has_children: false
-nav_order: 0
+nav_order: 3
 ---
 
 # MPEG-I Scene Description Test Asset Creation

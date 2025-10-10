@@ -9,7 +9,7 @@ nav_order: 10
 
 # AI & ML Evaluation Framework - Reference Tools Project
 
-* Check the [**Roadmap**](https://github.com/orgs/5G-MAG/projects/48/views/9)
+* Check the [**Roadmap**](https://github.com/orgs/5G-MAG/projects/48/views/9) for the AI & ML Evaluation Framework.
 
 ## Overview
 <iframe width="60%" height="520" src="https://drive.google.com/file/d/1F8H3yCYRcFt27Bxn2g7FH6tvqIe259R1/preview"></iframe>

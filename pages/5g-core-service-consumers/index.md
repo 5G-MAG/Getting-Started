@@ -1,15 +1,15 @@
 ---
 layout: default
-title: 5G Core Network Components
+title: 5GC Service Consumers
 has_children: true
 nav_order: 2
 ---
 
 <img src="../../assets/images/Banner_5GC.png" /> 
 
-# 5G Core Network components - Reference Tools Project
+# 5G Core Service Consumers - Reference Tools Project
 
-* Check the [**Roadmap**](https://github.com/orgs/5G-MAG/projects/48/views/17) for 5G Core Network components
+* Check the [**Roadmap**](https://github.com/orgs/5G-MAG/projects/48/views/17) for 5G Core Service Consumers.
 
 ## Overview
 <iframe width="60%" height="520" src="https://drive.google.com/file/d/1-TPp-cVL8xW5WD8n8dJ2JyDPIfbbygli/preview"></iframe>

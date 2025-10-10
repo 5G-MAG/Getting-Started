@@ -1,2 +1,5 @@
 Gemfile.lock
 _site/
+.idea/
+vendor/
+.DS_Store

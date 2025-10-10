@@ -10,9 +10,16 @@ nav_order: 3
 1. TOC
 {:toc}
 
-# Using the tools
+# How to use the Reference Tools
 
-## Our video library
-The section [DEVELOPER XCHANGES & TUTORIALS](https://www.5g-mag.com/tutorials) in the 5G-MAG website contains more information and videos from the 5G-MAG Reference Tools developers on the usage of the tools. Some of the videos are also available here:
+## Check our video library
+Our [YouTube channel](https://www.youtube.com/@5GMAG) hosts some practical videos provided by developers on the use of the 5G-MAG Reference Tools.
 
-## Using the tools
+Some of the videos are also available here:
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ZpktgeRCqNY?si=TMghwBOUmjV4MZkv" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+## Tutorials, Tests and Examples
+
+[Tutorial - Docker Setup with Insomnia REST client](./tutorials/docker-with-insomnia.html)
+This tutorial shows how to setup the Data Collection Application Function (DCAF) with Docker and use its REST API with the Insomnia REST client.

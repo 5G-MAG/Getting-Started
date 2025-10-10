@@ -9,3 +9,6 @@ nav_order: 4
 
 1. TOC
 {:toc}
+
+Please refer to the different [projects](./projects.html) to understand their hardware requirements.
+

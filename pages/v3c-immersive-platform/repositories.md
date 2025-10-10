@@ -10,12 +10,6 @@ nav_order: 2
 1. TOC
 {:toc}
 
-# High-level architecture
-
-## V3C Immersive Platform
-
-<img src="../../assets/images/projects/v3c_diagram.png" style="width: 80%">
-
 # Repositories
 
 <img src="../../assets/images/projects/v3c_repos.png" style="width: 80%">

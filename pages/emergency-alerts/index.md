@@ -9,7 +9,7 @@ nav_order: 5
 
 # 5G Broadcast: Emergency Alerts
 
-* Check the [**Roadmap**](https://github.com/orgs/5G-MAG/projects/48/views/12) for 5G Broadcast: Emergency Alerts
+* Check the [**Roadmap**](https://github.com/orgs/5G-MAG/projects/48/views/12) for 5G Broadcast: Emergency Alerts.
 
 ## Overview
 <iframe width="60%" height="520" src="https://drive.google.com/file/d/1XzvNDadtrwxrCoLIpuQQntv6JzOVMn2_/preview"></iframe>
