@@ -7,7 +7,7 @@ has_children: false
 nav_order: 1
 ---
 
-# Tutorial - Using the 5GC Service Consumer libraries: libscBSF
+# Tutorial - Using the 5GC Service Consumer libraries: libscPCF
 
 ## Introduction
 
