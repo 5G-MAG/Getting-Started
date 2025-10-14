@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Scope
+title: Scope & Architectures
 parent: XR with MPEG-I SD
 has_children: false
 nav_order: 0
