@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Scope
+title: Scope & Architectures
 parent: 5G Multicast Broadcast Services
 has_children: false
 nav_order: 0
