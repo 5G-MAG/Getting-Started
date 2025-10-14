@@ -12,7 +12,7 @@ nav_order: 2
 
 # Repositories
 
-<img src="../../assets/images/projects/mbs_repos.png" style="width: 80%">
+<img src="../../assets/images/projects/mbs_repos.png">
 
 Please note that the 5GC NFs related to 5G Multicast Broadcast Services are implemented as extensions of [Open5GS](https://github.com/5G-MAG/open5gs) NFs.
 
