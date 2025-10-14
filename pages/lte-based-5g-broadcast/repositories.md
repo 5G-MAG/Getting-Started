@@ -12,7 +12,7 @@ nav_order: 2
 
 # Repositories
 
-<img src="../../assets/images/projects/5gbc_repos.png" style="width: 80%">
+<img src="../../assets/images/projects/5gbc_repos.png">
 
 Note that 5G Broadcast makes use of other repositories:
 
