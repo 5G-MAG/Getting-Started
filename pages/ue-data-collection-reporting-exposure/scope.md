@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Scope
+title: Scope & Architectures
 parent: UE Data Collection
 has_children: false
 nav_order: 0
