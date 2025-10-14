@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Scope
+title: Scope & Architectures
 parent: V3C Immersive Platform
 has_children: false
 nav_order: 0
