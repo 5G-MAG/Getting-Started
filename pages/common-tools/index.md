@@ -12,7 +12,7 @@ nav_order: 14
 
 # Repositories
 
-<img src="../../assets/images/projects/common_tools.png"  style="width: 80%">
+<img src="../../assets/images/projects/common_tools.png">
 
 ---
 
