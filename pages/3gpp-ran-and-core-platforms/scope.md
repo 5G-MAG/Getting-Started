@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Scope & Architectures
+title: Scope
 parent: 3GPP RAN and Core Platforms
 has_children: false
 nav_order: 0
