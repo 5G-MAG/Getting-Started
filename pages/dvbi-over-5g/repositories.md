@@ -12,7 +12,7 @@ nav_order: 3
 
 # Repositories
 
-<img src="../../assets/images/projects/dvb_repos.png" style="width: 80%">
+<img src="../../assets/images/projects/dvb_repos.png">
 
 ---
 
