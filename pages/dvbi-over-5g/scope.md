@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Scope
-parent: DVB-I Services over 5G
+title: Scope & Architectures
 has_children: false
 nav_order: 0
 ---
