@@ -22,6 +22,7 @@ Visit the [Standards repository](https://5g-mag.github.io/Standards/pages/xr.htm
 <img src="../../assets/images/projects/xr_diagram.png" style="width: 80%">
 
  * Check [here](./repositories.html) to access the repositories for **XR Media Integration in 5G**
+ * Check [here](../common-tools/) to access the repositories for **Common Tools (Auxiliary tools common to various projects)**
 
 # XR Unity Player: Project overview
 
