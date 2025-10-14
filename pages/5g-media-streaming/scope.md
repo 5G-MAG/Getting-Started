@@ -24,6 +24,7 @@ Visit the [Standards repository](https://5g-mag.github.io/Standards/pages/5g-med
 
  * Check [here](../5g-media-streaming/repositories.html) to access the repositories for **5G Media Streaming**
  * Check [here](../3gpp-ran-and-core-platforms/repositories.html) to access the repositories for **3GPP RAN and Core Platforms**
+ * Check [here](../common-tools/) to access the repositories for **Common Tools (Auxiliary tools common to various projects)**
 
 ## 5G Downlink Media Streaming (5GMSd) with UE Data Collection Reporting and Event Exposure
 
@@ -32,6 +33,7 @@ Visit the [Standards repository](https://5g-mag.github.io/Standards/pages/5g-med
  * Check [here](../5g-media-streaming/repositories.html) to access the repositories for **5G Media Streaming**
  * Check [here](../3gpp-ran-and-core-platforms/repositories.html) to access the repositories for **3GPP RAN and Core Platforms**
  * Check [here](../ue-data-collection-reporting-exposure/repositories.html) the repositories for **UE Data Collection, Reporting and Event Exposure**
+ * Check [here](../common-tools/) to access the repositories for **Common Tools (Auxiliary tools common to various projects)**
 
 ## 5G Downlink Media Streaming (5GMSd) with 5GC Service Consumers
 
@@ -40,6 +42,7 @@ Visit the [Standards repository](https://5g-mag.github.io/Standards/pages/5g-med
  * Check [here](../5g-media-streaming/repositories.html) to access the repositories for **5G Media Streaming**
  * Check [here](../5g-core-service-consumers/repositories.html) to access the repositories for **5GC Service Consumers**
  * Check [here](../3gpp-ran-and-core-platforms/repositories.html) to access the repositories for **3GPP RAN and Core Platforms**
+ * Check [here](../common-tools/) to access the repositories for **Common Tools (Auxiliary tools common to various projects)**
 
 ## 5G Downlink Media Streaming (5GMSd) over eMBMS
 
@@ -48,6 +51,7 @@ Visit the [Standards repository](https://5g-mag.github.io/Standards/pages/5g-med
  * Check [here](../5g-media-streaming/repositories.html) to access the repositories for **5G Media Streaming**
  * Check [here](../3gpp-ran-and-core-platforms/repositories.html) to access the repositories for **3GPP RAN and Core Platforms**
  * Check [here](../lte-based-5g-broadcast/repositories.html) the repositories for **5G Broadcast**
+ * Check [here](../common-tools/) to access the repositories for **Common Tools (Auxiliary tools common to various projects)**
 
 # 5GMS Application Function Supported Features
 
