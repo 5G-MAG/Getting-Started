@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Scope
+title: Scope & Architectures
 parent: AI / ML Evaluation Framework
 has_children: false
 nav_order: 0
