@@ -12,7 +12,7 @@ nav_order: 2
 
 # Repositories
 
-<img src="../../assets/images/projects/5gc_repos.png" style="width: 80%">
+<img src="../../assets/images/projects/5gc_repos.png">
 
 ---
 
