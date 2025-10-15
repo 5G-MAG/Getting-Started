@@ -32,3 +32,10 @@ Visit the [Standards repository](https://5g-mag.github.io/Standards/pages/data-c
  * Check [here](./repositories.html) to access the repositories for **UE Data Collection, Reporting and Event Exposure**
  * Check [here](../3gpp-ran-and-core-platforms/repositories.html) to access the repositories for **3GPP RAN and Core Platforms**
  * Check [here](../5g-media-streaming/repositories.html) the repositories for **5G Media Streaming**
+
+# Docker deployment support
+Docker-Compose setups are provided to run the Data Collection AF in Docker container environments.
+
+<img src="../../assets/images/dcaf/uedc_docker_1.png" style="width: 80%">
+
+ * Check [here](./repositories.html) the relevant repository to access the Docker containers for **UE Data Collection, Reporting and Event Exposure**
