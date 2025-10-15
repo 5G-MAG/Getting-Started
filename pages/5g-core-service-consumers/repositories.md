@@ -29,4 +29,3 @@ The following libraries are available:
 Additional information:
 * [Information and how to download, build, install and run](https://github.com/5G-MAG/rt-5gc-service-consumers#readme)
 * [Releases](https://github.com/5G-MAG/rt-5gc-service-consumers/releases)
-* [Projects](https://github.com/5G-MAG/rt-5gc-service-consumers/projects?query=is%3Aopen)
