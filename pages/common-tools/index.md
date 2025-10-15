@@ -1,11 +1,11 @@
 ---
 layout: default
-title: Auxiliary Tools
+title: Common Tools
 has_children: true
 nav_order: 14
 ---
 
-<img src="../../assets/images/Banner_Repositories.png" /> 
+<img src="../../assets/images/Banner_CommonTools.png" /> 
 
 1. TOC
 {:toc}
@@ -52,3 +52,9 @@ Avcodec build
 Includes a helper script to build ffmpeg libraries for Android.
 
 More information can be found in the corresponding subfolder.
+
+
+### Auxiliary tools common to various projects: [rt-common-shared](https://github.com/5G-MAG/rt-common-shared)
+In the context of this project this repository is used for:
+  - Installing the dependencies for the avcodec libraries: [https://github.com/5G-MAG/rt-common-shared/blob/main/avcodec-build/README.md](https://github.com/5G-MAG/rt-common-shared/blob/main/avcodec-build/README.md)
+  - Installing a simple HTTP server based on express.js that can be used to statically host files for streaming: [https://github.com/5G-MAG/rt-common-shared/blob/main/simple-express-server/README.md](https://github.com/5G-MAG/rt-common-shared/blob/main/simple-express-server/README.md)
