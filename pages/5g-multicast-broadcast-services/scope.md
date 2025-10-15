@@ -35,6 +35,13 @@ Visit the [Standards repository](https://5g-mag.github.io/Standards/pages/5g-mul
  * Check [here](./5g-core-service-consumers/repositories.html) to access the repositories for **5GC Service Consumers**
  * Check [here](../common-tools/) to access the repositories for **Common Tools (Auxiliary tools common to various projects)**
 
+# Docker deployment support
+Docker-Compose setups are provided to run the 5GC Network Functions related to MBS in Docker container environments.
+
+<img src="../../assets/images/5mbs/5G-MBS_container_names.png" style="width: 80%">
+
+ * Check [here](../5g-multicast-broadcast-services/repositories.html) the relevant repository to access the Docker containers for **5G Multicast Broadcast Services**
+
 # Features under implementation
 
 ## MBS development over Open5GS
