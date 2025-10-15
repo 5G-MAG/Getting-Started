@@ -1,14 +1,17 @@
 ---
 layout: default
-title: Scope
+title: Scope & Architectures
 parent: 5G Broadcast - TV/Radio
 has_children: false
 nav_order: 0
 ---
+
 <img src="../../assets/images/Banner_Scope.png" /> 
 
 1. TOC
 {:toc}
+
+This page contains information such as the specifications within the scope of the tools, high-level architectures that bring context to their applicability, features under implementation,...
 
 # Specifications
 
@@ -16,21 +19,23 @@ Visit the [Standards repository](https://5g-mag.github.io/Standards/pages/lte-ba
 
 # High-level architecture
 
-## High-level architecture: 5G Broadcast with Multimedia delivery protocols
+## 5G Broadcast with Multimedia delivery protocols
 
 <img src="../../assets/images/projects/5gbc_diagram.png" style="width: 80%">
 
- * Check [here](./repositories.html) to access the repositories for 5G Broadcast
- * Check [here](../multimedia-content-delivery/repositories.html) to access the repositories for Multimedia Content Delivery Protocols
+ * Check [here](./repositories.html) to access the repositories for **5G Broadcast**
+ * Check [here](../multimedia-content-delivery/repositories.html) to access the repositories for **Multimedia delivery protocols**
+ * Check [here](../common-tools/) to access the repositories for **Common Tools (Auxiliary tools common to various projects)**
 
-## High-level architecture: 5G Downlink Media Streaming (5GMSd) over eMBMS
+## 5G Downlink Media Streaming (5GMSd) over eMBMS
 
 <img src="../../assets/images/projects/5gms_5gbc_diagram.png" style="width: 80%">
 
- * Check [here](./repositories.html) to access the repositories for 5G Broadcast
- * Check [here](../5g-media-streaming/repositories.html) to access the repositories for 5G Downlink Media Streaming
- * Check [here](../3gpp-ran-and-core-platforms/repositories.html) to access the repositories for 3GPP RAN and Core Platforms
- * Check [here](../multimedia-content-delivery/repositories.html) to access the repositories for Multimedia Content Delivery Protocols
+ * Check [here](./repositories.html) to access the repositories for **5G Broadcast**
+ * Check [here](../5g-media-streaming/repositories.html) to access the repositories for **5G Media Streaming**
+ * Check [here](../3gpp-ran-and-core-platforms/repositories.html) to access the repositories for **3GPP RAN and Core Platforms**
+ * Check [here](../multimedia-content-delivery/repositories.html) to access the repositories for **Multimedia delivery protocols**
+ * Check [here](../common-tools/) to access the repositories for **Common Tools (Auxiliary tools common to various projects)**
 
 # List of features under implementation
 

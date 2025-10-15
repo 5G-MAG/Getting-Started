@@ -9,7 +9,7 @@ nav_order: 11
 
 # Multimedia Delivery Protocols - Reference Tools Project
 
-* Check the [**Roadmap**](https://github.com/orgs/5G-MAG/projects/48/views/14)
+* Check the [**Roadmap**](https://github.com/orgs/5G-MAG/projects/48/views/14) for Multimedia Delivery Protocols.
 
 ## Overview
 <iframe width="60%" height="520" src="https://drive.google.com/file/d/1lBt2d_toxfhqUAMr3YZw9Cm6-ZzsbpOM/preview"></iframe>
@@ -32,3 +32,6 @@ nav_order: 11
 
 ### What are the requirements to run the tools?
 * Find [here](./requirements.html) practical information about hardware and device support. 
+
+### What are the requirements to run the tools?
+* Find [here](./external.html) external tools brought to our attendion and useful in relation to this project. 

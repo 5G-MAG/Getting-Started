@@ -9,7 +9,7 @@ nav_order: 1
 
 # 5G Media Streaming Architecture - Reference Tools Project
 
-* Check the [**Roadmap**](https://github.com/orgs/5G-MAG/projects/48/views/6) for 5G Media Streaming
+* Check the [**Roadmap**](https://github.com/orgs/5G-MAG/projects/48/views/6) for 5G Media Streaming.
 
 ## Overview
 <iframe width="60%" height="520" src="https://drive.google.com/file/d/105dQMUHnuKxIwn8K7z5rvuPLMU85FQUc/preview"></iframe>

@@ -1,44 +1,64 @@
 ---
 layout: default
-title: Scope
+title: Scope & Architectures
 parent: 5G Media Streaming
 has_children: false
 nav_order: 0
 ---
+
 <img src="../../assets/images/Banner_Scope.png" /> 
 
 1. TOC
 {:toc}
 
-This page contains information such as the specifications within the scope of the tools, high-level architecture, APIs under implementation,...
+This page contains information such as the specifications within the scope of the tools, high-level architectures that bring context to their applicability, features under implementation,...
 
 # Specifications
 Visit the [Standards repository](https://5g-mag.github.io/Standards/pages/5g-media-streaming.html) for more details on the specifications within the scope of the tools.
 
 # High-level architecture
 
-## High-level architecture: 5G Downlink Media Streaming (5GMSd)
+## 5G Downlink Media Streaming (5GMSd)
 
 <img src="../../assets/images/projects/5gms_diagram.png" style="width: 80%">
 
- * Check [here](./repositories.html) to access the repositories for 5G Downlink Media Streaming
- * Check [here](../3gpp-ran-and-core-platforms/repositories.html) to access the repositories for 3GPP RAN and Core Platforms
+ * Check [here](../5g-media-streaming/repositories.html) to access the repositories for **5G Media Streaming**
+ * Check [here](../3gpp-ran-and-core-platforms/repositories.html) to access the repositories for **3GPP RAN and Core Platforms**
+ * Check [here](../common-tools/) to access the repositories for **Common Tools (Auxiliary tools common to various projects)**
 
-## High-level architecture: 5G Downlink Media Streaming (5GMSd) with UE Data Collection Reporting and Event Exposure
+## 5G Downlink Media Streaming (5GMSd) with UE Data Collection Reporting and Event Exposure
 
 <img src="../../assets/images/projects/5gms_uedc_diagram.png" style="width: 80%">
 
- * Check [here](./repositories.html) to access the repositories for 5G Downlink Media Streaming
- * Check [here](../3gpp-ran-and-core-platforms/repositories.html) to access the repositories for 3GPP RAN and Core Platforms
- * Check [here](../ue-data-collection-reporting-exposure/repositories.html) the repositories for UE Data Collection, Reporting and Event Exposure
+ * Check [here](../5g-media-streaming/repositories.html) to access the repositories for **5G Media Streaming**
+ * Check [here](../3gpp-ran-and-core-platforms/repositories.html) to access the repositories for **3GPP RAN and Core Platforms**
+ * Check [here](../ue-data-collection-reporting-exposure/repositories.html) the repositories for **UE Data Collection, Reporting and Event Exposure**
+ * Check [here](../common-tools/) to access the repositories for **Common Tools (Auxiliary tools common to various projects)**
 
-## High-level architecture: 5G Downlink Media Streaming (5GMSd) over eMBMS
+## 5G Downlink Media Streaming (5GMSd) with 5GC Service Consumers
+
+<img src="../../assets/images/projects/5gms_5gc_diagram.png" style="width: 80%">
+
+ * Check [here](../5g-media-streaming/repositories.html) to access the repositories for **5G Media Streaming**
+ * Check [here](../5g-core-service-consumers/repositories.html) to access the repositories for **5GC Service Consumers**
+ * Check [here](../3gpp-ran-and-core-platforms/repositories.html) to access the repositories for **3GPP RAN and Core Platforms**
+ * Check [here](../common-tools/) to access the repositories for **Common Tools (Auxiliary tools common to various projects)**
+
+## 5G Downlink Media Streaming (5GMSd) over eMBMS
 
 <img src="../../assets/images/projects/5gms_5gbc_diagram.png" style="width: 80%">
 
- * Check [here](./repositories.html) to access the repositories for 5G Downlink Media Streaming
- * Check [here](../3gpp-ran-and-core-platforms/repositories.html) to access the repositories for 3GPP RAN and Core Platforms
- * Check [here](../lte-based-5g-broadcast/repositories.html) the repositories for 5G Broadcast
+ * Check [here](../5g-media-streaming/repositories.html) to access the repositories for **5G Media Streaming**
+ * Check [here](../3gpp-ran-and-core-platforms/repositories.html) to access the repositories for **3GPP RAN and Core Platforms**
+ * Check [here](../lte-based-5g-broadcast/repositories.html) the repositories for **5G Broadcast**
+ * Check [here](../common-tools/) to access the repositories for **Common Tools (Auxiliary tools common to various projects)**
+
+# Docker deployment support
+Docker-Compose setups are provided to run the 5GMS Application Function, the 5GMS Application Server and the 5GMS Application Provider in Docker container environments.
+
+<img src="../../assets/images/5gms/5gms-docker-recipe1.png" style="width: 80%">
+
+ * Check [here](../5g-media-streaming/repositories.html) the relevant repository to access the Docker containers for **5G Media Streaming**
 
 # 5GMS Application Function Supported Features
 

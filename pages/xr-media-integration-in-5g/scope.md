@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Scope
+title: Scope & Architectures
 parent: XR with MPEG-I SD
 has_children: false
 nav_order: 0
@@ -10,18 +10,19 @@ nav_order: 0
 1. TOC
 {:toc}
 
-This page contains information such as the specifications within the scope of the tools, high-level architecture, APIs under implementation,...
+This page contains information such as the specifications within the scope of the tools, high-level architectures that bring context to their applicability, features under implementation,...
 
 # Specifications
 Visit the [Standards repository](https://5g-mag.github.io/Standards/pages/xr.html) for more details on the specifications within the scope of the tools.
 
 # High-level architecture
 
-## High-level architecture: XR Media Integration in 5G
+## XR Media Integration in 5G
 
 <img src="../../assets/images/projects/xr_diagram.png" style="width: 80%">
 
- * Check [here](./repositories.html) to access the repositories for XR Media Integration in 5G
+ * Check [here](./repositories.html) to access the repositories for **XR Media Integration in 5G**
+ * Check [here](../common-tools/) to access the repositories for **Common Tools (Auxiliary tools common to various projects)**
 
 # XR Unity Player: Project overview
 
@@ -91,16 +92,16 @@ The XR Player supports XR anchoring using the `MPEG_anchor` glTF extension which
 The XR player leverages Unity's ARFoundation to support both handled mobile devices such as smartphones and head mounted devices.
 
 
-| Trackable type | Status | XR plugins | Test content |
-|:---------------|:-------|:-------------|:-------------|
-| TRACKABLE_VIEWER | &#x2611; | [anchoring/anchorTest_viewer_n.gltf](https://github.com/5G-MAG/rt-xr-content/tree/development/anchoring/) |
-| TRACKABLE_FLOOR | &#x2611; | [awards/scene_floor_anchoring.gltf](https://github.com/5G-MAG/rt-xr-content/tree/development/awards/) |
-| TRACKABLE_PLANE | &#x2611; | [awards/scene_plane_anchoring.gltf](https://github.com/5G-MAG/rt-xr-content/tree/development/awards/) |
-| TRACKABLE_CONTROLLER | &#x2610; | [anchoring/anchorTest_ctrl_n.gltf](https://github.com/5G-MAG/rt-xr-content/tree/development/anchoring/) |
-| TRACKABLE_MARKER_2D | &#x2611; | [anchoring/anchorTest_m2D_n.gltf](https://github.com/5G-MAG/rt-xr-content/tree/development/anchoring/) |
-| TRACKABLE_MARKER_3D | &#x2610; | [anchoring/anchorTest_m3D_n.gltf](https://github.com/5G-MAG/rt-xr-content/tree/development/anchoring/) |
-| TRACKABLE_MARKER_GEO | &#x2611; | [anchoring/anchorTest_geoSpatial_n_cs.gltf](https://github.com/5G-MAG/rt-xr-content/tree/development/anchoring/) |
-| TRACKABLE_APPLICATION | &#x2611; | [anchoring/anchorTest_app_n.gltf](https://github.com/5G-MAG/rt-xr-content/tree/development/anchoring/) |
+| Trackable type | XR Phone | XR HMD | Test content |
+|:---------------|:---------|:-------------|:-------------|
+| TRACKABLE_VIEWER | &#x2611; | &#x2611; | [anchoring/anchorTest_viewer_n.gltf](https://github.com/5G-MAG/rt-xr-content/tree/development/anchoring/) |
+| TRACKABLE_FLOOR  | &#x2611; | &#x2610; | [awards/scene_floor_anchoring.gltf](https://github.com/5G-MAG/rt-xr-content/tree/development/awards/) |
+| TRACKABLE_PLANE  | &#x2611; | &#x2611; | [awards/scene_plane_anchoring.gltf](https://github.com/5G-MAG/rt-xr-content/tree/development/awards/) |
+| TRACKABLE_CONTROLLER | &#x2610; | &#x2611; | [anchoring/anchorTest_ctrl_n.gltf](https://github.com/5G-MAG/rt-xr-content/tree/development/anchoring/) |
+| TRACKABLE_MARKER_2D | &#x2611; | &#x2610; | [anchoring/anchorTest_m2D_n.gltf](https://github.com/5G-MAG/rt-xr-content/tree/development/anchoring/) |
+| TRACKABLE_MARKER_3D | &#x2610; | &#x2610; | [anchoring/anchorTest_m3D_n.gltf](https://github.com/5G-MAG/rt-xr-content/tree/development/anchoring/) |
+| TRACKABLE_MARKER_GEO | &#x2611; | &#x2610; | [anchoring/anchorTest_geoSpatial_n_cs.gltf](https://github.com/5G-MAG/rt-xr-content/tree/development/anchoring/) |
+| TRACKABLE_APPLICATION | &#x2611; | &#x2611; | [anchoring/anchorTest_app_n.gltf](https://github.com/5G-MAG/rt-xr-content/tree/development/anchoring/) |
 
 
 ### Interactivity
@@ -111,24 +112,24 @@ An interactivity behavior combines one or more **triggers** that condition the e
 
 The table below provide an overview of the supported triggers and actions:
 
-| Trigger type          | Status | Test content |
-|:----------------------|:-|:-|
-| TRIGGER_COLLISION     |&#x2611;|[gravity/gravity.gltf](https://github.com/5G-MAG/rt-xr-content/tree/development/gravity)|
-| TRIGGER_PROXIMITY     |&#x2611;|[gravity/gravity.gltf](https://github.com/5G-MAG/rt-xr-content/tree/development/gravity), [geometry/UseCase_03-variant1-geometry.gltf](https://github.com/5G-MAG/rt-xr-content/tree/development/geometry)|
-| TRIGGER_USER_INPUT    |&#x2611;|[gravity/gravity.gltf](https://github.com/5G-MAG/rt-xr-content/tree/development/gravity), [geometry/UseCase_03-variant3-geometry.gltf](https://github.com/5G-MAG/rt-xr-content/tree/development/geometry)|
-| TRIGGER_VISIBILITY    |&#x2611;|[geometry/UseCase_03-variant3-geometry.gltf](https://github.com/5G-MAG/rt-xr-content/tree/development/geometry)|
+| Trigger type | XR Phone | XR HMD | Test content |
+|:----------------------|:-|:-|:-|
+| TRIGGER_COLLISION     | &#x2611; | &#x2611; | [gravity/gravity.gltf](https://github.com/5G-MAG/rt-xr-content/tree/development/gravity)|
+| TRIGGER_PROXIMITY      | &#x2611; | &#x2611; |[gravity/gravity.gltf](https://github.com/5G-MAG/rt-xr-content/tree/development/gravity), [geometry/UseCase_03-variant1-geometry.gltf](https://github.com/5G-MAG/rt-xr-content/tree/development/geometry)|
+| TRIGGER_USER_INPUT     | &#x2611; | &#x2611; |[gravity/gravity.gltf](https://github.com/5G-MAG/rt-xr-content/tree/development/gravity), [geometry/UseCase_03-variant3-geometry.gltf](https://github.com/5G-MAG/rt-xr-content/tree/development/geometry)|
+| TRIGGER_VISIBILITY    | &#x2611; | &#x2611; |[geometry/UseCase_03-variant3-geometry.gltf](https://github.com/5G-MAG/rt-xr-content/tree/development/geometry)|
 
-| Action type           | Status | Test content |
-|:--------------------- |:-|:-|
-| ACTION_ACTIVATE       |&#x2611;|[gravity/gravity.gltf](https://github.com/5G-MAG/rt-xr-content/tree/development/gravity)|
-| ACTION_TRANSFORM      |&#x2611;|[gravity/gravity.gltf](https://github.com/5G-MAG/rt-xr-content/tree/development/gravity)|
-| ACTION_BLOCK          |&#x2611;|[gravity/gravity.gltf](https://github.com/5G-MAG/rt-xr-content/tree/development/gravity)|
-| ACTION_ANIMATION      |&#x2611;|[geometry/UseCase_03-variant1-geometry.gltf](https://github.com/5G-MAG/rt-xr-content/tree/development/geometry)|
-| ACTION_SET_MATERIAL   |&#x2611;|[gravity/gravity.gltf](https://github.com/5G-MAG/rt-xr-content/tree/development/gravity)|
-| ACTION_MANIPULATE     |&#x2611;| |
-| ACTION_MEDIA          |&#x2610;|[geometry/UseCase_02-variant3-geometry.gltf](https://github.com/5G-MAG/rt-xr-content/tree/development/geometry)|
-| ACTION_HAPTIC         |&#x2610;| |
-| ACTION_SET_AVATAR     |&#x2610;| |
+| Action type           | XR Phone | XR HMD | Test content |
+|:--------------------- |:-|:-|:-|
+| ACTION_ACTIVATE       | &#x2611; | &#x2611; | [gravity/gravity.gltf](https://github.com/5G-MAG/rt-xr-content/tree/development/gravity)|
+| ACTION_TRANSFORM      | &#x2611; | &#x2611; | [gravity/gravity.gltf](https://github.com/5G-MAG/rt-xr-content/tree/development/gravity)|
+| ACTION_BLOCK          | &#x2611; | &#x2611; | [gravity/gravity.gltf](https://github.com/5G-MAG/rt-xr-content/tree/development/gravity)|
+| ACTION_ANIMATION      | &#x2611; | &#x2611; | [geometry/UseCase_03-variant1-geometry.gltf](https://github.com/5G-MAG/rt-xr-content/tree/development/geometry)|
+| ACTION_SET_MATERIAL   | &#x2611; | &#x2611; | [gravity/gravity.gltf](https://github.com/5G-MAG/rt-xr-content/tree/development/gravity)|
+| ACTION_MANIPULATE     | &#x2610; | &#x2610; |  |
+| ACTION_MEDIA          | &#x2610; | &#x2610; | 🚧 [issues/19](https://github.com/5G-MAG/rt-xr-unity-player/issues/19) |
+| ACTION_HAPTIC         | &#x2610; | &#x2610; |  |
+| ACTION_SET_AVATAR     | &#x2610; | &#x2610; | [issues/203](https://github.com/5G-MAG/Getting-Started/issues/203) |
 
 
 
@@ -163,14 +164,14 @@ Note that "Unity player" refers to the compiled application, while "Unity editor
 
 | glTF extension               | Unity player   | Unity editor   |
 |:-----------------------------|:---------------|:---------------|
-| MPEG_media                   | &#x2610;       | &#x2611;       |
-| MPEG_buffer_circular         | &#x2610;       | &#x2611;       |
-| MPEG_accessor_timed          | &#x2610;       | &#x2611;       |
-| MPEG_audio_spatial           | &#x2610;       | &#x2611;       |
-| MPEG_texture_video           | &#x2610;       | &#x2611;       |
-| MPEG_scene_interactivity     | &#x2611;       | &#x2611;       |
-| MPEG_node_interactivity      | &#x2611;       | &#x2611;       |
-| MPEG_node_interactivity.type | &#x2611;       | &#x2611;       |
+| MPEG_media                   | &#x2611;       | &#x2610;       |
+| MPEG_buffer_circular         | &#x2611;       | &#x2610;       |
+| MPEG_accessor_timed          | &#x2611;       | &#x2610;       |
+| MPEG_audio_spatial           | &#x2611;       | &#x2610;       |
+| MPEG_texture_video           | &#x2611;       | &#x2610;       |
+| MPEG_scene_interactivity     | &#x2611;       | &#x2610;       |
+| MPEG_node_interactivity      | &#x2611;       | &#x2610;       |
+| MPEG_node_interactivity.type | &#x2611;       | &#x2610;       |
 | MPEG_anchor                  | &#x2611;       | &#x2610;       |
 | MPEG_sampler_YCbCr           | &#x2610;       | &#x2610;       |
 | MPEG_primitive_V3C           | &#x2610;       | &#x2610;       |

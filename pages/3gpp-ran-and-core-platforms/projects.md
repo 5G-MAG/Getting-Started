@@ -9,3 +9,5 @@ nav_order: 1
 
 1. TOC
 {:toc}
+
+Note that this is an auxiliry project to support the deployment of 5G-MAG Reference Tools with open-source network infrastructure.
