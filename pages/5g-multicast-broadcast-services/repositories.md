@@ -12,27 +12,55 @@ nav_order: 2
 
 # Repositories
 
-<img src="../../assets/images/projects/mbs_repos.png">
+The following repositories are available. Please refer to the "Scope & Architecture" sections of the different projects for more context.
 
-Please note that the 5GC NFs related to 5G Multicast Broadcast Services are implemented as extensions of [Open5GS](https://github.com/5G-MAG/open5gs) NFs.
+<img src="../../assets/images/projects/mbs_repos.png">
 
 ---
 
 ## 5G UE (with MBS components): [srsRAN_4G (5mbs branch)](https://github.com/5G-MAG/srsRAN_4G/tree/5mbs)
+This is a branch of srsRAN_4G which contains a basic implementation of an MBS-capable UE.
+
+Additional information:
+* [Information and how to download, build, install and run](https://github.com/5G-MAG/srsRAN_4G/tree/5mbs)
 
 ## NG-RAN (with MBS components): [rt-srsRAN_Project (5mbs branch)](https://github.com/5G-MAG/rt-srsRAN_Project/tree/5mbs)
+This is a branch of srsRAN_Project which contains a basic implementation of an MBS-capable NG-RAN.
+
+Additional information:
+* [Information and how to download, build, install and run](https://github.com/5G-MAG/rt-srsRAN_Project/tree/5mbs)
 
 ## 5GC (with MBS components): [open5gs/tree/5mbs (5mbs branch)](https://github.com/5G-MAG/open5gs/tree/5mbs)
+This is a branch of Open5GS which contains implementations of 5GC NFs related to MBS.
 
-## MBS User Service: MBS Function (MBSF): [https://github.com/5G-MAG/rt-mbs-function](https://github.com/5G-MAG/rt-mbs-function)
+Additional information:
+* [Information and how to download, build, install and run](https://github.com/5G-MAG/open5gs/tree/5mbs)
+* [Packages](https://github.com/orgs/5G-MAG/packages?repo_name=open5gs)
 
+## MBS User Services: MBS Function (MBSF): [https://github.com/5G-MAG/rt-mbs-function](https://github.com/5G-MAG/rt-mbs-function)
+This repository provides a 5G MBS Function which forms part of the MBS User Services. This NF provides the interface designated as Nmb10 in the 3GPP TS 29.580 specification.
+
+Additional information:
+* [Information and how to download, build, install and run](https://github.com/5G-MAG/rt-mbs-function)
+* [Releases](https://github.com/5G-MAG/rt-mbs-function/releases)
+
+https://github.com/orgs/5G-MAG/packages?repo_name=rt-mbs-transport-function
 ## MBS User Services: MBS Transport Function (MBSTF): [https://github.com/5G-MAG/rt-mbs-transport-function](https://github.com/5G-MAG/rt-mbs-transport-function)
+This repository provides a 5G MBS Transport Function which forms part of the MBS User Services. This NF provides the interfaces designated as Nmb2, Nmb8 and Nmb9 in the 3GPP TS 29.581 V18.5.0 specification.
+
+Additional information:
+* [Information and how to download, build, install and run](https://github.com/5G-MAG/rt-mbs-transport-function)
+* [Releases](https://github.com/5G-MAG/rt-mbs-transport-function/releases)
+* [Packages](https://github.com/orgs/5G-MAG/packages?repo_name=rt-mbs-transport-function)
 
 ## Auxiliary repositories:
 
 ### MBS Examples: [rt-mbs-examples](https://github.com/5G-MAG/rt-mbs-examples)
+This repository contains Docker Compose components to deploy several network functions related to MBS.
+
+Additional information:
 * [Information and how to download, build, install and run](https://github.com/5G-MAG/rt-mbs-examples#readme)
-* [Releases](https://github.com/5G-MAG/rt-mbs-examples/releases)
+* [Packages](https://github.com/orgs/5G-MAG/packages?repo_name=rt-mbs-examples)
 
 # Packages
 
@@ -66,3 +94,9 @@ Components | Package
  gNB with MBS | [https://github.com/5G-MAG/rt-mbs-examples/pkgs/container/gnb_with_mbs](https://github.com/5G-MAG/rt-mbs-examples/pkgs/container/gnb_with_mbs)
  AMF with MBS | [https://github.com/5G-MAG/rt-mbs-examples/pkgs/container/amf_with_mbs](https://github.com/5G-MAG/rt-mbs-examples/pkgs/container/amf_with_mbs)
  UE with MBS | [https://github.com/5G-MAG/rt-mbs-examples/pkgs/container/ue_with_mbs](https://github.com/5G-MAG/rt-mbs-examples/pkgs/container/ue_with_mbs)
+
+## MBS User Services related packages:
+
+Components | Package
+ --|--
+ MBSTF | [https://github.com/5G-MAG/rt-mbs-transport-function/pkgs/container/mbstf](https://github.com/5G-MAG/rt-mbs-transport-function/pkgs/container/mbstf)
