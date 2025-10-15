@@ -12,6 +12,8 @@ nav_order: 3
 
 # Repositories
 
+The following repositories are available. Please refer to the "Scope & Architecture" sections of the different projects for more context.
+
 <img src="../../assets/images/projects/dvb_repos.png">
 
 ---
