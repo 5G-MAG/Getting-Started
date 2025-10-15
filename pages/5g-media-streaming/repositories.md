@@ -95,3 +95,18 @@ The following tools are available:
 Additional information:
 * [Information](https://github.com/5G-MAG/rt-5gms-examples#readme)
 * [Releases](https://github.com/5G-MAG/rt-5gms-examples/releases)
+
+---
+
+# Packages
+
+This project also provides or makes use of the following packages GitHub Container packages.
+
+## 5G Media Streaming
+
+Components | Package
+ --|--
+ com.fivegmag.a5gmsmediastreamhandler | [https://github.com/5G-MAG/rt-5gms-media-stream-handler/packages/](https://github.com/5G-MAG/rt-5gms-media-stream-handler/packages/)
+ com.fivegmag.a5gmscommonlibrary | [https://github.com/5G-MAG/rt-5gms-common-android-library/packages/](https://github.com/5G-MAG/rt-5gms-common-android-library/packages/)
+
+
