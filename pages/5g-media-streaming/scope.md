@@ -53,6 +53,13 @@ Visit the [Standards repository](https://5g-mag.github.io/Standards/pages/5g-med
  * Check [here](../lte-based-5g-broadcast/repositories.html) the repositories for **5G Broadcast**
  * Check [here](../common-tools/) to access the repositories for **Common Tools (Auxiliary tools common to various projects)**
 
+# Docker deployment support
+Docker-Compose setups are provided to run the 5GMS Application Function, the 5GMS Application Server and the 5GMS Application Provider in Docker container environments.
+
+<img src="../../assets/images/5gms/5gms-docker-recipe1.png" style="width: 80%">
+
+ * Check [here](../5g-media-streaming/repositories.html) the relevant repository to access the Docker containers for **5G Media Streaming**
+
 # 5GMS Application Function Supported Features
 
 The release versions of the 5GMSd Application Function support differing sets of interfaces, as described by the different
