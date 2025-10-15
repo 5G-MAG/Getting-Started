@@ -14,7 +14,7 @@ nav_order: 2
 
 The following repositories are available. Please refer to the "Scope & Architecture" sections of the different projects for more context.
 
-<img src="../../assets/images/projects/ew_repos.png">
+<img src="../../assets/images/projects/ew_repos.png" style="width: 80%">
 
 ---
 
