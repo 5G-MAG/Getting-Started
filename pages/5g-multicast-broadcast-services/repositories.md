@@ -63,12 +63,14 @@ This repository contains Docker Compose components to deploy several network fun
 Additional information:
 * [Information and how to download, build, install and run](https://github.com/5G-MAG/rt-mbs-examples#readme)
 * [Packages](https://github.com/orgs/5G-MAG/packages?repo_name=rt-mbs-examples)
+* [Docker](https://github.com/5G-MAG/rt-mbs-examples/tree/development/images)
 
 ---
 
 # Packages
 
-This project also provides or makes use of the following packages GitHub Container packages. Images and docker compose deployments for MBS are located in the following repository: [https://github.com/5G-MAG/rt-mbs-examples](https://github.com/5G-MAG/rt-mbs-examples)
+This project also provides or makes use of the following packages GitHub Container packages.
+Images and docker compose deployments for MBS are located in the following repository: [https://github.com/5G-MAG/rt-mbs-examples](https://github.com/5G-MAG/rt-mbs-examples)
 
 ## Standard Open5GS packages:
 
