@@ -31,6 +31,8 @@ Additional information:
 
 # Packages
 
+This project also provides or makes use of the following packages GitHub Container packages.
+
 ## UE Data Collection, Reporting and Event Exposure
 
 Components | Package
