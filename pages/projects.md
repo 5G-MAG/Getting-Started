@@ -15,18 +15,12 @@ nav_order: 1
 
 # The Projects
 
-<img src="../assets/images/projects/projects.png">
-
----
-
 <img src="../assets/images/Banner_5GMS.png"/> 
 
 ## Project: 5G Media Streaming Architecture
 * Check the [**Roadmap**](https://github.com/orgs/5G-MAG/projects/48/views/6) for 5G Media Streaming
-* Check the [**Roadmap**](https://github.com/orgs/5G-MAG/projects/48/views/17) for 5G Core Network components
 * **Reference Tools** available:
    * [**Project: 5G Media Streaming Architecture**](https://5g-mag.github.io/Getting-Started/pages/5g-media-streaming/)
-   * [**Project: 5GC Service Consumers**](https://5g-mag.github.io/Getting-Started/pages/5g-core-service-consumers/)
 
 ---
 
@@ -50,13 +44,19 @@ nav_order: 1
 
 <img src="../assets/images/Banner_5GBC.png"/> 
 
-## Project: 5G Broadcast
+## Project: 5G Broadcast: TV and Radio Hybrid Services
 * Check the [**Roadmap**](https://github.com/orgs/5G-MAG/projects/48/views/7) for 5G Broadcast: TV and Radio Services
-* Check the [**Roadmap**](https://github.com/orgs/5G-MAG/projects/48/views/12) for 5G Broadcast: Emergency Alerts
 * **Reference Tools** available:
     * [**Project: 5G Broadcast Hybrid Services**](https://5g-mag.github.io/Getting-Started/pages/lte-based-5g-broadcast/)
-    * [**Project: Emergency Alerts over 5G Broadcast**](https://5g-mag.github.io/Getting-Started/pages/emergency-alerts/)
 
+---
+
+<img src="../assets/images/Banner_5GBCEA.png"/> 
+
+## Project: 5G Broadcast: Emergency Alerts
+* Check the [**Roadmap**](https://github.com/orgs/5G-MAG/projects/48/views/12) for 5G Broadcast: Emergency Alerts
+* **Reference Tools** available:
+    * [**Project: Emergency Alerts over 5G Broadcast**](https://5g-mag.github.io/Getting-Started/pages/emergency-alerts/)
 ---
 
 <img src="../assets/images/Banner_5MBS.png"/> 
