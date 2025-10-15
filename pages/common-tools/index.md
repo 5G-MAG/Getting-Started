@@ -14,7 +14,7 @@ nav_order: 14
 
 The following repository contains a series of auxiliary tools that may be used by different 5G-MAG Reference Tools projects.  Please refer to the "Scope & Architecture" sections of the different projects for more context.
 
-<img src="../../assets/images/projects/common_tools.png">
+<img src="../../assets/images/projects/common_tools.png" style="width: 80%">
 
 ---
 
