@@ -12,9 +12,14 @@ nav_order: 2
 
 # Repositories
 
+The following repositories are available. Please refer to the "Scope & Architecture" sections of the different projects for more context.
+
 <img src="../../assets/images/projects/ew_repos.png">
 
 ---
 
 ## 5G Broadcast Transmitter for QRD and CRD (with support for Emergency Alerts): [rt-mbms-tx-for-qrd-and-crd](https://github.com/5G-MAG/rt-mbms-tx-for-qrd-and-crd/tree/emergency-alerts)
-* [Information and how to download, build, install and run](https://github.com/5G-MAG/rt-mbms-tx-for-qrd-and-crd/tree/emergency-alerts/README.md)
+This repository holds an extension of an MBMS-enabled eNodeB tailored to operate as a 5G Broadcast transmitter compatible with Qualcomm Reference Design (QRD) and QRC devices. In addition, System Information Blocks relevant for Emergency Alerts (e.g. SIB12) can be transmitted.
+
+Additional information:
+* [Information and how to download, build, install and run](https://github.com/5G-MAG/rt-mbms-tx-for-qrd-and-crd/tree/emergency-alerts)
