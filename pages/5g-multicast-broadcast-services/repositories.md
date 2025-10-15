@@ -53,6 +53,8 @@ Additional information:
 * [Releases](https://github.com/5G-MAG/rt-mbs-transport-function/releases)
 * [Packages](https://github.com/orgs/5G-MAG/packages?repo_name=rt-mbs-transport-function)
 
+---
+
 ## Auxiliary repositories:
 
 ### MBS Examples: [rt-mbs-examples](https://github.com/5G-MAG/rt-mbs-examples)
@@ -61,6 +63,8 @@ This repository contains Docker Compose components to deploy several network fun
 Additional information:
 * [Information and how to download, build, install and run](https://github.com/5G-MAG/rt-mbs-examples#readme)
 * [Packages](https://github.com/orgs/5G-MAG/packages?repo_name=rt-mbs-examples)
+
+---
 
 # Packages
 
