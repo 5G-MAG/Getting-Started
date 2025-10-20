@@ -29,5 +29,5 @@ Additional information:
 ## Real-time Object delivery over Unidirectional Transport (ROUTE), integrated within MBMS Middleware: [rt-mbms-mw / route-gpac](https://github.com/5G-MAG/rt-mbms-mw/tree/route-gpac)
 This is an extension of the MBMS middleware implementing a ROUTE client.
 
-Additional information:
-* [Information and how to download, build, install and run](https://github.com/5G-MAG/rt-mbms-mw/tree/route-gpac#readme)
+## External Tools
+Check the [DVB-NIP Analyser](../external-tools/).
