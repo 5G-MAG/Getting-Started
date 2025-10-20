@@ -35,3 +35,7 @@ built with the software packages available in the 5G-MAG Reference Tools and als
 * Guidelines for contributors are available [here](guidelines-contributors.html)
 
 <img src="./assets/images/projects/contributors.png" style="width: 80%">
+
+{: .note }
+Copyright: 5G Media Action Group (5G-MAG)
+Please refer to the [Getting-Started](https://github.com/5G-MAG/Getting-Started/tree/main/pages) repository to provide updates to this documentation.
