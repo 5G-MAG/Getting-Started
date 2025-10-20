@@ -21,9 +21,9 @@ We recommend a local installation of Open5GS following the instructions provided
 
 Note that the **TMGI Allocation/Deallocation tool** and the **MBS Service tool** requires the MBS components under the `5mbs` branch of 5G-MAG's Open5GS repository. This can be cloned with: `git clone --recurse-submodules -b 5mbs https://github.com/5G-MAG/open5gs.git ~/open5gs`. The MBS Transport Function can be installed from the [rt-mbs-transport-function](https://github.com/5G-MAG/rt-mbs-transport-function) repository.
 
-In the following examples 127.0.0.10:7777 is used as the address and port number for the NRF API (Open5GS default). The address 12.34.56.78 is the UE's IP address as assigned by the 5G Core.
+In the following examples 127.0.0.10:7777 is used as the address and port number for the NRF API (Open5GS default).
 
-Please substitute these IP addresses for the ones you are using with your network.
+Please substitute this IP address for the one you are using with your network.
 
 ## Using the TMGI Allocation/Deallocation tool
 
