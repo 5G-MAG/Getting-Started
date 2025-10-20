@@ -122,7 +122,3 @@ nav_order: 1
    * [**Project: DVB-I Services over 5G Systems**](https://5g-mag.github.io/Getting-Started/pages/dvbi-over-5g/)
 
 ---
-
-{: .note }
-Copyright: 5G Media Action Group (5G-MAG)
-Please refer to the [Tech](https://github.com/5G-MAG/Tech/tree/main/pages) repository to provide updates to this documentation.
