@@ -30,4 +30,4 @@ Additional information:
 This is an extension of the MBMS middleware implementing a ROUTE client.
 
 ## External Tools
-Check the [DVB-NIP Analyser](../external-tools/).
+Check the [DVB-NIP Analyser]([../external-tools/#dvb-nip-analyzer).
