@@ -463,7 +463,7 @@ This shows the FLUTE FDT Instance `File` entry for the first object pulled from 
 packet it can be noticed that:
 
 1. There are outer IP and UDP protocol headers showing the packet is sent from 127.0.0.1:58158 to 127.0.0.7:49484
-   <span style="color:red">&#x2780</span>; because an MB-UPF was used for this example which presented its tunnel at 127.0.0.7:49484.
+   &#x2780; because an MB-UPF was used for this example which presented its tunnel at 127.0.0.7:49484.
 1. The next (inner) pair of IP and UDP headers show that this encapsulated packet is from 127.0.0.1:5000 to multicast
    address 232.0.0.1:5000 &#x2781;, as requested in the *DistributionSession* creation request to the MBSTF.
 1. The packet contents are a FLUTE packet for **Transport Session Identifier** 0 and **Transport Object Identifier** 0 (**"
