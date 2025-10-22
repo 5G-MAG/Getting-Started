@@ -29,7 +29,14 @@ Please substitute this IP address for the one you are using with your network.
 
 The TMGI Allocation and Deallocation tool can request the allocation or deallocation of a TMGI. It will then display the result and exit.
 
-The TMGI Allocation and Deallocation tool can be run with an allocation command like:
+To get the full command help for the TMGI Allocation and Deallocation tool use the command:
+
+```
+/usr/local/bin/tmgi-tool -h
+```
+
+### TMGI Allocation
+TMGI Allocation can be run with a command like:
 
 ```
 /usr/local/bin/tmgi-tool -n 127.0.0.10:7777
@@ -39,66 +46,103 @@ This will generate the following responses.
 
 At the MB-SMF (with debug option):
 ```
-10/21 18:15:50.561: [sbi] DEBUG: [POST] /nmbsmf-tmgi/v1/tmgi (../lib/sbi/nghttp2-server.c:1173)
-10/21 18:15:50.561: [sbi] DEBUG: RECEIVED: 16 (../lib/sbi/nghttp2-server.c:1177)
-10/21 18:15:50.561: [sbi] DEBUG: {"tmgiNumber":1} (../lib/sbi/nghttp2-server.c:1179)
+10/22 18:26:32.402: [sbi] DEBUG: [POST] /nmbsmf-tmgi/v1/tmgi (../lib/sbi/nghttp2-server.c:1173)
+10/22 18:26:32.402: [sbi] DEBUG: RECEIVED: 16 (../lib/sbi/nghttp2-server.c:1177)
+10/22 18:26:32.402: [sbi] DEBUG: {"tmgiNumber":1} (../lib/sbi/nghttp2-server.c:1179)
 0000: 00000004 01000000 00                  .........
-10/21 18:15:50.561: [smf] DEBUG: smf_state_operational(): OGS_EVENT_NAME_SBI_SERVER (../src/smf/smf-sm.c:90)
-10/21 18:15:50.561: [smf] DEBUG: TMGI allocate request received (../src/smf/nmbsmf-handler.c:36)
-10/21 18:15:50.561: [smf] INFO: [Added] Number of TMGIs in SMF is now 1 (../src/smf/context.c:3213)
-10/21 18:15:50.561: [sbi] DEBUG: STATUS [200] (../lib/sbi/nghttp2-server.c:645)
-10/21 18:15:50.561: [sbi] DEBUG: SENDING...: 122 (../lib/sbi/nghttp2-server.c:653)
-10/21 18:15:50.561: [sbi] DEBUG: {"tmgiList":[{"mbsServiceId":"AB4A6A","plmnId":{"mcc":"000","mnc":"000"}}],"expirationTime":"2025-10-21T18:15:50.561421Z"} (../lib/sbi/nghttp2-server.c:654)
-10/21 18:15:50.561: [sbi] DEBUG: STREAM closed [1] (../lib/sbi/nghttp2-server.c:1284)
-10/21 18:15:50.561: [sbi] DEBUG: FLAGS(0x1) [ACK] (../lib/sbi/nghttp2-server.c:1202)
+10/22 18:26:32.402: [smf] DEBUG: smf_state_operational(): OGS_EVENT_NAME_SBI_SERVER (../src/smf/smf-sm.c:90)
+10/22 18:26:32.402: [smf] DEBUG: TMGI allocate request received (../src/smf/nmbsmf-handler.c:36)
+10/22 18:26:32.402: [smf] INFO: [Added] Number of TMGIs in SMF is now 6 (../src/smf/context.c:3213)
+10/22 18:26:32.402: [sbi] DEBUG: STATUS [200] (../lib/sbi/nghttp2-server.c:645)
+10/22 18:26:32.402: [sbi] DEBUG: SENDING...: 122 (../lib/sbi/nghttp2-server.c:653)
+10/22 18:26:32.402: [sbi] DEBUG: {"tmgiList":[{"mbsServiceId":"CE2E09","plmnId":{"mcc":"000","mnc":"000"}}],"expirationTime":"2025-10-22T18:26:32.402184Z"} (../lib/sbi/nghttp2-server.c:654)
+10/22 18:26:32.402: [sbi] DEBUG: STREAM closed [1] (../lib/sbi/nghttp2-server.c:1284)
+10/22 18:26:32.402: [sbi] DEBUG: FLAGS(0x1) [ACK] (../lib/sbi/nghttp2-server.c:1202)
 0000: 00004101 04000000 01887694 d5596a6f   ..A.......v..Yjo
 0010: 16e53b89 77176966 dc02d336 d3640ba1   ..;.w.if...6.d..
-0020: 6196df69 7e941054 d444a820 09b502e5   a..i~..T.D. ....
-0030: c0b771b0 298b46ff 0f0d8208 855f8b1d   ..q.).F......_..
+0020: 6196e459 3e941094 d444a820 09b502e5   a..Y>....D. ....
+0030: c1397191 298b46ff 0f0d8208 855f8b1d   .9q.).F......_..
 0040: 75d0620d 263d4c74 41ea                u.b.&=LtA.
 0000: 00007a00 01000000 017b2274 6d67694c   ..z......{"tmgiL
 0010: 69737422 3a5b7b22 6d627353 65727669   ist":[{"mbsServi
-0020: 63654964 223a2241 42344136 41222c22   ceId":"AB4A6A","
+0020: 63654964 223a2243 45324530 39222c22   ceId":"CE2E09","
 0030: 706c6d6e 4964223a 7b226d63 63223a22   plmnId":{"mcc":"
 0040: 30303022 2c226d6e 63223a22 30303022   000","mnc":"000"
 0050: 7d7d5d2c 22657870 69726174 696f6e54   }}],"expirationT
-0060: 696d6522 3a223230 32352d31 302d3231   ime":"2025-10-21
-0070: 5431383a 31353a35 302e3536 31343231   T18:15:50.561421
+0060: 696d6522 3a223230 32352d31 302d3232   ime":"2025-10-22
+0070: 5431383a 32363a33 322e3430 32313834   T18:26:32.402184
 0080: 5a227d                                Z"}
-10/21 18:15:50.562: [sbi] DEBUG: connection closed [127.0.0.1]:56390 (../lib/sbi/nghttp2-server.c:1008)
+10/22 18:26:32.403: [sbi] DEBUG: connection closed [127.0.0.1]:56840 (../lib/sbi/nghttp2-server.c:1008)
 ```
 
 Back into the tmgi-tool (with debug option):
 ```
-fivegmag@fivegmag:~$ /usr/local/bin/tmgi-tool -n 127.0.0.10:7777
-10/21 18:15:50.559: [app] INFO: Configuration: '/tmp/tmgi-tool-yaml.qcfJQE' (../subprojects/open5gs/lib/app/ogs-init.c:144)
-10/21 18:15:50.559: [sbi] INFO: NF EndPoint(addr) setup [127.0.0.10:7777] (../subprojects/open5gs/lib/sbi/context.c:430)
-10/21 18:15:50.559: [tmgi-tool] INFO: Requesting TMGI... (../tools/c/tmgi-tool/app-sm.c:114)
-10/21 18:15:50.559: [sbi] WARNING: Try to discover [nmbsmf-tmgi] (../subprojects/open5gs/lib/sbi/path.c:548)
-10/21 18:15:50.560: [sbi] INFO: [33cbff30-ae99-41f0-b6b2-6f48c37c9174] (NRF-discover) NF registered [type:NULL] (../subprojects/open5gs/lib/sbi/nnrf-handler.c:1256)
-10/21 18:15:50.560: [sbi] INFO: NF EndPoint(addr) setup [127.0.0.4:80] (../subprojects/open5gs/lib/sbi/context.c:2297)
-10/21 18:15:50.560: [sbi] INFO: NF EndPoint(addr) setup [127.0.0.4:7777] (../subprojects/open5gs/lib/sbi/context.c:2034)
-10/21 18:15:50.560: [sbi] INFO: [33cbff30-ae99-41f0-b6b2-6f48c37c9174] (NF-discover) NF Profile updated [type:SMF validity:30s] (../subprojects/open5gs/lib/sbi/nnrf-handler.c:1301)
-10/21 18:15:50.560: [sbi] INFO: [33cbff30-ae99-41f0-b6b2-6f48c37c9174] NF Instance setup [type:SMF validity:30s] (../lib/mb-smf-service-consumer/nnrf-disc-handle.c:51)
-10/21 18:15:50.561: [tmgi-tool] INFO: TMGI[0x7b1aa8000c90 (0x7b1aa8000cb0)]: plmn=000000 created (../tools/c/tmgi-tool/app-sm.c:131)
-10/21 18:15:50.561: [tmgi-tool] INFO: TMGI operation finished, exiting... (../tools/c/tmgi-tool/app-sm.c:241)
-
+fivegmag@fivegmag:~/rt-5gc-service-consumers/build$ /usr/local/bin/tmgi-tool -n 127.0.0.10:7777
+Open5GS daemon 1.0.0
+10/22 18:26:32.400: [app] INFO: Configuration: '/tmp/tmgi-tool-yaml.HlwwQl' (../subprojects/open5gs/lib/app/ogs-init.c:144)
+10/22 18:26:32.400: [sbi] INFO: NF EndPoint(addr) setup [127.0.0.10:7777] (../subprojects/open5gs/lib/sbi/context.c:430)
+10/22 18:26:32.401: [tmgi-tool] INFO: Requesting TMGI... (../tools/c/tmgi-tool/app-sm.c:116)
+10/22 18:26:32.401: [sbi] WARNING: Try to discover [nmbsmf-tmgi] (../subprojects/open5gs/lib/sbi/path.c:548)
+10/22 18:26:32.401: [sbi] INFO: [0a5756da-ae9a-41f0-b553-1b31b2250d79] (NRF-discover) NF registered [type:NULL] (../subprojects/open5gs/lib/sbi/nnrf-handler.c:1256)
+10/22 18:26:32.401: [sbi] INFO: NF EndPoint(addr) setup [127.0.0.4:80] (../subprojects/open5gs/lib/sbi/context.c:2297)
+10/22 18:26:32.401: [sbi] INFO: NF EndPoint(addr) setup [127.0.0.4:7777] (../subprojects/open5gs/lib/sbi/context.c:2034)
+10/22 18:26:32.401: [sbi] INFO: [0a5756da-ae9a-41f0-b553-1b31b2250d79] (NF-discover) NF Profile updated [type:SMF validity:30s] (../subprojects/open5gs/lib/sbi/nnrf-handler.c:1301)
+10/22 18:26:32.401: [sbi] INFO: [0a5756da-ae9a-41f0-b553-1b31b2250d79] NF Instance setup [type:SMF validity:30s] (../lib/mb-smf-service-consumer/nnrf-disc-handle.c:51)
+10/22 18:26:32.402: [tmgi-tool] INFO: TMGI[0x7059f8000c90 (0x7059f8000cb0)]: plmn=000000, mbs_service_id="CE2E09", expiry_time=2025-10-22T18:26:32.000000Z created (../tools/c/tmgi-tool/app-sm.c:133)
+10/22 18:26:32.402: [tmgi-tool] INFO: TMGI operation finished, exiting... (../tools/c/tmgi-tool/app-sm.c:243)
 ```
 
-...and a deallocation command like (for an allocated TMGI with PLMN of 001-01):
+### TMGI Deallocation
+TMGI deallocation can be run with a command like (for an allocated TMGI with PLMN of 000-000):
 
 ```
-/usr/local/bin/tmgi-tool -d -p 001-01 -n 127.0.0.10:7777
+/usr/local/bin/tmgi-tool -d -M CE2E09 -p 000-000 -n 127.0.0.10:7777
 ```
-To get the full command help for the TMGI Allocation and Deallocation tool use the command:
 
+At the MB-SMF (with debug option):
 ```
-/usr/local/bin/tmgi-tool -h
+10/22 18:26:44.092: [sbi] DEBUG: [DELETE] /nmbsmf-tmgi/v1/tmgi (../lib/sbi/nghttp2-server.c:1173)
+0000: 00000004 01000000 00                  .........
+10/22 18:26:44.092: [smf] DEBUG: smf_state_operational(): OGS_EVENT_NAME_SBI_SERVER (../src/smf/smf-sm.c:90)
+10/22 18:26:44.092: [smf] DEBUG: TMGI deallocate request received (../src/smf/nmbsmf-handler.c:208)
+10/22 18:26:44.092: [smf] INFO: [Removed] Number of TMGIs in SMF is now 5 (../src/smf/context.c:3233)
+10/22 18:26:44.092: [sbi] DEBUG: STATUS [204] (../lib/sbi/nghttp2-server.c:645)
+10/22 18:26:44.092: [sbi] DEBUG: STREAM closed [1] (../lib/sbi/nghttp2-server.c:1284)
+10/22 18:26:44.092: [sbi] DEBUG: FLAGS(0x1) [ACK] (../lib/sbi/nghttp2-server.c:1202)
+0000: 00002f01 05000000 01897694 d5596a6f   ../.......v..Yjo
+0010: 16e53b89 77176966 dc02d336 d3640ba1   ..;.w.if...6.d..
+0020: 6196e459 3e941094 d444a820 09b502e5   a..Y>....D. ....
+0030: c13971a6 94c5a37f                     .9q.....
+10/22 18:26:44.093: [sbi] DEBUG: connection closed [127.0.0.1]:47740 (../lib/sbi/nghttp2-server.c:1008)
+```
+
+Back into the tmgi-tool (with debug option):
+```
+fivegmag@fivegmag:~/rt-5gc-service-consumers/build$ /usr/local/bin/tmgi-tool -d -M CE2E09 -p 000-000 -n 127.0.0.10:7777
+Open5GS daemon 1.0.0
+10/22 18:26:44.090: [app] INFO: Configuration: '/tmp/tmgi-tool-yaml.3Zc1R3' (../subprojects/open5gs/lib/app/ogs-init.c:144)
+10/22 18:26:44.090: [sbi] INFO: NF EndPoint(addr) setup [127.0.0.10:7777] (../subprojects/open5gs/lib/sbi/context.c:430)
+10/22 18:26:44.090: [tmgi-tool] INFO: Removing TMGI... (../tools/c/tmgi-tool/app-sm.c:181)
+10/22 18:26:44.090: [sbi] WARNING: Try to discover [nmbsmf-tmgi] (../subprojects/open5gs/lib/sbi/path.c:548)
+10/22 18:26:44.091: [sbi] INFO: [0a5756da-ae9a-41f0-b553-1b31b2250d79] (NRF-discover) NF registered [type:NULL] (../subprojects/open5gs/lib/sbi/nnrf-handler.c:1256)
+10/22 18:26:44.091: [sbi] INFO: NF EndPoint(addr) setup [127.0.0.4:80] (../subprojects/open5gs/lib/sbi/context.c:2297)
+10/22 18:26:44.091: [sbi] INFO: NF EndPoint(addr) setup [127.0.0.4:7777] (../subprojects/open5gs/lib/sbi/context.c:2034)
+10/22 18:26:44.091: [sbi] INFO: [0a5756da-ae9a-41f0-b553-1b31b2250d79] (NF-discover) NF Profile updated [type:SMF validity:30s] (../subprojects/open5gs/lib/sbi/nnrf-handler.c:1301)
+10/22 18:26:44.091: [sbi] INFO: [0a5756da-ae9a-41f0-b553-1b31b2250d79] NF Instance setup [type:SMF validity:30s] (../lib/mb-smf-service-consumer/nnrf-disc-handle.c:51)
+10/22 18:26:44.092: [tmgi-tool] INFO: TMGI[0x78d2f8000c90 (0x78d2f8000cb0)]: plmn=000000, mbs_service_id="CE2E09" deleted (../tools/c/tmgi-tool/app-sm.c:198)
+10/22 18:26:44.092: [tmgi-tool] INFO: TMGI operation finished, exiting... (../tools/c/tmgi-tool/app-sm.c:243)
 ```
 
 ## Using the MBS Service tool
 
 The MBS Service tool will create an MBS Session and then report notifications for that MBS Session.
+
+
+To get the full command help for the MBS Service tool use the command:
+
+```
+/usr/local/bin/mbs-service-tool -h
+```
 
 The MBS Service tool can be run with a command like:
 
@@ -264,10 +308,4 @@ fivegmag@fivegmag:~$ /usr/local/bin/mbs-service-tool -TMu -S 192.168.0.1:232.0.0
 10/21 18:04:04.583: [mb-smf-service-consumer] DEBUG: Processing event 0x7afa98009750 [ENTRY] (../lib/mb-smf-service-consumer/mb-smf-service-consumer.c:55)
 10/21 18:04:04.583: [mbs-service-tool] DEBUG: Processing event 0x7afa98009750 [ENTRY] (../tools/c/mbs-service-tool/app-sm.c:185)
 10/21 18:04:04.583: [mbs-service-tool] INFO: Awaiting notifications... (../tools/c/mbs-service-tool/app-sm.c:189)
-```
-
-To get the full command help for the MBS Service tool use the command:
-
-```
-/usr/local/bin/mbs-service-tool -h
 ```
