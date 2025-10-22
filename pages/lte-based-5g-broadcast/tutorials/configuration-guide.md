@@ -11,7 +11,7 @@ nav_order: 0
 
 ## Setup Resources
 
-* [Hardware, OS & SDR Requirements](../additional/hardware-requirements.html)
+* [Hardware, OS & SDR Requirements](../requirements.html)
 * [Sample Files](../additional/sample-files.html)
 * [Service Announcement Formats](../additional/rt-common-shared/MBMS-service-announcement-files.html)
 
