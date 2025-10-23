@@ -1,10 +1,10 @@
 ---
 layout: default
-title: MBMS Modem - Sample Files
+title: SDR - Measurements
 parent: Tutorials
 grand_parent: 5G Broadcast - TV/Radio
 has_children: false
-nav_order: 0
+nav_order: 5
 ---
 
 # Tutorial - MBMS Modem - Measurements & GPS
