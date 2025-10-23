@@ -14,7 +14,9 @@ This website contains documentation, tutorials and access to the 5G-MAG Referenc
 [DOWNLOAD THE PRESENTATION](https://drive.google.com/file/d/1tPcMWLeY6QJNH5OfGWDwLmoSyjrqk8gA/preview){: .btn} 
 
 # Overview of 5G-MAG Reference Tools Projects
-### Get an overview about the projects and software available [here](./pages/projects.html).
+### Get an overview about the [Projects and Software available](./pages/projects.html).
+### Get an overview about the [Latest Releases](./pages/releases.html).
+
 
 ## How to use these pages
 * Find practical information about this documentation [here](./pages/how-to-use.html).
