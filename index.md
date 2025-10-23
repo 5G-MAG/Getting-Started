@@ -7,18 +7,17 @@ has_children: true
 
 <img src="./assets/images/Banner_RT.png" /> 
 
-This website serves as an umbrella for documentation, practical guidelines and examples of applications that can be
-built with the software packages available in the 5G-MAG Reference Tools and also in combination with other platforms.
+This website contains documentation, tutorials and access to the 5G-MAG Reference Tools software libraries.
 
 <iframe width="60%" height="440" src="https://drive.google.com/file/d/1tPcMWLeY6QJNH5OfGWDwLmoSyjrqk8gA/preview"></iframe>
 
 [DOWNLOAD THE PRESENTATION](https://drive.google.com/file/d/1tPcMWLeY6QJNH5OfGWDwLmoSyjrqk8gA/preview){: .btn} 
 
+# Overview of 5G-MAG Reference Tools Projects
+### Get an overview about the projects and software available [here](./pages/projects.html).
+
 ## How to use these pages
 * Find practical information about this documentation [here](./pages/how-to-use.html).
-
-## Overview of 5G-MAG Reference Tools under development
-* Get an overview about the tools under development [here](./pages/projects.html).
 
 ## Developer Community
 * Meet the developer community, participate, contribute, join the public calls: [https://www.5g-mag.com/community](https://www.5g-mag.com/community)
