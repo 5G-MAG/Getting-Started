@@ -1,13 +1,13 @@
 ---
 layout: default
-title: MBMS Modem - Sample Files
+title: SDR - Sample Files
 parent: Tutorials
 grand_parent: 5G Broadcast - TV/Radio
 has_children: false
-nav_order: 0
+nav_order: 3
 ---
 
-# Tutorial - MBMS Modem with sample files
+# Tutorial - MBMS Modem with Sample Files
 
 The rt-mbms-modem can be run with sample files. See [Sample Files](https://5g-mag.github.io/Getting-Started/pages/lte-based-5g-broadcast/additional/sample-files.html).
 
