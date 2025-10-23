@@ -183,6 +183,8 @@ nav_order: 2
 
 ---
 
+<img src="../assets/images/Banner_CommonTools.png"/> 
+
 ## Auxiliary tools common to various projects
 
 * **rt-common-shared**: [https://github.com/5G-MAG/rt-common-shared/releases](https://github.com/5G-MAG/rt-common-shared/releases)
