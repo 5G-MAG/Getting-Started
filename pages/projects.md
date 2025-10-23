@@ -124,5 +124,3 @@ nav_order: 1
 
 ## External Tools
 * Check the [**Pages**](./external-tools/index.html)
-
----
