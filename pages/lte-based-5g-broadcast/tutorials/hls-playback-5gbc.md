@@ -1,10 +1,10 @@
 ---
 layout: default
-title: Linux - HLS over 5G Broadcast
+title: SDR - HLS over 5G Broadcast
 parent: Tutorials
 grand_parent: 5G Broadcast - TV/Radio
 has_children: false
-nav_order: 2
+nav_order: 1
 ---
 
 # Tutorial - HLS Playback over 5G Broadcast (Linux)
