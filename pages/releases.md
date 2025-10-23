@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Latest Releases
+title: Reference Tools Releases
 parent: Home
 nav_order: 2
 ---
