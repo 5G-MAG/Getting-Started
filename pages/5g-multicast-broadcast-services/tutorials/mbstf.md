@@ -632,9 +632,9 @@ the rest of the file in packet number 11.
 
 ### Step 7: Create a streaming MBS Distribution Session for pull operation on the DASH manifest
 
-This tests the STREAMING distribution mode for *PULL*ed DASH manifest file (MPD). This executes the following
-highlighted steps
-from MBS User Service provisioning using the command line to perform the actions that the MBSF would otherwise perform.
+This tests the STREAMING distribution mode for *PULL*ed DASH manifest file (MPD) with activity state change.
+This executes the following highlighted steps from MBS User Service provisioning using the command line to
+perform the actions that the MBSF would otherwise perform.
 
 ```mermaid
 ---
@@ -663,10 +663,40 @@ sequenceDiagram
     MBUPF -->> MBSMF: Success and Nmb9 ingress tunnel details
     MBSMF -->> MBSF: MBS Session created<br/>and Nmb9 ingress tunnel details
     rect rgb(160, 255, 160)
-        MBSF ->> MBSTF: Create Distribution Session<br/>using Nmb9 tunnel details from MB-SMF
+        MBSF ->> MBSTF: Create Distribution Session<br/>using Nmb9 tunnel details from<br/>MB-SMF in INACTIVE state
         MBSTF -->> MBSF: Distribution Session created
     end
     MBSF -->> AP: MBS User Data Session created
+    alt MBSUserDataIngSession.actPeriods has an array of TimeWindow components
+        par N seconds before the start<br/>of the next TimeWindow
+            MBSF ->> MBSTF: PATCH the DistSession to change<br/>distSessionState to ESTABLISHED
+            MBSTF -->> MBSF: PATCH applied
+        and At the start of the next TimeWindow
+            MBSF ->> MBSTF: PATCH the DistSession to change<br/>distSessionState to ACTIVE
+            MBSTF -->> MBSF: PATCH applied
+        and At the end of the next TimeWindow
+            MBSF ->> MBSTF: PATCH the DistSession to change<br/>distSessionState to INACTIVE
+            MBSTF -->> MBSF: PATCH applied
+        end
+    else MBSUserDataIngSession.actPeriodRepRule object has a value
+        par N seconds before the start<br/>of the next TimeWindow 
+            MBSF ->> MBSTF: PATCH the DistSession to change<br/>distSessionState to ESTABLISHED
+            MBSTF -->> MBSF: PATCH applied
+        and At the start of the next TimeWindow 
+            MBSF ->> MBSTF: PATCH the DistSession to change<br/>distSessionState to ACTIVE
+            MBSTF -->> MBSF: PATCH applied
+        and At the end of the next TimeWindow
+            MBSF ->> MBSTF: PATCH the DistSession to change<br/>distSessionState to INACTIVE
+            MBSTF -->> MBSF: PATCH applied
+        end
+    else no MBSUserDataIngSession.actPeriods or MBSUserDataIngSession.actPeriodRepRule value
+        AP ->> MBSF: Update MBSUserDataIngSession to change<br/>mbsDistSessionState value from INACTIVE to ACTIVE
+        rect rgb(160, 255, 160)
+            MBSF ->> MBSTF: PATCH distSession.distSessionState<br/>value to ACTIVE
+            MBSTF -->> MBSF: PATCH applied
+        end
+        MBSF -->> AP: MBSUserDataIngSession updated
+    end
     rect rgb(160, 255, 160)
         MBSTF ->> AP: Pull DASH manifest
         AP -->> MBSTF: DASH manifest
@@ -702,6 +732,14 @@ sequenceDiagram
             end
         end
     end
+    opt no MBSUserDataIngSession.actPeriods or MBSUserDataIngSession.actPeriodRepRule value
+        AP ->> MBSF: Update MBSUserDataIngSession to change<br/>mbsDistSessionState value from ACTIVE to INACTIVE
+        rect rgb(160, 255, 160)
+            MBSF ->> MBSTF: PATCH DistSession.distSessState<br/>value to INACTIVE
+            MBSTF -->> MBSF: PATCH applied
+        end
+        MBSF -->> AP: MBSUserDataIngSession updated
+    end
 
     deactivate MBSTF
     deactivate MBSF
@@ -723,7 +761,7 @@ Copy the following into a file called `DistSession-DASH-PULL-request.json`:
 {
   "distSession": {
     "distSessionId": "541ebbd2-ebf9-496b-a3b8-dcd1c17fbc9d",
-    "distSessionState": "ACTIVE",
+    "distSessionState": "INACTIVE",
     "mbUpfTunAddr": {
       "ipv4Addr": "127.0.0.7",
       "portNumber": 5678
@@ -758,9 +796,7 @@ If you are using the option to use a running MB-SMF/MB-UPF (Step 1a) then make t
 When pushed as a configuration for the MBSTF, this will configure a Distribution Session based on a single Service Entry
 Point (DASH manifest document).
 
-When an MBSTF Distribution Session is configured for *STREAMING* operating mode using a DASH MPD, the MBSTF queues for
-inclusion in the FLUTE stream the MPD, the initialization segments and then, as they become available, each media
-segment for each *Representation* declared for the DASH presentation in its MPD.
+This MBSTF Distribution Session is currently *INACTIVE* so no MPD will be fetched and no FLUTE stream will be emitted.
 
 - Note that the present implementation of the MBSTF only supports `live-profile` DASH manifests.
 
@@ -776,7 +812,7 @@ The MBSTF response (sequence step 7) should look like:
 {
   "distSession": {
     "distSessionId": "541ebbd2-ebf9-496b-a3b8-dcd1c17fbc9d",
-    "distSessionState": "ACTIVE",
+    "distSessionState": "INACTIVE",
     "objDistributionData": {
       "objDistributionOperatingMode": "STREAMING",
       "objAcquisitionMethod": "PULL",
@@ -789,6 +825,18 @@ The MBSTF response (sequence step 7) should look like:
   }
 }
 ```
+
+To activate the MBSTF Distribution Session, and start pulling the MPD and associated media objects and emitting
+them as a FLUTE stream, we need to change the state to *ACTIVE* (sequence step #). This can be done using the
+following command:
+
+```bash
+curl -X PATCH --http2-prior-knowledge -H 'Content-Type: application/json-patch+json' --data '[{"op":"replace", "path":"/distSession/distSessionState", "value":"ACTIVE"}]' http://127.0.0.62:7777/nmbstf-distsession/v1/dist-sessions/541ebbd2-ebf9-496b-a3b8-dcd1c17fbc9d
+```
+
+When an MBSTF Distribution Session is configured for *STREAMING* operating mode using a DASH MPD and is in the *ACTIVE*
+state, the MBSTF queues for inclusion in the FLUTE stream the MPD, the initialization segments and then, as they
+become available, each media segment for each *Representation* declared for the DASH presentation in its MPD.
 
 The MBSTF will now send the MPD in the FLUTE Session, followed by the initialization segments (if present in the MPD).
 Then it will download each media segment at its availability time and send it in the FLUTE Session. If the MPD indicates
@@ -846,23 +894,34 @@ as shown in the screenshot below.
 
 ---
 
+To stop the MBSTF DistSession we can change its state to the *INACTIVE* state (sequence step #). This can be done with
+the following command:
+
+```bash
+curl -X PATCH --http2-prior-knowledge -H 'Content-Type: application/json-patch+json' --data '[{"op":"replace", "path":"/distSession/distSessionState", "value":"INACTIVE"}]' http://127.0.0.62:7777/nmbstf-distsession/v1/dist-sessions/541ebbd2-ebf9-496b-a3b8-dcd1c17fbc9d
+```
+
+The fetching of new media segements and output of the FLUTE stream will cease and the MBSTF DistSession will return to
+the *INACTIVE* state. A new FLUTE stream can now be started by changing the MBS DistSession state to *ACTIVE* again, if
+so desired.
+
 ### Step 7a: (Optional) Destroying the MBS Distribution Session
 
 As the MPD is constantly updated the MBSTF will keep sending MPD, initialization segments and media segments until the
-process is killed or the MBS distribution session is destroyed.
+process is killed or the MBS distribution session made *INACTIVE* or destroyed.
 
-To destroy the MBS distribution session run the following command replacing `distSessionId` in the URL below with the
+To destroy the MBS distribution session run the following command replacing `${distSessionId}` in the URL below with the
 `distSessionId` you used when pushing the *DistSession* to the MBSTF.
 
-````
-curl --http2-prior-knowledge -X DELETE http://127.0.0.62:7777/nmbstf-distsession/v1/dist-sessions/{distSessionId}
-````
+```bash
+curl --http2-prior-knowledge -X DELETE http://127.0.0.62:7777/nmbstf-distsession/v1/dist-sessions/${distSessionId}
+```
 
 Based on our example above the REST call looks like this:
 
-````
+```bash
 curl --http2-prior-knowledge -X DELETE http://127.0.0.62:7777/nmbstf-distsession/v1/dist-sessions/541ebbd2-ebf9-496b-a3b8-dcd1c17fbc9d
-````
+```
 
 ### Step 8: Create a streaming MBS Distribution Session for push operation on the DASH manifest
 
@@ -1056,15 +1115,15 @@ MBSTF will keep sending initialization segments and media segments until the pro
 session is
 destroyed.
 
-To destroy the MBS distribution session run the following command replacing `distSessionId` in the URL below with the
+To destroy the MBS distribution session run the following command replacing `${distSessionId}` in the URL below with the
 `distSessionId` you used when pushing the *DistSession* to the MBSTF.
 
-````
-curl --http2-prior-knowledge -X DELETE http://127.0.0.62:7777/nmbstf-distsession/v1/dist-sessions/{distSessionId}
-````
+```bash
+curl --http2-prior-knowledge -X DELETE http://127.0.0.62:7777/nmbstf-distsession/v1/dist-sessions/${distSessionId}
+```
 
 Based on our example above the REST call looks like this:
 
-````
+```bash
 curl --http2-prior-knowledge -X DELETE http://127.0.0.62:7777/nmbstf-distsession/v1/dist-sessions/33acd99a-8564-42a1-a96c-9f293d90c41e
-````
+```
