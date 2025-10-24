@@ -20,10 +20,10 @@ nav_order: 1
 
 <img src="../assets/images/Banner_1.png"/> 
 
-## Project: 5G Media Streaming Architecture
+## Project: 5G Media Streaming
 * Check the [**Roadmap**](https://github.com/orgs/5G-MAG/projects/48/views/6) for 5G Media Streaming
 * **Reference Tools** available:
-   * [**Project: 5G Media Streaming Architecture**](https://5g-mag.github.io/Getting-Started/pages/5g-media-streaming/)
+   * [**Project: 5G Media Streaming**](https://5g-mag.github.io/Getting-Started/pages/5g-media-streaming/)
 
 ## Project: 5G Core Service Consumers
 * Check the [**Roadmap**](https://github.com/orgs/5G-MAG/projects/48/views/17) for 5G Core Network components
