@@ -9,7 +9,7 @@ nav_order: 2
 
 <img src="../assets/images/Banner_5GMS.png"/> 
 
-## Project: 5G Media Streaming Architecture
+## Project: 5G Media Streaming
 
 * **rt-5gms-application-provider**: [https://github.com/5G-MAG/rt-5gms-application-provider/releases](https://github.com/5G-MAG/rt-5gms-application-provider/releases)
 * **rt-5gms-application**: [https://github.com/5G-MAG/rt-5gms-application/releases](https://github.com/5G-MAG/rt-5gms-application/releases)
