@@ -1,10 +1,10 @@
 ---
 layout: default
-title: Linux - RTP over 5G Broadcast
+title: SDR - RTP over 5G Broadcast
 parent: Tutorials
 grand_parent: 5G Broadcast - TV/Radio
 has_children: false
-nav_order: 1
+nav_order: 2
 ---
 
 # Tutorial - RTP Playback over 5G Broadcast (Linux)

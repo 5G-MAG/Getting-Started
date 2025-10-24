@@ -466,8 +466,8 @@ packet it can be noticed that:
    &#x2780; because an MB-UPF was used for this example which presented its tunnel at 127.0.0.7:49484.
 1. The next (inner) pair of IP and UDP headers show that this encapsulated packet is from 127.0.0.1:5000 to multicast
    address 232.0.0.1:5000 &#x2781;, as requested in the *DistributionSession* creation request to the MBSTF.
-1. The packet contents are a FLUTE packet for **Transport Session Identifier** 0 and **Transport Object Identifier**0 ("
-   TSI: 0 TOI: 0", from the packet summary &#x2782;) which indicates that the transport object is the FDT Instance
+1. The packet contents are a FLUTE packet for **Transport Session Identifier** 0 and **Transport Object Identifier** 0 (**"
+   TSI: 0 TOI: 0"**, from the packet summary &#x2782;) which indicates that the transport object is the FDT Instance
    document. The contents of the FDT Instance document show that the FLUTE Session is currently sending a 39-byte
    transmission object &#x2785; referenced as `TOI="1"` &#x2783; with a content location of "http://127.0.0.2/object1"
    &#x2784;. The "http://127.0.0.2" prefix is the one requested by the *objDistributionBaseUrl* field in the
@@ -476,7 +476,7 @@ packet it can be noticed that:
 1. The next packet contains the same multicast packet &#x2786; sent from the MB-UPF to the gNodeB using GTP-U tunnel
    encapsulation.
 
-This next screenshot shows the FLUTE packet for TOI 1, the ingested media object *object1* itself.
+This next screenshot shows the FLUTE packet for **TOI 1**, the ingested media object *object1* itself.
 
 ![Wireshark capture showing the FDT (TOI 0) packet for the first object from the PULL SINGLE Distribution Session](../../../assets/images/5mbs/wireshark-object1-file.png)
 
@@ -621,7 +621,7 @@ This shows the FDT for the pushed file. This is encapsulated in the same way as 
 acquisition example. The *Content-Location* field in the FDT `File` entry shows it using the *objDistributionBaseUrl*
 followed by the path that the object was `PUT` to following the *objIngestBaseUrl*.
 
-The FLUTE packet conveying the pushed file in TOI 1 will look something like:
+The FLUTE packet conveying the pushed file in **TOI 1** will look something like:
 
 ![Wireshark showing first file object packet for SINGLE PUSH distribution](../../../assets/images/5mbs/wireshark-push-single-file.png)
 
@@ -799,22 +799,22 @@ The wireshark capture will look like (sequence step 11 onwards):
 
 ![Wireshark screenshot showing the FDT with File entry for the MPD sent as part of a PULL STREAMING Distribution Session](../../../assets/images/5mbs/wireshark-pull-streaming-mpd-fdt.png)
 
-This payload of this packet is a FLUTE transmission object (TOI 0) that conveys the FDT Instance. This document includes
-a `File` entry for the MPD transmission object (TOI 1). The *objIngestBaseUrl* from the Distribution Session
+This payload of this packet is a FLUTE transmission object (**TOI 0**) that conveys the FDT Instance. This document includes
+a `File` entry for the MPD transmission object (**TOI 1**). The *objIngestBaseUrl* from the Distribution Session
 configuration has been substituted for the *objDistributionBaseUrl* in the FDT File entry, resulting
 in "http://127.0.0.2/stream.mpd" being the advertised path of the MPD file.
 
 ---
 
 The file contents for this example are contained in packets 7 and 9. The screenshot below shows the first packet of the
-MPD being carried as TOI 1 in the FLUTE stream. Packets 8 and 10 are the MB-UPF forwarding packets 7 and 9 to the
+MPD being carried as **TOI 1** in the FLUTE stream. Packets 8 and 10 are the MB-UPF forwarding packets 7 and 9 to the
 gNodeB, encapsulated in a GTP-U tunnel.
 
 ![Wireshark screenshot showing the MPD file contents sent as part of a PULL STREAMING Distribution Session](../../../assets/images/5mbs/wireshark-pull-streaming-mpd-file.png)
 
 ---
 
-This packet shown in the screenshot below is the `File` entry in the FDT Instance transmission object (TOI 0) for a DASH
+This packet shown in the screenshot below is the `File` entry in the FDT Instance transmission object (**TOI 0**) for a DASH
 initialization segment (with TOI 2). Because this is fetched from the same source as the MPD, the
 *objDistributionBaseUrl* substitution happens to this URL too, resulting in the avertised path
 being "http://127.0.0.2/1/init.mp4".
@@ -823,13 +823,13 @@ being "http://127.0.0.2/1/init.mp4".
 
 ---
 
-The screenshot below shows the same initialization segment being sent in the FLUTE Session as TOI 2.
+The screenshot below shows the DASH initialization segment being sent in the FLUTE Session as **TOI 2**.
 
 ![Wireshark screenshot showing the initialization segment file contents sent as part of a PULL STREAMING Distribution Session](../../../assets/images/5mbs/wireshark-pull-streaming-init-seg-file.png)
 
 ---
 
-The FDT `File` entry for the first media segment (TOI=3 in this example FLUTE Session) describes the media segment to be
+The FDT `File` entry for the first media segment (**TOI=3** in this example FLUTE Session) describes the media segment to be
 presented as the next live segment in the DASH presentation according to the MPD. This is advertised in the FDT `File`
 entry as having a `Content-Location` value of "http://127.0.0.2/1/876641739.m4s", as shown in the screenshot below.
 
@@ -837,7 +837,7 @@ entry as having a `Content-Location` value of "http://127.0.0.2/1/876641739.m4s"
 
 ---
 
-The FDT `File` entry for the second media segment (TOI=4 in this example FLUTE Session) describes the media segment to
+The FDT `File` entry for the second media segment (**TOI=4** in this example FLUTE Session) describes the media segment to
 be presented as the next live segment one segment duration after the first (just after it became available). This is
 advertised in the FDT `File` entry as having a `Content-Location` value of "http://127.0.0.2/1/876641740.m4s" location,
 as shown in the screenshot below.

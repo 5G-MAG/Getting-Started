@@ -1,9 +1,10 @@
 ---
 layout: default
-title: Android - Seamless BC-UC Switching
+title: Android - 5GBC-UC Switching
 parent: Tutorials
 grand_parent: 5G Broadcast - TV/Radio
 has_children: false
+nav_order: 0
 ---
 
 # Tutorial - Seamless Switching between Unicast and Broadcast (Android)

@@ -1,17 +1,17 @@
 ---
 layout: default
-title: Linux stack - Configuration guide
+title: Configuration Service Announcement
 parent: Tutorials
 grand_parent: 5G Broadcast - TV/Radio
 has_children: false
-nav_order: 0
+nav_order: 6
 ---
 
-# Linux stack - Configuration guide
+# Tutorial - Configuration of Service Announcement
 
 ## Setup Resources
 
-* [Hardware, OS & SDR Requirements](../additional/hardware-requirements.html)
+* [Hardware, OS & SDR Requirements](../requirements.html)
 * [Sample Files](../additional/sample-files.html)
 * [Service Announcement Formats](../additional/rt-common-shared/MBMS-service-announcement-files.html)
 
@@ -23,8 +23,7 @@ After each reboot of your machine run:
 2. `sudo systemctl stop 5gmag-rt-modem`
 
 Make sure that you have the latest nginx config enabled in `/etc/nginx/sites-enabled/5gmag-rt-wui`. Compare it to the
-config that is provided
-[here](https://github.com/5G-MAG/rt-common-shared/blob/feature/mbms/mbms/common-config/5gmag-rt-wui)
+config that is provided [here](https://github.com/5G-MAG/rt-common-shared/blob/feature/mbms/mbms/common-config/5gmag-rt-wui)
 
 ## Different SA formats
 

@@ -7,7 +7,7 @@ nav_order: 1
 
 <img src="../../assets/images/Banner_5GMS.png" /> 
 
-# 5G Media Streaming Architecture - Reference Tools Project
+# 5G Media Streaming - Reference Tools Project
 
 * Check the [**Roadmap**](https://github.com/orgs/5G-MAG/projects/48/views/6) for 5G Media Streaming.
 

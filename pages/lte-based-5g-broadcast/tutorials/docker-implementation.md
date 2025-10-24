@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Linux - Docker support for clients
+title: Docker for Clients
 parent: Tutorials
 grand_parent: 5G Broadcast - TV/Radio
 has_children: false
