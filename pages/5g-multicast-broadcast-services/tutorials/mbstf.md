@@ -827,7 +827,7 @@ The MBSTF response (sequence step 7) should look like:
 ```
 
 To activate the MBSTF Distribution Session, and start pulling the MPD and associated media objects and emitting
-them as a FLUTE stream, we need to change the state to *ACTIVE* (sequence step #). This can be done using the
+them as a FLUTE stream, we need to change the state to *ACTIVE* (sequence step 22). This can be done using the
 following command:
 
 ```bash
@@ -843,7 +843,7 @@ Then it will download each media segment at its availability time and send it in
 a refresh time, then the MBSTF will issue a conditional HTTP `GET` to reacquire it at that time, and if the MPD has
 changed, then the new MPD and any initialization segments will be transmitted again in the FLUTE Session.
 
-The wireshark capture will look like (sequence step 11 onwards):
+The wireshark capture will look like (sequence step 25 onwards):
 
 ![Wireshark screenshot showing the FDT with File entry for the MPD sent as part of a PULL STREAMING Distribution Session](../../../assets/images/5mbs/wireshark-pull-streaming-mpd-fdt.png)
 
@@ -894,7 +894,7 @@ as shown in the screenshot below.
 
 ---
 
-To stop the MBSTF DistSession we can change its state to the *INACTIVE* state (sequence step #). This can be done with
+To stop the MBSTF DistSession we can change its state to the *INACTIVE* state (sequence step 48). This can be done with
 the following command:
 
 ```bash

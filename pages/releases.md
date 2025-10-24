@@ -41,7 +41,7 @@ nav_order: 2
 
 | Repository | Version | Date | Comments |
 |------------|---------|------|----------|
-| rt-5gc-service-consumers | [2.0.0](https://github.com/5G-MAG/rt-5gc-service-consumers/releases/tag/rt-5gc-service-consumers-2.0.0) | 2025-10-02 | |
+| rt-5gc-service-consumers | [2.0.1](https://github.com/5G-MAG/rt-5gc-service-consumers/releases/tag/rt-5gc-service-consumers-2.0.1) | 2025-10-24 | |
 
 ---
 
@@ -101,7 +101,7 @@ nav_order: 2
 
 | Repository | Version | Date | Comments |
 |------------|---------|------|----------|
-| rt-mbs-transport-function | [1.0.0](https://github.com/5G-MAG/rt-mbs-transport-function/releases/tag/rt-mbs-transport-function-1.0.0) | 2025-08-28 |  |
+| rt-mbs-transport-function | [1.1.0](https://github.com/5G-MAG/rt-mbs-transport-function/releases/tag/rt-mbs-transport-function-1.1.0) | 2025-10-24 |  |
 | rt-mbs-examples | [0.1.2](https://github.com/5G-MAG/rt-mbs-examples/releases/tag/0.1.2) | 2025-04-08 |  |
 
 ---
