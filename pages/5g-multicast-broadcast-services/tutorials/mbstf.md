@@ -910,18 +910,18 @@ so desired.
 As the MPD is constantly updated the MBSTF will keep sending MPD, initialization segments and media segments until the
 process is killed or the MBS distribution session made *INACTIVE* or destroyed.
 
-To destroy the MBS distribution session run the following command replacing `distSessionId` in the URL below with the
+To destroy the MBS distribution session run the following command replacing `${distSessionId}` in the URL below with the
 `distSessionId` you used when pushing the *DistSession* to the MBSTF.
 
-````
-curl --http2-prior-knowledge -X DELETE http://127.0.0.62:7777/nmbstf-distsession/v1/dist-sessions/{distSessionId}
-````
+```bash
+curl --http2-prior-knowledge -X DELETE http://127.0.0.62:7777/nmbstf-distsession/v1/dist-sessions/${distSessionId}
+```
 
 Based on our example above the REST call looks like this:
 
-````
+```bash
 curl --http2-prior-knowledge -X DELETE http://127.0.0.62:7777/nmbstf-distsession/v1/dist-sessions/541ebbd2-ebf9-496b-a3b8-dcd1c17fbc9d
-````
+```
 
 ### Step 8: Create a streaming MBS Distribution Session for push operation on the DASH manifest
 
@@ -1115,15 +1115,15 @@ MBSTF will keep sending initialization segments and media segments until the pro
 session is
 destroyed.
 
-To destroy the MBS distribution session run the following command replacing `distSessionId` in the URL below with the
+To destroy the MBS distribution session run the following command replacing `${distSessionId}` in the URL below with the
 `distSessionId` you used when pushing the *DistSession* to the MBSTF.
 
-````
-curl --http2-prior-knowledge -X DELETE http://127.0.0.62:7777/nmbstf-distsession/v1/dist-sessions/{distSessionId}
-````
+```bash
+curl --http2-prior-knowledge -X DELETE http://127.0.0.62:7777/nmbstf-distsession/v1/dist-sessions/${distSessionId}
+```
 
 Based on our example above the REST call looks like this:
 
-````
+```bash
 curl --http2-prior-knowledge -X DELETE http://127.0.0.62:7777/nmbstf-distsession/v1/dist-sessions/33acd99a-8564-42a1-a96c-9f293d90c41e
-````
+```
