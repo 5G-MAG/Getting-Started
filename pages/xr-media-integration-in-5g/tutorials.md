@@ -42,6 +42,9 @@ Our [YouTube channel](https://www.youtube.com/@5GMAG) hosts some practical video
 
 Some of the videos are also available here:
 
+### XR Media with MPEG-I Scene Description at IBC 2025
+<iframe width="560" height="315" src="https://www.youtube.com/embed/RvHWQht-7Q4?si=-zwWx7kmnhpqBY_A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 ### News on the XR Unity Player
 <iframe width="560" height="315" src="https://www.youtube.com/embed/CVpTbiN-tmc?si=tlTwHMrJIAN3m9kQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
