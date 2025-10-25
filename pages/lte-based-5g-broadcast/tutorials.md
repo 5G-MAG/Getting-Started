@@ -12,13 +12,6 @@ nav_order: 3
 
 # How to use the Reference Tools
 
-## Check our video library
-Our [YouTube channel](https://www.youtube.com/@5GMAG) hosts some practical videos provided by developers on the use of the 5G-MAG Reference Tools.
-
-Some of the videos are also available here:
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?si=slOCsL53O2W6WlIb&amp;list=PLFqKJZ78_IWWbdf4rZ_SS9W0dqpLhKZz8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
 ## Tutorials, Tests and Examples
 
 ### [Tutorial: Seamless Switching between Unicast and Broadcast (Android)](./tutorials/android-mw-seamless-switching.html)
@@ -61,3 +54,10 @@ We provide information on the use of the rt-mbms-modem to record data.
 This tutorial provides an overview of the different configuration options when running the Linux based 5G broadcast
 stack. It highlights the required configuration options for the 5G Broadcast Service Announcements files and how to
 configure the FLUTE ffmpeg watchfolder implementation for DASH, HLS and seamless switching.
+
+## Check our video library
+Our [YouTube channel](https://www.youtube.com/@5GMAG) hosts some practical videos provided by developers on the use of the 5G-MAG Reference Tools.
+
+Some of the videos are also available here:
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?si=slOCsL53O2W6WlIb&amp;list=PLFqKJZ78_IWWbdf4rZ_SS9W0dqpLhKZz8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
