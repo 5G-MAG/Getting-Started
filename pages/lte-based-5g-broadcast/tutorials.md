@@ -60,4 +60,20 @@ Our [YouTube channel](https://www.youtube.com/@5GMAG) hosts some practical video
 
 Some of the videos are also available here:
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?si=slOCsL53O2W6WlIb&amp;list=PLFqKJZ78_IWWbdf4rZ_SS9W0dqpLhKZz8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+### The Nakolos Core - Interoperability with 5G-MAG Reference Tools
+<iframe width="560" height="315" src="https://www.youtube.com/embed/3iIichQmjBg?si=-SE8OXcYA1jIrJXs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+### 5G Broadcast at FOKUS Media Web Symposium 2024
+<iframe width="560" height="315" src="https://www.youtube.com/embed/dZaUAhYZTUU?si=SiKKCLAZhcjyJ1B3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+### Updates on the rt-mbms Web Interface and Modem
+<iframe width="560" height="315" src="https://www.youtube.com/embed/gzHBEYRDXCU?si=yqi865ngqoGxYx83" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+### 5G Broadcast supported by 5G-MAG Reference Tools
+<iframe width="560" height="315" src="https://www.youtube.com/embed/TtM98uZxHuc?si=bIUGVTgT247X2T3R" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+### Closing the gap towards a 5G Broadcast Rel-16 open-source transmitter
+<iframe width="560" height="315" src="https://www.youtube.com/embed/O_MfEE5KG6o?si=XBuMZ_hsOHBnzgZl" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+### 5G Broadcast-Broadband Seamless Switching
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Jbir8B-gC4c?si=4GCTkNGfAyBGiLpY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
