@@ -14,7 +14,7 @@ nav_order: 3
 
 ## Tutorials, Tests and Examples
 
-[Tutorial - Docker Setup with Insomnia REST client](./tutorials/docker-with-insomnia.html)
+### [Tutorial - Docker Setup with Insomnia REST client](./tutorials/docker-with-insomnia.html)
 This tutorial shows how to setup the Data Collection Application Function (DCAF) with Docker and use its REST API with the Insomnia REST client.
 
 ## Check our video library
