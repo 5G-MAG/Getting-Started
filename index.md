@@ -14,12 +14,16 @@ This website contains documentation, tutorials and access to the 5G-MAG Referenc
 [DOWNLOAD THE PRESENTATION](https://drive.google.com/file/d/1tPcMWLeY6QJNH5OfGWDwLmoSyjrqk8gA/preview){: .btn} 
 
 # Overview of 5G-MAG Reference Tools Projects
-### Get an overview about the [Projects and Software available](./pages/projects.html).
-### Get an overview about the [Latest Releases](./pages/releases.html).
-
+## Get an overview about the [Projects and Software available](./pages/projects.html).
+## Get an overview about the [Latest Releases](./pages/releases.html).
 
 ## How to use these pages
 * Find practical information about this documentation [here](./pages/how-to-use.html).
+
+## Our video library
+Find videos from the different projects in the Tutorial pages.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?si=cij1rf0oe5TQsn_H&amp;list=PLFqKJZ78_IWU3RXGLPulR4hkStzfBSXTJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ## Developer Community
 * Meet the developer community, participate, contribute, join the public calls: [https://www.5g-mag.com/community](https://www.5g-mag.com/community)
