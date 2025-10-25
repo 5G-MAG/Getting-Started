@@ -37,14 +37,20 @@ Our [YouTube channel](https://www.youtube.com/@5GMAG) hosts some practical video
 
 Some of the videos are also available here:
 
+### 5G Media Streaming at IBC 2025
+<iframe width="560" height="315" src="https://www.youtube.com/embed/AvjtVrTrWsA?si=9WtdC1Akwk52Mjp9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+### 5G Media Streaming at FOKUS Media Web Symposium 2024
+<iframe width="560" height="315" src="https://www.youtube.com/embed/vEhv0RYGbKo?si=tvlpk_1P2wP0YHIe" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 ### 5G Media Streaming QoE Metrics Reporting
-<iframe width="560" height="315" src="https://www.youtube.com/embed/hiHWE3DyhdM?si=gmkTYiFPA-aD2JFM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/hiHWE3DyhdM?si=RJQjJ41UpjLMShNa" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ### Introducing the 5GMS Application Provider Management Portal
-<iframe width="560" height="315" src="https://www.youtube.com/embed/qewsQhGi8aE?si=X1cltXhw1vPxsLs5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/qewsQhGi8aE?si=u1Mouq9yrju1QZDB" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ### 5GMS Consumpion Reporting, Network Assistance and Dynamic Policies
-<iframe width="560" height="315" src="https://www.youtube.com/embed/fv_LoZXk5Oc?si=s3jlY0Vt4lykt5yj" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/fv_LoZXk5Oc?si=lAQe7xgRzvHMnGY4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ### 5G Media Streaming supported by 5G-MAG Reference Tools
 <iframe width="560" height="315" src="https://www.youtube.com/embed/lJG1hNty_AU?si=FeKrrTMB-ZYtBuKh" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
