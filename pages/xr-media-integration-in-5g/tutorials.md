@@ -42,4 +42,11 @@ Our [YouTube channel](https://www.youtube.com/@5GMAG) hosts some practical video
 
 Some of the videos are also available here:
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?si=7CWeDSSgjwq_HJrD&amp;list=PLFqKJZ78_IWVk0_h1oeizy9IZ0DmOUXkA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+### News on the XR Unity Player
+<iframe width="560" height="315" src="https://www.youtube.com/embed/CVpTbiN-tmc?si=tlTwHMrJIAN3m9kQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+### Using the Blender glTF exporter with the XR Unity Player
+<iframe width="560" height="315" src="https://www.youtube.com/embed/bEMjw1YA78M?si=0CMFSoIBFt0xCR5Z" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+### XR Player supported by 5G-MAG Reference Tools
+<iframe width="560" height="315" src="https://www.youtube.com/embed/PD3JbPppLLE?si=BGzO_pYWW8cZQ8oc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
