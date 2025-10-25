@@ -37,4 +37,20 @@ Our [YouTube channel](https://www.youtube.com/@5GMAG) hosts some practical video
 
 Some of the videos are also available here:
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?si=AmxsuFLQ8V_PZD0G&amp;list=PLFqKJZ78_IWUibB6dMiabaVNDFLSGBWlx" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+### 5G Media Streaming QoE Metrics Reporting
+<iframe width="560" height="315" src="https://www.youtube.com/embed/hiHWE3DyhdM?si=gmkTYiFPA-aD2JFM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+### Introducing the 5GMS Application Provider Management Portal
+<iframe width="560" height="315" src="https://www.youtube.com/embed/qewsQhGi8aE?si=X1cltXhw1vPxsLs5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+### 5GMS Consumpion Reporting, Network Assistance and Dynamic Policies
+<iframe width="560" height="315" src="https://www.youtube.com/embed/fv_LoZXk5Oc?si=s3jlY0Vt4lykt5yj" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+### 5G Media Streaming supported by 5G-MAG Reference Tools
+<iframe width="560" height="315" src="https://www.youtube.com/embed/lJG1hNty_AU?si=FeKrrTMB-ZYtBuKh" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+### 5G Media Streaming End-to-end setup with Android clients
+<iframe width="560" height="315" src="https://www.youtube.com/embed/L5nGVf-WhNE?si=zaYYKpaxuvbTjfF_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+### 5G Media Streaming in the BBC R&D standalone testbed
+<iframe width="560" height="315" src="https://www.youtube.com/embed/2IU_18Dvhew?si=99JFju91lA4jH2dX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
