@@ -25,4 +25,8 @@ Our [YouTube channel](https://www.youtube.com/@5GMAG) hosts some practical video
 
 Some of the videos are also available here:
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?si=2h7e4UtqtprhAA8B&amp;list=PLFqKJZ78_IWXSCsSEKeyAay10luuVF9io" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+### Basic implementation of MBS Transport Function
+<iframe width="560" height="315" src="https://www.youtube.com/embed/anrtRfPttmo?si=gDIJirDWv4E9-kxR" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+### Initial support of 5MBS core network functions
+<iframe width="560" height="315" src="https://www.youtube.com/embed/lJh2F0xXxpE?si=JYYykzC9l1fFBd2_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
