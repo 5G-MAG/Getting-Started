@@ -40,7 +40,7 @@ We recommend using [Ubuntu 20.04 LTS (64 bit)](https://ubuntu.com/). Other versi
 
 ## Reference setup
 
-<p align="center"><img src="https://github.com/5G-MAG/Getting-Started/blob/main/assets/images/5gbc/reference-ors.png"></p>
+<p align="center"><img src="../../assets/images/5gbc/reference-ors.png"></p>
 
 | Component | Part | Approx. price (EUR) |
 | ------------- |-------------|-------------|
@@ -49,8 +49,7 @@ We recommend using [Ubuntu 20.04 LTS (64 bit)](https://ubuntu.com/). Other versi
 | SSD| <a href="https://www.amazon.de/gp/product/B07BSSFB4N/ref=ppx_yo_dt_b_asin_title_o00_s00?ie=UTF8&psc=1" target="_blank">SanDisk Extreme PRO M.2 NVMe 3D SSD 500 GB interne SSD</a> | 70 |
 | Power cord| <a href="https://www.amazon.de/gp/product/B00K65JGUY/ref=ppx_yo_dt_b_asin_title_o09_s00?ie=UTF8&psc=1" target="_blank">LINDY 30406 - Power cord for notebooks (Schuko) 3m</a> | 10 |
 | _Optional:_ |
-| _
-Display_|  <a href="https://www.amazon.de/gp/product/B08B67KJ75/ref=ppx_yo_dt_b_asin_title_o00_s02?ie=UTF8&psc=1" target="_blank">Capacitive display 7" IPS 1024x600</a> | 70 |
+| _Display_|  <a href="https://www.amazon.de/gp/product/B08B67KJ75/ref=ppx_yo_dt_b_asin_title_o00_s02?ie=UTF8&psc=1" target="_blank">Capacitive display 7" IPS 1024x600</a> | 70 |
 
 The full specification of the Intel NUC can be
 found [here](https://ark.intel.com/content/www/us/en/ark/products/199110/intel-nuc-8-pro-kit-nuc8v7pnh.html).

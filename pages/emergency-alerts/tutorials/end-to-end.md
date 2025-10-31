@@ -116,6 +116,7 @@ sib12 =
     warning_msg_segment_r9 = "01C576597E2EBBC7F950A8D168341A8D46A3D168341A8D46A3D168341A8D46A3D168341A8D46A3D168341A8D46A3D168341A8D46A3D168341A8D46A3D168341A8D46A3D168341A8D46A3D168341A8D46A3D1000A";
 };
 ```
+```
 | message_identifier | Description |
 | ------------------ | ----------- |
 | 0x1100             | ETWS CBS Message Identifier for earthquake warning message |
@@ -124,6 +125,7 @@ sib12 =
 | 0x1104             | ETWS CBS Message Identifier for messages related to other emergency types |
 | 0x1112-1130        | CMAS CBS Message Identifier |
 | 0x1131-113B        | Non-ETWS CBS Message Identifier |
+```
 
 ### Step 4: Triggering multiple alerts
 
