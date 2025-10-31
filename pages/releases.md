@@ -97,11 +97,15 @@ nav_order: 2
 ## Project: 5G Multicast Broadcast Services
 
 * **rt-mbs-transport-function**: [https://github.com/5G-MAG/rt-mbs-transport-function/releases](https://github.com/5G-MAG/rt-mbs-transport-function/releases)
+* **open5gs**: [https://github.com/5G-MAG/open5gs/releases](https://github.com/5G-MAG/open5gs/releases)
+* **rt-srsRAN_Project**: [https://github.com/5G-MAG/rt-srsRAN_Project/releases](https://github.com/5G-MAG/rt-srsRAN_Project/releases)
 * **rt-mbs-examples**: [https://github.com/5G-MAG/rt-mbs-examples/releases](https://github.com/5G-MAG/rt-mbs-examples/releases)
 
 | Repository | Version | Date | Comments |
 |------------|---------|------|----------|
 | rt-mbs-transport-function | [1.1.0](https://github.com/5G-MAG/rt-mbs-transport-function/releases/tag/rt-mbs-transport-function-1.1.0) | 2025-10-24 |  |
+| open5gs / 5mbs | [v1.0.0-5mbs-v2.7.2-o5gs](https://github.com/5G-MAG/open5gs/releases/tag/v1.0.0-5mbs-v2.7.2-o5gs) | 2025-10-24 | Related to `5mbs` branch |
+| rt-srsRAN_Project / 5mbs | []() |  | Related to `5mbs` branch |
 | rt-mbs-examples | [0.1.2](https://github.com/5G-MAG/rt-mbs-examples/releases/tag/0.1.2) | 2025-04-08 |  |
 
 ---
@@ -111,16 +115,12 @@ nav_order: 2
 ## Project: XR Media with MPEG-I Scene Description
 
 * **rt-xr-unity-player**: [https://github.com/5G-MAG/rt-xr-unity-player/releases](https://github.com/5G-MAG/rt-xr-unity-player/releases)
-* **rt-xr-maf-native**: [https://github.com/5G-MAG/rt-xr-maf-native](https://github.com/5G-MAG/rt-xr-maf-native)
-* **rt-xr-gITFast**: [https://github.com/5G-MAG/rt-xr-gITFast](https://github.com/5G-MAG/rt-xr-gITFast)
 * **rt-xr-content**: [https://github.com/5G-MAG/rt-xr-content/releases](https://github.com/5G-MAG/rt-xr-content/releases)
 * **rt-xr-blender-exporter**: [https://github.com/5G-MAG/rt-xr-blender-exporter/releases](https://github.com/5G-MAG/rt-xr-blender-exporter/releases)
 
 | Repository | Version | Date | Comments |
 |------------|---------|------|----------|
 | rt-xr-unity-player | [1.1.0](https://github.com/5G-MAG/rt-xr-unity-player/releases/tag/v1.1.0) | 2025-02-27 | |
-| rt-xr-maf-native | | | |
-| rt-xr-gITFast | | | |
 | rt-xr-content | | | |
 | rt-xr-blender-exporter | [1.1.0](https://github.com/5G-MAG/rt-xr-blender-exporter/releases/tag/v1.1.0) | 2025-02-27 | |
 
