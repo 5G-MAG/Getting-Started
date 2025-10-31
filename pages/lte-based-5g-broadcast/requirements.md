@@ -40,7 +40,7 @@ We recommend using [Ubuntu 20.04 LTS (64 bit)](https://ubuntu.com/). Other versi
 
 ## Reference setup
 
-<p align="center"><img src="https://github.com/5G-MAG/Getting-Started/blob/main/assets/images/5gbc/reference-ors.png"></p>
+<p align="center"><img src="../../assets/images/5gbc/reference-ors.png"></p>
 
 | Component | Part | Approx. price (EUR) |
 | ------------- |-------------|-------------|
