@@ -29,6 +29,7 @@ As indicated in the instructions in the [rt-v3c-decoder-plugin](https://github.c
 ## Step 1: Clone the Unity Player Repository
 
 ```
+cd ~
 git clone https://github.com/5G-MAG/rt-v3c-unity-player  
 ```
 
@@ -39,6 +40,7 @@ Although not immerdiately used, this will create the directories where the decod
 Clone the repository:
 
 ```
+cd ~
 git clone --recurse-submodules https://github.com/5G-MAG/rt-v3c-decoder-plugin.git
 ```
 
@@ -52,6 +54,7 @@ cd ~/rt-v3c-decoder-plugin
 Add the additional dependency regarding avcodec libraries. For this, instructions are provided in [rt-common-shared](https://github.com/5G-MAG/rt-common-shared). We can use the Docker build instructions with Git Bash.
 
 ```
+cd ~
 git clone --recurse-submodules https://github.com/5G-MAG/rt-common-shared.git
 cd ~/rt-common-shared/avcodec-build/
 docker build -t ffmpeg-builder:27 --build-arg NDK_VERSION=27.2.12479018 .
