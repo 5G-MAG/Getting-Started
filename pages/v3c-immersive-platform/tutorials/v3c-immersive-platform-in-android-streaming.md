@@ -61,9 +61,9 @@ docker build -t ffmpeg-builder:27 --build-arg NDK_VERSION=27.2.12479018 .
 docker run -v /$(PWD)/build/ffmpeg/aarch64:/usr/build/ffmpeg --env TARGET_ABI=aarch64 --env ANDROID_API_LEVEL=35 ffmpeg-builder:27
 ```
 
-In Windows, the build artifacts can be found in your user folder `.\build\ffmpeg\aarch64`.
+In Windows, the build artifacts can be found in your user folder `rt-common-shared\avcodec-build\build\ffmpeg\aarch64`.
 
-As we are targeting an Android device, once compiled, the .so libraries from the build artifacts' lib directory can be included into the ./External/avcodec/7.1/Android/arm64-v8a/lib directory of the rt-v3c-decoder-plugin.
+As we are targeting an Android device, once compiled, copy the .so libraries from `rt-common-shared\avcodec-build\build\ffmpeg\aarch64\lib` into the `rt-v3c-decoder-plugin\External\avcodec\7.1\Android\arm64-v8a\lib` directory.
 
 Make sure the ndk is available in the Android directory.
 
