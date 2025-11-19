@@ -19,7 +19,7 @@ nav_order: 12
 ## Contents of this project
 
 ### What is this project about?
-* Find [here](./under-development.html) information about specifications, architecture, APIs, etc.
+* Find [here](./scope.html) information about specifications, architecture, APIs, etc.
 
 ### What is the roadmap and development status?
 * Find [here](./projects.html) information about the Projects.
