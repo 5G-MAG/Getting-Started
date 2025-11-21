@@ -109,3 +109,6 @@ We recommend using the simple express server available in [https://github.com/5G
 Just install the server following the instructions copy the content of the "on-server-data" inside the public folder of the DASH server. Make sure to unzip the packages containing the segments and mpd for each test sequence.
 
 Streaming can be started from the Unity player.
+
+## Troubleshooting
+If you experience any errors during the Unity player build. Try selecting the V3CDecoder tab on the top menu and click on "Check plugins" and "Check setting".
