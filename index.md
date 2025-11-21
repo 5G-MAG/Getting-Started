@@ -28,8 +28,8 @@ With the **5G-MAG Reference Tools** we:
     <td markdown="span" width="50%" align="center"><a href="./pages/5g-core-service-consumers/"><img src="./assets/images/Reference_Tools_5GC_Service_Consumers.png"><a/></td>
   </tr>
   <tr>
-    <td markdown="span" width="50%" align="center">[Visit the project documentation](./pages/5g-media-streaming/){: .btn}</td>
-    <td markdown="span" width="50%" align="center">[Visit the project documentation](./pages/5g-core-service-consumers/){: .btn}</td>
+    <td markdown="span" width="50%" align="center">[Visit the project documentation](./pages/5g-media-streaming/){: .btn .btn-blue }</td>
+    <td markdown="span" width="50%" align="center">[Visit the project documentation](./pages/5g-core-service-consumers/){: .btn .btn-blue }</td>
   </tr>
     <td><br></td>
   <tr>
@@ -37,8 +37,8 @@ With the **5G-MAG Reference Tools** we:
     <td markdown="span" width="50%" align="center"><a href="./pages/lte-based-5g-broadcast/"><img src="./assets/images/Reference_Tools_5G_Broadcast.png"><a/></td>
   </tr>
   <tr>
-    <td markdown="span" width="50%" align="center">[Visit the project documentation](./pages/ue-data-collection-reporting-exposure/){: .btn}</td>
-    <td markdown="span" width="50%" align="center">[Visit the project documentation](./pages/lte-based-5g-broadcast/){: .btn}</td>
+    <td markdown="span" width="50%" align="center">[Visit the project documentation](./pages/ue-data-collection-reporting-exposure/){: .btn .btn-blue }</td>
+    <td markdown="span" width="50%" align="center">[Visit the project documentation](./pages/lte-based-5g-broadcast/){: .btn .btn-blue }</td>
   </tr>
     <td><br></td>
   <tr>
@@ -46,8 +46,8 @@ With the **5G-MAG Reference Tools** we:
     <td markdown="span" width="50%" align="center"><a href="./pages/5g-multicast-broadcast-services/"><img src="./assets/images/Reference_Tools_5G_Multicast_Broadcast.png"><a/></td>
   </tr>
   <tr>
-    <td markdown="span" width="50%" align="center">[Visit the project documentation](./pages/emergency-alerts/){: .btn}</td>
-    <td markdown="span" width="50%" align="center">[Visit the project documentation](./pages/5g-multicast-broadcast-services/){: .btn}</td>
+    <td markdown="span" width="50%" align="center">[Visit the project documentation](./pages/emergency-alerts/){: .btn .btn-blue }</td>
+    <td markdown="span" width="50%" align="center">[Visit the project documentation](./pages/5g-multicast-broadcast-services/){: .btn .btn-blue }</td>
   </tr>
     <td><br></td>
   <tr>
@@ -55,8 +55,8 @@ With the **5G-MAG Reference Tools** we:
     <td markdown="span" width="50%" align="center"><a href="./pages/v3c-immersive-platform/"><img src="./assets/images/Reference_Tools_V3C_Immersive_Platform.png"><a/></td>
   </tr>
   <tr>
-    <td markdown="span" width="50%" align="center">[Visit the project documentation](./pages/xr-media-integration-in-5g/){: .btn}</td>
-    <td markdown="span" width="50%" align="center">[Visit the project documentation](./pages/v3c-immersive-platform/){: .btn}</td>
+    <td markdown="span" width="50%" align="center">[Visit the project documentation](./pages/xr-media-integration-in-5g/){: .btn .btn-blue }</td>
+    <td markdown="span" width="50%" align="center">[Visit the project documentation](./pages/v3c-immersive-platform/){: .btn .btn-blue }</td>
   </tr>
     <td><br></td>
   <tr>
@@ -64,8 +64,8 @@ With the **5G-MAG Reference Tools** we:
     <td markdown="span" width="50%" align="center"><a href="./pages/ai-ml-evaluation-framework/"><img src="./assets/images/Reference_Tools_AIML_Evaluation_Framework.png"><a/></td>
   </tr>
   <tr>
-    <td markdown="span" width="50%" align="center">[Visit the project documentation](./pages/beyond-2d-evaluation-framework/){: .btn}</td>
-    <td markdown="span" width="50%" align="center">[Visit the project documentation](./pages/ai-ml-evaluation-framework/){: .btn}</td>
+    <td markdown="span" width="50%" align="center">[Visit the project documentation](./pages/beyond-2d-evaluation-framework/){: .btn .btn-blue }</td>
+    <td markdown="span" width="50%" align="center">[Visit the project documentation](./pages/ai-ml-evaluation-framework/){: .btn .btn-blue }</td>
   </tr>
     <td><br></td>
   <tr>
@@ -73,8 +73,8 @@ With the **5G-MAG Reference Tools** we:
     <td markdown="span" width="50%" align="center"><a href="./pages/dvbi-over-5g/"><img src="./assets/images/Reference_Tools_DVB_I_over_5G.png"><a/></td>
   </tr>
   <tr>
-    <td markdown="span" width="50%" align="center">[Visit the project documentation](./pages/multimedia-content-delivery/){: .btn}</td>
-    <td markdown="span" width="50%" align="center">[Visit the project documentation](./pages/dvbi-over-5g/){: .btn}</td>
+    <td markdown="span" width="50%" align="center">[Visit the project documentation](./pages/multimedia-content-delivery/){: .btn .btn-blue }</td>
+    <td markdown="span" width="50%" align="center">[Visit the project documentation](./pages/dvbi-over-5g/){: .btn .btn-blue }</td>
   </tr>
 </table>
       
