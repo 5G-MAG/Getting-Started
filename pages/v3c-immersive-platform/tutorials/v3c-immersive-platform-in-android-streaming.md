@@ -21,7 +21,6 @@ We are doing the installation and building the platform in Windows. The target d
 As indicated in the instructions in the [rt-v3c-unity-player](https://github.com/5G-MAG/rt-v3c-unity-player), we will use Unity 6000.0.25f1. We recommend downloding [Unity Hub](https://unity.com/download) and select the version of Unity to install, which can also be downloaded from here: [https://unity.com/releases/editor/whats-new/6000.0.51](https://unity.com/releases/editor/whats-new/6000.0.51)
 
 As indicated in the instructions in the [rt-v3c-decoder-plugin](https://github.com/5G-MAG/rt-v3c-decoder-plugin), we will also need:
-- Visual Studio Professional 2022 (17.14.4) - [Download from Microsoft](https://visualstudio.microsoft.com/downloads/)
 - CMake (for example 3.30.4) - [Download from Cmake](https://cmake.org/files/v3.30/cmake-3.30.4-windows-x86_64.msi)
 - Android Studio - [Download from Android](https://developer.android.com/studio) - Once downloaded make sure you install NDK r27c (27.2.12479018), and API 35.
 - Docker Desktop - [Download from Docker](https://docs.docker.com/desktop/setup/install/windows-install/) - this is needed to execute Docker in Windows.
@@ -29,6 +28,7 @@ As indicated in the instructions in the [rt-v3c-decoder-plugin](https://github.c
 ## Step 1: Clone the Unity Player Repository
 
 ```
+cd ~
 git clone https://github.com/5G-MAG/rt-v3c-unity-player  
 ```
 
@@ -39,6 +39,7 @@ Although not immerdiately used, this will create the directories where the decod
 Clone the repository:
 
 ```
+cd ~
 git clone --recurse-submodules https://github.com/5G-MAG/rt-v3c-decoder-plugin.git
 ```
 
@@ -52,15 +53,16 @@ cd ~/rt-v3c-decoder-plugin
 Add the additional dependency regarding avcodec libraries. For this, instructions are provided in [rt-common-shared](https://github.com/5G-MAG/rt-common-shared). We can use the Docker build instructions with Git Bash.
 
 ```
+cd ~
 git clone --recurse-submodules https://github.com/5G-MAG/rt-common-shared.git
 cd ~/rt-common-shared/avcodec-build/
 docker build -t ffmpeg-builder:27 --build-arg NDK_VERSION=27.2.12479018 .
 docker run -v /$(PWD)/build/ffmpeg/aarch64:/usr/build/ffmpeg --env TARGET_ABI=aarch64 --env ANDROID_API_LEVEL=35 ffmpeg-builder:27
 ```
 
-In Windows, the build artifacts can be found in your user folder `.\build\ffmpeg\aarch64`.
+In Windows, the build artifacts can be found in your user folder `rt-common-shared\avcodec-build\build\ffmpeg\aarch64`.
 
-As we are targeting an Android device, once compiled, the .so libraries from the build artifacts' lib directory can be included into the ./External/avcodec/7.1/Android/arm64-v8a/lib directory of the rt-v3c-decoder-plugin.
+As we are targeting an Android device, once compiled, we will have to manually copy the .so libraries from `rt-common-shared\avcodec-build\build\ffmpeg\aarch64\lib` into the `rt-v3c-decoder-plugin\External\avcodec\7.1\Android\arm64-v8a\lib` directory. Please create the folders under the rt-v3c-decoder plugin: `External\avcodec\7.1\Android\arm64-v8a\lib.
 
 Make sure the ndk is available in the Android directory.
 
@@ -107,3 +109,6 @@ We recommend using the simple express server available in [https://github.com/5G
 Just install the server following the instructions copy the content of the "on-server-data" inside the public folder of the DASH server. Make sure to unzip the packages containing the segments and mpd for each test sequence.
 
 Streaming can be started from the Unity player.
+
+## Troubleshooting
+If you experience any errors during the Unity player build. Try selecting the V3CDecoder tab on the top menu and click on "Check plugins" and "Check setting".
