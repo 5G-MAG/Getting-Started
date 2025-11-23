@@ -5,25 +5,23 @@ parent: UE Data Collection
 has_children: true
 nav_order: 3
 ---
-<img src="../../assets/images/Banner_Tutorials.png" /> 
 
-1. TOC
-{:toc}
+<img src="../../assets/images/Banner_UEDC.png" /> 
 
-# How to use the Reference Tools
+[Scope & Architectures](./scope.html){: .btn .btn-blue } [Project Roadmap](./projects.html){: .btn .btn-blue } [Features](./features.html){: .btn .btn-blue } [GitHub Repos](./repositories.html){: .btn .btn-github } [Releases](../releases.html#project-ue-data-collection-reporting--event-exposure){: .btn .btn-release } [Tutorials](./tutorials.html){: .btn .btn-blue } [Requirements](./requirements.html){: .btn .btn-blue }
 
-## Tutorials, Tests and Examples
+# Tutorials, Tests and Examples
 
-### [Tutorial - Docker Setup with Insomnia REST client](./tutorials/docker-with-insomnia.html)
+## [Tutorial - Docker Setup with Insomnia REST client](./tutorials/docker-with-insomnia.html)
 This tutorial shows how to setup the Data Collection Application Function (DCAF) with Docker and use its REST API with the Insomnia REST client.
 
-## Check our video library
+# Video Library
 Our [YouTube channel](https://www.youtube.com/@5GMAG) hosts some practical videos provided by developers on the use of the 5G-MAG Reference Tools.
 
 Some of the videos are also available here:
 
-### Docker Setup with Insomnia REST Client - UE Data Collection
+## Docker Setup with Insomnia REST Client - UE Data Collection
 <iframe width="560" height="315" src="https://www.youtube.com/embed/ZpktgeRCqNY?si=W3zvk6lQFiHz8sm4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-### UE Data Collection, Reporting and Event Exposure
+## UE Data Collection, Reporting and Event Exposure
 <iframe width="560" height="315" src="https://www.youtube.com/embed/FFnyln0YB1A?si=I69tPPT57K8AsAXa" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>

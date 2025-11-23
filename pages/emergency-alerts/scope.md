@@ -6,21 +6,23 @@ has_children: false
 nav_order: 0
 ---
 
-<img src="../../assets/images/Banner_Scope.png" /> 
+<img src="../../assets/images/Banner_5GBCEA.png" /> 
 
-1. TOC
-{:toc}
+[Scope & Architectures](./scope.html){: .btn .btn-blue } [Project Roadmap](./projects.html){: .btn .btn-blue } [Features](./features.html){: .btn .btn-blue } [GitHub Repos](./repositories.html){: .btn .btn-github } [Releases](../releases.html#project-5g-broadcast-emergency-alerts){: .btn .btn-release } [Tutorials](./tutorials.html){: .btn .btn-blue } [Requirements](./requirements.html){: .btn .btn-blue }
 
-This page contains information such as the specifications within the scope of the tools, high-level architectures that bring context to their applicability, features under implementation,...
+# Scope and Architectures
 
-# Specifications
-Visit the [Standards repository](https://5g-mag.github.io/Standards/) for details.
+This page contains information such as the specifications within the scope of the tools and high-level architectures that bring context to their applicability.
 
-# High-level architecture
+## Technical Resources and Specifications
+
+[Technical Resources](https://hub.5g-mag.com/Tech/pages/lte-based-5g-broadcast.html){: .btn .btn-blue } [Specifications](https://hub.5g-mag.com/Standards/pages/lte-based-5g-broadcast.html){: .btn .btn-blue }
+
+# High-level architectures
 
 ## 5G Broadcast extended with Emergency Alerts
 
 <img src="../../assets/images/projects/ew_diagram.png" style="width: 80%">
 
- * Check [here](./repositories.html) to access the repositories for **Emergency Alerts over 5G Broadcast**
- * Check [here](../3gpp-ran-and-core-platforms/repositories.html) to access the repositories for **3GPP RAN and Core Platforms**
+[Emergency Alerts over 5G Broadcast: Repositories](../emergency-alerts/repositories.html){: .btn .btn-5gms }
+[3GPP RAN and Core Platforms: Repositories](../3gpp-ran-and-core-platforms/repositories.html){: .btn .btn-3gpp }

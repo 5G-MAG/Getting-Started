@@ -9,26 +9,10 @@ nav_order: 9
 
 # Beyond 2D Evaluation Framework - Reference Tools Project
 
-* Check the [**Roadmap**](https://github.com/orgs/5G-MAG/projects/48/views/10) for Beyond 2D Evaluation Framework.
+## Project Overview
 
-## Overview
-<iframe width="60%" height="520" src="https://drive.google.com/file/d/1v9Z6qig8Sc3-fw3LP3XqsmZJ8KuE7zWa/preview"></iframe>
+[Scope & Architectures](./scope.html){: .btn .btn-blue } [Project Roadmap](./projects.html){: .btn .btn-blue } [Features](./features.html){: .btn .btn-blue } [GitHub Repos](./repositories.html){: .btn .btn-github } [Releases](../releases.html#project-beyond-2d-video-experiences){: .btn .btn-release } [Tutorials](./tutorials.html){: .btn .btn-blue } [Requirements](./requirements.html){: .btn .btn-blue }
 
-[DOWNLOAD THE PRESENTATION](https://drive.google.com/file/d/1v9Z6qig8Sc3-fw3LP3XqsmZJ8KuE7zWa/preview){: .btn} 
+<iframe width="60%" height="520" src="../../docs/Reference_Tools_Beyond2D_Video_Evaluation.pdf"></iframe>
 
-## Contents of this project
-
-### What is this project about?
-* Find [here](./scope.html) information about specifications, architecture, APIs, etc.
-
-### What is the roadmap and development status?
-* Find [here](./projects.html) information about the Projects.
- 
-### Where can I find the repositories and relevant resources?
-* Find [here](./repositories.html) information about the GitHub Repositories.
-
-### How can I use the tools?
-* Find [here](./tutorials.html) practical guidelines to use the tools.
-
-### What are the requirements to run the tools?
-* Find [here](./requirements.html) practical information about hardware and device support. 
+[Download the slidedeck of this Project](../../docs/Reference_Tools_Beyond2D_Video_Evaluation.pdf){: .btn .btn-blue }

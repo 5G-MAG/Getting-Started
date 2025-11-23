@@ -3,13 +3,12 @@ layout: default
 title: Repositories
 parent: 5G Media Streaming
 has_children: false
-nav_order: 2
+nav_order: 3
 ---
 
-<img src="../../assets/images/Banner_Repositories.png" /> 
+<img src="../../assets/images/Banner_5GMS.png" /> 
 
-1. TOC
-{:toc}
+[Scope & Architectures](./scope.html){: .btn .btn-blue } [Project Roadmap](./projects.html){: .btn .btn-blue } [Features](./features.html){: .btn .btn-blue } [GitHub Repos](./repositories.html){: .btn .btn-github } [Releases](../releases.html#project-5g-media-streaming){: .btn .btn-release } [Tutorials](./tutorials.html){: .btn .btn-blue } [Requirements](./requirements.html){: .btn .btn-blue }
 
 # Repositories
 
@@ -19,7 +18,9 @@ The following repositories are available. Please refer to the "Scope & Architect
 
 ---
 
-## 5GMS-Aware Application: [rt-5gms-application](https://github.com/5G-MAG/rt-5gms-application)
+## 5GMS-Aware Application
+[rt-5gms-application](https://github.com/5G-MAG/rt-5gms-application){: .btn .btn-5gms } [Releases](../releases.html#project-5g-media-streaming){: .btn .btn-release }
+
 This repository holds applications that can be used to test and demonstrate other 5G-MAG Reference Tools related to 5GMS.
 This is a list of the current applications available:
 
@@ -30,7 +31,9 @@ Additional information:
 * [Information and how to download, build, install and run](https://github.com/5G-MAG/rt-5gms-application#readme)
 * [Releases](https://github.com/5G-MAG/rt-5gms-application/releases)
 
-## 5GMS Media Session Handler: [rt-5gms-media-session-handler](https://github.com/5G-MAG/rt-5gms-media-session-handler)
+## 5GMS Media Session Handler
+[rt-5gms-media-session-handler](https://github.com/5G-MAG/rt-5gms-media-session-handler){: .btn .btn-5gms } [Releases](../releases.html#project-5g-media-streaming){: .btn .btn-release }
+
 The 5GMS Media Session Handler is a 5GMS Client component that forms part of the 5G Media Services framework as defined
 in ETSI TS 126.501.
 
@@ -38,7 +41,9 @@ Additional information:
 * [Information and how to download, build, install and run](https://github.com/5G-MAG/rt-5gms-media-session-handler#readme)
 * [Releases](https://github.com/5G-MAG/rt-5gms-media-session-handler/releases)
 
-## 5GMSd Media Stream Handler: [rt-5gms-media-stream-handler](https://github.com/5G-MAG/rt-5gms-media-stream-handler)
+## 5GMSd Media Stream Handler
+[rt-5gms-media-stream-handler](https://github.com/5G-MAG/rt-5gms-media-stream-handler){: .btn .btn-5gms } [Releases](../releases.html#project-5g-media-streaming){: .btn .btn-release }
+
 The 5GMS Media Stream Handler is a 5GMS client component that forms part of the 5G Media Services framework as defined in ETSI TS 126.501.
 
 Additional information:
@@ -46,21 +51,27 @@ Additional information:
 * [Releases](https://github.com/5G-MAG/rt-5gms-media-stream-handler/releases)
 * [Packages](https://github.com/orgs/5G-MAG/packages?repo_name=rt-5gms-media-stream-handler)
 
-## 5GMSd Application Function: [rt-5gms-application-function](https://github.com/5G-MAG/rt-5gms-application-function)
+## 5GMSd Application Function
+[rt-5gms-application-function](https://github.com/5G-MAG/rt-5gms-application-function){: .btn .btn-5gms } [Releases](../releases.html#project-5g-media-streaming){: .btn .btn-release }
+
 The 5GMS Application Function (AF) is a Network Function that forms part of the 5G Media Services framework as defined in ETSI TS 126.501.
 
 Additional information:
 * [Information and how to download, build, install and run](https://github.com/5G-MAG/rt-5gms-application-function#readme)
 * [Releases](https://github.com/5G-MAG/rt-5gms-application-function/releases)
 
-## 5GMSd Application Server: [rt-5gms-application-server](https://github.com/5G-MAG/rt-5gms-application-server)
+## 5GMSd Application Server
+[rt-5gms-application-server](https://github.com/5G-MAG/rt-5gms-application-server){: .btn .btn-5gms } [Releases](../releases.html#project-5g-media-streaming){: .btn .btn-release }
+
 The 5GMS Application Server (AS) is a Network Function that forms part of the 5G Media Streaming framework as defined in ETSI TS 126.501.
 
 Additional information:
 * [Information and how to download, build, install and run](https://github.com/5G-MAG/rt-5gms-application-server#readme)
 * [Releases](https://github.com/5G-MAG/rt-5gms-application-server/releases)
 
-## 5GMS Application Provider: [rt-5gms-application-provider](https://github.com/5G-MAG/rt-5gms-application-provider)
+## 5GMS Application Provider
+[rt-5gms-application-provider](https://github.com/5G-MAG/rt-5gms-application-provider){: .btn .btn-5gms } [Releases](../releases.html#project-5g-media-streaming){: .btn .btn-release }
+
 This repository provides multiple tools to interact with the 5GMS Application Function.
 
 The following tools are available:
@@ -77,7 +88,9 @@ Additional information:
 
 ## Auxiliary repositories
 
-### 5GMS Common Android Library: [rt-5gms-common-android-library](https://github.com/5G-MAG/rt-5gms-common-android-library)
+### 5GMS Common Android Library
+[rt-5gms-common-android-library](https://github.com/5G-MAG/rt-5gms-common-android-library){: .btn .btn-common } [Releases](../releases.html#project-5g-media-streaming){: .btn .btn-release }
+
 The 5GMS Common Library is an Android library that includes models and helper classes used within the different client-side Android applications such as the 5GMSd-Aware Application, 5GMSd Media Stream Handler and the 5GMSd Media Session Handler.
 
 Additional information:
@@ -85,7 +98,9 @@ Additional information:
 * [Releases](https://github.com/5G-MAG/rt-5gms-common-android-library/releases)
 * [Packages](https://github.com/orgs/5G-MAG/packages?repo_name=rt-5gms-common-android-library)
 
-### 5GMS Examples: [rt-5gms-examples](https://github.com/5G-MAG/rt-5gms-examples)
+### 5GMS Examples
+[rt-5gms-examples](https://github.com/5G-MAG/rt-5gms-examples){: .btn .btn-5gms } [Releases](../releases.html#project-5g-media-streaming){: .btn .btn-release }
+
 This repository holds example projects that make use of other 5G-MAG repositories or provide additional functionalities to test and implement new features for 5GMS.
 
 The following tools are available:

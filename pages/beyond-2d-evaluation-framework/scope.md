@@ -6,12 +6,14 @@ has_children: false
 nav_order: 0
 ---
 
-<img src="../../assets/images/Banner_Scope.png" /> 
+<img src="../../assets/images/Banner_B2D.png" /> 
 
-1. TOC
-{:toc}
+[Scope & Architectures](./scope.html){: .btn .btn-blue } [Project Roadmap](./projects.html){: .btn .btn-blue } [Features](./features.html){: .btn .btn-blue } [GitHub Repos](./repositories.html){: .btn .btn-github } [Releases](../releases.html#project-beyond-2d-video-experiences){: .btn .btn-release } [Tutorials](./tutorials.html){: .btn .btn-blue } [Requirements](./requirements.html){: .btn .btn-blue }
 
-This page contains information such as the specifications within the scope of the tools, high-level architectures that bring context to their applicability, features under implementation,...
+# Scope and Architectures
 
-# Specifications
-Visit the [Standards repository](https://5g-mag.github.io/Standards/pages/beyond2d.html) for more details on the specifications within the scope of the tools.
+This page contains information such as the specifications within the scope of the tools and high-level architectures that bring context to their applicability.
+
+## Technical Resources and Specifications
+
+[Technical Resources](https://hub.5g-mag.com/Tech/){: .btn .btn-blue } [Specifications](https://hub.5g-mag.com/Standards/){: .btn .btn-blue }

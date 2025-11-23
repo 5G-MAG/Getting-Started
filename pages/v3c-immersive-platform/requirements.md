@@ -5,16 +5,18 @@ parent: V3C Immersive Platform
 has_children: false
 nav_order: 4
 ---
-<img src="../../assets/images/Banner_Requirements.png" /> 
 
-1. TOC
-{:toc}
+<img src="../../assets/images/Banner_V3C_Platform.png" /> 
 
-# Android devices
+[Scope & Architectures](./scope.html){: .btn .btn-blue } [Project Roadmap](./projects.html){: .btn .btn-blue } [Features](./features.html){: .btn .btn-blue } [GitHub Repos](./repositories.html){: .btn .btn-github } [Releases](../releases.html#project-volumetric-video-experiences-with-mpeg-v3c){: .btn .btn-release } [Tutorials](./tutorials.html){: .btn .btn-blue } [Requirements](./requirements.html){: .btn .btn-blue }
+
+# Requirements
+
+## Android devices
 
 Please [open an issue](https://github.com/5G-MAG/Getting-Started/issues) to report support for new devices or problems with currently listed devices.
 
-## Device requirements
+### Device requirements
 
 The v3c player requires:
 - OpenGL ES 320
@@ -22,7 +24,7 @@ The v3c player requires:
 
 Devices with Qualcomm Adreno GPUs are known to work. 
 
-## Tested devices
+### Tested devices
 
 The following devices OS/firmware versions have been reported to work: 
 

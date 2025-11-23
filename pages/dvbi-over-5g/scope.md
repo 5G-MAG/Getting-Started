@@ -6,25 +6,27 @@ has_children: false
 nav_order: 0
 ---
 
-<img src="../../assets/images/Banner_Scope.png" /> 
+<img src="../../assets/images/Banner_DVBI.png" /> 
 
-1. TOC
-{:toc}
+[Scope & Architectures](./scope.html){: .btn .btn-blue } [Project Roadmap](./projects.html){: .btn .btn-blue } [Features](./features.html){: .btn .btn-blue } [GitHub Repos](./repositories.html){: .btn .btn-github } [Releases](../releases.html##project-dvb-i-services-over-5g-systems){: .btn .btn-release } [Tutorials](./tutorials.html){: .btn .btn-blue } [Requirements](./requirements.html){: .btn .btn-blue }
 
-This page contains information such as the specifications within the scope of the tools, high-level architectures that bring context to their applicability, features under implementation,...
+# Scope and Architectures
 
-# Specifications
+This page contains information such as the specifications within the scope of the tools and high-level architectures that bring context to their applicability.
 
-Visit the [Standards repository](https://5g-mag.github.io/Standards/) for more details on the specifications within the scope of the tools.
+## Technical Resources and Specifications
 
-# High-level architecture
+[Technical Resources](https://hub.5g-mag.com/Tech/pages/dvb-i-5g.html){: .btn .btn-blue } [Specifications](https://hub.5g-mag.com/Standards/pages/dvb-i-5g.html){: .btn .btn-blue }
+
+# High-level architectures
 
 ## DVB-I Services over 5G Systems: 5GMSd with 5G Broadcast
 
 <img src="../../assets/images/projects/dvb_diagram.png" style="width: 80%">
 
- * Check [here](./repositories.html) to access the repositories for **DVB-I Services over 5G Systems**
- * Check [here](../multimedia-content-delivery/repositories.html) to access the repositories for **Multimedia Content Delivery Protocols**
- * Check [here](../5g-media-streaming/repositories.html) to access the repositories for **5G Media Streaming**
- * Check [here](../lte-based-5g-broadcast/repositories.html) to access the repositories for **5G Broadcast**
- * Check [here](../common-tools/) to access the repositories for **Common Tools (Auxiliary tools common to various projects)**
+[5G Media Streaming: Repositories](../5g-media-streaming/repositories.html){: .btn .btn-5gms }
+[DVB-I Services: Repositories](../dvbi-over-5g/repositories.html){: .btn .btn-5gms }
+[5G Broadcast: Repositories](../lte-based-5g-broadcast/repositories.html){: .btn .btn-5gbc }
+[Multimedia content delivery protocols: Repositories](../multimedia-content-delivery/repositories.html){: .btn .btn-md }
+[3GPP RAN and Core Platforms: Repositories](../3gpp-ran-and-core-platforms/repositories.html){: .btn .btn-3gpp }
+[Common Tools: Repositories](../common-tools/){: .btn .btn-common }

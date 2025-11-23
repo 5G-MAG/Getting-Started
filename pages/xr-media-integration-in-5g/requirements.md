@@ -3,14 +3,14 @@ layout: default
 title: Requirements
 parent: XR with MPEG-I SD
 has_children: false
-nav_order: 4
+nav_order: 5
 ---
-<img src="../../assets/images/Banner_Requirements.png" /> 
 
-1. TOC
-{:toc}
+<img src="../../assets/images/Banner_XR.png" /> 
 
-Hardware / Platform requirements:
+[Scope & Architectures](./scope.html){: .btn .btn-blue } [Project Roadmap](./projects.html){: .btn .btn-blue } [Features](./features.html){: .btn .btn-blue } [GitHub Repos](./repositories.html){: .btn .btn-github } [Releases](../releases.htmll#project-xr-media-with-mpeg-i-scene-description){: .btn .btn-release } [Tutorials](./tutorials.html){: .btn .btn-blue } [Requirements](./requirements.html){: .btn .btn-blue }
+
+# Requiements
 
 ## Supported device types
 
@@ -20,18 +20,15 @@ See [the feature table](../under-development.html#xr-unity-player-features) for 
 
 To suggest support for other platforms, [open a new issue](https://github.com/5G-MAG/rt-xr-unity-player/issues). 
 
-
 ### XR head mounted display
 
 - [Meta Quest 3](https://jordijoangimenez.github.io/Getting-Started/pages/xr-media-integration-in-5g/tutorials/xr-player-metaquest3.html)
 - Android OpenXR Headsets supporting "Khronos Simple Controller Profile"
 
-
 ### XR phone
 
 - Android handeld devices (smartphones, tablets, ...) armv8 devices, Android API Level 24.
 - Features on Android depend on XR runtime specific extensions (eg. ARCore) 
-
 
 ### AR glasses
 
@@ -40,4 +37,3 @@ Not available.
 ### Thin AR glasses
 
 Not available.
-

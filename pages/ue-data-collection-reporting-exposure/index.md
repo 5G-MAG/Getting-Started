@@ -9,26 +9,10 @@ nav_order: 3
 
 # UE data collection, reporting and event exposure - Reference Tools Project
 
-* Check the [**Roadmap**](https://github.com/orgs/5G-MAG/projects/48/views/8) for UE data collection, reporting and event exposure.
+## Project Overview
 
-## Overview
-<iframe width="60%" height="520" src="https://drive.google.com/file/d/1U_hUtHC-kr9_Ydq-VeH-ESIeEeJh0xEd/preview"></iframe>
+[Scope & Architectures](./scope.html){: .btn .btn-blue } [Project Roadmap](./projects.html){: .btn .btn-blue } [Features](./features.html){: .btn .btn-blue } [GitHub Repos](./repositories.html){: .btn .btn-github } [Releases](../releases.html#project-ue-data-collection-reporting--event-exposure){: .btn .btn-release } [Tutorials](./tutorials.html){: .btn .btn-blue } [Requirements](./requirements.html){: .btn .btn-blue }
 
-[DOWNLOAD THE PRESENTATION](https://drive.google.com/file/d/1U_hUtHC-kr9_Ydq-VeH-ESIeEeJh0xEd/preview){: .btn} 
+<iframe width="60%" height="520" src="../../docs/Reference_Tools_UE_data_collection.pdf"></iframe>
 
-## Contents of this project
-
-### What is this project about?
-* Find [here](./scope.html) information about specifications, architecture, APIs, etc.
-
-### What is the roadmap and development status?
-* Find [here](./projects.html) information about the Projects.
- 
-### Where can I find the repositories and relevant resources?
-* Find [here](./repositories.html) information about the GitHub Repositories.
-
-### How can I use the tools?
-* Find [here](./tutorials.html) practical guidelines to use the tools.
-
-### What are the requirements to run the tools?
-* Find [here](./requirements.html) practical information about hardware and device support. 
+[Download the slidedeck of this Project](../../docs/Reference_Tools_UE_data_collection.pdf){: .btn .btn-blue }

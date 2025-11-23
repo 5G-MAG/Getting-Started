@@ -9,26 +9,10 @@ nav_order: 8
 
 # V3C Immersive Platform - Reference Tools Project
 
-* Check the [**Roadmap**](https://github.com/orgs/5G-MAG/projects/48/views/15) for the V3C Immersive Platform.
+## Project Overview
 
-## Overview
-<iframe width="60%" height="520" src="https://drive.google.com/file/d/14diIIl503hnVZhabz4B8Y25mCWvbYS3w/preview"></iframe>
+[Scope & Architectures](./scope.html){: .btn .btn-blue } [Project Roadmap](./projects.html){: .btn .btn-blue } [Features](./features.html){: .btn .btn-blue } [GitHub Repos](./repositories.html){: .btn .btn-github } [Releases](../releases.html#project-volumetric-video-experiences-with-mpeg-v3c){: .btn .btn-release } [Tutorials](./tutorials.html){: .btn .btn-blue } [Requirements](./requirements.html){: .btn .btn-blue }
 
-[DOWNLOAD THE PRESENTATION](https://drive.google.com/file/d/14diIIl503hnVZhabz4B8Y25mCWvbYS3w/preview){: .btn} 
+<iframe width="60%" height="520" src="../../docs/Reference_Tools_V3C_Immersive_Platform.pdf"></iframe>
 
-## Contents of this project
-
-### What is this project about?
-* Find [here](./scope.html) information about specifications, architecture, APIs, etc.
-
-### What is the roadmap and development status?
-* Find [here](./projects.html) information about the Projects.
- 
-### Where can I find the repositories and relevant resources?
-* Find [here](./repositories.html) information about the GitHub Repositories.
-
-### How can I use the tools?
-* Find [here](./tutorials.html) practical guidelines to use the tools.
-
-### What are the requirements to run the tools?
-* Find [here](./requirements.html) practical information about hardware and device support. 
+[Download the slidedeck of this Project](../../docs/Reference_Tools_V3C_Immersive_Platform.pdf){: .btn .btn-blue }

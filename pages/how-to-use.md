@@ -1,9 +1,11 @@
 ---
 layout: default
 title: How to use these pages
-parent: Home
+parent: Introduction
 nav_order: 0
 ---
+
+<img src="../assets/images/Banner_RT.png" /> 
 
 # How to use these pages
 

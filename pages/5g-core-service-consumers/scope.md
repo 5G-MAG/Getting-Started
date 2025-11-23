@@ -6,32 +6,37 @@ has_children: false
 nav_order: 0
 ---
 
-<img src="../../assets/images/Banner_Scope.png" /> 
+<img src="../../assets/images/Banner_5GC.png" /> 
 
-1. TOC
-{:toc}
+[Scope & Architectures](./scope.html){: .btn .btn-blue } [Project Roadmap](./projects.html){: .btn .btn-blue } [Features](./features.html){: .btn .btn-blue } [GitHub Repos](./repositories.html){: .btn .btn-github } [Releases](../releases.html#project-5g-core-service-consumers){: .btn .btn-release } [Tutorials](./tutorials.html){: .btn .btn-blue } [Requirements](./requirements.html){: .btn .btn-blue }
 
-This page contains information such as the specifications within the scope of the tools, high-level architectures that bring context to their applicability, features under implementation,...
+# Scope and Architectures
 
-# Specifications
-Visit the [Standards repository](https://5g-mag.github.io/Standards/pages/5g-core-service-consumers.html) for more details on the specifications within the scope of the tools.
+This page contains information such as the specifications within the scope of the tools and high-level architectures that bring context to their applicability.
+
+## Technical Resources and Specifications
+
+The 5GC service consumers are developed in relation to the requirements from other projects to use 5GC network functions. Please refer to the relevant projects for more information.
+
+[Specifications](https://hub.5g-mag.com/Standards/pages/5g-core-service-consumers.html){: .btn .btn-blue }
 
 # High-level architectures
 
-## 5G Media Streaming (5GMS) with 5GC Service Consumers
+## 5G Downlink Media Streaming (5GMSd) with 5GC Service Consumers
 
 <img src="../../assets/images/projects/5gms_5gc_diagram.png" style="width: 80%">
 
- * Check [here](../5g-media-streaming/repositories.html) to access the repositories for **5G Media Streaming**
- * Check [here](../3gpp-ran-and-core-platforms/repositories.html) to access the repositories for **3GPP RAN and Core Platforms**
- * Check [here](./repositories.html) to access the repositories for **5GC Service Consumers**
- * Check [here](../common-tools/) to access the repositories for **Common Tools (Auxiliary tools common to various projects)**
+[5G Media Streaming: Repositories](../5g-media-streaming/repositories.html){: .btn .btn-5gms }
+[5GC Service Consumers: Repositories](../5g-core-service-consumers/repositories.html){: .btn .btn-5gcsc }
+[3GPP RAN and Core Platforms: Repositories](../3gpp-ran-and-core-platforms/repositories.html){: .btn .btn-3gpp }
+[Common Tools: Repositories](../common-tools/){: .btn .btn-common }
 
 ## 5G Multicast Broadcast Services (MBS) with 5GC Service Consumers
 
 <img src="../../assets/images/projects/mbs_5gc_diagram.png" style="width: 80%">
 
- * Check [here](../5g-multicast-broadcast-services/repositories.html) to access the repositories for **5G Multicast Broadcast services**
- * Check [here](../3gpp-ran-and-core-platforms/repositories.html) to access the repositories for **3GPP RAN and Core Platforms**
- * Check [here](./repositories.html) to access the repositories for **5GC Service Consumers**
- * Check [here](../common-tools/) to access the repositories for **Common Tools (Auxiliary tools common to various projects)**
+[5G Multicast Broadcast Services: Repositories](../5g-multicast-broadcast-services/repositories.html){: .btn .btn-5mbs }
+[Multimedia content delivery protocols: Repositories](../multimedia-content-delivery/repositories.html){: .btn .btn-md }
+[5GC Service Consumers: Repositories](../5g-core-service-consumers/repositories.html){: .btn .btn-5gcsc }
+[3GPP RAN and Core Platforms: Repositories](../3gpp-ran-and-core-platforms/repositories.html){: .btn .btn-3gpp }
+[Common Tools: Repositories](../common-tools/){: .btn .btn-common }

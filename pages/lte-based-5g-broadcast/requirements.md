@@ -3,15 +3,16 @@ layout: default
 title: Requirements
 parent: 5G Broadcast - TV/Radio
 has_children: false
-nav_order: 4
+nav_order: 5
 ---
-<img src="../../assets/images/Banner_Requirements.png" /> 
 
-1. TOC
-{:toc}
+<img src="../../assets/images/Banner_5GBCTVR.png" /> 
 
-# Hardware requirements
+[Scope & Architectures](./scope.html){: .btn .btn-blue } [Project Roadmap](./projects.html){: .btn .btn-blue } [Features](./features.html){: .btn .btn-blue } [GitHub Repos](./repositories.html){: .btn .btn-github } [Releases](../releases.html#project-5g-broadcast-tv-and-radio-hybrid-services){: .btn .btn-release } [Tutorials](./tutorials.html){: .btn .btn-blue } [Requirements](./requirements.html){: .btn .btn-blue }
 
+# Requirements
+
+## Hardware requirements
 It is hard to define system requirements because these depend e.g. on bandwidth (e.g., 5, 8, 10 MHz), modulation coding
 scheme and other parameters. Generally, a CPU with 4 cores and 8 threads, 16 GB RAM and - in case a SDR and not just
 sample files are used - an USB 3.0 port is necessary. Furthermore, HDMI, Wifi, LAN and sufficient SSD space (for sample
