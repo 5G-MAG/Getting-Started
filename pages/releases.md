@@ -15,7 +15,7 @@ nav_order: 2
 
 ## Project: 5G Media Streaming
 
-[Project Documentation](./pages/5g-media-streaming/){: .btn .btn-blue } [Project Roadmap](https://github.com/orgs/5G-MAG/projects/48/views/6){: .btn .btn-blue } 
+[Project Documentation](./5g-media-streaming/){: .btn .btn-blue } [Project Roadmap](https://github.com/orgs/5G-MAG/projects/48/views/6){: .btn .btn-blue } 
 
 ### Latest Releases
 
@@ -36,7 +36,7 @@ nav_order: 2
 
 ## Project: 5G Core Service Consumers
 
-[Project Documentation](./pages/5g-core-service-consumers/){: .btn .btn-blue } [Project Roadmap](https://github.com/orgs/5G-MAG/projects/48/views/17){: .btn .btn-blue }
+[Project Documentation](./5g-core-service-consumers/){: .btn .btn-blue } [Project Roadmap](https://github.com/orgs/5G-MAG/projects/48/views/17){: .btn .btn-blue }
 
 ### Latest Releases
 
@@ -50,7 +50,7 @@ nav_order: 2
 
 ## Project: UE Data Collection, Reporting & Event Exposure
 
-[Project Documentation](./pages/ue-data-collection-reporting-exposure/){: .btn .btn-blue } [Project Roadmap](https://github.com/orgs/5G-MAG/projects/48/views/8){: .btn .btn-blue }
+[Project Documentation](./ue-data-collection-reporting-exposure/){: .btn .btn-blue } [Project Roadmap](https://github.com/orgs/5G-MAG/projects/48/views/8){: .btn .btn-blue }
 
 ### Latest Releases
 
@@ -64,7 +64,7 @@ nav_order: 2
 
 ## Project: 5G Broadcast: TV and Radio Hybrid Services
 
-[Project Documentation](./pages/lte-based-5g-broadcast/){: .btn .btn-blue } [Project Roadmap](https://github.com/orgs/5G-MAG/projects/48/views/7){: .btn .btn-blue }
+[Project Documentation](./lte-based-5g-broadcast/){: .btn .btn-blue } [Project Roadmap](https://github.com/orgs/5G-MAG/projects/48/views/7){: .btn .btn-blue }
 
 ### Latest Releases
 
@@ -84,7 +84,7 @@ nav_order: 2
 
 ## Project: 5G Broadcast: Emergency Alerts
 
-[Project Documentation](./pages/emergency-alerts/){: .btn .btn-blue } [Project Roadmap](https://github.com/orgs/5G-MAG/projects/48/views/12){: .btn .btn-blue }
+[Project Documentation](./emergency-alerts/){: .btn .btn-blue } [Project Roadmap](https://github.com/orgs/5G-MAG/projects/48/views/12){: .btn .btn-blue }
 
 ### Latest Releases
 
@@ -98,7 +98,7 @@ nav_order: 2
 
 ## Project: 5G Multicast Broadcast Services
 
-[Project Documentation](./pages/5g-multicast-broadcast-services/){: .btn .btn-blue } [Project Roadmap](https://github.com/orgs/5G-MAG/projects/48/views/13){: .btn .btn-blue }
+[Project Documentation](./5g-multicast-broadcast-services/){: .btn .btn-blue } [Project Roadmap](https://github.com/orgs/5G-MAG/projects/48/views/13){: .btn .btn-blue }
 
 ### Latest Releases
 
@@ -115,7 +115,7 @@ nav_order: 2
 
 ## Project: XR Media with MPEG-I Scene Description
 
-[Project Documentation](./pages/xr-media-integration-in-5g/){: .btn .btn-blue } [Project Roadmap](https://github.com/orgs/5G-MAG/projects/48/views/16){: .btn .btn-blue }
+[Project Documentation](./xr-media-integration-in-5g/){: .btn .btn-blue } [Project Roadmap](https://github.com/orgs/5G-MAG/projects/48/views/16){: .btn .btn-blue }
 
 ### Latest Releases
 
@@ -131,7 +131,7 @@ nav_order: 2
 
 ## Project: Volumetric Video Experiences with MPEG V3C
 
-[Project Documentation](./pages/v3c-immersive-platform/){: .btn .btn-blue } [Project Roadmap](https://github.com/orgs/5G-MAG/projects/48/views/15){: .btn .btn-blue }
+[Project Documentation](./v3c-immersive-platform/){: .btn .btn-blue } [Project Roadmap](https://github.com/orgs/5G-MAG/projects/48/views/15){: .btn .btn-blue }
 
 ### Latest Releases
 
@@ -147,7 +147,7 @@ nav_order: 2
 
 ## Project: Beyond 2D Video Experiences
 
-[Project Documentation](./pages/beyond-2d-evaluation-framework/){: .btn .btn-blue } [Project Roadmap](https://github.com/orgs/5G-MAG/projects/48/views/10){: .btn .btn-blue }
+[Project Documentation](./beyond-2d-evaluation-framework/){: .btn .btn-blue } [Project Roadmap](https://github.com/orgs/5G-MAG/projects/48/views/10){: .btn .btn-blue }
 
 ### Latest Releases
 
@@ -161,7 +161,7 @@ nav_order: 2
 
 ## Project: AI/ML in Mobile Media Services
 
-[Project Documentation](./pages/ai-ml-evaluation-framework/){: .btn .btn-blue } [Project Roadmap](https://github.com/orgs/5G-MAG/projects/48/views/9){: .btn .btn-blue }
+[Project Documentation](./ai-ml-evaluation-framework/){: .btn .btn-blue } [Project Roadmap](https://github.com/orgs/5G-MAG/projects/48/views/9){: .btn .btn-blue }
 
 ### Latest Releases
 
@@ -175,7 +175,7 @@ nav_order: 2
 
 ## Project: Multimedia Content Delivery Protocols
 
-[Project Documentation](./pages/multimedia-content-delivery/){: .btn .btn-blue } [Project Roadmap](https://github.com/orgs/5G-MAG/projects/48/views/14){: .btn .btn-blue }
+[Project Documentation](./multimedia-content-delivery/){: .btn .btn-blue } [Project Roadmap](https://github.com/orgs/5G-MAG/projects/48/views/14){: .btn .btn-blue }
 
 ### Latest Releases
 
@@ -189,7 +189,7 @@ nav_order: 2
 
 ## Project: DVB-I Services over 5G Systems
 
-[Project Documentation](./pages/dvbi-over-5g/){: .btn .btn-blue } [Project Roadmap](https://github.com/orgs/5G-MAG/projects/48/views/11){: .btn .btn-blue }
+[Project Documentation](./dvbi-over-5g/){: .btn .btn-blue } [Project Roadmap](https://github.com/orgs/5G-MAG/projects/48/views/11){: .btn .btn-blue }
 
 ---
 
