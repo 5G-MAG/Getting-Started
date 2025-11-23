@@ -1,18 +1,18 @@
 ---
 layout: default
-title: 5GC Service Consumers
-has_children: true
+title: Features
+parent: 5GC Service Consumers
+has_children: false
 nav_order: 2
 ---
 
 <img src="../../assets/images/Banner_5GC.png" /> 
 
-# 5G Core Service Consumers - Reference Tools Project
-
-## Project Overview
-
 [Scope & Architectures](./scope.html){: .btn .btn-blue } [Project Roadmap](./projects.html){: .btn .btn-blue } [Features](./features.html){: .btn .btn-blue } [GitHub Repos](./repositories.html){: .btn .btn-github } [Releases](../releases.html#project-5g-core-service-consumers){: .btn .btn-release } [Tutorials](./tutorials.html){: .btn .btn-blue } [Requirements](./requirements.html){: .btn .btn-blue }
 
-<iframe width="60%" height="520" src="../../docs/Reference_Tools_5GC_Service_Consumers.pdf"></iframe>
+# Features under implementation
 
-[Download the slidedeck of this Project](../../docs/Reference_Tools_5GC_Service_Consumers.pdf){: .btn .btn-blue }
+The following libraries are available:
+* **libscbsf** - Binding Support Function (BSF) service consumer library
+* **libscpcf** - Policy Control Function (PCF) service consumer library
+* **libscmbsmf** - Multicast/Broadcast Session Management Function (MB-SMF) service consumer library

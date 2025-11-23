@@ -6,21 +6,23 @@ has_children: false
 nav_order: 0
 ---
 
-<img src="../../assets/images/Banner_Scope.png" /> 
+<img src="../../assets/images/Banner_V3C_Platform.png" /> 
 
-1. TOC
-{:toc}
+[Scope & Architectures](./scope.html){: .btn .btn-blue } [Project Roadmap](./projects.html){: .btn .btn-blue } [Features](./features.html){: .btn .btn-blue } [GitHub Repos](./repositories.html){: .btn .btn-github } [Releases](../releases.html#project-volumetric-video-experiences-with-mpeg-v3c){: .btn .btn-release } [Tutorials](./tutorials.html){: .btn .btn-blue } [Requirements](./requirements.html){: .btn .btn-blue }
 
-This page contains information such as the specifications within the scope of the tools, high-level architectures that bring context to their applicability, features under implementation,...
+# Scope and Architectures
 
-# Specifications
-Visit the [Standards repository](https://5g-mag.github.io/Standards/pages/volumetric-video.html) for more details on the specifications within the scope of the tools.
+This page contains information such as the specifications within the scope of the tools and high-level architectures that bring context to their applicability.
 
-# High-level architecture
+## Technical Resources and Specifications
+
+[Technical Resources](https://hub.5g-mag.com/Tech/pages/volumetric-video.html){: .btn .btn-blue } [Specifications](https://hub.5g-mag.com/Standards/pages/volumetric-video.html){: .btn .btn-blue }
+
+# High-level architectures
 
 ## V3C Immersive Platform
 
 <img src="../../assets/images/projects/v3c_diagram.png" style="width: 80%">
 
- * Check [here](./repositories.html) to access the repositories for **V3C Immersive Platform**
- * Check [here](../common-tools/) to access the repositories for **Common Tools (Auxiliary tools common to various projects)**
+[V3C Immersive Platform: Repositories](../3gpp-ran-and-core-platforms/repositories.html){: .btn .btn-v3c }
+[Common Tools: Repositories](../common-tools/){: .btn .btn-common }

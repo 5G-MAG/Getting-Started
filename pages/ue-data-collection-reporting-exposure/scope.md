@@ -6,36 +6,39 @@ has_children: false
 nav_order: 0
 ---
 
-<img src="../../assets/images/Banner_Scope.png" /> 
+<img src="../../assets/images/Banner_UEDC.png" /> 
 
-1. TOC
-{:toc}
+[Scope & Architectures](./scope.html){: .btn .btn-blue } [Project Roadmap](./projects.html){: .btn .btn-blue } [Features](./features.html){: .btn .btn-blue } [GitHub Repos](./repositories.html){: .btn .btn-github } [Releases](../releases.html#project-ue-data-collection-reporting--event-exposure){: .btn .btn-release } [Tutorials](./tutorials.html){: .btn .btn-blue } [Requirements](./requirements.html){: .btn .btn-blue }
 
-This page contains information such as the specifications within the scope of the tools, high-level architectures that bring context to their applicability, features under implementation,...
+# Scope and Architectures
 
-# Specifications
-Visit the [Standards repository](https://5g-mag.github.io/Standards/pages/data-collection-event-exposure.html) for more details on the specifications within the scope of the tools.
+This page contains information such as the specifications within the scope of the tools and high-level architectures that bring context to their applicability.
 
-# High-level architecture
+## Technical Resources and Specifications
+
+[Technical Resources](https://hub.5g-mag.com/Tech/pages/data-collection-event-exposure.html){: .btn .btn-blue } [Specifications](https://hub.5g-mag.com/Standards/pages/data-collection-event-exposure.html){: .btn .btn-blue }
+
+# High-level architectures
 
 ## Generic UE Data Collection, Reporting and Event Exposure
 
 <img src="../../assets/images/projects/uedc_diagram.png" style="width: 80%">
 
- * Check [here](./repositories.html) to access the repositories for **UE Data Collection, Reporting and Event Exposure**
- * Check [here](../3gpp-ran-and-core-platforms/repositories.html) to access the repositories for **3GPP RAN and Core Platforms**
+[UE Data Collection, Reporting and Event Exposure: Repositories](../ue-data-collection-reporting-exposure/repositories.html){: .btn .btn-uedc }
+[3GPP RAN and Core Platforms: Repositories](../3gpp-ran-and-core-platforms/repositories.html){: .btn .btn-3gpp }
 
 ## 5G Downlink Media Streaming (5GMSd) with UE Data Collection Reporting and Event Exposure
 
 <img src="../../assets/images/projects/5gms_uedc_diagram.png" style="width: 80%">
 
- * Check [here](./repositories.html) to access the repositories for **UE Data Collection, Reporting and Event Exposure**
- * Check [here](../3gpp-ran-and-core-platforms/repositories.html) to access the repositories for **3GPP RAN and Core Platforms**
- * Check [here](../5g-media-streaming/repositories.html) the repositories for **5G Media Streaming**
+[5G Media Streaming: Repositories](../5g-media-streaming/repositories.html){: .btn .btn-5gms }
+[UE Data Collection, Reporting and Event Exposure: Repositories](../ue-data-collection-reporting-exposure/repositories.html){: .btn .btn-uedc }
+[3GPP RAN and Core Platforms: Repositories](../3gpp-ran-and-core-platforms/repositories.html){: .btn .btn-3gpp }
+[Common Tools: Repositories](../common-tools/){: .btn .btn-common }
 
 # Docker deployment support
 Docker-Compose setups are provided to run the Data Collection AF in Docker container environments.
 
 <img src="../../assets/images/dcaf/uedc_docker_1.png" style="width: 80%">
 
- * Check [here](./repositories.html) the relevant repository to access the Docker containers for **UE Data Collection, Reporting and Event Exposure**
+[UE Data Collection, Reporting and Event Exposure: Repositories](../ue-data-collection-reporting-exposure/repositories.html){: .btn .btn-uedc }

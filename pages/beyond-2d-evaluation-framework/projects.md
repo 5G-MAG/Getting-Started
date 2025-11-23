@@ -5,11 +5,12 @@ parent: Beyond 2D Evaluation
 has_children: false
 nav_order: 1
 ---
-<img src="../../assets/images/Banner_Roadmap.png" /> 
 
-1. TOC
-{:toc}
+<img src="../../assets/images/Banner_B2D.png" /> 
 
-# Roadmap
+[Scope & Architectures](./scope.html){: .btn .btn-blue } [Project Roadmap](./projects.html){: .btn .btn-blue } [Features](./features.html){: .btn .btn-blue } [GitHub Repos](./repositories.html){: .btn .btn-github } [Releases](../releases.html#project-beyond-2d-video-experiences){: .btn .btn-release } [Tutorials](./tutorials.html){: .btn .btn-blue } [Requirements](./requirements.html){: .btn .btn-blue }
 
-* Check the [**Roadmap**](https://github.com/orgs/5G-MAG/projects/48/views/10) for Beyond 2D Evaluation Framework.
+# Projects & Roadmap
+
+## General Project Roadmap
+[Kanban board: Roadmap](https://github.com/orgs/5G-MAG/projects/48/views/10){: .btn .btn-blue }

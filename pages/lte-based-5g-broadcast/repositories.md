@@ -3,12 +3,12 @@ layout: default
 title: Repositories
 parent: 5G Broadcast - TV/Radio
 has_children: false
-nav_order: 2
+nav_order: 3
 ---
-<img src="../../assets/images/Banner_Repositories.png" /> 
 
-1. TOC
-{:toc}
+<img src="../../assets/images/Banner_5GBCTVR.png" /> 
+
+[Scope & Architectures](./scope.html){: .btn .btn-blue } [Project Roadmap](./projects.html){: .btn .btn-blue } [Features](./features.html){: .btn .btn-blue } [GitHub Repos](./repositories.html){: .btn .btn-github } [Releases](../releases.html#project-5g-broadcast-tv-and-radio-hybrid-services){: .btn .btn-release } [Tutorials](./tutorials.html){: .btn .btn-blue } [Requirements](./requirements.html){: .btn .btn-blue }
 
 # Repositories
 
@@ -18,21 +18,27 @@ The following repositories are available. Please refer to the "Scope & Architect
 
 ---
 
-## 5G Broadcast Transmitter for MBMS-dedicated cells and basic MBMS gateway: [rt-mbms-tx](https://github.com/5G-MAG/rt-mbms-tx)
+## 5G Broadcast Transmitter for MBMS-dedicated cells and basic MBMS gateway
+[rt-mbms-tx](https://github.com/5G-MAG/rt-mbms-tx){: .btn .btn-5gbc } [Releases](../releases.html#project-5g-broadcast-tv-and-radio-hybrid-services){: .btn .btn-release }
+
 This repository holds a standalone 5G Broadcast transmitter.
 
 Additional information:
 * [Information and how to download, build, install and run](https://github.com/5G-MAG/rt-mbms-tx#readme)
 * [Releases](https://github.com/5G-MAG/rt-mbms-tx/releases)
 
-## 5G Broadcast Transmitter for QRD (Qualcomm Reference Design) and CRD (Commercial Research Device): [rt-mbms-tx-for-qrd-and-crd](https://github.com/5G-MAG/rt-mbms-tx-for-qrd-and-crd)
+## 5G Broadcast Transmitter for QRD (Qualcomm Reference Design) and CRD (Commercial Research Device)
+[rt-mbms-tx-for-qrd-and-crd](https://github.com/5G-MAG/rt-mbms-tx-for-qrd-and-crd){: .btn .btn-5gbc } [Releases](../releases.html#project-5g-broadcast-tv-and-radio-hybrid-services){: .btn .btn-release }
+
 This repository holds an extension of an MBMS-enabled eNodeB tailored to operate as a 5G Broadcast transmitter compatible with Qualcomm Reference Design (QRD) and QRC devices.
 
 Additional information:
 * [Information and how to download, build, install and run](https://github.com/5G-MAG/rt-mbms-tx-for-qrd-and-crd#readme)
 * [Releases](https://github.com/5G-MAG/rt-mbms-tx-for-qrd-and-crd/releases)
 
-## MBMS Modem: [rt-mbms-modem](https://github.com/5G-MAG/rt-mbms-modem)
+## MBMS Modem
+[rt-mbms-modem](https://github.com/5G-MAG/rt-mbms-modem){: .btn .btn-5gbc } [Releases](../releases.html#project-5g-broadcast-tv-and-radio-hybrid-services){: .btn .btn-release }
+
 This repository holds an MBMS Modem, which main task is to convert a 5G BC input signal (received either as live I/Q raw data from the SDR or as prerecorded SDR sample file) to multicast IP packets on the output.
 
 Additional information:
@@ -40,7 +46,9 @@ Additional information:
 * [Releases](https://github.com/5G-MAG/rt-mbms-modem/releases)
 * [Packages](https://github.com/5G-MAG/rt-mbms-modem/tree/development/modem)
 
-## MBMS Middleware: [rt-mbms-mw](https://github.com/5G-MAG/rt-mbms-mw)
+## MBMS Middleware
+[rt-mbms-mw](https://github.com/5G-MAG/rt-mbms-mw){: .btn .btn-5gbc } [Releases](../releases.html#project-5g-broadcast-tv-and-radio-hybrid-services){: .btn .btn-release }
+
 This repository holds an MBMS Middleware, which main task is to provide the best available content to the (internal or external) application at any time. If available, it combines content from (mobile) broadband, WiFi with the 5G broadcast content from the MBMS Modem using an advanced decision logic. The content is presented to the applications in the form of an intelligent edge cache ready for pickup via http(s).
 
 Additional information:
@@ -48,7 +56,9 @@ Additional information:
 * [Releases](https://github.com/5G-MAG/rt-mbms-mw/releases)
 * [Docker](https://github.com/5G-MAG/rt-mbms-mw/tree/development/middleware)
 
-## MBMS Middleware for Android: [rt-mbms-mw-android](https://github.com/5G-MAG/rt-mbms-mw-android)
+## MBMS Middleware for Android
+[rt-mbms-mw-android](https://github.com/5G-MAG/rt-mbms-mw-android){: .btn .btn-5gbc } [Releases](../releases.html#project-5g-broadcast-tv-and-radio-hybrid-services){: .btn .btn-release }
+
 This repository holds an implementation of the MBMS Middleware for Android.
 
 Additional information:
@@ -59,7 +69,9 @@ Additional information:
 
 ## Auxiliary repositories
 
-### MBMS Web User Interface: [rt-mbms-wui](https://github.com/5G-MAG/rt-wui)
+### MBMS Web User Interface
+[rt-mbms-wui](https://github.com/5G-MAG/rt-wui){: .btn .btn-5gbc } [Releases](../releases.html#project-5g-broadcast-tv-and-radio-hybrid-services){: .btn .btn-release }
+
 The 5G-MAG Reference Tools Webinterface (rt-wui) provides an optional graphical webinterface with a control display for each 5G-MAG Reference Tools process (MBMS Modem, MBMS Middleware). Its main purpose is to collect and display useful information from the MBMS Modem and the MBMS Middleware. The webinterface provides basic browser-based HLS playback of the HLS manifest and segments provided by the MBMS Middleare using hls.js.
 
 Additional information:
@@ -67,7 +79,9 @@ Additional information:
 * [Releases](https://github.com/5G-MAG/rt-wui/releases)
 * [Docker](https://github.com/5G-MAG/rt-wui/tree/development/wui)
 
-### MBMS Examples: [rt-mbms-examples](https://github.com/5G-MAG/rt-mbms-examples)
+### MBMS Examples
+[rt-mbms-examples](https://github.com/5G-MAG/rt-mbms-examples){: .btn .btn-5gbc } [Releases](../releases.html#project-5g-broadcast-tv-and-radio-hybrid-services){: .btn .btn-release }
+
 This repository holds example projects that make use of other 5G-MAG repositories or provide additional functionalities to test and implement new features for MBMS.
 
 The following tools are available:

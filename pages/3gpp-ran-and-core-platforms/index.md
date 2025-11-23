@@ -8,23 +8,11 @@ nav_order: 13
 <img src="../../assets/images/Banner_3GPP_Platforms.png" /> 
 
 # 3GPP RAN and Core Platforms
-<iframe width="60%" height="520" src="https://drive.google.com/file/d/1fLY8WCmGNQiA9BI4eva6mwAAB5ZNufrY/preview"></iframe>
 
-[DOWNLOAD THE PRESENTATION](https://drive.google.com/file/d/1fLY8WCmGNQiA9BI4eva6mwAAB5ZNufrY/preview){: .btn}
+## Overview
 
-## Contents of this project
+[Scope & Architectures](./scope.html){: .btn .btn-blue } [GitHub Repos](./repositories.html){: .btn .btn-github } [Tutorials](./tutorials.html){: .btn .btn-blue }
 
-### What is this project about?
-* Find [here](./scope.html) information about specifications, architecture, APIs, etc.
+<iframe width="60%" height="520" src="../../docs/Reference_Tools_3GPP_Platforms.pdf"></iframe>
 
-### What is the roadmap and development status?
-* Find [here](./projects.html) information about the Projects.
- 
-### Where can I find the repositories and relevant resources?
-* Find [here](./repositories.html) information about the GitHub Repositories.
-
-### How can I use the tools?
-* Find [here](./tutorials.html) practical guidelines to use the tools.
-
-### What are the requirements to run the tools?
-* Find [here](./requirements.html) practical information about hardware and device support. 
+[Download the slidedeck of this Project](../../docs/Reference_Tools_3GPP_Platforms.pdf){: .btn .btn-blue }

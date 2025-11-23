@@ -7,18 +7,18 @@ nav_order: 14
 
 <img src="../../assets/images/Banner_CommonTools.png" /> 
 
-1. TOC
-{:toc}
+[Releases](../releases.html#auxiliary-tools-common-to-various-projects){: .btn .btn-release }
 
-# Information and Repositories
+# Common Tools: Information and Repositories
 
-The following repository contains a series of auxiliary tools that may be used by different 5G-MAG Reference Tools projects.  Please refer to the "Scope & Architecture" sections of the different projects for more context.
+The following repositories are available. Please refer to the "Scope & Architecture" sections of the different projects for more context. Please refer to the "Scope & Architecture" sections of the different projects for more context.
 
 <img src="../../assets/images/projects/common_tools.png" style="width: 80%">
 
 ---
 
-## Auxiliary tools common to various projects: [rt-common-shared](https://github.com/5G-MAG/rt-common-shared)
+## Auxiliary tools common to various projects
+[rt-common-shared](https://github.com/5G-MAG/rt-common-shared){: .btn .btn-common } [Releases](../releases.html#auxiliary-tools-common-to-various-projects){: .btn .btn-release }
 
 The following tools are available:
 
