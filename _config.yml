@@ -21,7 +21,7 @@
 title: 5G-MAG - Reference Tools
 email: info@5g-mag.com
 description: >- # this means to ignore newlines until "baseurl:"
-  5G-MAG Reference Tools
+  5G-MAG
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://www.5g-mag.com" # the base hostname & protocol for your site, e.g. http://example.com
 logo: "/assets/images/5g-mag-reference-tools.png"
@@ -31,7 +31,7 @@ ga_tracking_anonymize_ip: true # Use GDPR compliant Google Analytics settings
 
 aux_links:
   "5G-MAG Reference Tools in GitHub":
-    - "https://5g-mag.github.io/Getting-Started"
+    - "https://hub.5g-mag.com/Getting-Started"
   "5G-MAG Website":
     - "https://www.5g-mag.com"
 
@@ -68,7 +68,7 @@ callouts:
 back_to_top: true
 back_to_top_text: "Back to top"
 
-footer_content: "Copyright &copy; 5G-MAG MEDIA ACTION GROUP"
+footer_content: "Copyright &copy; 5G-MAG - The Media Connectivity Association"
 
 # Footer last edited timestamp
 last_edit_timestamp: true # show or hide edit time - page must have `last_modified_date` defined in the frontmatter
@@ -80,18 +80,18 @@ plugins:
 
 # External navigation links
 nav_external_links:
-  - title: 5G-MAG - Technology
-    url: https://5g-mag.github.io/Tech
+  - title: 5G-MAG - Tech
+    url: https://hub.5g-mag.com/Tech
     hide_icon: false # set to true to hide the external link icon - defaults to false
     opens_in_new_tab: false # set to true to open this link in a new tab - defaults to false
     
   - title: 5G-MAG - Standards
-    url: https://5g-mag.github.io/Standards
+    url: https://hub.5g-mag.com/Standards
     hide_icon: false # set to true to hide the external link icon - defaults to false
     opens_in_new_tab: false # set to true to open this link in a new tab - defaults to false
 
   - title: 5G-MAG - Reference Tools
-    url: https://5g-mag.github.io/Getting-Started
+    url: https://hub.5g-mag.com/Getting-Started
     hide_icon: false # set to true to hide the external link icon - defaults to false
     opens_in_new_tab: false # set to true to open this link in a new tab - defaults to false
   
