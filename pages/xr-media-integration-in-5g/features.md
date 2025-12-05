@@ -12,12 +12,12 @@ nav_order: 2
 
 # Features 
 
-The MPEG-I Scene Description reference architecture and features are described in the Technical Resources. This page describes those implemented in the 5G-MAG Reference Tools.
+The **MPEG-I Scene Description** reference architecture and features are described in the Technical Resources. This page describes those implemented in the 5G-MAG Reference Tools.
 
-[Technical Resources](../../Tech/xr/mpeg-i-scene-description.html){: .btn .btn-blue }
+[Technical Resources](../../../Tech/xr/mpeg-i-scene-description.html){: .btn .btn-blue }
 
 
-## XR Unity Player features
+## Features implemented in the XR Unity Player
 
 The XR Player takes 3D scenes in glTF format, supporting extensions that enable extended reality use cases. 
 These extensions enable features such as XR anchoring, interactivity behaviors, and media pipelines.
@@ -27,7 +27,7 @@ These extensions enable features such as XR anchoring, interactivity behaviors, 
 
 ### XR Anchoring
 
-The XR Player supports XR anchoring using the `MPEG_anchor` glTF extension which enables anchoring nodes and scenes to features (*Trackable*) tracked by the XR device. In augmented reality applications, anchored nodes are composited with the XR device's environment. 
+The XR Player supports XR anchoring using the <span style="color:#FF5733;">some *blue* text</span> **`MPEG_anchor`** glTF extension which enables anchoring nodes and scenes to features (*Trackable*) tracked by the XR device. In augmented reality applications, anchored nodes are composited with the XR device's environment. 
 
 The XR player leverages Unity's ARFoundation to support both handled mobile devices such as smartphones and head mounted devices.
 
