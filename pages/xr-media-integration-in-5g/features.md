@@ -11,6 +11,12 @@ nav_order: 2
 [Scope & Architectures](./scope.html){: .btn .btn-blue } [Project Roadmap](./projects.html){: .btn .btn-blue } [Features](./features.html){: .btn .btn-blue } [GitHub Repos](./repositories.html){: .btn .btn-github } [Releases](../releases.htmll#project-xr-media-with-mpeg-i-scene-description){: .btn .btn-release } [Tutorials](./tutorials.html){: .btn .btn-blue } [Requirements](./requirements.html){: .btn .btn-blue }
 
 # Features 
+
+The MPEG-I Scene Description reference architecture and features are described in the Technical Resources. This page describes those implemented in the 5G-MAG Reference Tools.
+
+[Technical Resources](../../Tech/xr/mpeg-i-scene-description.html){: .btn .btn-blue }
+
+
 ## XR Unity Player features
 
 The XR Player takes 3D scenes in glTF format, supporting extensions that enable extended reality use cases. 
