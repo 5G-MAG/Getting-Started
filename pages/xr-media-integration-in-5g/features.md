@@ -27,7 +27,7 @@ These extensions enable features such as XR anchoring, interactivity behaviors, 
 
 ### XR Anchoring
 
-The XR Player supports XR anchoring using the <span style="color:#FF5733;">some *blue* text</span> **`MPEG_anchor`** glTF extension which enables anchoring nodes and scenes to features (*Trackable*) tracked by the XR device. In augmented reality applications, anchored nodes are composited with the XR device's environment. 
+The XR Player supports XR anchoring using the <span style="color:#7030A0; font-weight:bold;">MPEG_anchor</span> glTF extension which enables anchoring nodes and scenes to features (*Trackable*) tracked by the XR device. In augmented reality applications, anchored nodes are composited with the XR device's environment. 
 
 The XR player leverages Unity's ARFoundation to support both handled mobile devices such as smartphones and head mounted devices.
 
