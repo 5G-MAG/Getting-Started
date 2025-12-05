@@ -14,7 +14,7 @@ nav_order: 2
 
 The **MPEG-I Scene Description** reference architecture and features are described in the Technical Resources. This page describes those implemented in the 5G-MAG Reference Tools.
 
-[Technical Resources](../../../Tech/xr/mpeg-i-scene-description.html){: .btn .btn-blue }
+[Technical Resources](../../../Tech/pages/xr/mpeg-i-scene-description.html){: .btn .btn-blue }
 
 
 ## Features implemented in the XR Unity Player
