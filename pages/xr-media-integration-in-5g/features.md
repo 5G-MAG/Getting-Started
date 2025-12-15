@@ -29,7 +29,7 @@ These extensions enable features such as XR anchoring, interactivity behaviors, 
 
 ### Media pipelines
 
-Support for media sources (eg. mp4, dash, rtp,...) exposing media buffers to the presentation engine through the <span style="color:#00B050; font-weight:bold;">MPEG_media</span>, <span style="color#00B050; font-weight:bold;">MPEG_accessor_timer</span>, <span style="color#00B050; font-weight:bold;">MPEG_buffer_circular</span> glTF extensions.
+Support for media sources (eg. mp4, dash, rtp,...) exposing media buffers to the presentation engine through the <span style="color:#00B050; font-weight:bold;">MPEG_media</span>, <span style="color:#00B050; font-weight:bold;">MPEG_accessor_timer</span>, <span style="color:#00B050; font-weight:bold;">MPEG_buffer_circular</span> glTF extensions.
 
 The media pipelines APIs are designed to fetch and decode timed media such as video textures, audio sources, geometry streams,...
 
@@ -39,7 +39,7 @@ The media pipelines APIs are designed to fetch and decode timed media such as vi
 
 ### Video texture
 
-Supports video textures buffers through the <span style="color#0070C0; font-weight:bold;">MPEG_texture_video</span> glTF video extension. Video decoding is implemented by media pipelines.
+Supports video textures buffers through the <span style="color:#0070C0; font-weight:bold;">MPEG_texture_video</span> glTF video extension. Video decoding is implemented by media pipelines.
 
 | Reference scene       | XR Phone | XR HMD | Test content |
 |:--------------------- |:-|:-|:-|
@@ -48,7 +48,7 @@ Supports video textures buffers through the <span style="color#0070C0; font-weig
 
 ### Spatial audio
 
-Supports audio sources positionned in 3D through the <span style="color##0070C0; font-weight:bold;">MPEG_audio_spatial</span>.
+Supports audio sources positionned in 3D through the <span style="color:#0070C0; font-weight:bold;">MPEG_audio_spatial</span>.
 
 For each audio source the extension specifies attenuation parameters controling the audio source loudness as a function of the viewer's distance.
 
