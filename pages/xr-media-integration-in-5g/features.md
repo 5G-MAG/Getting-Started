@@ -18,7 +18,7 @@ The **MPEG-I Scene Description** reference architecture and features are describ
 
 Check below the:
 * [**Features implemented in the XR Unity Player**](#features-implemented-in-the-xr-unity-player)
-* [**Features implemented in the XR Unity Editor**](mpeg-extensions-to-gltf-implemented-in-unity-player-and-unity-editor)
+* [**Features implemented in the XR Unity Editor**](#mpeg-extensions-to-gltf-implemented-in-unity-player-and-unity-editor)
 
 ## Features implemented in the XR Unity Player
 
