@@ -29,9 +29,9 @@ These extensions enable features such as XR anchoring, interactivity behaviors, 
 
 ### Media pipelines
 
-Support for media sources (eg. mp4, dash, rtp, ...) exposing media buffers to the presentation engine through the <span style="color:#00B050; font-weight:bold;">MPEG_media</span>, <span style="color#00B050; font-weight:bold;">MPEG_accessor_timer</span>, <span style="color#00B050; font-weight:bold;">MPEG_buffer_circular</span> glTF extensions.
+Support for media sources (eg. mp4, dash, rtp,...) exposing media buffers to the presentation engine through the <span style="color:#00B050; font-weight:bold;">MPEG_media</span>, <span style="color#00B050; font-weight:bold;">MPEG_accessor_timer</span>, <span style="color#00B050; font-weight:bold;">MPEG_buffer_circular</span> glTF extensions.
 
-The media pipelines APIs are designed to fetch and decode timed media such as video textures, audio sources, geometry streams ...
+The media pipelines APIs are designed to fetch and decode timed media such as video textures, audio sources, geometry streams,...
 
 | Reference scene       | XR Phone | XR HMD | Test content |
 |:--------------------- |:-|:-|:-|
