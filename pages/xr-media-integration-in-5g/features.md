@@ -14,11 +14,11 @@ nav_order: 2
 
 The **MPEG-I Scene Description** reference architecture and features are described in the Technical Resources. This page describes those implemented in the 5G-MAG Reference Tools.
 
-[Technical Resources](../../../Tech/pages/xr/mpeg-i-scene-description.html){: .btn .btn-blue }
+[Technical Resources](../../../Tech/pages/xr.html){: .btn .btn-blue }
 
 Check below the:
-* **Features implemented in the XR Unity Player**
-* **Features implemented in the XR Unity Player**
+* [**Features implemented in the XR Unity Player**](#features-implemented-in-the-xr-unity-player)
+* [**Features implemented in the XR Unity Editor**](mpeg-extensions-to-gltf-implemented-in-unity-player-and-unity-editor)
 
 ## Features implemented in the XR Unity Player
 
@@ -27,8 +27,36 @@ These extensions enable features such as XR anchoring, interactivity behaviors, 
 
 - [View Changelog](https://github.com/5G-MAG/rt-xr-unity-player/releases)
 
+### Media pipelines
 
-### XR Anchoring
+Support for media sources (eg. mp4, dash, rtp, ...) exposing media buffers to the presentation engine through the <span style="color:#00B050; font-weight:bold;">MPEG_media</span>, <span style="color#00B050; font-weight:bold;">MPEG_accessor_timer</span>, <span style="color#00B050; font-weight:bold;">MPEG_buffer_circular</span> glTF extensions.
+
+The media pipelines APIs are designed to fetch and decode timed media such as video textures, audio sources, geometry streams ...
+
+| Reference scene       | XR Phone | XR HMD | Test content |
+|:--------------------- |:-|:-|:-|
+| Sample scene with media pipelines | &#x2611; | &#x2611; | [studio_apartment/studio_apartment.gltf](https://github.com/5G-MAG/rt-xr-content/tree/main/studio_apartment/studio_apartment.gltf)|
+
+### Video texture
+
+Supports video textures buffers through the <span style="color#0070C0; font-weight:bold;">MPEG_texture_video</span> glTF video extension. Video decoding is implemented by media pipelines.
+
+| Reference scene       | XR Phone | XR HMD | Test content |
+|:--------------------- |:-|:-|:-|
+| Sample scene with video texture | &#x2611; | &#x2611; | [studio_apartment/studio_apartment.gltf](https://github.com/5G-MAG/rt-xr-content/tree/main/studio_apartment/studio_apartment.gltf)|
+
+
+### Spatial audio
+
+Supports audio sources positionned in 3D through the <span style="color##0070C0; font-weight:bold;">MPEG_audio_spatial</span>.
+
+For each audio source the extension specifies attenuation parameters controling the audio source loudness as a function of the viewer's distance.
+
+| Reference scene       | XR Phone | XR HMD | Test content |
+|:--------------------- |:-|:-|:-|
+| Sample scene with spatial audio source | &#x2611; | &#x2611; | [studio_apartment/studio_apartment.gltf](https://github.com/5G-MAG/rt-xr-content/tree/main/studio_apartment/studio_apartment.gltf)|
+
+### Anchoring
 
 The XR Player supports XR anchoring using the <span style="color:#7030A0; font-weight:bold;">MPEG_anchor</span> glTF extension which enables anchoring nodes and scenes to features (**Trackable**) tracked by the XR device. In augmented reality applications, anchored nodes are composited with the XR device's environment. 
 
@@ -73,62 +101,28 @@ The table below provide an overview of the supported triggers and actions:
 | ACTION_HAPTIC         | &#x2610; | &#x2610; |  |
 | ACTION_SET_AVATAR     | &#x2610; | &#x2610; | [issues/203](https://github.com/5G-MAG/Getting-Started/issues/203) |
 
-
-### Media pipelines
-
-#00B050
-
-Support for media sources (eg. mp4, dash, rtp, ...) exposing media buffers to the presentation engine through the <span style="color:#00B050; font-weight:bold;">MPEG_media</span>, <span style="color#00B050; font-weight:bold;">MPEG_accessor_timer</span>, <span style="color#00B050; font-weight:bold;">MPEG_buffer_circular</span> glTF extensions.
-
-The media pipelines APIs are designed to fetch and decode timed media such as video textures, audio sources, geometry streams ...
-
-| Scene           | XR Phone | XR HMD | Test content |
-|:--------------------- |:-|:-|:-|
-| Sample scene with media pipelines | &#x2611; | &#x2611; | [studio_apartment/studio_apartment.gltf](https://github.com/5G-MAG/rt-xr-content/tree/main/studio_apartment/studio_apartment.gltf)|
-
-
-### Video texture
-
-Supports video textures buffers through the <span style="color#D9D9D9; font-weight:bold;">MPEG_texture_video</span> glTF video extension. Video decoding is implemented by media pipelines.
-
-| Scene           | XR Phone | XR HMD | Test content |
-|:--------------------- |:-|:-|:-|
-| Sample scene with video texture | &#x2611; | &#x2611; | [studio_apartment/studio_apartment.gltf](https://github.com/5G-MAG/rt-xr-content/tree/main/studio_apartment/studio_apartment.gltf)|
-
-
-### Spatial audio
-
-Supports audio sources positionned in 3D through the <span style="color#D9D9D9; font-weight:bold;">MPEG_audio_spatial</span>.
-
-For each audio source the extension specifies attenuation parameters controling the audio source loudness as a function of the viewer's distance.
-
-| Scene           | XR Phone | XR HMD | Test content |
-|:--------------------- |:-|:-|:-|
-| Sample scene with spatial audio source | &#x2611; | &#x2611; | [studio_apartment/studio_apartment.gltf](https://github.com/5G-MAG/rt-xr-content/tree/main/studio_apartment/studio_apartment.gltf)|
-
-
-## MPEG extensions to glTF implemented in Unity Player and Unity Editor in v1.1.0
+## MPEG extensions to glTF implemented in Unity Player and Unity Editor
 
 Note that "Unity player" refers to the compiled application, while "Unity editor" refers to the development environment which also allows running the app without actually compiling it for the target platform.
 
-| glTF extension               | Unity player   | Unity editor   |
-|:-----------------------------|:---------------|:---------------|
-| MPEG_media                   | &#x2611;       | &#x2610;       |
-| MPEG_buffer_circular         | &#x2611;       | &#x2610;       |
-| MPEG_accessor_timed          | &#x2611;       | &#x2610;       |
-| MPEG_audio_spatial           | &#x2611;       | &#x2610;       |
-| MPEG_texture_video           | &#x2611;       | &#x2610;       |
-| MPEG_scene_interactivity     | &#x2611;       | &#x2610;       |
-| MPEG_node_interactivity      | &#x2611;       | &#x2610;       |
-| MPEG_node_interactivity.type | &#x2611;       | &#x2610;       |
-| MPEG_anchor                  | &#x2611;       | &#x2610;       |
-| MPEG_sampler_YCbCr           | &#x2610;       | &#x2610;       |
-| MPEG_primitive_V3C           | &#x2610;       | &#x2610;       |
-| MPEG_node_avatar             | &#x2610;       | &#x2610;       |
-| MPEG_lights_texture_based    | &#x2610;       | &#x2610;       |
-| MPEG_light_punctual          | &#x2610;       | &#x2610;       |
-| MPEG_haptic                  | &#x2610;       | &#x2610;       |
-| MPEG_mesh_linking            | &#x2610;       | &#x2610;       |
-| MPEG_scene_dynamic           | &#x2610;       | &#x2610;       |
-| MPEG_viewport_recommended    | &#x2610;       | &#x2610;       |
-| MPEG_animation_timing        | &#x2610;       | &#x2610;       |
+| glTF extension                                                                     | Unity player   | Unity editor v1.1.0 |
+|:-----------------------------------------------------------------------------------|:---------------|:--------------------|
+| <span style="color:#00B050; font-weight:bold;">MPEG_media</span>                   | &#x2611;       | &#x2610;            |
+| <span style="color:#00B050; font-weight:bold;">MPEG_buffer_circular</span>         | &#x2611;       | &#x2610;            |
+| <span style="color:#00B050; font-weight:bold;">MPEG_accessor_timed</span>          | &#x2611;       | &#x2610;            |
+| <span style="color:#0070C0; font-weight:bold;">MPEG_audio_spatial</span>           | &#x2611;       | &#x2610;            |
+| <span style="color:#0070C0; font-weight:bold;">MPEG_texture_video</span>           | &#x2611;       | &#x2610;            |
+| <span style="color:#7030A0; font-weight:bold;">MPEG_scene_interactivity</span>     | &#x2611;       | &#x2610;            |
+| <span style="color:#7030A0; font-weight:bold;">MPEG_node_interactivity</span>      | &#x2611;       | &#x2610;            |
+| <span style="color:#7030A0; font-weight:bold;">MPEG_node_interactivity.type</span> | &#x2611;       | &#x2610;            |
+| <span style="color:#7030A0; font-weight:bold;">MPEG_anchor</span>                  | &#x2611;       | &#x2610;            |
+| <span style="color:#0070C0; font-weight:bold;">MPEG_sampler_YCbCr</span>           | &#x2610;       | &#x2610;            |
+| <span style="color:#0070C0; font-weight:bold;">MPEG_primitive_V3C</span>           | &#x2610;       | &#x2610;            |
+| <span style="color:#7030A0; font-weight:bold;">MPEG_node_avatar</span>             | &#x2610;       | &#x2610;            |
+| <span style="color:#7030A0; font-weight:bold;">MPEG_lights_texture_based</span>    | &#x2610;       | &#x2610;            |
+| <span style="color:#7030A0; font-weight:bold;">MPEG_light_punctual</span>          | &#x2610;       | &#x2610;            |
+| <span style="color:#7030A0; font-weight:bold;">MPEG_haptic</span>                  | &#x2610;       | &#x2610;            |
+| <span style="color:#0070C0; font-weight:bold;">MPEG_mesh_linking</span>            | &#x2610;       | &#x2610;            |
+| <span style="color:#0070C0; font-weight:bold;">MPEG_scene_dynamic</span>           | &#x2610;       | &#x2610;            |
+| <span style="color:#0070C0; font-weight:bold;">MPEG_viewport_recommended</span>    | &#x2610;       | &#x2610;            |
+| <span style="color:#0070C0; font-weight:bold;">MPEG_animation_timing</span>        | &#x2610;       | &#x2610;            |
