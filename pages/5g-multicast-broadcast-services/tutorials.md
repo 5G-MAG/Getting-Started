@@ -18,6 +18,9 @@ This tutorial provides an overview on the initial implementation of MBS in Open5
 ## [Tutorial: Initial MBS Transport Function implementation](./tutorials/mbstf.html)
 This tutorial provides an overview on the initial implementation of the MBSTF.
 
+## [Tutorial: MBS Function Tutorial](./tutorials/mbsf.html)
+This tutorial provides an overview of the operation of the MBSF.
+
 # Video Library
 Our [YouTube channel](https://www.youtube.com/@5GMAG) hosts some practical videos provided by developers on the use of the 5G-MAG Reference Tools.
 
