@@ -118,7 +118,7 @@ Note that "Unity player" refers to the compiled application, while "Unity editor
 | <span style="color:#7030A0; font-weight:bold;">MPEG_anchor</span>                  | &#x2611;       | &#x2610;            |
 | <span style="color:#0070C0; font-weight:bold;">MPEG_sampler_YCbCr</span>           | &#x2610;       | &#x2610;            |
 | <span style="color:#0070C0; font-weight:bold;">MPEG_primitive_V3C</span>           | &#x2610;       | &#x2610;            |
-| <span style="color:#7030A0; font-weight:bold;">MPEG_node_avatar</span>             | &#x2610;       | &#x2610;            |
+| <span style="color:#7030A0; font-weight:bold;">MPEG_avatar</span>                  | &#x2610;       | &#x2610;            |
 | <span style="color:#7030A0; font-weight:bold;">MPEG_lights_texture_based</span>    | &#x2610;       | &#x2610;            |
 | <span style="color:#7030A0; font-weight:bold;">MPEG_light_punctual</span>          | &#x2610;       | &#x2610;            |
 | <span style="color:#7030A0; font-weight:bold;">MPEG_haptic</span>                  | &#x2610;       | &#x2610;            |
