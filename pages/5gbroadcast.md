@@ -1,6 +1,6 @@
 ---
 layout: default
-parent: Application Domains
+parent: Application Areas
 title: 5G Broadacast
 nav_order: 1
 has_children: true

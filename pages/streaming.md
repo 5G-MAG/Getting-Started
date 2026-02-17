@@ -1,6 +1,6 @@
 ---
 layout: default
-parent: Application Domains
+parent: Application Areas
 title: Streaming & Delivery
 nav_order: 0
 has_children: true

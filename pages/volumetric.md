@@ -1,6 +1,6 @@
 ---
 layout: default
-parent: Application Domains
+parent: Application Areas
 title: Volumetric Video
 nav_order: 4
 has_children: true

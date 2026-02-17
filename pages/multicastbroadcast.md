@@ -1,6 +1,6 @@
 ---
 layout: default
-parent: Application Domains
+parent: Application Areas
 title: Multicast Broadcast Services
 nav_order: 2
 has_children: true

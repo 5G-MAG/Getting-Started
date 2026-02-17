@@ -9,7 +9,7 @@ nav_order: 0
 
 [Scope](./scope.html){: .btn .btn-blue } [GitHub Repos](./repositories.html){: .btn .btn-github } [Tutorials](./tutorials.html){: .btn .btn-tutorial }
 
-# Information
+# Scope
 
 Some 5G-MAG Reference Tools Projects make use of software developed by other Open-Source Software initiatives.
 

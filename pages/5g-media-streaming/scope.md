@@ -37,9 +37,13 @@ This includes the implementation of the following entities: **5GMSd Application 
 
 [To the GitHub Repos](./repositories.html){: .btn .btn-github }
 
+The following tutorials cover the deployment of an end-to-end 5GMSd implementation.
+
 [Tutorial: Deploy 5GMSd End-to-End](./tutorials/end-to-end.html){: .btn .btn-tutorial }
 
 [Tutorial: Deploy 5GMSd End-to-End including a 5G Network and UE](./tutorials/end-to-end-with-5g.html){: .btn .btn-tutorial }
+
+The following tutorials cover the deployment and testing of 5GMSd AS and AF.
 
 [Tutorial: Test the 5GMS Application Function](./tutorials/testing-AF.html){: .btn .btn-tutorial }
 
@@ -48,8 +52,6 @@ This includes the implementation of the following entities: **5GMSd Application 
 Note that before the required features of the 5GMS System can be used by 5GMS Clients, they are first provisioned by a 5GMS Application Provider creating one or more _Provisioning Sessions_. The 5GMSd Application Provider can then specify one or more 5GMSd features in the Provisioning Session. The Provisioning Session information may include Content Hosting Configurations, Content Preparation Templates, Server Certificates, Policy Templates, a Consumption Reporting Configuration, Metrics Reporting Configurations, Edge Resources Configurations and Event Data Processing Configurations.
 
 Examples of such configuration are avaiable in GitHub.
-
-[Find sample files in rt-5gms-examples](./repositories.html){: .btn .btn-5gms }
 
 ## Feature: Content Hosting
 
@@ -72,9 +74,7 @@ M5 | 5.3.2 | [Service Access Information API](https://jdegre.github.io/loader.ht
 
 Once a Provisioning Session is established using the API at interface M1d, **Content Hosting** can be configured. The security of the content published to the 5GMS System may be guaranteed by a provisioned **Server Certificate**.
 
-[Find sample files in rt-5gms-examples](./repositories.html){: .btn .btn-5gms }
-
-The following tutorials contain several steps showing how to create a Provisioning Session, add Content Hosting configuration and provisioning of Server Certificates.
+The following tutorials describe several steps showing how to create a Provisioning Session, add Content Hosting configuration and provisioning of Server Certificates.
 
 [Tutorial: Deploy 5GMSd End-to-End](./tutorials/end-to-end.html){: .btn .btn-tutorial }
 
@@ -107,8 +107,6 @@ M5 | 5.3.4 | [Network Assistance API](https://jdegre.github.io/loader.html?yaml=
 
 Note that the network assistance feature is not explicitly provisioned by the 5GMS Application Provider. It is either available for a particular media streaming session or not, depending on system pre-configuration and/or policy.
 
-[Find sample files in rt-5gms-examples](./repositories.html){: .btn .btn-5gms }
-
 ## Feature: Dynamic Policies
 
 The dynamic policies feature enables the 5GMS Client in the UE to manipulate the network traffic handling policies for an ongoing media streaming session.
@@ -127,11 +125,7 @@ M5 | 5.3.3 | [Dynamic Policies API](https://jdegre.github.io/loader.html?yaml=TS
 When the dynamic policy feature is offered and selected, the 5GMSd Application Provider specifies a set of policies which can be invoked for the unicast downlink streaming session. The UE becomes aware of the 
 selected policies in the form of a list of valid Policy Template Ids.
 
-[Find sample files in rt-5gms-examples](./repositories.html){: .btn .btn-5gms }
-
 ## Feature: Consumption Reporting
-
-[Tutorial: Deploy 5GMSd with Consumption Reporting](./tutorials/consumption-reporting.html){: .btn .btn-tutorial }
 
 The consumption reporting feature allows consumption of downlink media streaming to be logged by the 5GMS System and exposed for analysis.
 
@@ -148,17 +142,13 @@ M5 | 5.3.6| [Consumption Reporting API](https://jdegre.github.io/loader.html?yam
 
 Once a Provisioning Session is established using the API at interface M1d, **Consumption Reporting** can be configured.
 
-[Find sample files in rt-5gms-examples](./repositories.html){: .btn .btn-5gms }
+The following tutorials describe several steps showing how to create a Consumption Reporting Configuration.
 
-The following tutorials contain several steps showing how to create a Consumption Reporting Configuration.
-
-[Tutorial: Deploy 5GMSd End-to-End](./tutorials/consumption-reporting.html){: .btn .btn-tutorial }
+[Tutorial: Deploy 5GMSd with Consumption Reporting](./tutorials/consumption-reporting.html){: .btn .btn-tutorial }
 
 [Tutorial: Test the 5GMS AF](./tutorials/testing-AF.html){: .btn .btn-tutorial }
 
 ## Feature: QoE Metrics Reporting
-
-[Tutorial: Deploy 5GMSd with QoE Metrics Reporting](./tutorials/metrics-reporting.html){: .btn .btn-tutorial }
 
 The QoE metrics reporting feature enables the 5GMS System to log and expose streaming performance data for further analysis.
 
@@ -181,11 +171,9 @@ M5 | 5.3.5 | [Metrics Reporting API](https://jdegre.github.io/loader.html?yaml=T
 
 Once a Provisioning Session is established using the API at interface M1d, **QoE Metrics Reporting** can be configured.
 
-[Find sample files in rt-5gms-examples](./repositories.html){: .btn .btn-5gms }
+The following tutorials describe several steps showing how to create a QoE Metrics Reporting Configuration.
 
-The following tutorials contain several steps showing how to create a QoE Metrics Reporting Configuration.
-
-[Tutorial: Deploy 5GMSd End-to-End](./tutorials/metrics-reporting.html){: .btn .btn-tutorial }
+[Tutorial: Deploy 5GMSd with QoE Metrics Reporting](./tutorials/metrics-reporting.html){: .btn .btn-tutorial }
 
 [Tutorial: Test the 5GMS AF](./tutorials/testing-AF.html){: .btn .btn-tutorial }
 

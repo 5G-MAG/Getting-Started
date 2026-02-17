@@ -1,6 +1,6 @@
 ---
 layout: default
-parent: Application Domains
+parent: Application Areas
 title: XR & Avatar
 nav_order: 3
 has_children: true

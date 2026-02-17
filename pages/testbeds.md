@@ -1,6 +1,6 @@
 ---
 layout: default
-parent: Application Domains
+parent: Application Areas
 title: Testbeds & Evaluation
 nav_order: 5
 has_children: true

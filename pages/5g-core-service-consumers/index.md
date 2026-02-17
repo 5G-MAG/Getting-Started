@@ -12,7 +12,7 @@ nav_order: 6
 
 # 5G Core Service Consumers - Reference Tools Project
 
-Explore this slide deck for a quick introduction and key resources to get you started. For more detailed information—including our architecture, development roadmap, features—check out the navigation menu (above or to the side). You’ll also find links to our repositories and practical tutorials to help you begin building.
+Explore this slide deck for a concise introduction and a set of essential resources to help you get started. For deeper detail—including the scope of the reference tools, development roadmaps, and release information—use the navigation menu above or to the side. There you’ll also find direct links to the GitHub repositories and hands‑on tutorials designed to support you as you build, test, and deploy the reference tools.
 
 ## Project Overview
 
