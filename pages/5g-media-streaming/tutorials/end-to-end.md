@@ -1,29 +1,24 @@
 ---
 layout: default
-title: Basic 5GMS End-to-End Setup (with Docker)
+title: 5GMSd (with Docker)
 parent: Tutorials
 grand_parent: 5G Media Streaming
 has_children: false
 nav_order: 2
 ---
 
-<details open markdown="block">
-  <summary>
-    Table of contents
-  </summary>
-  {: .text-delta }
-1. TOC
-{:toc}
-</details>
+<img src="../../../assets/images/Banner_5GMS.png" /> 
 
-# Tutorial - 5G MSd: Basic End-to-End Setup (with Docker)
+[Scope](../scope.html){: .btn .btn-blue } [Project Roadmap](../projects.html){: .btn .btn-blue } [GitHub Repos](../repositories.html){: .btn .btn-github } [Releases](../../releases.html#project-5g-media-streaming){: .btn .btn-release } [Tutorials](../tutorials.html){: .btn .btn-tutorial } [Requirements](../requirements.html){: .btn .btn-blue }
+
+# Tutorial - 5G MSd End-to-End deployment (with Docker)
 
 This guide describes how to setup and configure the 5G-MAG Reference Tools - 5G Downlink Media Streaming components to
 create an end to end setup as depicted in the illustration below.
 
 <img width="934" alt="Bildschirm­foto 2023-04-06 um 09 35 46" src="https://user-images.githubusercontent.com/2427039/230307155-c0f71870-a806-4229-966a-41a8f2f838f8.png">
 
-# Versions
+## Versions
 
 This guide uses the following versions. However, it is strongly recommended to use the latest versions of the
 components.
@@ -37,7 +32,7 @@ components.
 | Media Stream Handler    | `1.0.0`         |
 | Common Android Library  | `1.0.0`         |
 
-# Requirements
+## Requirements
 
 * A host machine running Ubuntu 22.04 LTS
 * A smartphone running Android 10 or later
@@ -125,15 +120,15 @@ sudo 5gms-application-server
 ````
 
 For additional options, refer to
-the [documentation](../usage/application-server/testing-AS.html#running-the-example-without-building). Pay attention to
+the [documentation](../tutorials/testing-AS.html#running-the-example-without-building). Pay attention to
 the port configuration of the AS, as it requires root permission to run on the standard ports (`80` & `443`).
 
 ### 4. Running the Application Function
 
 Now that we installed the AF and the AS we can configure the AF. A detailed configuration guide is available in
-the [documentation](../usage/application-function/configuration-5GMSAF.html) of the AF.
+the [documentation](../tutorials/application-function/configuration-5GMSAF.html) of the AF.
 
-#### Configuration of the AF
+### 5. Configuration of the AF
 
 For this demo, we will run AF and AS on the same machine. As we want to access the `ServiceAccessInformation` via the
 `M5d` interface from our Media Session Handler running on an Android device we need to slightly modify the
@@ -151,7 +146,7 @@ msaf:
         -   port: 7778
 ```` 
 
-#### Starting the AF
+### 6. Starting the AF
 
 As we installed the AF as a local user, we start it with the following command:
 
@@ -159,10 +154,10 @@ As we installed the AF as a local user, we start it with the following command:
 /usr/local/bin/open5gs-msafd
 ````
 
-#### Creating a content hosting configuration
+### 7. Creating a Content Hosting Configuration
 
 There is a guide on how to test the AS with the AF in
-the [documentation](../usage/application-server/testing-AS.html#testing-with-the-application-function). We are following
+the [documentation](../tutorials/testing-AS.html#testing-with-the-application-function). We are following
 a slightly different approach as we use the `msaf-configuration` tool that ships with version `1.3.0` of the Application
 Function. The `msaf-configuration` tool creates a `provisioningSession` and a `contentHostingConfiguration` based on a
 JSON input file. Moreover, it automatically generates the required `M8` information for us that we will later need on
@@ -302,16 +297,14 @@ like this:
 In our Android application we will use this endpoint later to derive the required information to populate our stream
 selection drowdown and to query the Application Function via `M5`.
 
-#### Optional: Creating a server certificate
+### Optional: Creating a Server Certificate
 
 Optionally, you can now
-also [create server certificate](../usage/application-function/testing-m1-v130.html#server-certificates). For plain
+also [create server certificate](../tutorials/application-function/testing-m1-v130.html#server-certificates). For plain
 `http` based playback we can omit this step.
 
-#### Optional: Checking the M5 interface
-
 The complete documentation on how to test the M5 interface for AF versions 1.2.0 and above can be
-found [here](../usage/application-function/testing-m5-v120.html)
+found [here](../tutorials/application-function/testing-m5-v120.html)
 
 What we will need on the client side later is the `ServiceAccessInformation`. This will be requested via `M5d` by our
 MediaSessionHandler. Since retrieving this information is done via a simple HTTP GET request, we can access the
@@ -491,6 +484,3 @@ Unlock your Android phone and start the `MediaSessionHandler` if it is not alrea
 Next, click on _Start Playback_. The output should look like this:
 
 <img width="757" alt="Bildschirm­foto 2023-04-26 um 09 43 13" src="https://user-images.githubusercontent.com/2427039/234528696-0411099a-2cf1-4397-b1d9-2b84760bdde3.png">
-
-
-

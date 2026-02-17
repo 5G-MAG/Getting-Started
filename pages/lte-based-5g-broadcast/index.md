@@ -1,8 +1,9 @@
 ---
 layout: default
 title: 5G Broadcast - TV/Radio
+parent: The Projects
 has_children: true
-nav_order: 4
+nav_order: 2
 ---
 
 <img src="../../assets/images/Banner_5GBCTVR.png" /> 

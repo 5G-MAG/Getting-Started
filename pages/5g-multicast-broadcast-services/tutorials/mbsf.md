@@ -553,3 +553,6 @@ The response, if the MBS User Data Ingest Session can be found, will be an HTTP 
 < server: MBSF-localhost/18 (info.title=nmbsf-mbs-ud-ingest; info.version=1.1.2) rt-mbs-function/0.1.0
 < 
 ```
+
+{: .note }
+The MBSF can also parse MbsServiceArea. Where a TAC is specified, the DistributionSessionInfo part of the UserDataIngSession includes the optional tgtServAreas property with the format: `"tgtServAreas": {"taiList": [{"plmnId": {"mcc": "001", "mnc": "001"}, "tac": "<TAC-value>"}]}`

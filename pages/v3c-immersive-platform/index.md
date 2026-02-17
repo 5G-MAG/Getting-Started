@@ -1,8 +1,9 @@
 ---
 layout: default
 title: V3C Immersive Platform
+parent: The Projects
 has_children: true
-nav_order: 8
+nav_order: 14
 ---
 
 <img src="../../assets/images/Banner_V3C_Platform.png" /> 

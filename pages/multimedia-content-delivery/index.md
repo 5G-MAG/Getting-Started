@@ -1,8 +1,9 @@
 ---
 layout: default
 title: Multimedia Delivery Protocols
+parent: The Projects
 has_children: true
-nav_order: 11
+nav_order: 12
 ---
 
 <img src="../../assets/images/Banner_MD.png" /> 
