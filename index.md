@@ -5,7 +5,7 @@ nav_order: 0
 has_children: true
 ---
 
-<img src="./assets/images/Banner_ReferenceTools.png" /> 
+<img width="100%" src="./assets/images/Banner_ReferenceTools.png" /> 
 
 [Application Areas](./pages/applications.html){: .btn .btn-blue } [All the Projects](./pages/projects.html){: .btn .btn-blue } [Releases](./pages/releases.html){: .btn .btn-release } [Join us and Contribute!](#join-us-and-contribute){: .btn .btn-blue } [Public Monthly Call](./pages/public-call.html){: .btn .btn-blue }
 
