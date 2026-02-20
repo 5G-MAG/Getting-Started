@@ -5,11 +5,11 @@ nav_order: 0
 has_children: true
 ---
 
-<img width="100%" src="./assets/images/Banner_ReferenceTools.png" /> 
+<img src="./assets/images/Banner_ReferenceTools.png" /> 
 
 [Application Areas](./pages/applications.html){: .btn .btn-blue } [All the Projects](./pages/projects.html){: .btn .btn-blue } [Releases](./pages/releases.html){: .btn .btn-release } [Join us and Contribute!](#join-us-and-contribute){: .btn .btn-blue } [Public Monthly Call](./pages/public-call.html){: .btn .btn-blue }
 
-<img src="./assets/images/5GMAG_RT.png">
+<img width="80%" src="./assets/images/5GMAG_RT.png">
 
 [Download an overview about the 5G-MAG Reference Tools](https://hub.5g-mag.com/Getting-Started/docs/Reference_Tools_Overview.pdf){: .btn .btn-blue }
 
