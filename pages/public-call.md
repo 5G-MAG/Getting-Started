@@ -1,13 +1,13 @@
 ---
 layout: default
-title: Public Monthly Call
+title: Public Friday Call
 parent: Introduction
 nav_order: 5
 ---
 
 <img src="../assets/images/Banner_ReferenceTools.png" /> 
 
-# Join our Public Monthly Call
+# Join our Public Friday Call
 
 * Join our Public Call on the **last Friday of the month at 13:00 CET/CEST**, with news and invited speakers.
 
