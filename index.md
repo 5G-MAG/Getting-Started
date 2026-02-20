@@ -7,7 +7,7 @@ has_children: true
 
 <img src="./assets/images/Banner_ReferenceTools.png" /> 
 
-[Application Domains of the Projects](./pages/applications.html){: .btn .btn-blue } [All the Projects](./pages/projects.html){: .btn .btn-blue } [Releases](./pages/releases.html){: .btn .btn-release } [Join us and Contribute!](#join-us-and-contribute){: .btn .btn-blue } [Public Monthly Call](./pages/public-call.html){: .btn .btn-blue }
+[Application Areas](./pages/applications.html){: .btn .btn-blue } [All the Projects](./pages/projects.html){: .btn .btn-blue } [Releases](./pages/releases.html){: .btn .btn-release } [Join us and Contribute!](#join-us-and-contribute){: .btn .btn-blue } [Public Monthly Call](./pages/public-call.html){: .btn .btn-blue }
 
 # Learn more about the 5G-MAG Reference Tools
 
@@ -64,7 +64,7 @@ The <b>5G-MAG Reference Tools Developer Community</b> provides a structured envi
 # Join us and Contribute!
 
 [Guidelines for Contributors: Learn How to Contribute](./pages/guidelines-contributors.html){: .btn .btn-blue }
-[Guidelines for Contributors: The Open-Source Software Licenses](./pages/guidelines-contributors.md#the-open-source-software-licenses){: .btn .btn-blue }
+[The Software Licenses](./pages/license.html){: .btn .btn-blue }
 
 <table>
   <tr>
