@@ -1,20 +1,16 @@
-.side-bar {
-  z-index: 0;
-  display: flex;
-  flex-wrap: wrap;
-  background-color: $sidebar-color;
+/* Increase usable width inside the sidebar nav without shifting layout */
+.site-header {
+ width: 300px;     /* or 280px / 300px — adjust to taste */
+ max-width: 300px;
+}
 
-  @include mq(md) {
-    flex-flow: column nowrap;
-    position: fixed;
-    width: $nav-width-md;
-    height: 100%;
-    border-right: $border $border-color;
-    align-items: flex-end;
-  }
+.site-nav {
+ width: 300px;     /* or 280px / 300px — adjust to taste */
+ max-width: 300px;
+}
 
-  @include mq(lg) {
-    width: calc((100% - #{$nav-width + $content-width}) / 20 + #{$nav-width});
-    min-width: $nav-width;
-  }
+.nav-list .nav-list-link {
+ white-space: nowrap;   /* Prevents the link text from wrapping */
+ overflow: hidden;
+ text-overflow: ellipsis;
 }
