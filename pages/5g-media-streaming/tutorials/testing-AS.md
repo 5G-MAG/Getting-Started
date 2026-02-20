@@ -69,7 +69,8 @@ prerequisite packages are:
     - pip
     - venv
 
-These can usually be installed as system packages, for example:
+These can usually be installed as system packages.
+
 **Debian/Ubuntu Linux and derivatives**
 
 ```bash
