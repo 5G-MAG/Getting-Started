@@ -45,15 +45,16 @@ mermaid:
 
 # configures the default callouts described in: https://just-the-docs.github.io/just-the-docs/docs/ui-components/callouts/
 callouts_level: quiet # or loud
+callouts_opacity: 0.05
 callouts:
   highlight:
     color: yellow
   important:
     title: Important
-    color: blue
-  new:
-    title: New
     color: green
+  inshort:
+    title: In Short...
+    color: blue
   note:
     title: Note
     color: purple
@@ -85,6 +86,11 @@ nav_external_links:
     hide_icon: false # set to true to hide the external link icon - defaults to false
     opens_in_new_tab: false # set to true to open this link in a new tab - defaults to false
     
+  - title: 5G-MAG - Discussions
+    url: https://github.com/orgs/5G-MAG/discussions
+    hide_icon: false # set to true to hide the external link icon - defaults to false
+    opens_in_new_tab: false # set to true to open this link in a new tab - defaults to false
+
   - title: 5G-MAG - Standards
     url: https://hub.5g-mag.com/Standards
     hide_icon: false # set to true to hide the external link icon - defaults to false

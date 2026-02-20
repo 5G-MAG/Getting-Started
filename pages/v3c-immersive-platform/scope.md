@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Scope & Architectures
+title: Scope
 parent: V3C Immersive Platform
 has_children: false
 nav_order: 0
@@ -8,9 +8,9 @@ nav_order: 0
 
 <img src="../../assets/images/Banner_V3C_Platform.png" /> 
 
-[Scope & Architectures](./scope.html){: .btn .btn-blue } [Project Roadmap](./projects.html){: .btn .btn-blue } [Features](./features.html){: .btn .btn-blue } [GitHub Repos](./repositories.html){: .btn .btn-github } [Releases](../releases.html#project-volumetric-video-experiences-with-mpeg-v3c){: .btn .btn-release } [Tutorials](./tutorials.html){: .btn .btn-blue } [Requirements](./requirements.html){: .btn .btn-blue }
+[Scope](./scope.html){: .btn .btn-blue } [Project Roadmap](./projects.html){: .btn .btn-blue } [GitHub Repos](./repositories.html){: .btn .btn-github } [Releases](../releases.html#project-volumetric-video-experiences-with-mpeg-v3c){: .btn .btn-release } [Tutorials](./tutorials.html){: .btn .btn-tutorial } [Requirements](./requirements.html){: .btn .btn-blue }
 
-# Scope and Architectures
+# Scope
 
 This page contains information such as the specifications within the scope of the tools and high-level architectures that bring context to their applicability.
 
