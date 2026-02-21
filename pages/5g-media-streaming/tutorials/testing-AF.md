@@ -13,18 +13,29 @@ nav_order: 1
 
 # Tutorial - Testing the 5GMS Application Function
 
-## Installation of the 5GMS AF as a Local User
+<img src="../../../assets/images/5gms/5GMS_Downlink_AF.png" /> 
 
-Follow the instructions in this [page](./application-function/installation-local-user-5GMSAF.html) for setting up a test environment without
-requiring full
-system installation.
+This tutorial allows to:
+- Setup the 5GMSd AF
+- Test the M1 Interface APIs:
+  - Provisioning Sessions
+  - Server Certificates
+  - Content Protocol Discovery
+  - Content Hosting
+  - Consumption Reporting
+- Test the M3 Interface APIs:
+  - Simple HTTP configuration
+  - HTTP configuration and certificate sending
+- Test the M5 Interface APIs:
+  - Service Access Information
 
-## Installation of the 5GMS AF as a System Service
+## Installation of the 5GMS AF as a Local User or as a System Service
 
-Follow the instructions in this [page](./application-function/installation-system-service-5GMSAF.html) for setting up a full system
-installation.
+Follow the instructions in this [page](./application-function/installation-local-user-5GMSAF.html) for setting up a test environment without requiring fullsystem installation.
 
-## Configuration 5GMS AF
+Follow the instructions in this [page](./application-function/installation-system-service-5GMSAF.html) for setting up a full system installation.
+
+## Configuration of the 5GMS AF
 
 Follow the instructions in this [page](./application-function/configuration-5GMSAF.html) for setting up a full system installation.
 
