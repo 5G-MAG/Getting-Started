@@ -13,6 +13,10 @@ nav_order: 4
 
 # Tutorial - 5G MSd End-to-End deployment with 5G Network
 
+{: .inshort }
+> This tutorial allows to:
+> - Deploy 5G Media Streaming with a 5G Network and COTS UE
+
 This guide describes how to setup and configure the 5G-MAG Reference Tools to create an end to end setup consisting of
 the 5G Downlink Media Streaming components and a 5G Network based on Open5GS and srsRAN.
 
