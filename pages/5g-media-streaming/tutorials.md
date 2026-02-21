@@ -12,9 +12,12 @@ nav_order: 4
 
 # Tutorials, Tests and Examples
 
-[Tutorial: Developing and Testing the 5GMS Application Server](./tutorials/testing-AS.html){: .btn .btn-tutorial }
+## Tutorial: Developing and Testing the 5GMS Application Server
 
 A series of instructions and examples to test the 5GMS Application Server.
+
+[Go to the Tutorial](./tutorials/testing-AS.html){: .btn .btn-tutorial }
+
 
 [Tutorial: Testing the 5GMS Application Function](./tutorials/testing-AF.html){: .btn .btn-tutorial }
 
