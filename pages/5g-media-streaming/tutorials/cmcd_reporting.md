@@ -5,6 +5,7 @@ parent: Tutorials
 grand_parent: 5G Media Streaming
 has_children: false
 nav_order: 7
+nav_exclude: true
 ---
 
 <img src="../../../assets/images/Banner_5GMS.png" /> 
