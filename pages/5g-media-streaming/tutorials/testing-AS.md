@@ -14,14 +14,7 @@ nav_order: 0
 # Tutorial - Developing and Testing the 5GMS Application Server
 
 {: .inshort }
-> This tutorial allows to:
->- Setup the 5GMSd AS for development and testing
->- Test the 5GMSd AS with the AF
->- Test the 5GMSd AS without the AF (but with an M3 client)
->- Configure an HTTP Application Server
->- Configure an HTTPS Application Server
->- Test the internal M3 Certificates API
->- Test the internal M3 ContentHostingConfiguration API
+This tutorial allows to: Setup the 5GMSd AS for development and testing; Test the 5GMSd AS with the AF; Test the 5GMSd AS without the AF (but with an M3 client); Configure an HTTP Application Server; Configure an HTTPS Application Server; Test the internal M3 Certificates API; Test the internal M3 ContentHostingConfiguration API.
 
 Here you will find information to assist with development and testing of the 5G-MAG Reference Tools 5GMS Application Server (AS).
 
