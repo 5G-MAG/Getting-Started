@@ -14,8 +14,7 @@ nav_order: 3
 # Tutorial - 5G MSd End-to-End deployment (with Docker)
 
 {: .inshort }
-> This tutorial allows to:
-> - Deploy 5G Media Streaming
+This tutorial allows to: Deploy 5G Media Streaming.
 
 This guide describes how to setup and configure the 5G-MAG Reference Tools - 5G Downlink Media Streaming components to
 create an end to end setup as depicted in the illustration below.
