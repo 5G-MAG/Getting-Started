@@ -9,10 +9,11 @@ nav_order: 2
 
 # Testing with Postman
 
-<img src="../../../assets/images/5gms/5GMS_Downlink_AF.png" /> 
-
+{: .inshort }
 This tutorial allows to:
 - Test the M1 and M5 APIs of the 5GMSd AF with Postman
+
+<img src="../../../assets/images/5gms/5GMS_Downlink_AF.png" /> 
 
 [Postman](https://www.postman.com/) is a popular API development and testing tool that allows users to create, send, and
 manage HTTP requests. It provides a user-friendly interface for building and testing API endpoints, making it easier for
