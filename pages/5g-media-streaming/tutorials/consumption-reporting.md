@@ -14,8 +14,7 @@ nav_order: 5
 # Tutorial - Consumption Reporting
 
 {: .inshort }
-> This tutorial allows to:
-> - Use Consumption Reporting for 5G Media Streaming
+This tutorial allows to: Use Consumption Reporting for 5G Media Streaming.
 
 Consumption Collection and Reporting executes the collection of content consumption measurement logs
 from the Media Player and sending of consumption reports to a 5GMSd AF about the currently consumed media
