@@ -50,6 +50,41 @@ The following tutorials cover the deployment and testing of 5GMSd AS and AF.
 
 Note that before the required features of the 5GMS System can be used by 5GMS Clients, they are first provisioned by a 5GMS Application Provider creating one or more _Provisioning Sessions_. The 5GMSd Application Provider can then specify one or more 5GMSd features in the Provisioning Session. The Provisioning Session information may include Content Hosting Configurations, Content Preparation Templates, Server Certificates, Policy Templates, a Consumption Reporting Configuration, Metrics Reporting Configurations, Edge Resources Configurations and Event Data Processing Configurations.
 
+Once created, this is a representation of a Provisioning Session:
+
+```
+{
+  "provisioningSessionId": "string",
+  "provisioningSessionType": "DOWNLINK",
+  "aspId": "string",
+  "appId": "string",
+  "serverCertificateIds": [
+    "string"
+  ],
+  "contentPreparationTemplateIds": [
+    "string"
+  ],
+  "metricsReportingConfigurationIds": [
+    "string"
+  ],
+  "policyTemplateIds": [
+    "string"
+  ],
+  "edgeResourcesConfigurationIds": [
+    "string"
+  ],
+  "eventDataProcessingConfigurationIds": [
+    "string"
+  ]
+}
+```
+
+Where:
+- `provisioningSessionId`: String chosen by the 5GMS AF to serve as an identifier in a resource URI.
+- `provisioningSessionType`: This string provides forward-compatibility with future extensions to the enumeration but is not used to encode content defined in the present version of this API.
+- `aspId`: Contains an identity of an application service provider.
+- `appId`: String providing an application identifier.
+
 Examples of such configuration are avaiable in GitHub.
 
 ## Feature: Content Hosting
@@ -73,6 +108,75 @@ The following are the reference points and APIs.
   - [Service Access Information API](https://jdegre.github.io/loader.html?yaml=TS26512_M5_ServiceAccessInformation.yaml)
 
 Once a Provisioning Session is established using the API at interface M1d, **Content Hosting** can be configured. The security of the content published to the 5GMS System may be guaranteed by a provisioned **Server Certificate**.
+
+This is a JSON scheme of a Content Hosting Configuration:
+
+```
+{
+  "name": "string",
+  "ingestConfiguration": {
+    "pull": true,
+    "protocol": "string",
+    "baseURL": "string"
+  },
+  "distributionConfigurations": [
+    {
+      "entryPoint": {
+        "relativePath": "string",
+        "contentType": "string",
+        "profiles": [
+          "string"
+        ]
+      },
+      "contentPreparationTemplateId": "string",
+      "edgeResourcesConfigurationId": "string",
+      "canonicalDomainName": "string",
+      "domainNameAlias": "string",
+      "baseURL": "string",
+      "pathRewriteRules": [
+        {
+          "requestPathPattern": "string",
+          "mappedPath": "string"
+        }
+      ],
+      "cachingConfigurations": [
+        {
+          "urlPatternFilter": "string",
+          "cachingDirectives": {
+            "statusCodeFilters": [
+              0
+            ],
+            "noCache": true,
+            "maxAge": 0
+          }
+        }
+      ],
+      "geoFencing": {
+        "locatorType": "string",
+        "locators": [
+          "string"
+        ]
+      },
+      "urlSignature": {
+        "urlPattern": "string",
+        "tokenName": "string",
+        "passphraseName": "string",
+        "passphrase": "string",
+        "tokenExpiryName": "string",
+        "useIPAddress": true,
+        "ipAddressName": "string"
+      },
+      "certificateId": "string",
+      "supplementaryDistributionNetworks": [
+        {
+          "distributionNetworkType": "NETWORK_EMBMS",
+          "distributionMode": "MODE_EXCLUSIVE"
+        }
+      ]
+    }
+  ]
+}
+```
 
 The following tutorials describe several steps showing how to create a Provisioning Session, add Content Hosting configuration and provisioning of Server Certificates.
 
@@ -148,6 +252,17 @@ The following are the reference points and APIs.
   - [Consumption Reporting API](https://jdegre.github.io/loader.html?yaml=TS26512_M5_ConsumptionReporting.yaml)
 
 Once a Provisioning Session is established using the API at interface M1d, **Consumption Reporting** can be configured.
+
+This is a JSON scheme of a Consumption Reporting Configuration:
+
+```
+{
+  "reportingInterval": 1,
+  "samplePercentage": 100,
+  "locationReporting": true,
+  "accessReporting": true
+}
+```
 
 The following tutorials describe several steps showing how to create a Consumption Reporting Configuration.
 
