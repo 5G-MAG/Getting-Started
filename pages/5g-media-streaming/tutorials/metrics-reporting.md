@@ -11,7 +11,7 @@ nav_order: 6
 
 [Scope](../scope.html){: .btn .btn-blue } [Project Roadmap](../projects.html){: .btn .btn-blue } [GitHub Repos](../repositories.html){: .btn .btn-github } [Releases](../../releases.html#project-5g-media-streaming){: .btn .btn-release } [Tutorials](../tutorials.html){: .btn .btn-tutorial } [Requirements](../requirements.html){: .btn .btn-blue }
 
-# Tutorial - QoE Metrics Reporting
+# Tutorial - 5G Media Streaming with QoE Metrics Reporting
 
 {: .inshort }
 This tutorial allows to: Use QoE Metrics Reporting for 5G Media Streaming.
