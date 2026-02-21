@@ -18,26 +18,35 @@ A series of instructions and examples to test the 5GMS Application Server.
 
 [Go to the Tutorial](./tutorials/testing-AS.html){: .btn .btn-tutorial }
 
-
-[Tutorial: Testing the 5GMS Application Function](./tutorials/testing-AF.html){: .btn .btn-tutorial }
+## Tutorial: Testing the 5GMS Application Function
 
 A series of instructions and examples to test the 5GMS Application Function.
 
-[Tutorial: 5G Media Streaming End-to-End deployment](./tutorials/end-to-end.html){: .btn .btn-tutorial }
+[Go to the Tutorial](./tutorials/testing-AF.html){: .btn .btn-tutorial }
+
+## Tutorial: 5G Media Streaming End-to-End deployment
 
 This guide describes how to setup and configure the 5G-MAG Reference Tools - 5G Downlink Media Streaming components to create an end to end setup using Application Function, Application Server, 5GMSd Aware Application, Media Session Handler, Media Stream Handler and Common Android Library.
 
-[Tutorial: 5G Media Streaming End-to-End deployment with 5G Network and COTS UE](./tutorials/end-to-end-with-5g.html){: .btn .btn-tutorial }
+[Go to the Tutorial](./tutorials/end-to-end.html){: .btn .btn-tutorial }
+
+## Tutorial: 5G Media Streaming End-to-End deployment with 5G Network and COTS UE
 
 This guide describes how to setup and configure the 5G-MAG Reference Tools to create an end to end setup consisting of the 5G Downlink Media Streaming components and a 5G Network based on Open5GS and srsRAN.
 
-[Tutorial: 5G Media Streaming with Consumption Reporting](./tutorials/consumption-reporting.html){: .btn .btn-tutorial }
+[Go to the Tutorial](./tutorials/end-to-end-with-5g.html){: .btn .btn-tutorial }
+
+## Tutorial: 5G Media Streaming with Consumption Reporting
 
 Consumption Collection and Reporting executes the collection of content consumption measurement logs from the Media Player and sending of consumption reports to a 5GMSd AF about the currently consumed media within the available presentation, about the UE capabilities and about the environment of the media session for potential transport optimizations by the network or consumption report analysis.
 
-[Tutorial: 5G Media Streaming with QoE Metrics Reporting](./tutorials/metrics-reporting.html){: .btn .btn-tutorial }
+[Go to the Tutorial](./tutorials/consumption-reporting.html){: .btn .btn-tutorial }
+
+## Tutorial: 5G Media Streaming with QoE Metrics Reporting
 
 QoE Metrics Reporting allows the Quality of Experience of media streaming sessions to be logged by the 5GMS System and exposed for analysis. The 5G-MAG Reference Tools support the scenario in which the metrics collection and reporting is configured by the 5GMSd Application Function. The metrics configuration provided by the 5GMSd AF to the 5GMSd client comprises instructions and rules regarding metrics collection (i.e. measurement and logging) and reporting for different schemes. Each metrics scheme requires the 5GMSd Client to perform metrics collection and subsequent metrics reporting to the 5GMSd AF according to the configuration rules of that scheme. In the simplest case the resulting QoE metrics reports are then saved to disk by the 5GMS Application Function.
+
+[Go to the Tutorial](./tutorials/metrics-reporting.html){: .btn .btn-tutorial }
 
 # Video Library
 Our [YouTube channel](https://www.youtube.com/@5GMAG) hosts some practical videos provided by developers on the use of the 5G-MAG Reference Tools.
