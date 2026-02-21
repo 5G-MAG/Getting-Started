@@ -14,19 +14,7 @@ nav_order: 1
 # Tutorial - Testing the 5GMS Application Function
 
 {: .inshort }
-> This tutorial allows to:
->- Setup the 5GMSd AF
->- Test the M1 Interface APIs:
->  - Provisioning Sessions
->  - Server Certificates
->  - Content Protocol Discovery
->  - Content Hosting
->  - Consumption Reporting
->- Test the M3 Interface APIs:
->  - Simple HTTP configuration
->  - HTTP configuration and certificate sending
->- Test the M5 Interface APIs:
->  - Service Access Information
+This tutorial allows to: Setup the 5GMSd AF; Test the M1 Interface APIs (Provisioning Sessions, Server Certificates, Content Protocol Discovery, Content Hosting, Consumption Reporting); Test the M3 Interface APIs (Simple HTTP configuration, HTTP configuration and certificate sending); Test the M5 Interface APIs (Service Access Information).
 
 <img src="../../../assets/images/5gms/5GMS_Downlink_AF.png" /> 
 
