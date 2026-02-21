@@ -4,7 +4,7 @@ title: Postman (M1, M5)
 parent: Tutorials
 grand_parent: 5G Media Streaming
 has_children: false
-nav_order: 5
+nav_order: 2
 ---
 
 # Testing with Postman
