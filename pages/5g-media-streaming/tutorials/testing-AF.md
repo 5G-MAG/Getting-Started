@@ -16,6 +16,8 @@ nav_order: 1
 {: .inshort }
 This tutorial allows to: Setup the 5GMSd AF; Test the M1 Interface APIs (Provisioning Sessions, Server Certificates, Content Protocol Discovery, Content Hosting, Consumption Reporting); Test the M3 Interface APIs (Simple HTTP configuration, HTTP configuration and certificate sending); Test the M5 Interface APIs (Service Access Information).
 
+Here you will find information to assist with testing of the 5G-MAG Reference Tools 5GMS Application Function (AF).
+
 <img src="../../../assets/images/5gms/5GMS_Downlink_AF.png" /> 
 
 ## Installation of the 5GMS AF as a Local User or as a System Service
