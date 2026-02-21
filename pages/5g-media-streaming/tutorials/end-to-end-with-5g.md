@@ -4,7 +4,7 @@ title: 5GMSd + 5G Network
 parent: Tutorials
 grand_parent: 5G Media Streaming
 has_children: false
-nav_order: 3
+nav_order: 4
 ---
 
 <img src="../../../assets/images/Banner_5GMS.png" /> 
