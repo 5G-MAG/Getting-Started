@@ -10,8 +10,8 @@ nav_order: 2
 # Testing with Postman
 
 {: .inshort }
-This tutorial allows to:
-- Test the M1 and M5 APIs of the 5GMSd AF with Postman
+> This tutorial allows to:
+> - Test the M1 and M5 APIs of the 5GMSd AF with Postman
 
 <img src="../../../assets/images/5gms/5GMS_Downlink_AF.png" /> 
 
