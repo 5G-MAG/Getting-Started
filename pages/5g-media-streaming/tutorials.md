@@ -28,7 +28,7 @@ This tutorial allows to: Setup the 5GMSd AF; Test the M1 Interface APIs (Provisi
 
 This tutorial allows to: Test the M1 and M5 APIs of the 5GMSd AF with Postman.
 
-[Go to the Tutorial: Testing M1 and M5 APIs with Postman](./tutorials/testing-AF.html){: .btn .btn-tutorial }
+[Go to the Tutorial: Testing M1 and M5 APIs with Postman](./tutorials/testing-postman.html){: .btn .btn-tutorial }
 
 ## Tutorial: 5G MSd End-to-End deployment (with Docker)
 
