@@ -39,15 +39,14 @@ This includes the implementation of the following entities: **5GMSd Application 
 
 The following tutorials cover the deployment of an end-to-end 5GMSd implementation.
 
-[Tutorial: Deploy 5GMSd End-to-End](./tutorials/end-to-end.html){: .btn .btn-tutorial }
-
-[Tutorial: Deploy 5GMSd End-to-End including a 5G Network and UE](./tutorials/end-to-end-with-5g.html){: .btn .btn-tutorial }
+[Go to the Tutorial: 5G MSd End-to-End deployment (with Docker)](./tutorials/end-to-end.html){: .btn .btn-tutorial }
+[Go to the Tutorial: 5G MSd End-to-End deployment with 5G Network](./tutorials/end-to-end-with-5g.html){: .btn .btn-tutorial }
 
 The following tutorials cover the deployment and testing of 5GMSd AS and AF.
 
-[Tutorial: Test the 5GMS Application Function](./tutorials/testing-AF.html){: .btn .btn-tutorial }
-
-[Tutorial: Test the 5GMS Application Server](./tutorials/testing-AS.html){: .btn .btn-tutorial }
+[Go to the Tutorial: Developing and Testing the 5GMS Application Server](./tutorials/testing-AS.html){: .btn .btn-tutorial }
+[Go to the Tutorial: Testing the 5GMS Application Function](./tutorials/testing-AF.html){: .btn .btn-tutorial }
+[Go to the Tutorial: Testing M1 and M5 APIs with Postman](./tutorials/testing-postman.html){: .btn .btn-tutorial }
 
 Note that before the required features of the 5GMS System can be used by 5GMS Clients, they are first provisioned by a 5GMS Application Provider creating one or more _Provisioning Sessions_. The 5GMSd Application Provider can then specify one or more 5GMSd features in the Provisioning Session. The Provisioning Session information may include Content Hosting Configurations, Content Preparation Templates, Server Certificates, Policy Templates, a Consumption Reporting Configuration, Metrics Reporting Configurations, Edge Resources Configurations and Event Data Processing Configurations.
 
@@ -76,9 +75,9 @@ Once a Provisioning Session is established using the API at interface M1d, **Con
 
 The following tutorials describe several steps showing how to create a Provisioning Session, add Content Hosting configuration and provisioning of Server Certificates.
 
-[Tutorial: Deploy 5GMSd End-to-End](./tutorials/end-to-end.html){: .btn .btn-tutorial }
-
-[Tutorial: Test the 5GMS AF](./tutorials/testing-AF.html){: .btn .btn-tutorial }
+[Go to the Tutorial: 5G MSd End-to-End deployment (with Docker)](./tutorials/end-to-end.html){: .btn .btn-tutorial }
+[Go to the Tutorial: Testing the 5GMS Application Function](./tutorials/testing-AF.html){: .btn .btn-tutorial }
+[Go to the Tutorial: Testing M1 and M5 APIs with Postman](./tutorials/testing-postman.html){: .btn .btn-tutorial }
 
 ## Feature: Network Assistance
 
@@ -125,6 +124,12 @@ M5 | 5.3.3 | [Dynamic Policies API](https://jdegre.github.io/loader.html?yaml=TS
 When the dynamic policy feature is offered and selected, the 5GMSd Application Provider specifies a set of policies which can be invoked for the unicast downlink streaming session. The UE becomes aware of the 
 selected policies in the form of a list of valid Policy Template Ids.
 
+The following tutorials describe several steps showing how to create and provision Policy Templates.
+
+[Go to the Tutorial: 5G MSd End-to-End deployment (with Docker)](./tutorials/end-to-end.html){: .btn .btn-tutorial }
+[Go to the Tutorial: Testing the 5GMS Application Function](./tutorials/testing-AF.html){: .btn .btn-tutorial }
+[Go to the Tutorial: Testing M1 and M5 APIs with Postman](./tutorials/testing-postman.html){: .btn .btn-tutorial }
+
 ## Feature: Consumption Reporting
 
 The consumption reporting feature allows consumption of downlink media streaming to be logged by the 5GMS System and exposed for analysis.
@@ -144,9 +149,9 @@ Once a Provisioning Session is established using the API at interface M1d, **Con
 
 The following tutorials describe several steps showing how to create a Consumption Reporting Configuration.
 
-[Tutorial: Deploy 5GMSd with Consumption Reporting](./tutorials/consumption-reporting.html){: .btn .btn-tutorial }
-
-[Tutorial: Test the 5GMS AF](./tutorials/testing-AF.html){: .btn .btn-tutorial }
+[Go to the Tutorial: 5G Media Streaming with Consumption Reporting](./tutorials/consumption-reporting.html){: .btn .btn-tutorial }
+[Go to the Tutorial: Testing the 5GMS Application Function](./tutorials/testing-AF.html){: .btn .btn-tutorial }
+[Go to the Tutorial: Testing M1 and M5 APIs with Postman](./tutorials/testing-postman.html){: .btn .btn-tutorial }
 
 ## Feature: QoE Metrics Reporting
 
@@ -173,9 +178,9 @@ Once a Provisioning Session is established using the API at interface M1d, **QoE
 
 The following tutorials describe several steps showing how to create a QoE Metrics Reporting Configuration.
 
-[Tutorial: Deploy 5GMSd with QoE Metrics Reporting](./tutorials/metrics-reporting.html){: .btn .btn-tutorial }
-
-[Tutorial: Test the 5GMS AF](./tutorials/testing-AF.html){: .btn .btn-tutorial }
+[Go to the Tutorial: 5G Media Streaming with QoE Metrics Reporting](./tutorials/metrics-reporting.html){: .btn .btn-tutorial }
+[Go to the Tutorial: Testing the 5GMS Application Function](./tutorials/testing-AF.html){: .btn .btn-tutorial }
+[Go to the Tutorial: Testing M1 and M5 APIs with Postman](./tutorials/testing-postman.html){: .btn .btn-tutorial }
 
 ## Feature: Data collection, reporting and exposure (TS 26.510)
 
