@@ -13,7 +13,9 @@ nav_order: 6
 
 # Tutorial - QoE Metrics Reporting
 
-## Introduction
+{: .inshort }
+> This tutorial allows to:
+> - Use QoE Metrics Reporting for 5G Media Streaming
 
 QoE Metrics Reporting allows the Quality of Experience of media streaming sessions to be logged by the 5GMS System and
 exposed for analysis. The 5G-MAG Reference Tools support the scenario in which the metrics collection and reporting is
@@ -26,10 +28,6 @@ are then saved to disk by the 5GMS Application Function.
 To setup and enable QoE Metrics Reporting we must first configure the 5GMS Application Function and the 5GMS Application
 Server. Next, we start a 5GMS media streaming downlink session on the client-side. The resulting QoE metrics reports can
 then be accessed from the local hard-drive.
-
-## Demo Video
-
-A demo video illustrating the same setup as described in this tutorial can be found [here](TODO).
 
 ## Server-side Setup
 
