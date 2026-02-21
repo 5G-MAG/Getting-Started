@@ -11,7 +11,7 @@ nav_order: 5
 
 [Scope](../scope.html){: .btn .btn-blue } [Project Roadmap](../projects.html){: .btn .btn-blue } [GitHub Repos](../repositories.html){: .btn .btn-github } [Releases](../../releases.html#project-5g-media-streaming){: .btn .btn-release } [Tutorials](../tutorials.html){: .btn .btn-tutorial } [Requirements](../requirements.html){: .btn .btn-blue }
 
-# Tutorial - Consumption Reporting
+# Tutorial - 5G Media Streaming with Consumption Reporting
 
 {: .inshort }
 This tutorial allows to: Use Consumption Reporting for 5G Media Streaming.
