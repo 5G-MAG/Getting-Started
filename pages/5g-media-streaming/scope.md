@@ -80,10 +80,10 @@ Once created, this is a representation of a Provisioning Session:
 ```
 
 Where:
-- `provisioningSessionId`: String chosen by the 5GMS AF to serve as an identifier in a resource URI.
-- `provisioningSessionType`: This string provides forward-compatibility with future extensions to the enumeration but is not used to encode content defined in the present version of this API.
-- `aspId`: Contains an identity of an application service provider.
-- `appId`: String providing an application identifier.
+- `provisioningSessionId`: A unique identifier for this Provisioning Session.
+- `provisioningSessionType`: The type of Provisioning Session.
+- `aspId`: The identity of the Application Service Provider responsible for this Provisioning Session.
+- `appId`: The Application Identifier to which this Provisioning Session pertains.
 
 ## Feature: Content Hosting
 
@@ -175,6 +175,10 @@ This is a JSON scheme of a Content Hosting Configuration:
   ]
 }
 ```
+
+Note that the supported `protocols` in 3GPP Release 17 are:
+- HTTP pull-based content ingest protocol: `urn:3gpp:5gms:content-protocol:http-pull-ingest`
+- DASH-IF push-based content ingest protocol `urn:3gpp:5gms:content-protocol:dash-if-ingest`
 
 Examples are available in: [https://github.com/5G-MAG/rt-5gms-examples/example-files](https://github.com/5G-MAG/rt-5gms-examples/example-files)
 
@@ -297,6 +301,12 @@ This is a JSON scheme of a Consumption Reporting Configuration:
 }
 ```
 
+Where:
+- `reportingInterval`: The interval between two consecutive consumption reports. The value shall be greater than zero.
+- `samplePercentage`: The proportion of media streaming clients that shall report media consumption, expressed as a floating point value between 0.0 and 100.0.
+- `locationReporting`: Stipulates whether the Media Session Handler is required to provide location data to the 5GMSd AF in consumption reporting messages.
+- `accessReporting`: Stipulates whether the Media Session Handler is required to provide consumption reporting messages to the 5GMSd AF when the access network changes during a media streaming session.
+
 Examples are available in: [https://github.com/5G-MAG/rt-5gms-examples/example-files](https://github.com/5G-MAG/rt-5gms-examples/example-files)
 
 The following tutorials describe several steps showing how to create a Consumption Reporting Configuration.
@@ -353,6 +363,16 @@ This is a JSON scheme of a Metrics Reporting Configuration:
   ]
 }
 ```
+
+Where the field `metrics` for downlink media streaming and for the 3GPP scheme `urn:3GPP:ns:PSS:DASH:QM10` corresponds, for example, to one or more of the following quality metrics for DASH:
+  - List of Representation Switch Events: `urn:3GPP:ns:PSS:DASH:QM10#RepSwitchList`
+  - Average Throughput: `urn:3GPP:ns:PSS:DASH:QM10#AvgThroughput
+  - Initial Playout Delay: `urn:3GPP:ns:PSS:DASH:QM10#InitialPlayoutDelay
+  - Buffer Level: `urn:3GPP:ns:PSS:DASH:QM10#BufferLevel`
+  - Play List: `urn:3GPP:ns:PSS:DASH:QM10#PlayList`
+  - MPD Information: `urn:3GPP:ns:PSS:DASH:QM10#MPDInformation`
+  - Playout Delay for Media Start-up: `urn:3GPP:ns:PSS:DASH:QM10#PlayoutDelayforMediaStartup`
+  - Device information: `urn:3GPP:ns:PSS:DASH:QM10#DeviceInformationList`
 
 Examples are available in: [https://github.com/5G-MAG/rt-5gms-examples/example-files](https://github.com/5G-MAG/rt-5gms-examples/example-files)
 
