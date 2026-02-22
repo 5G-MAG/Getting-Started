@@ -85,8 +85,6 @@ Where:
 - `aspId`: Contains an identity of an application service provider.
 - `appId`: String providing an application identifier.
 
-Examples of such configuration are avaiable in GitHub.
-
 ## Feature: Content Hosting
 
 The content hosting feature provides a service equivalent to a Content Delivery Network (CDN) deployed inside or outside the Trusted DN. It includes selecting the ingest protocol and format, caching and proxying of media objects, content preparation, access protection (e.g. URL signing) and indicating a target distribution area (e.g. through geofencing).
@@ -178,6 +176,8 @@ This is a JSON scheme of a Content Hosting Configuration:
 }
 ```
 
+Examples are available in: [https://github.com/5G-MAG/rt-5gms-examples/example-files](https://github.com/5G-MAG/rt-5gms-examples/example-files)
+
 The following tutorials describe several steps showing how to create a Provisioning Session, add Content Hosting configuration and provisioning of Server Certificates.
 
 [Go to the Tutorial: 5G MSd End-to-End deployment (with Docker)](./tutorials/end-to-end.html){: .btn .btn-tutorial }
@@ -229,6 +229,8 @@ The following are the reference points and APIs.
 When the dynamic policy feature is offered and selected, the 5GMSd Application Provider specifies a set of policies which can be invoked for the unicast downlink streaming session. The UE becomes aware of the 
 selected policies in the form of a list of valid Policy Template Ids.
 
+Examples are available in: [https://github.com/5G-MAG/rt-5gms-examples/example-files](https://github.com/5G-MAG/rt-5gms-examples/example-files)
+
 The following tutorials describe several steps showing how to create and provision Policy Templates.
 
 [Go to the Tutorial: 5G MSd End-to-End deployment (with Docker)](./tutorials/end-to-end.html){: .btn .btn-tutorial }
@@ -264,6 +266,8 @@ This is a JSON scheme of a Consumption Reporting Configuration:
 }
 ```
 
+Examples are available in: [https://github.com/5G-MAG/rt-5gms-examples/example-files](https://github.com/5G-MAG/rt-5gms-examples/example-files)
+
 The following tutorials describe several steps showing how to create a Consumption Reporting Configuration.
 
 [Go to the Tutorial: 5G Media Streaming with Consumption Reporting](./tutorials/consumption-reporting.html){: .btn .btn-tutorial }
@@ -293,6 +297,8 @@ The following are the reference points and APIs.
   - [Metrics Reporting API](https://jdegre.github.io/loader.html?yaml=TS26512_M5_MetricsReporting.yaml)
 
 Once a Provisioning Session is established using the API at interface M1d, **QoE Metrics Reporting** can be configured.
+
+Examples are available in: [https://github.com/5G-MAG/rt-5gms-examples/example-files](https://github.com/5G-MAG/rt-5gms-examples/example-files)
 
 The following tutorials describe several steps showing how to create a QoE Metrics Reporting Configuration.
 
