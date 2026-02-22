@@ -231,6 +231,37 @@ selected policies in the form of a list of valid Policy Template Ids.
 
 Examples are available in: [https://github.com/5G-MAG/rt-5gms-examples/example-files](https://github.com/5G-MAG/rt-5gms-examples/example-files)
 
+This is a JSON scheme of a Policy Template:
+
+```
+{
+  "externalReference": "string",
+  "qoSSpecification": {
+    "qosReference": "string",
+    "maxBtrUl": "string",
+    "maxBtrDl": "string",
+    "maxAuthBtrUl": "string",
+    "maxAuthBtrDl": "string",
+    "defPacketLossRateDl": 0,
+    "defPacketLossRateUl": 0
+  },
+  "applicationSessionContext": {
+    "sliceInfo": {
+      "sst": 255,
+      "sd": "string"
+    },
+    "dnn": "string"
+  },
+  "chargingSpecification": {
+    "sponId": "string",
+    "sponStatus": "SPONSOR_DISABLED",
+    "gpsi": [
+      "string"
+    ]
+  }
+}
+```
+
 The following tutorials describe several steps showing how to create and provision Policy Templates.
 
 [Go to the Tutorial: 5G MSd End-to-End deployment (with Docker)](./tutorials/end-to-end.html){: .btn .btn-tutorial }
@@ -297,6 +328,31 @@ The following are the reference points and APIs.
   - [Metrics Reporting API](https://jdegre.github.io/loader.html?yaml=TS26512_M5_MetricsReporting.yaml)
 
 Once a Provisioning Session is established using the API at interface M1d, **QoE Metrics Reporting** can be configured.
+
+This is a JSON scheme of a Metrics Reporting Configuration:
+
+```
+{
+  "metricsReportingConfigurationId": "string",
+  "sliceScope": [
+    {
+      "sst": 255,
+      "sd": "string"
+    }
+  ],
+  "scheme": "string",
+  "dataNetworkName": "string",
+  "reportingInterval": 0,
+  "samplePercentage": 100,
+  "urlFilters": [
+    "string"
+  ],
+  "samplingPeriod": 0,
+  "metrics": [
+    "string"
+  ]
+}
+```
 
 Examples are available in: [https://github.com/5G-MAG/rt-5gms-examples/example-files](https://github.com/5G-MAG/rt-5gms-examples/example-files)
 
