@@ -16,6 +16,8 @@ nav_order: 6
 {: .inshort }
 This tutorial allows to: Use QoE Metrics Reporting for 5G Media Streaming.
 
+<img src="../../../assets/images/5gms/5GMS_Downlink_MetricsReporting.png" /> 
+
 QoE Metrics Reporting allows the Quality of Experience of media streaming sessions to be logged by the 5GMS System and
 exposed for analysis. The 5G-MAG Reference Tools support the scenario in which the metrics collection and reporting is
 configured by the 5GMSd Application Function. The metrics configuration provided by the 5GMSd AF to the 5GMSd client
