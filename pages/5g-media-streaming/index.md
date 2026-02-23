@@ -26,26 +26,26 @@ Explore this slide deck for a concise introduction and a set of essential resour
 
 <table>
   <tr>
-    <td>
+    <td align="center">
       <iframe width="560" height="315" src="https://www.youtube.com/embed/2IU_18Dvhew" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     </td>
-    <td>
+    <td align="center">
       <iframe width="560" height="315" src="https://www.youtube.com/embed/L5nGVf-WhNE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     </td>
   </tr>
   <tr>
-    <td>
+    <td align="center">
       <iframe width="560" height="315" src="https://www.youtube.com/embed/lJG1hNty_AU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     </td>
-    <td>
+    <td align="center">
       <iframe width="560" height="315" src="https://www.youtube.com/embed/fv_LoZXk5Oc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     </td>
   </tr>
   <tr>
-    <td>
+    <td align="center">
       <iframe width="560" height="315" src="https://www.youtube.com/embed/hiHWE3DyhdM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     </td>
-    <td>
+    <td align="center">
       <iframe width="560" height="315" src="https://www.youtube.com/embed/qewsQhGi8aE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     </td>
   </tr>
@@ -55,10 +55,10 @@ Explore this slide deck for a concise introduction and a set of essential resour
 
 <table>
   <tr>
-    <td>
+    <td align="center">
       <iframe width="560" height="315" src="https://www.youtube.com/embed/AvjtVrTrWsA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     </td>
-    <td>
+    <td align="center">
       <iframe width="560" height="315" src="https://www.youtube.com/embed/vEhv0RYGbKo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     </td>
   </tr>
