@@ -381,16 +381,16 @@ This is a JSON scheme of a Metrics Reporting Configuration:
 }
 ```
 
-Where the field `metrics` for downlink media streaming and for the 3GPP scheme `urn:3GPP:ns:PSS:DASH:QM10` corresponds, for example, to one or more of the following quality metrics for DASH (see in green the currently supported):
+Where the field `metrics` for downlink media streaming and for the 3GPP scheme <span style="font-family: monospace;">urn:3GPP:ns:PSS:DASH:QM10</span> corresponds, for example, to one or more of the following quality metrics for DASH (see in green the currently supported):
   - HTTP request/response <span style="color: green; font-family: monospace;">urn:3GPP:ns:PSS:DASH:QM10#HTTPList</span>
   - List of Representation Switch Events: <span style="color: green; font-family: monospace;">urn:3GPP:ns:PSS:DASH:QM10#RepSwitchList</span>
-  - Average Throughput: <span style="color: green; font-family: monospace;">urn:3GPP:ns:PSS:DASH:QM10#AvgThroughput</span>
-  - Initial Playout Delay: <span style="color: green; font-family: monospace;">urn:3GPP:ns:PSS:DASH:QM10#InitialPlayoutDelay</span>
+  - Average Throughput: <span style= "font-family: monospace;">urn:3GPP:ns:PSS:DASH:QM10#AvgThroughput</span>
+  - Initial Playout Delay: <span style="font-family: monospace;">urn:3GPP:ns:PSS:DASH:QM10#InitialPlayoutDelay</span>
   - Buffer Level: <span style="color: green; font-family: monospace;">urn:3GPP:ns:PSS:DASH:QM10#BufferLevel</span>
-  - Play List: <span style="color: green; font-family: monospace;">urn:3GPP:ns:PSS:DASH:QM10#PlayList`</span>
+  - Play List: <span style="font-family: monospace;">urn:3GPP:ns:PSS:DASH:QM10#PlayList`</span>
   - MPD Information: <span style="color: green; font-family: monospace;">urn:3GPP:ns:PSS:DASH:QM10#MPDInformation</span>
-  - Playout Delay for Media Start-up: <span style="color: green; font-family: monospace;">urn:3GPP:ns:PSS:DASH:QM10#PlayoutDelayforMediaStartup`</span>
-  - Device information: <span style="color: green; font-family: monospace;">urn:3GPP:ns:PSS:DASH:QM10#DeviceInformationList`</span>
+  - Playout Delay for Media Start-up: <span style="font-family: monospace;">urn:3GPP:ns:PSS:DASH:QM10#PlayoutDelayforMediaStartup`</span>
+  - Device information: <span style="font-family: monospace;">urn:3GPP:ns:PSS:DASH:QM10#DeviceInformationList`</span>
 
 Examples are available in: [https://github.com/5G-MAG/rt-5gms-examples/example-files](https://github.com/5G-MAG/rt-5gms-examples/example-files)
 
