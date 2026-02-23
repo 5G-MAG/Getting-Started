@@ -57,28 +57,53 @@ This tutorial allows to: Use QoE Metrics Reporting for 5G Media Streaming.
 # Video Library
 Our [YouTube channel](https://www.youtube.com/@5GMAG) hosts some practical videos provided by developers on the use of the 5G-MAG Reference Tools.
 
-Some of the videos are also available here:
+## Videos from the developer community
 
-## 5G Media Streaming at IBC 2025
-<iframe width="560" height="315" src="https://www.youtube.com/embed/AvjtVrTrWsA?si=9WtdC1Akwk52Mjp9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+### General end-to-end setup, components and features
 
-## 5G Media Streaming at FOKUS Media Web Symposium 2024
-<iframe width="560" height="315" src="https://www.youtube.com/embed/vEhv0RYGbKo?si=tvlpk_1P2wP0YHIe" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<table>
+  <tr>
+    <td align="center">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/2IU_18Dvhew" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </td>
+    <td align="center">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/L5nGVf-WhNE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/lJG1hNty_AU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </td>
+    <td align="center">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/fv_LoZXk5Oc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/hiHWE3DyhdM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </td>
+    <td align="center">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/qewsQhGi8aE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </td>
+  </tr>
+ <tr>
+    <td align="center">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/SOA7OGF86Gg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </td>
+    <td align="center">
+    </td>
+  </tr>
+</table>
 
-## 5G Media Streaming QoE Metrics Reporting
-<iframe width="560" height="315" src="https://www.youtube.com/embed/hiHWE3DyhdM?si=RJQjJ41UpjLMShNa" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+### Demonstrators
 
-## Introducing the 5GMS Application Provider Management Portal
-<iframe width="560" height="315" src="https://www.youtube.com/embed/qewsQhGi8aE?si=u1Mouq9yrju1QZDB" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
-## 5GMS Consumpion Reporting, Network Assistance and Dynamic Policies
-<iframe width="560" height="315" src="https://www.youtube.com/embed/fv_LoZXk5Oc?si=lAQe7xgRzvHMnGY4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
-## 5G Media Streaming supported by 5G-MAG Reference Tools
-<iframe width="560" height="315" src="https://www.youtube.com/embed/lJG1hNty_AU?si=FeKrrTMB-ZYtBuKh" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
-## 5G Media Streaming End-to-end setup with Android clients
-<iframe width="560" height="315" src="https://www.youtube.com/embed/L5nGVf-WhNE?si=zaYYKpaxuvbTjfF_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
-## 5G Media Streaming in the BBC R&D standalone testbed
-<iframe width="560" height="315" src="https://www.youtube.com/embed/2IU_18Dvhew?si=99JFju91lA4jH2dX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<table>
+  <tr>
+    <td align="center">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/AvjtVrTrWsA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </td>
+    <td align="center">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/vEhv0RYGbKo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </td>
+  </tr>
+</table>
