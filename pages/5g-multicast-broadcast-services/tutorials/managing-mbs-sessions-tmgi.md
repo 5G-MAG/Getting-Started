@@ -11,7 +11,7 @@ nav_order: 1
 
 [Scope](../scope.html){: .btn .btn-blue } [Project Roadmap](../projects.html){: .btn .btn-blue } [GitHub Repos](../repositories.html){: .btn .btn-github } [Releases](../../releases.html#project-5g-multicast-broadcast-services){: .btn .btn-release } [Tutorials](../tutorials.html){: .btn .btn-tutorial } [Requirements](../requirements.html){: .btn .btn-blue }
 
-# Managing MBS Sessions and TMGIs
+# Tutorial - Managing MBS Sessions and TMGIs
 
 MBS Sessions can be of two different types, Broadcast MBS Sessions and Multicast MBS Sessions. Broadcast MBS Sessions
 can be seen as a subset of the Multicast MBS Sessions functionality. In the MBS Sessions context, two kinds of
