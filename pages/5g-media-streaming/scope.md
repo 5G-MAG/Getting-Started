@@ -37,6 +37,8 @@ This includes the implementation of the following entities: **5GMSd Application 
 
 [To the GitHub Repos](./repositories.html){: .btn .btn-github }
 
+#### TUTORIALS
+
 The following tutorials cover the deployment of an end-to-end 5GMSd implementation.
 
 [Go to the Tutorial: 5G MSd End-to-End deployment (with Docker)](./tutorials/end-to-end.html){: .btn .btn-tutorial }
@@ -185,6 +187,8 @@ Note that the supported `protocols` in 3GPP Release 17 are:
 
 Examples are available in: [https://github.com/5G-MAG/rt-5gms-examples/example-files](https://github.com/5G-MAG/rt-5gms-examples/example-files)
 
+#### TUTORIALS
+
 The following tutorials describe several steps showing how to create a Provisioning Session, add Content Hosting configuration and provisioning of Server Certificates.
 
 [Go to the Tutorial: 5G MSd End-to-End deployment (with Docker)](./tutorials/end-to-end.html){: .btn .btn-tutorial }
@@ -271,6 +275,8 @@ This is a JSON scheme of a Policy Template:
 }
 ```
 
+#### TUTORIALS
+
 The following tutorials describe several steps showing how to create and provision Policy Templates.
 
 [Go to the Tutorial: 5G MSd End-to-End deployment (with Docker)](./tutorials/end-to-end.html){: .btn .btn-tutorial }
@@ -315,6 +321,8 @@ Where:
 - `accessReporting`: Stipulates whether the Media Session Handler is required to provide consumption reporting messages to the 5GMSd AF when the access network changes during a media streaming session.
 
 Examples are available in: [https://github.com/5G-MAG/rt-5gms-examples/example-files](https://github.com/5G-MAG/rt-5gms-examples/example-files)
+
+#### TUTORIALS
 
 The following tutorials describe several steps showing how to create a Consumption Reporting Configuration.
 
@@ -384,6 +392,8 @@ Where the field `metrics` for downlink media streaming and for the 3GPP scheme `
   - Device information: `urn:3GPP:ns:PSS:DASH:QM10#DeviceInformationList`
 
 Examples are available in: [https://github.com/5G-MAG/rt-5gms-examples/example-files](https://github.com/5G-MAG/rt-5gms-examples/example-files)
+
+#### TUTORIALS
 
 The following tutorials describe several steps showing how to create a QoE Metrics Reporting Configuration.
 
