@@ -387,10 +387,10 @@ Where the field `metrics` for downlink media streaming and for the 3GPP scheme <
   - Average Throughput: <span style= "font-family: monospace;">urn:3GPP:ns:PSS:DASH:QM10#AvgThroughput</span>
   - Initial Playout Delay: <span style="font-family: monospace;">urn:3GPP:ns:PSS:DASH:QM10#InitialPlayoutDelay</span>
   - Buffer Level: <span style="color: green; font-family: monospace;">urn:3GPP:ns:PSS:DASH:QM10#BufferLevel</span>
-  - Play List: <span style="font-family: monospace;">urn:3GPP:ns:PSS:DASH:QM10#PlayList`</span>
+  - Play List: <span style="font-family: monospace;">urn:3GPP:ns:PSS:DASH:QM10#PlayList</span>
   - MPD Information: <span style="color: green; font-family: monospace;">urn:3GPP:ns:PSS:DASH:QM10#MPDInformation</span>
-  - Playout Delay for Media Start-up: <span style="font-family: monospace;">urn:3GPP:ns:PSS:DASH:QM10#PlayoutDelayforMediaStartup`</span>
-  - Device information: <span style="font-family: monospace;">urn:3GPP:ns:PSS:DASH:QM10#DeviceInformationList`</span>
+  - Playout Delay for Media Start-up: <span style="font-family: monospace;">urn:3GPP:ns:PSS:DASH:QM10#PlayoutDelayforMediaStartup</span>
+  - Device information: <span style="font-family: monospace;">urn:3GPP:ns:PSS:DASH:QM10#DeviceInformationList</span>
 
 Examples are available in: [https://github.com/5G-MAG/rt-5gms-examples/example-files](https://github.com/5G-MAG/rt-5gms-examples/example-files)
 
