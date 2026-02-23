@@ -72,9 +72,16 @@ block-beta
 
 This tutorial assumes that you have cloned and built the [rt-mbs-function repository](https://github.com/5G-MAG/rt-mbs-function), [rt-mbs-transport-function repository](https://github.com/5G-MAG/rt-mbs-transport-function) and the [5MBS branch of the open5gs repository](https://github.com/5G-MAG/open5gs/tree/5mbs).
 
-A 5G Core must be running for these examples with at least the NRF, SCP, MB-SMF, MB-UPF, MB-AMF and UDM Network Functions (see the instructions in our [Open5GS 5MBS branch](https://github.com/5G-MAG/open5gs/tree/5mbs) README).
+A 5G Core must be running for these examples with at least the NRF, SCP, MB-SMF, MB-UPF, MB-AMF and UDM Network
+Functions (see the instructions in our [Open5GS 5MBS branch](https://github.com/5G-MAG/open5gs/tree/5mbs) README). 
 
 There should also be an MBSTF running (see the instructions in the [rt-mbs-transport-function](https://github.com/5G-MAG/rt-mbs-transport-function) README).
+
+For convenience purposes we are providing a bash script that starts all required components including the MBSF. You can
+find the script [here](https://github.com/5G-MAG/rt-mbs-examples/blob/main/scripts/tmux/mbs-function-tutorial-startup.sh).
+The instructions how to use the script can be
+found [here](https://github.com/5G-MAG/rt-mbs-examples/tree/main/scripts/tmux#mbsf-tutorial-startup-script). If you use
+the script you can omit the step "Running the MBSF for this tutorial".
 
 ## Description
 
@@ -146,6 +153,12 @@ With an MBS aware 5G Core running, and an MBSTF running (see above in [Prerequis
 ```
 
 ## MBS User Service Operations
+
+The following sections cover the operations that can be performed on MBS User Services via the Nmb10 API. The operations
+covered are Create, Update, Retrieve and Delete. For that purpose we will be using the `curl` command line tool to send
+HTTP requests to the API. However, if you prefer a graphical user interface to trigger the calls we are also offering an
+Insomnia collection. You can find the
+collection [here](https://github.com/5G-MAG/rt-mbs-examples/tree/main/insomnia).
 
 ### Create MBS User Service
 
