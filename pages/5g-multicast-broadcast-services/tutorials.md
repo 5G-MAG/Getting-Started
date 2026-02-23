@@ -12,14 +12,35 @@ nav_order: 4
 
 # Tutorials, Tests and Examples
 
-## [Tutorial: Initial MBS support in the 5GC](./tutorials/mbs-in-5gc.html)
+## Tutorial: Initial support of MBS in the 5GC
+
 This tutorial provides an overview on the initial implementation of MBS in Open5GS Core.
 
-## [Tutorial: Initial MBS Transport Function (MBSTF) implementation](./tutorials/mbstf.html)
+[Go to the Tutorial: Initial support of MBS in the 5GC](./tutorials/mbs-in-5gc.html){: .btn .btn-tutorial }
+
+## Tutorial: MBS support in the 5GC (Docker deployment)
+
+This tutorial provides an overview on the Docker deployment implementation of MBS in Open5GS Core.
+
+[Go to the Tutorial: MBS support in the 5GC (Docker deployment)](./tutorials/mbs-in-5gc.html){: .btn .btn-tutorial }
+
+## Tutorial - Managing MBS Sessions and TMGIs
+
+This tutorial provides an overview on the initial implementation of MBS in Open5GS Core.
+
+[Go to the Tutorial: Managing MBS Sessions and TMGIs](./tutorials/mbs-in-5gc.html){: .btn .btn-tutorial }
+
+## Tutorial: MBS Transport Function (MBSTF) API examples
+
 This tutorial provides an overview on the initial implementation of the MBSTF.
 
-## [Tutorial: Initial MBS Function (MBSF) implementation](./tutorials/mbsf.html)
-This tutorial provides an overview of the operation of the MBSF.
+[Go to the Tutorial: MBS Transport Function (MBSTF) API examples](./tutorials/mbstf.html){: .btn .btn-tutorial }
+
+## Tutorial: Operating the MBS Function and APIs
+
+This tutorial provides an overview on the initial implementation of the MBSF.
+
+[Go to the Tutorial: Operating the MBS Function and APIs](./tutorials/mbsf.html){: .btn .btn-tutorial }
 
 # Video Library
 Our [YouTube channel](https://www.youtube.com/@5GMAG) hosts some practical videos provided by developers on the use of the 5G-MAG Reference Tools.
