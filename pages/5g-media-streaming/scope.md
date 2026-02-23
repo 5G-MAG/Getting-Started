@@ -417,6 +417,9 @@ The following are the reference points and APIs.
   - [Metrics Reporting API](https://jdegre.github.io/loader.html?yaml=TS26512_M5_MetricsReporting.yaml)
   - [Consumption Reporting API](https://jdegre.github.io/loader.html?yaml=TS26512_M5_ConsumptionReporting.yaml)
 
+{: .inshort }
+At the moment, a generic architecture for UE Data Collection and Reporting is available in the 5G-MAG Reference Tools under the following project: [**UE Data Collection, Reporting and Event Exposure**](../ue-data-collection-reporting-exposure/scope.html). Note these entities are not yet implemented within the framework of 5GMS.
+
 ## Summary of features supported by the 5GMS Application Function
 
 The release versions of the 5GMSd Application Function support differing sets of interfaces, as described by the different
