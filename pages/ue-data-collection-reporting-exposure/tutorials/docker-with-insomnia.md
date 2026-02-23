@@ -7,38 +7,29 @@ has_children: false
 nav_order: 2
 ---
 
-<details open markdown="block">
-  <summary>
-    Table of contents
-  </summary>
-  {: .text-delta }
-1. TOC
-{:toc}
-</details>
+<img src="../../../assets/images/Banner_UEDC.png" /> 
+
+[Scope](../scope.html){: .btn .btn-blue } [Project Roadmap](../projects.html){: .btn .btn-blue } [GitHub Repos](../repositories.html){: .btn .btn-github } [Releases](../../releases.html#project-ue-data-collection-reporting--event-exposure){: .btn .btn-release } [Tutorials](../tutorials.html){: .btn .btn-tutorial } [Requirements](../requirements.html){: .btn .btn-blue }
 
 # Tutorial - Docker Setup with Insomnia REST client
 
-In this tutorial we will show you how to setup
-the [Data Collection Application Function](https://github.com/5G-MAG/rt-data-collection-application-function) (DCAF)
-with Docker and use its REST API with the [Insomnia REST client](https://insomnia.rest/).
-
-## Video
+{: .inshort } This tutorial allows to: Setup the Data Collection Application Function with Docker and use its REST API with the Insomnia REST client.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/ZpktgeRCqNY?si=TMghwBOUmjV4MZkv" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-## Setup diagram
+# Setup diagram
 
 <img src="../../../assets/images/dcaf/uedc_docker_1.png" style="width: 80%">
 
-## Requirements
+# Requirements
 
 To follow this tutorial you need to have Docker installed on your machine. You can download Docker
 from [here](https://www.docker.com/products/docker-desktop). In addition, you will need the Insomnia REST client that
 can be downloaded from [here](https://insomnia.rest/).
 
-## DCAF Setup
+# DCAF Setup
 
-### Downloading
+## Downloading
 
 First we need to clone the repository of the Data Collection Application Function. Open a terminal and
 run:
@@ -47,7 +38,7 @@ run:
 git clone --recurse-submodules https://github.com/5G-MAG/rt-data-collection-application-function.git
 ```
 
-### Starting the Docker Containers
+## Starting the Docker Containers
 
 Now that we have the source code of the Data Collection Application Function, we can build the Docker
 images and start the Docker containers. For that reason, we navigate to the root directory of the repository and build
@@ -129,16 +120,16 @@ nrf-1        | 03/25 13:09:37.987: [nrf] INFO: [67bfc656-097a-41f0-9047-3b8b76ef
 dcaf-1       | 03/25 13:09:37.987: [sbi] INFO: [67bfc656-097a-41f0-9047-3b8b76ef7fa1] NF registered [Heartbeat:10s] (../subprojects/open5gs/lib/sbi/nf-sm.c:214)
 ````
 
-## Insomnia Setup
+# Insomnia Setup
 
 Now that the Docker containers are up and running, we need to setup the Insomnia REST client.
 
-### Pre-Configuration
+## Pre-Configuration
 
 The DCAF requires the HTTP version to be set to `HTTP/2 PriorKnowledge` for incoming requests. To set this up in
 Insomnia, navigate to `Settings` and change `Preferred HTTP version` to `HTTP/2 PriorKnowledge`.
 
-### Importing the Workspace
+## Importing the Workspace
 
 For your convenience, we have prepared an Insomnia workspace that you can import. You can download the workspace
 from [here](https://github.com/5G-MAG/rt-data-collection-application-function/blob/development/usage/insomnia/Insomnia_DCAF.yaml).
@@ -169,14 +160,14 @@ const provisioningSessionId = response.provisioningSessionId;
 insomnia.environment.set("provisioning_session_id", provisioningSessionId);
 ````
 
-### Using the REST APIs
+# Using the REST APIs
 
 Now that all components are running and our Insomnia workspace is setup, we can start using the REST APIs of the DCAF.
 In this tutorial we will follow these steps:
 
 ![Usage-Sequence](../../../assets/images/dcaf/usage-sequence-diagram.png)
 
-#### Start-Up phase
+## Start-Up phase
 
 At start-up, the DCAF registers with the NRF and starts the HTTP/2 server. This is done automatically and does not
 require any user interaction.
@@ -188,12 +179,12 @@ nrf-1        | 03/25 13:09:37.987: [nrf] INFO: [67bfc656-097a-41f0-9047-3b8b76ef
 dcaf-1       | 03/25 13:09:37.987: [sbi] INFO: [67bfc656-097a-41f0-9047-3b8b76ef7fa1] NF registered [Heartbeat:10s] (../subprojects/open5gs/lib/sbi/nf-sm.c:214)
 ```
 
-#### Provisioning Phase
+## Provisioning Phase
 
 In the provisioning phase we act as an `Application Provider` and create a new Data Reporting Provisioning Session and a
 Data Reporting Configuration. This is done by sending `POST` requests via Insomnia to the DCAF.
 
-##### Creating a new Data Reporting Provisioning Session
+### Creating a new Data Reporting Provisioning Session
 
 To create a new Data Reporting Provisioning Session navigate to the `R1 - Data Reporting Provisioning Session` folder in
 the Insomnia workspace and select the
@@ -209,7 +200,7 @@ const provisioningSessionId = response.provisioningSessionId;
 insomnia.environment.set("provisioning_session_id", provisioningSessionId);
 ````
 
-##### Creating a new Data Reporting Configuration
+### Creating a new Data Reporting Configuration
 
 Next we create a new Data Reporting Configuration. Navigate to the `R1 - Data Reporting Configuration` folder in the
 Insomnia workspace and select the `Create a new Data Reporting Configuration` POST request. Send the request after
@@ -224,7 +215,7 @@ const dataReportingConfigurationId = response.dataReportingConfigurationId;
 insomnia.environment.set("data_reporting_configuration_id", dataReportingConfigurationId);
 ````
 
-#### Event Subscription Phase
+## Event Subscription Phase
 
 In the event subscription phase we register for events that we are interested in. This is done by sending `POST`
 requests as an Application Provider to the DCAF.
@@ -252,7 +243,7 @@ if (locationHeader) {
 } 
 ````
 
-#### Optional: Changing the HTTP/2 server port
+### Optional: Changing the HTTP/2 server port
 
 By default, the HTTP/2 server that is receiving the reports is started on port `8888`. If you want to change the port
 open `h2_svr-docker.py` and edit the following line:
@@ -276,12 +267,12 @@ request body. Copy the port number (in our example the port is set to `4444`) an
 ````
 
 
-#### Data Reporting Phase
+## Data Reporting Phase
 
 In the data reporting phase we take the role of the user equipment (UE) and create a data reporting session and then
 send data reports.
 
-##### Creating a new Data Reporting Session
+### Creating a new Data Reporting Session
 
 To create a new data reporting session navigate to the `R2 - Data Reporting Session` folder in the Insomnia workspace
 and select `Create a new Data Reporting Session`. Send the request after adjusting the `body` parameters as desired.
@@ -295,12 +286,12 @@ const dataReportingSessionId = response.sessionId;
 insomnia.environment.set("data_reporting_session_id", dataReportingSessionId);
 ```
 
-##### Submitting a communications report
+### Submitting a communications report
 
 The final step is to submit a communications report. For that reason, navigate to the `R2 - Data Reporting` folder and
 select `Submit Communications Report`. Adjust the `body` parameters as desired and send the request.
 
-##### Checking the reports
+### Checking the reports
 
 If everything went well, you should see the reports in the log file located in
 `rt-data-collection-application-function/docker/local/logs/notifications`. An example report looks like this:
