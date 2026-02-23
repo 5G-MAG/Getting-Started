@@ -130,10 +130,10 @@ An example of a request body when Creating a new -individual Application Event E
 }
 ```
 
-## R2 (Direct Data Reporting API)
+## R2 (Direct Data Reporting API) - Ndcaf_DataReporting
 
 R2 supports interactions between the Direct Data Collection Client in the UE and the Data Collection AF to:
-- Obtain dta collection and reporting configuration from the corresponding Data Collection AF instance (by means of Ndcaf_DataReporting service) - when used by a Direct Data Collection Client instance.
+- Obtain data collection and reporting configuration from the corresponding Data Collection AF instance (by means of Ndcaf_DataReporting service) - when used by a Direct Data Collection Client instance.
 - Send reports to a Data Collection AF instance (by means of Ndcaf_DataReporting service) - when subsequently used by the Direct Data Collection Client.
 
 ```
