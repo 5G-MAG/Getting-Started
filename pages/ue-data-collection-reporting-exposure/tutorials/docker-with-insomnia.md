@@ -13,7 +13,8 @@ nav_order: 2
 
 # Tutorial - Docker Setup with Insomnia REST client
 
-{: .inshort } This tutorial allows to: Setup the Data Collection Application Function with Docker and use its REST API with the Insomnia REST client.
+{: .inshort }
+This tutorial allows to: Setup the Data Collection Application Function with Docker and use its REST API with the Insomnia REST client.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/ZpktgeRCqNY?si=TMghwBOUmjV4MZkv" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
