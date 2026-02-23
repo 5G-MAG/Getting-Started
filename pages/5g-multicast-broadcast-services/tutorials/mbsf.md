@@ -1,6 +1,6 @@
 ---
 layout: default-codewrap
-title: MBSF APIs
+title: MBSF Operation & APIs
 parent: Tutorials
 grand_parent: 5G Multicast Broadcast Services
 has_children: false
@@ -11,7 +11,7 @@ nav_order: 2
 
 [Scope](../scope.html){: .btn .btn-blue } [Project Roadmap](../projects.html){: .btn .btn-blue } [GitHub Repos](../repositories.html){: .btn .btn-github } [Releases](../../releases.html#project-5g-multicast-broadcast-services){: .btn .btn-release } [Tutorials](../tutorials.html){: .btn .btn-tutorial } [Requirements](../requirements.html){: .btn .btn-blue }
 
-# Introduction to the MBS Function
+# Tutorial - Operating the MBS Function and APIs
 
 The MBS Function is responsible for controlling the MBS User Services sessions. It does this by managing MBS Sessions with the
 MB-SMF, managing MBS Distribution Sessions with the MBSTF(s) and creating and propagating the User Service Announcements. 
@@ -19,8 +19,6 @@ MB-SMF, managing MBS Distribution Sessions with the MBSTF(s) and creating and pr
 The initial implementation of the MBSF performs the first two tasks, managing the MB-SMF and MBSTF(s), but does not implement the Service Announcement at this time.
 
 The MBSF is configured by an Application Provider using the API at reference point Nmb10. This tutorial covers the use of the APIs at Nmb10 to configure the MBSF.
-
-# Tutorial on Operating the MBS Function
 
 ## Tutorial videos
 
