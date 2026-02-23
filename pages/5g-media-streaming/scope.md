@@ -403,7 +403,7 @@ The following tutorials describe several steps showing how to create a QoE Metri
 
 [Go to the Tutorial: Testing M1 and M5 APIs with Postman](./tutorials/testing-postman.html){: .btn .btn-tutorial }
 
-## Feature: Data collection, reporting and exposure (TS 26.510)
+## Feature: Data collection, reporting and exposure
 
 The data collection, reporting and exposure feature enables the 5GMS System to log data relating to media streaming sessions and to expose this to 
 subscribers in the form of Events.
