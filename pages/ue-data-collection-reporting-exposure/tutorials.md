@@ -12,8 +12,11 @@ nav_order: 3
 
 # Tutorials, Tests and Examples
 
-## [Tutorial - Docker Setup with Insomnia REST client](./tutorials/docker-with-insomnia.html)
-This tutorial shows how to setup the Data Collection Application Function (DCAF) with Docker and use its REST API with the Insomnia REST client.
+## Tutorial - Docker Setup with Insomnia REST client for testing DCAF APIs
+
+This tutorial allows to: Setup the Data Collection Application Function (DCAF) with Docker and use its REST API with the Insomnia REST client.
+
+[Go to the Tutorial: Docker Setup with Insomnia REST client for testing DCAF APIs](./tutorials/docker-with-insomnia.html){: .btn .btn-tutorial }
 
 # Video Library
 Our [YouTube channel](https://www.youtube.com/@5GMAG) hosts some practical videos provided by developers on the use of the 5G-MAG Reference Tools.
