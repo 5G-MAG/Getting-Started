@@ -1,6 +1,6 @@
 ---
 layout: default
-title: MBS Core (Initial support)
+title: Initial support MBS-5GC
 parent: Tutorials
 grand_parent: 5G Multicast Broadcast Services
 has_children: false
@@ -11,7 +11,7 @@ nav_order: 2
 
 [Scope](../scope.html){: .btn .btn-blue } [Project Roadmap](../projects.html){: .btn .btn-blue } [GitHub Repos](../repositories.html){: .btn .btn-github } [Releases](../../releases.html#project-5g-multicast-broadcast-services){: .btn .btn-release } [Tutorials](../tutorials.html){: .btn .btn-tutorial } [Requirements](../requirements.html){: .btn .btn-blue }
 
-# Initial MBS support in the 5GC
+# Initial support of MBS in the 5GC
 
 This tutorial showcases the current features present in the 5G-MAG MBS implementation. You can check out the video to
 see more details or follow the write-up tutorial.
