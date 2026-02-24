@@ -9,6 +9,8 @@ has_children: true
 
 # Build your Application
 
+### I'd like to setup my application in the domain of... (please select below).
+
 <table>
   <tr>
     <td markdown="span" align="center" width="33%"><a href="./streaming.html"><img style="border:5px solid black;" src="../assets/images/Category_Streaming.png" width="95%"><a/></td>
