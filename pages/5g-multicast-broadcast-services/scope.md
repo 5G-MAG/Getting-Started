@@ -8,25 +8,28 @@ nav_order: 0
 
 <img src="../../assets/images/Banner_5MBS.png" /> 
 
-[Scope](./scope.html){: .btn .btn-blue } [Project Roadmap](./projects.html){: .btn .btn-blue } [GitHub Repos](./repositories.html){: .btn .btn-github } [Releases](../releases.html#project-5g-multicast-broadcast-services){: .btn .btn-release } [Tutorials](./tutorials.html){: .btn .btn-tutorial } [Requirements](./requirements.html){: .btn .btn-blue }
+[Scope](./scope.html){: .btn .btn-blue } [Project Roadmap](./projects.html){: .btn .btn-blue } [GitHub Repos](./repositories.html){: .btn .btn-github } [Releases](../releases.html#project-5g-multicast-broadcast-services){: .btn .btn-release } [Tutorials](./tutorials.html){: .btn .btn-tutorial } [Video Library](./tutorials.html#video-library){: .btn .btn-video } [Requirements](./requirements.html){: .btn .btn-blue }
 
 # Scope
 
-This page contains information such as the specifications within the scope of the tools and high-level architectures that bring context to their applicability.
+In the context of 3GPP standards, the Multicast Broadcast Services System, **MBS System**, is designed to support multicast and broadcast services in 5G networks. It introduces a flexible architecture that supports both Multicast (for specific groups with high reliability) and Broadcast (for wide-area distribution to all users), allowing the network to dynamically switch between point-to-point and point-to-multipoint delivery. While the MBS System handles the heavy lifting of moving data through the 5G core and radio, **MBS User Services** defines how that content is actually packaged, discovered, and consumed by the end-user's application.
 
-## Technical Resources and Specifications
+A list of relevant specifications can be found in the link below.
 
-[Technical Resources](https://hub.5g-mag.com/Tech/pages/5g-multicast-broadcast-services.html){: .btn .btn-blue } [Specifications](https://hub.5g-mag.com/Standards/pages/5g-multicast-broadcast-services.html){: .btn .btn-blue }
+[Specifications](https://hub.5g-mag.com/Standards/pages/5g-multicast-broadcast-services.html){: .btn .btn-blue }
 
-# Features under implementation
+Technical documentation including explainers can be found in the link below.
 
-## MBS development over Open5GS
+[Technical Documentation](https://hub.5g-mag.com/Tech/pages/5g-multicast-broadcast-services.html){: .btn .btn-blue }
 
-The 5G-MAG Reference Tools for MBS currently target:
-- MBS Session provisioning in the MB-SMF (e.g. by an MBSF) via reference point Nmb1.
-- Direct multicast data ingest by the MB-UPF from an AF/AS via reference point N6mb.
-- Shared delivery of multicast packets from the MB-UPF via individual GTP-U tunnels to one or more gNodeBs in the 5G Core.
-- Point-to-Multipoint (PTM) delivery of multicast packets from a gNodeB to UEs via the RAN.
+# What is being implemented? 
+
+{: .inshort }
+Some of the functional entities of the MBS System and MBS User Services, including support in the application provider side, the 5GC, NG-RAN and UE.
+
+## MBS User Services
+
+### Features under implementation
 
 The 5G-MAG Reference Tools for **MBS User Services** add the following functionality:
 - MBSTF Distribution Session management (e.g. by an MBSF) via reference point Nmb2.
@@ -76,6 +79,16 @@ The following features are not yet supported:
     - **Streaming operating mode**: Objects are sent in a FLUTE Session in real time according to a schedule specified in a streaming presentation manifest.
       - Presentation manifest types other than MPEG-DASH MPD (live profile).
   - Status notification subscription
+
+## MBS System
+
+### MBS development over Open5GS
+
+The 5G-MAG Reference Tools for MBS currently target:
+- MBS Session provisioning in the MB-SMF (e.g. by an MBSF) via reference point Nmb1.
+- Direct multicast data ingest by the MB-UPF from an AF/AS via reference point N6mb.
+- Shared delivery of multicast packets from the MB-UPF via individual GTP-U tunnels to one or more gNodeBs in the 5G Core.
+- Point-to-Multipoint (PTM) delivery of multicast packets from a gNodeB to UEs via the RAN.
 
 # High-level architectures
 
