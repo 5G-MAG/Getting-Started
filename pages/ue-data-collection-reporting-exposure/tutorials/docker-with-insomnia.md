@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Docker Setup with Insomnia REST client
+title: DCAF (Docker+Insomnia)
 parent: Tutorials
 grand_parent: UE Data Collection
 has_children: false
@@ -11,7 +11,7 @@ nav_order: 2
 
 [Scope](../scope.html){: .btn .btn-blue } [Project Roadmap](../projects.html){: .btn .btn-blue } [GitHub Repos](../repositories.html){: .btn .btn-github } [Releases](../../releases.html#project-ue-data-collection-reporting--event-exposure){: .btn .btn-release } [Tutorials](../tutorials.html){: .btn .btn-tutorial } [Requirements](../requirements.html){: .btn .btn-blue }
 
-# Tutorial - Docker Setup with Insomnia REST client
+# Tutorial - Data Collection Application Function with Docker and Insomnia REST client
 
 {: .inshort }
 This tutorial allows to: Setup the Data Collection Application Function with Docker and use its REST API with the Insomnia REST client.
