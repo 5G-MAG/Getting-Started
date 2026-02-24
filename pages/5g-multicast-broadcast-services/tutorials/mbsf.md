@@ -77,9 +77,9 @@ Functions (see the instructions in our [Open5GS 5MBS branch](https://github.com/
 
 There should also be an MBSTF running (see the instructions in the [rt-mbs-transport-function](https://github.com/5G-MAG/rt-mbs-transport-function) README).
 
-For convenience purposes we are providing a bash script that starts all required components including the MBSF. You can
+For convenience we are providing a bash script that starts all required components including the MBSF. You can
 find the script [here](https://github.com/5G-MAG/rt-mbs-examples/blob/main/scripts/tmux/mbs-function-tutorial-startup.sh).
-The instructions how to use the script can be
+The instructions to use the script can be
 found [here](https://github.com/5G-MAG/rt-mbs-examples/tree/main/scripts/tmux#mbsf-tutorial-startup-script). If you use
 the script you can omit the step "Running the MBSF for this tutorial".
 
