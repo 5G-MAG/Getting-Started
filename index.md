@@ -7,7 +7,7 @@ has_children: true
 
 <img src="./assets/images/Banner_ReferenceTools.png" /> 
 
-[Application Areas](./pages/application_areas.html){: .btn .btn-blue } [All the Projects](./pages/projects.html){: .btn .btn-blue } [Releases](./pages/releases.html){: .btn .btn-release } [Join us and Contribute!](#join-us-and-contribute){: .btn .btn-blue } [Public Monthly Call](./pages/public-call.html){: .btn .btn-blue }
+[Build your Application](./pages/applications.html){: .btn .btn-blue } [All the Projects](./pages/projects.html){: .btn .btn-blue } [Releases](./pages/releases.html){: .btn .btn-release } [Join us and Contribute!](#join-us-and-contribute){: .btn .btn-blue } [Public Monthly Call](./pages/public-call.html){: .btn .btn-blue }
 
 <img src="./assets/images/5GMAG_RT.png">
 
