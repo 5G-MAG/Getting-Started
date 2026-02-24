@@ -8,7 +8,7 @@ nav_order: 0
 
 <img src="../../assets/images/Banner_5GMS.png" /> 
 
-[Scope](./scope.html){: .btn .btn-blue } [Project Roadmap](./projects.html){: .btn .btn-blue } [GitHub Repos](./repositories.html){: .btn .btn-github } [Releases](../releases.html#project-5g-media-streaming){: .btn .btn-release } [Tutorials](./tutorials.html){: .btn .btn-tutorial } [Requirements](./requirements.html){: .btn .btn-blue }
+[Scope](./scope.html){: .btn .btn-blue } [Project Roadmap](./projects.html){: .btn .btn-blue } [GitHub Repos](./repositories.html){: .btn .btn-github } [Releases](../releases.html#project-5g-media-streaming){: .btn .btn-release } [Tutorials](./tutorials.html){: .btn .btn-tutorial } [Video Library](./tutorials.html#video-library){: .btn .btn-video } [Requirements](./requirements.html){: .btn .btn-blue }
 
 # Scope
 
@@ -37,21 +37,58 @@ This includes the implementation of the following entities: **5GMSd Application 
 
 [To the GitHub Repos](./repositories.html){: .btn .btn-github }
 
+#### TUTORIALS
+
 The following tutorials cover the deployment of an end-to-end 5GMSd implementation.
 
-[Tutorial: Deploy 5GMSd End-to-End](./tutorials/end-to-end.html){: .btn .btn-tutorial }
+[Go to the Tutorial: 5G MSd End-to-End deployment (with Docker)](./tutorials/end-to-end.html){: .btn .btn-tutorial }
 
-[Tutorial: Deploy 5GMSd End-to-End including a 5G Network and UE](./tutorials/end-to-end-with-5g.html){: .btn .btn-tutorial }
+[Go to the Tutorial: 5G MSd End-to-End deployment with 5G Network](./tutorials/end-to-end-with-5g.html){: .btn .btn-tutorial }
 
 The following tutorials cover the deployment and testing of 5GMSd AS and AF.
 
-[Tutorial: Test the 5GMS Application Function](./tutorials/testing-AF.html){: .btn .btn-tutorial }
+[Go to the Tutorial: Developing and Testing the 5GMS Application Server](./tutorials/testing-AS.html){: .btn .btn-tutorial }
 
-[Tutorial: Test the 5GMS Application Server](./tutorials/testing-AS.html){: .btn .btn-tutorial }
+[Go to the Tutorial: Testing the 5GMS Application Function](./tutorials/testing-AF.html){: .btn .btn-tutorial }
+
+[Go to the Tutorial: Testing M1 and M5 APIs with Postman](./tutorials/testing-postman.html){: .btn .btn-tutorial }
 
 Note that before the required features of the 5GMS System can be used by 5GMS Clients, they are first provisioned by a 5GMS Application Provider creating one or more _Provisioning Sessions_. The 5GMSd Application Provider can then specify one or more 5GMSd features in the Provisioning Session. The Provisioning Session information may include Content Hosting Configurations, Content Preparation Templates, Server Certificates, Policy Templates, a Consumption Reporting Configuration, Metrics Reporting Configurations, Edge Resources Configurations and Event Data Processing Configurations.
 
-Examples of such configuration are avaiable in GitHub.
+Once created, this is a representation of a Provisioning Session:
+
+```
+{
+  "provisioningSessionId": "string",
+  "provisioningSessionType": "DOWNLINK",
+  "aspId": "string",
+  "appId": "string",
+  "serverCertificateIds": [
+    "string"
+  ],
+  "contentPreparationTemplateIds": [
+    "string"
+  ],
+  "metricsReportingConfigurationIds": [
+    "string"
+  ],
+  "policyTemplateIds": [
+    "string"
+  ],
+  "edgeResourcesConfigurationIds": [
+    "string"
+  ],
+  "eventDataProcessingConfigurationIds": [
+    "string"
+  ]
+}
+```
+
+Where:
+- `provisioningSessionId`: A unique identifier for this Provisioning Session.
+- `provisioningSessionType`: The type of Provisioning Session.
+- `aspId`: The identity of the Application Service Provider responsible for this Provisioning Session.
+- `appId`: The Application Identifier to which this Provisioning Session pertains.
 
 ## Feature: Content Hosting
 
@@ -59,26 +96,106 @@ The content hosting feature provides a service equivalent to a Content Delivery 
 
 <img src="../../assets/images/5gms/5GMS_ContentHosting.png">
 
-The following are the reference points and interactions and APIs according to 3GPP TS 26.510.
+The following are the reference points and APIs.
 
-Reference Point | Interactions | API Name | Description
---- | --- | --- | ---
-M1 | 5.2.2 | [Provisioning Sessions API](https://jdegre.github.io/loader.html?yaml=TS26512_M1_ProvisioningSessions.yaml) | 8.2
-M1 | 5.2.3 | [Content protocols discovery API](https://jdegre.github.io/loader.html?yaml=TS26512_M1_ContentProtocolsDiscovery.yaml) | 8.3
-M1 | 5.2.4 | [Server Certificates provisioning API](https://jdegre.github.io/loader.html?yaml=TS26512_M1_ServerCertificatesProvisioning.yaml) | 8.4
-M1 | 5.2.5 | [Content Preparation Templates provisioning API](https://jdegre.github.io/loader.html?yaml=TS26512_M1_ContentPreparationTemplatesProvisioning.yaml) | 8.5
-M1 | 5.2.6 | [Edge Resources provisioning API](https://jdegre.github.io/loader.html?yaml=TS26512_M1_EdgeResourcesProvisioning.yaml) | 8.6
-M1 | 5.2.7 | [Policy Templates provisioning API](https://jdegre.github.io/loader.html?yaml=TS26512_M1_PolicyTemplatesProvisioning.yaml) | 8.7
-M1 | 5.2.8 | [Content Hosting provisioning API](https://jdegre.github.io/loader.html?yaml=TS26512_M1_ContentHostingProvisioning.yaml) | 8.8
-M5 | 5.3.2 | [Service Access Information API](https://jdegre.github.io/loader.html?yaml=TS26512_M5_ServiceAccessInformation.yaml) | 9.2
+- At M1:
+  - [Provisioning Sessions API](https://jdegre.github.io/loader.html?yaml=TS26512_M1_ProvisioningSessions.yaml)
+  - [Content protocols discovery API](https://jdegre.github.io/loader.html?yaml=TS26512_M1_ContentProtocolsDiscovery.yaml)
+  - [Server Certificates provisioning API](https://jdegre.github.io/loader.html?yaml=TS26512_M1_ServerCertificatesProvisioning.yaml)
+  - [Content Preparation Templates provisioning API](https://jdegre.github.io/loader.html?yaml=TS26512_M1_ContentPreparationTemplatesProvisioning.yaml)
+  - [Edge Resources provisioning API](https://jdegre.github.io/loader.html?yaml=TS26512_M1_EdgeResourcesProvisioning.yaml)
+  - [Policy Templates provisioning API](https://jdegre.github.io/loader.html?yaml=TS26512_M1_PolicyTemplatesProvisioning.yaml)
+  - [Content Hosting provisioning API](https://jdegre.github.io/loader.html?yaml=TS26512_M1_ContentHostingProvisioning.yaml)
+
+- At M5:
+  - [Service Access Information API](https://jdegre.github.io/loader.html?yaml=TS26512_M5_ServiceAccessInformation.yaml)
 
 Once a Provisioning Session is established using the API at interface M1d, **Content Hosting** can be configured. The security of the content published to the 5GMS System may be guaranteed by a provisioned **Server Certificate**.
 
+This is a JSON scheme of a Content Hosting Configuration:
+
+```
+{
+  "name": "string",
+  "ingestConfiguration": {
+    "pull": true,
+    "protocol": "string",
+    "baseURL": "string"
+  },
+  "distributionConfigurations": [
+    {
+      "entryPoint": {
+        "relativePath": "string",
+        "contentType": "string",
+        "profiles": [
+          "string"
+        ]
+      },
+      "contentPreparationTemplateId": "string",
+      "edgeResourcesConfigurationId": "string",
+      "canonicalDomainName": "string",
+      "domainNameAlias": "string",
+      "baseURL": "string",
+      "pathRewriteRules": [
+        {
+          "requestPathPattern": "string",
+          "mappedPath": "string"
+        }
+      ],
+      "cachingConfigurations": [
+        {
+          "urlPatternFilter": "string",
+          "cachingDirectives": {
+            "statusCodeFilters": [
+              0
+            ],
+            "noCache": true,
+            "maxAge": 0
+          }
+        }
+      ],
+      "geoFencing": {
+        "locatorType": "string",
+        "locators": [
+          "string"
+        ]
+      },
+      "urlSignature": {
+        "urlPattern": "string",
+        "tokenName": "string",
+        "passphraseName": "string",
+        "passphrase": "string",
+        "tokenExpiryName": "string",
+        "useIPAddress": true,
+        "ipAddressName": "string"
+      },
+      "certificateId": "string",
+      "supplementaryDistributionNetworks": [
+        {
+          "distributionNetworkType": "NETWORK_EMBMS",
+          "distributionMode": "MODE_EXCLUSIVE"
+        }
+      ]
+    }
+  ]
+}
+```
+
+Note that the supported `protocols` in 3GPP Release 17 are:
+- HTTP pull-based content ingest protocol: `urn:3gpp:5gms:content-protocol:http-pull-ingest`
+- DASH-IF push-based content ingest protocol `urn:3gpp:5gms:content-protocol:dash-if-ingest`
+
+Examples are available in: [https://github.com/5G-MAG/rt-5gms-examples/example-files](https://github.com/5G-MAG/rt-5gms-examples/example-files)
+
+#### TUTORIALS
+
 The following tutorials describe several steps showing how to create a Provisioning Session, add Content Hosting configuration and provisioning of Server Certificates.
 
-[Tutorial: Deploy 5GMSd End-to-End](./tutorials/end-to-end.html){: .btn .btn-tutorial }
+[Go to the Tutorial: 5G MSd End-to-End deployment (with Docker)](./tutorials/end-to-end.html){: .btn .btn-tutorial }
 
-[Tutorial: Test the 5GMS AF](./tutorials/testing-AF.html){: .btn .btn-tutorial }
+[Go to the Tutorial: Testing the 5GMS Application Function](./tutorials/testing-AF.html){: .btn .btn-tutorial }
+
+[Go to the Tutorial: Testing M1 and M5 APIs with Postman](./tutorials/testing-postman.html){: .btn .btn-tutorial }
 
 ## Feature: Network Assistance
 
@@ -98,12 +215,11 @@ Both mechanisms allow to obtain:
   * If the network has spare capacity, the boost is granted. The client uses this "boost" of speed to quickly refill a depleted buffer or finish a large file transfer faster.
   * It helps the user recover from potential playback interruptions or speeds up time-sensitive data tasks.
 
-The following are the reference points and interactions and APIs according to 3GPP TS 26.510.
+The following are the reference points and APIs.
 
-Reference Point | Interactions | API Name | Description
---- | --- | --- | ---
-M5 | 5.3.2 | [Service Access Information API](https://jdegre.github.io/loader.html?yaml=TS26512_M5_ServiceAccessInformation.yaml) | 9.2
-M5 | 5.3.4 | [Network Assistance API](https://jdegre.github.io/loader.html?yaml=TS26512_M5_NetworkAssistance.yaml) | 9.4
+- At M5:
+  - [Service Access Information API](https://jdegre.github.io/loader.html?yaml=TS26512_M5_ServiceAccessInformation.yaml)
+  - [Network Assistance API](https://jdegre.github.io/loader.html?yaml=TS26512_M5_NetworkAssistance.yaml)
 
 Note that the network assistance feature is not explicitly provisioned by the 5GMS Application Provider. It is either available for a particular media streaming session or not, depending on system pre-configuration and/or policy.
 
@@ -113,17 +229,61 @@ The dynamic policies feature enables the 5GMS Client in the UE to manipulate the
 
 <img src="../../assets/images/5gms/5GMS_DynamicPolicies.png">
 
-The following are the reference points and interactions and APIs according to 3GPP TS 26.510.
+The following are the reference points and APIs.
 
-Reference Point | Interactions | API Name | Description
---- | --- | --- | ---
-M1 | 5.2.2 | [Provisioning Sessions API](https://jdegre.github.io/loader.html?yaml=TS26512_M1_ProvisioningSessions.yaml) | 8.3
-M1 | 5.2.7 | [Policy Templates provisioning API](https://jdegre.github.io/loader.html?yaml=TS26512_M1_PolicyTemplatesProvisioning.yaml) | 8.7
-M5 | 5.3.2 | [Service Access Information API](https://jdegre.github.io/loader.html?yaml=TS26512_M5_ServiceAccessInformation.yaml) | 9.2
-M5 | 5.3.3 | [Dynamic Policies API](https://jdegre.github.io/loader.html?yaml=TS26512_M5_DynamicPolicies.yaml) | 9.3
+- At M1:
+  - [Provisioning Sessions API](https://jdegre.github.io/loader.html?yaml=TS26512_M1_ProvisioningSessions.yaml)
+  - [Policy Templates provisioning API](https://jdegre.github.io/loader.html?yaml=TS26512_M1_PolicyTemplatesProvisioning.yaml)
+
+- At M5:
+  - [Service Access Information API](https://jdegre.github.io/loader.html?yaml=TS26512_M5_ServiceAccessInformation.yaml)
+  - [Dynamic Policies API](https://jdegre.github.io/loader.html?yaml=TS26512_M5_DynamicPolicies.yaml)
 
 When the dynamic policy feature is offered and selected, the 5GMSd Application Provider specifies a set of policies which can be invoked for the unicast downlink streaming session. The UE becomes aware of the 
 selected policies in the form of a list of valid Policy Template Ids.
+
+Examples are available in: [https://github.com/5G-MAG/rt-5gms-examples/example-files](https://github.com/5G-MAG/rt-5gms-examples/example-files)
+
+This is a JSON scheme of a Policy Template:
+
+```
+{
+  "externalReference": "string",
+  "qoSSpecification": {
+    "qosReference": "string",
+    "maxBtrUl": "string",
+    "maxBtrDl": "string",
+    "maxAuthBtrUl": "string",
+    "maxAuthBtrDl": "string",
+    "defPacketLossRateDl": 0,
+    "defPacketLossRateUl": 0
+  },
+  "applicationSessionContext": {
+    "sliceInfo": {
+      "sst": 255,
+      "sd": "string"
+    },
+    "dnn": "string"
+  },
+  "chargingSpecification": {
+    "sponId": "string",
+    "sponStatus": "SPONSOR_DISABLED",
+    "gpsi": [
+      "string"
+    ]
+  }
+}
+```
+
+#### TUTORIALS
+
+The following tutorials describe several steps showing how to create and provision Policy Templates.
+
+[Go to the Tutorial: 5G MSd End-to-End deployment (with Docker)](./tutorials/end-to-end.html){: .btn .btn-tutorial }
+
+[Go to the Tutorial: Testing the 5GMS Application Function](./tutorials/testing-AF.html){: .btn .btn-tutorial }
+
+[Go to the Tutorial: Testing M1 and M5 APIs with Postman](./tutorials/testing-postman.html){: .btn .btn-tutorial }
 
 ## Feature: Consumption Reporting
 
@@ -131,22 +291,46 @@ The consumption reporting feature allows consumption of downlink media streaming
 
 <img src="../../assets/images/5gms/5GMS_ConsumptionReporting.png">
 
-The following are the reference points and interactions and APIs according to 3GPP TS 26.510.
+The following are the reference points and APIs.
 
-Reference Point | Interactions | API Name | API
---- | --- | --- | ---
-M1 | 5.2.2 | [Provisioning Sessions API](https://jdegre.github.io/loader.html?yaml=TS26512_M1_ProvisioningSessions.yaml) | 8.3
-M1 | 5.2.12 | [Consumption Reporting provisioning API](https://jdegre.github.io/loader.html?yaml=TS26512_M1_ConsumptionReportingProvisioning.yaml) | 8.12
-M5 | 5.3.2 | [Service Access Information API](https://jdegre.github.io/loader.html?yaml=TS26512_M5_ServiceAccessInformation.yaml) | 9.2
-M5 | 5.3.6| [Consumption Reporting API](https://jdegre.github.io/loader.html?yaml=TS26512_M5_ConsumptionReporting.yaml) | 9.6
+- At M1:
+  - [Provisioning Sessions API](https://jdegre.github.io/loader.html?yaml=TS26512_M1_ProvisioningSessions.yaml)
+  - [Consumption Reporting provisioning API](https://jdegre.github.io/loader.html?yaml=TS26512_M1_ConsumptionReportingProvisioning.yaml)
+
+- At M5:
+  - [Service Access Information API](https://jdegre.github.io/loader.html?yaml=TS26512_M5_ServiceAccessInformation.yaml)
+  - [Consumption Reporting API](https://jdegre.github.io/loader.html?yaml=TS26512_M5_ConsumptionReporting.yaml)
 
 Once a Provisioning Session is established using the API at interface M1d, **Consumption Reporting** can be configured.
 
+This is a JSON scheme of a Consumption Reporting Configuration:
+
+```
+{
+  "reportingInterval": 1,
+  "samplePercentage": 100,
+  "locationReporting": true,
+  "accessReporting": true
+}
+```
+
+Where:
+- `reportingInterval`: The interval between two consecutive consumption reports. The value shall be greater than zero.
+- `samplePercentage`: The proportion of media streaming clients that shall report media consumption, expressed as a floating point value between 0.0 and 100.0.
+- `locationReporting`: Stipulates whether the Media Session Handler is required to provide location data to the 5GMSd AF in consumption reporting messages.
+- `accessReporting`: Stipulates whether the Media Session Handler is required to provide consumption reporting messages to the 5GMSd AF when the access network changes during a media streaming session.
+
+Examples are available in: [https://github.com/5G-MAG/rt-5gms-examples/example-files](https://github.com/5G-MAG/rt-5gms-examples/example-files)
+
+#### TUTORIALS
+
 The following tutorials describe several steps showing how to create a Consumption Reporting Configuration.
 
-[Tutorial: Deploy 5GMSd with Consumption Reporting](./tutorials/consumption-reporting.html){: .btn .btn-tutorial }
+[Go to the Tutorial: 5G Media Streaming with Consumption Reporting](./tutorials/consumption-reporting.html){: .btn .btn-tutorial }
 
-[Tutorial: Test the 5GMS AF](./tutorials/testing-AF.html){: .btn .btn-tutorial }
+[Go to the Tutorial: Testing the 5GMS Application Function](./tutorials/testing-AF.html){: .btn .btn-tutorial }
+
+[Go to the Tutorial: Testing M1 and M5 APIs with Postman](./tutorials/testing-postman.html){: .btn .btn-tutorial }
 
 ## Feature: QoE Metrics Reporting
 
@@ -160,35 +344,82 @@ The framework defines two distinct reporting paths:
 
 * AF-based Reporting: Metrics are sent directly to the network-side components (AF) of the 5GMS System.
 
-The following are the reference points and interactions and APIs according to 3GPP TS 26.510.
+The following are the reference points and APIs.
 
-Reference Point | Interactions | API Name | API
---- | --- | --- | ---
-M1 | 5.2.2 | [Provisioning Sessions API](https://jdegre.github.io/loader.html?yaml=TS26512_M1_ProvisioningSessions.yaml) | 8.3
-M1 | 5.2.11 | [Metrics Reporting provisioning API](https://jdegre.github.io/loader.html?yaml=TS26512_M1_MetricsReportingProvisioning.yaml) | 8.10
-M5 | 5.3.2 | [Service Access Information API](https://jdegre.github.io/loader.html?yaml=TS26512_M5_ServiceAccessInformation.yaml) | 9.2
-M5 | 5.3.5 | [Metrics Reporting API](https://jdegre.github.io/loader.html?yaml=TS26512_M5_MetricsReporting.yaml) | 9.5
+- At M1:
+  - [Provisioning Sessions API](https://jdegre.github.io/loader.html?yaml=TS26512_M1_ProvisioningSessions.yaml)
+  - [Metrics Reporting provisioning API](https://jdegre.github.io/loader.html?yaml=TS26512_M1_MetricsReportingProvisioning.yaml)
+
+- At M5:
+  - [Service Access Information API](https://jdegre.github.io/loader.html?yaml=TS26512_M5_ServiceAccessInformation.yaml)
+  - [Metrics Reporting API](https://jdegre.github.io/loader.html?yaml=TS26512_M5_MetricsReporting.yaml)
 
 Once a Provisioning Session is established using the API at interface M1d, **QoE Metrics Reporting** can be configured.
 
+This is a JSON scheme of a Metrics Reporting Configuration:
+
+```
+{
+  "metricsReportingConfigurationId": "string",
+  "sliceScope": [
+    {
+      "sst": 255,
+      "sd": "string"
+    }
+  ],
+  "scheme": "string",
+  "dataNetworkName": "string",
+  "reportingInterval": 0,
+  "samplePercentage": 100,
+  "urlFilters": [
+    "string"
+  ],
+  "samplingPeriod": 0,
+  "metrics": [
+    "string"
+  ]
+}
+```
+
+Where the field `metrics` for downlink media streaming and for the 3GPP scheme <span style="font-family: monospace;">urn:3GPP:ns:PSS:DASH:QM10</span> corresponds, for example, to one or more of the following quality metrics for DASH (see in green the currently supported):
+  - HTTP request/response <span style="color: green; font-family: monospace;">urn:3GPP:ns:PSS:DASH:QM10#HTTPList</span>
+  - List of Representation Switch Events: <span style="color: green; font-family: monospace;">urn:3GPP:ns:PSS:DASH:QM10#RepSwitchList</span>
+  - Average Throughput: <span style= "font-family: monospace;">urn:3GPP:ns:PSS:DASH:QM10#AvgThroughput</span>
+  - Initial Playout Delay: <span style="font-family: monospace;">urn:3GPP:ns:PSS:DASH:QM10#InitialPlayoutDelay</span>
+  - Buffer Level: <span style="color: green; font-family: monospace;">urn:3GPP:ns:PSS:DASH:QM10#BufferLevel</span>
+  - Play List: <span style="font-family: monospace;">urn:3GPP:ns:PSS:DASH:QM10#PlayList</span>
+  - MPD Information: <span style="color: green; font-family: monospace;">urn:3GPP:ns:PSS:DASH:QM10#MPDInformation</span>
+  - Playout Delay for Media Start-up: <span style="font-family: monospace;">urn:3GPP:ns:PSS:DASH:QM10#PlayoutDelayforMediaStartup</span>
+  - Device information: <span style="font-family: monospace;">urn:3GPP:ns:PSS:DASH:QM10#DeviceInformationList</span>
+
+Examples are available in: [https://github.com/5G-MAG/rt-5gms-examples/example-files](https://github.com/5G-MAG/rt-5gms-examples/example-files)
+
+#### TUTORIALS
+
 The following tutorials describe several steps showing how to create a QoE Metrics Reporting Configuration.
 
-[Tutorial: Deploy 5GMSd with QoE Metrics Reporting](./tutorials/metrics-reporting.html){: .btn .btn-tutorial }
+[Go to the Tutorial: 5G Media Streaming with QoE Metrics Reporting](./tutorials/metrics-reporting.html){: .btn .btn-tutorial }
 
-[Tutorial: Test the 5GMS AF](./tutorials/testing-AF.html){: .btn .btn-tutorial }
+[Go to the Tutorial: Testing the 5GMS Application Function](./tutorials/testing-AF.html){: .btn .btn-tutorial }
 
-## Feature: Data collection, reporting and exposure (TS 26.510)
+[Go to the Tutorial: Testing M1 and M5 APIs with Postman](./tutorials/testing-postman.html){: .btn .btn-tutorial }
+
+## Feature: Data collection, reporting and exposure
 
 The data collection, reporting and exposure feature enables the 5GMS System to log data relating to media streaming sessions and to expose this to 
 subscribers in the form of Events.
 
-The following are the reference points and interactions and APIs according to 3GPP TS 26.510.
+The following are the reference points and APIs.
 
-Reference Point | Interactions | API Name | API
---- | --- | --- | ---
-M1 | 5.2.13 | [Event Data Processing provisioning API](https://jdegre.github.io/loader.html?yaml=TS26512_M1_EventDataProcessingProvisioning.yaml) | 8.13
-M5 | 5.3.5 | [Metrics Reporting API](https://jdegre.github.io/loader.html?yaml=TS26512_M5_MetricsReporting.yaml) | 9.5
-M5 | 5.3.6 | [Consumption Reporting API](https://jdegre.github.io/loader.html?yaml=TS26512_M5_ConsumptionReporting.yaml) | 9.6
+- At M1:
+  - [Event Data Processing provisioning API](https://jdegre.github.io/loader.html?yaml=TS26512_M1_EventDataProcessingProvisioning.yaml)
+
+- At M5
+  - [Metrics Reporting API](https://jdegre.github.io/loader.html?yaml=TS26512_M5_MetricsReporting.yaml)
+  - [Consumption Reporting API](https://jdegre.github.io/loader.html?yaml=TS26512_M5_ConsumptionReporting.yaml)
+
+{: .inshort }
+At the moment, a generic architecture for UE Data Collection and Reporting is available in the 5G-MAG Reference Tools under the following project: [**UE Data Collection, Reporting and Event Exposure**](../ue-data-collection-reporting-exposure/scope.html). Note these entities are not yet implemented within the framework of 5GMS.
 
 ## Summary of features supported by the 5GMS Application Function
 

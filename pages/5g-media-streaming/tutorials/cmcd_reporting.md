@@ -5,6 +5,7 @@ parent: Tutorials
 grand_parent: 5G Media Streaming
 has_children: false
 nav_order: 7
+nav_exclude: true
 ---
 
 <img src="../../../assets/images/Banner_5GMS.png" /> 
@@ -13,7 +14,8 @@ nav_order: 7
 
 # Tutorial - CMCD Reporting
 
-## Introduction
+{: .inshort }
+This tutorial allows to: Use CMCD metrics reporting for 5G Media Streaming.
 
 CMCD Reporting executes the collection of Common Media Client Data (CMCD) from the Media Player and the forwarding of CMCD metrics through the 5G Media Streaming system for monitoring and analysis purposes. CMCD information is reported in‑band with media requests using HTTP query parameters or request headers and is extracted by the Application Server during normal media delivery. The Application Server forwards the collected CMCD metrics to a metrics collector, where they can be visualized using a dashboard to analyze media session behavior and content delivery characteristics. This tutorial describes how to set up and enable CMCD Reporting using the 5G‑MAG Reference Tools and how to access the resulting CMCD metrics.
 

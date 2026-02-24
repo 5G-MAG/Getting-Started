@@ -1,13 +1,20 @@
 ---
 layout: default
-title: Testing with Postman
-parent: Testing the AF
-grand_parent: Tutorials
+title: Postman (M1, M5)
+parent: Tutorials
+grand_parent: 5G Media Streaming
 has_children: false
-nav_order: 5
+nav_order: 2
 ---
 
-# Testing with Postman
+[Scope](../scope.html){: .btn .btn-blue } [Project Roadmap](../projects.html){: .btn .btn-blue } [GitHub Repos](../repositories.html){: .btn .btn-github } [Releases](../../releases.html#project-5g-media-streaming){: .btn .btn-release } [Tutorials](../tutorials.html){: .btn .btn-tutorial } [Requirements](../requirements.html){: .btn .btn-blue }
+
+# Testing M1 and M5 APIs with Postman
+
+{: .inshort }
+This tutorial allows to: Test the M1 and M5 APIs of the 5GMSd AF with Postman.
+
+<img src="../../../assets/images/5gms/5GMS_Downlink_AF.png" /> 
 
 [Postman](https://www.postman.com/) is a popular API development and testing tool that allows users to create, send, and
 manage HTTP requests. It provides a user-friendly interface for building and testing API endpoints, making it easier for
@@ -27,9 +34,9 @@ download our pre-defined Postman collections and environment here:
 After the download, open Postman and select `File->Import`. After a successful import, you should see two collections
 like this:
 
-<img width="382" alt="Bildschirmfoto 2024-01-26 um 09 07 00" src="https://github.com/5G-MAG/rt-5gms-application-function/assets/2427039/80df62af-0f3c-4abd-bc83-8a4528cf48cc">
+<img width="382" src="../../../assets/images/5gms/5GMS_postman1.png">
 
-# Postman Configuration
+## Postman Configuration
 
 A very useful feature of Postman is the possibility to define variables. These variables can afterward be used in any of
 our routes or payloads. The first variables we need to define are the `m1_url`, `m5_url`, `maf_url` variables. For that
@@ -37,19 +44,21 @@ reason,
 select `Environments` on the left side and then select the `5G-MAG` environment. Now you should see a list of variables
 similar to this:
 
-<img width="1065" alt="Bildschirmfoto 2024-01-26 um 09 15 05" src="https://github.com/5G-MAG/rt-5gms-application-function/assets/2427039/1d0decc5-2c73-4f87-93cc-baad62c685fa">
+<img width="1065" src="../../../assets/images/5gms/5GMS_postman2.png">
 
 Add the URL to the `M1`, the `M5` and the `maf` endpoint of your Application Function here. In the example above, we are
 running
 the Application Function in a local network. Note that both URLs also need to contain the port. The configuration
 options for the Application Function are
-documented [here](https://github.com/5G-MAG/rt-5gms-application-function/wiki/Configuring-the-Application-Function).
+documented [here](./application-function/configuration-5GMSAF.md).
 
 # Using M1
 
 Now that we have defined the `M1` endpoint, we can start using it:
 
-## Creating a Provisioning Session
+## Provisioning Session
+
+### Creating a Provisioning Session
 
 Navigate to the `Provisioning Session` folder in the Postman Collection and select `Create Provisioning Session`. Check
 the URL on the top that we are sending the request to: `{{m1_url}}/3gpp-m1/v2/provisioning-sessions`. Here you can see
@@ -59,8 +68,7 @@ change our variable instead of all the M1 calls in our Postman collection.
 Click on `Send` on the top right. You should see a successful response (status code `201`) and the payload of the
 response on the bottom:
 
-<img width="1066" alt="Bildschirmfoto 2024-01-26 um 09 28 04" src="https://github.com/5G-MAG/rt-5gms-application-function/assets/2427039/95422926-a2fb-4489-82c0-c07e39e4df86">
-
+<img width="1066" src="../../../assets/images/5gms/5GMS_postman3.png">
 
 The response body contains the `provisioningSessionId` of our created provisioning session. The `provisioningSessionId`
 is an important identifier and used in many of the `M1` and `M5` endpoints. Consequently, it makes sense to assign
@@ -73,31 +81,36 @@ var provisioningSessionId = responseBody.provisioningSessionId;
 pm.environment.set("provisioning_session_id", provisioningSessionId);
 ````
 
-## Retrieving a Provisioning Session
+### Retrieving a Provisioning Session
 
 Now that we have created a provisioning session and assigned its `provisioningSessionId` to our variable, we can
 directly call the `GET Provisioning Session` endpoint. As expected, our route contains the `m1_url` and
 the `provisioning_session_id` variable: `{{m1_url}}/3gpp-m1/v2/provisioning-sessions/{{provisioning_session_id}}`.
 
 Sending this request should result in a response similar to this:
-<img width="1069" alt="Bildschirmfoto 2024-01-26 um 09 36 19" src="https://github.com/5G-MAG/rt-5gms-application-function/assets/2427039/e5a21053-6a98-4bed-8695-f3b2a39d16dc">
+<img width="1069" src="../../../assets/images/5gms/5GMS_postman4.png">
 
-## Deleting a Provisioning Session
+### Deleting a Provisioning Session
 
 Deleting a provisioning session is straight forward as well. As we already defined the required variables, you can
 simply execute the call and should receive a `202 Accepted` response.
 
+## Content Hosting
+
+To manage content hosting configurations, proceed similarly to managing provisioning sessions. Note that
+the `create` and `purge` functions contain a `JSON` structure in the payload to define the content hosting parameters.
+
 ## Consumption Reporting
 
 To manage consumption reporting configurations, proceed similarly to managing provisioning sessions. Note that
-the `create` and `update` functions contain a `JSON` structure in the payload to define the required parameters.
+the `create` and `update` functions contain a `JSON` structure in the payload to define the consumption reporting parameters.
 
 ## Policy Templates
 
 To manage policy templates, proceed similarly to managing provisioning sessions. Note that the `create` and `update`
 functions contain a `JSON` structure in the payload to define the required parameters. Moreover, `open5gsIntegration`
 must be enabled in the configuration of the Application Function. For more details, refer to
-the [Configuration Guide](https://github.com/5G-MAG/rt-5gms-application-function/wiki/Configuring-the-Application-Function).
+the [Configuration Guide](./application-function/configuration-5GMSAF.md).
 
 After successfully creating a policy template, the new `policyTemplateId` contained in the `Location` header is
 automatically assigned to the `policy_template_id` variable:
@@ -106,6 +119,11 @@ automatically assigned to the `policy_template_id` variable:
 var policyTemplateId = pm.response.headers.get("Location").split("/").pop()
 pm.environment.set("policy_template_id", policyTemplateId);
 ````
+
+## Metrics Reporting
+
+To manage metrics reporting configurations, proceed similarly to managing provisioning sessions. Note that
+the `create` function contain a `JSON` structure in the payload to define the metrics reporting parameters.
 
 # Using M5
 

@@ -7,21 +7,21 @@ has_children: true
 
 <img src="./assets/images/Banner_ReferenceTools.png" /> 
 
-[Application Domains of the Projects](./pages/domains.html){: .btn .btn-blue } [All the Projects](./pages/projects.html){: .btn .btn-blue } [Releases](./pages/releases.html){: .btn .btn-release } [Join us and Contribute!](#join-us-and-contribute){: .btn .btn-blue } [Public Monthly Call](./pages/public-call.html){: .btn .btn-blue }
+[Build your Application](./pages/applications.html){: .btn .btn-blue } [All the Projects](./pages/projects.html){: .btn .btn-blue } [Releases](./pages/releases.html){: .btn .btn-release } [Join us and Contribute!](#join-us-and-contribute){: .btn .btn-blue } [Public Monthly Call](./pages/public-call.html){: .btn .btn-blue }
 
-# Learn more about the 5G-MAG Reference Tools
-
-[Download an overview about the 5G-MAG Reference Tools](https://hub.5g-mag.com/Getting-Started/docs/Reference_Tools_Overview.pdf){: .btn .btn-blue }
+<img src="./assets/images/5GMAG_RT.png">
 
 Today’s media and connectivity specifications are ultimately realized through code, and our goal is to accelerate that journey from the drafting table to the developer’s toolkit.
 
 The <b>5G-MAG Reference Tools Developer Community</b> provides a structured environment where software development and specification work move in sync. We:
 
 <ul>
-  <li><b>Make Technology Accessible:</b> We put the latest innovations directly into the hands of developers, lowering entry barriers for product development.</li>
+  <li><b>Make Specifications Accessible:</b> We put the latest innovations directly into the hands of developers, lowering entry barriers for product development.</li>
   <li><b>Ensure Quality:</b> We use software implementations to provide early feedback, ensuring specifications are tested and ready for the real world.</li>
   <li><b>Drive Global Adoption:</b> Through open-source software and tutorials, we empower users and creators to adopt and scale new technologies with confidence.</li>
 </ul>
+
+[Download an overview about the 5G-MAG Reference Tools](https://hub.5g-mag.com/Getting-Started/docs/Reference_Tools_Overview.pdf){: .btn .btn-blue }
 
 # What are the domains covered by the projects?
 
@@ -64,7 +64,7 @@ The <b>5G-MAG Reference Tools Developer Community</b> provides a structured envi
 # Join us and Contribute!
 
 [Guidelines for Contributors: Learn How to Contribute](./pages/guidelines-contributors.html){: .btn .btn-blue }
-[Guidelines for Contributors: The Open-Source Software Licenses](./pages/guidelines-contributors.md#the-open-source-software-licenses){: .btn .btn-blue }
+[The Software Licenses](./pages/license.html){: .btn .btn-blue }
 
 <table>
   <tr>

@@ -4,16 +4,19 @@ title: Consumption Reporting
 parent: Tutorials
 grand_parent: 5G Media Streaming
 has_children: false
-nav_order: 4
+nav_order: 5
 ---
 
 <img src="../../../assets/images/Banner_5GMS.png" /> 
 
 [Scope](../scope.html){: .btn .btn-blue } [Project Roadmap](../projects.html){: .btn .btn-blue } [GitHub Repos](../repositories.html){: .btn .btn-github } [Releases](../../releases.html#project-5g-media-streaming){: .btn .btn-release } [Tutorials](../tutorials.html){: .btn .btn-tutorial } [Requirements](../requirements.html){: .btn .btn-blue }
 
-# Tutorial - Consumption Reporting
+# Tutorial - 5G Media Streaming with Consumption Reporting
 
-## Introduction
+{: .inshort }
+This tutorial allows to: Use Consumption Reporting for 5G Media Streaming.
+
+<img src="../../../assets/images/5gms/5GMS_Downlink_ConsumptionReporting.png" /> 
 
 Consumption Collection and Reporting executes the collection of content consumption measurement logs
 from the Media Player and sending of consumption reports to a 5GMSd AF about the currently consumed media

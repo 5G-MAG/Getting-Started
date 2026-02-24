@@ -4,7 +4,7 @@ title: 5GMSd + 5G Network
 parent: Tutorials
 grand_parent: 5G Media Streaming
 has_children: false
-nav_order: 3
+nav_order: 4
 ---
 
 <img src="../../../assets/images/Banner_5GMS.png" /> 
@@ -12,6 +12,9 @@ nav_order: 3
 [Scope](../scope.html){: .btn .btn-blue } [Project Roadmap](../projects.html){: .btn .btn-blue } [GitHub Repos](../repositories.html){: .btn .btn-github } [Releases](../../releases.html#project-5g-media-streaming){: .btn .btn-release } [Tutorials](../tutorials.html){: .btn .btn-tutorial } [Requirements](../requirements.html){: .btn .btn-blue }
 
 # Tutorial - 5G MSd End-to-End deployment with 5G Network
+
+{: .inshort }
+This tutorial allows to: Deploy 5G Media Streaming with a 5G Network and COTS UE.
 
 This guide describes how to setup and configure the 5G-MAG Reference Tools to create an end to end setup consisting of
 the 5G Downlink Media Streaming components and a 5G Network based on Open5GS and srsRAN.
