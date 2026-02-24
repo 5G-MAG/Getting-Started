@@ -1,13 +1,13 @@
 ---
 layout: default
-title: Application Areas
+title: Build your Application
 nav_order: 2
 has_children: true
 ---
 
 <img src="../assets/images/Banner_ReferenceTools.png" /> 
 
-# Application Areas of the Projects
+# Build your Application
 
 <table>
   <tr>
