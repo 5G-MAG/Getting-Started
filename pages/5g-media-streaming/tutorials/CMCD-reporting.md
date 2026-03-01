@@ -45,9 +45,11 @@ Follow the [command](end-to-end.html#starting-the-af) documented in the [basic e
 #### Step 6.1 Run git clone https://github.com/5G-MAG/cmcd-toolkit.git
     
 #### Step 6.2 Compose
+````bash
 chmod 777 cmcd-toolkit/grafana/local-stack/dashboards/cmcd-dashboard.json
-Run docker compose up
-    
+run docker compose up
+````
+
 #### Step 6.3 Login to grafana at http://<DASHBOARD_IP>:8081
         ○ User: admin
         ○ Password: grafana
@@ -59,6 +61,7 @@ Now that we have set up the cmcd-toolkit dashboard. The next we'll hook the Lua 
 Config for Openresty as the nginx.conf file printed as below:
 In init_by_lua_block, for "collector_event_url" the IP, modify the <DASHBOARD_IP> to the IP of the machine where the CMCD dashboard was deployed.
 
+````json
 http {
     error_log  logs/error.log  notice;
     access_log logs/access.log;
@@ -119,27 +122,35 @@ http {
         location = /50x.html { root html; }
     }
 }
+````
 
 #### Step 7.2 Hook the Lua script converting CMCD v1 to v2 to openresty
+````bash
 sudo cp /local/mnt/workspace/shilding/nginx.conf /usr/local/openresty/nginx/conf
 sudo cp /local/mnt/workspace/shilding/cmcd_response_json.lua /usr/local/openresty/nginx/lua
-Reload
+
 sudo chown root:root /usr/local/openresty/nginx/lua/*.lua
 sudo chmod 644      /usr/local/openresty/nginx/lua/*.lua
+````
 
 #### Step 7.3 Reload configuration
+````bash
 sudo /usr/local/openresty/nginx/sbin/nginx -t && sudo systemctl reload openresty
+````
 
-### Step 8: Update the dashboard(Only need if you update the dashboards) 
+### Step 8: Update the dashboard(Only need if you update the dashboards)
+````bash 
 cp the updated cmcd-dashboard.json to cmcd-toolkit/grafana/local-stack/dashboards/
 cd cmcd-toolkit/grafana/local-stack/dashboards/
 chmod 777 cmcd-dashboard.json
 
 cd ./cmcd-toolkit/
 docker compose restart
+````
 
 ### Step 9: Test the dashboard with fake CMCD
 Run the cmd below on AS or on other machine(replace the ip to AS's IP), you'll see a new CMCD has been received in the dashboard:
+````bash
 ts=$(date +%s%3N)
 curl -i "http://127.0.0.1:8088/media/test.m4s?CMCD=\
 cid=\"_30fps/bbb2_30fps.mpd\",\
@@ -159,6 +170,7 @@ st=v,\
 ot=i,\
 ts=${ts},\
 v=1"
+````
 
 ### Step 10: Support on the Application Server(need to do)
 Need to merge the nginx.conf to the nginx.conf.tmpl
@@ -173,33 +185,39 @@ Please follow the instructions documented in the basic end-to-end guide setup gu
 
 ### Step 2: Creating CMCD Report
 While consuming content via our previously installed 5GMSd Application Server and 5GMSd Application Function the client is automatically collecting and sending CMCD Reports.
-
-![App Playback](../../../assets/images/5gms/app-playback.png)
+<img src="../../../assets/images/5gms/app-playback.png" width="40%" /> 
 
 ### Step 3: Inspecting the CMCD Report in Dashboard
 Navigate to http://<DASHBOARD_IP> :8081/dashboards in your browser
-![CMCD Dashboard](../../../assets/images/5gms/dashboard.png)   
+<img src="../../../assets/images/5gms/cmcd-dashboard.png" width="70%" /> 
 
 
 ## Logs for Debugging
 ### Nginx access:   
-          tail -n 0 -f /usr/local/openresty/nginx/logs/access.log
+    tail -n 0 -f /usr/local/openresty/nginx/logs/access.log
 
 ### Nginx error  :    
     tail -n 0 -f /usr/local/openresty/nginx/logs/error.log    
 
 ### CMCD Collector(watch the conversion result CMCD v1 to v2):   
+````bash
     docker logs -f --tail 10 cmcd-toolkit-collector-1
-![CMCD Collector](../../../assets/images/5gms/cmcd-toolkit-collector-log.png)  
+````
+<img src="../../../assets/images/5gms/cmcd-toolkit-collector-log.png" width="100%" /> 
 
 ### Fluentd(watch the log of database of the dashboard)
+````bash
     docker logs cmcd-toolkit-fluentd-1 | grep -i "node.collector"
+````
 
 ### Grafana(watch the log of the dashboard) 
+````bash
     docker compose logs grafana | egrep -i "provision|dashboard|yaml|error|warn" | tail -n 200
+````
     
     
 ## Database for Debugging
+````bash
 shilding@jianqin-gv:~$docker exec -it cmcd-toolkit-influxdb-1 influx
 --------------
 USE analytics;
@@ -215,7 +233,6 @@ WHERE time > now() - 30m;
 SELECT * FROM "cmcd_metrics" WHERE "cmcd_key_sid"='3f63f118-a5c5-44ba-a155-9522904b44cb' ORDER BY time DESC LIMIT 5;
 SELECT * FROM "cmcd_metrics" WHERE "cmcd_key_sid"='demo' ORDER BY time DESC LIMIT 5;
 SELECT COUNT(*) FROM "cmcd_metrics" WHERE "cmcd_key_sid"='demo';
---------------
 
 shilding@jianqin-gv:~$ docker exec -it cmcd-toolkit-influxdb-1 influx
 Connected to http://localhost:8086 version 1.8.10
@@ -269,3 +286,4 @@ cmcd_key_sid
 cmcd_mode
 request_ip
 request_user_agent
+````
