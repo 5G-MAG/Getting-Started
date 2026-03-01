@@ -4,12 +4,19 @@ title: QoE Metrics Reporting
 parent: Tutorials
 grand_parent: 5G Media Streaming
 has_children: false
-nav_order: 5
+nav_order: 6
 ---
 
-# Tutorial - QoE Metrics Reporting
+<img src="../../../assets/images/Banner_5GMS.png" /> 
 
-## Introduction
+[Scope](../scope.html){: .btn .btn-blue } [Project Roadmap](../projects.html){: .btn .btn-blue } [GitHub Repos](../repositories.html){: .btn .btn-github } [Releases](../../releases.html#project-5g-media-streaming){: .btn .btn-release } [Tutorials](../tutorials.html){: .btn .btn-tutorial } [Requirements](../requirements.html){: .btn .btn-blue }
+
+# Tutorial - 5G Media Streaming with QoE Metrics Reporting
+
+{: .inshort }
+This tutorial allows to: Use QoE Metrics Reporting for 5G Media Streaming.
+
+<img src="../../../assets/images/5gms/5GMS_Downlink_MetricsReporting.png" /> 
 
 QoE Metrics Reporting allows the Quality of Experience of media streaming sessions to be logged by the 5GMS System and
 exposed for analysis. The 5G-MAG Reference Tools support the scenario in which the metrics collection and reporting is
@@ -22,10 +29,6 @@ are then saved to disk by the 5GMS Application Function.
 To setup and enable QoE Metrics Reporting we must first configure the 5GMS Application Function and the 5GMS Application
 Server. Next, we start a 5GMS media streaming downlink session on the client-side. The resulting QoE metrics reports can
 then be accessed from the local hard-drive.
-
-## Demo Video
-
-A demo video illustrating the same setup as described in this tutorial can be found [here](TODO).
 
 ## Server-side Setup
 
@@ -65,12 +68,12 @@ session. In this guide we use
 the [Postman Collection](https://github.com/5G-MAG/rt-5gms-application-provider/tree/master/postman) for this. However,
 the same configuration is possible using any other REST client.
 
-#### Step 7.1 Install and Import the Postman Collection
+### Step 7.1 Install and Import the Postman Collection
 
 Follow the instructions [here](https://github.com/5G-MAG/rt-5gms-application-provider/tree/master/postman) to install
 and import the Postman collection.
 
-#### Step 7.2 Retrieving the Provisioning Session ID
+### Step 7.2 Retrieving the Provisioning Session ID
 
 Open a browser and navigate to `http://<YOUR_MACHINE_IP>/m8.json`. Replace `<YOUR_MACHINE_IP_HERE>` with the IP of the
 machine that the 5GMS Application Function is running on. Then copy the `provisioningSessionId` from the JSON to your
@@ -128,14 +131,14 @@ to `1fd61716-fe25-41ee-8d9e-cb36a16378a2`.
 }
 ````
 
-#### Step 7.3 Postman - Environment Configuration
+### Step 7.3 Postman - Environment Configuration
 
 Start Postman and navigate to the Postman `Environments` located on the left side. Replace the `provisioning_session_id`
 variable with the value from the JSON file:
 
-![Postman Env](../../../assets/images/5gms/postman-env.png)
+<img src="../../../assets/images/5gms/postman-env.png" width="80%" /> 
 
-#### Step 7.4 Postman - Create Metrics Reporting Configuration
+### Step 7.4 Postman - Create Metrics Reporting Configuration
 
 In Postman navigate to `Collections` and select `5G-MAG M1`. Navigate to `Metrics Reporting` and
 select `Create Metrics Reporting Configuration`. Then adjust the attributes in the payload section based on the desired
@@ -160,18 +163,18 @@ configuration. An example configuration looks the following:
 
 Click on `Send` once the configuration is set:
 
-![Postman M1 Metrics](../../../assets/images/5gms/postman-m1-metrics.png)
+<img src="../../../assets/images/5gms/postman-m1-metrics.png" width="80%" /> 
 
 The REST call should return a `201` response code indicating that the call was accepted by the Application Function.
 
-#### Step 7.5 Postman - Validate the Service Access Information
+### Step 7.5 Postman - Validate the Service Access Information
 
 Now that we have provided a QoE Metrics Reporting configuration via the `M1` interface our Service Access Information
 should contain the relevant information for the 5GMSd Client. We can validate that via the M5 interface.
 Select `Collections` in Postman and navigate to `5G-MAG M5`. Select `Service Access Information API` and then `GET SAI`.
 Click `Send` and confirm that the Service Access Information contains a `clientMetricsReportingConfigurations`:
 
-![Postman M5 Metrics](../../../assets/images/5gms/postman-m5-metrics.png)
+<img src="../../../assets/images/5gms/postman-m5-metrics.png" width="80%" /> 
 
 ## Client-side Setup
 
@@ -187,7 +190,7 @@ the [basic end-to-end guide](end-to-end.html) setup guide.
 While consuming content configured and provided via our previously installed 5GMSd Application Server and 5GMSd
 Application Function the client is automatically creating and sending QoE Metrics Reports.
 
-![App Playback](../../../assets/images/5gms/app-playback.png)
+<img src="../../../assets/images/5gms/app-playback.png" width="30%" /> 
 
 ### Step 3: Inspecting the QoE Metrics Report
 

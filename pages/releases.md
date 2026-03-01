@@ -1,11 +1,10 @@
 ---
 layout: default
-title: Reference Tools Releases
-parent: Introduction
+title: Software Releases
 nav_order: 2
 ---
 
-<img src="../assets/images/Banner_RT.png" /> 
+<img src="../assets/images/Banner_ReferenceTools.png" /> 
 
 # Reference Tools Projects: Releases
 
@@ -60,7 +59,7 @@ nav_order: 2
 
 ---
 
-<img src="../assets/images/Banner_5GBC.png"/> 
+<img src="../assets/images/Banner_5GBCTVR.png"/> 
 
 ## Project: 5G Broadcast: TV and Radio Hybrid Services
 
@@ -127,9 +126,9 @@ nav_order: 2
 
 ---
 
-<img src="../assets/images/Banner_V3C.png"/> 
+<img src="../assets/images/Banner_V3C_Platform.png"/> 
 
-## Project: Volumetric Video Experiences with MPEG V3C
+## Project: V3C Immersive Platform
 
 [Project Documentation](./v3c-immersive-platform/){: .btn .btn-blue } [Project Roadmap](https://github.com/orgs/5G-MAG/projects/48/views/15){: .btn .btn-blue }
 

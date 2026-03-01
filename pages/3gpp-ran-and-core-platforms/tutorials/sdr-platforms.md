@@ -1,15 +1,17 @@
 ---
 layout: default
-title: SDR for 5G Broadcast
+title: SDR Platforms srsRAN
 parent: Tutorials
-grand_parent: 3GPP RAN and Core Platforms
+grand_parent: 3GPP RAN and Core
 has_children: false
 nav_order: 0
 ---
 
-# Tutorial - SDR Platforms for 5G Broadcast
+<img src="../../../assets/images/Banner_3GPP_Platforms.png" /> 
 
-This page collects instructions to install and run some SDR Platforms which developers have used to build demonstrators for the 5G Broadcast project.
+# Tutorial - SDR Platforms for srsRAN
+
+This page collects instructions to install and run some SDR Platforms which developers have used to build demonstrators for the 5G Broadcast project, which work for srsRAN
 
 The following instructions have been tested to work in Ubuntu 22.04 LTS.
 

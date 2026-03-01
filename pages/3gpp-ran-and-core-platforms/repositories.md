@@ -1,14 +1,14 @@
 ---
 layout: default
 title: Repositories
-parent: 3GPP RAN and Core Platforms
+parent: 3GPP RAN and Core
 has_children: false
 nav_order: 1
 ---
 
 <img src="../../assets/images/Banner_3GPP_Platforms.png" /> 
 
-[Scope & Architectures](./scope.html){: .btn .btn-blue } [GitHub Repos](./repositories.html){: .btn .btn-github } [Tutorials](./tutorials.html){: .btn .btn-blue }
+[Scope](./scope.html){: .btn .btn-blue } [GitHub Repos](./repositories.html){: .btn .btn-github } [Tutorials](./tutorials.html){: .btn .btn-tutorial }
 
 # Repositories
 

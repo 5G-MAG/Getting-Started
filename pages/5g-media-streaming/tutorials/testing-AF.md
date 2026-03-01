@@ -1,26 +1,32 @@
 ---
 layout: default
-title: Testing the 5GMS AF
+title: Testing 5GMS AF
 parent: Tutorials
 grand_parent: 5G Media Streaming
 has_children: true
 nav_order: 1
 ---
 
-# Testing the 5GMS Application Function
+<img src="../../../assets/images/Banner_5GMS.png" /> 
 
-## Installation of the 5GMS AF as a Local User
+[Scope](../scope.html){: .btn .btn-blue } [Project Roadmap](../projects.html){: .btn .btn-blue } [GitHub Repos](../repositories.html){: .btn .btn-github } [Releases](../../releases.html#project-5g-media-streaming){: .btn .btn-release } [Tutorials](../tutorials.html){: .btn .btn-tutorial } [Requirements](../requirements.html){: .btn .btn-blue }
 
-Follow the instructions in this [page](./application-function/installation-local-user-5GMSAF.html) for setting up a test environment without
-requiring full
-system installation.
+# Tutorial - Testing the 5GMS Application Function
 
-## Installation of the 5GMS AF as a System Service
+{: .inshort }
+This tutorial allows to: Setup the 5GMSd AF; Test the M1 Interface APIs (Provisioning Sessions, Server Certificates, Content Protocol Discovery, Content Hosting, Consumption Reporting); Test the M3 Interface APIs (Simple HTTP configuration, HTTP configuration and certificate sending); Test the M5 Interface APIs (Service Access Information).
 
-Follow the instructions in this [page](./application-function/installation-system-service-5GMSAF.html) for setting up a full system
-installation.
+Here you will find information to assist with testing of the 5G-MAG Reference Tools 5GMS Application Function (AF).
 
-## Configuration 5GMS AF
+<img src="../../../assets/images/5gms/5GMS_Downlink_AF.png" /> 
+
+## Installation of the 5GMS AF as a Local User or as a System Service
+
+Follow the instructions in this [page](./application-function/installation-local-user-5GMSAF.html) for setting up a test environment without requiring fullsystem installation.
+
+Follow the instructions in this [page](./application-function/installation-system-service-5GMSAF.html) for setting up a full system installation.
+
+## Configuration of the 5GMS AF
 
 Follow the instructions in this [page](./application-function/configuration-5GMSAF.html) for setting up a full system installation.
 

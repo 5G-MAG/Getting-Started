@@ -1,12 +1,17 @@
 ---
 layout: default-codewrap
-title: MBS Function Tutorial
+title: MBSF Operation & APIs
 parent: Tutorials
 grand_parent: 5G Multicast Broadcast Services
 has_children: false
 nav_order: 2
 ---
-# Introduction to the MBS Function
+
+<img src="../../../assets/images/Banner_5MBS.png" /> 
+
+[Scope](../scope.html){: .btn .btn-blue } [Project Roadmap](../projects.html){: .btn .btn-blue } [GitHub Repos](../repositories.html){: .btn .btn-github } [Releases](../../releases.html#project-5g-multicast-broadcast-services){: .btn .btn-release } [Tutorials](../tutorials.html){: .btn .btn-tutorial } [Requirements](../requirements.html){: .btn .btn-blue }
+
+# Tutorial - Operating the MBS Function and APIs
 
 The MBS Function is responsible for controlling the MBS User Services sessions. It does this by managing MBS Sessions with the
 MB-SMF, managing MBS Distribution Sessions with the MBSTF(s) and creating and propagating the User Service Announcements. 
@@ -14,8 +19,6 @@ MB-SMF, managing MBS Distribution Sessions with the MBSTF(s) and creating and pr
 The initial implementation of the MBSF performs the first two tasks, managing the MB-SMF and MBSTF(s), but does not implement the Service Announcement at this time.
 
 The MBSF is configured by an Application Provider using the API at reference point Nmb10. This tutorial covers the use of the APIs at Nmb10 to configure the MBSF.
-
-# Tutorial on Operating the MBS Function
 
 ## Tutorial videos
 
@@ -72,9 +75,16 @@ block-beta
 
 This tutorial assumes that you have cloned and built the [rt-mbs-function repository](https://github.com/5G-MAG/rt-mbs-function), [rt-mbs-transport-function repository](https://github.com/5G-MAG/rt-mbs-transport-function) and the [5MBS branch of the open5gs repository](https://github.com/5G-MAG/open5gs/tree/5mbs).
 
-A 5G Core must be running for these examples with at least the NRF, SCP, MB-SMF, MB-UPF, MB-AMF and UDM Network Functions (see the instructions in our [Open5GS 5MBS branch](https://github.com/5G-MAG/open5gs/tree/5mbs) README).
+A 5G Core must be running for these examples with at least the NRF, SCP, MB-SMF, MB-UPF, MB-AMF and UDM Network
+Functions (see the instructions in our [Open5GS 5MBS branch](https://github.com/5G-MAG/open5gs/tree/5mbs) README). 
 
 There should also be an MBSTF running (see the instructions in the [rt-mbs-transport-function](https://github.com/5G-MAG/rt-mbs-transport-function) README).
+
+For convenience we are providing a bash script that starts all required components including the MBSF. You can
+find the script [here](https://github.com/5G-MAG/rt-mbs-examples/blob/main/scripts/tmux/mbs-function-tutorial-startup.sh).
+The instructions to use the script can be
+found [here](https://github.com/5G-MAG/rt-mbs-examples/tree/main/scripts/tmux#mbsf-tutorial-startup-script). If you use
+the script you can omit the step "Running the MBSF for this tutorial".
 
 ## Description
 
@@ -146,6 +156,12 @@ With an MBS aware 5G Core running, and an MBSTF running (see above in [Prerequis
 ```
 
 ## MBS User Service Operations
+
+The following sections cover the operations that can be performed on MBS User Services via the Nmb10 API. The operations
+covered are Create, Update, Retrieve and Delete. For that purpose we will be using the `curl` command line tool to send
+HTTP requests to the API. However, if you prefer a graphical user interface to trigger the calls we are also offering an
+Insomnia collection. You can find the
+collection [here](https://github.com/5G-MAG/rt-mbs-examples/tree/main/insomnia).
 
 ### Create MBS User Service
 
@@ -553,3 +569,6 @@ The response, if the MBS User Data Ingest Session can be found, will be an HTTP 
 < server: MBSF-localhost/18 (info.title=nmbsf-mbs-ud-ingest; info.version=1.1.2) rt-mbs-function/0.1.0
 < 
 ```
+
+{: .note }
+The MBSF can also parse MbsServiceArea. Where a TAC is specified, the DistributionSessionInfo part of the UserDataIngSession includes the optional tgtServAreas property with the format: `"tgtServAreas": {"taiList": [{"plmnId": {"mcc": "001", "mnc": "001"}, "tac": "<TAC-value>"}]}`

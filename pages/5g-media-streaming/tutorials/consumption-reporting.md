@@ -4,12 +4,19 @@ title: Consumption Reporting
 parent: Tutorials
 grand_parent: 5G Media Streaming
 has_children: false
-nav_order: 4
+nav_order: 5
 ---
 
-# Tutorial - Consumption Reporting
+<img src="../../../assets/images/Banner_5GMS.png" /> 
 
-## Introduction
+[Scope](../scope.html){: .btn .btn-blue } [Project Roadmap](../projects.html){: .btn .btn-blue } [GitHub Repos](../repositories.html){: .btn .btn-github } [Releases](../../releases.html#project-5g-media-streaming){: .btn .btn-release } [Tutorials](../tutorials.html){: .btn .btn-tutorial } [Requirements](../requirements.html){: .btn .btn-blue }
+
+# Tutorial - 5G Media Streaming with Consumption Reporting
+
+{: .inshort }
+This tutorial allows to: Use Consumption Reporting for 5G Media Streaming.
+
+<img src="../../../assets/images/5gms/5GMS_Downlink_ConsumptionReporting.png" /> 
 
 Consumption Collection and Reporting executes the collection of content consumption measurement logs
 from the Media Player and sending of consumption reports to a 5GMSd AF about the currently consumed media
@@ -59,12 +66,12 @@ the [Postman Collection](https://github.com/5G-MAG/rt-5gms-application-provider/
 the same configuration is possible using any other REST client or
 the [Management UI](https://github.com/5G-MAG/rt-5gms-application-provider/tree/master/management-ui).
 
-#### Step 7.1 Install and Import the Postman Collection
+### Step 7.1 Install and Import the Postman Collection
 
 Follow the instructions [here](https://github.com/5G-MAG/rt-5gms-application-provider/tree/master/postman) to install
 and import the Postman collection.
 
-#### Step 7.2 Retrieving the Provisioning Session ID
+### Step 7.2 Retrieving the Provisioning Session ID
 
 Open a browser and navigate to `http://<YOUR_MACHINE_IP>/m8.json`. Replace `<YOUR_MACHINE_IP_HERE>` with the IP of the
 machine that the 5GMS Application Function is running on. Then copy the `provisioningSessionId` from the JSON to your
@@ -122,14 +129,14 @@ to `1fd61716-fe25-41ee-8d9e-cb36a16378a2`.
 }
 ````
 
-#### Step 7.3 Postman - Environment Configuration
+### Step 7.3 Postman - Environment Configuration
 
 Start Postman and navigate to the Postman `Environments` located on the left side. Replace the `provisioning_session_id`
 variable with the value from the JSON file:
 
-![Postman Env](../../../assets/images/5gms/postman-env.png)
+<img src="../../../assets/images/5gms/postman-env.png" width="80%" /> 
 
-#### Step 7.4 Postman - Create Consumption Reporting Configuration
+### Step 7.4 Postman - Create Consumption Reporting Configuration
 
 In Postman navigate to `Collections` and select `5G-MAG M1`. Navigate to `Consumption Reporting` and
 select `Create Consumption Reporting Configuration`. Then adjust the attributes in the payload section based on the
@@ -147,18 +154,18 @@ configuration. An example configuration looks the following:
 
 Click on `Send` once the configuration is set:
 
-![Postman M1 Metrics](../../../assets/images/5gms/postman-m1-consumption.png)
+<img src="../../../assets/images/5gms/postman-m1-consumption.png" width="80%" /> 
 
 The REST call should return a `201` response code indicating that the call was accepted by the Application Function.
 
-#### Step 7.5 Postman - Validate the Service Access Information
+### Step 7.5 Postman - Validate the Service Access Information
 
 Now that we have provided a Consumption Reporting configuration via the `M1` interface our Service Access Information
 should contain the relevant information for the 5GMSd Client. We can validate that via the M5 interface.
 Select `Collections` in Postman and navigate to `5G-MAG M5`. Select `Service Access Information API` and then `GET SAI`.
 Click `Send` and confirm that the Service Access Information contains a `clientMetricsReportingConfigurations`:
 
-![Postman M5 Metrics](../../../assets/images/5gms/postman-m5-consumption.png)
+<img src="../../../assets/images/5gms/postman-m5-consumption.png" width="80%" /> 
 
 ## Client-side Setup
 
@@ -174,7 +181,7 @@ the [basic end-to-end guide](end-to-end.html) setup guide.
 While consuming content configured and provided via our previously installed 5GMSd Application Server and 5GMSd
 Application Function the client is automatically creating and sending Consumption Reports.
 
-![App Playback](../../../assets/images/5gms/app-playback.png)
+<img src="../../../assets/images/5gms/app-playback.png" width="30%" /> 
 
 ### Step 3: Inspecting the Consumption Report
 

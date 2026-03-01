@@ -1,13 +1,15 @@
 ---
 layout: default
-title: 5G Network with COTS UE
+title: 5G Network & COTS UE
 parent: Tutorials
-grand_parent: 3GPP RAN and Core Platforms
+grand_parent: 3GPP RAN and Core
 has_children: false
 nav_order: 1
 ---
 
-# Tutorial - 5G Network with COTS UE
+<img src="../../../assets/images/Banner_3GPP_Platforms.png" /> 
+
+# Tutorial - 5G Network with Open5GS, srsRAN and COTS UE
 
 ## Introduction
 
@@ -20,7 +22,7 @@ phone are used.
 * UHD SDR like Ettus X310 USRP
 * Android Pixel 8 phone
 
-Note that other Android devices work as well but are not tested by ourselves. For details check
+Note that other Android devices which we have not tested may work too. For details check
 the [srsRAN documentation](https://docs.srsran.com/projects/project/en/latest/knowledge_base/source/cots_ues/source/index.html#cots-ues).
 
 ## 5G Core installation and configuration
