@@ -80,8 +80,6 @@ Any organization and independent developer willing to collaborate can join the c
 
 ## Stay informed about the development progress, join our Google Group
 
-5G-MAG's Google Group: [https://groups.google.com/g/5g-mag-reference-tools](https://groups.google.com/g/5g-mag-reference-tools)
-
 <table>
   <tr>
     <td width="10%" align="center" valign="top">
