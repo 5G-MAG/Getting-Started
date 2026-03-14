@@ -86,7 +86,7 @@ Any organization and independent developer willing to collaborate can join the c
       <img width="100%" src="./assets/images/GoogleGroups.png" href="https://groups.google.com/g/5g-mag-reference-tools">
     </td>
     <td width="90%" align="left" valign="middle">
-      <p><b>5G-MAG's Google Group: <b/><a href="https://groups.google.com/g/5g-mag-reference-tools" target="_blank">Join here</a></p>
+      <p><b>5G-MAG's Google Group: </b><a href="https://groups.google.com/g/5g-mag-reference-tools" target="_blank">Join here</a></p>
     </td>
   </tr>
 </table>
@@ -99,7 +99,7 @@ Any organization and independent developer willing to collaborate can join the c
       <img width="100%" src="./assets/images/Slack.png" href="https://join.slack.com/t/5g-mag/shared_invite/zt-trtvsmw5-yYgcRidDgIS7x_u48sTuQA">
     </td>
     <td width="90%" align="left" valign="middle">
-      <p><b>5G-MAG's Slack: <b/><a href="https://join.slack.com/t/5g-mag/shared_invite/zt-trtvsmw5-yYgcRidDgIS7x_u48sTuQA" target="_blank">Join here</a></p>
+      <p><b>5G-MAG's Slack: </b><a href="https://join.slack.com/t/5g-mag/shared_invite/zt-trtvsmw5-yYgcRidDgIS7x_u48sTuQA" target="_blank">Join here</a></p>
     </td>
   </tr>
 </table>
