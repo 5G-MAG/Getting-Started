@@ -82,9 +82,29 @@ Any organization and independent developer willing to collaborate can join the c
 
 5G-MAG's Google Group: [https://groups.google.com/g/5g-mag-reference-tools](https://groups.google.com/g/5g-mag-reference-tools)
 
+<table>
+  <tr>
+    <td width="65%" align="center" valign="top">
+      <img width="100%" src="./assets/images/GoogleGroups.png">
+    </td>
+    <td width="35%" align="center" valign="middle">
+      <p><b>5G-MAG's Google Group: <b/><a href="https://groups.google.com/g/5g-mag-reference-tools" target="_blank">Join here</a></p>
+    </td>
+  </tr>
+</table>
+
 ## Join the 5G-MAG DEV Community in Slack
 
-5G-MAG's Slack: [https://join.slack.com/t/5g-mag/shared_invite/zt-trtvsmw5-yYgcRidDgIS7x_u48sTuQA](https://join.slack.com/t/5g-mag/shared_invite/zt-trtvsmw5-yYgcRidDgIS7x_u48sTuQA)
+<table>
+  <tr>
+    <td width="20%" align="center" valign="top">
+      <img width="100%" src="./assets/images/Slack.png">
+    </td>
+    <td width="80%" align="center" valign="middle">
+      <p><b>5G-MAG's Slack: <b/><a href="https://join.slack.com/t/5g-mag/shared_invite/zt-trtvsmw5-yYgcRidDgIS7x_u48sTuQA" target="_blank">Join here</a></p>
+    </td>
+  </tr>
+</table>
 
 ## Who is an official contributor with a signed CLA?
 
