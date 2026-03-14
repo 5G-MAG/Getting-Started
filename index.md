@@ -23,7 +23,7 @@ The <b>5G-MAG Reference Tools Developer Community</b> provides a structured envi
 
 [Download an overview about the 5G-MAG Reference Tools](https://hub.5g-mag.com/Getting-Started/docs/Reference_Tools_Overview.pdf){: .btn .btn-blue }
 
-# What are the domains covered by the projects?
+# Which application can be built with the 5G-MAG Reference Tools?
 
 <table>
   <tr>
