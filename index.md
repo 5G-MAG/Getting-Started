@@ -63,8 +63,30 @@ The <b>5G-MAG Reference Tools Developer Community</b> provides a structured envi
       
 # Join us and Contribute!
 
+## How to participate in the Developer Community?
+
+Any organization and independent developer willing to collaborate can join the community.
+
+5G-MAG members, as sponsors of the activity, are able to:
+* Define and provide input to the roadmap
+* Define development priorities and identify the required features to be implemented
+* Assign 5G-MAG budget supporting coordination and development activities
+* Join the regular calls of the WG DEV
+
+## Check the Repositories and the Guidelines for Contributors
+
 [Guidelines for Contributors: Learn How to Contribute](./pages/guidelines-contributors.html){: .btn .btn-blue }
 [The Software Licenses](./pages/license.html){: .btn .btn-blue }
+
+## Stay informed about the development progress, join our Google Group
+
+5G-MAG's Google Group: [https://groups.google.com/g/5g-mag-reference-tools](https://groups.google.com/g/5g-mag-reference-tools)
+
+## Join the 5G-MAG DEV Community in Slack
+
+5G-MAG's Slack: [https://join.slack.com/t/5g-mag/shared_invite/zt-trtvsmw5-yYgcRidDgIS7x_u48sTuQA](https://join.slack.com/t/5g-mag/shared_invite/zt-trtvsmw5-yYgcRidDgIS7x_u48sTuQA)
+
+## Who is an official contributor with a signed CLA?
 
 <table>
   <tr>
@@ -77,5 +99,3 @@ The <b>5G-MAG Reference Tools Developer Community</b> provides a structured envi
   </tr>
 </table>
 
-{: .note }
-Please refer to the [Getting-Started](https://github.com/5G-MAG/Getting-Started/) repository to provide updates to this documentation.
