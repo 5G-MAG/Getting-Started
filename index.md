@@ -97,10 +97,10 @@ Any organization and independent developer willing to collaborate can join the c
 
 <table>
   <tr>
-    <td width="20%" align="center" valign="top">
+    <td width="10%" align="center" valign="top">
       <img width="100%" src="./assets/images/Slack.png">
     </td>
-    <td width="80%" align="center" valign="middle">
+    <td width="90%" align="center" valign="middle">
       <p><b>5G-MAG's Slack: <b/><a href="https://join.slack.com/t/5g-mag/shared_invite/zt-trtvsmw5-yYgcRidDgIS7x_u48sTuQA" target="_blank">Join here</a></p>
     </td>
   </tr>
@@ -110,10 +110,10 @@ Any organization and independent developer willing to collaborate can join the c
 
 <table>
   <tr>
-    <td width="65%" align="center" valign="top">
+    <td width="10%" align="center" valign="top">
       <img width="100%" src="./assets/images/Reference_Tools_Contributors.png">
     </td>
-    <td width="35%" align="center" valign="middle">
+    <td width="90%" align="center" valign="middle">
       <img width="100%" src="./assets/images/Reference_Tools_Members.png">
     </td>
   </tr>
