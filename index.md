@@ -1,4 +1,4 @@
----
+`---
 layout: default
 title: Introduction
 nav_order: 0
@@ -21,9 +21,9 @@ The <b>5G-MAG Reference Tools Developer Community</b> provides a structured envi
   <li><b>Drive Global Adoption:</b> Through open-source software and tutorials, we empower users and creators to adopt and scale new technologies with confidence.</li>
 </ul>
 
-[Download an overview about the 5G-MAG Reference Tools](https://hub.5g-mag.com/Getting-Started/docs/Reference_Tools_Overview.pdf){: .btn .btn-blue }
+[Download an overview about the 5G-MAG Reference Tools](./docs/Reference_Tools_Overview.pdf){: .btn .btn-blue }
 
-# Which application can be built with the 5G-MAG Reference Tools?
+# What can you currently build with 5G-MAG Reference Tools?
 
 <table>
   <tr>
@@ -117,3 +117,5 @@ Any organization and independent developer willing to collaborate can join the c
   </tr>
 </table>
 
+{: .note }
+Please refer to the [Getting-Started](https://github.com/5G-MAG/Getting-Started/) repository to provide updates to this documentation.
