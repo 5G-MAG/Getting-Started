@@ -18,7 +18,7 @@ has_children: true
     <td markdown="span" align="center" width="33%"><a href="./multicastbroadcast.html"><img style="border:5px solid black;" src="../assets/images/Category_Multicast.png" width="95%"><a/></td>
   </tr>
   <tr>
-    <td markdown="span" align="center" width="33%">[Streaming, Media Delivery and Data Analytics](./streaming.html){: .btn .btn-blue }</td>
+    <td markdown="span" align="center" width="33%">[Streaming, Media Delivery and Data Collection](./streaming.html){: .btn .btn-blue }</td>
     <td markdown="span" align="center" width="33%">[5G Broadcast for TV, Radio and Emergency Alerts](./5gbroadcast.html){: .btn .btn-blue }</td>
     <td markdown="span" align="center" width="33%">[Multicast and Broadcast Services in 5G Networks](./multicastbroadcast.html){: .btn .btn-blue }</td>
   </tr>
