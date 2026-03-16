@@ -19,6 +19,6 @@ The following repositories are available. Please refer to the "Scope" sections o
 ---
 
 ## 6G AI Traffic Characterization Testbed
-[6G-Testbed](https://github.com/5G-MAG/6G-Testbed){: .btn .btn-5gms } [Releases](../releases.html){: .btn .btn-release }
+[6G-Testbed](https://github.com/5G-MAG/6G-Testbed){: .btn .btn-testbed } [Releases](../releases.html){: .btn .btn-release }
 
 A framework for measuring and analyzing AI/LLM service traffic patterns under various network conditions, designed to support 3GPP SA4 6G Media Study contributions.
