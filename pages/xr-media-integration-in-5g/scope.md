@@ -16,15 +16,14 @@ This page contains information such as the specifications within the scope of th
 
 ## Technical Resources and Specifications
 
-[Technical Resources](https://hub.5g-mag.com/Tech/pages/xr.html){: .btn .btn-blue } [Specifications](https://hub.5g-mag.com/Standards/pages/xr.html){: .btn .btn-blue }
+The **MPEG-I Scene Description** reference architecture and features are described in the Technical Resources. This page describes those implemented in the 5G-MAG Reference Tools.
+
+[Tech: MPEG-I Scene Description and glTF 2.0 Extensions](../../../Tech/pages/xr/mpeg-i-scene-description.html){: .btn .btn-blue }
+
+[Specifications](https://hub.5g-mag.com/Standards/pages/xr.html){: .btn .btn-blue }
 
 # Features 
 
-The **MPEG-I Scene Description** reference architecture and features are described in the Technical Resources. This page describes those implemented in the 5G-MAG Reference Tools.
-
-[Technical Resources](../../../Tech/pages/xr.html){: .btn .btn-blue }
-
-Check below the:
 * [**Features implemented in the XR Unity Player**](#features-implemented-in-the-xr-unity-player)
 * [**Features implemented in the XR Unity Editor**](#mpeg-extensions-to-gltf-implemented-in-unity-player-and-unity-editor)
 
