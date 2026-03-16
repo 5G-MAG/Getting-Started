@@ -16,7 +16,15 @@ This page contains information such as the specifications within the scope of th
 
 ## Technical Resources and Specifications
 
-[Technical Resources](https://hub.5g-mag.com/Tech/pages/lte-based-5g-broadcast.html){: .btn .btn-blue } [Specifications](https://hub.5g-mag.com/Standards/pages/lte-based-5g-broadcast.html){: .btn .btn-blue }
+Technical documentation providing context to this project can be found in the link below.
+
+[Tech: 5G Broadcast](https://hub.5g-mag.com/Tech/pages/5gbroadcast.html){: .btn .btn-blue }
+
+A list of relevant specifications can be found in the link below.
+
+[Standards: 5G Broadcast](https://hub.5g-mag.com/Standards/pages/lte-based-5g-broadcast.html){: .btn .btn-blue }
+
+[Standards: Multimedia Delivery Protocols](https://hub.5g-mag.com/Standards/pages/multimedia-content-delivery.html){: .btn .btn-blue }
 
 # Features under implementation
 
