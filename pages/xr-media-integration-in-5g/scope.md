@@ -14,13 +14,13 @@ nav_order: 0
 
 This page contains information such as the specifications within the scope of the tools, high-level architectures that bring context to their applicability, features under implementation,...
 
-## Technical Resources and Specifications
+Technical documentation providing context to this project can be found in the link below.
 
-The **MPEG-I Scene Description** reference architecture and features are described in the Technical Resources. This page describes those implemented in the 5G-MAG Reference Tools.
+[Tech: XR: 3D Scenes and Avatar Communications](https://hub.5g-mag.com/Tech/pages/xr.html){: .btn .btn-blue }
 
-[Tech: MPEG-I Scene Description and glTF 2.0 Extensions](../../../Tech/pages/xr/mpeg-i-scene-description.html){: .btn .btn-blue }
+A list of relevant specifications can be found in the link below.
 
-[Specifications](https://hub.5g-mag.com/Standards/pages/xr.html){: .btn .btn-blue }
+[Standards: XR Media with MPEG-I Scene Description](https://hub.5g-mag.com/Standards/pages/xr.html){: .btn .btn-blue }
 
 # Features 
 
