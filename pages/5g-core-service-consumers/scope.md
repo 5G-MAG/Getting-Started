@@ -18,6 +18,8 @@ Technical documentation providing context to this project can be found in the li
 
 [Tech: Streaming, Media Delivery & Data Collection](https://hub.5g-mag.com/Tech/pages/streaming.html){: .btn .btn-blue }
 
+[Tech: Multicast and Broadcast Services in 5G Networks](https://hub.5g-mag.com/Tech/pages/multicastbroadcast.html){: .btn .btn-blue }
+
 A list of relevant specifications can be found in the link below.
 
 [Standards: 5G Core Service Consumers](https://hub.5g-mag.com/Standards/pages/5g-core-service-consumers.html){: .btn .btn-blue }
