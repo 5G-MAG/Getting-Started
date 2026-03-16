@@ -19,14 +19,14 @@ The following repositories are available. Please refer to the "Scope" sections o
 ---
 
 ## Avatar Test Content
-[rt-avatar-content](https://github.com/5G-MAG/rt-avatar-content){: .btn .btn-5gms } [Releases](../releases.html){: .btn .btn-release }
+[rt-avatar-content](https://github.com/5G-MAG/rt-avatar-content){: .btn .btn-xr } [Releases](../releases.html){: .btn .btn-release }
 
 This repository holds reference MPEG ARF content for real time avatar communication.
 
 ## Avatar Call
-[rt-avatar-call](https://github.com/5G-MAG/rt-avatar-call){: .btn .btn-5gms } [Releases](../releases.html){: .btn .btn-release }
+[rt-avatar-call](https://github.com/5G-MAG/rt-avatar-call){: .btn .btn-xr } [Releases](../releases.html){: .btn .btn-release }
 
 This repository supports the development of a reference framework for avatar communication. The goal is to demonstrate WebRTC communication using the MPEG ARF and related animation compression.
 
 ## Avatar Unity Tracker
-[rt-avatar-unity-tracker](https://github.com/5G-MAG/rt-avatar-unity-tracker){: .btn .btn-5gms } [Releases](../releases.html){: .btn .btn-release }
+[rt-avatar-unity-tracker](https://github.com/5G-MAG/rt-avatar-unity-tracker){: .btn .btn-xr } [Releases](../releases.html){: .btn .btn-release }
