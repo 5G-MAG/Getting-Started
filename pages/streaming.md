@@ -1,7 +1,7 @@
 ---
 layout: default
 parent: Application Areas
-title: Streaming & Delivery
+title: Streaming & Media Delivery
 nav_order: 0
 has_children: true
 ---
