@@ -14,6 +14,7 @@ nav_order: 0
 
 This page contains information such as the specifications within the scope of the tools and high-level architectures that bring context to their applicability.
 
-## Technical Resources and Specifications
+A list of relevant specifications can be found in the link below.
 
-[Technical Resources](https://hub.5g-mag.com/Tech/){: .btn .btn-blue } [Specifications](https://hub.5g-mag.com/Standards/){: .btn .btn-blue }
+[Standards: Beyond 2D Video Experiences](https://hub.5g-mag.com/Standards/pages/beyond2d.html){: .btn .btn-blue }
+
