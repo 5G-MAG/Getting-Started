@@ -47,12 +47,12 @@ has_children: true
   </tr>
     <td><br></td>
   <tr>
-    <td markdown="span" align="center"><a href="./avatar-communications/"><img width="70%" style="border:5px solid black;" src="../assets/images/Reference_Tools_Avatar_Communications.png"><a/></td>
     <td markdown="span" align="center"><a href="./beyond-2d-evaluation-framework/"><img width="70%" style="border:5px solid black;" src="../assets/images/Reference_Tools_Beyond2D_Video_Evaluation.png"><a/></td>
+    <td markdown="span" align="center"><a href="./avatar-communications/"><img width="70%" style="border:5px solid black;" src="../assets/images/Reference_Tools_Avatar_Communications.png"><a/></td>
   </tr>
   <tr>
-    <td markdown="span" align="center">[Project Documentation](./avatar-communications/){: .btn .btn-blue } [Project Roadmap](https://github.com/orgs/5G-MAG/projects/48/views/xx){: .btn .btn-blue } [Latest Releases](./releases.html#project-avatar-communications){: .btn .btn-blue } </td>
     <td markdown="span" align="center">[Project Documentation](./beyond-2d-evaluation-framework/){: .btn .btn-blue } [Project Roadmap](https://github.com/orgs/5G-MAG/projects/48/views/10){: .btn .btn-blue } [Latest Releases](./releases.html#project-beyond-2d-video-experiences){: .btn .btn-blue } </td>
+    <td markdown="span" align="center">[Project Documentation](./avatar-communications/){: .btn .btn-blue } [Project Roadmap](https://github.com/orgs/5G-MAG/projects/48/views/xx){: .btn .btn-blue } [Latest Releases](./releases.html#project-avatar-communications){: .btn .btn-blue } </td>
   </tr>
     <td><br></td>
   <tr>
@@ -65,12 +65,12 @@ has_children: true
   </tr>
     <td><br></td>
   <tr>
-    <td markdown="span" align="center"><a href="./v3c-immersive-platform/"><img width="70%" style="border:5px solid black;" src="../assets/images/Reference_Tools_V3C_Immersive_Platform.png"><a/></td>
     <td markdown="span" align="center"><a href="./ue-data-collection-reporting-exposure/"><img width="70%" style="border:5px solid black;" src="../assets/images/Reference_Tools_UE_data_collection.png"><a/></td>
+    <td markdown="span" align="center"><a href="./v3c-immersive-platform/"><img width="70%" style="border:5px solid black;" src="../assets/images/Reference_Tools_V3C_Immersive_Platform.png"><a/></td>
   </tr>
   <tr>
-    <td markdown="span" align="center">[Project Documentation](./v3c-immersive-platform/){: .btn .btn-blue } [Project Roadmap](https://github.com/orgs/5G-MAG/projects/48/views/15){: .btn .btn-blue } [Latest Releases](./releases.html#project-volumetric-video-experiences-with-mpeg-v3c){: .btn .btn-blue } </td>
     <td markdown="span" align="center">[Project Documentation](./ue-data-collection-reporting-exposure/){: .btn .btn-blue } [Project Roadmap](https://github.com/orgs/5G-MAG/projects/48/views/8){: .btn .btn-blue } [Latest Releases](./releases.html#project-ue-data-collection-reporting--event-exposure){: .btn .btn-blue } </td>
+    <td markdown="span" align="center">[Project Documentation](./v3c-immersive-platform/){: .btn .btn-blue } [Project Roadmap](https://github.com/orgs/5G-MAG/projects/48/views/15){: .btn .btn-blue } [Latest Releases](./releases.html#project-volumetric-video-experiences-with-mpeg-v3c){: .btn .btn-blue } </td>
   </tr>
     <td><br></td>
   <tr>
