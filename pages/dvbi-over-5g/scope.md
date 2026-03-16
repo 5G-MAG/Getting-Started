@@ -14,9 +14,15 @@ nav_order: 0
 
 This page contains information such as the specifications within the scope of the tools and high-level architectures that bring context to their applicability.
 
-## Technical Resources and Specifications
+Technical documentation providing context to this project can be found in the link below.
 
-[Technical Resources](https://hub.5g-mag.com/Tech/pages/dvb-i-5g.html){: .btn .btn-blue } [Specifications](https://hub.5g-mag.com/Standards/pages/dvb-i-5g.html){: .btn .btn-blue }
+[Tech: Streaming, Media Delivery & Data Collection](https://hub.5g-mag.com/Tech/pages/streaming.html){: .btn .btn-blue }
+
+[Tech: 5G Broadcast: TV, Radio and Emergency Alerts](https://hub.5g-mag.com/Tech/pages/5gbroadcast.html){: .btn .btn-blue }
+
+A list of relevant specifications can be found in the link below.
+
+[Standards: DVB-I Services over 5G Systems](https://hub.5g-mag.com/Standards/pages/dvb-i-5g.html){: .btn .btn-blue }
 
 # High-level architectures
 
