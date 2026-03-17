@@ -14,17 +14,16 @@ nav_order: 0
 
 This page contains information such as the specifications within the scope of the tools, high-level architectures that bring context to their applicability, features under implementation,...
 
-## Technical Resources and Specifications
+Technical documentation providing context to this project can be found in the link below.
 
-[Technical Resources](https://hub.5g-mag.com/Tech/pages/xr.html){: .btn .btn-blue } [Specifications](https://hub.5g-mag.com/Standards/pages/xr.html){: .btn .btn-blue }
+[Tech: XR: 3D Scenes and Avatar Communications](https://hub.5g-mag.com/Tech/pages/xr.html){: .btn .btn-blue }
+
+A list of relevant specifications can be found in the link below.
+
+[Standards: XR Media with MPEG-I Scene Description](https://hub.5g-mag.com/Standards/pages/xr.html){: .btn .btn-blue }
 
 # Features 
 
-The **MPEG-I Scene Description** reference architecture and features are described in the Technical Resources. This page describes those implemented in the 5G-MAG Reference Tools.
-
-[Technical Resources](../../../Tech/pages/xr.html){: .btn .btn-blue }
-
-Check below the:
 * [**Features implemented in the XR Unity Player**](#features-implemented-in-the-xr-unity-player)
 * [**Features implemented in the XR Unity Editor**](#mpeg-extensions-to-gltf-implemented-in-unity-player-and-unity-editor)
 

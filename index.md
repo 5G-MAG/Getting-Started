@@ -7,7 +7,7 @@ has_children: true
 
 <img src="./assets/images/Banner_ReferenceTools.png" /> 
 
-[Build your Application](./pages/applications.html){: .btn .btn-blue } [All the Projects](./pages/projects.html){: .btn .btn-blue } [Releases](./pages/releases.html){: .btn .btn-release } [Join us and Contribute!](#join-us-and-contribute){: .btn .btn-blue } [Public Monthly Call](./pages/public-call.html){: .btn .btn-blue }
+[Build your Application](./pages/applications.html){: .btn .btn-blue } [All the Projects](./pages/projects.html){: .btn .btn-blue } [Releases](./pages/releases.html){: .btn .btn-release } [Join us and Contribute!](#join-us-and-contribute){: .btn .btn-blue } [Friday's Public Call](./pages/public-call.html){: .btn .btn-blue }
 
 <img src="./assets/images/5GMAG_RT.png">
 
@@ -21,9 +21,9 @@ The <b>5G-MAG Reference Tools Developer Community</b> provides a structured envi
   <li><b>Drive Global Adoption:</b> Through open-source software and tutorials, we empower users and creators to adopt and scale new technologies with confidence.</li>
 </ul>
 
-[Download an overview about the 5G-MAG Reference Tools](https://hub.5g-mag.com/Getting-Started/docs/Reference_Tools_Overview.pdf){: .btn .btn-blue }
+[Download an overview about the 5G-MAG Reference Tools](./docs/Reference_Tools_Overview.pdf){: .btn .btn-blue }
 
-# What are the domains covered by the projects?
+# What can you currently build with 5G-MAG Reference Tools?
 
 <table>
   <tr>
@@ -32,7 +32,7 @@ The <b>5G-MAG Reference Tools Developer Community</b> provides a structured envi
     <td markdown="span" align="center" width="33%"><a href="./pages/multicastbroadcast.html"><img style="border:5px solid black;" src="./assets/images/Category_Multicast.png" width="95%"><a/></td>
   </tr>
   <tr>
-    <td markdown="span" align="center" width="33%">[Streaming, Media Delivery and Data Analytics](./pages/streaming.html){: .btn .btn-blue }</td>
+    <td markdown="span" align="center" width="33%">[Streaming, Media Delivery and Data Collection](./pages/streaming.html){: .btn .btn-blue }</td>
     <td markdown="span" align="center" width="33%">[5G Broadcast for TV, Radio and Emergency Alerts](./pages/5gbroadcast.html){: .btn .btn-blue }</td>
     <td markdown="span" align="center" width="33%">[Multicast and Broadcast Services in 5G Networks](./pages/multicastbroadcast.html){: .btn .btn-blue }</td>
   </tr>
@@ -63,8 +63,48 @@ The <b>5G-MAG Reference Tools Developer Community</b> provides a structured envi
       
 # Join us and Contribute!
 
+## How to participate in the Developer Community?
+
+Any organization and independent developer willing to collaborate can join the community.
+
+5G-MAG members, as sponsors of the activity, are able to:
+* Define and provide input to the roadmap
+* Define development priorities and identify the required features to be implemented
+* Assign 5G-MAG budget supporting coordination and development activities
+* Join the regular calls of the WG DEV
+
+## Check the Repositories and the Guidelines for Contributors
+
 [Guidelines for Contributors: Learn How to Contribute](./pages/guidelines-contributors.html){: .btn .btn-blue }
 [The Software Licenses](./pages/license.html){: .btn .btn-blue }
+
+## Stay informed about the development progress, join our Google Group
+
+<table>
+  <tr>
+    <td width="10%" align="center" valign="top">
+      <img width="100%" src="./assets/images/GoogleGroups.png" href="https://groups.google.com/g/5g-mag-reference-tools">
+    </td>
+    <td width="90%" align="left" valign="middle">
+      <p><b>5G-MAG's Google Group: </b><a href="https://groups.google.com/g/5g-mag-reference-tools" target="_blank">Join here</a></p>
+    </td>
+  </tr>
+</table>
+
+## Join the 5G-MAG DEV Community in Slack
+
+<table>
+  <tr>
+    <td width="10%" align="center" valign="top">
+      <img width="100%" src="./assets/images/Slack.png" href="https://join.slack.com/t/5g-mag/shared_invite/zt-trtvsmw5-yYgcRidDgIS7x_u48sTuQA">
+    </td>
+    <td width="90%" align="left" valign="middle">
+      <p><b>5G-MAG's Slack: </b><a href="https://join.slack.com/t/5g-mag/shared_invite/zt-trtvsmw5-yYgcRidDgIS7x_u48sTuQA" target="_blank">Join here</a></p>
+    </td>
+  </tr>
+</table>
+
+## Who is an official contributor with a signed CLA?
 
 <table>
   <tr>

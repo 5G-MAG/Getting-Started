@@ -14,9 +14,13 @@ nav_order: 0
 
 This page contains information such as the specifications within the scope of the tools and high-level architectures that bring context to their applicability.
 
-## Technical Resources and Specifications
+Technical documentation providing context to this project can be found in the link below.
 
-[Technical Resources](https://hub.5g-mag.com/Tech/pages/lte-based-5g-broadcast.html){: .btn .btn-blue } [Specifications](https://hub.5g-mag.com/Standards/pages/lte-based-5g-broadcast.html){: .btn .btn-blue }
+[Tech: 5G Broadcast: TV, Radio and Emergency Alerts](https://hub.5g-mag.com/Tech/pages/5gbroadcast.html){: .btn .btn-blue }
+
+A list of relevant specifications can be found in the link below.
+
+[Standards: 5G Broadcast](https://hub.5g-mag.com/Standards/pages/lte-based-5g-broadcast.html){: .btn .btn-blue }
 
 # High-level architectures
 

@@ -32,8 +32,9 @@ Please check each repository and learn about the Licenses and potential dependen
 
 # Individual Contributor License Agreement (CLA) and Corporate CLA
 
-If you wish to contribute code to the projects then you will first need to send us a signed version of the **Contributor License Agreement (CLA)**.
-Only individuals and/or companies with a signed CLA can contribute code. Please visit <https://www.5g-mag.com/license> for more details. The 5G-MAG Public License and CLAs can be downloaded from the links below.
+In order to clarify the intellectual property license granted with contributions from any person or entity willing to contribute under the 5G-MAG Public License, a **Contributor License Agreement (CLA)** is required to be on file signed by each Contributor, indicating agreement to the license terms. We do this for your protection as a contributor as well as the protection of 5G-MAG and its users; and it does not change your rights to use your own contributions for any other purpose.
+
+If you wish to contribute code to the projects please download the CLA or CCLA and send it signed to Eva Markvoort [markvoort@5g-mag.com](mailto:markvoort@5g-mag.com).
 
 * Download the [**5G-MAG Individual Contributor License Agreement (CLA)**](../OFFICIAL_5G-MAG_Contributor_License_Agreement.pdf)
 * Download the [**5G-MAG Corporate Contributor License Agreement (CCLA)**](../OFFICIAL_5G-MAG_Corporate_Contributor_License_Agreement.pdf)

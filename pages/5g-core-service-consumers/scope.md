@@ -14,9 +14,15 @@ nav_order: 0
 
 The 5G Core presents several Network Functions, each of which has its own set of service interfaces. This project hosts a collection of reusable service consumer libraries designed to talk to the 5G Core Network Functions using some of these service interfaces.
 
+Technical documentation providing context to this project can be found in the link below.
+
+[Tech: Streaming, Media Delivery & Data Collection](https://hub.5g-mag.com/Tech/pages/streaming.html){: .btn .btn-blue }
+
+[Tech: Multicast and Broadcast Services in 5G Networks](https://hub.5g-mag.com/Tech/pages/multicastbroadcast.html){: .btn .btn-blue }
+
 A list of relevant specifications can be found in the link below.
 
-[Specifications](https://hub.5g-mag.com/Standards/pages/5g-core-service-consumers.html){: .btn .btn-blue }
+[Standards: 5G Core Service Consumers](https://hub.5g-mag.com/Standards/pages/5g-core-service-consumers.html){: .btn .btn-blue }
 
 # What is being implemented? 
 

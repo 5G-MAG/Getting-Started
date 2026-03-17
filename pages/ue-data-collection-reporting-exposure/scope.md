@@ -14,13 +14,13 @@ nav_order: 0
 
 In the context of 3GPP standards, 5G Media Streaming (5GMS) is defined as a framework designed to enable high-quality, efficient delivery of media. The architecture supports services from mobile network operators and third parties including both Downlink (5GMSd) and Uplink (5GMSu) Media Streaming. The 5GMS architecture is functionally divided into independent components enabling deployments with various degrees of integration between 5G MNOs and Content Providers.
 
+Technical documentation providing context to this project can be found in the link below.
+
+[Tech: Streaming, Media Delivery & Data Collection](https://hub.5g-mag.com/Tech/pages/streaming.html){: .btn .btn-blue }
+
 A list of relevant specifications can be found in the link below.
 
-[Specifications](https://hub.5g-mag.com/Standards/pages/data-collection-event-exposure.html){: .btn .btn-blue }
-
-Technical documentation including explainers can be found in the link below.
-
-[Technical Resources](https://hub.5g-mag.com/Tech/pages/data-collection-event-exposure.html){: .btn .btn-blue } 
+[Standards: UE Data Collection, Reporting and Event Exposure](https://hub.5g-mag.com/Standards/pages/data-collection-event-exposure.html){: .btn .btn-blue }
 
 # What is being implemented? 
 
@@ -46,7 +46,7 @@ The following tutorial covers the setup of a Data Collection Application Functio
 [Go to the Tutorial: Data Collection Application Function with Docker and Insomnia REST client](tutorials/docker-with-insomnia.md){: .btn .btn-tutorial }
 
 
-## R1 (Provisining API) - Ndcaf_DataReportingProvisioning
+## R1 (Provisioning API) - Ndcaf_DataReportingProvisioning
 
 R1 supports interactions between a Provisioning AF (in the Application Service Provider) and the Data Collection AF to:
 - Provision data collection and reporting in a Data Collection AF (by means of [Ndcaf_DataReportingProvisioning](https://jdegre.github.io/loader.html?yaml=TS26532_Ndcaf_DataReportingProvisioning.yaml) service.
@@ -115,7 +115,7 @@ R6 supports interactions between the Event Consumer AF (in the Application Servi
 - To expose data reporting events to the Event Consumer AF (by means of [Naf_EventExposure_Notify](https://jdegre.github.io/editor/?url=https://raw.githubusercontent.com/jdegre/5GC_APIs/Rel-17/TS29517_Naf_EventExposure.yaml) or Nnef_EventExposure_Notify services) - when subsequently used by the Data Collection AF.
 
 ### Subscribing for Events
-An example of a request body when Creating a new -individual Application Event Exposure Subscription is shown below:
+An example of a request body when Creating a new Individual Application Event Exposure Subscription is shown below:
 ```
 {
   "eventsSubs": [

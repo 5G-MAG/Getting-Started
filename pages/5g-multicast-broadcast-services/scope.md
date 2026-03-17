@@ -14,13 +14,15 @@ nav_order: 0
 
 In the context of 3GPP standards, the Multicast Broadcast Services System, **MBS System**, is designed to support multicast and broadcast services in 5G networks. It introduces a flexible architecture that supports both Multicast (for specific groups with high reliability) and Broadcast (for wide-area distribution to all users), allowing the network to dynamically switch between point-to-point and point-to-multipoint delivery. While the MBS System handles the heavy lifting of moving data through the 5G core and radio, **MBS User Services** defines how that content is actually packaged, discovered, and consumed by the end-user's application.
 
+Technical documentation providing context to this project can be found in the link below.
+
+[Tech: Multicast and Broadcast Services in 5G Networks](https://hub.5g-mag.com/Tech/pages/multicastbroadcast.html){: .btn .btn-blue }
+
 A list of relevant specifications can be found in the link below.
 
-[Specifications](https://hub.5g-mag.com/Standards/pages/5g-multicast-broadcast-services.html){: .btn .btn-blue }
+[Standards: 5G Multicast Broadcast Services](https://hub.5g-mag.com/Standards/pages/5g-multicast-broadcast-services.html){: .btn .btn-blue }
 
-Technical documentation including explainers can be found in the link below.
-
-[Technical Documentation](https://hub.5g-mag.com/Tech/pages/5g-multicast-broadcast-services.html){: .btn .btn-blue }
+[Standards: Multimedia Delivery Protocols](https://hub.5g-mag.com/Standards/pages/multimedia-content-delivery.html){: .btn .btn-blue }
 
 # What is being implemented? 
 
