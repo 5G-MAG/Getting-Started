@@ -37,8 +37,6 @@ This includes the implementation of the following entities: **5GMSd Application 
 
 [To the GitHub Repos](./repositories.html){: .btn .btn-github }
 
-#### TUTORIALS
-
 The following tutorials cover the deployment of an end-to-end 5GMSd implementation.
 
 [Go to the Tutorial: 5G MSd End-to-End deployment (with Docker)](./tutorials/end-to-end.html){: .btn .btn-tutorial }
@@ -185,9 +183,8 @@ Note that the supported `protocols` in 3GPP Release 17 are:
 - HTTP pull-based content ingest protocol: `urn:3gpp:5gms:content-protocol:http-pull-ingest`
 - DASH-IF push-based content ingest protocol `urn:3gpp:5gms:content-protocol:dash-if-ingest`
 
+{: .ingithub }
 Examples are available in: [https://github.com/5G-MAG/rt-5gms-examples/example-files](https://github.com/5G-MAG/rt-5gms-examples/example-files)
-
-#### TUTORIALS
 
 The following tutorials describe several steps showing how to create a Provisioning Session, add Content Hosting configuration and provisioning of Server Certificates.
 
@@ -242,6 +239,7 @@ The following are the reference points and APIs.
 When the dynamic policy feature is offered and selected, the 5GMSd Application Provider specifies a set of policies which can be invoked for the unicast downlink streaming session. The UE becomes aware of the 
 selected policies in the form of a list of valid Policy Template Ids.
 
+{: .ingithub }
 Examples are available in: [https://github.com/5G-MAG/rt-5gms-examples/example-files](https://github.com/5G-MAG/rt-5gms-examples/example-files)
 
 This is a JSON scheme of a Policy Template:
@@ -274,8 +272,6 @@ This is a JSON scheme of a Policy Template:
   }
 }
 ```
-
-#### TUTORIALS
 
 The following tutorials describe several steps showing how to create and provision Policy Templates.
 
@@ -320,9 +316,8 @@ Where:
 - `locationReporting`: Stipulates whether the Media Session Handler is required to provide location data to the 5GMSd AF in consumption reporting messages.
 - `accessReporting`: Stipulates whether the Media Session Handler is required to provide consumption reporting messages to the 5GMSd AF when the access network changes during a media streaming session.
 
+{: .ingithub }
 Examples are available in: [https://github.com/5G-MAG/rt-5gms-examples/example-files](https://github.com/5G-MAG/rt-5gms-examples/example-files)
-
-#### TUTORIALS
 
 The following tutorials describe several steps showing how to create a Consumption Reporting Configuration.
 
@@ -392,9 +387,8 @@ Where the field `metrics` for downlink media streaming and for the 3GPP scheme <
   - Playout Delay for Media Start-up: <span style="font-family: monospace;">urn:3GPP:ns:PSS:DASH:QM10#PlayoutDelayforMediaStartup</span>
   - Device information: <span style="font-family: monospace;">urn:3GPP:ns:PSS:DASH:QM10#DeviceInformationList</span>
 
+{: .ingithub }
 Examples are available in: [https://github.com/5G-MAG/rt-5gms-examples/example-files](https://github.com/5G-MAG/rt-5gms-examples/example-files)
-
-#### TUTORIALS
 
 The following tutorials describe several steps showing how to create a QoE Metrics Reporting Configuration.
 
@@ -418,7 +412,7 @@ The following are the reference points and APIs.
   - [Metrics Reporting API](https://jdegre.github.io/loader.html?yaml=TS26512_M5_MetricsReporting.yaml)
   - [Consumption Reporting API](https://jdegre.github.io/loader.html?yaml=TS26512_M5_ConsumptionReporting.yaml)
 
-{: .inshort }
+{: .note }
 At the moment, a generic architecture for UE Data Collection and Reporting is available in the 5G-MAG Reference Tools under the following project: [**UE Data Collection, Reporting and Event Exposure**](../ue-data-collection-reporting-exposure/scope.html). Note these entities are not yet implemented within the framework of 5GMS.
 
 ## Summary of features supported by the 5GMS Application Function

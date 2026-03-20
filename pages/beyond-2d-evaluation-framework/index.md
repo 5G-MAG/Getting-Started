@@ -16,6 +16,6 @@ Explore this slide deck for a concise introduction and a set of essential resour
 
 ## Project Overview
 
-<iframe width="60%" height="520" src="../../docs/Reference_Tools_Beyond2D_Video_Evaluation.pdf"></iframe>
+<iframe width="60%" height="560" src="../../docs/Reference_Tools_Beyond2D_Video_Evaluation.pdf"></iframe>
 
 [Download the slidedeck of this Project](../../docs/Reference_Tools_Beyond2D_Video_Evaluation.pdf){: .btn .btn-blue }

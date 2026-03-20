@@ -8,11 +8,15 @@ nav_order: 4
 
 <img src="../../assets/images/Banner_6GTestbedAITraffic.png" /> 
 
-[Scope](./scope.html){: .btn .btn-blue } [Project Roadmap](./projects.html){: .btn .btn-blue } [GitHub Repos](./repositories.html){: .btn .btn-github } [Releases](../releases.html#project-5g-media-streaming){: .btn .btn-release } [Tutorials](./tutorials.html){: .btn .btn-tutorial } [Video Library](./tutorials.html#video-library){: .btn .btn-video } [Requirements](./requirements.html){: .btn .btn-blue }
+[Scope](./scope.html){: .btn .btn-blue } [Project Roadmap](./projects.html){: .btn .btn-blue } [GitHub Repos](./repositories.html){: .btn .btn-github } [Releases](../releases.html#TODO){: .btn .btn-release } [Tutorials](./tutorials.html){: .btn .btn-tutorial } [Video Library](./tutorials.html#video-library){: .btn .btn-video } [Requirements](./requirements.html){: .btn .btn-blue }
 
 # Tutorials, Tests and Examples
 
-TBD
+## Tutorial: Introduction to the 6G Testbed: Network Emulator and AI Traffic Characterization
+
+This tutorial introduces the 6G Testbed including the Network Emulator and the framework for AI Traffic Characterization
+
+[Go to the Tutorial: Introduction to the 6G Testbed: Network Emulator and AI Traffic Characterization](./tutorials/introduction-6g-testbed.html){: .btn .btn-tutorial }
 
 # Video Library
 Our [YouTube channel](https://www.youtube.com/@5GMAG) hosts some practical videos provided by developers on the use of the 5G-MAG Reference Tools.

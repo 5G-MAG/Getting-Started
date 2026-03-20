@@ -39,8 +39,6 @@ An illustrative usage sequence flow is shown below:
 
 <img src="../../assets/images/dcaf/usage-sequence-diagram.png">
 
-#### TUTORIALS
-
 The following tutorial covers the setup of a Data Collection Application Function and usage of APIs.
 
 [Go to the Tutorial: Data Collection Application Function with Docker and Insomnia REST client](tutorials/docker-with-insomnia.md){: .btn .btn-tutorial }
