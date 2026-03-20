@@ -12,7 +12,11 @@ nav_order: 4
 
 # Tutorials, Tests and Examples
 
-TBD
+## Tutorial: Introduction to the 6G Testbed: Network Emulator and AI Traffic Characterization
+
+This tutorial introduces the 6G Testbed including the Network Emulator and the framework for AI Traffic Characterization
+
+[Go to the Tutorial: Introduction to the 6G Testbed: Network Emulator and AI Traffic Characterization](./tutorials/introduction-6g-testbed.html){: .btn .btn-tutorial }
 
 # Video Library
 Our [YouTube channel](https://www.youtube.com/@5GMAG) hosts some practical videos provided by developers on the use of the 5G-MAG Reference Tools.
