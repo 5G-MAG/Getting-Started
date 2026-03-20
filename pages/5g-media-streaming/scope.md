@@ -185,6 +185,7 @@ Note that the supported `protocols` in 3GPP Release 17 are:
 - HTTP pull-based content ingest protocol: `urn:3gpp:5gms:content-protocol:http-pull-ingest`
 - DASH-IF push-based content ingest protocol `urn:3gpp:5gms:content-protocol:dash-if-ingest`
 
+{: .ingithub }
 Examples are available in: [https://github.com/5G-MAG/rt-5gms-examples/example-files](https://github.com/5G-MAG/rt-5gms-examples/example-files)
 
 #### TUTORIALS
@@ -242,6 +243,7 @@ The following are the reference points and APIs.
 When the dynamic policy feature is offered and selected, the 5GMSd Application Provider specifies a set of policies which can be invoked for the unicast downlink streaming session. The UE becomes aware of the 
 selected policies in the form of a list of valid Policy Template Ids.
 
+{: .ingithub }
 Examples are available in: [https://github.com/5G-MAG/rt-5gms-examples/example-files](https://github.com/5G-MAG/rt-5gms-examples/example-files)
 
 This is a JSON scheme of a Policy Template:
@@ -320,6 +322,7 @@ Where:
 - `locationReporting`: Stipulates whether the Media Session Handler is required to provide location data to the 5GMSd AF in consumption reporting messages.
 - `accessReporting`: Stipulates whether the Media Session Handler is required to provide consumption reporting messages to the 5GMSd AF when the access network changes during a media streaming session.
 
+{: .ingithub }
 Examples are available in: [https://github.com/5G-MAG/rt-5gms-examples/example-files](https://github.com/5G-MAG/rt-5gms-examples/example-files)
 
 #### TUTORIALS
@@ -392,6 +395,7 @@ Where the field `metrics` for downlink media streaming and for the 3GPP scheme <
   - Playout Delay for Media Start-up: <span style="font-family: monospace;">urn:3GPP:ns:PSS:DASH:QM10#PlayoutDelayforMediaStartup</span>
   - Device information: <span style="font-family: monospace;">urn:3GPP:ns:PSS:DASH:QM10#DeviceInformationList</span>
 
+{: .ingithub }
 Examples are available in: [https://github.com/5G-MAG/rt-5gms-examples/example-files](https://github.com/5G-MAG/rt-5gms-examples/example-files)
 
 #### TUTORIALS
