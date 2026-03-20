@@ -14,12 +14,16 @@ nav_order: 0
 
 This project hosts an open-source testbed for AI/media traffic evaluation targeting 5G, 6G, and realistic UE-observed network conditions. It supports 3GPP SA4 studies and broader media delivery evaluations and may be extended and used for other purposes.
 
-<img src="../../assets/images/6g-testbed/architecture.png" style="width: 70%">
+A list of relevant specifications can be found in the link below.
+
+[Standards: 6G Media](https://hub.5g-mag.com/Standards/pages/6g.html){: .btn .btn-blue }
 
 # What is being implemented? 
 
 {: .inshort }
 A testbed for 6G AI Traffic Characterization able to: Measure traffic characteristics of generative AI services (LLMs, image/video generation); Analyze agentic AI patterns such as multi-step tool calling and tool server workflows; Evaluate QoE under emulated network conditions like latency, loss, and bandwidth.
+
+<img src="../../assets/images/6g-testbed/architecture.png" style="width: 70%">
 
 This tutorial provides an introduction of the work:
 
