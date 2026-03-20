@@ -14,6 +14,6 @@ nav_order: 1
 
 ## Overview
 
-<iframe width="60%" height="520" src="../../docs/Reference_Tools_3GPP_Platforms.pdf"></iframe>
+<iframe width="60%" height="560" src="../../docs/Reference_Tools_3GPP_Platforms.pdf"></iframe>
 
 [Download the slidedeck of this Project](../../docs/Reference_Tools_3GPP_Platforms.pdf){: .btn .btn-blue }
