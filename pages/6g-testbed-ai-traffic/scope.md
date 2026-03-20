@@ -19,7 +19,7 @@ This project hosts an open-source testbed for AI/media traffic evaluation target
 {: .inshort }
 A testbed for 6G AI Traffic Characterization able to: Measure traffic characteristics of generative AI services (LLMs, image/video generation); Analyze agentic AI patterns such as multi-step tool calling and tool server workflows; Evaluate QoE under emulated network conditions like latency, loss, and bandwidth.
 
-<img src="../../assets/images/6g-testbed/architecture.png" style="width: 80%">
+<img src="../../assets/images/6g-testbed/architecture.png" style="width: 70%">
 
 ## Network emulator
 The emulator supports one-way delay, jitter, loss, bandwidth shaping, and advanced netem controls (correlation, distributions, loss models, reordering, duplication, corruption, and queue limits). It can combine Hierarchical Token Bucket (HTB) rate limiting with netem impairments and is controlled via YAML profiles.
