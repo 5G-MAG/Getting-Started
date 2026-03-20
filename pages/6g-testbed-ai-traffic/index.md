@@ -8,7 +8,7 @@ nav_order: 7
 
 <img src="../../assets/images/Banner_6GTestbedAITraffic.png" /> 
 
-[Scope](./scope.html){: .btn .btn-blue } [Project Roadmap](./projects.html){: .btn .btn-blue } [GitHub Repos](./repositories.html){: .btn .btn-github } [Releases](../releases.html#TODO){: .btn .btn-release } [Tutorials](./tutorials.html){: .btn .btn-tutorial } [Requirements](./requirements.html){: .btn .btn-blue }
+[Scope](./scope.html){: .btn .btn-blue } [Project Roadmap](./projects.html){: .btn .btn-blue } [GitHub Repos](./repositories.html){: .btn .btn-github } [Releases](../releases.html#TODO){: .btn .btn-release } [Tutorials](./tutorials.html){: .btn .btn-tutorial } [Video Library](./tutorials.html#video-library){: .btn .btn-video } [Requirements](./requirements.html){: .btn .btn-blue }
 
 # 6G Testbed - AI Traffic Characterization
 
@@ -16,6 +16,6 @@ Explore this slide deck for a concise introduction and a set of essential resour
 
 ## Project Overview
 
-<iframe width="60%" height="520" src="../../docs/Reference_Tools_3GPP_Testbed_AI_Traffic.pdf"></iframe>
+<iframe width="60%" height="550" src="../../docs/Reference_Tools_3GPP_Testbed_AI_Traffic.pdf"></iframe>
 
 [Download the slidedeck of this Project](../../docs/Reference_Tools_3GPP_Testbed_AI_Traffic.pdf){: .btn .btn-blue }
