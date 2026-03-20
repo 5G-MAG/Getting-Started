@@ -16,6 +16,6 @@ Explore this slide deck for a concise introduction and a set of essential resour
 
 ## Project Overview
 
-<iframe width="60%" height="550" src="../../docs/Reference_Tools_3GPP_Testbed_AI_Traffic.pdf"></iframe>
+<iframe width="60%" height="560" src="../../docs/Reference_Tools_3GPP_Testbed_AI_Traffic.pdf"></iframe>
 
 [Download the slidedeck of this Project](../../docs/Reference_Tools_3GPP_Testbed_AI_Traffic.pdf){: .btn .btn-blue }
