@@ -63,7 +63,7 @@ callouts:
     color: red
   ingithub:
     title: Example in GitHub
-    color: black
+    color: green
 
 # Footer content
 # appears at the bottom of every page's main content
