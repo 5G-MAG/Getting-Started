@@ -126,12 +126,12 @@ defaults:
 ```
 
 {: .ingithub }
-Example YAMLs with pre-defined profiles are available here: **https://github.com/5G-MAG/6G-Testbed/blob/main/netemu/examples/profiles.yaml**
+Example YAMLs with pre-defined profiles are available here: [https://github.com/5G-MAG/6G-Testbed/blob/main/netemu/examples/profiles.yaml](https://github.com/5G-MAG/6G-Testbed/blob/main/netemu/examples/profiles.yaml)
 
 The emulator provides pre-defined network profiles derived from 3GPP 5QI specifications (e.g. 3GPP TS 23.501 Table 5.7.4-1 where PDB (Packet Delay Budget) is mapped to `delay_ms` and PER (Packet Error Rate) is mapped to `loss_pct`).
 
 {: .ingithub }
-Example YAMLs with pre-defined profiles are available here: **https://github.com/5G-MAG/6G-Testbed/blob/main/aitestbed/configs/profiles.yaml**
+Example YAMLs with pre-defined profiles are available here: [https://github.com/5G-MAG/6G-Testbed/blob/main/aitestbed/configs/profiles.yaml](https://github.com/5G-MAG/6G-Testbed/blob/main/netemu/examples/profiles.yaml)
 
 The emulator supports multiple deployment configurations.
 
