@@ -61,6 +61,9 @@ callouts:
   warning:
     title: Warning
     color: red
+  ingithub:
+    title: Example in GitHub
+    color: black
 
 # Footer content
 # appears at the bottom of every page's main content
