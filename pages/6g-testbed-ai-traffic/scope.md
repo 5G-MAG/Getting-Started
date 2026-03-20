@@ -12,106 +12,40 @@ nav_order: 0
 
 # Scope
 
-The 5G Core presents several Network Functions, each of which has its own set of service interfaces. This project hosts a collection of reusable service consumer libraries designed to talk to the 5G Core Network Functions using some of these service interfaces.
-
-Technical documentation providing context to this project can be found in the link below.
-
-[Tech: Streaming, Media Delivery & Data Collection](https://hub.5g-mag.com/Tech/pages/streaming.html){: .btn .btn-blue }
-
-[Tech: Multicast and Broadcast Services in 5G Networks](https://hub.5g-mag.com/Tech/pages/multicastbroadcast.html){: .btn .btn-blue }
-
-A list of relevant specifications can be found in the link below.
-
-[Standards: 5G Core Service Consumers](https://hub.5g-mag.com/Standards/pages/5g-core-service-consumers.html){: .btn .btn-blue }
+This project hosts an open-source testbed for AI/media traffic evaluation targeting 5G, 6G, and realistic UE-observed network conditions. It supports 3GPP SA4 studies and broader media delivery evaluations and may be extended and used for other purposes.
 
 # What is being implemented? 
 
 {: .inshort }
-A series of reusable service consumer libraries to invoke service operations on various 5GC network functions.
+A testbed for 6G AI Traffic Characterization able to: Measure traffic characteristics of generative AI services (LLMs, image/video generation); Analyze agentic AI patterns such as multi-step tool calling and tool server workflows; Evaluate QoE under emulated network conditions like latency, loss, and bandwidth.
 
-Within the context of 5G Media Streaming, the 5GMS AF needs to communicate with the 5G Core in order to manipulate network Quality of Service (QoS) for ongoing media streaming sessions.
+## Network emulator
+The emulator supports one-way delay, jitter, loss, bandwidth shaping, and advanced netem controls (correlation, distributions, loss models, reordering, duplication, corruption, and queue limits). It can combine Hierarchical Token Bucket (HTB) rate limiting with netem impairments and is controlled via YAML profiles.
 
-<img src="../../assets/images/5gcsc/5GCSC_libscbsf_libscpcf.png">
+### Architecture
+The network emulator is built on Linux Traffic Control (tc) with netem qdisc, providing precise control over network characteristics. Network conditions are applied at the interface level, enabling transparent emulation for any media delivery protocol without requiring modifications to the client or server implementations.
 
-The following libraries are available:
-* **libscbsf** - Binding Support Function (BSF) service consumer library
-* **libscpcf** - Policy Control Function (PCF) service consumer library
+The emulator provides pre-defined network profiles derived from 3GPP 5QI specifications.
 
-## libscbsf - Binding Support Function (BSF) service consumer library
+Beyond basic delay and loss parameters, the emulator supports advanced netem controls for more realistic network modeling.
 
-* Responsible for maintaining a mapping between UE PDU Session and the PCF which is managing that PDU Session.
-* The `libscbsf` library aids in discovery of the BSF in the 5G Core (by interrogating the NRF) and subsequently looking up which PCF is managing the PDU Session for a UE, identified by its IP address.
-* This library implements the service consumer end of the following service-based APIs:
-  * `Nbsf_Management`
+The emulator supports multiple deployment configurations. 
 
-[To the GitHub Repos](./repositories.html){: .btn .btn-github }
+## AI Traffic characterization testbed
+The testbed provides an end-to-end framework to run scenarios, emulate network conditions, and log metrics in a reproducible manner.
 
-## libscpcf - Policy Control Function (PCF) service consumer library
+Key capabilities include orchestration of scenarios, provider adapters for different commercial and self-hosted models, L3/L4 capture (tcpdump), optional L7 capture (mitmproxy), and SQLite-based logging for large-scale analysis.
 
-* Responsible for applying charging and network policy to the PDU sessions of UEs. The `Npcf_PolicyAuthorization` service API is used at reference point N5 by an Application Function (AF) to request policy changes to the PDU session on behalf of the UE. This allows an Application Function to manipulate particular network QoS parameters for selected IP traffic flows within the PDU session.
-* The `libscpcf` library allows an application to connect to a PCF and request an `AppSessionContext` which it can then use to manipulate the network routing policies for traffic passing across specific application flows within a UE's PDU Session.
-* This library implements the service consumer end of the following service-based APIs:
-  * `Npcf_PolicyAuthorization`
+### Architecture and code structure
+The testbed architecture is orchestrator-centric with clear separation of scenarios, clients, network emulation, capture, and analysis:
+-	orchestrator.py coordinates scenario runs, applies network profiles, handles retries, and generates reports.
+-	scenarios/* implement traffic patterns (chat, agent, direct search, realtime, multimodal, image, video, computer use).
+-	clients/* provide provider adapters, including OpenAI, Gemini, DeepSeek (OpenAI-compatible), and vLLM for self-hosted models.
+-	netem: external dependency on the network emulator module that is proposed to be common to all studies [1].
+-	capture/* provides L3/L4 pcap capture and L7 capture via mitmproxy.
+-	analysis/* logs to SQLite, computes 3GPP-aligned metrics, and generates plots.
 
-### Command line tool: pcf-policyauthorization
-
-The **pcf-policyauthorization** tool manipulates the network Quality of Service parameters of Application Session Contexts in the PCF by using the PCF service consumer library to invoke operations on the `Npcf_PolicyAuthorization` service API.
-
-The PCF address can be explicitly specified at the command line if this is already known. Alternatively, the tool can also use the BSF service consumer library to look up which PCF instance is managing the PDU Session of interest ( based on the IP address of a UE registered with the AMF).
-
-[To the GitHub Repos](./repositories.html){: .btn .btn-github }
-
-#### TUTORIALS
-
-[Tutorial: Test libscpcf](./tutorials/using-libscPCF.html){: .btn .btn-tutorial }
-
----
-
-Within the context of 5G Multicast/Broadcast Services (MBS), the Multicast/Broadcast Session Management Function (MB-SMF) is responsible for allocating and deallocating Temporary Mobile Group Identities (TMGIs) and for the management of Multicast/Broadcast Services on the Multicast/Broadcast User Plane Function (MB-UPF).
-
-<img src="../../assets/images/5gcsc/5GCSC_libscmbsmf.png">
-
-The following libraries are available:
-* **libscmbsmf** - Multicast/Broadcast Session Management Function (MB-SMF) service consumer library
-
-## libscmbsmf - Multicast/Broadcast Session Management Function (MB-SMF) service consumer library
-
-* Responsible for allocating and deallocating Temporary Mobile Group Identities (`TMGIs`) and for the management of Multicast/Broadcast Services (`MBS`) on the Multicast/Broadcast User Plane Function (`MB-UPF`).
-* The `Nmbsmf_TMGI` service API is used at reference point `Nmb1` for the allocation and deallocation of `TMGIs`, and the `Nmbsmf_MBSSession` service API is used to reference point `Nmb1` for the creation, modification and destruction of MBS Sessions and for the management of notification subscriptions to events arising on those MBS Sessions.
-* The `libscmbsmf` library provides a simple create/destroy interface for `TMGI` management and an MBS Session and notifications subscriptions model for management of MBS Sessions.
-* This library implements the service consumer end of the following service-based APIs:
-  * `Nmbsmf_TMGI`
-  * `Nmbsmf_MBSSession`
-
-### Command line tool: tmgi-tool
-
-The **tmgi-tool** provides a simple command line interface to either request the creation or destruction of a TMGI using the interfaces provided by the MB-SMF service consumer library to invoke operations on the Nmbsmf_TMGI service API.
-
-### Command line tool: mbs-service-tool
-
-The **mbs-service-tool** can register an MBS Session and will then wait for notifications for that MBS Session. It does this by using the interfaces provided by the MB-SMF service consumer library to invoke operations on the Nmbsmf_MBSSession service API.
-
-[To the GitHub Repos](./repositories.html){: .btn .btn-github }
-
-#### TUTORIALS
-
-[Tutorial: Test libscmbsmf](./tutorials/using-libscMBSMF.html){: .btn .btn-tutorial }
-
-## 5G Downlink Media Streaming (5GMSd) with 5GC Service Consumers
-
-<img src="../../assets/images/projects/5gms_5gc_diagram.png" style="width: 80%">
-
-[5G Media Streaming: Repositories](../5g-media-streaming/repositories.html){: .btn .btn-5gms }
-[5GC Service Consumers: Repositories](../5g-core-service-consumers/repositories.html){: .btn .btn-5gcsc }
-[3GPP RAN and Core Platforms: Repositories](../3gpp-ran-and-core-platforms/repositories.html){: .btn .btn-3gpp }
-[Common Tools: Repositories](../common-tools/){: .btn .btn-common }
-
-## 5G Multicast Broadcast Services (MBS) with 5GC Service Consumers
-
-<img src="../../assets/images/projects/mbs_5gc_diagram.png" style="width: 80%">
-
-[5G Multicast Broadcast Services: Repositories](../5g-multicast-broadcast-services/repositories.html){: .btn .btn-5mbs }
-[Multimedia content delivery protocols: Repositories](../multimedia-content-delivery/repositories.html){: .btn .btn-md }
-[5GC Service Consumers: Repositories](../5g-core-service-consumers/repositories.html){: .btn .btn-5gcsc }
-[3GPP RAN and Core Platforms: Repositories](../3gpp-ran-and-core-platforms/repositories.html){: .btn .btn-3gpp }
-[Common Tools: Repositories](../common-tools/){: .btn .btn-common }
+The testbed is designed to be easily usable and highly configurable.
+New scenarios can be added by creating a class in scenarios/ that extends BaseScenario, registering it in scenarios/init.py, and adding a YAML entry in configs/scenarios.yaml.
+New providers can be added by implementing a client in clients/ that subclasses LLMClient and registering it in the orchestrator client factory.
+The testbed includes a vLLM client (clients/vllm_client.py) and example scenarios in configs/scenarios.yaml (e.g., chat_vllm). This enables evaluation of self-hosted models via the OpenAI-compatible API provided by vLLM, supporting the same metrics and logging pipeline as hosted providers.
