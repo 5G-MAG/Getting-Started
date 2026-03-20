@@ -28,7 +28,6 @@ This tutorial provides an introduction of the work:
 ## Network emulator
 The emulator supports one-way delay, jitter, loss, bandwidth shaping, and advanced netem controls (correlation, distributions, loss models, reordering, duplication, corruption, and queue limits). It can combine Hierarchical Token Bucket (HTB) rate limiting with netem impairments and is controlled via YAML profiles.
 
-### Architecture
 The network emulator is built on Linux Traffic Control (tc) with netem qdisc, providing precise control over network characteristics. Network conditions are applied at the interface level, enabling transparent emulation for any media delivery protocol without requiring modifications to the client or server implementations.
 
 Beyond basic delay and loss parameters, the emulator supports advanced netem controls for more realistic network modeling.
@@ -156,7 +155,6 @@ The testbed provides an end-to-end framework to run scenarios, emulate network c
 
 Key capabilities include orchestration of scenarios, provider adapters for different commercial and self-hosted models, L3/L4 capture (tcpdump), optional L7 capture (mitmproxy), and SQLite-based logging for large-scale analysis.
 
-### Architecture and code structure
 The testbed architecture is orchestrator-centric with clear separation of scenarios, clients, network emulation, capture, and analysis:
 *	orchestrator.py coordinates scenario runs, applies network profiles, handles retries, and generates reports.
 *	scenarios/* implement traffic patterns (chat, agent, direct search, realtime, multimodal, image, video, computer use).
