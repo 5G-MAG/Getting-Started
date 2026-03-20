@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Repositories
+title: Scope
 parent: 6G Testbed - AI Traffic
 has_children: false
 nav_order: 0
