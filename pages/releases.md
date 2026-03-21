@@ -24,6 +24,31 @@ nav_order: 2
 | [{{ item.short_name }}]({{ item.url }}){: .btn } | [{{ item.tag }}]({{ item.url }}){: .btn } | {{ item.date }} |
 {% endfor %}
 
+<h3>Latest Releases</h3>
+
+<table class="release-table">
+  <thead>
+    <tr>
+      <th>Repository</th>
+      <th>Version</th>
+      <th>Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for item in site.data.releases.projects["5G Media Streaming"] %}
+    <tr>
+      <td>
+        <a href="{{ item.url }}" class="btn">{{ item.short_name }}</a>
+      </td>
+      <td>
+        <a href="{{ item.url }}" class="btn">{{ item.tag }}</a>
+      </td>
+      <td>{{ item.date }}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+
 ---
 
 ### OLD Latest Releases
