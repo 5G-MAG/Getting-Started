@@ -2,8 +2,8 @@ name: Sync Repo Releases
 
 on:
   schedule:
-    - cron: '0 0 * * *' # Runs once every 24 hours
-  workflow_dispatch:   # Allows you to run it manually via the "Actions" tab
+    - cron: '0 0 * * *'
+  workflow_dispatch: 
 
 jobs:
   update-data:
@@ -19,14 +19,12 @@ jobs:
         with:
           python-version: '3.x'
 
-      - name: Install dependencies
-        run: pip install requests
-
       - name: Fetch Latest Releases
         run: |
           python - <<EOF
-          import requests
+          import urllib.request
           import json
+          import os
           from datetime import datetime
 
           # LIST YOUR REPOS HERE
@@ -39,26 +37,26 @@ jobs:
           repo_data = []
           for repo in repos:
               print(f"Fetching {repo}...")
+              url = f"https://api.github.com/repos/{repo}/releases/latest"
+              # GitHub API requires a User-Agent header
+              req = urllib.request.Request(url, headers={'User-Agent': 'Github-Action-Bot'})
+              
               try:
-                  response = requests.get(f"https://api.github.com/repos/{repo}/releases/latest")
-                  if response.status_code == 200:
-                      data = response.json()
+                  with urllib.request.urlopen(req) as response:
+                      data = json.loads(response.read().decode())
                       repo_data.append({
                           "name": repo,
                           "tag": data['tag_name'],
                           "url": data['html_url']
                       })
               except Exception as e:
-                  print(f"Error fetching {repo}: {e}")
+                  print(f"Failed to fetch {repo}: {e}")
 
-          # Create the final structure
           output = {
               "last_updated": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
               "releases": repo_data
           }
           
-          # Ensure the _data directory exists
-          import os
           if not os.path.exists('_data'):
               os.makedirs('_data')
 
