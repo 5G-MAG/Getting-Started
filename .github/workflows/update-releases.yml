@@ -18,6 +18,9 @@ jobs:
         with:
           python-version: '3.x'
 
+      - name: Install dependencies
+        run: pip install requests
+
       - name: Fetch Latest Releases
         run: |
           python - <<EOF
