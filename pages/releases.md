@@ -17,6 +17,7 @@ nav_order: 2
 [Project Documentation](./5g-media-streaming/){: .btn .btn-blue } [Project Roadmap](https://github.com/orgs/5G-MAG/projects/48/views/6){: .btn .btn-blue } 
 
 ### Latest Releases
+
 | Repository | Version | Date |
 | :--- | :--- | :--- |
 {% for item in site.data.releases.projects["5G Media Streaming"] %}
