@@ -10,6 +10,21 @@ nav_order: 2
 
 <img src="../assets/images/Banner_5GMS.png"/> 
 
+
+
+
+
+## Project Releases
+
+| Repository | Latest Tag |
+| :--- | :--- |
+{% for repo in site.data.releases %}
+| [{{ repo.name }}]({{ repo.url }}) | `{{ repo.tag }}` |
+{% endfor %}
+
+
+
+
 ---
 
 ## Project: 5G Media Streaming
