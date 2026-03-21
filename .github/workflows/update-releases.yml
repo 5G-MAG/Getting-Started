@@ -27,41 +27,61 @@ jobs:
           import os
           from datetime import datetime
 
-          # LIST YOUR REPOS HERE
-          repos = [
-              "google/gson",
-              "facebook/react",
-              "microsoft/vscode"
-          ]
-
-          repo_data = []
-          for repo in repos:
-              print(f"Fetching {repo}...")
-              url = f"https://api.github.com/repos/{repo}/releases/latest"
-              # GitHub API requires a User-Agent header
-              req = urllib.request.Request(url, headers={'User-Agent': 'Github-Action-Bot'})
-              
-              try:
-                  with urllib.request.urlopen(req) as response:
-                      data = json.loads(response.read().decode())
-                      repo_data.append({
-                          "name": repo,
-                          "tag": data['tag_name'],
-                          "url": data['html_url']
-                      })
-              except Exception as e:
-                  print(f"Failed to fetch {repo}: {e}")
-
-          output = {
-              "last_updated": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
-              "releases": repo_data
+          # Organization of your projects and their repos
+          projects = {
+              "5G Media Streaming": [
+                  "5G-MAG/rt-5gms-application-provider", "5G-MAG/rt-5gms-application",
+                  "5G-MAG/rt-5gms-application-function", "5G-MAG/rt-5gms-application-server",
+                  "5G-MAG/rt-5gms-media-stream-handler", "5G-MAG/rt-5gms-media-session-handler",
+                  "5G-MAG/rt-5gms-common-android-library", "5G-MAG/rt-5gms-examples"
+              ],
+              "5G Core Service Consumers": ["5G-MAG/rt-5gc-service-consumers"],
+              "UE Data Collection": ["5G-MAG/rt-data-collection-application-function"],
+              "5G Broadcast TV Radio": [
+                  "5G-MAG/rt-mbms-tx-for-qrd-and-crd", "5G-MAG/rt-mbms-tx", 
+                  "5G-MAG/rt-mbms-mw-android", "5G-MAG/rt-mbms-mw", 
+                  "5G-MAG/rt-mbms-modem", "5G-MAG/rt-wui", "5G-MAG/rt-mbms-examples"
+              ],
+              "5G Multicast Broadcast": [
+                  "5G-MAG/rt-mbs-transport-function", "5G-MAG/open5gs", 
+                  "5G-MAG/rt-srsRAN_Project", "5G-MAG/rt-mbs-examples"
+              ],
+              "XR Media": ["5G-MAG/rt-xr-unity-player", "5G-MAG/rt-xr-content", "5G-MAG/rt-xr-blender-exporter"],
+              "V3C Immersive": ["5G-MAG/rt-v3c-unity-player", "5G-MAG/rt-v3c-decoder-plugin", "5G-MAG/rt-v3c-content"],
+              "Beyond 2D": ["5G-MAG/rt-beyond2d-evaluation-framework"],
+              "AI ML": ["5G-MAG/rt-ai-ml-evaluation-framework"],
+              "Multimedia Protocols": ["5G-MAG/rt-libflute"],
+              "Auxiliary Tools": ["5G-MAG/rt-common-shared"]
           }
-          
-          if not os.path.exists('_data'):
-              os.makedirs('_data')
 
+          final_output = {}
+
+          for project_name, repo_list in projects.items():
+              repo_data = []
+              for repo in repo_list:
+                  print(f"Fetching {repo}...")
+                  url = f"https://api.github.com/repos/{repo}/releases/latest"
+                  req = urllib.request.Request(url, headers={'User-Agent': 'Github-Action-Bot'})
+                  try:
+                      with urllib.request.urlopen(req) as response:
+                          data = json.loads(response.read().decode())
+                          repo_data.append({
+                              "short_name": repo.split('/')[-1],
+                              "tag": data.get('tag_name', 'N/A'),
+                              "date": data.get('published_at', '').split('T')[0],
+                              "url": data.get('html_url', f"https://github.com/{repo}/releases")
+                          })
+                  except:
+                      repo_data.append({"short_name": repo.split('/')[-1], "tag": "No Release", "date": "-", "url": f"https://github.com/{repo}/releases"})
+              
+              final_output[project_name] = repo_data
+
+          # Save with timestamp
+          full_data = {"last_updated": datetime.now().strftime("%Y-%m-%d"), "projects": final_output}
+          
+          if not os.path.exists('_data'): os.makedirs('_data')
           with open('_data/releases.json', 'w') as f:
-              json.dump(output, f, indent=2)
+              json.dump(full_data, f, indent=2)
           EOF
 
       - name: Commit and Push changes
