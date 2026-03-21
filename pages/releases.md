@@ -10,20 +10,6 @@ nav_order: 2
 
 <img src="../assets/images/Banner_5GMS.png"/> 
 
-
-
-
-
-## Project Releases
-
-*Last checked: {{ site.data.releases.last_updated }}*
-
-| Project | Latest Release |
-| :--- | :--- |
-{% for item in site.data.releases.releases %}
-| {{ item.name }} | [{{ item.tag }}]({{ item.url }}) |
-{% endfor %}
-
 ---
 
 ## Project: 5G Media Streaming
@@ -31,6 +17,15 @@ nav_order: 2
 [Project Documentation](./5g-media-streaming/){: .btn .btn-blue } [Project Roadmap](https://github.com/orgs/5G-MAG/projects/48/views/6){: .btn .btn-blue } 
 
 ### Latest Releases
+| Repository | Version | Date |
+| :--- | :--- | :--- |
+{% for item in site.data.releases.projects["5G Media Streaming"] %}
+| [{{ item.short_name }}]({{ item.url }}){: .btn } | [{{ item.tag }}]({{ item.url }}){: .btn } | {{ item.date }} |
+{% endfor %}
+
+---
+
+### OLD Latest Releases
 
 | Repository | Version | Date | Comments |
 |------------|---------|------|----------|
