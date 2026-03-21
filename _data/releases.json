@@ -1,1 +1,20 @@
-
+{
+  "last_updated": "2026-03-21 21:11:22",
+  "releases": [
+    {
+      "name": "google/gson",
+      "tag": "gson-parent-2.13.2",
+      "url": "https://github.com/google/gson/releases/tag/gson-parent-2.13.2"
+    },
+    {
+      "name": "facebook/react",
+      "tag": "v19.2.4",
+      "url": "https://github.com/facebook/react/releases/tag/v19.2.4"
+    },
+    {
+      "name": "microsoft/vscode",
+      "tag": "1.112.0",
+      "url": "https://github.com/microsoft/vscode/releases/tag/1.112.0"
+    }
+  ]
+}
