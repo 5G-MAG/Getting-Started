@@ -10,8 +10,6 @@ nav_order: 2
 
 <img src="../assets/images/Banner_5GMS.png"/> 
 
----
-
 ## Latest Releases of Project: 5G Media Streaming
 
 [Project Documentation](./5g-media-streaming/){: .btn .btn-blue } [Project Roadmap](https://github.com/orgs/5G-MAG/projects/48/views/6){: .btn .btn-blue } 
