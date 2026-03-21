@@ -1,0 +1,56 @@
+name: Sync Repo Releases
+on:
+  schedule:
+    - cron: '0 0 * * *' # Runs once every 24 hours (UTC)
+  workflow_dispatch:   # Allows you to run it manually via the "Actions" tab
+
+jobs:
+  update-data:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write # Crucial: Allows the bot to commit changes back to your repo
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+
+      - name: Fetch Latest Releases
+        run: |
+          python - <<EOF
+          import requests
+          import json
+
+          # LIST YOUR REPOS HERE (Format: 'owner/repo')
+          repos = [
+              "google/gson",
+              "facebook/react",
+              "microsoft/vscode"
+          ]
+
+          results = []
+          for repo in repos:
+              print(f"Fetching {repo}...")
+              response = requests.get(f"https://api.github.com/repos/{repo}/releases/latest")
+              if response.status_code == 200:
+                  data = response.json()
+                  results.append({
+                      "name": repo,
+                      "tag": data['tag_name'],
+                      "url": data['html_url']
+                  })
+          
+          with open('_data/releases.json', 'w') as f:
+              json.dump(results, f, indent=2)
+          EOF
+
+      - name: Commit and Push changes
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add _data/releases.json
+          git commit -m "Auto-update release tags" || exit 0
+          git push
