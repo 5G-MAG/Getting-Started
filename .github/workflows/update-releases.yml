@@ -1,20 +1,21 @@
 name: Sync Repo Releases
+
 on:
   schedule:
-    - cron: '0 0 * * *' # Runs once every 24 hours (UTC)
+    - cron: '0 0 * * *' # Runs once every 24 hours
   workflow_dispatch:   # Allows you to run it manually via the "Actions" tab
 
 jobs:
   update-data:
     runs-on: ubuntu-latest
     permissions:
-      contents: write # Crucial: Allows the bot to commit changes back to your repo
+      contents: write
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
 
       - name: Set up Python
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v5
         with:
           python-version: '3.x'
 
@@ -26,28 +27,43 @@ jobs:
           python - <<EOF
           import requests
           import json
+          from datetime import datetime
 
-          # LIST YOUR REPOS HERE (Format: 'owner/repo')
+          # LIST YOUR REPOS HERE
           repos = [
               "google/gson",
               "facebook/react",
               "microsoft/vscode"
           ]
 
-          results = []
+          repo_data = []
           for repo in repos:
               print(f"Fetching {repo}...")
-              response = requests.get(f"https://api.github.com/repos/{repo}/releases/latest")
-              if response.status_code == 200:
-                  data = response.json()
-                  results.append({
-                      "name": repo,
-                      "tag": data['tag_name'],
-                      "url": data['html_url']
-                  })
+              try:
+                  response = requests.get(f"https://api.github.com/repos/{repo}/releases/latest")
+                  if response.status_code == 200:
+                      data = response.json()
+                      repo_data.append({
+                          "name": repo,
+                          "tag": data['tag_name'],
+                          "url": data['html_url']
+                      })
+              except Exception as e:
+                  print(f"Error fetching {repo}: {e}")
+
+          # Create the final structure
+          output = {
+              "last_updated": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
+              "releases": repo_data
+          }
           
+          # Ensure the _data directory exists
+          import os
+          if not os.path.exists('_data'):
+              os.makedirs('_data')
+
           with open('_data/releases.json', 'w') as f:
-              json.dump(results, f, indent=2)
+              json.dump(output, f, indent=2)
           EOF
 
       - name: Commit and Push changes
