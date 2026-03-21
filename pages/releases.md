@@ -16,8 +16,12 @@ nav_order: 2
 
 ## Project Releases
 
+*Last checked: {{ site.data.releases.last_updated }}*
+
+| Project | Latest Release |
+| :--- | :--- |
 {% for item in site.data.releases.releases %}
-* **{{ item.name }}**: [{{ item.tag }}]({{ item.url }})
+| {{ item.name }} | [{{ item.tag }}]({{ item.url }}) |
 {% endfor %}
 
 ---
