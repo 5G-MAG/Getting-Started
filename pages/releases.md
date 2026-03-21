@@ -16,14 +16,9 @@ nav_order: 2
 
 ## Project Releases
 
-| Repository | Latest Tag |
-| :--- | :--- |
-{% for repo in site.data.releases %}
-| [{{ repo.name }}]({{ repo.url }}) | `{{ repo.tag }}` |
+{% for item in site.data.releases.releases %}
+* **{{ item.name }}**: [{{ item.tag }}]({{ item.url }})
 {% endfor %}
-
-
-
 
 ---
 
