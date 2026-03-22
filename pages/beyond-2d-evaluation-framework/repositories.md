@@ -24,3 +24,28 @@ The following repositories are available. Please refer to the "Scope & Architect
 This project holds code related to the evaluation framework for the Feasibility Study on Beyond 2D Video (FS_Beyond2D) in 3GPP TSG SA WG4 (SA4). This study is based on work item description (WID) SP-240479 New SID on Feasibility Study on Beyond 2D Video, and the study will result in technical report TR 26.956.
 
 * [Information and how to download, build, install and run](https://github.com/5G-MAG/rt-beyond2d-evaluation-framework#readme)
+
+---
+
+## Latest Releases
+
+[Project Documentation](./beyond-2d-evaluation-framework/){: .btn .btn-blue }
+
+<table class="release-table" style="width:100%; border-collapse: collapse; margin-top: 20px; table-layout: fixed;">
+  <thead>
+    <tr style="text-align: left; border-bottom: 2px solid #eee;">
+      <th style="padding: 12px; width: 40%;">Repository</th>
+      <th style="padding: 12px; width: 40%;">Version</th>
+      <th style="padding: 12px; width: 20%;">Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for item in site.data.releases.projects["Beyond 2D"] %}
+    <tr style="border-bottom: 1px solid #eee;">
+      <td style="padding: 12px; overflow: hidden; text-overflow: ellipsis;"><a href="{{ item.url }}" class="btn">{{ item.short_name }}</a></td>
+      <td style="padding: 12px; overflow: hidden; text-overflow: ellipsis;"><a href="{{ item.url }}" class="btn">{{ item.tag }}</a></td>
+      <td style="padding: 12px;">{{ item.date }}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
