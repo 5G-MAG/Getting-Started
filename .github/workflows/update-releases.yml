@@ -27,25 +27,12 @@ jobs:
           import os
           from datetime import datetime
 
-          # Organization of your projects and their repos
-          projects = {
-              "5G Media Streaming": [
-                  "5G-MAG/rt-5gms-application-provider", "5G-MAG/rt-5gms-application",
-                  "5G-MAG/rt-5gms-application-function", "5G-MAG/rt-5gms-application-server",
-                  "5G-MAG/rt-5gms-media-stream-handler", "5G-MAG/rt-5gms-media-session-handler",
-                  "5G-MAG/rt-5gms-common-android-library", "5G-MAG/rt-5gms-examples"
-              ],
+          # 1. Projects fetching the absolute global Latest Release
+          standard_projects = {
+              "5G Media Streaming": ["5G-MAG/rt-5gms-application-provider", "5G-MAG/rt-5gms-application", "5G-MAG/rt-5gms-application-function", "5G-MAG/rt-5gms-application-server", "5G-MAG/rt-5gms-media-stream-handler", "5G-MAG/rt-5gms-media-session-handler", "5G-MAG/rt-5gms-common-android-library", "5G-MAG/rt-5gms-examples"],
               "5G Core Service Consumers": ["5G-MAG/rt-5gc-service-consumers"],
               "UE Data Collection": ["5G-MAG/rt-data-collection-application-function"],
-              "5G Broadcast TV Radio": [
-                  "5G-MAG/rt-mbms-tx-for-qrd-and-crd", "5G-MAG/rt-mbms-tx", 
-                  "5G-MAG/rt-mbms-mw-android", "5G-MAG/rt-mbms-mw", 
-                  "5G-MAG/rt-mbms-modem", "5G-MAG/rt-wui", "5G-MAG/rt-mbms-examples"
-              ],
-              "5G Multicast Broadcast": [
-                  "5G-MAG/rt-mbs-transport-function", "5G-MAG/open5gs", 
-                  "5G-MAG/rt-srsRAN_Project", "5G-MAG/rt-mbs-examples"
-              ],
+              "5G Broadcast TV Radio": ["5G-MAG/rt-mbms-tx-for-qrd-and-crd", "5G-MAG/rt-mbms-tx", "5G-MAG/rt-mbms-mw-android", "5G-MAG/rt-mbms-mw", "5G-MAG/rt-mbms-modem", "5G-MAG/rt-wui", "5G-MAG/rt-mbms-examples"],
               "XR Media": ["5G-MAG/rt-xr-unity-player", "5G-MAG/rt-xr-content", "5G-MAG/rt-xr-blender-exporter"],
               "V3C Immersive": ["5G-MAG/rt-v3c-unity-player", "5G-MAG/rt-v3c-decoder-plugin", "5G-MAG/rt-v3c-content"],
               "Beyond 2D": ["5G-MAG/rt-beyond2d-evaluation-framework"],
@@ -54,27 +41,58 @@ jobs:
               "Auxiliary Tools": ["5G-MAG/rt-common-shared"]
           }
 
+          # 2. Projects requiring specific tag filters (Emergency Alerts & 5MBS)
+          filtered_projects = {
+              "5G Broadcast Emergency Alerts": {"repos": ["5G-MAG/rt-mbms-tx-for-qrd-and-crd"], "filter": "-ea-"},
+              "5G Multicast Broadcast": {"repos": ["5G-MAG/rt-mbs-transport-function", "5G-MAG/open5gs", "5G-MAG/rt-srsRAN_Project", "5G-MAG/rt-mbs-examples"], "filter": "5mbs"}
+          }
+
           final_output = {}
 
-          for project_name, repo_list in projects.items():
-              repo_data = []
-              for repo in repo_list:
-                  print(f"Fetching {repo}...")
-                  url = f"https://api.github.com/repos/{repo}/releases/latest"
-                  req = urllib.request.Request(url, headers={'User-Agent': 'Github-Action-Bot'})
+          def get_json(url):
+              req = urllib.request.Request(url, headers={'User-Agent': 'Github-Action-Bot'})
+              with urllib.request.urlopen(req) as response:
+                  return json.loads(response.read().decode())
+
+          # Process Standard Projects
+          for p_name, repos in standard_projects.items():
+              data_list = []
+              for repo in repos:
+                  print(f"Fetching latest for {repo}...")
                   try:
-                      with urllib.request.urlopen(req) as response:
-                          data = json.loads(response.read().decode())
-                          repo_data.append({
-                              "short_name": repo.split('/')[-1],
-                              "tag": data.get('tag_name', 'N/A'),
-                              "date": data.get('published_at', '').split('T')[0],
-                              "url": data.get('html_url', f"https://github.com/{repo}/releases")
-                          })
+                      data = get_json(f"https://api.github.com/repos/{repo}/releases/latest")
+                      data_list.append({
+                          "short_name": repo.split('/')[-1],
+                          "tag": data.get('tag_name'),
+                          "date": data.get('published_at', '').split('T')[0],
+                          "url": data.get('html_url')
+                      })
                   except:
-                      repo_data.append({"short_name": repo.split('/')[-1], "tag": "No Release", "date": "-", "url": f"https://github.com/{repo}/releases"})
-              
-              final_output[project_name] = repo_data
+                      data_list.append({"short_name": repo.split('/')[-1], "tag": "No Release", "date": "-", "url": f"https://github.com/{repo}/releases"})
+              final_output[p_name] = data_list
+
+          # Process Filtered Projects (EA and 5MBS)
+          for p_name, config in filtered_projects.items():
+              data_list = []
+              for repo in config["repos"]:
+                  print(f"Filtering {p_name} for {repo} using {config['filter']}...")
+                  try:
+                      releases = get_json(f"https://api.github.com/repos/{repo}/releases")
+                      target = next((r for r in releases if config["filter"] in r.get('tag_name', '').lower()), None)
+                      if target:
+                          data_list.append({
+                              "short_name": repo.split('/')[-1],
+                              "tag": target.get('tag_name'),
+                              "date": target.get('published_at', '').split('T')[0],
+                              "url": target.get('html_url')
+                          })
+                      else:
+                          # Fallback to latest if filter fails
+                          latest = get_json(f"https://api.github.com/repos/{repo}/releases/latest")
+                          data_list.append({"short_name": repo.split('/')[-1], "tag": latest.get('tag_name'), "date": latest.get('published_at', '').split('T')[0], "url": latest.get('html_url')})
+                  except:
+                      data_list.append({"short_name": repo.split('/')[-1], "tag": "No Release", "date": "-", "url": f"https://github.com/{repo}/releases"})
+              final_output[p_name] = data_list
 
           # Save with timestamp
           full_data = {"last_updated": datetime.now().strftime("%Y-%m-%d"), "projects": final_output}
