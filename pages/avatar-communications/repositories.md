@@ -30,3 +30,28 @@ This repository supports the development of a reference framework for avatar com
 
 ## Avatar Unity Tracker
 [rt-avatar-unity-tracker](https://github.com/5G-MAG/rt-avatar-unity-tracker){: .btn .btn-xr } [Releases](../releases.html){: .btn .btn-release }
+
+---
+
+## Latest Releases
+
+[Project Documentation](./beyond-2d-evaluation-framework/){: .btn .btn-blue }
+
+<table class="release-table" style="width:100%; border-collapse: collapse; margin-top: 20px; table-layout: fixed;">
+  <thead>
+    <tr style="text-align: left; border-bottom: 2px solid #eee;">
+      <th style="padding: 12px; width: 40%;">Repository</th>
+      <th style="padding: 12px; width: 40%;">Version</th>
+      <th style="padding: 12px; width: 20%;">Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for item in site.data.releases.projects["Conversational Avatar"] %}
+    <tr style="border-bottom: 1px solid #eee;">
+      <td style="padding: 12px; overflow: hidden; text-overflow: ellipsis;"><a href="{{ item.url }}" class="btn">{{ item.short_name }}</a></td>
+      <td style="padding: 12px; overflow: hidden; text-overflow: ellipsis;"><a href="{{ item.url }}" class="btn">{{ item.tag }}</a></td>
+      <td style="padding: 12px;">{{ item.date }}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
