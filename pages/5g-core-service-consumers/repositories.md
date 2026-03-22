@@ -27,6 +27,8 @@ Additional information:
 * [Information and how to download, build, install and run](https://github.com/5G-MAG/rt-5gc-service-consumers#readme)
 * [Releases](https://github.com/5G-MAG/rt-5gc-service-consumers/releases)
 
+---
+
 ## Latest Releases
 
 [Project Documentation](./5g-core-service-consumers/){: .btn .btn-blue }
