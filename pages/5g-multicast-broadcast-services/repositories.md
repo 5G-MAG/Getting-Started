@@ -78,7 +78,7 @@ Additional information:
 
 ---
 
-## Latest Releases - 5G Multicast Broadcast Services
+## Latest Releases
 
 [Project Documentation](./5g-multicast-broadcast-services/){: .btn .btn-blue }
 
