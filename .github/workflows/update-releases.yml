@@ -2,8 +2,8 @@ name: Sync Repo Releases
 
 on:
   schedule:
-    - cron: '0 0 * * *'
-  workflow_dispatch: 
+    - cron: '0 0 * * *' # Runs every night at midnight
+  workflow_dispatch: # Allows you to run it manually from the Actions tab
 
 jobs:
   update-data:
@@ -27,7 +27,7 @@ jobs:
           import os
           from datetime import datetime
 
-          # 1. Projects fetching the absolute global Latest Release
+          # 1. Standard Projects: Fetch absolute global Latest Release
           standard_projects = {
               "5G Media Streaming": ["5G-MAG/rt-5gms-application-provider", "5G-MAG/rt-5gms-application", "5G-MAG/rt-5gms-application-function", "5G-MAG/rt-5gms-application-server", "5G-MAG/rt-5gms-media-stream-handler", "5G-MAG/rt-5gms-media-session-handler", "5G-MAG/rt-5gms-common-android-library", "5G-MAG/rt-5gms-examples"],
               "5G Core Service Consumers": ["5G-MAG/rt-5gc-service-consumers"],
@@ -38,10 +38,12 @@ jobs:
               "Beyond 2D": ["5G-MAG/rt-beyond2d-evaluation-framework"],
               "AI ML": ["5G-MAG/rt-ai-ml-evaluation-framework"],
               "Multimedia Protocols": ["5G-MAG/rt-libflute"],
-              "Auxiliary Tools": ["5G-MAG/rt-common-shared"]
+              "Auxiliary Tools": ["5G-MAG/rt-common-shared"],
+              "Conversational Avatar": ["5G-MAG/rt-avatar-content", "5G-MAG/rt-avatar-call", "5G-MAG/rt-avatar-unity-tracker"],
+              "6G Testbed": ["5G-MAG/6G-Testbed"]
           }
 
-          # 2. Projects requiring specific tag filters (Emergency Alerts & 5MBS)
+          # 2. Filtered Projects: Fetch specific branch tags (EA and 5MBS)
           filtered_projects = {
               "5G Broadcast Emergency Alerts": {"repos": ["5G-MAG/rt-mbms-tx-for-qrd-and-crd"], "filter": "-ea-"},
               "5G Multicast Broadcast": {"repos": ["5G-MAG/rt-mbs-transport-function", "5G-MAG/open5gs", "5G-MAG/rt-srsRAN_Project", "5G-MAG/rt-mbs-examples"], "filter": "5mbs"}
@@ -54,7 +56,7 @@ jobs:
               with urllib.request.urlopen(req) as response:
                   return json.loads(response.read().decode())
 
-          # Process Standard Projects
+          # Process Standard
           for p_name, repos in standard_projects.items():
               data_list = []
               for repo in repos:
@@ -71,7 +73,7 @@ jobs:
                       data_list.append({"short_name": repo.split('/')[-1], "tag": "No Release", "date": "-", "url": f"https://github.com/{repo}/releases"})
               final_output[p_name] = data_list
 
-          # Process Filtered Projects (EA and 5MBS)
+          # Process Filtered (EA and 5MBS)
           for p_name, config in filtered_projects.items():
               data_list = []
               for repo in config["repos"]:
@@ -87,16 +89,15 @@ jobs:
                               "url": target.get('html_url')
                           })
                       else:
-                          # Fallback to latest if filter fails
+                          # Fallback to latest global if filtered tag not found
                           latest = get_json(f"https://api.github.com/repos/{repo}/releases/latest")
                           data_list.append({"short_name": repo.split('/')[-1], "tag": latest.get('tag_name'), "date": latest.get('published_at', '').split('T')[0], "url": latest.get('html_url')})
                   except:
                       data_list.append({"short_name": repo.split('/')[-1], "tag": "No Release", "date": "-", "url": f"https://github.com/{repo}/releases"})
               final_output[p_name] = data_list
 
-          # Save with timestamp
+          # Save to JSON
           full_data = {"last_updated": datetime.now().strftime("%Y-%m-%d"), "projects": final_output}
-          
           if not os.path.exists('_data'): os.makedirs('_data')
           with open('_data/releases.json', 'w') as f:
               json.dump(full_data, f, indent=2)
