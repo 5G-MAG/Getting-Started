@@ -40,7 +40,8 @@ jobs:
               "Multimedia Protocols": ["5G-MAG/rt-libflute"],
               "Auxiliary Tools": ["5G-MAG/rt-common-shared"],
               "Conversational Avatar": ["5G-MAG/rt-avatar-content", "5G-MAG/rt-avatar-call", "5G-MAG/rt-avatar-unity-tracker"],
-              "6G Testbed": ["5G-MAG/6G-Testbed"]
+              "6G Testbed": ["5G-MAG/6G-Testbed"],
+              "DVB-I over 5G": ["5G-MAG/rt-5gms-application"]
           }
 
           # 2. Filtered Projects: Fetch specific branch tags (EA and 5MBS)
