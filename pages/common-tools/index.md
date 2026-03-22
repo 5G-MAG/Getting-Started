@@ -7,7 +7,7 @@ nav_order: 4
 
 <img src="../../assets/images/Banner_CommonTools.png" /> 
 
-[Releases](../releases.html#auxiliary-tools-common-to-various-projects){: .btn .btn-release }
+[Scope](./index.html){: .btn .btn-blue } [Releases](./index.md#latest-releases){: .btn .btn-release }
 
 # Common Tools: Information and Repositories
 
