@@ -113,6 +113,29 @@ Additional information:
 
 ---
 
+## Latest Releases
+
+[Project Documentation](./5g-media-streaming/){: .btn .btn-blue }
+
+<table class="release-table" style="width:100%; border-collapse: collapse; margin-top: 20px; table-layout: fixed;">
+  <thead>
+    <tr style="text-align: left; border-bottom: 2px solid #eee;">
+      <th style="padding: 12px; width: 40%;">Repository</th>
+      <th style="padding: 12px; width: 40%;">Version</th>
+      <th style="padding: 12px; width: 20%;">Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for item in site.data.releases.projects["5G Media Streaming"] %}
+    <tr style="border-bottom: 1px solid #eee;">
+      <td style="padding: 12px; overflow: hidden; text-overflow: ellipsis;"><a href="{{ item.url }}" class="btn">{{ item.short_name }}</a></td>
+      <td style="padding: 12px; overflow: hidden; text-overflow: ellipsis;"><a href="{{ item.url }}" class="btn">{{ item.tag }}</a></td>
+      <td style="padding: 12px;">{{ item.date }}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+
 # Packages
 
 This project also provides or makes use of the following packages GitHub Container packages.
@@ -123,5 +146,3 @@ Components | Package
  --|--
  com.fivegmag.a5gmsmediastreamhandler | [https://github.com/5G-MAG/rt-5gms-media-stream-handler/packages/](https://github.com/5G-MAG/rt-5gms-media-stream-handler/packages/)
  com.fivegmag.a5gmscommonlibrary | [https://github.com/5G-MAG/rt-5gms-common-android-library/packages/](https://github.com/5G-MAG/rt-5gms-common-android-library/packages/)
-
-
