@@ -18,20 +18,20 @@ nav_order: 2
 
 [Project Documentation](./lte-based-5g-broadcast/){: .btn .btn-blue } [Project Roadmap](https://github.com/orgs/5G-MAG/projects/48/views/7){: .btn .btn-blue }
 
-<table class="release-table">
+<table class="release-table" style="width:100%; border-collapse: collapse; margin-top: 20px; table-layout: fixed;">
   <thead>
-    <tr>
-      <th>Repository</th>
-      <th>Version</th>
-      <th>Date</th>
+    <tr style="text-align: left; border-bottom: 2px solid #eee;">
+      <th style="padding: 12px; width: 40%;">Repository</th>
+      <th style="padding: 12px; width: 40%;">Version</th>
+      <th style="padding: 12px; width: 20%;">Date</th>
     </tr>
   </thead>
   <tbody>
     {% for item in site.data.releases.projects["5G Broadcast TV Radio"] %}
-    <tr>
-      <td><a href="{{ item.url }}" class="btn">{{ item.short_name }}</a></td>
-      <td><a href="{{ item.url }}" class="btn">{{ item.tag }}</a></td>
-      <td>{{ item.date }}</td>
+    <tr style="border-bottom: 1px solid #eee;">
+      <td style="padding: 12px; overflow: hidden; text-overflow: ellipsis;"><a href="{{ item.url }}" class="btn">{{ item.short_name }}</a></td>
+      <td style="padding: 12px; overflow: hidden; text-overflow: ellipsis;"><a href="{{ item.url }}" class="btn">{{ item.tag }}</a></td>
+      <td style="padding: 12px;">{{ item.date }}</td>
     </tr>
     {% endfor %}
   </tbody>
@@ -45,20 +45,20 @@ nav_order: 2
 
 [Project Documentation](./emergency-alerts/){: .btn .btn-blue } [Project Roadmap](https://github.com/orgs/5G-MAG/projects/48/views/12){: .btn .btn-blue }
 
-<table class="release-table">
+<table class="release-table" style="width:100%; border-collapse: collapse; margin-top: 20px; table-layout: fixed;">
   <thead>
-    <tr>
-      <th>Repository</th>
-      <th>Version</th>
-      <th>Date</th>
+    <tr style="text-align: left; border-bottom: 2px solid #eee;">
+      <th style="padding: 12px; width: 40%;">Repository</th>
+      <th style="padding: 12px; width: 40%;">Version</th>
+      <th style="padding: 12px; width: 20%;">Date</th>
     </tr>
   </thead>
   <tbody>
     {% for item in site.data.releases.projects["5G Broadcast Emergency Alerts"] %}
-    <tr>
-      <td><a href="{{ item.url }}" class="btn">{{ item.short_name }}</a></td>
-      <td><a href="{{ item.url }}" class="btn">{{ item.tag }}</a></td>
-      <td>{{ item.date }}</td>
+    <tr style="border-bottom: 1px solid #eee;">
+      <td style="padding: 12px; overflow: hidden; text-overflow: ellipsis;"><a href="{{ item.url }}" class="btn">{{ item.short_name }}</a></td>
+      <td style="padding: 12px; overflow: hidden; text-overflow: ellipsis;"><a href="{{ item.url }}" class="btn">{{ item.tag }}</a></td>
+      <td style="padding: 12px;">{{ item.date }}</td>
     </tr>
     {% endfor %}
   </tbody>
@@ -72,20 +72,20 @@ nav_order: 2
 
 [Project Documentation](./5g-media-streaming/){: .btn .btn-blue } [Project Roadmap](https://github.com/orgs/5G-MAG/projects/48/views/6){: .btn .btn-blue } 
 
-<table class="release-table">
+<table class="release-table" style="width:100%; border-collapse: collapse; margin-top: 20px; table-layout: fixed;">
   <thead>
-    <tr>
-      <th>Repository</th>
-      <th>Version</th>
-      <th>Date</th>
+    <tr style="text-align: left; border-bottom: 2px solid #eee;">
+      <th style="padding: 12px; width: 40%;">Repository</th>
+      <th style="padding: 12px; width: 40%;">Version</th>
+      <th style="padding: 12px; width: 20%;">Date</th>
     </tr>
   </thead>
   <tbody>
     {% for item in site.data.releases.projects["5G Media Streaming"] %}
-    <tr>
-      <td><a href="{{ item.url }}" class="btn">{{ item.short_name }}</a></td>
-      <td><a href="{{ item.url }}" class="btn">{{ item.tag }}</a></td>
-      <td>{{ item.date }}</td>
+    <tr style="border-bottom: 1px solid #eee;">
+      <td style="padding: 12px; overflow: hidden; text-overflow: ellipsis;"><a href="{{ item.url }}" class="btn">{{ item.short_name }}</a></td>
+      <td style="padding: 12px; overflow: hidden; text-overflow: ellipsis;"><a href="{{ item.url }}" class="btn">{{ item.tag }}</a></td>
+      <td style="padding: 12px;">{{ item.date }}</td>
     </tr>
     {% endfor %}
   </tbody>
@@ -99,20 +99,20 @@ nav_order: 2
 
 [Project Documentation](./5g-multicast-broadcast-services/){: .btn .btn-blue } [Project Roadmap](https://github.com/orgs/5G-MAG/projects/48/views/13){: .btn .btn-blue }
 
-<table class="release-table">
+<table class="release-table" style="width:100%; border-collapse: collapse; margin-top: 20px; table-layout: fixed;">
   <thead>
-    <tr>
-      <th>Repository</th>
-      <th>Version</th>
-      <th>Date</th>
+    <tr style="text-align: left; border-bottom: 2px solid #eee;">
+      <th style="padding: 12px; width: 40%;">Repository</th>
+      <th style="padding: 12px; width: 40%;">Version</th>
+      <th style="padding: 12px; width: 20%;">Date</th>
     </tr>
   </thead>
   <tbody>
     {% for item in site.data.releases.projects["5G Multicast Broadcast"] %}
-    <tr>
-      <td><a href="{{ item.url }}" class="btn">{{ item.short_name }}</a></td>
-      <td><a href="{{ item.url }}" class="btn">{{ item.tag }}</a></td>
-      <td>{{ item.date }}</td>
+    <tr style="border-bottom: 1px solid #eee;">
+      <td style="padding: 12px; overflow: hidden; text-overflow: ellipsis;"><a href="{{ item.url }}" class="btn">{{ item.short_name }}</a></td>
+      <td style="padding: 12px; overflow: hidden; text-overflow: ellipsis;"><a href="{{ item.url }}" class="btn">{{ item.tag }}</a></td>
+      <td style="padding: 12px;">{{ item.date }}</td>
     </tr>
     {% endfor %}
   </tbody>
@@ -126,20 +126,20 @@ nav_order: 2
 
 [Project Documentation](./5g-core-service-consumers/){: .btn .btn-blue } [Project Roadmap](https://github.com/orgs/5G-MAG/projects/48/views/17){: .btn .btn-blue }
 
-<table class="release-table">
+<table class="release-table" style="width:100%; border-collapse: collapse; margin-top: 20px; table-layout: fixed;">
   <thead>
-    <tr>
-      <th>Repository</th>
-      <th>Version</th>
-      <th>Date</th>
+    <tr style="text-align: left; border-bottom: 2px solid #eee;">
+      <th style="padding: 12px; width: 40%;">Repository</th>
+      <th style="padding: 12px; width: 40%;">Version</th>
+      <th style="padding: 12px; width: 20%;">Date</th>
     </tr>
   </thead>
   <tbody>
     {% for item in site.data.releases.projects["5G Core Service Consumers"] %}
-    <tr>
-      <td><a href="{{ item.url }}" class="btn">{{ item.short_name }}</a></td>
-      <td><a href="{{ item.url }}" class="btn">{{ item.tag }}</a></td>
-      <td>{{ item.date }}</td>
+    <tr style="border-bottom: 1px solid #eee;">
+      <td style="padding: 12px; overflow: hidden; text-overflow: ellipsis;"><a href="{{ item.url }}" class="btn">{{ item.short_name }}</a></td>
+      <td style="padding: 12px; overflow: hidden; text-overflow: ellipsis;"><a href="{{ item.url }}" class="btn">{{ item.tag }}</a></td>
+      <td style="padding: 12px;">{{ item.date }}</td>
     </tr>
     {% endfor %}
   </tbody>
@@ -147,24 +147,26 @@ nav_order: 2
 
 ---
 
+<img src="../assets/images/Banner_6GTestbedAITraffic.png"/> 
+
 ## Latest Releases - 6G Testbed and AI Traffic Characterization
 
 [Project Documentation](./6g-testbed-ai-traffic/){: .btn .btn-blue } [Project Roadmap](https://github.com/orgs/5G-MAG/projects/48/views/17){: .btn .btn-blue }
 
-<table class="release-table">
+<table class="release-table" style="width:100%; border-collapse: collapse; margin-top: 20px; table-layout: fixed;">
   <thead>
-    <tr>
-      <th>Repository</th>
-      <th>Version</th>
-      <th>Date</th>
+    <tr style="text-align: left; border-bottom: 20px solid transparent; border-bottom: 2px solid #eee;">
+      <th style="padding: 12px; width: 40%;">Repository</th>
+      <th style="padding: 12px; width: 40%;">Version</th>
+      <th style="padding: 12px; width: 20%;">Date</th>
     </tr>
   </thead>
   <tbody>
     {% for item in site.data.releases.projects["6G Testbed"] %}
-    <tr>
-      <td><a href="{{ item.url }}" class="btn">{{ item.short_name }}</a></td>
-      <td><a href="{{ item.url }}" class="btn">{{ item.tag }}</a></td>
-      <td>{{ item.date }}</td>
+    <tr style="border-bottom: 1px solid #eee;">
+      <td style="padding: 12px; overflow: hidden; text-overflow: ellipsis;"><a href="{{ item.url }}" class="btn">{{ item.short_name }}</a></td>
+      <td style="padding: 12px; overflow: hidden; text-overflow: ellipsis;"><a href="{{ item.url }}" class="btn">{{ item.tag }}</a></td>
+      <td style="padding: 12px;">{{ item.date }}</td>
     </tr>
     {% endfor %}
   </tbody>
@@ -178,20 +180,20 @@ nav_order: 2
 
 [Project Documentation](./ai-ml-evaluation-framework/){: .btn .btn-blue } [Project Roadmap](https://github.com/orgs/5G-MAG/projects/48/views/9){: .btn .btn-blue }
 
-<table class="release-table">
+<table class="release-table" style="width:100%; border-collapse: collapse; margin-top: 20px; table-layout: fixed;">
   <thead>
-    <tr>
-      <th>Repository</th>
-      <th>Version</th>
-      <th>Date</th>
+    <tr style="text-align: left; border-bottom: 2px solid #eee;">
+      <th style="padding: 12px; width: 40%;">Repository</th>
+      <th style="padding: 12px; width: 40%;">Version</th>
+      <th style="padding: 12px; width: 20%;">Date</th>
     </tr>
   </thead>
   <tbody>
     {% for item in site.data.releases.projects["AI ML"] %}
-    <tr>
-      <td><a href="{{ item.url }}" class="btn">{{ item.short_name }}</a></td>
-      <td><a href="{{ item.url }}" class="btn">{{ item.tag }}</a></td>
-      <td>{{ item.date }}</td>
+    <tr style="border-bottom: 1px solid #eee;">
+      <td style="padding: 12px; overflow: hidden; text-overflow: ellipsis;"><a href="{{ item.url }}" class="btn">{{ item.short_name }}</a></td>
+      <td style="padding: 12px; overflow: hidden; text-overflow: ellipsis;"><a href="{{ item.url }}" class="btn">{{ item.tag }}</a></td>
+      <td style="padding: 12px;">{{ item.date }}</td>
     </tr>
     {% endfor %}
   </tbody>
@@ -205,20 +207,20 @@ nav_order: 2
 
 [Project Documentation](./beyond-2d-evaluation-framework/){: .btn .btn-blue } [Project Roadmap](https://github.com/orgs/5G-MAG/projects/48/views/10){: .btn .btn-blue }
 
-<table class="release-table">
+<table class="release-table" style="width:100%; border-collapse: collapse; margin-top: 20px; table-layout: fixed;">
   <thead>
-    <tr>
-      <th>Repository</th>
-      <th>Version</th>
-      <th>Date</th>
+    <tr style="text-align: left; border-bottom: 2px solid #eee;">
+      <th style="padding: 12px; width: 40%;">Repository</th>
+      <th style="padding: 12px; width: 40%;">Version</th>
+      <th style="padding: 12px; width: 20%;">Date</th>
     </tr>
   </thead>
   <tbody>
     {% for item in site.data.releases.projects["Beyond 2D"] %}
-    <tr>
-      <td><a href="{{ item.url }}" class="btn">{{ item.short_name }}</a></td>
-      <td><a href="{{ item.url }}" class="btn">{{ item.tag }}</a></td>
-      <td>{{ item.date }}</td>
+    <tr style="border-bottom: 1px solid #eee;">
+      <td style="padding: 12px; overflow: hidden; text-overflow: ellipsis;"><a href="{{ item.url }}" class="btn">{{ item.short_name }}</a></td>
+      <td style="padding: 12px; overflow: hidden; text-overflow: ellipsis;"><a href="{{ item.url }}" class="btn">{{ item.tag }}</a></td>
+      <td style="padding: 12px;">{{ item.date }}</td>
     </tr>
     {% endfor %}
   </tbody>
@@ -226,26 +228,26 @@ nav_order: 2
 
 ---
 
-<img src="../assets/images/Banner_B2D.png"/> 
+<img src="../assets/images/Banner_Avatar.png"/> 
 
 ## Latest Releases - Conversational Avatar Real-Time Communications
 
 [Project Documentation](./beyond-2d-evaluation-framework/){: .btn .btn-blue } [Project Roadmap](https://github.com/orgs/5G-MAG/projects/48/views/10){: .btn .btn-blue }
 
-<table class="release-table">
+<table class="release-table" style="width:100%; border-collapse: collapse; margin-top: 20px; table-layout: fixed;">
   <thead>
-    <tr>
-      <th>Repository</th>
-      <th>Version</th>
-      <th>Date</th>
+    <tr style="text-align: left; border-bottom: 2px solid #eee;">
+      <th style="padding: 12px; width: 40%;">Repository</th>
+      <th style="padding: 12px; width: 40%;">Version</th>
+      <th style="padding: 12px; width: 20%;">Date</th>
     </tr>
   </thead>
   <tbody>
     {% for item in site.data.releases.projects["Conversational Avatar"] %}
-    <tr>
-      <td><a href="{{ item.url }}" class="btn">{{ item.short_name }}</a></td>
-      <td><a href="{{ item.url }}" class="btn">{{ item.tag }}</a></td>
-      <td>{{ item.date }}</td>
+    <tr style="border-bottom: 1px solid #eee;">
+      <td style="padding: 12px; overflow: hidden; text-overflow: ellipsis;"><a href="{{ item.url }}" class="btn">{{ item.short_name }}</a></td>
+      <td style="padding: 12px; overflow: hidden; text-overflow: ellipsis;"><a href="{{ item.url }}" class="btn">{{ item.tag }}</a></td>
+      <td style="padding: 12px;">{{ item.date }}</td>
     </tr>
     {% endfor %}
   </tbody>
@@ -259,20 +261,20 @@ nav_order: 2
 
 [Project Documentation](./dvbi-over-5g/){: .btn .btn-blue } [Project Roadmap](https://github.com/orgs/5G-MAG/projects/48/views/11){: .btn .btn-blue }
 
-<table class="release-table">
+<table class="release-table" style="width:100%; border-collapse: collapse; margin-top: 20px; table-layout: fixed;">
   <thead>
-    <tr>
-      <th>Repository</th>
-      <th>Version</th>
-      <th>Date</th>
+    <tr style="text-align: left; border-bottom: 2px solid #eee;">
+      <th style="padding: 12px; width: 40%;">Repository</th>
+      <th style="padding: 12px; width: 40%;">Version</th>
+      <th style="padding: 12px; width: 20%;">Date</th>
     </tr>
   </thead>
   <tbody>
     {% for item in site.data.releases.projects["Multimedia Protocols"] %}
-    <tr>
-      <td><a href="{{ item.url }}" class="btn">{{ item.short_name }}</a></td>
-      <td><a href="{{ item.url }}" class="btn">{{ item.tag }}</a></td>
-      <td>{{ item.date }}</td>
+    <tr style="border-bottom: 1px solid #eee;">
+      <td style="padding: 12px; overflow: hidden; text-overflow: ellipsis;"><a href="{{ item.url }}" class="btn">{{ item.short_name }}</a></td>
+      <td style="padding: 12px; overflow: hidden; text-overflow: ellipsis;"><a href="{{ item.url }}" class="btn">{{ item.tag }}</a></td>
+      <td style="padding: 12px;">{{ item.date }}</td>
     </tr>
     {% endfor %}
   </tbody>
@@ -286,20 +288,20 @@ nav_order: 2
 
 [Project Documentation](./multimedia-content-delivery/){: .btn .btn-blue } [Project Roadmap](https://github.com/orgs/5G-MAG/projects/48/views/14){: .btn .btn-blue }
 
-<table class="release-table">
+<table class="release-table" style="width:100%; border-collapse: collapse; margin-top: 20px; table-layout: fixed;">
   <thead>
-    <tr>
-      <th>Repository</th>
-      <th>Version</th>
-      <th>Date</th>
+    <tr style="text-align: left; border-bottom: 2px solid #eee;">
+      <th style="padding: 12px; width: 40%;">Repository</th>
+      <th style="padding: 12px; width: 40%;">Version</th>
+      <th style="padding: 12px; width: 20%;">Date</th>
     </tr>
   </thead>
   <tbody>
     {% for item in site.data.releases.projects["Multimedia Protocols"] %}
-    <tr>
-      <td><a href="{{ item.url }}" class="btn">{{ item.short_name }}</a></td>
-      <td><a href="{{ item.url }}" class="btn">{{ item.tag }}</a></td>
-      <td>{{ item.date }}</td>
+    <tr style="border-bottom: 1px solid #eee;">
+      <td style="padding: 12px; overflow: hidden; text-overflow: ellipsis;"><a href="{{ item.url }}" class="btn">{{ item.short_name }}</a></td>
+      <td style="padding: 12px; overflow: hidden; text-overflow: ellipsis;"><a href="{{ item.url }}" class="btn">{{ item.tag }}</a></td>
+      <td style="padding: 12px;">{{ item.date }}</td>
     </tr>
     {% endfor %}
   </tbody>
@@ -313,20 +315,20 @@ nav_order: 2
 
 [Project Documentation](./ue-data-collection-reporting-exposure/){: .btn .btn-blue } [Project Roadmap](https://github.com/orgs/5G-MAG/projects/48/views/8){: .btn .btn-blue }
 
-<table class="release-table">
+<table class="release-table" style="width:100%; border-collapse: collapse; margin-top: 20px; table-layout: fixed;">
   <thead>
-    <tr>
-      <th>Repository</th>
-      <th>Version</th>
-      <th>Date</th>
+    <tr style="text-align: left; border-bottom: 2px solid #eee;">
+      <th style="padding: 12px; width: 40%;">Repository</th>
+      <th style="padding: 12px; width: 40%;">Version</th>
+      <th style="padding: 12px; width: 20%;">Date</th>
     </tr>
   </thead>
   <tbody>
     {% for item in site.data.releases.projects["UE Data Collection"] %}
-    <tr>
-      <td><a href="{{ item.url }}" class="btn">{{ item.short_name }}</a></td>
-      <td><a href="{{ item.url }}" class="btn">{{ item.tag }}</a></td>
-      <td>{{ item.date }}</td>
+    <tr style="border-bottom: 1px solid #eee;">
+      <td style="padding: 12px; overflow: hidden; text-overflow: ellipsis;"><a href="{{ item.url }}" class="btn">{{ item.short_name }}</a></td>
+      <td style="padding: 12px; overflow: hidden; text-overflow: ellipsis;"><a href="{{ item.url }}" class="btn">{{ item.tag }}</a></td>
+      <td style="padding: 12px;">{{ item.date }}</td>
     </tr>
     {% endfor %}
   </tbody>
@@ -340,20 +342,20 @@ nav_order: 2
 
 [Project Documentation](./xr-media-integration-in-5g/){: .btn .btn-blue } [Project Roadmap](https://github.com/orgs/5G-MAG/projects/48/views/16){: .btn .btn-blue }
 
-<table class="release-table">
+<table class="release-table" style="width:100%; border-collapse: collapse; margin-top: 20px; table-layout: fixed;">
   <thead>
-    <tr>
-      <th>Repository</th>
-      <th>Version</th>
-      <th>Date</th>
+    <tr style="text-align: left; border-bottom: 2px solid #eee;">
+      <th style="padding: 12px; width: 40%;">Repository</th>
+      <th style="padding: 12px; width: 40%;">Version</th>
+      <th style="padding: 12px; width: 20%;">Date</th>
     </tr>
   </thead>
   <tbody>
     {% for item in site.data.releases.projects["XR Media"] %}
-    <tr>
-      <td><a href="{{ item.url }}" class="btn">{{ item.short_name }}</a></td>
-      <td><a href="{{ item.url }}" class="btn">{{ item.tag }}</a></td>
-      <td>{{ item.date }}</td>
+    <tr style="border-bottom: 1px solid #eee;">
+      <td style="padding: 12px; overflow: hidden; text-overflow: ellipsis;"><a href="{{ item.url }}" class="btn">{{ item.short_name }}</a></td>
+      <td style="padding: 12px; overflow: hidden; text-overflow: ellipsis;"><a href="{{ item.url }}" class="btn">{{ item.tag }}</a></td>
+      <td style="padding: 12px;">{{ item.date }}</td>
     </tr>
     {% endfor %}
   </tbody>
@@ -367,20 +369,20 @@ nav_order: 2
 
 [Project Documentation](./v3c-immersive-platform/){: .btn .btn-blue } [Project Roadmap](https://github.com/orgs/5G-MAG/projects/48/views/15){: .btn .btn-blue }
 
-<table class="release-table">
+<table class="release-table" style="width:100%; border-collapse: collapse; margin-top: 20px; table-layout: fixed;">
   <thead>
-    <tr>
-      <th>Repository</th>
-      <th>Version</th>
-      <th>Date</th>
+    <tr style="text-align: left; border-bottom: 2px solid #eee;">
+      <th style="padding: 12px; width: 40%;">Repository</th>
+      <th style="padding: 12px; width: 40%;">Version</th>
+      <th style="padding: 12px; width: 20%;">Date</th>
     </tr>
   </thead>
   <tbody>
     {% for item in site.data.releases.projects["V3C Immersive"] %}
-    <tr>
-      <td><a href="{{ item.url }}" class="btn">{{ item.short_name }}</a></td>
-      <td><a href="{{ item.url }}" class="btn">{{ item.tag }}</a></td>
-      <td>{{ item.date }}</td>
+    <tr style="border-bottom: 1px solid #eee;">
+      <td style="padding: 12px; overflow: hidden; text-overflow: ellipsis;"><a href="{{ item.url }}" class="btn">{{ item.short_name }}</a></td>
+      <td style="padding: 12px; overflow: hidden; text-overflow: ellipsis;"><a href="{{ item.url }}" class="btn">{{ item.tag }}</a></td>
+      <td style="padding: 12px;">{{ item.date }}</td>
     </tr>
     {% endfor %}
   </tbody>
@@ -394,20 +396,20 @@ nav_order: 2
 
 [Documentation](./common-tools/index.html){: .btn .btn-blue }
 
-<table class="release-table">
+<table class="release-table" style="width:100%; border-collapse: collapse; margin-top: 20px; table-layout: fixed;">
   <thead>
-    <tr>
-      <th>Repository</th>
-      <th>Version</th>
-      <th>Date</th>
+    <tr style="text-align: left; border-bottom: 2px solid #eee;">
+      <th style="padding: 12px; width: 40%;">Repository</th>
+      <th style="padding: 12px; width: 40%;">Version</th>
+      <th style="padding: 12px; width: 20%;">Date</th>
     </tr>
   </thead>
   <tbody>
     {% for item in site.data.releases.projects["Auxiliary Tools"] %}
-    <tr>
-      <td><a href="{{ item.url }}" class="btn">{{ item.short_name }}</a></td>
-      <td><a href="{{ item.url }}" class="btn">{{ item.tag }}</a></td>
-      <td>{{ item.date }}</td>
+    <tr style="border-bottom: 1px solid #eee;">
+      <td style="padding: 12px; overflow: hidden; text-overflow: ellipsis;"><a href="{{ item.url }}" class="btn">{{ item.short_name }}</a></td>
+      <td style="padding: 12px; overflow: hidden; text-overflow: ellipsis;"><a href="{{ item.url }}" class="btn">{{ item.tag }}</a></td>
+      <td style="padding: 12px;">{{ item.date }}</td>
     </tr>
     {% endfor %}
   </tbody>
