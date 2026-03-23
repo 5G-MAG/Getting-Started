@@ -10,26 +10,35 @@ nav_order: 3
 
 [Scope](./scope.html){: .btn .btn-blue } [Project Roadmap](./projects.html){: .btn .btn-blue } [GitHub Repos](./repositories.html){: .btn .btn-github } [Releases](./repositories.html#latest-releases){: .btn .btn-release } [Tutorials](./tutorials.html){: .btn .btn-tutorial } [Video Library](./tutorials.html#video-library){: .btn .btn-video } [Requirements](./requirements.html){: .btn .btn-blue }
 
-# Repositories
+# Software Repositories
 
-The following repositories are available. Please refer to the "Scope" sections of the different projects for more context.
+The following repositories are available. Please refer to the "Scope" section of the different projects for more context.
 
 <img src="../../assets/images/projects/avatar_repos.png" style="width: 80%">
 
 ---
 
 ## Avatar Test Content
-[rt-avatar-content](https://github.com/5G-MAG/rt-avatar-content){: .btn .btn-xr } [Releases](../releases.html){: .btn .btn-release }
+[rt-avatar-content](https://github.com/5G-MAG/rt-avatar-content){: .btn .btn-xr }
 
 This repository holds reference MPEG ARF content for real time avatar communication.
 
+Additional information:
+* [Information and how to download, build, install and run](https://github.com/5G-MAG/rt-avatar-content#readme)
+
 ## Avatar Call
-[rt-avatar-call](https://github.com/5G-MAG/rt-avatar-call){: .btn .btn-xr } [Releases](../releases.html){: .btn .btn-release }
+[rt-avatar-call](https://github.com/5G-MAG/rt-avatar-call){: .btn .btn-xr }
 
 This repository supports the development of a reference framework for avatar communication. The goal is to demonstrate WebRTC communication using the MPEG ARF and related animation compression.
 
+Additional information:
+* [Information and how to download, build, install and run](https://github.com/5G-MAG/rt-avatar-call#readme)
+
 ## Avatar Unity Tracker
-[rt-avatar-unity-tracker](https://github.com/5G-MAG/rt-avatar-unity-tracker){: .btn .btn-xr } [Releases](../releases.html){: .btn .btn-release }
+[rt-avatar-unity-tracker](https://github.com/5G-MAG/rt-avatar-unity-tracker){: .btn .btn-xr }
+
+Additional information:
+* [Information and how to download, build, install and run](https://github.com/5G-MAG/rt-avatar-call#readme)
 
 ---
 
