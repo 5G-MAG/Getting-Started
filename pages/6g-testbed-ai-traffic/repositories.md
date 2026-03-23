@@ -10,16 +10,16 @@ nav_order: 3
 
 [Scope](./scope.html){: .btn .btn-blue } [Project Roadmap](./projects.html){: .btn .btn-blue } [GitHub Repos](./repositories.html){: .btn .btn-github } [Releases](./repositories.html#latest-releases){: .btn .btn-release } [Tutorials](./tutorials.html){: .btn .btn-tutorial } [Video Library](./tutorials.html#video-library){: .btn .btn-video } [Requirements](./requirements.html){: .btn .btn-blue }
 
-# Repositories
+# Software Repositories
 
-The following repositories are available. Please refer to the "Scope" sections of the different projects for more context.
+The following repositories are available. Please refer to the "Scope" section of the different projects for more context.
 
 <img src="../../assets/images/projects/6gtestbed_repos.png" style="width: 80%">
 
 ---
 
 ## 6G AI Traffic Characterization Testbed
-[6G-Testbed](https://github.com/5G-MAG/6G-Testbed){: .btn .btn-testbed } [Releases](../releases.html){: .btn .btn-release }
+[6G-Testbed](https://github.com/5G-MAG/6G-Testbed){: .btn .btn-testbed }
 
 A framework for measuring and analyzing AI/LLM service traffic patterns under various network conditions, designed to support 3GPP SA4 6G Media Study contributions.
 
