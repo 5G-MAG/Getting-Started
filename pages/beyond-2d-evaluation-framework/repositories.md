@@ -23,6 +23,7 @@ The following repositories are available. Please refer to the "Scope" section of
 
 This project holds code related to the evaluation framework for the Feasibility Study on Beyond 2D Video (FS_Beyond2D) in 3GPP TSG SA WG4 (SA4). This study is based on work item description (WID) SP-240479 New SID on Feasibility Study on Beyond 2D Video, and the study will result in technical report TR 26.956.
 
+Additional information:
 * [Information and how to download, build, install and run](https://github.com/5G-MAG/rt-beyond2d-evaluation-framework#readme)
 
 ---
