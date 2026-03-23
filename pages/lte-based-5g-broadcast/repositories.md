@@ -95,8 +95,6 @@ Additional information:
 
 ## Latest Releases
 
-[Project Documentation](./lte-based-5g-broadcast/){: .btn .btn-blue }
-
 <table class="release-table" style="width:100%; border-collapse: collapse; margin-top: 20px; table-layout: fixed;">
   <thead>
     <tr style="text-align: left; border-bottom: 2px solid #eee;">
