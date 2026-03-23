@@ -23,6 +23,9 @@ The following repositories are available. Please refer to the "Scope" section of
 
 A framework for measuring and analyzing AI/LLM service traffic patterns under various network conditions, designed to support 3GPP SA4 6G Media Study contributions.
 
+Additional information:
+* [Information and how to download, build, install and run](https://github.com/5G-MAG/6G-Testbed#readme)
+
 ---
 
 ## Latest Releases
