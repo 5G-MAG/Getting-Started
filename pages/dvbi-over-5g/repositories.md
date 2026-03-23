@@ -10,17 +10,16 @@ nav_order: 3
 
 [Scope](./scope.html){: .btn .btn-blue } [Project Roadmap](./projects.html){: .btn .btn-blue } [GitHub Repos](./repositories.html){: .btn .btn-github } [Releases](./repositories.html#latest-releases){: .btn .btn-release } [Tutorials](./tutorials.html){: .btn .btn-tutorial } [Video Library](./tutorials.html#video-library){: .btn .btn-video } [Requirements](./requirements.html){: .btn .btn-blue }
 
+# Software Repositories
 
-# Repositories
-
-The following repositories are available. Please refer to the "Scope & Architecture" sections of the different projects for more context.
+The following repositories are available. Please refer to the "Scope" section of the different projects for more context.
 
 <img src="../../assets/images/projects/dvb_repos.png" style="width: 80%">
 
 ---
 
 ## DVB-I Reference Application
-[rt-5gms-application / fivegmag_ExoDvbi_player](https://github.com/5G-MAG/rt-5gms-application/tree/development/fivegmag_ExoDvbi_player){: .btn .btn-dvbi } [Releases](../releases.html##project-dvb-i-services-over-5g-systems){: .btn .btn-release }
+[rt-5gms-application / fivegmag_ExoDvbi_player](https://github.com/5G-MAG/rt-5gms-application/tree/development/fivegmag_ExoDvbi_player){: .btn .btn-dvbi }
 
 This project uses the Android ExoPlayer and the DVB-I Reference Client functionality to provide the capabilities to select and play back media content.
 
