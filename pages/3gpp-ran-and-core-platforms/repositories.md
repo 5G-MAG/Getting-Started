@@ -53,3 +53,7 @@ The branches available under this repository are:
 [srsRAN](https://github.com/5G-MAG/srsRAN){: .btn .btn-3gpp }
 
 5G-MAG maintains a fork of a legacy/discontinued version of srsRAN prior to its conversion into srsRAN_4G.
+
+The branches available under this repository are:
+* **main_srsran_4g** - A fork of the "main" brach of srsRAN.
+* **fembms** - Acts as the "main" brach for implementations related to 5G Broadcast / MBMS.
