@@ -10,18 +10,18 @@ nav_order: 3
 
 [Scope](./scope.html){: .btn .btn-blue } [Project Roadmap](./projects.html){: .btn .btn-blue } [GitHub Repos](./repositories.html){: .btn .btn-github } [Releases](./repositories.html#latest-releases){: .btn .btn-release } [Tutorials](./tutorials.html){: .btn .btn-tutorial } [Video Library](./tutorials.html#video-library){: .btn .btn-video } [Requirements](./requirements.html){: .btn .btn-blue }
 
-# Repositories
+# Software Repositories
 
-The following repositories are available. Please refer to the "Scope & Architecture" sections of the different projects for more context.
+The following repositories are available. Please refer to the "Scope" section of the different projects for more context.
 
 <img src="../../assets/images/projects/5gc_repos.png" style="width: 80%">
 
 ---
 
 ## 5GC Service Consumers
-[rt-5gc-service-consumers](https://github.com/5G-MAG/rt-5gc-service-consumers){: .btn .btn-5gcsc } [Releases](../releases.html#project-5g-core-service-consumers){: .btn .btn-release }
+[rt-5gc-service-consumers](https://github.com/5G-MAG/rt-5gc-service-consumers){: .btn .btn-5gcsc }
 
-This repository contains a collection of reusable service consumer libraries designed to talk to the 5G Core Network Functions using service interfaces.
+This repository contains a collection of reusable service consumer libraries designed to interact with the 5GC Network Functions using service interfaces.
 
 Additional information:
 * [Information and how to download, build, install and run](https://github.com/5G-MAG/rt-5gc-service-consumers#readme)
