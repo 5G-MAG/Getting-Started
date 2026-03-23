@@ -47,7 +47,7 @@ jobs:
           # 2. Filtered Projects: Fetch specific branch tags (EA and 5MBS)
           filtered_projects = {
               "5G Broadcast Emergency Alerts": {"repos": ["5G-MAG/rt-mbms-tx-for-qrd-and-crd"], "filter": "-ea-"},
-              "5G Multicast Broadcast": {"repos": ["5G-MAG/rt-mbs-transport-function", "5G-MAG/open5gs", "5G-MAG/rt-srsRAN_Project", "5G-MAG/rt-mbs-examples"], "filter": "5mbs"}
+              "5G Multicast Broadcast": {"repos": ["5G-MAG/rt-mbs-function","5G-MAG/rt-mbs-transport-function", "5G-MAG/open5gs", "5G-MAG/rt-srsRAN_Project", "5G-MAG/rt-mbs-examples"], "filter": "5mbs"}
           }
 
           final_output = {}
