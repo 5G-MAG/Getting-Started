@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-03-22",
+  "last_updated": "2026-03-23",
   "projects": {
     "5G Media Streaming": [
       {
@@ -209,6 +209,14 @@
         "tag": "No Release",
         "date": "-",
         "url": "https://github.com/5G-MAG/6G-Testbed/releases"
+      }
+    ],
+    "DVB-I over 5G": [
+      {
+        "short_name": "rt-5gms-application",
+        "tag": "rt-5gms-application-v1.2.1",
+        "date": "2025-01-15",
+        "url": "https://github.com/5G-MAG/rt-5gms-application/releases/tag/rt-5gms-application-v1.2.1"
       }
     ],
     "5G Broadcast Emergency Alerts": [
