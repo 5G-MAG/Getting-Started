@@ -10,9 +10,9 @@ nav_order: 3
 
 [Scope](./scope.html){: .btn .btn-blue } [Project Roadmap](./projects.html){: .btn .btn-blue } [GitHub Repos](./repositories.html){: .btn .btn-github } [Releases](./repositories.html#latest-releases){: .btn .btn-release } [Tutorials](./tutorials.html){: .btn .btn-tutorial } [Video Library](./tutorials.html#video-library){: .btn .btn-video } [Requirements](./requirements.html){: .btn .btn-blue }
 
-# Repositories
+# Software Repositories
 
-The following repositories are available. Please refer to the "Scope & Architecture" sections of the different projects for more context.
+The following repositories are available. Please refer to the "Scope" section of the different projects for more context.
 
 <img src="../../assets/images/projects/aiml_repos.png" style="width: 80%">
 
@@ -21,7 +21,7 @@ Note that these repositories are currently private and under testing. **Early ac
 ---
 
 ## AI/ML Evaluation Framework
-[rt-ai-ml-evaluation-framework](https://github.com/5G-MAG/rt-ai-ml-evaluation-framework){: .btn .btn-testbed } [Releases](../releases.html#project-aiml-in-mobile-media-services){: .btn .btn-release }
+[rt-ai-ml-evaluation-framework](https://github.com/5G-MAG/rt-ai-ml-evaluation-framework){: .btn .btn-testbed }
 
 This repository holds code related to the implementation of the AI/ML evaluation framework as defined in 3GPP SA4 TR26.927.
 
