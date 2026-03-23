@@ -75,19 +75,10 @@ has_children: true
     <td><br></td>
   <tr>
     <td markdown="span" align="center"><a href="./xr-media-integration-in-5g/"><img width="70%" style="border:5px solid black;" src="../assets/images/Reference_Tools_XR_Media_MPEG_I_SD.png"><a/></td>
-    <td markdown="span" align="center"><a href="./xr-media-integration-in-5g/"><img width="70%" style="border:5px solid black;" src="../assets/images/Reference_Tools_XR_Media_MPEG_I_SD.png"><a/></td>
+    <td markdown="span" align="center"><a href="./common-tools/index.html"><img width="70%" style="border:5px solid black;" src="../assets/images/Category_CommonTools.png"><a/></td>
   </tr>
   <tr>
     <td markdown="span" align="center">[Project Documentation](./xr-media-integration-in-5g/){: .btn .btn-blue } [Project Roadmap](https://github.com/orgs/5G-MAG/projects/48/views/16){: .btn .btn-blue } [Latest Releases](./releases.html#project-xr-media-with-mpeg-i-scene-description){: .btn .btn-blue } </td>
-    <td markdown="span" align="center">[Project Documentation](./xr-media-integration-in-5g/){: .btn .btn-blue } [Project Roadmap](https://github.com/orgs/5G-MAG/projects/48/views/16){: .btn .btn-blue } [Latest Releases](./releases.html#project-xr-media-with-mpeg-i-scene-description){: .btn .btn-blue } </td>
+    <td markdown="span" align="center">[Documentation](./common-tools/index.html){: .btn .btn-blue } [Latest Releases](./releases.html#auxiliary-tools-common-to-various-projects){: .btn .btn-blue } </td>
   </tr>
 </table>
-
-## Other Tools
-
-### Auxiliary tools common to various projects
-[Documentation](./common-tools/index.html){: .btn .btn-blue }
-[Latest Releases](./releases.html#auxiliary-tools-common-to-various-projects){: .btn .btn-blue }
-
-### External Tools
-[Documentation](./external-tools/index.html){: .btn .btn-blue }
