@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-03-23",
+  "last_updated": "2026-03-24",
   "projects": {
     "5G Media Streaming": [
       {
@@ -228,6 +228,12 @@
       }
     ],
     "5G Multicast Broadcast": [
+      {
+        "short_name": "rt-mbs-function",
+        "tag": "rt-mbs-function-0.1.0",
+        "date": "2026-02-18",
+        "url": "https://github.com/5G-MAG/rt-mbs-function/releases/tag/rt-mbs-function-0.1.0"
+      },
       {
         "short_name": "rt-mbs-transport-function",
         "tag": "rt-mbs-transport-function-1.2.2",
