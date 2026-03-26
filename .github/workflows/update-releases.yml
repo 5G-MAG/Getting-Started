@@ -103,11 +103,11 @@ jobs:
                         days_old = (datetime.now() - created_date).days
                         
                         # New Thresholds & High-Contrast Colors
-                        if days_old <= 14:
+                        if days_old <= 30:
                             status_color = "#28a745" # Green
-                        elif days_old <= 60:
+                        elif days_old <= 90:
                             status_color = "#B8860B" # Darker Golden-Yellow (Readable)
-                        elif days_old <= 120:
+                        elif days_old <= 180:
                             status_color = "#d9534f" # Burnt Orange
                         else:
                             status_color = "#b91d1d" # Deep Red
