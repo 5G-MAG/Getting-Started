@@ -15,6 +15,12 @@ nav_order: 3
     color: #666;
     font-weight: normal;
   }
+  .no-prs {
+    padding: 20px;
+    color: #999;
+    text-align: center;
+    font-style: italic;
+  }
 </style>
 
 <img src="../assets/images/Banner_ReferenceTools.png" /> 
@@ -55,7 +61,7 @@ nav_order: 3
       </tr>
       {% endfor %}
     {% else %}
-      <tr><td colspan="4" style="padding: 12px; color: #666;">*No open pull requests.*</td></tr>
+      <tr><td colspan="4" class="no-prs">No open pull requests</td></tr>
     {% endif %}
   </tbody>
 </table>
@@ -92,7 +98,7 @@ nav_order: 3
       </tr>
       {% endfor %}
     {% else %}
-      <tr><td colspan="4" style="padding: 12px; color: #666;">*No open pull requests.*</td></tr>
+      <tr><td colspan="4" class="no-prs">No open pull requests</td></tr>
     {% endif %}
   </tbody>
 </table>
@@ -129,7 +135,7 @@ nav_order: 3
       </tr>
       {% endfor %}
     {% else %}
-      <tr><td colspan="4" style="padding: 12px; color: #666;">*No open pull requests.*</td></tr>
+      <tr><td colspan="4" class="no-prs">No open pull requests</td></tr>
     {% endif %}
   </tbody>
 </table>
@@ -166,7 +172,7 @@ nav_order: 3
       </tr>
       {% endfor %}
     {% else %}
-      <tr><td colspan="4" style="padding: 12px; color: #666;">*No open pull requests.*</td></tr>
+      <tr><td colspan="4" class="no-prs">No open pull requests</td></tr>
     {% endif %}
   </tbody>
 </table>
@@ -203,7 +209,7 @@ nav_order: 3
       </tr>
       {% endfor %}
     {% else %}
-      <tr><td colspan="4" style="padding: 12px; color: #666;">*No open pull requests.*</td></tr>
+      <tr><td colspan="4" class="no-prs">No open pull requests</td></tr>
     {% endif %}
   </tbody>
 </table>
@@ -240,7 +246,7 @@ nav_order: 3
       </tr>
       {% endfor %}
     {% else %}
-      <tr><td colspan="4" style="padding: 12px; color: #666;">*No open pull requests.*</td></tr>
+      <tr><td colspan="4" class="no-prs">No open pull requests</td></tr>
     {% endif %}
   </tbody>
 </table>
@@ -277,7 +283,7 @@ nav_order: 3
       </tr>
       {% endfor %}
     {% else %}
-      <tr><td colspan="4" style="padding: 12px; color: #666;">*No open pull requests.*</td></tr>
+      <tr><td colspan="4" class="no-prs">No open pull requests</td></tr>
     {% endif %}
   </tbody>
 </table>
@@ -314,7 +320,7 @@ nav_order: 3
       </tr>
       {% endfor %}
     {% else %}
-      <tr><td colspan="4" style="padding: 12px; color: #666;">*No open pull requests.*</td></tr>
+      <tr><td colspan="4" class="no-prs">No open pull requests</td></tr>
     {% endif %}
   </tbody>
 </table>
@@ -351,7 +357,7 @@ nav_order: 3
       </tr>
       {% endfor %}
     {% else %}
-      <tr><td colspan="4" style="padding: 12px; color: #666;">*No open pull requests.*</td></tr>
+      <tr><td colspan="4" class="no-prs">No open pull requests</td></tr>
     {% endif %}
   </tbody>
 </table>
@@ -388,7 +394,7 @@ nav_order: 3
       </tr>
       {% endfor %}
     {% else %}
-      <tr><td colspan="4" style="padding: 12px; color: #666;">*No open pull requests.*</td></tr>
+      <tr><td colspan="4" class="no-prs">No open pull requests</td></tr>
     {% endif %}
   </tbody>
 </table>
@@ -425,7 +431,7 @@ nav_order: 3
       </tr>
       {% endfor %}
     {% else %}
-      <tr><td colspan="4" style="padding: 12px; color: #666;">*No open pull requests.*</td></tr>
+      <tr><td colspan="4" class="no-prs">No open pull requests</td></tr>
     {% endif %}
   </tbody>
 </table>
@@ -462,7 +468,7 @@ nav_order: 3
       </tr>
       {% endfor %}
     {% else %}
-      <tr><td colspan="4" style="padding: 12px; color: #666;">*No open pull requests.*</td></tr>
+      <tr><td colspan="4" class="no-prs">No open pull requests</td></tr>
     {% endif %}
   </tbody>
 </table>
@@ -499,7 +505,7 @@ nav_order: 3
       </tr>
       {% endfor %}
     {% else %}
-      <tr><td colspan="4" style="padding: 12px; color: #666;">*No open pull requests.*</td></tr>
+      <tr><td colspan="4" class="no-prs">No open pull requests</td></tr>
     {% endif %}
   </tbody>
 </table>
@@ -536,7 +542,7 @@ nav_order: 3
       </tr>
       {% endfor %}
     {% else %}
-      <tr><td colspan="4" style="padding: 12px; color: #666;">*No open pull requests.*</td></tr>
+      <tr><td colspan="4" class="no-prs">No open pull requests</td></tr>
     {% endif %}
   </tbody>
 </table>
@@ -573,7 +579,7 @@ nav_order: 3
       </tr>
       {% endfor %}
     {% else %}
-      <tr><td colspan="4" style="padding: 12px; color: #666;">*No open pull requests.*</td></tr>
+      <tr><td colspan="4" class="no-prs">No open pull requests</td></tr>
     {% endif %}
   </tbody>
 </table>
