@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-03-26 23:12",
+  "last_updated": "2026-03-26 23:31",
   "projects": {
     "5G Media Streaming": [
       {
@@ -36,7 +36,7 @@
         "user": "dsilhavy",
         "date": "2026-02-25",
         "days_ago": 29,
-        "color": "#B8860B"
+        "color": "#28a745"
       },
       {
         "repo": "rt-5gms-application-server",
@@ -143,7 +143,7 @@
         "user": "dsilhavy",
         "date": "2026-02-25",
         "days_ago": 29,
-        "color": "#B8860B"
+        "color": "#28a745"
       }
     ],
     "5G Broadcast Emergency Alerts": [
@@ -183,7 +183,7 @@
         "user": "dsilhavy",
         "date": "2026-03-06",
         "days_ago": 20,
-        "color": "#B8860B"
+        "color": "#28a745"
       },
       {
         "repo": "rt-mbs-examples",
