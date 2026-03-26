@@ -70,6 +70,7 @@ jobs:
               pull_list = []
               
               for repo in repos:
+                  repo_base_url = f"https://github.com/{repo}"
                   # --- PART A: FETCH RELEASES ---
                   try:
                       print(f"[{p_name}] Fetching release for {repo}...")
@@ -85,42 +86,46 @@ jobs:
                               "short_name": repo.split('/')[-1],
                               "tag": target.get('tag_name'),
                               "date": target.get('published_at', '').split('T')[0],
-                              "url": target.get('html_url')
+                              "url": target.get('html_url'),
+                              "repo_url": repo_base_url
                           })
                   except:
-                      rel_list.append({"short_name": repo.split('/')[-1], "tag": "No Release", "date": "-", "url": f"https://github.com/{repo}/releases"})
+                      rel_list.append({
+                          "short_name": repo.split('/')[-1], 
+                          "tag": "No Release", 
+                          "date": "-", 
+                          "url": f"{repo_base_url}/releases",
+                          "repo_url": repo_base_url
+                      })
 
                   # --- PART B: FETCH ALL OPEN PRs ---
                   try:
                       print(f"[{p_name}] Fetching PRs for {repo}...")
-                      # We use state=open to get everything currently active
                       url = f"https://api.github.com/repos/{repo}/pulls?state=open&per_page=100"
                       prs = get_json(url)
                       
                       for pr in prs:
-                        # Calculate Age
-                        created_date = datetime.strptime(pr.get('created_at', '').split('T')[0], "%Y-%m-%d")
-                        days_old = (datetime.now() - created_date).days
-                        
-                        # New Thresholds & High-Contrast Colors
-                        if days_old <= 30:
-                            status_color = "#28a745" # Green
-                        elif days_old <= 90:
-                            status_color = "#B8860B" # Darker Golden-Yellow (Readable)
-                        elif days_old <= 180:
-                            status_color = "#d9534f" # Burnt Orange
-                        else:
-                            status_color = "#b91d1d" # Deep Red
+                          created_date = datetime.strptime(pr.get('created_at', '').split('T')[0], "%Y-%m-%d")
+                          days_old = (datetime.now() - created_date).days
+                          
+                          if days_old <= 30:
+                              status_color = "#28a745" # Green
+                          elif days_old <= 90:
+                              status_color = "#B8860B" # Darker Golden-Yellow
+                          elif days_old <= 180:
+                              status_color = "#d9534f" # Burnt Orange
+                          else:
+                              status_color = "#b91d1d" # Deep Red
 
-                        pull_list.append({
-                            "repo": repo.split('/')[-1],
-                            "title": pr.get('title'),
-                            "url": pr.get('html_url'),
-                            "user": pr.get('user', {}).get('login'),
-                            "date": pr.get('created_at', '').split('T')[0],
-                            "days_ago": days_old, # Useful for display
-                            "color": status_color 
-                        })
+                          pull_list.append({
+                              "repo": repo.split('/')[-1],
+                              "title": pr.get('title'),
+                              "url": pr.get('html_url'),
+                              "user": pr.get('user', {}).get('login'),
+                              "date": pr.get('created_at', '').split('T')[0],
+                              "days_ago": days_old,
+                              "color": status_color 
+                          })
                   except Exception as e:
                       print(f"Error on PRs for {repo}: {e}")
 
@@ -141,5 +146,5 @@ jobs:
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git add _data/*.json
-          git commit -m "Update Data (with pagination and auth)" || exit 0
+          git commit -m "Update Data (including repo_url for separate linking)" || exit 0
           git push
