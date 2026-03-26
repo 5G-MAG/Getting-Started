@@ -90,25 +90,22 @@ jobs:
                   except:
                       rel_list.append({"short_name": repo.split('/')[-1], "tag": "No Release", "date": "-", "url": f"https://github.com/{repo}/releases"})
 
-                  # --- PART B: FETCH ALL OPEN PRs (With Pagination) ---
+                  # --- PART B: FETCH ALL OPEN PRs ---
                   try:
                       print(f"[{p_name}] Fetching PRs for {repo}...")
-                      page = 1
-                      while True:
-                          url = f"https://api.github.com/repos/{repo}/pulls?state=open&per_page=100&page={page}"
-                          prs = get_json(url)
-                          if not prs: break
-                          
-                          for pr in prs:
-                              pull_list.append({
-                                  "repo": repo.split('/')[-1],
-                                  "title": pr.get('title'),
-                                  "url": pr.get('html_url'),
-                                  "user": pr.get('user', {}).get('login'),
-                                  "date": pr.get('created_at', '').split('T')[0]
-                              })
-                          if len(prs) < 100: break
-                          page += 1
+                      # We use state=open to get everything currently active
+                      url = f"https://api.github.com/repos/{repo}/pulls?state=open&per_page=100"
+                      prs = get_json(url)
+                      
+                      for pr in prs:
+                          # This captures the PR regardless of branch (main, develop, etc.)
+                          pull_list.append({
+                              "repo": repo.split('/')[-1],
+                              "title": pr.get('title'),
+                              "url": pr.get('html_url'),
+                              "user": pr.get('user', {}).get('login'),
+                              "date": pr.get('created_at', '').split('T')[0]
+                          })
                   except Exception as e:
                       print(f"Error on PRs for {repo}: {e}")
 
