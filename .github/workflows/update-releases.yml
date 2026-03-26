@@ -58,7 +58,6 @@ jobs:
           pr_output = {}
 
           # Process All Groups
-          # We create a list of all project names and their associated repos
           all_groups = list(standard_projects.items()) + [(k, v['repos']) for k, v in filtered_projects.items()]
 
           for p_name, repos in all_groups:
@@ -70,10 +69,55 @@ jobs:
                   try:
                       print(f"[{p_name}] Fetching release for {repo}...")
                       if p_name in filtered_projects:
-                          # Filtered logic for EA/5MBS
                           rels = get_json(f"https://api.github.com/repos/{repo}/releases")
                           f_val = filtered_projects[p_name]["filter"]
                           target = next((r for r in rels if f_val in r.get('tag_name', '').lower()), None)
                       else:
-                          # Standard latest release
-                          target = get_json(f"https://api.github.
+                          target = get_json(f"https://api.github.com/repos/{repo}/releases/latest")
+                      
+                      if target:
+                          rel_list.append({
+                              "short_name": repo.split('/')[-1],
+                              "tag": target.get('tag_name'),
+                              "date": target.get('published_at', '').split('T')[0],
+                              "url": target.get('html_url')
+                          })
+                  except:
+                      rel_list.append({"short_name": repo.split('/')[-1], "tag": "No Release", "date": "-", "url": f"https://github.com/{repo}/releases"})
+
+                  # --- PART B: FETCH OPEN PRs ---
+                  try:
+                      print(f"[{p_name}] Fetching PRs for {repo}...")
+                      prs = get_json(f"https://api.github.com/repos/{repo}/pulls?state=open")
+                      for pr in prs:
+                          pull_list.append({
+                              "repo": repo.split('/')[-1],
+                              "title": pr.get('title'),
+                              "url": pr.get('html_url'),
+                              "user": pr.get('user', {}).get('login'),
+                              "date": pr.get('created_at', '').split('T')[0]
+                          })
+                  except Exception as e:
+                      print(f"Error on PRs for {repo}: {e}")
+
+              release_output[p_name] = rel_list
+              pr_output[p_name] = pull_list
+
+          # 3. Save to _data folder
+          if not os.path.exists('_data'): os.makedirs('_data')
+          timestamp = datetime.now().strftime("%Y-%m-%d %H:%M")
+          
+          with open('_data/releases.json', 'w') as f:
+              json.dump({"last_updated": timestamp, "projects": release_output}, f, indent=2)
+          
+          with open('_data/pull_requests.json', 'w') as f:
+              json.dump({"last_updated": timestamp, "projects": pr_output}, f, indent=2)
+          EOF
+
+      - name: Commit and Push
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add _data/*.json
+          git commit -m "Update Releases and PR data" || exit 0
+          git push
