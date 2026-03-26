@@ -4,7 +4,20 @@ title: Open Pull Requests
 nav_order: 3
 ---
 
-<img src="../assets/images/Banner_ReferenceTools.png" /> 
+<style>
+  .date-cell {
+    padding: 12px;
+    white-space: nowrap;
+    line-height: 1.2;
+  }
+  .days-ago {
+    font-size: 0.8em;
+    color: #666;
+    font-weight: normal;
+  }
+</style>
+
+<img src="../assets/images/Banner_ReferenceTools.png" /> 
 
 # Reference Tools Projects: Open Pull Requests
 
@@ -12,7 +25,7 @@ nav_order: 3
 
 ---
 
-<img src="../assets/images/Banner_5GBCTVR.png"/> 
+<img src="../assets/images/Banner_5GBCTVR.png"/> 
 
 ## Open PRs - 5G Broadcast: TV and Radio Hybrid Services
 
@@ -21,10 +34,10 @@ nav_order: 3
 <table class="release-table" style="width:100%; border-collapse: collapse; margin-top: 20px; table-layout: fixed;">
   <thead>
     <tr style="text-align: left; border-bottom: 2px solid #eee;">
-      <th style="padding: 12px; width: 30%;">Repository</th>
+      <th style="padding: 12px; width: 25%;">Repository</th>
       <th style="padding: 12px; width: 45%;">Pull Request</th>
       <th style="padding: 12px; width: 15%;">Author</th>
-      <th style="padding: 12px; width: 10%;">Date</th>
+      <th style="padding: 12px; width: 15%;">Date</th>
     </tr>
   </thead>
   <tbody>
@@ -35,7 +48,10 @@ nav_order: 3
         <td style="padding: 12px; overflow: hidden; text-overflow: ellipsis;"><a href="https://github.com/5G-MAG/{{ item.repo }}" class="btn">{{ item.repo }}</a></td>
         <td style="padding: 12px; overflow: hidden; text-overflow: ellipsis;"><a href="{{ item.url }}" class="btn">{{ item.title }}</a></td>
         <td style="padding: 12px;">@{{ item.user }}</td>
-        <td style="padding: 12px; font-weight: bold; color: {{ item.color }};">{{ item.date }}</td>
+        <td class="date-cell">
+          <span style="color: {{ item.color }}; font-weight: bold;">{{ item.date }}</span><br>
+          <span class="days-ago">({{ item.days_ago }} days ago)</span>
+        </td>
       </tr>
       {% endfor %}
     {% else %}
@@ -46,7 +62,7 @@ nav_order: 3
 
 ---
 
-<img src="../assets/images/Banner_5GBCEA.png"/> 
+<img src="../assets/images/Banner_5GBCEA.png"/> 
 
 ## Open PRs - 5G Broadcast: Emergency Alerts
 
@@ -55,10 +71,10 @@ nav_order: 3
 <table class="release-table" style="width:100%; border-collapse: collapse; margin-top: 20px; table-layout: fixed;">
   <thead>
     <tr style="text-align: left; border-bottom: 2px solid #eee;">
-      <th style="padding: 12px; width: 30%;">Repository</th>
+      <th style="padding: 12px; width: 25%;">Repository</th>
       <th style="padding: 12px; width: 45%;">Pull Request</th>
       <th style="padding: 12px; width: 15%;">Author</th>
-      <th style="padding: 12px; width: 10%;">Date</th>
+      <th style="padding: 12px; width: 15%;">Date</th>
     </tr>
   </thead>
   <tbody>
@@ -69,7 +85,10 @@ nav_order: 3
         <td style="padding: 12px;"><a href="https://github.com/5G-MAG/{{ item.repo }}" class="btn">{{ item.repo }}</a></td>
         <td style="padding: 12px;"><a href="{{ item.url }}" class="btn">{{ item.title }}</a></td>
         <td style="padding: 12px;">@{{ item.user }}</td>
-        <td style="padding: 12px; font-weight: bold; color: {{ item.color }};">{{ item.date }}</td>
+        <td class="date-cell">
+          <span style="color: {{ item.color }}; font-weight: bold;">{{ item.date }}</span><br>
+          <span class="days-ago">({{ item.days_ago }} days ago)</span>
+        </td>
       </tr>
       {% endfor %}
     {% else %}
@@ -80,7 +99,7 @@ nav_order: 3
 
 ---
 
-<img src="../assets/images/Banner_5GMS.png"/> 
+<img src="../assets/images/Banner_5GMS.png"/> 
 
 ## Open PRs - 5G Media Streaming
 
@@ -89,10 +108,10 @@ nav_order: 3
 <table class="release-table" style="width:100%; border-collapse: collapse; margin-top: 20px; table-layout: fixed;">
   <thead>
     <tr style="text-align: left; border-bottom: 2px solid #eee;">
-      <th style="padding: 12px; width: 30%;">Repository</th>
+      <th style="padding: 12px; width: 25%;">Repository</th>
       <th style="padding: 12px; width: 45%;">Pull Request</th>
       <th style="padding: 12px; width: 15%;">Author</th>
-      <th style="padding: 12px; width: 10%;">Date</th>
+      <th style="padding: 12px; width: 15%;">Date</th>
     </tr>
   </thead>
   <tbody>
@@ -103,7 +122,10 @@ nav_order: 3
         <td style="padding: 12px;"><a href="https://github.com/5G-MAG/{{ item.repo }}" class="btn">{{ item.repo }}</a></td>
         <td style="padding: 12px;"><a href="{{ item.url }}" class="btn">{{ item.title }}</a></td>
         <td style="padding: 12px;">@{{ item.user }}</td>
-        <td style="padding: 12px; font-weight: bold; color: {{ item.color }};">{{ item.date }}</td>
+        <td class="date-cell">
+          <span style="color: {{ item.color }}; font-weight: bold;">{{ item.date }}</span><br>
+          <span class="days-ago">({{ item.days_ago }} days ago)</span>
+        </td>
       </tr>
       {% endfor %}
     {% else %}
@@ -114,7 +136,7 @@ nav_order: 3
 
 ---
 
-<img src="../assets/images/Banner_5MBS.png"/> 
+<img src="../assets/images/Banner_5MBS.png"/> 
 
 ## Open PRs - 5G Multicast Broadcast Services
 
@@ -123,10 +145,10 @@ nav_order: 3
 <table class="release-table" style="width:100%; border-collapse: collapse; margin-top: 20px; table-layout: fixed;">
   <thead>
     <tr style="text-align: left; border-bottom: 2px solid #eee;">
-      <th style="padding: 12px; width: 30%;">Repository</th>
+      <th style="padding: 12px; width: 25%;">Repository</th>
       <th style="padding: 12px; width: 45%;">Pull Request</th>
       <th style="padding: 12px; width: 15%;">Author</th>
-      <th style="padding: 12px; width: 10%;">Date</th>
+      <th style="padding: 12px; width: 15%;">Date</th>
     </tr>
   </thead>
   <tbody>
@@ -137,7 +159,10 @@ nav_order: 3
         <td style="padding: 12px;"><a href="https://github.com/5G-MAG/{{ item.repo }}" class="btn">{{ item.repo }}</a></td>
         <td style="padding: 12px;"><a href="{{ item.url }}" class="btn">{{ item.title }}</a></td>
         <td style="padding: 12px;">@{{ item.user }}</td>
-        <td style="padding: 12px; font-weight: bold; color: {{ item.color }};">{{ item.date }}</td>
+        <td class="date-cell">
+          <span style="color: {{ item.color }}; font-weight: bold;">{{ item.date }}</span><br>
+          <span class="days-ago">({{ item.days_ago }} days ago)</span>
+        </td>
       </tr>
       {% endfor %}
     {% else %}
@@ -148,7 +173,7 @@ nav_order: 3
 
 ---
 
-<img src="../assets/images/Banner_5GC.png"/> 
+<img src="../assets/images/Banner_5GC.png"/> 
 
 ## Open PRs - 5GC Service Consumers
 
@@ -157,10 +182,10 @@ nav_order: 3
 <table class="release-table" style="width:100%; border-collapse: collapse; margin-top: 20px; table-layout: fixed;">
   <thead>
     <tr style="text-align: left; border-bottom: 2px solid #eee;">
-      <th style="padding: 12px; width: 30%;">Repository</th>
+      <th style="padding: 12px; width: 25%;">Repository</th>
       <th style="padding: 12px; width: 45%;">Pull Request</th>
       <th style="padding: 12px; width: 15%;">Author</th>
-      <th style="padding: 12px; width: 10%;">Date</th>
+      <th style="padding: 12px; width: 15%;">Date</th>
     </tr>
   </thead>
   <tbody>
@@ -171,7 +196,10 @@ nav_order: 3
         <td style="padding: 12px;"><a href="https://github.com/5G-MAG/{{ item.repo }}" class="btn">{{ item.repo }}</a></td>
         <td style="padding: 12px;"><a href="{{ item.url }}" class="btn">{{ item.title }}</a></td>
         <td style="padding: 12px;">@{{ item.user }}</td>
-        <td style="padding: 12px; font-weight: bold; color: {{ item.color }};">{{ item.date }}</td>
+        <td class="date-cell">
+          <span style="color: {{ item.color }}; font-weight: bold;">{{ item.date }}</span><br>
+          <span class="days-ago">({{ item.days_ago }} days ago)</span>
+        </td>
       </tr>
       {% endfor %}
     {% else %}
@@ -182,7 +210,7 @@ nav_order: 3
 
 ---
 
-<img src="../assets/images/Banner_6GTestbedAITraffic.png"/> 
+<img src="../assets/images/Banner_6GTestbedAITraffic.png"/> 
 
 ## Open PRs - 6G Testbed and AI Traffic Characterization
 
@@ -191,10 +219,10 @@ nav_order: 3
 <table class="release-table" style="width:100%; border-collapse: collapse; margin-top: 20px; table-layout: fixed;">
   <thead>
     <tr style="text-align: left; border-bottom: 2px solid #eee;">
-      <th style="padding: 12px; width: 30%;">Repository</th>
+      <th style="padding: 12px; width: 25%;">Repository</th>
       <th style="padding: 12px; width: 45%;">Pull Request</th>
       <th style="padding: 12px; width: 15%;">Author</th>
-      <th style="padding: 12px; width: 10%;">Date</th>
+      <th style="padding: 12px; width: 15%;">Date</th>
     </tr>
   </thead>
   <tbody>
@@ -205,7 +233,10 @@ nav_order: 3
         <td style="padding: 12px;"><a href="https://github.com/5G-MAG/{{ item.repo }}" class="btn">{{ item.repo }}</a></td>
         <td style="padding: 12px;"><a href="{{ item.url }}" class="btn">{{ item.title }}</a></td>
         <td style="padding: 12px;">@{{ item.user }}</td>
-        <td style="padding: 12px; font-weight: bold; color: {{ item.color }};">{{ item.date }}</td>
+        <td class="date-cell">
+          <span style="color: {{ item.color }}; font-weight: bold;">{{ item.date }}</span><br>
+          <span class="days-ago">({{ item.days_ago }} days ago)</span>
+        </td>
       </tr>
       {% endfor %}
     {% else %}
@@ -216,7 +247,7 @@ nav_order: 3
 
 ---
 
-<img src="../assets/images/Banner_AIML.png"/> 
+<img src="../assets/images/Banner_AIML.png"/> 
 
 ## Open PRs - AI/ML in Mobile Media Services
 
@@ -225,10 +256,10 @@ nav_order: 3
 <table class="release-table" style="width:100%; border-collapse: collapse; margin-top: 20px; table-layout: fixed;">
   <thead>
     <tr style="text-align: left; border-bottom: 2px solid #eee;">
-      <th style="padding: 12px; width: 30%;">Repository</th>
+      <th style="padding: 12px; width: 25%;">Repository</th>
       <th style="padding: 12px; width: 45%;">Pull Request</th>
       <th style="padding: 12px; width: 15%;">Author</th>
-      <th style="padding: 12px; width: 10%;">Date</th>
+      <th style="padding: 12px; width: 15%;">Date</th>
     </tr>
   </thead>
   <tbody>
@@ -239,7 +270,10 @@ nav_order: 3
         <td style="padding: 12px;"><a href="https://github.com/5G-MAG/{{ item.repo }}" class="btn">{{ item.repo }}</a></td>
         <td style="padding: 12px;"><a href="{{ item.url }}" class="btn">{{ item.title }}</a></td>
         <td style="padding: 12px;">@{{ item.user }}</td>
-        <td style="padding: 12px; font-weight: bold; color: {{ item.color }};">{{ item.date }}</td>
+        <td class="date-cell">
+          <span style="color: {{ item.color }}; font-weight: bold;">{{ item.date }}</span><br>
+          <span class="days-ago">({{ item.days_ago }} days ago)</span>
+        </td>
       </tr>
       {% endfor %}
     {% else %}
@@ -250,7 +284,7 @@ nav_order: 3
 
 ---
 
-<img src="../assets/images/Banner_B2D.png"/> 
+<img src="../assets/images/Banner_B2D.png"/> 
 
 ## Open PRs - Beyond 2D Video Experiences
 
@@ -259,10 +293,10 @@ nav_order: 3
 <table class="release-table" style="width:100%; border-collapse: collapse; margin-top: 20px; table-layout: fixed;">
   <thead>
     <tr style="text-align: left; border-bottom: 2px solid #eee;">
-      <th style="padding: 12px; width: 30%;">Repository</th>
+      <th style="padding: 12px; width: 25%;">Repository</th>
       <th style="padding: 12px; width: 45%;">Pull Request</th>
       <th style="padding: 12px; width: 15%;">Author</th>
-      <th style="padding: 12px; width: 10%;">Date</th>
+      <th style="padding: 12px; width: 15%;">Date</th>
     </tr>
   </thead>
   <tbody>
@@ -273,7 +307,10 @@ nav_order: 3
         <td style="padding: 12px;"><a href="https://github.com/5G-MAG/{{ item.repo }}" class="btn">{{ item.repo }}</a></td>
         <td style="padding: 12px;"><a href="{{ item.url }}" class="btn">{{ item.title }}</a></td>
         <td style="padding: 12px;">@{{ item.user }}</td>
-        <td style="padding: 12px; font-weight: bold; color: {{ item.color }};">{{ item.date }}</td>
+        <td class="date-cell">
+          <span style="color: {{ item.color }}; font-weight: bold;">{{ item.date }}</span><br>
+          <span class="days-ago">({{ item.days_ago }} days ago)</span>
+        </td>
       </tr>
       {% endfor %}
     {% else %}
@@ -284,7 +321,7 @@ nav_order: 3
 
 ---
 
-<img src="../assets/images/Banner_Avatar.png"/> 
+<img src="../assets/images/Banner_Avatar.png"/> 
 
 ## Open PRs - Conversational Avatar Real-Time Communications
 
@@ -293,10 +330,10 @@ nav_order: 3
 <table class="release-table" style="width:100%; border-collapse: collapse; margin-top: 20px; table-layout: fixed;">
   <thead>
     <tr style="text-align: left; border-bottom: 2px solid #eee;">
-      <th style="padding: 12px; width: 30%;">Repository</th>
+      <th style="padding: 12px; width: 25%;">Repository</th>
       <th style="padding: 12px; width: 45%;">Pull Request</th>
       <th style="padding: 12px; width: 15%;">Author</th>
-      <th style="padding: 12px; width: 10%;">Date</th>
+      <th style="padding: 12px; width: 15%;">Date</th>
     </tr>
   </thead>
   <tbody>
@@ -307,7 +344,10 @@ nav_order: 3
         <td style="padding: 12px;"><a href="https://github.com/5G-MAG/{{ item.repo }}" class="btn">{{ item.repo }}</a></td>
         <td style="padding: 12px;"><a href="{{ item.url }}" class="btn">{{ item.title }}</a></td>
         <td style="padding: 12px;">@{{ item.user }}</td>
-        <td style="padding: 12px; font-weight: bold; color: {{ item.color }};">{{ item.date }}</td>
+        <td class="date-cell">
+          <span style="color: {{ item.color }}; font-weight: bold;">{{ item.date }}</span><br>
+          <span class="days-ago">({{ item.days_ago }} days ago)</span>
+        </td>
       </tr>
       {% endfor %}
     {% else %}
@@ -318,7 +358,7 @@ nav_order: 3
 
 ---
 
-<img src="../assets/images/Banner_DVBI.png"/> 
+<img src="../assets/images/Banner_DVBI.png"/> 
 
 ## Open PRs - DVB-I over 5G Systems
 
@@ -327,10 +367,10 @@ nav_order: 3
 <table class="release-table" style="width:100%; border-collapse: collapse; margin-top: 20px; table-layout: fixed;">
   <thead>
     <tr style="text-align: left; border-bottom: 2px solid #eee;">
-      <th style="padding: 12px; width: 30%;">Repository</th>
+      <th style="padding: 12px; width: 25%;">Repository</th>
       <th style="padding: 12px; width: 45%;">Pull Request</th>
       <th style="padding: 12px; width: 15%;">Author</th>
-      <th style="padding: 12px; width: 10%;">Date</th>
+      <th style="padding: 12px; width: 15%;">Date</th>
     </tr>
   </thead>
   <tbody>
@@ -341,7 +381,10 @@ nav_order: 3
         <td style="padding: 12px;"><a href="https://github.com/5G-MAG/{{ item.repo }}" class="btn">{{ item.repo }}</a></td>
         <td style="padding: 12px;"><a href="{{ item.url }}" class="btn">{{ item.title }}</a></td>
         <td style="padding: 12px;">@{{ item.user }}</td>
-        <td style="padding: 12px; font-weight: bold; color: {{ item.color }};">{{ item.date }}</td>
+        <td class="date-cell">
+          <span style="color: {{ item.color }}; font-weight: bold;">{{ item.date }}</span><br>
+          <span class="days-ago">({{ item.days_ago }} days ago)</span>
+        </td>
       </tr>
       {% endfor %}
     {% else %}
@@ -352,7 +395,7 @@ nav_order: 3
 
 ---
 
-<img src="../assets/images/Banner_MD.png"/> 
+<img src="../assets/images/Banner_MD.png"/> 
 
 ## Open PRs - Multimedia Content Delivery Protocols
 
@@ -361,10 +404,10 @@ nav_order: 3
 <table class="release-table" style="width:100%; border-collapse: collapse; margin-top: 20px; table-layout: fixed;">
   <thead>
     <tr style="text-align: left; border-bottom: 2px solid #eee;">
-      <th style="padding: 12px; width: 30%;">Repository</th>
+      <th style="padding: 12px; width: 25%;">Repository</th>
       <th style="padding: 12px; width: 45%;">Pull Request</th>
       <th style="padding: 12px; width: 15%;">Author</th>
-      <th style="padding: 12px; width: 10%;">Date</th>
+      <th style="padding: 12px; width: 15%;">Date</th>
     </tr>
   </thead>
   <tbody>
@@ -375,7 +418,10 @@ nav_order: 3
         <td style="padding: 12px;"><a href="https://github.com/5G-MAG/{{ item.repo }}" class="btn">{{ item.repo }}</a></td>
         <td style="padding: 12px;"><a href="{{ item.url }}" class="btn">{{ item.title }}</a></td>
         <td style="padding: 12px;">@{{ item.user }}</td>
-        <td style="padding: 12px; font-weight: bold; color: {{ item.color }};">{{ item.date }}</td>
+        <td class="date-cell">
+          <span style="color: {{ item.color }}; font-weight: bold;">{{ item.date }}</span><br>
+          <span class="days-ago">({{ item.days_ago }} days ago)</span>
+        </td>
       </tr>
       {% endfor %}
     {% else %}
@@ -386,7 +432,7 @@ nav_order: 3
 
 ---
 
-<img src="../assets/images/Banner_UEDC.png"/> 
+<img src="../assets/images/Banner_UEDC.png"/> 
 
 ## Open PRs - UE Data Collection, Reporting & Event Exposure
 
@@ -395,10 +441,10 @@ nav_order: 3
 <table class="release-table" style="width:100%; border-collapse: collapse; margin-top: 20px; table-layout: fixed;">
   <thead>
     <tr style="text-align: left; border-bottom: 2px solid #eee;">
-      <th style="padding: 12px; width: 30%;">Repository</th>
+      <th style="padding: 12px; width: 25%;">Repository</th>
       <th style="padding: 12px; width: 45%;">Pull Request</th>
       <th style="padding: 12px; width: 15%;">Author</th>
-      <th style="padding: 12px; width: 10%;">Date</th>
+      <th style="padding: 12px; width: 15%;">Date</th>
     </tr>
   </thead>
   <tbody>
@@ -409,7 +455,10 @@ nav_order: 3
         <td style="padding: 12px;"><a href="https://github.com/5G-MAG/{{ item.repo }}" class="btn">{{ item.repo }}</a></td>
         <td style="padding: 12px;"><a href="{{ item.url }}" class="btn">{{ item.title }}</a></td>
         <td style="padding: 12px;">@{{ item.user }}</td>
-        <td style="padding: 12px; font-weight: bold; color: {{ item.color }};">{{ item.date }}</td>
+        <td class="date-cell">
+          <span style="color: {{ item.color }}; font-weight: bold;">{{ item.date }}</span><br>
+          <span class="days-ago">({{ item.days_ago }} days ago)</span>
+        </td>
       </tr>
       {% endfor %}
     {% else %}
@@ -420,7 +469,7 @@ nav_order: 3
 
 ---
 
-<img src="../assets/images/Banner_V3C_Platform.png"/> 
+<img src="../assets/images/Banner_V3C_Platform.png"/> 
 
 ## Open PRs - V3C Immersive Platform
 
@@ -429,10 +478,10 @@ nav_order: 3
 <table class="release-table" style="width:100%; border-collapse: collapse; margin-top: 20px; table-layout: fixed;">
   <thead>
     <tr style="text-align: left; border-bottom: 2px solid #eee;">
-      <th style="padding: 12px; width: 30%;">Repository</th>
+      <th style="padding: 12px; width: 25%;">Repository</th>
       <th style="padding: 12px; width: 45%;">Pull Request</th>
       <th style="padding: 12px; width: 15%;">Author</th>
-      <th style="padding: 12px; width: 10%;">Date</th>
+      <th style="padding: 12px; width: 15%;">Date</th>
     </tr>
   </thead>
   <tbody>
@@ -443,7 +492,10 @@ nav_order: 3
         <td style="padding: 12px;"><a href="https://github.com/5G-MAG/{{ item.repo }}" class="btn">{{ item.repo }}</a></td>
         <td style="padding: 12px;"><a href="{{ item.url }}" class="btn">{{ item.title }}</a></td>
         <td style="padding: 12px;">@{{ item.user }}</td>
-        <td style="padding: 12px; font-weight: bold; color: {{ item.color }};">{{ item.date }}</td>
+        <td class="date-cell">
+          <span style="color: {{ item.color }}; font-weight: bold;">{{ item.date }}</span><br>
+          <span class="days-ago">({{ item.days_ago }} days ago)</span>
+        </td>
       </tr>
       {% endfor %}
     {% else %}
@@ -454,7 +506,7 @@ nav_order: 3
 
 ---
 
-<img src="../assets/images/Banner_XR.png"/> 
+<img src="../assets/images/Banner_XR.png"/> 
 
 ## Open PRs - XR Media with MPEG-I Scene Description
 
@@ -463,10 +515,10 @@ nav_order: 3
 <table class="release-table" style="width:100%; border-collapse: collapse; margin-top: 20px; table-layout: fixed;">
   <thead>
     <tr style="text-align: left; border-bottom: 2px solid #eee;">
-      <th style="padding: 12px; width: 30%;">Repository</th>
+      <th style="padding: 12px; width: 25%;">Repository</th>
       <th style="padding: 12px; width: 45%;">Pull Request</th>
       <th style="padding: 12px; width: 15%;">Author</th>
-      <th style="padding: 12px; width: 10%;">Date</th>
+      <th style="padding: 12px; width: 15%;">Date</th>
     </tr>
   </thead>
   <tbody>
@@ -477,7 +529,10 @@ nav_order: 3
         <td style="padding: 12px;"><a href="https://github.com/5G-MAG/{{ item.repo }}" class="btn">{{ item.repo }}</a></td>
         <td style="padding: 12px;"><a href="{{ item.url }}" class="btn">{{ item.title }}</a></td>
         <td style="padding: 12px;">@{{ item.user }}</td>
-        <td style="padding: 12px; font-weight: bold; color: {{ item.color }};">{{ item.date }}</td>
+        <td class="date-cell">
+          <span style="color: {{ item.color }}; font-weight: bold;">{{ item.date }}</span><br>
+          <span class="days-ago">({{ item.days_ago }} days ago)</span>
+        </td>
       </tr>
       {% endfor %}
     {% else %}
@@ -488,7 +543,7 @@ nav_order: 3
 
 ---
 
-<img src="../assets/images/Banner_CommonTools.png"/> 
+<img src="../assets/images/Banner_CommonTools.png"/> 
 
 ## Open PRs - Auxiliary tools common to various projects
 
@@ -497,10 +552,10 @@ nav_order: 3
 <table class="release-table" style="width:100%; border-collapse: collapse; margin-top: 20px; table-layout: fixed;">
   <thead>
     <tr style="text-align: left; border-bottom: 2px solid #eee;">
-      <th style="padding: 12px; width: 30%;">Repository</th>
+      <th style="padding: 12px; width: 25%;">Repository</th>
       <th style="padding: 12px; width: 45%;">Pull Request</th>
       <th style="padding: 12px; width: 15%;">Author</th>
-      <th style="padding: 12px; width: 10%;">Date</th>
+      <th style="padding: 12px; width: 15%;">Date</th>
     </tr>
   </thead>
   <tbody>
@@ -511,7 +566,10 @@ nav_order: 3
         <td style="padding: 12px;"><a href="https://github.com/5G-MAG/{{ item.repo }}" class="btn">{{ item.repo }}</a></td>
         <td style="padding: 12px;"><a href="{{ item.url }}" class="btn">{{ item.title }}</a></td>
         <td style="padding: 12px;">@{{ item.user }}</td>
-        <td style="padding: 12px; font-weight: bold; color: {{ item.color }};">{{ item.date }}</td>
+        <td class="date-cell">
+          <span style="color: {{ item.color }}; font-weight: bold;">{{ item.date }}</span><br>
+          <span class="days-ago">({{ item.days_ago }} days ago)</span>
+        </td>
       </tr>
       {% endfor %}
     {% else %}
