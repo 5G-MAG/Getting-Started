@@ -35,7 +35,7 @@ nav_order: 3
         <td style="padding: 12px; overflow: hidden; text-overflow: ellipsis;"><a href="https://github.com/5G-MAG/{{ item.repo }}" class="btn">{{ item.repo }}</a></td>
         <td style="padding: 12px; overflow: hidden; text-overflow: ellipsis;"><a href="{{ item.url }}" class="btn">{{ item.title }}</a></td>
         <td style="padding: 12px;">@{{ item.user }}</td>
-        <td style="padding: 12px;">{{ item.date }}</td>
+        <td style="padding: 12px; font-weight: bold; color: {{ item.color }};">{{ item.date }}</td>
       </tr>
       {% endfor %}
     {% else %}
@@ -69,7 +69,7 @@ nav_order: 3
         <td style="padding: 12px;"><a href="https://github.com/5G-MAG/{{ item.repo }}" class="btn">{{ item.repo }}</a></td>
         <td style="padding: 12px;"><a href="{{ item.url }}" class="btn">{{ item.title }}</a></td>
         <td style="padding: 12px;">@{{ item.user }}</td>
-        <td style="padding: 12px;">{{ item.date }}</td>
+        <td style="padding: 12px; font-weight: bold; color: {{ item.color }};">{{ item.date }}</td>
       </tr>
       {% endfor %}
     {% else %}
@@ -103,7 +103,7 @@ nav_order: 3
         <td style="padding: 12px;"><a href="https://github.com/5G-MAG/{{ item.repo }}" class="btn">{{ item.repo }}</a></td>
         <td style="padding: 12px;"><a href="{{ item.url }}" class="btn">{{ item.title }}</a></td>
         <td style="padding: 12px;">@{{ item.user }}</td>
-        <td style="padding: 12px;">{{ item.date }}</td>
+        <td style="padding: 12px; font-weight: bold; color: {{ item.color }};">{{ item.date }}</td>
       </tr>
       {% endfor %}
     {% else %}
@@ -137,7 +137,7 @@ nav_order: 3
         <td style="padding: 12px;"><a href="https://github.com/5G-MAG/{{ item.repo }}" class="btn">{{ item.repo }}</a></td>
         <td style="padding: 12px;"><a href="{{ item.url }}" class="btn">{{ item.title }}</a></td>
         <td style="padding: 12px;">@{{ item.user }}</td>
-        <td style="padding: 12px;">{{ item.date }}</td>
+        <td style="padding: 12px; font-weight: bold; color: {{ item.color }};">{{ item.date }}</td>
       </tr>
       {% endfor %}
     {% else %}
@@ -171,7 +171,7 @@ nav_order: 3
         <td style="padding: 12px;"><a href="https://github.com/5G-MAG/{{ item.repo }}" class="btn">{{ item.repo }}</a></td>
         <td style="padding: 12px;"><a href="{{ item.url }}" class="btn">{{ item.title }}</a></td>
         <td style="padding: 12px;">@{{ item.user }}</td>
-        <td style="padding: 12px;">{{ item.date }}</td>
+        <td style="padding: 12px; font-weight: bold; color: {{ item.color }};">{{ item.date }}</td>
       </tr>
       {% endfor %}
     {% else %}
@@ -205,7 +205,7 @@ nav_order: 3
         <td style="padding: 12px;"><a href="https://github.com/5G-MAG/{{ item.repo }}" class="btn">{{ item.repo }}</a></td>
         <td style="padding: 12px;"><a href="{{ item.url }}" class="btn">{{ item.title }}</a></td>
         <td style="padding: 12px;">@{{ item.user }}</td>
-        <td style="padding: 12px;">{{ item.date }}</td>
+        <td style="padding: 12px; font-weight: bold; color: {{ item.color }};">{{ item.date }}</td>
       </tr>
       {% endfor %}
     {% else %}
@@ -239,7 +239,7 @@ nav_order: 3
         <td style="padding: 12px;"><a href="https://github.com/5G-MAG/{{ item.repo }}" class="btn">{{ item.repo }}</a></td>
         <td style="padding: 12px;"><a href="{{ item.url }}" class="btn">{{ item.title }}</a></td>
         <td style="padding: 12px;">@{{ item.user }}</td>
-        <td style="padding: 12px;">{{ item.date }}</td>
+        <td style="padding: 12px; font-weight: bold; color: {{ item.color }};">{{ item.date }}</td>
       </tr>
       {% endfor %}
     {% else %}
@@ -273,7 +273,7 @@ nav_order: 3
         <td style="padding: 12px;"><a href="https://github.com/5G-MAG/{{ item.repo }}" class="btn">{{ item.repo }}</a></td>
         <td style="padding: 12px;"><a href="{{ item.url }}" class="btn">{{ item.title }}</a></td>
         <td style="padding: 12px;">@{{ item.user }}</td>
-        <td style="padding: 12px;">{{ item.date }}</td>
+        <td style="padding: 12px; font-weight: bold; color: {{ item.color }};">{{ item.date }}</td>
       </tr>
       {% endfor %}
     {% else %}
@@ -307,7 +307,7 @@ nav_order: 3
         <td style="padding: 12px;"><a href="https://github.com/5G-MAG/{{ item.repo }}" class="btn">{{ item.repo }}</a></td>
         <td style="padding: 12px;"><a href="{{ item.url }}" class="btn">{{ item.title }}</a></td>
         <td style="padding: 12px;">@{{ item.user }}</td>
-        <td style="padding: 12px;">{{ item.date }}</td>
+        <td style="padding: 12px; font-weight: bold; color: {{ item.color }};">{{ item.date }}</td>
       </tr>
       {% endfor %}
     {% else %}
@@ -341,7 +341,7 @@ nav_order: 3
         <td style="padding: 12px;"><a href="https://github.com/5G-MAG/{{ item.repo }}" class="btn">{{ item.repo }}</a></td>
         <td style="padding: 12px;"><a href="{{ item.url }}" class="btn">{{ item.title }}</a></td>
         <td style="padding: 12px;">@{{ item.user }}</td>
-        <td style="padding: 12px;">{{ item.date }}</td>
+        <td style="padding: 12px; font-weight: bold; color: {{ item.color }};">{{ item.date }}</td>
       </tr>
       {% endfor %}
     {% else %}
@@ -375,7 +375,7 @@ nav_order: 3
         <td style="padding: 12px;"><a href="https://github.com/5G-MAG/{{ item.repo }}" class="btn">{{ item.repo }}</a></td>
         <td style="padding: 12px;"><a href="{{ item.url }}" class="btn">{{ item.title }}</a></td>
         <td style="padding: 12px;">@{{ item.user }}</td>
-        <td style="padding: 12px;">{{ item.date }}</td>
+        <td style="padding: 12px; font-weight: bold; color: {{ item.color }};">{{ item.date }}</td>
       </tr>
       {% endfor %}
     {% else %}
@@ -409,7 +409,7 @@ nav_order: 3
         <td style="padding: 12px;"><a href="https://github.com/5G-MAG/{{ item.repo }}" class="btn">{{ item.repo }}</a></td>
         <td style="padding: 12px;"><a href="{{ item.url }}" class="btn">{{ item.title }}</a></td>
         <td style="padding: 12px;">@{{ item.user }}</td>
-        <td style="padding: 12px;">{{ item.date }}</td>
+        <td style="padding: 12px; font-weight: bold; color: {{ item.color }};">{{ item.date }}</td>
       </tr>
       {% endfor %}
     {% else %}
@@ -443,7 +443,7 @@ nav_order: 3
         <td style="padding: 12px;"><a href="https://github.com/5G-MAG/{{ item.repo }}" class="btn">{{ item.repo }}</a></td>
         <td style="padding: 12px;"><a href="{{ item.url }}" class="btn">{{ item.title }}</a></td>
         <td style="padding: 12px;">@{{ item.user }}</td>
-        <td style="padding: 12px;">{{ item.date }}</td>
+        <td style="padding: 12px; font-weight: bold; color: {{ item.color }};">{{ item.date }}</td>
       </tr>
       {% endfor %}
     {% else %}
@@ -477,7 +477,7 @@ nav_order: 3
         <td style="padding: 12px;"><a href="https://github.com/5G-MAG/{{ item.repo }}" class="btn">{{ item.repo }}</a></td>
         <td style="padding: 12px;"><a href="{{ item.url }}" class="btn">{{ item.title }}</a></td>
         <td style="padding: 12px;">@{{ item.user }}</td>
-        <td style="padding: 12px;">{{ item.date }}</td>
+        <td style="padding: 12px; font-weight: bold; color: {{ item.color }};">{{ item.date }}</td>
       </tr>
       {% endfor %}
     {% else %}
@@ -511,7 +511,7 @@ nav_order: 3
         <td style="padding: 12px;"><a href="https://github.com/5G-MAG/{{ item.repo }}" class="btn">{{ item.repo }}</a></td>
         <td style="padding: 12px;"><a href="{{ item.url }}" class="btn">{{ item.title }}</a></td>
         <td style="padding: 12px;">@{{ item.user }}</td>
-        <td style="padding: 12px;">{{ item.date }}</td>
+        <td style="padding: 12px; font-weight: bold; color: {{ item.color }};">{{ item.date }}</td>
       </tr>
       {% endfor %}
     {% else %}
