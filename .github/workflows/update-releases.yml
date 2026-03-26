@@ -98,28 +98,29 @@ jobs:
                       prs = get_json(url)
                       
                       for pr in prs:
-                        # Calculate Age for Coloring
+                        # Calculate Age
                         created_date = datetime.strptime(pr.get('created_at', '').split('T')[0], "%Y-%m-%d")
                         days_old = (datetime.now() - created_date).days
                         
-                        # Logic: 7d=green, 30d=yellow, 90d=orange, else red
-                        if days_old <= 7:
+                        # New Thresholds & High-Contrast Colors
+                        if days_old <= 14:
                             status_color = "#28a745" # Green
-                        elif days_old <= 30:
-                            status_color = "#ffd33d" # Yellow
-                        elif days_old <= 90:
-                            status_color = "#f66a0a" # Orange
+                        elif days_old <= 60:
+                            status_color = "#B8860B" # Darker Golden-Yellow (Readable)
+                        elif days_old <= 120:
+                            status_color = "#d9534f" # Burnt Orange
                         else:
-                            status_color = "#d73a49" # Red
+                            status_color = "#b91d1d" # Deep Red
 
-                      pull_list.append({
-                          "repo": repo.split('/')[-1],
-                          "title": pr.get('title'),
-                          "url": pr.get('html_url'),
-                          "user": pr.get('user', {}).get('login'),
-                          "date": pr.get('created_at', '').split('T')[0],
-                          "color": status_color  # Add the color code here
-                      })
+                        pull_list.append({
+                            "repo": repo.split('/')[-1],
+                            "title": pr.get('title'),
+                            "url": pr.get('html_url'),
+                            "user": pr.get('user', {}).get('login'),
+                            "date": pr.get('created_at', '').split('T')[0],
+                            "days_ago": days_old, # Useful for display
+                            "color": status_color 
+                        })
                   except Exception as e:
                       print(f"Error on PRs for {repo}: {e}")
 
