@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-03-26 22:44",
+  "last_updated": "2026-03-26 22:47",
   "projects": {
     "5G Media Streaming": [
       {
@@ -109,8 +109,53 @@
     ],
     "Conversational Avatar": [],
     "6G Testbed": [],
-    "DVB-I over 5G": [],
-    "5G Broadcast Emergency Alerts": [],
-    "5G Multicast Broadcast": []
+    "DVB-I over 5G": [
+      {
+        "repo": "rt-5gms-application",
+        "title": "Feature MWC Demo",
+        "url": "https://github.com/5G-MAG/rt-5gms-application/pull/49",
+        "user": "dsilhavy",
+        "date": "2026-02-25"
+      }
+    ],
+    "5G Broadcast Emergency Alerts": [
+      {
+        "repo": "rt-mbms-tx-for-qrd-and-crd",
+        "title": "WiP: Docker support",
+        "url": "https://github.com/5G-MAG/rt-mbms-tx-for-qrd-and-crd/pull/9",
+        "user": "dsilhavy",
+        "date": "2024-11-20"
+      }
+    ],
+    "5G Multicast Broadcast": [
+      {
+        "repo": "rt-mbs-transport-function",
+        "title": "Feature: Object Carousel Operating Mode",
+        "url": "https://github.com/5G-MAG/rt-mbs-transport-function/pull/55",
+        "user": "davidjwbbc",
+        "date": "2026-03-26"
+      },
+      {
+        "repo": "rt-mbs-examples",
+        "title": "Copy 5g-mbs-dev repository and fix so it works here",
+        "url": "https://github.com/5G-MAG/rt-mbs-examples/pull/15",
+        "user": "joseprrm",
+        "date": "2026-03-13"
+      },
+      {
+        "repo": "rt-mbs-examples",
+        "title": "Feature/tmux mbstf",
+        "url": "https://github.com/5G-MAG/rt-mbs-examples/pull/14",
+        "user": "dsilhavy",
+        "date": "2026-03-06"
+      },
+      {
+        "repo": "rt-mbs-examples",
+        "title": "Add Insomnia collection and environment for TMGI Service API",
+        "url": "https://github.com/5G-MAG/rt-mbs-examples/pull/13",
+        "user": "dsilhavy",
+        "date": "2026-02-23"
+      }
+    ]
   }
 }
