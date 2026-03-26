@@ -20,6 +20,8 @@ jobs:
           python-version: '3.x'
 
       - name: Fetch Data
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           python - <<EOF
           import urllib.request
@@ -27,7 +29,7 @@ jobs:
           import os
           from datetime import datetime
 
-          # 1. Configuration: Projects and their Repositories
+          # 1. Configuration
           standard_projects = {
               "5G Media Streaming": ["5G-MAG/rt-5gms-application-provider", "5G-MAG/rt-5gms-application", "5G-MAG/rt-5gms-application-function", "5G-MAG/rt-5gms-application-server", "5G-MAG/rt-5gms-media-stream-handler", "5G-MAG/rt-5gms-media-session-handler", "5G-MAG/rt-5gms-common-android-library", "5G-MAG/rt-5gms-examples"],
               "5G Core Service Consumers": ["5G-MAG/rt-5gc-service-consumers"],
@@ -50,14 +52,17 @@ jobs:
           }
 
           def get_json(url):
-              req = urllib.request.Request(url, headers={'User-Agent': 'Github-Action-Bot'})
+              token = os.environ.get("GITHUB_TOKEN")
+              req = urllib.request.Request(url)
+              req.add_header('User-Agent', 'Github-Action-Bot')
+              if token:
+                  req.add_header('Authorization', f'token {token}')
               with urllib.request.urlopen(req) as response:
                   return json.loads(response.read().decode())
 
           release_output = {}
           pr_output = {}
 
-          # Process All Groups
           all_groups = list(standard_projects.items()) + [(k, v['repos']) for k, v in filtered_projects.items()]
 
           for p_name, repos in all_groups:
@@ -85,31 +90,36 @@ jobs:
                   except:
                       rel_list.append({"short_name": repo.split('/')[-1], "tag": "No Release", "date": "-", "url": f"https://github.com/{repo}/releases"})
 
-                  # --- PART B: FETCH OPEN PRs ---
+                  # --- PART B: FETCH ALL OPEN PRs (With Pagination) ---
                   try:
                       print(f"[{p_name}] Fetching PRs for {repo}...")
-                      prs = get_json(f"https://api.github.com/repos/{repo}/pulls?state=open")
-                      for pr in prs:
-                          pull_list.append({
-                              "repo": repo.split('/')[-1],
-                              "title": pr.get('title'),
-                              "url": pr.get('html_url'),
-                              "user": pr.get('user', {}).get('login'),
-                              "date": pr.get('created_at', '').split('T')[0]
-                          })
+                      page = 1
+                      while True:
+                          url = f"https://api.github.com/repos/{repo}/pulls?state=open&per_page=100&page={page}"
+                          prs = get_json(url)
+                          if not prs: break
+                          
+                          for pr in prs:
+                              pull_list.append({
+                                  "repo": repo.split('/')[-1],
+                                  "title": pr.get('title'),
+                                  "url": pr.get('html_url'),
+                                  "user": pr.get('user', {}).get('login'),
+                                  "date": pr.get('created_at', '').split('T')[0]
+                              })
+                          if len(prs) < 100: break
+                          page += 1
                   except Exception as e:
                       print(f"Error on PRs for {repo}: {e}")
 
               release_output[p_name] = rel_list
               pr_output[p_name] = pull_list
 
-          # 3. Save to _data folder
+          # 3. Save Output
           if not os.path.exists('_data'): os.makedirs('_data')
           timestamp = datetime.now().strftime("%Y-%m-%d %H:%M")
-          
           with open('_data/releases.json', 'w') as f:
               json.dump({"last_updated": timestamp, "projects": release_output}, f, indent=2)
-          
           with open('_data/pull_requests.json', 'w') as f:
               json.dump({"last_updated": timestamp, "projects": pr_output}, f, indent=2)
           EOF
@@ -119,5 +129,5 @@ jobs:
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git add _data/*.json
-          git commit -m "Update Releases and PR data" || exit 0
+          git commit -m "Update Data (with pagination and auth)" || exit 0
           git push
