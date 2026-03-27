@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Start here: Build an Application
+title: Start here - Build an Application
 nav_order: 2
 has_children: true
 ---
