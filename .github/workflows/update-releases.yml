@@ -1,9 +1,9 @@
-name: Sync Repo Releases
+name: Sync Repo Data
 
 on:
   schedule:
     - cron: '0 0 * * *' # Runs every night at midnight
-  workflow_dispatch: # Allows you to run it manually from the Actions tab
+  workflow_dispatch: 
 
 jobs:
   update-data:
@@ -19,7 +19,9 @@ jobs:
         with:
           python-version: '3.x'
 
-      - name: Fetch Latest Releases
+      - name: Fetch Data
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           python - <<EOF
           import urllib.request
@@ -27,7 +29,7 @@ jobs:
           import os
           from datetime import datetime
 
-          # 1. Standard Projects: Fetch absolute global Latest Release
+          # 1. Configuration
           standard_projects = {
               "5G Media Streaming": ["5G-MAG/rt-5gms-application-provider", "5G-MAG/rt-5gms-application", "5G-MAG/rt-5gms-application-function", "5G-MAG/rt-5gms-application-server", "5G-MAG/rt-5gms-media-stream-handler", "5G-MAG/rt-5gms-media-session-handler", "5G-MAG/rt-5gms-common-android-library", "5G-MAG/rt-5gms-examples"],
               "5G Core Service Consumers": ["5G-MAG/rt-5gc-service-consumers"],
@@ -44,70 +46,105 @@ jobs:
               "DVB-I over 5G": ["5G-MAG/rt-5gms-application"]
           }
 
-          # 2. Filtered Projects: Fetch specific branch tags (EA and 5MBS)
           filtered_projects = {
               "5G Broadcast Emergency Alerts": {"repos": ["5G-MAG/rt-mbms-tx-for-qrd-and-crd"], "filter": "-ea-"},
               "5G Multicast Broadcast": {"repos": ["5G-MAG/rt-mbs-function","5G-MAG/rt-mbs-transport-function", "5G-MAG/open5gs", "5G-MAG/rt-srsRAN_Project", "5G-MAG/rt-mbs-examples"], "filter": "5mbs"}
           }
 
-          final_output = {}
-
           def get_json(url):
-              req = urllib.request.Request(url, headers={'User-Agent': 'Github-Action-Bot'})
+              token = os.environ.get("GITHUB_TOKEN")
+              req = urllib.request.Request(url)
+              req.add_header('User-Agent', 'Github-Action-Bot')
+              if token:
+                  req.add_header('Authorization', f'token {token}')
               with urllib.request.urlopen(req) as response:
                   return json.loads(response.read().decode())
 
-          # Process Standard
-          for p_name, repos in standard_projects.items():
-              data_list = []
-              for repo in repos:
-                  print(f"Fetching latest for {repo}...")
-                  try:
-                      data = get_json(f"https://api.github.com/repos/{repo}/releases/latest")
-                      data_list.append({
-                          "short_name": repo.split('/')[-1],
-                          "tag": data.get('tag_name'),
-                          "date": data.get('published_at', '').split('T')[0],
-                          "url": data.get('html_url')
-                      })
-                  except:
-                      data_list.append({"short_name": repo.split('/')[-1], "tag": "No Release", "date": "-", "url": f"https://github.com/{repo}/releases"})
-              final_output[p_name] = data_list
+          release_output = {}
+          pr_output = {}
 
-          # Process Filtered (EA and 5MBS)
-          for p_name, config in filtered_projects.items():
-              data_list = []
-              for repo in config["repos"]:
-                  print(f"Filtering {p_name} for {repo} using {config['filter']}...")
+          all_groups = list(standard_projects.items()) + [(k, v['repos']) for k, v in filtered_projects.items()]
+
+          for p_name, repos in all_groups:
+              rel_list = []
+              pull_list = []
+              
+              for repo in repos:
+                  repo_base_url = f"https://github.com/{repo}"
+                  # --- PART A: FETCH RELEASES ---
                   try:
-                      releases = get_json(f"https://api.github.com/repos/{repo}/releases")
-                      target = next((r for r in releases if config["filter"] in r.get('tag_name', '').lower()), None)
+                      print(f"[{p_name}] Fetching release for {repo}...")
+                      if p_name in filtered_projects:
+                          rels = get_json(f"https://api.github.com/repos/{repo}/releases")
+                          f_val = filtered_projects[p_name]["filter"]
+                          target = next((r for r in rels if f_val in r.get('tag_name', '').lower()), None)
+                      else:
+                          target = get_json(f"https://api.github.com/repos/{repo}/releases/latest")
+                      
                       if target:
-                          data_list.append({
+                          rel_list.append({
                               "short_name": repo.split('/')[-1],
                               "tag": target.get('tag_name'),
                               "date": target.get('published_at', '').split('T')[0],
-                              "url": target.get('html_url')
+                              "url": target.get('html_url'),
+                              "repo_url": repo_base_url
                           })
-                      else:
-                          # Fallback to latest global if filtered tag not found
-                          latest = get_json(f"https://api.github.com/repos/{repo}/releases/latest")
-                          data_list.append({"short_name": repo.split('/')[-1], "tag": latest.get('tag_name'), "date": latest.get('published_at', '').split('T')[0], "url": latest.get('html_url')})
                   except:
-                      data_list.append({"short_name": repo.split('/')[-1], "tag": "No Release", "date": "-", "url": f"https://github.com/{repo}/releases"})
-              final_output[p_name] = data_list
+                      rel_list.append({
+                          "short_name": repo.split('/')[-1], 
+                          "tag": "No Release", 
+                          "date": "-", 
+                          "url": f"{repo_base_url}/releases",
+                          "repo_url": repo_base_url
+                      })
 
-          # Save to JSON
-          full_data = {"last_updated": datetime.now().strftime("%Y-%m-%d"), "projects": final_output}
+                  # --- PART B: FETCH ALL OPEN PRs ---
+                  try:
+                      print(f"[{p_name}] Fetching PRs for {repo}...")
+                      url = f"https://api.github.com/repos/{repo}/pulls?state=open&per_page=100"
+                      prs = get_json(url)
+                      
+                      for pr in prs:
+                          created_date = datetime.strptime(pr.get('created_at', '').split('T')[0], "%Y-%m-%d")
+                          days_old = (datetime.now() - created_date).days
+                          
+                          if days_old <= 30:
+                              status_color = "#28a745" # Green
+                          elif days_old <= 90:
+                              status_color = "#B8860B" # Darker Golden-Yellow
+                          elif days_old <= 180:
+                              status_color = "#d9534f" # Burnt Orange
+                          else:
+                              status_color = "#b91d1d" # Deep Red
+
+                          pull_list.append({
+                              "repo": repo.split('/')[-1],
+                              "title": pr.get('title'),
+                              "url": pr.get('html_url'),
+                              "user": pr.get('user', {}).get('login'),
+                              "date": pr.get('created_at', '').split('T')[0],
+                              "days_ago": days_old,
+                              "color": status_color 
+                          })
+                  except Exception as e:
+                      print(f"Error on PRs for {repo}: {e}")
+
+              release_output[p_name] = rel_list
+              pr_output[p_name] = pull_list
+
+          # 3. Save Output
           if not os.path.exists('_data'): os.makedirs('_data')
+          timestamp = datetime.now().strftime("%Y-%m-%d %H:%M")
           with open('_data/releases.json', 'w') as f:
-              json.dump(full_data, f, indent=2)
+              json.dump({"last_updated": timestamp, "projects": release_output}, f, indent=2)
+          with open('_data/pull_requests.json', 'w') as f:
+              json.dump({"last_updated": timestamp, "projects": pr_output}, f, indent=2)
           EOF
 
-      - name: Commit and Push changes
+      - name: Commit and Push
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git add _data/releases.json
-          git commit -m "Auto-update release tags" || exit 0
+          git add _data/*.json
+          git commit -m "Update Data (including repo_url for separate linking)" || exit 0
           git push
