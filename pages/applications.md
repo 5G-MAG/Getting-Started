@@ -1,13 +1,13 @@
 ---
 layout: default
-title: Start here - Build an Application
+title: START HERE, build an Application
 nav_order: 2
 has_children: true
 ---
 
 <img src="../assets/images/Banner_ReferenceTools.png" /> 
 
-# Build an Application
+# Start here, build an Application
 
 ### I'd like to setup my application in the domain of... (please select below).
 
