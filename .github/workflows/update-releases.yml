@@ -13,6 +13,9 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
+        with:
+          # Using the PAT here ensures the push triggers the Pages deployment
+          token: ${{ secrets.PROJECT_ACCESS_TOKEN }}
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -21,7 +24,8 @@ jobs:
 
       - name: Fetch Data
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          # Use the PAT for API calls to avoid rate limits in Orgs
+          GITHUB_TOKEN: ${{ secrets.PROJECT_ACCESS_TOKEN }}
         run: |
           python - <<EOF
           import urllib.request
@@ -133,18 +137,4 @@ jobs:
               pr_output[p_name] = pull_list
 
           # 3. Save Output
-          if not os.path.exists('_data'): os.makedirs('_data')
-          timestamp = datetime.now().strftime("%Y-%m-%d %H:%M")
-          with open('_data/releases.json', 'w') as f:
-              json.dump({"last_updated": timestamp, "projects": release_output}, f, indent=2)
-          with open('_data/pull_requests.json', 'w') as f:
-              json.dump({"last_updated": timestamp, "projects": pr_output}, f, indent=2)
-          EOF
-
-      - name: Commit and Push
-        run: |
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git add _data/*.json
-          git commit -m "Update Data (including repo_url for separate linking)" || exit 0
-          git push
+          if not os.path.exists('_data'): os.makedirs('_data
