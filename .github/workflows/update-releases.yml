@@ -2,7 +2,7 @@ name: Sync Repo Data
 
 on:
   schedule:
-    - cron: '0 0 * * *' # Runs every night at midnight
+    - cron: '0 0 * * *'
   workflow_dispatch: 
 
 jobs:
@@ -14,7 +14,6 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
         with:
-          # Using the PAT ensures the push triggers subsequent Pages deployments
           token: ${{ secrets.PROJECT_ACCESS_TOKEN }}
 
       - name: Set up Python
@@ -30,9 +29,9 @@ jobs:
           import urllib.request
           import json
           import os
+          import time
           from datetime import datetime
 
-          # 1. Configuration
           standard_projects = {
               "5G Media Streaming": ["5G-MAG/rt-5gms-application-provider", "5G-MAG/rt-5gms-application", "5G-MAG/rt-5gms-application-function", "5G-MAG/rt-5gms-application-server", "5G-MAG/rt-5gms-media-stream-handler", "5G-MAG/rt-5gms-media-session-handler", "5G-MAG/rt-5gms-common-android-library", "5G-MAG/rt-5gms-examples"],
               "5G Core Service Consumers": ["5G-MAG/rt-5gc-service-consumers"],
@@ -58,27 +57,30 @@ jobs:
               token = os.environ.get("GITHUB_TOKEN")
               req = urllib.request.Request(url)
               req.add_header('User-Agent', 'Github-Action-Bot')
-              if token:
-                  req.add_header('Authorization', f'token {token}')
-              with urllib.request.urlopen(req) as response:
-                  return json.loads(response.read().decode())
+              if token: req.add_header('Authorization', f'token {token}')
+              try:
+                  with urllib.request.urlopen(req) as response:
+                      return json.loads(response.read().decode())
+              except Exception as e:
+                  print(f"API Error at {url}: {e}")
+                  return None
 
           release_output = {}
           pr_output = {}
-
           all_groups = list(standard_projects.items()) + [(k, v['repos']) for k, v in filtered_projects.items()]
 
           for p_name, repos in all_groups:
-              rel_list = []
-              pull_list = []
-              
+              rel_list, pull_list = [], []
               for repo in repos:
+                  time.sleep(0.1) # Prevent secondary rate limits
                   repo_base_url = f"https://github.com/{repo}"
+                  
+                  # Release Logic
                   try:
                       if p_name in filtered_projects:
                           rels = get_json(f"https://api.github.com/repos/{repo}/releases")
                           f_val = filtered_projects[p_name]["filter"]
-                          target = next((r for r in rels if f_val in r.get('tag_name', '').lower()), None)
+                          target = next((r for r in rels if f_val in r.get('tag_name', '').lower()), None) if rels else None
                       else:
                           target = get_json(f"https://api.github.com/repos/{repo}/releases/latest")
                       
@@ -90,26 +92,18 @@ jobs:
                               "url": target.get('html_url'),
                               "repo_url": repo_base_url
                           })
+                      else:
+                          raise Exception("No target release found")
                   except:
-                      rel_list.append({
-                          "short_name": repo.split('/')[-1], 
-                          "tag": "No Release", 
-                          "date": "-", 
-                          "url": f"{repo_base_url}/releases",
-                          "repo_url": repo_base_url
-                      })
+                      rel_list.append({"short_name": repo.split('/')[-1], "tag": "No Release", "date": "-", "url": f"{repo_base_url}/releases", "repo_url": repo_base_url})
 
-                  try:
-                      url = f"https://api.github.com/repos/{repo}/pulls?state=open&per_page=100"
-                      prs = get_json(url)
+                  # PR Logic
+                  prs = get_json(f"https://api.github.com/repos/{repo}/pulls?state=open&per_page=100")
+                  if prs and isinstance(prs, list):
                       for pr in prs:
                           created_date = datetime.strptime(pr.get('created_at', '').split('T')[0], "%Y-%m-%d")
                           days_old = (datetime.now() - created_date).days
-                          if days_old <= 30: color = "#28a745"
-                          elif days_old <= 90: color = "#B8860B"
-                          elif days_old <= 180: color = "#d9534f"
-                          else: color = "#b91d1d"
-
+                          color = "#28a745" if days_old <= 30 else "#B8860B" if days_old <= 90 else "#d9534f" if days_old <= 180 else "#b91d1d"
                           pull_list.append({
                               "repo": repo.split('/')[-1],
                               "title": pr.get('title'),
@@ -119,18 +113,13 @@ jobs:
                               "days_ago": days_old,
                               "color": color 
                           })
-                  except Exception as e:
-                      print(f"Error on PRs for {repo}: {e}")
 
               release_output[p_name] = rel_list
               pr_output[p_name] = pull_list
 
-          # 3. Save Output
           if not os.path.exists('_data'): os.makedirs('_data')
-          with open('_data/releases.json', 'w') as f:
-              json.dump(release_output, f, indent=2)
-          with open('_data/pull_requests.json', 'w') as f:
-              json.dump(pr_output, f, indent=2)
+          with open('_data/releases.json', 'w') as f: json.dump(release_output, f, indent=2)
+          with open('_data/pull_requests.json', 'w') as f: json.dump(pr_output, f, indent=2)
           EOF
 
       - name: Commit and Push changes
@@ -138,5 +127,10 @@ jobs:
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git add _data/*.json
-          # Only commit if there are actually changes to avoid workflow errors
-          git diff --quiet && git diff --staged --quiet || (git commit -m "Automated data sync: $(date -u)" && git push)
+          if ! git diff --cached --quiet; then
+            git commit -m "Automated data sync: $(date -u)"
+            git pull --rebase origin ${{ github.ref_name }}
+            git push
+          else
+            echo "No changes detected."
+          fi
