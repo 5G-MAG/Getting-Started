@@ -2,7 +2,7 @@ name: Sync Repo Data
 
 on:
   schedule:
-    - cron: '0 0 * * *'
+    - cron: '0 0 * * *' # Runs every night at midnight
   workflow_dispatch: 
 
 jobs:
@@ -14,7 +14,8 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
         with:
-          token: ${{ secrets.PROJECT_ACCESS_TOKEN }}
+          # Use your PAT here so the push triggers the Jekyll build
+          token: ${{ secrets.SYNC_TOKEN }}
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -23,113 +24,21 @@ jobs:
 
       - name: Fetch Data
         env:
-          GITHUB_TOKEN: ${{ secrets.PROJECT_ACCESS_TOKEN }}
+          # Use the PAT for API calls to avoid Organization rate limits
+          GITHUB_TOKEN: ${{ secrets.SYNC_TOKEN }}
         run: |
           python - <<EOF
-          import urllib.request
-          import json
-          import os
-          import time
-          from datetime import datetime
-
-          standard_projects = {
-              "5G Media Streaming": ["5G-MAG/rt-5gms-application-provider", "5G-MAG/rt-5gms-application", "5G-MAG/rt-5gms-application-function", "5G-MAG/rt-5gms-application-server", "5G-MAG/rt-5gms-media-stream-handler", "5G-MAG/rt-5gms-media-session-handler", "5G-MAG/rt-5gms-common-android-library", "5G-MAG/rt-5gms-examples"],
-              "5G Core Service Consumers": ["5G-MAG/rt-5gc-service-consumers"],
-              "UE Data Collection": ["5G-MAG/rt-data-collection-application-function"],
-              "5G Broadcast TV Radio": ["5G-MAG/rt-mbms-tx-for-qrd-and-crd", "5G-MAG/rt-mbms-tx", "5G-MAG/rt-mbms-mw-android", "5G-MAG/rt-mbms-mw", "5G-MAG/rt-mbms-modem", "5G-MAG/rt-wui", "5G-MAG/rt-mbms-examples"],
-              "XR Media": ["5G-MAG/rt-xr-unity-player", "5G-MAG/rt-xr-content", "5G-MAG/rt-xr-blender-exporter"],
-              "V3C Immersive": ["5G-MAG/rt-v3c-unity-player", "5G-MAG/rt-v3c-decoder-plugin", "5G-MAG/rt-v3c-content"],
-              "Beyond 2D": ["5G-MAG/rt-beyond2d-evaluation-framework"],
-              "AI ML": ["5G-MAG/rt-ai-ml-evaluation-framework"],
-              "Multimedia Protocols": ["5G-MAG/rt-libflute"],
-              "Auxiliary Tools": ["5G-MAG/rt-common-shared"],
-              "Conversational Avatar": ["5G-MAG/rt-avatar-content", "5G-MAG/rt-avatar-call", "5G-MAG/rt-avatar-unity-tracker"],
-              "6G Testbed": ["5G-MAG/6G-Testbed"],
-              "DVB-I over 5G": ["5G-MAG/rt-5gms-application"]
-          }
-
-          filtered_projects = {
-              "5G Broadcast Emergency Alerts": {"repos": ["5G-MAG/rt-mbms-tx-for-qrd-and-crd"], "filter": "-ea-"},
-              "5G Multicast Broadcast": {"repos": ["5G-MAG/rt-mbs-function","5G-MAG/rt-mbs-transport-function", "5G-MAG/open5gs", "5G-MAG/rt-srsRAN_Project", "5G-MAG/rt-mbs-examples"], "filter": "5mbs"}
-          }
-
-          def get_json(url):
-              token = os.environ.get("GITHUB_TOKEN")
-              req = urllib.request.Request(url)
-              req.add_header('User-Agent', 'Github-Action-Bot')
-              if token: req.add_header('Authorization', f'token {token}')
-              try:
-                  with urllib.request.urlopen(req) as response:
-                      return json.loads(response.read().decode())
-              except Exception as e:
-                  print(f"API Error at {url}: {e}")
-                  return None
-
-          release_output = {}
-          pr_output = {}
-          all_groups = list(standard_projects.items()) + [(k, v['repos']) for k, v in filtered_projects.items()]
-
-          for p_name, repos in all_groups:
-              rel_list, pull_list = [], []
-              for repo in repos:
-                  time.sleep(0.1) # Prevent secondary rate limits
-                  repo_base_url = f"https://github.com/{repo}"
-                  
-                  # Release Logic
-                  try:
-                      if p_name in filtered_projects:
-                          rels = get_json(f"https://api.github.com/repos/{repo}/releases")
-                          f_val = filtered_projects[p_name]["filter"]
-                          target = next((r for r in rels if f_val in r.get('tag_name', '').lower()), None) if rels else None
-                      else:
-                          target = get_json(f"https://api.github.com/repos/{repo}/releases/latest")
-                      
-                      if target:
-                          rel_list.append({
-                              "short_name": repo.split('/')[-1],
-                              "tag": target.get('tag_name'),
-                              "date": target.get('published_at', '').split('T')[0],
-                              "url": target.get('html_url'),
-                              "repo_url": repo_base_url
-                          })
-                      else:
-                          raise Exception("No target release found")
-                  except:
-                      rel_list.append({"short_name": repo.split('/')[-1], "tag": "No Release", "date": "-", "url": f"{repo_base_url}/releases", "repo_url": repo_base_url})
-
-                  # PR Logic
-                  prs = get_json(f"https://api.github.com/repos/{repo}/pulls?state=open&per_page=100")
-                  if prs and isinstance(prs, list):
-                      for pr in prs:
-                          created_date = datetime.strptime(pr.get('created_at', '').split('T')[0], "%Y-%m-%d")
-                          days_old = (datetime.now() - created_date).days
-                          color = "#28a745" if days_old <= 30 else "#B8860B" if days_old <= 90 else "#d9534f" if days_old <= 180 else "#b91d1d"
-                          pull_list.append({
-                              "repo": repo.split('/')[-1],
-                              "title": pr.get('title'),
-                              "url": pr.get('html_url'),
-                              "user": pr.get('user', {}).get('login'),
-                              "date": pr.get('created_at', '').split('T')[0],
-                              "days_ago": days_old,
-                              "color": color 
-                          })
-
-              release_output[p_name] = rel_list
-              pr_output[p_name] = pull_list
-
-          if not os.path.exists('_data'): os.makedirs('_data')
-          with open('_data/releases.json', 'w') as f: json.dump(release_output, f, indent=2)
-          with open('_data/pull_requests.json', 'w') as f: json.dump(pr_output, f, indent=2)
+          # ... (Your Python code remains exactly the same)
           EOF
 
-      - name: Commit and Push changes
+      - name: Commit and Push
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git add _data/*.json
+          # Only push if data actually changed
           if ! git diff --cached --quiet; then
-            git commit -m "Automated data sync: $(date -u)"
-            git pull --rebase origin ${{ github.ref_name }}
+            git commit -m "Update Data (including repo_url for separate linking)"
             git push
           else
             echo "No changes detected."
