@@ -14,7 +14,7 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
         with:
-          # Using the PAT here ensures the push triggers the Pages deployment
+          # Using the PAT ensures the push triggers subsequent Pages deployments
           token: ${{ secrets.PROJECT_ACCESS_TOKEN }}
 
       - name: Set up Python
@@ -24,7 +24,6 @@ jobs:
 
       - name: Fetch Data
         env:
-          # Use the PAT for API calls to avoid rate limits in Orgs
           GITHUB_TOKEN: ${{ secrets.PROJECT_ACCESS_TOKEN }}
         run: |
           python - <<EOF
@@ -75,9 +74,7 @@ jobs:
               
               for repo in repos:
                   repo_base_url = f"https://github.com/{repo}"
-                  # --- PART A: FETCH RELEASES ---
                   try:
-                      print(f"[{p_name}] Fetching release for {repo}...")
                       if p_name in filtered_projects:
                           rels = get_json(f"https://api.github.com/repos/{repo}/releases")
                           f_val = filtered_projects[p_name]["filter"]
@@ -102,24 +99,16 @@ jobs:
                           "repo_url": repo_base_url
                       })
 
-                  # --- PART B: FETCH ALL OPEN PRs ---
                   try:
-                      print(f"[{p_name}] Fetching PRs for {repo}...")
                       url = f"https://api.github.com/repos/{repo}/pulls?state=open&per_page=100"
                       prs = get_json(url)
-                      
                       for pr in prs:
                           created_date = datetime.strptime(pr.get('created_at', '').split('T')[0], "%Y-%m-%d")
                           days_old = (datetime.now() - created_date).days
-                          
-                          if days_old <= 30:
-                              status_color = "#28a745" # Green
-                          elif days_old <= 90:
-                              status_color = "#B8860B" # Darker Golden-Yellow
-                          elif days_old <= 180:
-                              status_color = "#d9534f" # Burnt Orange
-                          else:
-                              status_color = "#b91d1d" # Deep Red
+                          if days_old <= 30: color = "#28a745"
+                          elif days_old <= 90: color = "#B8860B"
+                          elif days_old <= 180: color = "#d9534f"
+                          else: color = "#b91d1d"
 
                           pull_list.append({
                               "repo": repo.split('/')[-1],
@@ -128,7 +117,7 @@ jobs:
                               "user": pr.get('user', {}).get('login'),
                               "date": pr.get('created_at', '').split('T')[0],
                               "days_ago": days_old,
-                              "color": status_color 
+                              "color": color 
                           })
                   except Exception as e:
                       print(f"Error on PRs for {repo}: {e}")
@@ -137,4 +126,17 @@ jobs:
               pr_output[p_name] = pull_list
 
           # 3. Save Output
-          if not os.path.exists('_data'): os.makedirs('_data
+          if not os.path.exists('_data'): os.makedirs('_data')
+          with open('_data/releases.json', 'w') as f:
+              json.dump(release_output, f, indent=2)
+          with open('_data/pull_requests.json', 'w') as f:
+              json.dump(pr_output, f, indent=2)
+          EOF
+
+      - name: Commit and Push changes
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add _data/*.json
+          # Only commit if there are actually changes to avoid workflow errors
+          git diff --quiet && git diff --staged --quiet || (git commit -m "Automated data sync: $(date -u)" && git push)
