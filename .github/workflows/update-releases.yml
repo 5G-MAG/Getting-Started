@@ -28,6 +28,7 @@ jobs:
           import urllib.error
           import json
           import os
+          import time
           from datetime import datetime
 
           # 1. Configuration
@@ -59,10 +60,15 @@ jobs:
               if token:
                   req.add_header('Authorization', f'token {token}')
               try:
+                  # Small pause before each request to respect secondary rate limits
+                  time.sleep(0.5)
                   with urllib.request.urlopen(req) as response:
                       return json.loads(response.read().decode())
               except urllib.error.HTTPError as e:
                   print(f"HTTP Error {e.code} for {url}")
+                  if e.code == 403:
+                      print("Potential Rate Limit reached. Waiting 2 seconds...")
+                      time.sleep(2)
                   return None
               except Exception as e:
                   print(f"Error fetching {url}: {e}")
@@ -86,6 +92,7 @@ jobs:
           for p_name, repos in all_groups:
               rel_list, pull_list, comm_list = [], [], []
               for repo in repos:
+                  print(f"Processing {repo}...")
                   repo_data = get_json(f"https://api.github.com/repos/{repo}")
                   if not repo_data: continue
                   
@@ -138,7 +145,7 @@ jobs:
                       "repo_url": f"https://github.com/{repo}"
                   })
                   
-                  # PRs (Restored Date Field)
+                  # PRs
                   prs = get_json(f"https://api.github.com/repos/{repo}/pulls?state=open") or []
                   for pr in prs:
                       created_date = pr.get('created_at', '').split('T')[0]
@@ -166,5 +173,5 @@ jobs:
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git add _data/*.json
-          git commit -m "Dashboard Update: Restored PR Dates & Persistence" || exit 0
+          git commit -m "Dashboard Update: Rate Limit Handling & PR Dates" || exit 0
           git push
