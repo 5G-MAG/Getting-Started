@@ -15,7 +15,7 @@ nav_order: 2
     padding: 12px;
     text-align: left;
     border-bottom: 2px solid #eee;
-    font-size: 0.85em;
+    font-size: 0.75em;
     color: #666;
     text-transform: uppercase;
   }
@@ -23,7 +23,7 @@ nav_order: 2
     padding: 12px;
     border-bottom: 1px solid #eee;
     vertical-align: middle;
-    font-size: 0.95em;
+    font-size: 0.9em;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
@@ -40,6 +40,7 @@ nav_order: 2
     text-decoration: none;
     font-size: 0.8em;
   }
+  .stats-sub { font-size: 0.8em; color: #888; display: block; }
 </style>
 
 <img src="../assets/images/Banner_ReferenceTools.png" alt="Reference Tools Banner" /> 
@@ -55,30 +56,26 @@ nav_order: 2
   </p>
 {% endif %}
 
----
-
-<img src="../assets/images/Banner_5GBCTVR.png"/> 
-
-## Community Health - 5G Broadcast: TV and Radio Hybrid Services
-[Project Documentation](./lte-based-5g-broadcast/){: .btn-blue }
-
-<table class="health-table">
+{% capture table_header %}
   <thead>
     <tr>
-      <th style="width: 40%;">Repository</th>
-      <th style="width: 15%;">Stars</th>
-      <th style="width: 15%;">Forks</th>
-      <th style="width: 15%;">Issues</th>
-      <th style="width: 15%;">Activity</th>
+      <th style="width: 25%;">Repository</th>
+      <th style="width: 10%;">Stars</th>
+      <th style="width: 10%;">Forks</th>
+      <th style="width: 15%;">Views (14d)</th>
+      <th style="width: 20%;">Clones (Total)</th>
+      <th style="width: 20%;">Activity</th>
     </tr>
   </thead>
-  <tbody>
-    {% for item in site.data.community_stats.projects["5G Broadcast TV Radio"] %}
+{% endcapture %}
+
+{% capture table_row_logic %}
     <tr>
       <td><a href="{{ item.repo_url }}" style="font-weight: bold; color: #0366d6;">{{ item.name }}</a></td>
       <td>⭐ {{ item.stars }}</td>
       <td>🍴 {{ item.forks }}</td>
-      <td>{{ item.issues }}</td>
+      <td>👀 {{ item.views_14d }}</td>
+      <td>📥 {{ item.total_clones }} <span class="stats-sub">{{ item.clones_14d }} new</span></td>
       <td>
         {% if item.status == "Active" %}
           <span class="dot dot-green"></span> <strong>Active</strong>
@@ -89,6 +86,20 @@ nav_order: 2
         {% endif %}
       </td>
     </tr>
+{% endcapture %}
+
+---
+
+<img src="../assets/images/Banner_5GBCTVR.png"/> 
+
+## Community Health - 5G Broadcast: TV and Radio Hybrid Services
+[Project Documentation](./lte-based-5g-broadcast/){: .btn-blue }
+
+<table class="health-table">
+  {{ table_header }}
+  <tbody>
+    {% for item in site.data.community_stats.projects["5G Broadcast TV Radio"] %}
+      {{ table_row_logic }}
     {% endfor %}
   </tbody>
 </table>
@@ -101,32 +112,10 @@ nav_order: 2
 [Project Documentation](./emergency-alerts/){: .btn-blue }
 
 <table class="health-table">
-  <thead>
-    <tr>
-      <th style="width: 40%;">Repository</th>
-      <th style="width: 15%;">Stars</th>
-      <th style="width: 15%;">Forks</th>
-      <th style="width: 15%;">Issues</th>
-      <th style="width: 15%;">Activity</th>
-    </tr>
-  </thead>
+  {{ table_header }}
   <tbody>
     {% for item in site.data.community_stats.projects["5G Broadcast Emergency Alerts"] %}
-    <tr>
-      <td><a href="{{ item.repo_url }}" style="font-weight: bold; color: #0366d6;">{{ item.name }}</a></td>
-      <td>⭐ {{ item.stars }}</td>
-      <td>🍴 {{ item.forks }}</td>
-      <td>{{ item.issues }}</td>
-      <td>
-        {% if item.status == "Active" %}
-          <span class="dot dot-green"></span> <strong>Active</strong>
-        {% elsif item.status == "Maintenance" %}
-          <span class="dot dot-orange"></span> <strong>Maintenance</strong>
-        {% else %}
-          <span class="dot dot-blue"></span> <strong>Stable</strong>
-        {% endif %}
-      </td>
-    </tr>
+      {{ table_row_logic }}
     {% endfor %}
   </tbody>
 </table>
@@ -139,32 +128,10 @@ nav_order: 2
 [Project Documentation](./5g-media-streaming/){: .btn-blue }
 
 <table class="health-table">
-  <thead>
-    <tr>
-      <th style="width: 40%;">Repository</th>
-      <th style="width: 15%;">Stars</th>
-      <th style="width: 15%;">Forks</th>
-      <th style="width: 15%;">Issues</th>
-      <th style="width: 15%;">Activity</th>
-    </tr>
-  </thead>
+  {{ table_header }}
   <tbody>
     {% for item in site.data.community_stats.projects["5G Media Streaming"] %}
-    <tr>
-      <td><a href="{{ item.repo_url }}" style="font-weight: bold; color: #0366d6;">{{ item.name }}</a></td>
-      <td>⭐ {{ item.stars }}</td>
-      <td>🍴 {{ item.forks }}</td>
-      <td>{{ item.issues }}</td>
-      <td>
-        {% if item.status == "Active" %}
-          <span class="dot dot-green"></span> <strong>Active</strong>
-        {% elsif item.status == "Maintenance" %}
-          <span class="dot dot-orange"></span> <strong>Maintenance</strong>
-        {% else %}
-          <span class="dot dot-blue"></span> <strong>Stable</strong>
-        {% endif %}
-      </td>
-    </tr>
+      {{ table_row_logic }}
     {% endfor %}
   </tbody>
 </table>
@@ -177,32 +144,10 @@ nav_order: 2
 [Project Documentation](./5g-multicast-broadcast-services/){: .btn-blue }
 
 <table class="health-table">
-  <thead>
-    <tr>
-      <th style="width: 40%;">Repository</th>
-      <th style="width: 15%;">Stars</th>
-      <th style="width: 15%;">Forks</th>
-      <th style="width: 15%;">Issues</th>
-      <th style="width: 15%;">Activity</th>
-    </tr>
-  </thead>
+  {{ table_header }}
   <tbody>
     {% for item in site.data.community_stats.projects["5G Multicast Broadcast"] %}
-    <tr>
-      <td><a href="{{ item.repo_url }}" style="font-weight: bold; color: #0366d6;">{{ item.name }}</a></td>
-      <td>⭐ {{ item.stars }}</td>
-      <td>🍴 {{ item.forks }}</td>
-      <td>{{ item.issues }}</td>
-      <td>
-        {% if item.status == "Active" %}
-          <span class="dot dot-green"></span> <strong>Active</strong>
-        {% elsif item.status == "Maintenance" %}
-          <span class="dot dot-orange"></span> <strong>Maintenance</strong>
-        {% else %}
-          <span class="dot dot-blue"></span> <strong>Stable</strong>
-        {% endif %}
-      </td>
-    </tr>
+      {{ table_row_logic }}
     {% endfor %}
   </tbody>
 </table>
@@ -215,32 +160,10 @@ nav_order: 2
 [Project Documentation](./5g-core-service-consumers/){: .btn-blue }
 
 <table class="health-table">
-  <thead>
-    <tr>
-      <th style="width: 40%;">Repository</th>
-      <th style="width: 15%;">Stars</th>
-      <th style="width: 15%;">Forks</th>
-      <th style="width: 15%;">Issues</th>
-      <th style="width: 15%;">Activity</th>
-    </tr>
-  </thead>
+  {{ table_header }}
   <tbody>
     {% for item in site.data.community_stats.projects["5G Core Service Consumers"] %}
-    <tr>
-      <td><a href="{{ item.repo_url }}" style="font-weight: bold; color: #0366d6;">{{ item.name }}</a></td>
-      <td>⭐ {{ item.stars }}</td>
-      <td>🍴 {{ item.forks }}</td>
-      <td>{{ item.issues }}</td>
-      <td>
-        {% if item.status == "Active" %}
-          <span class="dot dot-green"></span> <strong>Active</strong>
-        {% elsif item.status == "Maintenance" %}
-          <span class="dot dot-orange"></span> <strong>Maintenance</strong>
-        {% else %}
-          <span class="dot dot-blue"></span> <strong>Stable</strong>
-        {% endif %}
-      </td>
-    </tr>
+      {{ table_row_logic }}
     {% endfor %}
   </tbody>
 </table>
@@ -253,32 +176,10 @@ nav_order: 2
 [Project Documentation](./6g-testbed-ai-traffic/){: .btn-blue }
 
 <table class="health-table">
-  <thead>
-    <tr>
-      <th style="width: 40%;">Repository</th>
-      <th style="width: 15%;">Stars</th>
-      <th style="width: 15%;">Forks</th>
-      <th style="width: 15%;">Issues</th>
-      <th style="width: 15%;">Activity</th>
-    </tr>
-  </thead>
+  {{ table_header }}
   <tbody>
     {% for item in site.data.community_stats.projects["6G Testbed"] %}
-    <tr>
-      <td><a href="{{ item.repo_url }}" style="font-weight: bold; color: #0366d6;">{{ item.name }}</a></td>
-      <td>⭐ {{ item.stars }}</td>
-      <td>🍴 {{ item.forks }}</td>
-      <td>{{ item.issues }}</td>
-      <td>
-        {% if item.status == "Active" %}
-          <span class="dot dot-green"></span> <strong>Active</strong>
-        {% elsif item.status == "Maintenance" %}
-          <span class="dot dot-orange"></span> <strong>Maintenance</strong>
-        {% else %}
-          <span class="dot dot-blue"></span> <strong>Stable</strong>
-        {% endif %}
-      </td>
-    </tr>
+      {{ table_row_logic }}
     {% endfor %}
   </tbody>
 </table>
@@ -291,32 +192,10 @@ nav_order: 2
 [Project Documentation](./ai-ml-evaluation-framework/){: .btn-blue }
 
 <table class="health-table">
-  <thead>
-    <tr>
-      <th style="width: 40%;">Repository</th>
-      <th style="width: 15%;">Stars</th>
-      <th style="width: 15%;">Forks</th>
-      <th style="width: 15%;">Issues</th>
-      <th style="width: 15%;">Activity</th>
-    </tr>
-  </thead>
+  {{ table_header }}
   <tbody>
     {% for item in site.data.community_stats.projects["AI ML"] %}
-    <tr>
-      <td><a href="{{ item.repo_url }}" style="font-weight: bold; color: #0366d6;">{{ item.name }}</a></td>
-      <td>⭐ {{ item.stars }}</td>
-      <td>🍴 {{ item.forks }}</td>
-      <td>{{ item.issues }}</td>
-      <td>
-        {% if item.status == "Active" %}
-          <span class="dot dot-green"></span> <strong>Active</strong>
-        {% elsif item.status == "Maintenance" %}
-          <span class="dot dot-orange"></span> <strong>Maintenance</strong>
-        {% else %}
-          <span class="dot dot-blue"></span> <strong>Stable</strong>
-        {% endif %}
-      </td>
-    </tr>
+      {{ table_row_logic }}
     {% endfor %}
   </tbody>
 </table>
@@ -329,32 +208,10 @@ nav_order: 2
 [Project Documentation](./beyond-2d-evaluation-framework/){: .btn-blue }
 
 <table class="health-table">
-  <thead>
-    <tr>
-      <th style="width: 40%;">Repository</th>
-      <th style="width: 15%;">Stars</th>
-      <th style="width: 15%;">Forks</th>
-      <th style="width: 15%;">Issues</th>
-      <th style="width: 15%;">Activity</th>
-    </tr>
-  </thead>
+  {{ table_header }}
   <tbody>
     {% for item in site.data.community_stats.projects["Beyond 2D"] %}
-    <tr>
-      <td><a href="{{ item.repo_url }}" style="font-weight: bold; color: #0366d6;">{{ item.name }}</a></td>
-      <td>⭐ {{ item.stars }}</td>
-      <td>🍴 {{ item.forks }}</td>
-      <td>{{ item.issues }}</td>
-      <td>
-        {% if item.status == "Active" %}
-          <span class="dot dot-green"></span> <strong>Active</strong>
-        {% elsif item.status == "Maintenance" %}
-          <span class="dot dot-orange"></span> <strong>Maintenance</strong>
-        {% else %}
-          <span class="dot dot-blue"></span> <strong>Stable</strong>
-        {% endif %}
-      </td>
-    </tr>
+      {{ table_row_logic }}
     {% endfor %}
   </tbody>
 </table>
@@ -367,32 +224,10 @@ nav_order: 2
 [Project Documentation](./conversational-avatar/){: .btn-blue }
 
 <table class="health-table">
-  <thead>
-    <tr>
-      <th style="width: 40%;">Repository</th>
-      <th style="width: 15%;">Stars</th>
-      <th style="width: 15%;">Forks</th>
-      <th style="width: 15%;">Issues</th>
-      <th style="width: 15%;">Activity</th>
-    </tr>
-  </thead>
+  {{ table_header }}
   <tbody>
     {% for item in site.data.community_stats.projects["Conversational Avatar"] %}
-    <tr>
-      <td><a href="{{ item.repo_url }}" style="font-weight: bold; color: #0366d6;">{{ item.name }}</a></td>
-      <td>⭐ {{ item.stars }}</td>
-      <td>🍴 {{ item.forks }}</td>
-      <td>{{ item.issues }}</td>
-      <td>
-        {% if item.status == "Active" %}
-          <span class="dot dot-green"></span> <strong>Active</strong>
-        {% elsif item.status == "Maintenance" %}
-          <span class="dot dot-orange"></span> <strong>Maintenance</strong>
-        {% else %}
-          <span class="dot dot-blue"></span> <strong>Stable</strong>
-        {% endif %}
-      </td>
-    </tr>
+      {{ table_row_logic }}
     {% endfor %}
   </tbody>
 </table>
@@ -405,32 +240,10 @@ nav_order: 2
 [Project Documentation](./dvbi-over-5g/){: .btn-blue }
 
 <table class="health-table">
-  <thead>
-    <tr>
-      <th style="width: 40%;">Repository</th>
-      <th style="width: 15%;">Stars</th>
-      <th style="width: 15%;">Forks</th>
-      <th style="width: 15%;">Issues</th>
-      <th style="width: 15%;">Activity</th>
-    </tr>
-  </thead>
+  {{ table_header }}
   <tbody>
     {% for item in site.data.community_stats.projects["DVB-I over 5G"] %}
-    <tr>
-      <td><a href="{{ item.repo_url }}" style="font-weight: bold; color: #0366d6;">{{ item.name }}</a></td>
-      <td>⭐ {{ item.stars }}</td>
-      <td>🍴 {{ item.forks }}</td>
-      <td>{{ item.issues }}</td>
-      <td>
-        {% if item.status == "Active" %}
-          <span class="dot dot-green"></span> <strong>Active</strong>
-        {% elsif item.status == "Maintenance" %}
-          <span class="dot dot-orange"></span> <strong>Maintenance</strong>
-        {% else %}
-          <span class="dot dot-blue"></span> <strong>Stable</strong>
-        {% endif %}
-      </td>
-    </tr>
+      {{ table_row_logic }}
     {% endfor %}
   </tbody>
 </table>
@@ -443,32 +256,10 @@ nav_order: 2
 [Project Documentation](./multimedia-content-delivery/){: .btn-blue }
 
 <table class="health-table">
-  <thead>
-    <tr>
-      <th style="width: 40%;">Repository</th>
-      <th style="width: 15%;">Stars</th>
-      <th style="width: 15%;">Forks</th>
-      <th style="width: 15%;">Issues</th>
-      <th style="width: 15%;">Activity</th>
-    </tr>
-  </thead>
+  {{ table_header }}
   <tbody>
     {% for item in site.data.community_stats.projects["Multimedia Protocols"] %}
-    <tr>
-      <td><a href="{{ item.repo_url }}" style="font-weight: bold; color: #0366d6;">{{ item.name }}</a></td>
-      <td>⭐ {{ item.stars }}</td>
-      <td>🍴 {{ item.forks }}</td>
-      <td>{{ item.issues }}</td>
-      <td>
-        {% if item.status == "Active" %}
-          <span class="dot dot-green"></span> <strong>Active</strong>
-        {% elsif item.status == "Maintenance" %}
-          <span class="dot dot-orange"></span> <strong>Maintenance</strong>
-        {% else %}
-          <span class="dot dot-blue"></span> <strong>Stable</strong>
-        {% endif %}
-      </td>
-    </tr>
+      {{ table_row_logic }}
     {% endfor %}
   </tbody>
 </table>
@@ -481,32 +272,10 @@ nav_order: 2
 [Project Documentation](./ue-data-collection-reporting-exposure/){: .btn-blue }
 
 <table class="health-table">
-  <thead>
-    <tr>
-      <th style="width: 40%;">Repository</th>
-      <th style="width: 15%;">Stars</th>
-      <th style="width: 15%;">Forks</th>
-      <th style="width: 15%;">Issues</th>
-      <th style="width: 15%;">Activity</th>
-    </tr>
-  </thead>
+  {{ table_header }}
   <tbody>
     {% for item in site.data.community_stats.projects["UE Data Collection"] %}
-    <tr>
-      <td><a href="{{ item.repo_url }}" style="font-weight: bold; color: #0366d6;">{{ item.name }}</a></td>
-      <td>⭐ {{ item.stars }}</td>
-      <td>🍴 {{ item.forks }}</td>
-      <td>{{ item.issues }}</td>
-      <td>
-        {% if item.status == "Active" %}
-          <span class="dot dot-green"></span> <strong>Active</strong>
-        {% elsif item.status == "Maintenance" %}
-          <span class="dot dot-orange"></span> <strong>Maintenance</strong>
-        {% else %}
-          <span class="dot dot-blue"></span> <strong>Stable</strong>
-        {% endif %}
-      </td>
-    </tr>
+      {{ table_row_logic }}
     {% endfor %}
   </tbody>
 </table>
@@ -519,32 +288,10 @@ nav_order: 2
 [Project Documentation](./v3c-immersive-platform/){: .btn-blue }
 
 <table class="health-table">
-  <thead>
-    <tr>
-      <th style="width: 40%;">Repository</th>
-      <th style="width: 15%;">Stars</th>
-      <th style="width: 15%;">Forks</th>
-      <th style="width: 15%;">Issues</th>
-      <th style="width: 15%;">Activity</th>
-    </tr>
-  </thead>
+  {{ table_header }}
   <tbody>
     {% for item in site.data.community_stats.projects["V3C Immersive"] %}
-    <tr>
-      <td><a href="{{ item.repo_url }}" style="font-weight: bold; color: #0366d6;">{{ item.name }}</a></td>
-      <td>⭐ {{ item.stars }}</td>
-      <td>🍴 {{ item.forks }}</td>
-      <td>{{ item.issues }}</td>
-      <td>
-        {% if item.status == "Active" %}
-          <span class="dot dot-green"></span> <strong>Active</strong>
-        {% elsif item.status == "Maintenance" %}
-          <span class="dot dot-orange"></span> <strong>Maintenance</strong>
-        {% else %}
-          <span class="dot dot-blue"></span> <strong>Stable</strong>
-        {% endif %}
-      </td>
-    </tr>
+      {{ table_row_logic }}
     {% endfor %}
   </tbody>
 </table>
@@ -557,32 +304,10 @@ nav_order: 2
 [Project Documentation](./xr-media-integration-in-5g/){: .btn-blue }
 
 <table class="health-table">
-  <thead>
-    <tr>
-      <th style="width: 40%;">Repository</th>
-      <th style="width: 15%;">Stars</th>
-      <th style="width: 15%;">Forks</th>
-      <th style="width: 15%;">Issues</th>
-      <th style="width: 15%;">Activity</th>
-    </tr>
-  </thead>
+  {{ table_header }}
   <tbody>
     {% for item in site.data.community_stats.projects["XR Media"] %}
-    <tr>
-      <td><a href="{{ item.repo_url }}" style="font-weight: bold; color: #0366d6;">{{ item.name }}</a></td>
-      <td>⭐ {{ item.stars }}</td>
-      <td>🍴 {{ item.forks }}</td>
-      <td>{{ item.issues }}</td>
-      <td>
-        {% if item.status == "Active" %}
-          <span class="dot dot-green"></span> <strong>Active</strong>
-        {% elsif item.status == "Maintenance" %}
-          <span class="dot dot-orange"></span> <strong>Maintenance</strong>
-        {% else %}
-          <span class="dot dot-blue"></span> <strong>Stable</strong>
-        {% endif %}
-      </td>
-    </tr>
+      {{ table_row_logic }}
     {% endfor %}
   </tbody>
 </table>
@@ -595,32 +320,10 @@ nav_order: 2
 [Documentation](./common-tools/index.html){: .btn-blue }
 
 <table class="health-table">
-  <thead>
-    <tr>
-      <th style="width: 40%;">Repository</th>
-      <th style="width: 15%;">Stars</th>
-      <th style="width: 15%;">Forks</th>
-      <th style="width: 15%;">Issues</th>
-      <th style="width: 15%;">Activity</th>
-    </tr>
-  </thead>
+  {{ table_header }}
   <tbody>
     {% for item in site.data.community_stats.projects["Auxiliary Tools"] %}
-    <tr>
-      <td><a href="{{ item.repo_url }}" style="font-weight: bold; color: #0366d6;">{{ item.name }}</a></td>
-      <td>⭐ {{ item.stars }}</td>
-      <td>🍴 {{ item.forks }}</td>
-      <td>{{ item.issues }}</td>
-      <td>
-        {% if item.status == "Active" %}
-          <span class="dot dot-green"></span> <strong>Active</strong>
-        {% elsif item.status == "Maintenance" %}
-          <span class="dot dot-orange"></span> <strong>Maintenance</strong>
-        {% else %}
-          <span class="dot dot-blue"></span> <strong>Stable</strong>
-        {% endif %}
-      </td>
-    </tr>
+      {{ table_row_logic }}
     {% endfor %}
   </tbody>
 </table>
