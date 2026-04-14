@@ -32,13 +32,17 @@ nav_order: 2
   .dot-green { background-color: #28a745; }
   .dot-orange { background-color: #fd7e14; }
   .dot-blue { background-color: #0366d6; }
+  
+  /* Adjusted for larger, consistent button sizing */
   .btn-blue {
     background-color: #0366d6;
     color: white !important;
-    padding: 5px 10px;
+    padding: 8px 16px;
     border-radius: 4px;
     text-decoration: none;
-    font-size: 0.8em;
+    font-size: 0.9em;
+    display: inline-block;
+    margin-bottom: 10px;
   }
   .stats-sub { font-size: 0.8em; color: #888; display: block; }
 </style>
@@ -67,7 +71,7 @@ nav_order: 2
 <img src="../assets/images/Banner_5GBCTVR.png"/> 
 
 ## Community Stats - 5G Broadcast: TV and Radio Hybrid Services
-[Project Documentation](./lte-based-5g-broadcast/){: .btn-blue }
+[Project Documentation](./lte-based-5g-broadcast/){: .btn .btn-blue }
 
 <table class="health-table">
   {{ table_header }}
@@ -94,7 +98,7 @@ nav_order: 2
 <img src="../assets/images/Banner_5GBCEA.png"/> 
 
 ## Community Stats - 5G Broadcast: Emergency Alerts
-[Project Documentation](./emergency-alerts/){: .btn-blue }
+[Project Documentation](./emergency-alerts/){: .btn .btn-blue }
 
 <table class="health-table">
   {{ table_header }}
@@ -123,7 +127,7 @@ nav_order: 2
 <img src="../assets/images/Banner_5GMS.png"/> 
 
 ## Community Stats - 5G Media Streaming
-[Project Documentation](./5g-media-streaming/){: .btn-blue }
+[Project Documentation](./5g-media-streaming/){: .btn .btn-blue }
 
 <table class="health-table">
   {{ table_header }}
@@ -150,7 +154,7 @@ nav_order: 2
 <img src="../assets/images/Banner_5MBS.png"/> 
 
 ## Community Stats - 5G Multicast Broadcast Services
-[Project Documentation](./5g-multicast-broadcast-services/){: .btn-blue }
+[Project Documentation](./5g-multicast-broadcast-services/){: .btn .btn-blue }
 
 <table class="health-table">
   {{ table_header }}
@@ -177,7 +181,7 @@ nav_order: 2
 <img src="../assets/images/Banner_5GC.png"/> 
 
 ## Community Stats - 5GC Service Consumers
-[Project Documentation](./5g-core-service-consumers/){: .btn-blue }
+[Project Documentation](./5g-core-service-consumers/){: .btn .btn-blue }
 
 <table class="health-table">
   {{ table_header }}
@@ -204,7 +208,7 @@ nav_order: 2
 <img src="../assets/images/Banner_6GTestbedAITraffic.png"/> 
 
 ## Community Stats - 6G Testbed and AI Traffic Characterization
-[Project Documentation](./6g-testbed-ai-traffic/){: .btn-blue }
+[Project Documentation](./6g-testbed-ai-traffic/){: .btn .btn-blue }
 
 <table class="health-table">
   {{ table_header }}
@@ -231,7 +235,7 @@ nav_order: 2
 <img src="../assets/images/Banner_AIML.png"/> 
 
 ## Community Stats - AI/ML in Mobile Media Services
-[Project Documentation](./ai-ml-evaluation-framework/){: .btn-blue }
+[Project Documentation](./ai-ml-evaluation-framework/){: .btn .btn-blue }
 
 <table class="health-table">
   {{ table_header }}
@@ -258,7 +262,7 @@ nav_order: 2
 <img src="../assets/images/Banner_B2D.png"/> 
 
 ## Community Stats - Beyond 2D Video Experiences
-[Project Documentation](./beyond-2d-evaluation-framework/){: .btn-blue }
+[Project Documentation](./beyond-2d-evaluation-framework/){: .btn .btn-blue }
 
 <table class="health-table">
   {{ table_header }}
@@ -285,7 +289,7 @@ nav_order: 2
 <img src="../assets/images/Banner_Avatar.png"/> 
 
 ## Community Stats - Conversational Avatar Real-Time Communications
-[Project Documentation](./conversational-avatar/){: .btn-blue }
+[Project Documentation](./conversational-avatar/){: .btn .btn-blue }
 
 <table class="health-table">
   {{ table_header }}
@@ -312,7 +316,7 @@ nav_order: 2
 <img src="../assets/images/Banner_DVBI.png"/> 
 
 ## Community Stats - DVB-I over 5G Systems
-[Project Documentation](./dvbi-over-5g/){: .btn-blue }
+[Project Documentation](./dvbi-over-5g/){: .btn .btn-blue }
 
 <table class="health-table">
   {{ table_header }}
@@ -339,7 +343,7 @@ nav_order: 2
 <img src="../assets/images/Banner_MD.png"/> 
 
 ## Community Stats - Multimedia Content Delivery Protocols
-[Project Documentation](./multimedia-content-delivery/){: .btn-blue }
+[Project Documentation](./multimedia-content-delivery/){: .btn .btn-blue }
 
 <table class="health-table">
   {{ table_header }}
@@ -366,7 +370,7 @@ nav_order: 2
 <img src="../assets/images/Banner_UEDC.png"/> 
 
 ## Community Stats - UE Data Collection, Reporting & Event Exposure
-[Project Documentation](./ue-data-collection-reporting-exposure/){: .btn-blue }
+[Project Documentation](./ue-data-collection-reporting-exposure/){: .btn .btn-blue }
 
 <table class="health-table">
   {{ table_header }}
@@ -393,7 +397,7 @@ nav_order: 2
 <img src="../assets/images/Banner_V3C_Platform.png"/> 
 
 ## Community Stats - V3C Immersive Platform
-[Project Documentation](./v3c-immersive-platform/){: .btn-blue }
+[Project Documentation](./v3c-immersive-platform/){: .btn .btn-blue }
 
 <table class="health-table">
   {{ table_header }}
@@ -420,7 +424,7 @@ nav_order: 2
 <img src="../assets/images/Banner_XR.png"/> 
 
 ## Community Stats - XR Media with MPEG-I Scene Description
-[Project Documentation](./xr-media-integration-in-5g/){: .btn-blue }
+[Project Documentation](./xr-media-integration-in-5g/){: .btn .btn-blue }
 
 <table class="health-table">
   {{ table_header }}
@@ -447,7 +451,7 @@ nav_order: 2
 <img src="../assets/images/Banner_CommonTools.png"/> 
 
 ## Community Stats - Auxiliary tools common to various projects
-[Documentation](./common-tools/index.html){: .btn-blue }
+[Documentation](./common-tools/index.html){: .btn .btn-blue }
 
 <table class="health-table">
   {{ table_header }}
