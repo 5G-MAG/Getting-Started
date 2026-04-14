@@ -14,7 +14,7 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
         with:
-          # Use your PAT here so the push triggers the Jekyll build
+          # Using the PAT here is the first half of the fix
           token: ${{ secrets.SYNC_TOKEN }}
 
       - name: Set up Python
@@ -24,22 +24,38 @@ jobs:
 
       - name: Fetch Data
         env:
-          # Use the PAT for API calls to avoid Organization rate limits
           GITHUB_TOKEN: ${{ secrets.SYNC_TOKEN }}
         run: |
           python - <<EOF
-          # ... (Your Python code remains exactly the same)
+          # ... (Your Python code goes here)
           EOF
 
       - name: Commit and Push
+        id: push_data
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git add _data/*.json
-          # Only push if data actually changed
+          
+          # Only push and set 'updated' to true if changes exist
           if ! git diff --cached --quiet; then
-            git commit -m "Update Data (including repo_url for separate linking)"
+            git commit -m "Update Data (Releases and PRs)"
             git push
+            echo "updated=true" >> $GITHUB_OUTPUT
           else
             echo "No changes detected."
+            echo "updated=false" >> $GITHUB_OUTPUT
           fi
+
+      - name: Trigger Deployment
+        # The 'mimic' step: explicitly triggers the Jekyll workflow
+        if: steps.push_data.outputs.updated == 'true'
+        uses: actions/github-script@v7
+        with:
+          github-token: ${{ secrets.SYNC_TOKEN }}
+          script: |
+            github.rest.repos.createDispatchEvent({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              event_type: 'rebuild_site'
+            })
