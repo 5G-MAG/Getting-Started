@@ -101,11 +101,10 @@ jobs:
                   # Persistence Logic
                   prev_total_views = existing_comm_data.get(repo_name, {}).get('total_views', 0)
                   prev_total_clones = existing_comm_data.get(repo_name, {}).get('total_clones', 0)
-                  
-                  # Get latest daily increment
                   new_day_views = views_data.get('views', [])[-1].get('count', 0) if (views_data and views_data.get('views')) else 0
                   new_day_clones = clones_data.get('clones', [])[-1].get('count', 0) if (clones_data and clones_data.get('clones')) else 0
 
+                  # Activity Status
                   last_push = repo_data.get('pushed_at', '').split('T')[0]
                   days_delta = (datetime.now() - datetime.strptime(last_push, "%Y-%m-%d")).days
                   status = "Active" if days_delta <= 30 else "Maintenance" if days_delta <= 90 else "Stable"
@@ -126,7 +125,6 @@ jobs:
                   # Releases
                   all_rels = get_json(f"https://api.github.com/repos/{repo}/releases") or []
                   f_tag = filtered_projects[p_name]['filter'].lower() if p_name in filtered_projects else ""
-                  
                   if f_tag:
                       target = next((r for r in all_rels if f_tag in r.get('tag_name', '').lower()), None)
                   else:
@@ -140,15 +138,17 @@ jobs:
                       "repo_url": f"https://github.com/{repo}"
                   })
                   
-                  # PRs
+                  # PRs (Restored Date Field)
                   prs = get_json(f"https://api.github.com/repos/{repo}/pulls?state=open") or []
                   for pr in prs:
+                      created_date = pr.get('created_at', '').split('T')[0]
                       pull_list.append({
                           "repo": repo_name,
                           "title": pr.get('title'),
                           "url": pr.get('html_url'),
                           "user": pr.get('user', {}).get('login'),
-                          "days_ago": (datetime.now() - datetime.strptime(pr.get('created_at', '').split('T')[0], "%Y-%m-%d")).days
+                          "date": created_date,
+                          "days_ago": (datetime.now() - datetime.strptime(created_date, "%Y-%m-%d")).days
                       })
 
               rel_out[p_name], pr_out[p_name], comm_out[p_name] = rel_list, pull_list, comm_list
@@ -166,5 +166,5 @@ jobs:
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git add _data/*.json
-          git commit -m "Dashboard Data Update: Persistence & 403 Safety" || exit 0
+          git commit -m "Dashboard Update: Restored PR Dates & Persistence" || exit 0
           git push
