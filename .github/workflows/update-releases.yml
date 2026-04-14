@@ -60,18 +60,14 @@ jobs:
               if token:
                   req.add_header('Authorization', f'token {token}')
               try:
-                  time.sleep(0.7) # Slightly increased for safety
+                  time.sleep(0.8)
                   with urllib.request.urlopen(req) as response:
                       return json.loads(response.read().decode())
-              except urllib.error.HTTPError as e:
-                  print(f"HTTP Error {e.code} for {url}")
-                  if e.code == 403: time.sleep(5)
-                  return None
               except Exception as e:
                   print(f"Error fetching {url}: {e}")
                   return None
 
-          # Load existing data
+          # Load existing data for persistence
           existing_comm_data = {}
           if os.path.exists('_data/community_stats.json'):
               try:
@@ -89,32 +85,31 @@ jobs:
           for p_name, repos in all_groups:
               rel_list, pull_list, comm_list = [], [], []
               for repo in repos:
-                  print(f"Processing {repo}...")
                   repo_data = get_json(f"https://api.github.com/repos/{repo}")
                   if not repo_data: continue
                   repo_name = repo.split('/')[-1]
                   
                   # Traffic
-                  views_data = get_json(f"https://api.github.com/repos/{repo}/traffic/views")
-                  clones_data = get_json(f"https://api.github.com/repos/{repo}/traffic/clones")
+                  v_api = get_json(f"https://api.github.com/repos/{repo}/traffic/views")
+                  c_api = get_json(f"https://api.github.com/repos/{repo}/traffic/clones")
                   
-                  c_v_14 = views_data.get('count', 0) if views_data else 0
-                  c_c_14 = clones_data.get('count', 0) if clones_data else 0
+                  # 14-day Window (This is what GitHub provides as 'count')
+                  c_v_14 = v_api.get('count', 0) if v_api else 0
+                  c_c_14 = c_api.get('count', 0) if c_api else 0
 
-                  # Smart Persistence Logic
+                  # Persistent Data Logic
                   prev = existing_comm_data.get(repo_name, {})
                   p_v_total = prev.get('total_views', 0)
                   p_c_total = prev.get('total_clones', 0)
                   
-                  # Daily increments
-                  d_v = views_data.get('views', [])[-1].get('count', 0) if (views_data and views_data.get('views')) else 0
-                  d_c = clones_data.get('clones', [])[-1].get('count', 0) if (clones_data and clones_data.get('clones')) else 0
+                  # Daily Increment (Last day's data)
+                  d_v = v_api.get('views', [])[-1].get('count', 0) if (v_api and v_api.get('views')) else 0
+                  d_c = c_api.get('clones', [])[-1].get('count', 0) if (c_api and c_api.get('clones')) else 0
 
-                  # Initialization: If total is 0 but 14d is high, use 14d as start point
+                  # INITIALIZATION FIX: Total must be >= 14-day window
                   final_v_total = max(c_v_14, p_v_total + d_v)
                   final_c_total = max(c_c_14, p_c_total + d_c)
 
-                  # Status
                   last_push = repo_data.get('pushed_at', '').split('T')[0]
                   days_delta = (datetime.now() - datetime.strptime(last_push, "%Y-%m-%d")).days
                   status = "Active" if days_delta <= 30 else "Maintenance" if days_delta <= 90 else "Stable"
@@ -132,7 +127,7 @@ jobs:
                       "repo_url": f"https://github.com/{repo}"
                   })
 
-                  # Releases & PRs (Restoring all fields)
+                  # Releases & PRs
                   all_rels = get_json(f"https://api.github.com/repos/{repo}/releases") or []
                   f_tag = filtered_projects[p_name]['filter'].lower() if p_name in filtered_projects else ""
                   target = next((r for r in all_rels if f_tag in r.get('tag_name', '').lower()), None) if f_tag else next((r for r in all_rels if not r.get('prerelease')), None) or (all_rels[0] if all_rels else None)
@@ -149,11 +144,8 @@ jobs:
                   for pr in prs:
                       created_date = pr.get('created_at', '').split('T')[0]
                       pull_list.append({
-                          "repo": repo_name,
-                          "title": pr.get('title'),
-                          "url": pr.get('html_url'),
-                          "user": pr.get('user', {}).get('login'),
-                          "date": created_date,
+                          "repo": repo_name, "title": pr.get('title'), "url": pr.get('html_url'),
+                          "user": pr.get('user', {}).get('login'), "date": created_date,
                           "days_ago": (datetime.now() - datetime.strptime(created_date, "%Y-%m-%d")).days
                       })
 
@@ -172,5 +164,5 @@ jobs:
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git add _data/*.json
-          git commit -m "Dashboard: Persistence Restart & Final Formatting" || exit 0
+          git commit -m "Dashboard: Persistence Fix for Clone/View Inversion" || exit 0
           git push
