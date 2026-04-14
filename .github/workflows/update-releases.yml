@@ -25,6 +25,7 @@ jobs:
         run: |
           python - <<EOF
           import urllib.request
+          import urllib.error
           import json
           import os
           from datetime import datetime
@@ -55,10 +56,14 @@ jobs:
               token = os.environ.get("GITHUB_TOKEN")
               req = urllib.request.Request(url)
               req.add_header('User-Agent', 'Github-Action-Bot')
-              if token: req.add_header('Authorization', f'Bearer {token}')
+              if token:
+                  req.add_header('Authorization', f'token {token}')
               try:
                   with urllib.request.urlopen(req) as response:
                       return json.loads(response.read().decode())
+              except urllib.error.HTTPError as e:
+                  print(f"HTTP Error {e.code} for {url}")
+                  return None
               except Exception as e:
                   print(f"Error fetching {url}: {e}")
                   return None
@@ -66,12 +71,14 @@ jobs:
           # Load existing data for persistence
           existing_comm_data = {}
           if os.path.exists('_data/community_stats.json'):
-              with open('_data/community_stats.json', 'r') as f:
-                  old_data = json.load(f)
-                  # Flatten existing data for easy lookup
-                  for group in old_data.get("projects", {}).values():
-                      for item in group:
-                          existing_comm_data[item['name']] = item
+              try:
+                  with open('_data/community_stats.json', 'r') as f:
+                      old_data = json.load(f)
+                      for group in old_data.get("projects", {}).values():
+                          for item in group:
+                              existing_comm_data[item['name']] = item
+              except Exception as e:
+                  print(f"Could not read existing data: {e}")
 
           rel_out, pr_out, comm_out = {}, {}, {}
           all_groups = list(standard_projects.items()) + [(k, v['repos']) for k, v in filtered_projects.items()]
@@ -84,21 +91,20 @@ jobs:
                   
                   repo_name = repo.split('/')[-1]
                   
-                  # Traffic API (Rolling 14 days)
-                  views_data = get_json(f"https://api.github.com/repos/{repo}/traffic/views") or {}
-                  clones_data = get_json(f"https://api.github.com/repos/{repo}/traffic/clones") or {}
+                  # Traffic API
+                  views_data = get_json(f"https://api.github.com/repos/{repo}/traffic/views")
+                  clones_data = get_json(f"https://api.github.com/repos/{repo}/traffic/clones")
                   
-                  current_views = views_data.get('count', 0)
-                  current_clones = clones_data.get('count', 0)
+                  current_views = views_data.get('count', 0) if views_data else 0
+                  current_clones = clones_data.get('count', 0) if clones_data else 0
 
-                  # Persistence Logic: Get previous totals or start at 0
+                  # Persistence Logic
                   prev_total_views = existing_comm_data.get(repo_name, {}).get('total_views', 0)
                   prev_total_clones = existing_comm_data.get(repo_name, {}).get('total_clones', 0)
                   
-                  # We only add the *newest* daily data if we were tracking daily, 
-                  # but since we run once daily, we add the latest daily count from the traffic list.
-                  new_day_views = views_data.get('views', [])[-1].get('count', 0) if views_data.get('views') else 0
-                  new_day_clones = clones_data.get('clones', [])[-1].get('count', 0) if clones_data.get('clones') else 0
+                  # Get latest daily increment
+                  new_day_views = views_data.get('views', [])[-1].get('count', 0) if (views_data and views_data.get('views')) else 0
+                  new_day_clones = clones_data.get('clones', [])[-1].get('count', 0) if (clones_data and clones_data.get('clones')) else 0
 
                   last_push = repo_data.get('pushed_at', '').split('T')[0]
                   days_delta = (datetime.now() - datetime.strptime(last_push, "%Y-%m-%d")).days
@@ -117,18 +123,37 @@ jobs:
                       "repo_url": f"https://github.com/{repo}"
                   })
 
-                  # Releases and Pull Requests logic (Unchanged)
+                  # Releases
                   all_rels = get_json(f"https://api.github.com/repos/{repo}/releases") or []
-                  target = next((r for r in all_rels if (filtered_projects[p_name]['filter'] if p_name in filtered_projects else "") in r.get('tag_name', '').lower()), None) if p_name in filtered_projects else next((r for r in all_rels if not r.get('prerelease')), None) or (all_rels[0] if all_rels else None)
-                  rel_list.append({"short_name": repo_name, "tag": target.get('tag_name') if target else "No Release", "date": target.get('published_at', '').split('T')[0] if target else "-", "url": target.get('html_url') if target else f"https://github.com/{repo}/releases", "repo_url": f"https://github.com/{repo}"})
+                  f_tag = filtered_projects[p_name]['filter'].lower() if p_name in filtered_projects else ""
                   
+                  if f_tag:
+                      target = next((r for r in all_rels if f_tag in r.get('tag_name', '').lower()), None)
+                  else:
+                      target = next((r for r in all_rels if not r.get('prerelease')), None) or (all_rels[0] if all_rels else None)
+                  
+                  rel_list.append({
+                      "short_name": repo_name,
+                      "tag": target.get('tag_name') if target else "No Release",
+                      "date": target.get('published_at', '').split('T')[0] if target else "-",
+                      "url": target.get('html_url') if target else f"https://github.com/{repo}/releases",
+                      "repo_url": f"https://github.com/{repo}"
+                  })
+                  
+                  # PRs
                   prs = get_json(f"https://api.github.com/repos/{repo}/pulls?state=open") or []
                   for pr in prs:
-                      pull_list.append({"repo": repo_name, "title": pr.get('title'), "url": pr.get('html_url'), "user": pr.get('user', {}).get('login'), "days_ago": (datetime.now() - datetime.strptime(pr.get('created_at', '').split('T')[0], "%Y-%m-%d")).days})
+                      pull_list.append({
+                          "repo": repo_name,
+                          "title": pr.get('title'),
+                          "url": pr.get('html_url'),
+                          "user": pr.get('user', {}).get('login'),
+                          "days_ago": (datetime.now() - datetime.strptime(pr.get('created_at', '').split('T')[0], "%Y-%m-%d")).days
+                      })
 
               rel_out[p_name], pr_out[p_name], comm_out[p_name] = rel_list, pull_list, comm_list
 
-          # Save Files
+          # Save Output
           if not os.path.exists('_data'): os.makedirs('_data')
           timestamp = datetime.now().strftime("%Y-%m-%d %H:%M")
           for name, data in [('releases', rel_out), ('pull_requests', pr_out), ('community_stats', comm_out)]:
@@ -141,5 +166,5 @@ jobs:
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git add _data/*.json
-          git commit -m "Dashboard Data Update: Persistence Enabled" || exit 0
+          git commit -m "Dashboard Data Update: Persistence & 403 Safety" || exit 0
           git push
