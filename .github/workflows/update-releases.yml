@@ -2,7 +2,7 @@ name: Sync Repo Data
 
 on:
   schedule:
-    - cron: '0 0 * * *' # Runs every night at midnight
+    - cron: '0 0 * * *'
   workflow_dispatch: 
 
 jobs:
@@ -13,9 +13,6 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
-        with:
-          # Using the PAT here is the first half of the fix
-          token: ${{ secrets.SYNC_TOKEN }}
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -27,35 +24,122 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.SYNC_TOKEN }}
         run: |
           python - <<EOF
-          # ... (Your Python code goes here)
+          import urllib.request
+          import json
+          import os
+          from datetime import datetime
+
+          # 1. Configuration: Repository Groups
+          standard_projects = {
+              "5G Media Streaming": ["5G-MAG/rt-5gms-application-provider", "5G-MAG/rt-5gms-application", "5G-MAG/rt-5gms-application-function", "5G-MAG/rt-5gms-application-server", "5G-MAG/rt-5gms-media-stream-handler", "5G-MAG/rt-5gms-media-session-handler", "5G-MAG/rt-5gms-common-android-library", "5G-MAG/rt-5gms-examples"],
+              "5G Core Service Consumers": ["5G-MAG/rt-5gc-service-consumers"],
+              "UE Data Collection": ["5G-MAG/rt-data-collection-application-function"],
+              "5G Broadcast TV Radio": ["5G-MAG/rt-mbms-tx-for-qrd-and-crd", "5G-MAG/rt-mbms-tx", "5G-MAG/rt-mbms-mw-android", "5G-MAG/rt-mbms-mw", "5G-MAG/rt-mbms-modem", "5G-MAG/rt-wui", "5G-MAG/rt-mbms-examples"],
+              "XR Media": ["5G-MAG/rt-xr-unity-player", "5G-MAG/rt-xr-content", "5G-MAG/rt-xr-blender-exporter"],
+              "V3C Immersive": ["5G-MAG/rt-v3c-unity-player", "5G-MAG/rt-v3c-decoder-plugin", "5G-MAG/rt-v3c-content"],
+              "Beyond 2D": ["5G-MAG/rt-beyond2d-evaluation-framework"],
+              "AI ML": ["5G-MAG/rt-ai-ml-evaluation-framework"],
+              "Multimedia Protocols": ["5G-MAG/rt-libflute"],
+              "Auxiliary Tools": ["5G-MAG/rt-common-shared"],
+              "Conversational Avatar": ["5G-MAG/rt-avatar-content", "5G-MAG/rt-avatar-call", "5G-MAG/rt-avatar-unity-tracker"],
+              "6G Testbed": ["5G-MAG/6G-Testbed"],
+              "DVB-I over 5G": ["5G-MAG/rt-5gms-application"]
+          }
+
+          filtered_projects = {
+              "5G Broadcast Emergency Alerts": {"repos": ["5G-MAG/rt-mbms-tx-for-qrd-and-crd"], "filter": "-ea-"},
+              "5G Multicast Broadcast": {"repos": ["5G-MAG/rt-mbs-function","5G-MAG/rt-mbs-transport-function", "5G-MAG/open5gs", "5G-MAG/rt-srsRAN_Project", "5G-MAG/rt-mbs-examples"], "filter": "5mbs"}
+          }
+
+          def get_json(url):
+              token = os.environ.get("GITHUB_TOKEN")
+              req = urllib.request.Request(url)
+              req.add_header('User-Agent', 'Github-Action-Bot')
+              if token:
+                  req.add_header('Authorization', f'Bearer {token}')
+              try:
+                  with urllib.request.urlopen(req) as response:
+                      return json.loads(response.read().decode())
+              except Exception as e:
+                  print(f"Error fetching {url}: {e}")
+                  return None
+
+          rel_out, pr_out, comm_out = {}, {}, {}
+          all_groups = list(standard_projects.items()) + [(k, v['repos']) for k, v in filtered_projects.items()]
+
+          for p_name, repos in all_groups:
+              rel_list, pull_list, comm_list = [], [], []
+              for repo in repos:
+                  repo_data = get_json(f"https://api.github.com/repos/{repo}")
+                  if not repo_data: continue
+
+                  # --- 1. Community Stats (Health & Status) ---
+                  last_push = repo_data.get('pushed_at', '').split('T')[0]
+                  days_delta = (datetime.now() - datetime.strptime(last_push, "%Y-%m-%d")).days
+                  
+                  if days_delta <= 30:
+                      status = "Active"
+                  elif days_delta <= 90:
+                      status = "Maintenance"
+                  else:
+                      status = "Stable"
+
+                  comm_list.append({
+                      "name": repo.split('/')[-1],
+                      "stars": repo_data.get('stargazers_count', 0),
+                      "forks": repo_data.get('forks_count', 0),
+                      "issues": repo_data.get('open_issues_count', 0),
+                      "status": status,
+                      "repo_url": f"https://github.com/{repo}"
+                  })
+
+                  # --- 2. Software Releases ---
+                  all_rels = get_json(f"https://api.github.com/repos/{repo}/releases") or []
+                  if p_name in filtered_projects:
+                      f_val = filtered_projects[p_name]["filter"]
+                      target = next((r for r in all_rels if f_val in r.get('tag_name', '').lower()), None)
+                  else:
+                      target = next((r for r in all_rels if not r.get('prerelease')), None) or (all_rels[0] if all_rels else None)
+                  
+                  rel_list.append({
+                      "short_name": repo.split('/')[-1],
+                      "tag": target.get('tag_name') if target else "No Release",
+                      "date": target.get('published_at', '').split('T')[0] if target else "-",
+                      "url": target.get('html_url') if target else f"https://github.com/{repo}/releases",
+                      "repo_url": f"https://github.com/{repo}"
+                  })
+
+                  # --- 3. Pull Requests ---
+                  prs = get_json(f"https://api.github.com/repos/{repo}/pulls?state=open") or []
+                  for pr in prs:
+                      pull_list.append({
+                          "repo": repo.split('/')[-1],
+                          "title": pr.get('title'),
+                          "url": pr.get('html_url'),
+                          "user": pr.get('user', {}).get('login'),
+                          "days_ago": (datetime.now() - datetime.strptime(pr.get('created_at', '').split('T')[0], "%Y-%m-%d")).days
+                      })
+
+              rel_out[p_name], pr_out[p_name], comm_out[p_name] = rel_list, pull_list, comm_list
+
+          # 4. Save Output Files
+          if not os.path.exists('_data'): os.makedirs('_data')
+          timestamp = datetime.now().strftime("%Y-%m-%d %H:%M")
+          files_to_save = [
+              ('releases', rel_out), 
+              ('pull_requests', pr_out), 
+              ('community_stats', comm_out)
+          ]
+          
+          for filename, data in files_to_save:
+              with open(f'_data/{filename}.json', 'w') as f:
+                  json.dump({"last_updated": timestamp, "projects": data}, f, indent=2)
           EOF
 
       - name: Commit and Push
-        id: push_data
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git add _data/*.json
-          
-          # Only push and set 'updated' to true if changes exist
-          if ! git diff --cached --quiet; then
-            git commit -m "Update Data (Releases and PRs)"
-            git push
-            echo "updated=true" >> $GITHUB_OUTPUT
-          else
-            echo "No changes detected."
-            echo "updated=false" >> $GITHUB_OUTPUT
-          fi
-
-      - name: Trigger Deployment
-        # The 'mimic' step: explicitly triggers the Jekyll workflow
-        if: steps.push_data.outputs.updated == 'true'
-        uses: actions/github-script@v7
-        with:
-          github-token: ${{ secrets.SYNC_TOKEN }}
-          script: |
-            github.rest.repos.createDispatchEvent({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              event_type: 'rebuild_site'
-            })
+          git commit -m "Dashboard Data Update: Status Logic & Auth Fix" || exit 0
+          git push
