@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-04-04 00:42",
+  "last_updated": "2026-04-14 22:11",
   "projects": {
     "5G Media Streaming": [
       {
@@ -262,11 +262,39 @@
     ],
     "5G Multicast Broadcast": [
       {
+        "short_name": "rt-mbs-function",
+        "tag": "No Release",
+        "date": "-",
+        "url": "https://github.com/5G-MAG/rt-mbs-function/releases",
+        "repo_url": "https://github.com/5G-MAG/rt-mbs-function"
+      },
+      {
+        "short_name": "rt-mbs-transport-function",
+        "tag": "No Release",
+        "date": "-",
+        "url": "https://github.com/5G-MAG/rt-mbs-transport-function/releases",
+        "repo_url": "https://github.com/5G-MAG/rt-mbs-transport-function"
+      },
+      {
         "short_name": "open5gs",
         "tag": "v1.0.0-5mbs-v2.7.2-o5gs",
         "date": "2025-10-24",
         "url": "https://github.com/5G-MAG/open5gs/releases/tag/v1.0.0-5mbs-v2.7.2-o5gs",
         "repo_url": "https://github.com/5G-MAG/open5gs"
+      },
+      {
+        "short_name": "rt-srsRAN_Project",
+        "tag": "No Release",
+        "date": "-",
+        "url": "https://github.com/5G-MAG/rt-srsRAN_Project/releases",
+        "repo_url": "https://github.com/5G-MAG/rt-srsRAN_Project"
+      },
+      {
+        "short_name": "rt-mbs-examples",
+        "tag": "No Release",
+        "date": "-",
+        "url": "https://github.com/5G-MAG/rt-mbs-examples/releases",
+        "repo_url": "https://github.com/5G-MAG/rt-mbs-examples"
       }
     ]
   }
