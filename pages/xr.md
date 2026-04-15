@@ -1,6 +1,6 @@
 ---
 layout: default
-parent: Build an application
+parent: Build an Application
 title: XR & Avatar
 nav_order: 3
 has_children: true
