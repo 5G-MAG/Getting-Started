@@ -2,7 +2,7 @@
 layout: default
 title: Testbeds
 has_children: true
-nav_order: 6
+nav_order: 3
 ---
 
 <img src="../assets/images/Banner_ReferenceTools.png" /> 
