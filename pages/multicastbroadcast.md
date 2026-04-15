@@ -1,6 +1,6 @@
 ---
 layout: default
-parent: Application Areas
+parent: Build an application
 title: Multicast Broadcast Services
 nav_order: 2
 has_children: true
