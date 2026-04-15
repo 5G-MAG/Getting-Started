@@ -1,7 +1,8 @@
 ---
 layout: default
+parent: Community Dashboard
 title: Open Pull Requests
-nav_order: 4
+nav_order: 1
 ---
 
 <style>

@@ -1,13 +1,13 @@
 ---
 layout: default
-title: Start here, build an application
+title: Build an Application
 nav_order: 2
 has_children: true
 ---
 
 <img src="../assets/images/Banner_ReferenceTools.png" /> 
 
-# Start here, build an application
+# Build an application
 
 ### I'd like to setup my application in the domain of... (please select below).
 
@@ -31,7 +31,7 @@ has_children: true
   <tr>
     <td markdown="span" align="center" width="33%">[eXtended Reality (XR): 3D Scenes and Avatar Communications](./xr.html){: .btn .btn-blue }</td>
     <td markdown="span" align="center" width="33%">[Volumetric Video and Beyond 2D Video Experiences](./volumetric.html){: .btn .btn-blue }</td>
-    <td markdown="span" align="center" width="33%">[Test-beds and Evaluation Frameworks](./testbeds.html){: .btn .btn-blue }</td>
+    <td markdown="span" align="center" width="33%">[Testbeds and Evaluation Frameworks](./testbeds.html){: .btn .btn-blue }</td>
   </tr>
     <td><br></td>
   <tr>

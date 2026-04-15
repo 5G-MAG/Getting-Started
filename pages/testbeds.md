@@ -1,14 +1,13 @@
 ---
 layout: default
-parent: Application Areas
-title: Testbeds & Evaluation
-nav_order: 5
+title: Testbeds
 has_children: true
+nav_order: 4
 ---
 
 <img src="../assets/images/Banner_ReferenceTools.png" /> 
 
-# Test-beds and Evaluation Frameworks
+# Testbeds and Evaluation Frameworks
 
 <table>
   <tr>

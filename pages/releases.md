@@ -1,7 +1,8 @@
 ---
 layout: default
+parent: Community Dashboard
 title: Software Releases
-nav_order: 3
+nav_order: 0
 ---
 
 <style>

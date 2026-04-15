@@ -1,6 +1,6 @@
 ---
 layout: default
-parent: Application Areas
+parent: Build an Application
 title: Volumetric Video
 nav_order: 4
 has_children: true

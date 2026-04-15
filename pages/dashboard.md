@@ -1,7 +1,8 @@
 ---
 layout: default
 title: Community Dashboard
-nav_order: 2
+nav_order: 1
+has_children: true
 ---
 
 <style>
@@ -45,6 +46,25 @@ nav_order: 2
     margin-bottom: 10px;
   }
   .stats-sub { font-size: 0.8em; color: #888; display: block; }
+
+  /* Summary Box Styles */
+  .summary-container {
+    display: flex;
+    gap: 20px;
+    margin: 20px 0;
+    flex-wrap: wrap;
+  }
+  .summary-card {
+    background: #f8f9fa;
+    border: 1px solid #e1e4e8;
+    border-radius: 6px;
+    padding: 15px;
+    flex: 1;
+    min-width: 150px;
+    text-align: center;
+  }
+  .summary-card h4 { margin: 0; color: #586069; font-size: 0.85em; text-transform: uppercase; }
+  .summary-value { display: block; font-size: 1.5em; font-weight: bold; color: #0366d6; margin-top: 5px; }
 </style>
 
 <img src="../assets/images/Banner_ReferenceTools.png" alt="Reference Tools Banner" /> 
@@ -52,6 +72,39 @@ nav_order: 2
 # Reference Tools Projects: Community Dashboard
 
 > **Last Synced:** {{ site.data.community_stats.last_updated }}
+
+{% assign total_stars = 0 %}
+{% assign total_forks = 0 %}
+{% assign total_views = 0 %}
+{% assign total_clones = 0 %}
+
+{% for category in site.data.community_stats.projects %}
+  {% for item in category[1] %}
+    {% assign total_stars = total_stars | plus: item.stars %}
+    {% assign total_forks = total_forks | plus: item.forks %}
+    {% assign total_views = total_views | plus: item.total_views %}
+    {% assign total_clones = total_clones | plus: item.total_clones %}
+  {% endfor %}
+{% endfor %}
+
+<div class="summary-container">
+  <div class="summary-card">
+    <h4>Total Stars</h4>
+    <span class="summary-value">⭐ {{ total_stars }}</span>
+  </div>
+  <div class="summary-card">
+    <h4>Total Forks</h4>
+    <span class="summary-value">🍴 {{ total_forks }}</span>
+  </div>
+  <div class="summary-card">
+    <h4>Total Views</h4>
+    <span class="summary-value">👀 {{ total_views }}</span>
+  </div>
+  <div class="summary-card">
+    <h4>Total Clones</h4>
+    <span class="summary-value">📥 {{ total_clones }}</span>
+  </div>
+</div>
 
 {% capture table_header %}
   <thead>
