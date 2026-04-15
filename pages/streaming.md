@@ -1,6 +1,6 @@
 ---
 layout: default
-parent: Build an application
+parent: Build an Application
 title: Streaming & Media Delivery
 nav_order: 0
 has_children: true
