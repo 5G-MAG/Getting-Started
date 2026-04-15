@@ -1,6 +1,6 @@
 ---
 layout: default
-parent: Application Areas
+parent: Build an application
 title: 5G Broadacast
 nav_order: 1
 has_children: true
