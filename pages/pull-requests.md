@@ -1,6 +1,6 @@
 ---
 layout: default
-patent: Community Dashboard
+parent: Community Dashboard
 title: Open Pull Requests
 nav_order: 1
 ---
