@@ -1,7 +1,7 @@
 ---
 layout: default
-title: Open Pull Requests
 patent: Community Dashboard
+title: Open Pull Requests
 nav_order: 0
 ---
 
