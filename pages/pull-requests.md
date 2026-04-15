@@ -1,7 +1,8 @@
 ---
 layout: default
 title: Open Pull Requests
-nav_order: 4
+patent: Community Dashboard
+nav_order: 0
 ---
 
 <style>
