@@ -1,6 +1,6 @@
 ---
 layout: default
-patent: Community Dashboard
+parent: Community Dashboard
 title: Software Releases
 nav_order: 0
 ---
