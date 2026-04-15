@@ -1,7 +1,7 @@
 ---
 layout: default
-title: Software Releases
 patent: Community Dashboard
+title: Software Releases
 nav_order: 0
 ---
 
