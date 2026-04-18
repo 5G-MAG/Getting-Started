@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-04-17 03:20",
+  "last_updated": "2026-04-18 02:52",
   "projects": {
     "5G Media Streaming": [
       {
@@ -30,7 +30,7 @@
         "name": "rt-5gms-application-function",
         "stars": 16,
         "forks": 7,
-        "issues": 25,
+        "issues": 26,
         "views_14d": 0,
         "clones_14d": 0,
         "total_views": 225,
@@ -151,140 +151,144 @@
         "total_clones": 24,
         "status": "Stable",
         "repo_url": "https://github.com/5G-MAG/rt-mbms-tx"
-      },
+      }
+    ],
+    "XR Media": [],
+    "V3C Immersive": [],
+    "Beyond 2D": [],
+    "AI ML": [],
+    "Multimedia Protocols": [
       {
-        "name": "rt-mbms-mw-android",
-        "stars": 5,
-        "forks": 4,
-        "issues": 3,
+        "name": "rt-libflute",
+        "stars": 23,
+        "forks": 11,
+        "issues": 8,
         "views_14d": 0,
         "clones_14d": 0,
-        "total_views": 23,
-        "total_clones": 12,
-        "status": "Stable",
-        "repo_url": "https://github.com/5G-MAG/rt-mbms-mw-android"
-      },
+        "total_views": 0,
+        "total_clones": 0,
+        "status": "Active",
+        "repo_url": "https://github.com/5G-MAG/rt-libflute"
+      }
+    ],
+    "Auxiliary Tools": [
       {
-        "name": "rt-mbms-mw",
-        "stars": 8,
-        "forks": 10,
-        "issues": 17,
-        "views_14d": 0,
-        "clones_14d": 0,
-        "total_views": 31,
-        "total_clones": 20,
-        "status": "Stable",
-        "repo_url": "https://github.com/5G-MAG/rt-mbms-mw"
-      },
-      {
-        "name": "rt-mbms-modem",
-        "stars": 24,
-        "forks": 14,
-        "issues": 20,
-        "views_14d": 0,
-        "clones_14d": 0,
-        "total_views": 60,
-        "total_clones": 29,
-        "status": "Stable",
-        "repo_url": "https://github.com/5G-MAG/rt-mbms-modem"
-      },
-      {
-        "name": "rt-wui",
-        "stars": 6,
+        "name": "rt-common-shared",
+        "stars": 3,
         "forks": 8,
-        "issues": 1,
+        "issues": 6,
         "views_14d": 0,
         "clones_14d": 0,
-        "total_views": 8,
-        "total_clones": 22,
+        "total_views": 0,
+        "total_clones": 0,
+        "status": "Maintenance",
+        "repo_url": "https://github.com/5G-MAG/rt-common-shared"
+      }
+    ],
+    "Conversational Avatar": [],
+    "6G Testbed": [
+      {
+        "name": "6G-Testbed",
+        "stars": 4,
+        "forks": 2,
+        "issues": 0,
+        "views_14d": 0,
+        "clones_14d": 0,
+        "total_views": 0,
+        "total_clones": 0,
+        "status": "Active",
+        "repo_url": "https://github.com/5G-MAG/6G-Testbed"
+      }
+    ],
+    "DVB-I over 5G": [
+      {
+        "name": "rt-5gms-application",
+        "stars": 4,
+        "forks": 4,
+        "issues": 5,
+        "views_14d": 0,
+        "clones_14d": 0,
+        "total_views": 46,
+        "total_clones": 16,
+        "status": "Active",
+        "repo_url": "https://github.com/5G-MAG/rt-5gms-application"
+      }
+    ],
+    "5G Broadcast Emergency Alerts": [
+      {
+        "name": "rt-mbms-tx-for-qrd-and-crd",
+        "stars": 11,
+        "forks": 6,
+        "issues": 19,
+        "views_14d": 0,
+        "clones_14d": 0,
+        "total_views": 55,
+        "total_clones": 9,
         "status": "Stable",
-        "repo_url": "https://github.com/5G-MAG/rt-wui"
+        "repo_url": "https://github.com/5G-MAG/rt-mbms-tx-for-qrd-and-crd"
+      }
+    ],
+    "5G Multicast Broadcast": [
+      {
+        "name": "rt-mbs-function",
+        "stars": 1,
+        "forks": 2,
+        "issues": 10,
+        "views_14d": 0,
+        "clones_14d": 0,
+        "total_views": 0,
+        "total_clones": 0,
+        "status": "Active",
+        "repo_url": "https://github.com/5G-MAG/rt-mbs-function"
       },
       {
-        "name": "rt-mbms-examples",
-        "stars": 4,
+        "name": "rt-mbs-transport-function",
+        "stars": 1,
         "forks": 3,
         "issues": 3,
         "views_14d": 0,
         "clones_14d": 0,
-        "total_views": 11,
-        "total_clones": 18,
-        "status": "Stable",
-        "repo_url": "https://github.com/5G-MAG/rt-mbms-examples"
-      }
-    ],
-    "XR Media": [
-      {
-        "name": "rt-xr-unity-player",
-        "stars": 3,
-        "forks": 1,
-        "issues": 17,
-        "views_14d": 0,
-        "clones_14d": 0,
-        "total_views": 27,
-        "total_clones": 16,
-        "status": "Stable",
-        "repo_url": "https://github.com/5G-MAG/rt-xr-unity-player"
+        "total_views": 0,
+        "total_clones": 0,
+        "status": "Active",
+        "repo_url": "https://github.com/5G-MAG/rt-mbs-transport-function"
       },
       {
-        "name": "rt-xr-content",
+        "name": "open5gs",
+        "stars": 5,
+        "forks": 5,
+        "issues": 18,
+        "views_14d": 0,
+        "clones_14d": 0,
+        "total_views": 0,
+        "total_clones": 0,
+        "status": "Maintenance",
+        "repo_url": "https://github.com/5G-MAG/open5gs"
+      },
+      {
+        "name": "rt-srsRAN_Project",
         "stars": 4,
         "forks": 2,
+        "issues": 10,
+        "views_14d": 0,
+        "clones_14d": 0,
+        "total_views": 0,
+        "total_clones": 0,
+        "status": "Stable",
+        "repo_url": "https://github.com/5G-MAG/rt-srsRAN_Project"
+      },
+      {
+        "name": "rt-mbs-examples",
+        "stars": 8,
+        "forks": 6,
         "issues": 5,
         "views_14d": 0,
         "clones_14d": 0,
-        "total_views": 21,
-        "total_clones": 26,
-        "status": "Stable",
-        "repo_url": "https://github.com/5G-MAG/rt-xr-content"
-      },
-      {
-        "name": "rt-xr-blender-exporter",
-        "stars": 2,
-        "forks": 1,
-        "issues": 5,
-        "views_14d": 0,
-        "clones_14d": 0,
-        "total_views": 14,
-        "total_clones": 17,
-        "status": "Stable",
-        "repo_url": "https://github.com/5G-MAG/rt-xr-blender-exporter"
+        "total_views": 0,
+        "total_clones": 0,
+        "status": "Maintenance",
+        "repo_url": "https://github.com/5G-MAG/rt-mbs-examples"
       }
-    ],
-    "V3C Immersive": [
-      {
-        "name": "rt-v3c-unity-player",
-        "stars": 4,
-        "forks": 0,
-        "issues": 0,
-        "views_14d": 0,
-        "clones_14d": 0,
-        "total_views": 26,
-        "total_clones": 20,
-        "status": "Stable",
-        "repo_url": "https://github.com/5G-MAG/rt-v3c-unity-player"
-      },
-      {
-        "name": "rt-v3c-decoder-plugin",
-        "stars": 3,
-        "forks": 0,
-        "issues": 1,
-        "views_14d": 0,
-        "clones_14d": 0,
-        "total_views": 33,
-        "total_clones": 16,
-        "status": "Stable",
-        "repo_url": "https://github.com/5G-MAG/rt-v3c-decoder-plugin"
-      }
-    ],
-    "Beyond 2D": [],
-    "AI ML": [],
-    "Multimedia Protocols": [],
-    "Auxiliary Tools": [],
-    "Conversational Avatar": [],
-    "6G Testbed": [],
-    "DVB-I over 5G": [],
-    "5G Broadcast Emergency Alerts": [],
-    "5G Multicast Broadcast": []
+    ]
   }
 }
