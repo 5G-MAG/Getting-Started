@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-04-20 00:55",
+  "last_updated": "2026-04-20 15:32",
   "projects": {
     "5G Media Streaming": [
       {
@@ -386,7 +386,7 @@
     "6G Testbed": [
       {
         "name": "6G-Testbed",
-        "stars": 5,
+        "stars": 6,
         "forks": 2,
         "issues": 0,
         "views_14d": 0,
