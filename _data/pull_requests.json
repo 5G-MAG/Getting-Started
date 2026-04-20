@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-04-19 03:26",
+  "last_updated": "2026-04-20 03:27",
   "projects": {
     "5G Media Streaming": [
       {
@@ -8,7 +8,7 @@
         "url": "https://github.com/5G-MAG/rt-5gms-application-provider/pull/104",
         "user": "ErikGaida",
         "date": "2026-03-17",
-        "days_ago": 33
+        "days_ago": 34
       },
       {
         "repo": "rt-5gms-application-provider",
@@ -16,7 +16,7 @@
         "url": "https://github.com/5G-MAG/rt-5gms-application-provider/pull/101",
         "user": "ErikGaida",
         "date": "2026-03-13",
-        "days_ago": 37
+        "days_ago": 38
       },
       {
         "repo": "rt-5gms-application-provider",
@@ -24,69 +24,12 @@
         "url": "https://github.com/5G-MAG/rt-5gms-application-provider/pull/97",
         "user": "dsilhavy",
         "date": "2026-02-23",
-        "days_ago": 55
-      },
-      {
-        "repo": "rt-5gms-application",
-        "title": "Feature MWC Demo",
-        "url": "https://github.com/5G-MAG/rt-5gms-application/pull/49",
-        "user": "dsilhavy",
-        "date": "2026-02-25",
-        "days_ago": 53
-      },
-      {
-        "repo": "rt-5gms-application-server",
-        "title": "add cfg and script for CMCD",
-        "url": "https://github.com/5G-MAG/rt-5gms-application-server/pull/108",
-        "user": "shilinding",
-        "date": "2026-02-20",
-        "days_ago": 58
-      },
-      {
-        "repo": "rt-5gms-media-stream-handler",
-        "title": "Dev add qoe metrics",
-        "url": "https://github.com/5G-MAG/rt-5gms-media-stream-handler/pull/82",
-        "user": "Neolomoxem",
-        "date": "2026-03-30",
-        "days_ago": 20
-      },
-      {
-        "repo": "rt-5gms-common-android-library",
-        "title": "Dev add qoe metrics",
-        "url": "https://github.com/5G-MAG/rt-5gms-common-android-library/pull/35",
-        "user": "Neolomoxem",
-        "date": "2026-03-30",
-        "days_ago": 20
+        "days_ago": 56
       }
     ],
     "5G Core Service Consumers": [],
     "UE Data Collection": [],
-    "5G Broadcast TV Radio": [
-      {
-        "repo": "rt-mbms-tx-for-qrd-and-crd",
-        "title": "WiP: Docker support",
-        "url": "https://github.com/5G-MAG/rt-mbms-tx-for-qrd-and-crd/pull/9",
-        "user": "dsilhavy",
-        "date": "2024-11-20",
-        "days_ago": 515
-      },
-      {
-        "repo": "rt-mbms-mw",
-        "title": "ROUTE support using GPAC",
-        "url": "https://github.com/5G-MAG/rt-mbms-mw/pull/18",
-        "user": "rbouqueau",
-        "date": "2021-11-30",
-        "days_ago": 1601
-      },
-      {
-        "repo": "rt-mbms-mw",
-        "title": "readme: propose to install in /usr/local instead of /usr (which is a \u2026",
-        "url": "https://github.com/5G-MAG/rt-mbms-mw/pull/15",
-        "user": "rbouqueau",
-        "date": "2021-10-23",
-        "days_ago": 1639
-      }
-    ],
+    "5G Broadcast TV Radio": [],
     "XR Media": [],
     "V3C Immersive": [],
     "Beyond 2D": [],
