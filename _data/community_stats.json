@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-04-19 00:55",
+  "last_updated": "2026-04-20 00:55",
   "projects": {
     "5G Media Streaming": [
       {
@@ -23,7 +23,7 @@
         "clones_14d": 0,
         "total_views": 47,
         "total_clones": 18,
-        "status": "Active",
+        "status": "Maintenance",
         "repo_url": "https://github.com/5G-MAG/rt-5gms-application"
       },
       {
@@ -35,7 +35,7 @@
         "clones_14d": 0,
         "total_views": 246,
         "total_clones": 107,
-        "status": "Active",
+        "status": "Maintenance",
         "repo_url": "https://github.com/5G-MAG/rt-5gms-application-function"
       },
       {
@@ -407,7 +407,7 @@
         "clones_14d": 0,
         "total_views": 47,
         "total_clones": 18,
-        "status": "Active",
+        "status": "Maintenance",
         "repo_url": "https://github.com/5G-MAG/rt-5gms-application"
       }
     ],
@@ -435,7 +435,7 @@
         "clones_14d": 0,
         "total_views": 157,
         "total_clones": 20,
-        "status": "Active",
+        "status": "Maintenance",
         "repo_url": "https://github.com/5G-MAG/rt-mbs-function"
       },
       {
