@@ -13,6 +13,8 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.SYNC_TOKEN }}
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -57,8 +59,12 @@ jobs:
               token = os.environ.get("GITHUB_TOKEN")
               req = urllib.request.Request(url)
               req.add_header('User-Agent', 'Github-Action-Bot')
+              # Required for Fine-grained PATs and Traffic API
+              req.add_header('Accept', 'application/vnd.github+json')
+              req.add_header('X-GitHub-Api-Version', '2022-11-28')
               if token:
-                  req.add_header('Authorization', f'token {token}')
+                  # Updated to 'Bearer' for Fine-grained PAT compatibility
+                  req.add_header('Authorization', f'Bearer {token}')
               try:
                   time.sleep(0.8)
                   with urllib.request.urlopen(req) as response:
@@ -89,11 +95,11 @@ jobs:
                   if not repo_data: continue
                   repo_name = repo.split('/')[-1]
                   
-                  # Traffic
+                  # Traffic (Requires Write/Push access to Contents)
                   v_api = get_json(f"https://api.github.com/repos/{repo}/traffic/views")
                   c_api = get_json(f"https://api.github.com/repos/{repo}/traffic/clones")
                   
-                  # 14-day Window (This is what GitHub provides as 'count')
+                  # 14-day Window
                   c_v_14 = v_api.get('count', 0) if v_api else 0
                   c_c_14 = c_api.get('count', 0) if c_api else 0
 
@@ -106,7 +112,7 @@ jobs:
                   d_v = v_api.get('views', [])[-1].get('count', 0) if (v_api and v_api.get('views')) else 0
                   d_c = c_api.get('clones', [])[-1].get('count', 0) if (c_api and c_api.get('clones')) else 0
 
-                  # INITIALIZATION FIX: Total must be >= 14-day window
+                  # Total must be >= 14-day window
                   final_v_total = max(c_v_14, p_v_total + d_v)
                   final_c_total = max(c_c_14, p_c_total + d_c)
 
@@ -164,5 +170,5 @@ jobs:
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git add _data/*.json
-          git commit -m "Dashboard: Persistence Fix for Clone/View Inversion" || exit 0
+          git commit -m "Dashboard: Update Repo and Traffic Stats" || exit 0
           git push
