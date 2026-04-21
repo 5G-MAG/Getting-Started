@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-04-20 03:27",
+  "last_updated": "2026-04-21 03:20",
   "projects": {
     "5G Media Streaming": [
       {
@@ -8,9 +8,66 @@
         "date": "2024-09-10",
         "url": "https://github.com/5G-MAG/rt-5gms-application-provider/releases/tag/rt-5gms-application-provider-1.1.0-rc",
         "repo_url": "https://github.com/5G-MAG/rt-5gms-application-provider"
+      },
+      {
+        "short_name": "rt-5gms-application",
+        "tag": "rt-5gms-application-v1.2.1",
+        "date": "2025-01-15",
+        "url": "https://github.com/5G-MAG/rt-5gms-application/releases/tag/rt-5gms-application-v1.2.1",
+        "repo_url": "https://github.com/5G-MAG/rt-5gms-application"
+      },
+      {
+        "short_name": "rt-5gms-application-function",
+        "tag": "rt-5gms-application-function-v1.4.5",
+        "date": "2026-03-20",
+        "url": "https://github.com/5G-MAG/rt-5gms-application-function/releases/tag/rt-5gms-application-function-v1.4.5",
+        "repo_url": "https://github.com/5G-MAG/rt-5gms-application-function"
+      },
+      {
+        "short_name": "rt-5gms-application-server",
+        "tag": "rt-5gms-application-server-1.2.4",
+        "date": "2025-03-20",
+        "url": "https://github.com/5G-MAG/rt-5gms-application-server/releases/tag/rt-5gms-application-server-1.2.4",
+        "repo_url": "https://github.com/5G-MAG/rt-5gms-application-server"
+      },
+      {
+        "short_name": "rt-5gms-media-stream-handler",
+        "tag": "rt-5gms-media-stream-handler-v1.2.1",
+        "date": "2025-01-14",
+        "url": "https://github.com/5G-MAG/rt-5gms-media-stream-handler/releases/tag/rt-5gms-media-stream-handler-v1.2.1",
+        "repo_url": "https://github.com/5G-MAG/rt-5gms-media-stream-handler"
+      },
+      {
+        "short_name": "rt-5gms-media-session-handler",
+        "tag": "rt-5gms-media-session-handler-v1.2.1",
+        "date": "2025-01-15",
+        "url": "https://github.com/5G-MAG/rt-5gms-media-session-handler/releases/tag/rt-5gms-media-session-handler-v1.2.1",
+        "repo_url": "https://github.com/5G-MAG/rt-5gms-media-session-handler"
+      },
+      {
+        "short_name": "rt-5gms-common-android-library",
+        "tag": "rt-5gms-common-android-library-v1.2.1",
+        "date": "2025-01-14",
+        "url": "https://github.com/5G-MAG/rt-5gms-common-android-library/releases/tag/rt-5gms-common-android-library-v1.2.1",
+        "repo_url": "https://github.com/5G-MAG/rt-5gms-common-android-library"
+      },
+      {
+        "short_name": "rt-5gms-examples",
+        "tag": "rt-5gms-examples-v1.2.0",
+        "date": "2025-01-28",
+        "url": "https://github.com/5G-MAG/rt-5gms-examples/releases/tag/rt-5gms-examples-v1.2.0",
+        "repo_url": "https://github.com/5G-MAG/rt-5gms-examples"
       }
     ],
-    "5G Core Service Consumers": [],
+    "5G Core Service Consumers": [
+      {
+        "short_name": "rt-5gc-service-consumers",
+        "tag": "rt-5gc-service-consumers-2.1.0",
+        "date": "2025-12-15",
+        "url": "https://github.com/5G-MAG/rt-5gc-service-consumers/releases/tag/rt-5gc-service-consumers-2.1.0",
+        "repo_url": "https://github.com/5G-MAG/rt-5gc-service-consumers"
+      }
+    ],
     "UE Data Collection": [],
     "5G Broadcast TV Radio": [],
     "XR Media": [],
