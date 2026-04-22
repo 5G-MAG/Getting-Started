@@ -1,64 +1,7 @@
 {
-  "last_updated": "2026-04-21 03:20",
+  "last_updated": "2026-04-22 03:18",
   "projects": {
-    "5G Media Streaming": [
-      {
-        "repo": "rt-5gms-application-provider",
-        "title": "Feature/102 track external provisioning sessions",
-        "url": "https://github.com/5G-MAG/rt-5gms-application-provider/pull/104",
-        "user": "ErikGaida",
-        "date": "2026-03-17",
-        "days_ago": 35
-      },
-      {
-        "repo": "rt-5gms-application-provider",
-        "title": "Added import/export Feature",
-        "url": "https://github.com/5G-MAG/rt-5gms-application-provider/pull/101",
-        "user": "ErikGaida",
-        "date": "2026-03-13",
-        "days_ago": 39
-      },
-      {
-        "repo": "rt-5gms-application-provider",
-        "title": "Add an Insomnia collection for the M1 and M5 interface including envi\u2026",
-        "url": "https://github.com/5G-MAG/rt-5gms-application-provider/pull/97",
-        "user": "dsilhavy",
-        "date": "2026-02-23",
-        "days_ago": 57
-      },
-      {
-        "repo": "rt-5gms-application",
-        "title": "Feature MWC Demo",
-        "url": "https://github.com/5G-MAG/rt-5gms-application/pull/49",
-        "user": "dsilhavy",
-        "date": "2026-02-25",
-        "days_ago": 55
-      },
-      {
-        "repo": "rt-5gms-application-server",
-        "title": "add cfg and script for CMCD",
-        "url": "https://github.com/5G-MAG/rt-5gms-application-server/pull/108",
-        "user": "shilinding",
-        "date": "2026-02-20",
-        "days_ago": 60
-      },
-      {
-        "repo": "rt-5gms-media-stream-handler",
-        "title": "Dev add qoe metrics",
-        "url": "https://github.com/5G-MAG/rt-5gms-media-stream-handler/pull/82",
-        "user": "Neolomoxem",
-        "date": "2026-03-30",
-        "days_ago": 22
-      },
-      {
-        "repo": "rt-5gms-common-android-library",
-        "title": "Dev add qoe metrics",
-        "url": "https://github.com/5G-MAG/rt-5gms-common-android-library/pull/35",
-        "user": "Neolomoxem",
-        "date": "2026-03-30",
-        "days_ago": 22
-      }
-    ],
+    "5G Media Streaming": [],
     "5G Core Service Consumers": [],
     "UE Data Collection": [],
     "5G Broadcast TV Radio": [],
