@@ -59,11 +59,9 @@ jobs:
               token = os.environ.get("GITHUB_TOKEN")
               req = urllib.request.Request(url)
               req.add_header('User-Agent', 'Github-Action-Bot')
-              # Required for Fine-grained PATs and Traffic API
               req.add_header('Accept', 'application/vnd.github+json')
               req.add_header('X-GitHub-Api-Version', '2022-11-28')
               if token:
-                  # Updated to 'Bearer' for Fine-grained PAT compatibility
                   req.add_header('Authorization', f'Bearer {token}')
               try:
                   time.sleep(0.8)
@@ -95,24 +93,20 @@ jobs:
                   if not repo_data: continue
                   repo_name = repo.split('/')[-1]
                   
-                  # Traffic (Requires Write/Push access to Contents)
+                  # Traffic Logic
                   v_api = get_json(f"https://api.github.com/repos/{repo}/traffic/views")
                   c_api = get_json(f"https://api.github.com/repos/{repo}/traffic/clones")
                   
-                  # 14-day Window
                   c_v_14 = v_api.get('count', 0) if v_api else 0
                   c_c_14 = c_api.get('count', 0) if c_api else 0
 
-                  # Persistent Data Logic
                   prev = existing_comm_data.get(repo_name, {})
                   p_v_total = prev.get('total_views', 0)
                   p_c_total = prev.get('total_clones', 0)
                   
-                  # Daily Increment (Last day's data)
                   d_v = v_api.get('views', [])[-1].get('count', 0) if (v_api and v_api.get('views')) else 0
                   d_c = c_api.get('clones', [])[-1].get('count', 0) if (c_api and c_api.get('clones')) else 0
 
-                  # Total must be >= 14-day window
                   final_v_total = max(c_v_14, p_v_total + d_v)
                   final_c_total = max(c_c_14, p_c_total + d_c)
 
@@ -133,7 +127,7 @@ jobs:
                       "repo_url": f"https://github.com/{repo}"
                   })
 
-                  # Releases & PRs
+                  # Releases
                   all_rels = get_json(f"https://api.github.com/repos/{repo}/releases") or []
                   f_tag = filtered_projects[p_name]['filter'].lower() if p_name in filtered_projects else ""
                   target = next((r for r in all_rels if f_tag in r.get('tag_name', '').lower()), None) if f_tag else next((r for r in all_rels if not r.get('prerelease')), None) or (all_rels[0] if all_rels else None)
@@ -146,13 +140,31 @@ jobs:
                       "repo_url": f"https://github.com/{repo}"
                   })
                   
+                  # PRs with Color + Blink Logic
                   prs = get_json(f"https://api.github.com/repos/{repo}/pulls?state=open") or []
                   for pr in prs:
                       created_date = pr.get('created_at', '').split('T')[0]
+                      days_ago = (datetime.now() - datetime.strptime(created_date, "%Y-%m-%d")).days
+                      
+                      status_color = "red"
+                      should_blink = False
+
+                      if days_ago <= 60:
+                          status_color = "green"
+                          if days_ago <= 30:
+                              should_blink = True
+                      elif days_ago <= 120:
+                          status_color = "orange"
+
                       pull_list.append({
-                          "repo": repo_name, "title": pr.get('title'), "url": pr.get('html_url'),
-                          "user": pr.get('user', {}).get('login'), "date": created_date,
-                          "days_ago": (datetime.now() - datetime.strptime(created_date, "%Y-%m-%d")).days
+                          "repo": repo_name, 
+                          "title": pr.get('title'), 
+                          "url": pr.get('html_url'),
+                          "user": pr.get('user', {}).get('login'), 
+                          "date": created_date,
+                          "days_ago": days_ago,
+                          "color": status_color,
+                          "blink": should_blink
                       })
 
               rel_out[p_name], pr_out[p_name], comm_out[p_name] = rel_list, pull_list, comm_list
