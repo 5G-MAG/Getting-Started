@@ -1,16 +1,149 @@
 {
-  "last_updated": "2026-04-22 03:18",
+  "last_updated": "2026-04-23 03:22",
   "projects": {
-    "5G Media Streaming": [],
+    "5G Media Streaming": [
+      {
+        "repo": "rt-5gms-application-provider",
+        "title": "Feature/102 track external provisioning sessions",
+        "url": "https://github.com/5G-MAG/rt-5gms-application-provider/pull/104",
+        "user": "ErikGaida",
+        "date": "2026-03-17",
+        "days_ago": 37
+      },
+      {
+        "repo": "rt-5gms-application-provider",
+        "title": "Added import/export Feature",
+        "url": "https://github.com/5G-MAG/rt-5gms-application-provider/pull/101",
+        "user": "ErikGaida",
+        "date": "2026-03-13",
+        "days_ago": 41
+      },
+      {
+        "repo": "rt-5gms-application-provider",
+        "title": "Add an Insomnia collection for the M1 and M5 interface including envi\u2026",
+        "url": "https://github.com/5G-MAG/rt-5gms-application-provider/pull/97",
+        "user": "dsilhavy",
+        "date": "2026-02-23",
+        "days_ago": 59
+      },
+      {
+        "repo": "rt-5gms-application",
+        "title": "Feature MWC Demo",
+        "url": "https://github.com/5G-MAG/rt-5gms-application/pull/49",
+        "user": "dsilhavy",
+        "date": "2026-02-25",
+        "days_ago": 57
+      },
+      {
+        "repo": "rt-5gms-application-server",
+        "title": "add cfg and script for CMCD",
+        "url": "https://github.com/5G-MAG/rt-5gms-application-server/pull/108",
+        "user": "shilinding",
+        "date": "2026-02-20",
+        "days_ago": 62
+      },
+      {
+        "repo": "rt-5gms-media-stream-handler",
+        "title": "Dev add qoe metrics",
+        "url": "https://github.com/5G-MAG/rt-5gms-media-stream-handler/pull/82",
+        "user": "Neolomoxem",
+        "date": "2026-03-30",
+        "days_ago": 24
+      },
+      {
+        "repo": "rt-5gms-common-android-library",
+        "title": "Dev add qoe metrics",
+        "url": "https://github.com/5G-MAG/rt-5gms-common-android-library/pull/35",
+        "user": "Neolomoxem",
+        "date": "2026-03-30",
+        "days_ago": 24
+      }
+    ],
     "5G Core Service Consumers": [],
     "UE Data Collection": [],
-    "5G Broadcast TV Radio": [],
-    "XR Media": [],
+    "5G Broadcast TV Radio": [
+      {
+        "repo": "rt-mbms-tx-for-qrd-and-crd",
+        "title": "WiP: Docker support",
+        "url": "https://github.com/5G-MAG/rt-mbms-tx-for-qrd-and-crd/pull/9",
+        "user": "dsilhavy",
+        "date": "2024-11-20",
+        "days_ago": 519
+      },
+      {
+        "repo": "rt-mbms-mw",
+        "title": "ROUTE support using GPAC",
+        "url": "https://github.com/5G-MAG/rt-mbms-mw/pull/18",
+        "user": "rbouqueau",
+        "date": "2021-11-30",
+        "days_ago": 1605
+      },
+      {
+        "repo": "rt-mbms-mw",
+        "title": "readme: propose to install in /usr/local instead of /usr (which is a \u2026",
+        "url": "https://github.com/5G-MAG/rt-mbms-mw/pull/15",
+        "user": "rbouqueau",
+        "date": "2021-10-23",
+        "days_ago": 1643
+      },
+      {
+        "repo": "rt-mbms-examples",
+        "title": "WIP: Docker setup for MBMS client components",
+        "url": "https://github.com/5G-MAG/rt-mbms-examples/pull/18",
+        "user": "dsilhavy",
+        "date": "2025-08-27",
+        "days_ago": 239
+      }
+    ],
+    "XR Media": [
+      {
+        "repo": "rt-xr-content",
+        "title": "Added anchoring and interactivity in the furniture glTF file",
+        "url": "https://github.com/5G-MAG/rt-xr-content/pull/27",
+        "user": "nlsdvl",
+        "date": "2025-05-09",
+        "days_ago": 349
+      }
+    ],
     "V3C Immersive": [],
     "Beyond 2D": [],
     "AI ML": [],
-    "Multimedia Protocols": [],
-    "Auxiliary Tools": [],
+    "Multimedia Protocols": [
+      {
+        "repo": "rt-libflute",
+        "title": "Feature/#50",
+        "url": "https://github.com/5G-MAG/rt-libflute/pull/57",
+        "user": "dsilhavy",
+        "date": "2026-03-27",
+        "days_ago": 27
+      },
+      {
+        "repo": "rt-libflute",
+        "title": "Feature/end to end test tunneled mode",
+        "url": "https://github.com/5G-MAG/rt-libflute/pull/56",
+        "user": "dsilhavy",
+        "date": "2026-03-12",
+        "days_ago": 42
+      },
+      {
+        "repo": "rt-libflute",
+        "title": "Forward Error Correction",
+        "url": "https://github.com/5G-MAG/rt-libflute/pull/7",
+        "user": "autumn-traveller",
+        "date": "2023-05-16",
+        "days_ago": 1073
+      }
+    ],
+    "Auxiliary Tools": [
+      {
+        "repo": "rt-common-shared",
+        "title": "feature: m1-mcp-server added",
+        "url": "https://github.com/5G-MAG/rt-common-shared/pull/66",
+        "user": "aaronmontilla",
+        "date": "2026-03-23",
+        "days_ago": 31
+      }
+    ],
     "Conversational Avatar": [],
     "6G Testbed": [],
     "DVB-I over 5G": [],
