@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-04-23 00:56",
+  "last_updated": "2026-04-23 13:05",
   "projects": {
     "5G Media Streaming": [
       {
@@ -8,7 +8,9 @@
         "url": "https://github.com/5G-MAG/rt-5gms-application-provider/pull/104",
         "user": "ErikGaida",
         "date": "2026-03-17",
-        "days_ago": 37
+        "days_ago": 37,
+        "color": "green",
+        "blink": false
       },
       {
         "repo": "rt-5gms-application-provider",
@@ -16,7 +18,9 @@
         "url": "https://github.com/5G-MAG/rt-5gms-application-provider/pull/101",
         "user": "ErikGaida",
         "date": "2026-03-13",
-        "days_ago": 41
+        "days_ago": 41,
+        "color": "green",
+        "blink": false
       },
       {
         "repo": "rt-5gms-application-provider",
@@ -24,7 +28,9 @@
         "url": "https://github.com/5G-MAG/rt-5gms-application-provider/pull/97",
         "user": "dsilhavy",
         "date": "2026-02-23",
-        "days_ago": 59
+        "days_ago": 59,
+        "color": "green",
+        "blink": false
       },
       {
         "repo": "rt-5gms-application",
@@ -32,7 +38,9 @@
         "url": "https://github.com/5G-MAG/rt-5gms-application/pull/49",
         "user": "dsilhavy",
         "date": "2026-02-25",
-        "days_ago": 57
+        "days_ago": 57,
+        "color": "green",
+        "blink": false
       },
       {
         "repo": "rt-5gms-application-server",
@@ -40,7 +48,9 @@
         "url": "https://github.com/5G-MAG/rt-5gms-application-server/pull/108",
         "user": "shilinding",
         "date": "2026-02-20",
-        "days_ago": 62
+        "days_ago": 62,
+        "color": "orange",
+        "blink": false
       },
       {
         "repo": "rt-5gms-media-stream-handler",
@@ -48,7 +58,9 @@
         "url": "https://github.com/5G-MAG/rt-5gms-media-stream-handler/pull/82",
         "user": "Neolomoxem",
         "date": "2026-03-30",
-        "days_ago": 24
+        "days_ago": 24,
+        "color": "green",
+        "blink": true
       },
       {
         "repo": "rt-5gms-common-android-library",
@@ -56,7 +68,9 @@
         "url": "https://github.com/5G-MAG/rt-5gms-common-android-library/pull/35",
         "user": "Neolomoxem",
         "date": "2026-03-30",
-        "days_ago": 24
+        "days_ago": 24,
+        "color": "green",
+        "blink": true
       }
     ],
     "5G Core Service Consumers": [],
@@ -68,7 +82,9 @@
         "url": "https://github.com/5G-MAG/rt-mbms-tx-for-qrd-and-crd/pull/9",
         "user": "dsilhavy",
         "date": "2024-11-20",
-        "days_ago": 519
+        "days_ago": 519,
+        "color": "red",
+        "blink": false
       },
       {
         "repo": "rt-mbms-mw",
@@ -76,7 +92,9 @@
         "url": "https://github.com/5G-MAG/rt-mbms-mw/pull/18",
         "user": "rbouqueau",
         "date": "2021-11-30",
-        "days_ago": 1605
+        "days_ago": 1605,
+        "color": "red",
+        "blink": false
       },
       {
         "repo": "rt-mbms-mw",
@@ -84,7 +102,9 @@
         "url": "https://github.com/5G-MAG/rt-mbms-mw/pull/15",
         "user": "rbouqueau",
         "date": "2021-10-23",
-        "days_ago": 1643
+        "days_ago": 1643,
+        "color": "red",
+        "blink": false
       },
       {
         "repo": "rt-mbms-examples",
@@ -92,7 +112,9 @@
         "url": "https://github.com/5G-MAG/rt-mbms-examples/pull/18",
         "user": "dsilhavy",
         "date": "2025-08-27",
-        "days_ago": 239
+        "days_ago": 239,
+        "color": "red",
+        "blink": false
       }
     ],
     "XR Media": [
@@ -102,7 +124,9 @@
         "url": "https://github.com/5G-MAG/rt-xr-content/pull/27",
         "user": "nlsdvl",
         "date": "2025-05-09",
-        "days_ago": 349
+        "days_ago": 349,
+        "color": "red",
+        "blink": false
       }
     ],
     "V3C Immersive": [],
@@ -114,7 +138,9 @@
         "url": "https://github.com/5G-MAG/rt-ai-ml-evaluation-framework/pull/4",
         "user": "hrtavakoli",
         "date": "2026-03-24",
-        "days_ago": 30
+        "days_ago": 30,
+        "color": "green",
+        "blink": true
       }
     ],
     "Multimedia Protocols": [
@@ -124,7 +150,9 @@
         "url": "https://github.com/5G-MAG/rt-libflute/pull/57",
         "user": "dsilhavy",
         "date": "2026-03-27",
-        "days_ago": 27
+        "days_ago": 27,
+        "color": "green",
+        "blink": true
       },
       {
         "repo": "rt-libflute",
@@ -132,7 +160,9 @@
         "url": "https://github.com/5G-MAG/rt-libflute/pull/56",
         "user": "dsilhavy",
         "date": "2026-03-12",
-        "days_ago": 42
+        "days_ago": 42,
+        "color": "green",
+        "blink": false
       },
       {
         "repo": "rt-libflute",
@@ -140,7 +170,9 @@
         "url": "https://github.com/5G-MAG/rt-libflute/pull/7",
         "user": "autumn-traveller",
         "date": "2023-05-16",
-        "days_ago": 1073
+        "days_ago": 1073,
+        "color": "red",
+        "blink": false
       }
     ],
     "Auxiliary Tools": [
@@ -150,7 +182,9 @@
         "url": "https://github.com/5G-MAG/rt-common-shared/pull/66",
         "user": "aaronmontilla",
         "date": "2026-03-23",
-        "days_ago": 31
+        "days_ago": 31,
+        "color": "green",
+        "blink": false
       }
     ],
     "Conversational Avatar": [
@@ -160,7 +194,9 @@
         "url": "https://github.com/5G-MAG/rt-avatar-content/pull/4",
         "user": "nlsdvl",
         "date": "2026-03-06",
-        "days_ago": 48
+        "days_ago": 48,
+        "color": "green",
+        "blink": false
       }
     ],
     "6G Testbed": [],
@@ -171,7 +207,9 @@
         "url": "https://github.com/5G-MAG/rt-5gms-application/pull/49",
         "user": "dsilhavy",
         "date": "2026-02-25",
-        "days_ago": 57
+        "days_ago": 57,
+        "color": "green",
+        "blink": false
       }
     ],
     "5G Broadcast Emergency Alerts": [
@@ -181,7 +219,9 @@
         "url": "https://github.com/5G-MAG/rt-mbms-tx-for-qrd-and-crd/pull/9",
         "user": "dsilhavy",
         "date": "2024-11-20",
-        "days_ago": 519
+        "days_ago": 519,
+        "color": "red",
+        "blink": false
       }
     ],
     "5G Multicast Broadcast": [
@@ -191,7 +231,9 @@
         "url": "https://github.com/5G-MAG/rt-mbs-function/pull/31",
         "user": "davidjwbbc",
         "date": "2026-04-15",
-        "days_ago": 8
+        "days_ago": 8,
+        "color": "green",
+        "blink": true
       },
       {
         "repo": "rt-mbs-transport-function",
@@ -199,7 +241,9 @@
         "url": "https://github.com/5G-MAG/rt-mbs-transport-function/pull/58",
         "user": "davidjwbbc",
         "date": "2026-04-15",
-        "days_ago": 8
+        "days_ago": 8,
+        "color": "green",
+        "blink": true
       },
       {
         "repo": "rt-mbs-examples",
@@ -207,7 +251,9 @@
         "url": "https://github.com/5G-MAG/rt-mbs-examples/pull/16",
         "user": "davidjwbbc",
         "date": "2026-03-27",
-        "days_ago": 27
+        "days_ago": 27,
+        "color": "green",
+        "blink": true
       },
       {
         "repo": "rt-mbs-examples",
@@ -215,7 +261,9 @@
         "url": "https://github.com/5G-MAG/rt-mbs-examples/pull/15",
         "user": "joseprrm",
         "date": "2026-03-13",
-        "days_ago": 41
+        "days_ago": 41,
+        "color": "green",
+        "blink": false
       },
       {
         "repo": "rt-mbs-examples",
@@ -223,7 +271,9 @@
         "url": "https://github.com/5G-MAG/rt-mbs-examples/pull/14",
         "user": "dsilhavy",
         "date": "2026-03-06",
-        "days_ago": 48
+        "days_ago": 48,
+        "color": "green",
+        "blink": false
       },
       {
         "repo": "rt-mbs-examples",
@@ -231,7 +281,9 @@
         "url": "https://github.com/5G-MAG/rt-mbs-examples/pull/13",
         "user": "dsilhavy",
         "date": "2026-02-23",
-        "days_ago": 59
+        "days_ago": 59,
+        "color": "green",
+        "blink": false
       }
     ]
   }
