@@ -1,0 +1,90 @@
+# -------------------------------------------------------------------
+# 5G-MAG ARCHITECTURE MASTER DATA
+# IDs map to the exact repo names used in the Sync Script
+# -------------------------------------------------------------------
+
+S1:
+  repo_slug: "rt-5gms-application-provider" # Match
+  display_name: "Application Provider"
+  repo_url: "https://github.com/5G-MAG/rt-5gms-application-provider"
+  branch: "main"
+  standards: ["3GPP"]
+  license: "Multiple"
+  software: ["apk", "android"]
+  public: true
+
+S2:
+  repo_slug: "rt-5gms-application" # Match
+  display_name: "5GMS Application"
+  repo_url: "https://github.com/5G-MAG/rt-5gms-application"
+  branch: "development"
+  standards: ["3GPP"]
+  license: "5G-MAG PLv1.0"
+  software: ["apk", "android"]
+  public: true
+
+S3:
+  repo_slug: "rt-5gms-media-session-handler" # Match
+  display_name: "Media Session Handler"
+  repo_url: "https://github.com/5G-MAG/rt-5gms-media-session-handler"
+  branch: "main"
+  standards: ["3GPP"]
+  license: "5G-MAG PLv1.0"
+  dependencies: ["ExoPlayer"]
+  software: ["android"]
+  public: true
+
+S4:
+  repo_slug: "rt-5gms-media-stream-handler" # Match
+  display_name: "Media Stream Handler"
+  repo_url: "https://github.com/5G-MAG/rt-5gms-media-stream-handler"
+  branch: "main"
+  is_draft: true # For dashed border
+  standards: []
+  license: "5G-MAG PLv1.0"
+  software: ["android"]
+  public: true
+
+S5:
+  repo_slug: "rt-5gms-application-function" # Match
+  display_name: "Application Function"
+  repo_url: "https://github.com/5G-MAG/rt-5gms-application-function"
+  branch: "main"
+  standards: ["3GPP"]
+  license: "5G-MAG PLv1.0"
+  dependencies: ["Open5GS", "OpenAPI"]
+  software: ["cloud", "linux"]
+  public: true
+
+S6:
+  repo_slug: "rt-5gms-application-server" # Match
+  display_name: "Application Server"
+  repo_url: "https://github.com/5G-MAG/rt-5gms-application-server"
+  branch: "main"
+  standards: ["3GPP"]
+  license: "5G-MAG PLv1.0"
+  dependencies: ["NGINX", "OpenResty"]
+  software: ["cloud", "linux"]
+  public: true
+
+S7:
+  repo_slug: "rt-5gc-service-consumers" # Updated to match your script's group
+  display_name: "Management Tools"
+  repo_url: "https://github.com/5G-MAG/rt-5gc-service-consumers"
+  branch: "main"
+  standards: ["3GPP"]
+  license: "5G-MAG PLv1.0"
+  dependencies: ["Postman"]
+  software: ["api", "web", "cloud", "linux"]
+  public: true
+
+S8:
+  repo_slug: "rt-5gms-examples" # Match
+  display_name: "Edge Components / Examples"
+  repo_url: "https://github.com/5G-MAG/rt-5gms-examples"
+  branch: "main"
+  is_draft: true # For dashed border
+  standards: []
+  license: "5G-MAG PLv1.0"
+  software: ["cloud", "docker", "linux"]
+  public: true
