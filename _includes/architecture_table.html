@@ -1,0 +1,81 @@
+<div class="architecture-container">
+  <div class="repo-header-row">
+    <div class="header-item">#</div>
+    <div class="header-item">Repository</div>
+    <div class="header-item">Standards</div>
+    <div class="header-item">License</div>
+    <div class="header-item">Dependencies</div>
+    <div class="header-item" style="text-align: right;">Software</div>
+  </div>
+
+  {% comment %} 
+    We clean the input string to ensure no spaces interfere with the lookup 
+  {% endcomment %}
+  {% assign id_list = include.ids | remove: " " | split: "," %}
+
+  {% for id in id_list %}
+    {% assign meta = site.data.repo_metadata[id] %}
+    {% if meta %}
+      {% assign row_color = meta.color | default: "#ffcc00" %}
+      
+      <div class="repo-row {% if meta.is_auxiliary %}auxiliary-dashed{% endif %}" 
+           style="border-color: {{ row_color }};">
+        
+        <div class="repo-id-group">
+          <div class="id-pill" style="background-color: {{ row_color }};">
+            {{ id }}
+          </div>
+          <div class="status-icon">
+            {% if meta.public %}
+              <span class="status-public" title="Public Repository">✔</span>
+            {% else %}
+              <span class="status-private" title="Private Repository">⚠️</span>
+            {% endif %}
+          </div>
+        </div>
+
+        <div class="repo-name">
+          <div class="repo-title-row">
+            <a href="{{ meta.repo_url }}" target="_blank" class="repo-main-link">
+              {{ meta.display_name }} 
+              <span class="repo-slug-inline">({{ meta.repo_slug }})</span>
+            </a>
+          </div>
+          <span class="branch-badge">{{ meta.branch }}</span>
+        </div>
+
+        <div class="repo-standards">
+          {% for std in meta.standards %}
+            <img src="{{ site.baseurl }}/assets/logos/{{ std }}.png" 
+                 class="std-logo" 
+                 alt="{{ std }}">
+          {% endfor %}
+        </div>
+
+        <div class="repo-license">
+          {{ meta.license }}
+        </div>
+
+        <div class="repo-deps">
+          {% if meta.dependencies %}
+            {% for dep in meta.dependencies %}
+              <div class="dep-box">
+                <img src="{{ site.baseurl }}/assets/deps/{{ dep }}.png" 
+                     class="dep-img" 
+                     alt="{{ dep }}">
+              </div>
+            {% endfor %}
+          {% endif %}
+        </div>
+
+        <div class="repo-software">
+          {% for icon in meta.software %}
+            <img src="{{ site.baseurl }}/assets/icons/{{ icon }}.png" 
+                 class="soft-icon" 
+                 alt="{{ icon }}">
+          {% endfor %}
+        </div>
+      </div>
+    {% endif %}
+  {% endfor %}
+</div>
