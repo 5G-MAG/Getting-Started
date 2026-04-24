@@ -1,12 +1,10 @@
 // -------------------------------------------------------------------
-// 1. BRAND COLORS & BUTTONS
+// 1. BRAND COLORS & BUTTONS (Sandboxed)
 // -------------------------------------------------------------------
-$link-color: #00A0D2;
-$mag-blue: rgb(0, 160, 210); 
+$mag-link: #00A0D2;
+$mag-blue-license: rgb(0, 160, 210); 
 
-// Ensure this matches your theme's width or set to 100% to be safe
-$max-table-width: 100%; 
-
+// Buttons - using specific classes to avoid global impact
 .btn-video    { color: #FFFFFF !important; background-color: #C80000 !important; }
 .btn-github   { color: #ffffff !important; background-color: #000000 !important; }
 .btn-release  { color: #88D66C !important; background-color: #000000 !important; }
@@ -26,7 +24,7 @@ $max-table-width: 100%;
 .btn-common   { color: #000000 !important; background-color: #BFBFBF !important; }
 
 // -------------------------------------------------------------------
-// 2. ARCHITECTURE TABLE SYSTEM
+// 2. ARCHITECTURE TABLE SYSTEM (Contained)
 // -------------------------------------------------------------------
 
 .architecture-container {
@@ -34,77 +32,103 @@ $max-table-width: 100%;
     flex-direction: column;
     gap: 15px;
     margin: 30px 0;
-    width: 100%;
-    max-width: $max-table-width;
-    box-sizing: border-box; // Prevents padding from adding to width
+    width: 100%;           // Ensures it stays within its parent
+    max-width: 100%;       // Never grows wider than the screen
+    box-sizing: border-box;
+    overflow-x: hidden;    // Prevent horizontal scroll leaks
 }
 
-/* Grid Logic - Using 'fr' (fractions) to prevent overflow */
-.repo-header-row, .repo-row {
+/* Header & Row Grid */
+.repo-header-row, 
+.repo-row {
     display: grid;
-    /* ID, Name/Slug, Standards, License, Deps, Software */
-    grid-template-columns: 90px 2.5fr 100px 120px 2fr 120px;
-    grid-gap: 15px;
+    /* Using 'fr' for the name and deps columns allows them to shrink on smaller screens */
+    grid-template-columns: 80px 2fr 100px 110px 1.5fr 110px;
+    grid-gap: 12px;
     align-items: center;
     box-sizing: border-box;
 }
 
 .repo-header-row {
-    padding: 0 25px 10px 25px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 0 20px 10px 20px;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.2);
 }
 
 .repo-row {
     border: 2px solid; 
-    border-radius: 60px;
-    padding: 12px 25px;
-    min-height: 75px;
-    transition: transform 0.2s ease-in-out;
-    overflow: hidden; // Keeps content inside the pill
+    border-radius: 50px;
+    padding: 10px 20px;
+    min-height: 70px;
+    transition: transform 0.2s ease;
+    background-color: transparent; 
 }
 
-.repo-row:hover { transform: translateX(5px); background: rgba(255,255,255,0.05); }
 .repo-row.auxiliary-dashed { border-style: dashed !important; }
 
-/* Components */
-.header-item { font-weight: 800; text-transform: uppercase; font-size: 0.7rem; color: #888; }
+/* Content elements */
+.header-item { 
+    font-weight: 800; 
+    text-transform: uppercase; 
+    font-size: 0.7rem; 
+    color: #888; 
+}
+
 .repo-id-group { display: flex; align-items: center; gap: 8px; }
 .id-pill {
-    color: #000; font-weight: 800; width: 36px; height: 36px;
+    color: #000; font-weight: 800; width: 34px; height: 34px;
     border-radius: 50%; display: inline-flex; justify-content: center; align-items: center;
 }
+
 .status-icon { font-size: 1.1rem; }
 .status-public { color: #2da44e; }
 .status-private { color: #d29922; }
 
-.repo-name { display: flex; flex-direction: column; min-width: 0; } // min-width 0 prevents text blowout
-.repo-main-link { font-weight: 700; font-size: 1rem; text-decoration: none; color: inherit; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-.repo-slug-inline { font-size: 0.85rem; font-weight: 400; color: #888; margin-left: 5px; }
-.branch-badge { font-family: monospace; font-size: 0.7rem; color: #666; }
+.repo-name { 
+    display: flex; 
+    flex-direction: column; 
+    min-width: 0; // Vital: allows text to truncate rather than push width
+}
 
-.repo-standards { display: flex; gap: 8px; justify-content: center; }
-.std-logo { height: 30px; width: auto; object-fit: contain; }
+.repo-main-link { 
+    font-weight: 700; 
+    font-size: 1rem; 
+    color: inherit; 
+    text-decoration: none;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
 
-.repo-license { font-size: 0.85rem; font-weight: 700; color: $mag-blue !important; }
+.repo-slug-inline { font-size: 0.85rem; font-weight: 400; color: #888; margin-left: 4px; }
+.branch-badge { font-family: monospace; font-size: 0.7rem; color: #777; }
+
+.repo-standards { display: flex; gap: 6px; justify-content: center; }
+.std-logo { height: 28px; width: auto; object-fit: contain; }
+
+.repo-license { 
+    font-size: 0.85rem; 
+    font-weight: 700; 
+    color: $mag-blue-license !important; 
+}
 
 .repo-deps { display: flex; flex-wrap: wrap; gap: 5px; }
-.dep-box { background: #fff; padding: 3px 8px; border-radius: 4px; border: 1px solid #ddd; }
-.dep-img { height: 22px; max-width: 80px; object-fit: contain; }
+.dep-box { background: #fff; padding: 2px 6px; border-radius: 4px; border: 1px solid #ddd; }
+.dep-img { height: 20px; max-width: 70px; object-fit: contain; }
 
 .repo-software { display: flex; justify-content: flex-end; gap: 8px; }
-.soft-icon { height: 30px; width: auto; }
+.soft-icon { height: 28px; width: auto; }
 
 // -------------------------------------------------------------------
-// 3. RESPONSIVE - MOBILE SAFETY
+// 3. RESPONSIVE BREAKPOINT
 // -------------------------------------------------------------------
-@media (max-width: 1100px) {
+@media (max-width: 1000px) {
     .repo-header-row { display: none; }
     .repo-row { 
         display: flex; 
         flex-direction: column; 
         align-items: flex-start; 
         border-radius: 20px;
-        padding: 20px;
+        padding: 15px;
     }
-    .repo-software { justify-content: flex-start; }
+    .repo-software { justify-content: flex-start; margin-top: 10px; }
 }
