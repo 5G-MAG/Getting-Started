@@ -2,10 +2,6 @@
   {% for id in include.ids %}
     {% assign meta = site.data.repo_metadata[id] %}
     {% if meta %}
-      {% comment %} 
-        Set the primary color for this row. 
-        Defaults to MAG Gold if not specified in YAML.
-      {% endcomment %}
       {% assign row_color = meta.color | default: "#ffcc00" %}
       
       <div class="repo-row {% if meta.is_auxiliary %}auxiliary-dashed{% endif %}" 
@@ -16,14 +12,21 @@
             {{ id }}
           </div>
           <div class="status-icon">
-            {% if meta.public %}✔{% else %}⚠️{% endif %}
+            {% if meta.public %}
+              <span class="status-public" title="Public Repository">✔</span>
+            {% else %}
+              <span class="status-private" title="Private Repository">⚠️</span>
+            {% endif %}
           </div>
         </div>
 
         <div class="repo-name">
-          <a href="{{ meta.repo_url }}" target="_blank" class="repo-main-link">
-            {{ meta.display_name }}
-          </a>
+          <div class="repo-title-row">
+            <a href="{{ meta.repo_url }}" target="_blank" class="repo-main-link">
+              {{ meta.display_name }} 
+              <span class="repo-slug-inline">({{ meta.repo_slug }})</span>
+            </a>
+          </div>
           <span class="branch-badge">{{ meta.branch }}</span>
         </div>
 
@@ -31,11 +34,11 @@
           {% for std in meta.standards %}
             <img src="{{ site.baseurl }}/assets/logos/{{ std }}.png" 
                  class="std-logo" 
-                 alt="{{ std }} Standard">
+                 alt="{{ std }}">
           {% endfor %}
         </div>
 
-        <div class="repo-license" style="color: {{ row_color }};">
+        <div class="repo-license">
           {{ meta.license }}
         </div>
 
@@ -44,8 +47,7 @@
             <div class="dep-box">
               <img src="{{ site.baseurl }}/assets/deps/{{ dep }}.png" 
                    class="dep-img" 
-                   alt="{{ dep }}" 
-                   title="{{ dep }}">
+                   alt="{{ dep }}">
             </div>
           {% endfor %}
         </div>
@@ -54,11 +56,9 @@
           {% for icon in meta.software %}
             <img src="{{ site.baseurl }}/assets/icons/{{ icon }}.png" 
                  class="soft-icon" 
-                 title="{{ icon | capitalize }}" 
                  alt="{{ icon }}">
           {% endfor %}
         </div>
-
       </div>
     {% endif %}
   {% endfor %}
