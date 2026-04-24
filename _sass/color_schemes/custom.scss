@@ -23,7 +23,7 @@ $content-width: 100rem;
 .btn-common   { color: #000000 !important; background-color: #BFBFBF !important; }
 
 // -------------------------------------------------------------------
-// 2. PR DASHBOARD STYLES
+// 2. PR DASHBOARD STYLES (ORIGINAL)
 // -------------------------------------------------------------------
 .release-table {
     width: 100%; border-collapse: collapse; margin-top: 20px; table-layout: fixed;
@@ -46,6 +46,7 @@ $content-width: 100rem;
     margin: 30px 0;
     width: 100%;
 
+    /* Header Row */
     .repo-header-row {
         display: grid;
         grid-template-columns: 95px 1.8fr 140px 140px 240px 140px;
@@ -58,6 +59,7 @@ $content-width: 100rem;
         }
     }
 
+    /* Repository Row */
     .repo-row {
         display: grid;
         grid-template-columns: 95px 1.8fr 140px 140px 240px 140px;
@@ -74,6 +76,7 @@ $content-width: 100rem;
         &.auxiliary-dashed { border-style: dashed !important; }
     }
 
+    /* Column 1: ID & Status Icons */
     .repo-id-group {
         display: flex;
         align-items: center;
@@ -91,18 +94,18 @@ $content-width: 100rem;
             display: flex;
             align-items: center;
 
-            // PREVENTS VIOLET LEAKAGE
+            /* THE GREEN FIX: Forces color by shifting pixels if color is overridden */
             .status-public {
                 color: #2da44e !important;
-                -webkit-text-fill-color: #2da44e !important;
+                filter: invert(48%) sepia(79%) saturate(2476%) hue-rotate(111deg) brightness(95%) contrast(100%) !important;
             }
             .status-private {
                 color: #d29922 !important;
-                -webkit-text-fill-color: #d29922 !important;
             }
         }
     }
 
+    /* Column 2: Name & Slug */
     .repo-name {
         display: flex;
         flex-direction: column;
@@ -111,11 +114,13 @@ $content-width: 100rem;
         .branch-badge { font-family: monospace; font-size: 0.75rem; color: #888; }
     }
 
+    /* Column 3: Standards */
     .repo-standards {
         display: flex; justify-content: center; align-items: center; gap: 12px;
         .std-logo { height: 42px; width: auto; max-width: 70px; object-fit: contain; }
     }
 
+    /* Column 4: License */
     .repo-license {
         font-weight: 700; font-size: 0.95rem; color: #00A0D2 !important;
         text-transform: uppercase;
@@ -139,6 +144,7 @@ $content-width: 100rem;
 
     .dep-img { height: 28px; max-width: 100px; object-fit: contain; }
 
+    /* Column 6: Software */
     .repo-software {
         display: flex; justify-content: flex-end; gap: 12px;
         .soft-icon { height: 36px; filter: drop-shadow(0 2px 3px rgba(0,0,0,0.15)); }
