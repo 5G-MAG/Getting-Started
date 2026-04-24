@@ -36,17 +36,6 @@ nav_order: 4
   .dot-orange { background-color: #fd7e14; }
   .dot-blue { background-color: #0366d6; }
   .stats-sub { font-size: 0.8em; color: #888; display: block; }
-
-  /* Re-defining Dashboard buttons in case they aren't in main CSS */
-  .btn-blue {
-    background-color: #0366d6;
-    color: white !important;
-    padding: 8px 16px;
-    border-radius: 4px;
-    text-decoration: none;
-    font-size: 0.9em;
-    display: inline-block;
-  }
 </style>
 
 <img src="../../assets/images/Banner_5GMS.png" /> 
