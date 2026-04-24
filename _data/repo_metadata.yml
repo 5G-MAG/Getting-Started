@@ -81,7 +81,7 @@ S7:
   standards: ["3GPP"]
   license: "5G-MAG PLv1.0"
   dependencies: ["Postman"]
-  software: ["Api", "Web", "Cloud", "Linux"]
+  software: ["API", "Web", "Cloud", "Linux"]
   public: true
 
 S8:
