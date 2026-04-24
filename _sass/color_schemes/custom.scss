@@ -4,6 +4,9 @@
 $link-color: #00A0D2;
 $mag-blue: rgb(0, 160, 210); 
 
+// Ensure this matches your theme's width or set to 100% to be safe
+$max-table-width: 100%; 
+
 .btn-video    { color: #FFFFFF !important; background-color: #C80000 !important; }
 .btn-github   { color: #ffffff !important; background-color: #000000 !important; }
 .btn-release  { color: #88D66C !important; background-color: #000000 !important; }
@@ -31,83 +34,77 @@ $mag-blue: rgb(0, 160, 210);
     flex-direction: column;
     gap: 15px;
     margin: 30px 0;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    width: 100%;
+    max-width: $max-table-width;
+    box-sizing: border-box; // Prevents padding from adding to width
 }
 
-/* Legend Header Styling */
-.repo-header-row {
+/* Grid Logic - Using 'fr' (fractions) to prevent overflow */
+.repo-header-row, .repo-row {
     display: grid;
-    grid-template-columns: 95px 1.8fr 140px 140px 240px 140px;
-    grid-gap: 20px;
-    padding: 0 30px 10px 30px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    margin-bottom: 5px;
-}
-
-.header-item {
-    font-weight: 800;
-    text-transform: uppercase;
-    font-size: 0.75rem;
-    letter-spacing: 1.5px;
-    color: #888;
-}
-
-/* Main Row Styling */
-.repo-row {
-    display: grid;
-    grid-template-columns: 95px 1.8fr 140px 140px 240px 140px;
-    grid-gap: 20px;
+    /* ID, Name/Slug, Standards, License, Deps, Software */
+    grid-template-columns: 90px 2.5fr 100px 120px 2fr 120px;
+    grid-gap: 15px;
     align-items: center;
+    box-sizing: border-box;
+}
+
+.repo-header-row {
+    padding: 0 25px 10px 25px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.repo-row {
     border: 2px solid; 
     border-radius: 60px;
-    padding: 15px 30px;
-    background-color: transparent;
-    min-height: 80px;
-    transition: transform 0.2s ease-in-out, background-color 0.2s ease;
+    padding: 12px 25px;
+    min-height: 75px;
+    transition: transform 0.2s ease-in-out;
+    overflow: hidden; // Keeps content inside the pill
 }
 
-.repo-row:hover {
-    transform: translateX(8px);
-    background-color: rgba(255, 255, 255, 0.07);
-}
-
+.repo-row:hover { transform: translateX(5px); background: rgba(255,255,255,0.05); }
 .repo-row.auxiliary-dashed { border-style: dashed !important; }
 
 /* Components */
-.repo-id-group { display: flex; align-items: center; gap: 10px; }
+.header-item { font-weight: 800; text-transform: uppercase; font-size: 0.7rem; color: #888; }
+.repo-id-group { display: flex; align-items: center; gap: 8px; }
 .id-pill {
-    color: #000; font-weight: 800; width: 40px; height: 40px;
-    font-size: 1.1rem; border-radius: 50%; display: inline-flex;
-    justify-content: center; align-items: center; flex-shrink: 0;
+    color: #000; font-weight: 800; width: 36px; height: 36px;
+    border-radius: 50%; display: inline-flex; justify-content: center; align-items: center;
 }
-.status-icon { font-size: 1.3rem; }
-.status-public  { color: #2da44e; }
+.status-icon { font-size: 1.1rem; }
+.status-public { color: #2da44e; }
 .status-private { color: #d29922; }
 
-.repo-name { display: flex; flex-direction: column; }
-.repo-main-link { font-weight: 700; font-size: 1.15rem; text-decoration: none; color: inherit; }
-.repo-slug-inline { font-size: 0.95rem; font-weight: 400; color: #999; margin-left: 6px; }
-.branch-badge { font-family: monospace; font-size: 0.75rem; color: #888; }
+.repo-name { display: flex; flex-direction: column; min-width: 0; } // min-width 0 prevents text blowout
+.repo-main-link { font-weight: 700; font-size: 1rem; text-decoration: none; color: inherit; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.repo-slug-inline { font-size: 0.85rem; font-weight: 400; color: #888; margin-left: 5px; }
+.branch-badge { font-family: monospace; font-size: 0.7rem; color: #666; }
 
-.repo-standards { display: flex; justify-content: center; align-items: center; gap: 12px; }
-.std-logo { height: 42px; width: auto; max-width: 70px; object-fit: contain; }
+.repo-standards { display: flex; gap: 8px; justify-content: center; }
+.std-logo { height: 30px; width: auto; object-fit: contain; }
 
-.repo-license { font-size: 0.95rem; font-weight: 700; color: $mag-blue !important; text-transform: uppercase; }
+.repo-license { font-size: 0.85rem; font-weight: 700; color: $mag-blue !important; }
 
-.repo-deps { display: flex; flex-wrap: wrap; gap: 8px; }
-.dep-box { background: #fff; padding: 5px 12px; border-radius: 6px; display: inline-flex; align-items: center; border: 1px solid #ddd; }
-.dep-img { height: 28px; max-width: 100px; object-fit: contain; }
+.repo-deps { display: flex; flex-wrap: wrap; gap: 5px; }
+.dep-box { background: #fff; padding: 3px 8px; border-radius: 4px; border: 1px solid #ddd; }
+.dep-img { height: 22px; max-width: 80px; object-fit: contain; }
 
-.repo-software { display: flex; justify-content: flex-end; gap: 12px; }
-.soft-icon { height: 36px; filter: drop-shadow(0 2px 3px rgba(0,0,0,0.15)); }
+.repo-software { display: flex; justify-content: flex-end; gap: 8px; }
+.soft-icon { height: 30px; width: auto; }
 
-/* Responsive */
-@media (max-width: 1400px) {
-    .repo-row, .repo-header-row { grid-template-columns: 90px 1.4fr 120px 120px 1.2fr 120px; }
-}
-
-@media (max-width: 1000px) {
+// -------------------------------------------------------------------
+// 3. RESPONSIVE - MOBILE SAFETY
+// -------------------------------------------------------------------
+@media (max-width: 1100px) {
     .repo-header-row { display: none; }
-    .repo-row { display: flex; flex-direction: column; align-items: flex-start; border-radius: 25px; padding: 25px; }
-    .repo-software { justify-content: flex-start; width: 100%; }
+    .repo-row { 
+        display: flex; 
+        flex-direction: column; 
+        align-items: flex-start; 
+        border-radius: 20px;
+        padding: 20px;
+    }
+    .repo-software { justify-content: flex-start; }
 }
