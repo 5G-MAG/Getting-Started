@@ -3,7 +3,7 @@
 // -------------------------------------------------------------------
 $link-color: #00A0D2;
 $content-width: 100rem;
-$mag-blue: rgb(0, 160, 210); // Fixed Blue for License text
+$mag-blue: rgb(0, 160, 210); 
 
 .btn-video    { color: #FFFFFF !important; background-color: #C80000 !important; }
 .btn-github   { color: #ffffff !important; background-color: #000000 !important; }
@@ -30,67 +30,63 @@ $mag-blue: rgb(0, 160, 210); // Fixed Blue for License text
 .architecture-container {
     display: flex;
     flex-direction: column;
-    gap: 12px;
-    margin: 25px 0;
+    gap: 15px; // Increased vertical gap between rows
+    margin: 30px 0;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
 }
 
 .repo-row {
     display: grid;
-    /* Grid: ID/Status, Name/Slug, Standards, License, Dependencies, Software */
-    grid-template-columns: 85px 1.8fr 120px 140px 220px 120px;
-    grid-gap: 15px;
+    /* Adjusted grid: More space for Standards (140px) and Dependencies (240px) */
+    grid-template-columns: 95px 1.8fr 140px 140px 240px 140px;
+    grid-gap: 20px;
     align-items: center;
-    border: 2px solid; /* Color from YAML inline style */
-    border-radius: 50px;
-    padding: 10px 25px;
+    border: 2px solid; 
+    border-radius: 60px; // Slightly rounder for the larger size
+    padding: 15px 30px; // Increased padding
     background-color: transparent;
-    min-height: 65px;
+    min-height: 80px; // Increased min-height
     transition: transform 0.2s ease-in-out, background-color 0.2s ease;
 }
 
 .repo-row:hover {
-    transform: translateX(5px);
-    background-color: rgba(255, 255, 255, 0.05);
+    transform: translateX(8px);
+    background-color: rgba(255, 255, 255, 0.07);
 }
 
-/* Auxiliary Style (Dashed) */
 .repo-row.auxiliary-dashed {
     border-style: dashed !important;
-    opacity: 0.85;
 }
 
-/* ID & Status symbols */
+/* Column 1: ID & Status */
 .repo-id-group {
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 10px;
 }
 
 .id-pill {
     color: #000;
     font-weight: 800;
-    width: 34px;
-    height: 34px;
+    width: 40px; // Increased from 34px
+    height: 40px;
+    font-size: 1.1rem;
     border-radius: 50%;
     display: inline-flex;
     justify-content: center;
     align-items: center;
     flex-shrink: 0;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    box-shadow: 0 3px 6px rgba(0,0,0,0.15);
 }
 
 .status-icon {
-    font-size: 1.1rem;
-    font-weight: bold;
-    display: flex;
-    align-items: center;
+    font-size: 1.3rem; // Larger status icons
 }
 
 .status-public  { color: #2da44e; }
 .status-private { color: #d29922; }
 
-/* Name & Repository Slug */
+/* Column 2: Name & Slug */
 .repo-name {
     display: flex;
     flex-direction: column;
@@ -98,111 +94,100 @@ $mag-blue: rgb(0, 160, 210); // Fixed Blue for License text
 
 .repo-main-link {
     font-weight: 700;
-    font-size: 1.05rem;
+    font-size: 1.15rem; // Slightly larger text
     text-decoration: none;
     color: inherit;
-    line-height: 1.2;
-}
-
-.repo-main-link:hover {
-    color: $link-color;
-    text-decoration: underline;
 }
 
 .repo-slug-inline {
-    font-size: 0.85rem;
+    font-size: 0.95rem;
     font-weight: 400;
-    color: #888;
-    margin-left: 4px;
+    color: #999;
+    margin-left: 6px;
 }
 
-.branch-badge {
-    font-family: "SFMono-Regular", Consolas, monospace;
-    font-size: 0.7rem;
-    color: #888;
-    margin-top: 2px;
-}
-
-/* Standards Column (Supports Multiple Icons) */
+/* Column 3: Standards (Larger Logos) */
 .repo-standards {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 8px; // Space between multiple standard logos
+    gap: 12px;
 }
 
 .std-logo {
-    height: 30px;
+    height: 42px; // Increased from 30px
     width: auto;
-    max-width: 50px;
+    max-width: 70px;
     object-fit: contain;
 }
 
-/* License (MAG Blue) */
+/* Column 4: License */
 .repo-license {
-    font-size: 0.85rem;
+    font-size: 0.95rem;
     font-weight: 700;
     color: $mag-blue !important;
     text-transform: uppercase;
+    letter-spacing: 0.5px;
 }
 
-/* Dependencies */
+/* Column 5: Dependencies (Larger Boxes) */
 .repo-deps {
     display: flex;
     flex-wrap: wrap;
-    gap: 6px;
+    gap: 8px;
 }
 
 .dep-box {
     background: #ffffff; 
-    padding: 3px 8px;
-    border-radius: 4px;
+    padding: 5px 12px; // More padding
+    border-radius: 6px;
     display: inline-flex;
     align-items: center;
     border: 1px solid #ddd;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
 }
 
 .dep-img {
-    height: 20px;
-    max-width: 85px;
+    height: 28px; // Increased from 20px
+    max-width: 100px;
     object-fit: contain;
 }
 
-/* Software Icons (Right Aligned) */
+/* Column 6: Software Icons */
 .repo-software {
     display: flex;
     justify-content: flex-end;
-    gap: 10px;
+    gap: 12px;
 }
 
 .soft-icon {
-    height: 28px;
+    height: 36px; // Increased from 28px
     width: auto;
     object-fit: contain;
-    filter: drop-shadow(0 1px 2px rgba(0,0,0,0.1));
+    filter: drop-shadow(0 2px 3px rgba(0,0,0,0.15));
 }
 
 // -------------------------------------------------------------------
 // 3. RESPONSIVE
 // -------------------------------------------------------------------
 
-@media (max-width: 1250px) {
+@media (max-width: 1400px) {
     .repo-row {
-        grid-template-columns: 80px 1.4fr 100px 100px 1.4fr 100px;
-        font-size: 0.9rem;
+        grid-template-columns: 90px 1.4fr 120px 120px 1.2fr 120px;
+        font-size: 0.95rem;
     }
 }
 
-@media (max-width: 950px) {
+@media (max-width: 1000px) {
     .repo-row {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
-        border-radius: 20px;
-        padding: 20px;
+        border-radius: 25px;
+        padding: 25px;
     }
     .repo-id-group, .repo-name, .repo-standards, .repo-license, .repo-deps, .repo-software {
-        margin-bottom: 10px;
+        margin-bottom: 12px;
     }
     .repo-software { 
         justify-content: flex-start; 
