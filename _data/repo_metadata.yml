@@ -42,7 +42,7 @@ S4:
   repo_url: "https://github.com/5G-MAG/rt-5gms-media-stream-handler"
   branch: "main"
   color: "#FFC000"
-  is_draft: true
+  is_auxiliary: true
   standards: []
   license: "5G-MAG PLv1.0"
   software: ["android"]
@@ -90,7 +90,7 @@ S8:
   repo_url: "https://github.com/5G-MAG/rt-5gms-examples"
   branch: "main"
   color: "#FFC000"
-  is_draft: true
+  is_auxiliary: true
   standards: []
   license: "5G-MAG PLv1.0"
   software: ["cloud", "docker", "linux"]
