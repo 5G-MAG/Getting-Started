@@ -4,6 +4,7 @@ title: Repositories
 parent: 5G Media Streaming
 has_children: false
 nav_order: 3
+repo_selection: ["S1", "S2", "S3", "S4", "S5", "S6", "S7", "S8"]
 ---
 
 <img src="../../assets/images/Banner_5GMS.png" /> 
@@ -14,7 +15,7 @@ nav_order: 3
 
 The following repositories are available. Please refer to the "Scope" section of the different projects for more context.
 
-<img src="../../assets/images/projects/5gms_repos.png" style="width: 80%">
+{% include architecture_table.html ids=page.repo_selection %}
 
 ---
 
