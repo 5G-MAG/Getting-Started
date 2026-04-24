@@ -1,146 +1,186 @@
+// --- EXISTING VARIABLES & BUTTONS ---
 $link-color: #00A0D2;
 $content-width: 100rem;
-.btn-video {
-  color: #FFFFFF !important;
-  background-color: #C80000 !important;
-}
-.btn-github {
-  color: #ffffff !important;
-  background-color: #000000 !important;
-}
-.btn-release {
-  color: #88D66C !important;
-  background-color: #000000 !important;
-}
-.btn-tutorial {
-  color: #FFFFFF !important;
-  background-color: #00A0D2 !important; 
-}
-.btn-5gms {
-  color: #000000 !important;
-  background-color: #FFC000 !important;
-}
-.btn-5gcsc {
-  color: #ffffff !important;
-  background-color: #FF0000 !important;
-}
-.btn-uedc {
-  color: #ffffff !important;
-  background-color: #D17F79 !important;
-}
-.btn-5gbc {
-  color: #ffffff !important;
-  background-color: #70AD47 !important;
-}
-.btn-5gbcea {
-  color: #ffffff !important;
-  background-color: #7030A0 !important;
-}
-.btn-5mbs {
-  color: #ffffff !important;
-  background-color: #1AB39F !important;
-}
-.btn-xr {
-  color: #ffffff !important;
-  background-color: #ED7D31 !important;
-}
-.btn-v3c {
-  color: #ffffff !important;
-  background-color: #CC3399 !important;
-}
-.btn-testbed {
-  color: #ffffff !important;
-  background-color: #90A008!important;
-}
-.btn-md {
-  color: #ffffff !important;
-  background-color: #385723 !important;
-}
-.btn-dvbi {
-  color: #ffffff !important;
-  background-color: #002060 !important;
-}
-.btn-3gpp {
-  color: #ffffff !important;
-  background-color: #0070C0 !important;
-}
-.btn-common {
-  color: #000000 !important;
-  background-color: #BFBFBF !important;
-}
+$mag-gold: #ffcc00;
 
-/* Container for the whole architecture list */
+.btn-video { color: #FFFFFF !important; background-color: #C80000 !important; }
+.btn-github { color: #ffffff !important; background-color: #000000 !important; }
+.btn-release { color: #88D66C !important; background-color: #000000 !important; }
+.btn-tutorial { color: #FFFFFF !important; background-color: #00A0D2 !important; }
+.btn-5gms { color: #000000 !important; background-color: #FFC000 !important; }
+.btn-5gcsc { color: #ffffff !important; background-color: #FF0000 !important; }
+.btn-uedc { color: #ffffff !important; background-color: #D17F79 !important; }
+.btn-5gbc { color: #ffffff !important; background-color: #70AD47 !important; }
+.btn-5gbcea { color: #ffffff !important; background-color: #7030A0 !important; }
+.btn-5mbs { color: #ffffff !important; background-color: #1AB39F !important; }
+.btn-xr { color: #ffffff !important; background-color: #ED7D31 !important; }
+.btn-v3c { color: #ffffff !important; background-color: #CC3399 !important; }
+.btn-testbed { color: #ffffff !important; background-color: #90A008 !important; }
+.btn-md { color: #ffffff !important; background-color: #385723 !important; }
+.btn-dvbi { color: #ffffff !important; background-color: #002060 !important; }
+.btn-3gpp { color: #ffffff !important; background-color: #0070C0 !important; }
+.btn-common { color: #000000 !important; background-color: #BFBFBF !important; }
+
+// --- IMPROVED ARCHITECTURE TABLE STYLES ---
+
+/* Main Container */
 .architecture-container {
     display: flex;
     flex-direction: column;
-    gap: 15px;
-    margin: 20px 0;
+    gap: 12px;
+    margin: 25px 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
 }
 
-/* Individual Row Styling */
+/* Enhanced Row Styling */
 .repo-row {
     display: grid;
-    /* Defines the column widths: ID, Name, Standards, License, Deps, Software */
-    grid-template-columns: 80px 2fr 1fr 1fr 2fr 1fr;
+    /* Precise column mapping: ID, Name, Standards, License, Dependencies, Software */
+    grid-template-columns: 85px 1.8fr 100px 140px 220px 120px;
+    grid-gap: 15px;
     align-items: center;
-    border: 2px solid #ffcc00; /* Gold border from your diagram */
-    border-radius: 50px;       /* Pill shape */
-    padding: 10px 20px;
+    border: 2px solid $mag-gold;
+    border-radius: 50px;
+    padding: 10px 25px;
     background-color: transparent;
-    min-height: 60px;
+    min-height: 65px;
+    transition: all 0.2s ease-in-out;
 }
 
-/* Dashed border for draft/early access repositories */
+/* Subtle interaction on hover */
+.repo-row:hover {
+    background-color: rgba(255, 192, 0, 0.05);
+    transform: translateX(4px);
+    box-shadow: 2px 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Dashed border for draft status (S4, S8) */
 .repo-row.dashed {
     border-style: dashed;
+    opacity: 0.9;
 }
 
-/* ID Circle */
+/* ID & Status Grouping */
+.repo-id-group {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
 .id-pill {
-    background-color: #ffcc00;
+    background-color: $mag-gold;
     color: #000;
-    font-weight: bold;
-    width: 35px;
-    height: 35px;
+    font-weight: 800;
+    width: 34px;
+    height: 34px;
     border-radius: 50%;
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    margin-right: 10px;
+    flex-shrink: 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
-/* Repo Link */
+.status-icon {
+    color: #2da44e; /* GitHub Success Green */
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+/* Typography for Name & Branch */
+.repo-name {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
 .repo-main-link {
     font-weight: 700;
+    font-size: 1.05rem;
     text-decoration: none;
-    color: inherit;
+    color: var(--header-color); /* Adaptive to theme */
+    line-height: 1.2;
 }
 
-/* Image/Logo Sizing */
-.std-logo, .soft-icon {
-    height: 30px;
+.repo-main-link:hover {
+    color: $link-color;
+    text-decoration: underline;
+}
+
+.branch-badge {
+    font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+    font-size: 0.7rem;
+    color: #888;
+    margin-top: 2px;
+}
+
+/* Center Standards Logos */
+.repo-standards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.std-logo {
+    height: 32px;
+    max-width: 80px;
     object-fit: contain;
+}
+
+/* License Text Style */
+.repo-license {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: $link-color;
+}
+
+/* Dependency "Pills" with White Backing */
+.repo-deps {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
 }
 
 .dep-box {
-    background: #fff;
-    padding: 4px 8px;
-    border-radius: 4px;
-    display: inline-block;
-    margin-right: 5px;
+    background: #ffffff;
+    padding: 3px 10px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    border: 1px solid #ddd;
 }
 
 .dep-img {
-    height: 25px;
+    height: 20px;
+    max-width: 85px;
     object-fit: contain;
 }
 
-/* Branch Badge */
-.branch-badge {
-    font-family: monospace;
-    font-size: 0.8rem;
-    background: rgba(255, 255, 255, 0.1);
-    padding: 2px 6px;
-    border-radius: 4px;
-    margin-left: 10px;
+/* Software Icons Aligned to Right */
+.repo-software {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.soft-icon {
+    height: 28px;
+    width: auto;
+    object-fit: contain;
+    /* Keeps icons punchy on dark/light backgrounds */
+    filter: drop-shadow(0 1px 2px rgba(0,0,0,0.1)); 
+}
+
+/* Responsive adjustment for mid-sized screens */
+@media (max-width: 1100px) {
+    .repo-row {
+        grid-template-columns: 80px 1.5fr 1fr 1fr;
+        grid-template-rows: auto auto;
+        border-radius: 20px;
+        padding: 15px;
+    }
+    .repo-deps, .repo-software {
+        grid-column: span 2;
+        justify-content: flex-start;
+    }
 }
