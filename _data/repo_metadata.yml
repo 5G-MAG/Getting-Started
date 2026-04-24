@@ -17,7 +17,7 @@ S2:
   repo_slug: "rt-5gms-application"
   display_name: "5GMS-Aware Application"
   repo_url: "https://github.com/5G-MAG/rt-5gms-application"
-  branch: "development"
+  branch: "main"
   color: "#FFC000"
   standards: ["3GPP"]
   license: "5G-MAG PL v1.0"
