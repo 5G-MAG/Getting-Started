@@ -95,7 +95,7 @@ $content-width: 100rem;
             box-shadow: 0 3px 6px rgba(0,0,0,0.1);
         }
 
-        /* FORCE STATUS COLORS */
+        /* STRICT STATUS COLORS */
         .status-icon {
             font-size: 1.3rem;
             display: flex;
@@ -118,7 +118,6 @@ $content-width: 100rem;
         flex-direction: column;
         .repo-main-link {
             font-weight: 700; font-size: 1.15rem; text-decoration: none; color: inherit;
-            &:hover { text-decoration: underline; }
         }
         .repo-slug-inline { font-size: 0.95rem; font-weight: 400; color: #999; margin-left: 6px; }
         .branch-badge { font-family: monospace; font-size: 0.75rem; color: #888; }
@@ -136,16 +135,28 @@ $content-width: 100rem;
         text-transform: uppercase; letter-spacing: 0.5px;
     }
 
-    /* Column 5: Dependencies */
+    /* Column 5: Dependencies (Fixed for Horizontal 1-Line) */
     .repo-deps {
-        display: flex; flex-wrap: wrap; gap: 8px;
-        .dep-box {
-            background: #fff; padding: 5px 12px; border-radius: 6px;
-            display: inline-flex; align-items: center; border: 1px solid #ddd;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-        }
-        .dep-img { height: 28px; max-width: 100px; object-fit: contain; }
+        display: flex; 
+        flex-direction: row;      /* Horizontal line */
+        flex-wrap: nowrap;        /* No stacking */
+        gap: 8px;
+        align-items: center;
+        overflow-x: hidden;       /* Clip if slightly too long */
     }
+
+    .dep-box {
+        background: #fff; 
+        padding: 5px 12px; 
+        border-radius: 6px;
+        display: inline-flex; 
+        align-items: center; 
+        border: 1px solid #ddd;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        flex-shrink: 0;           /* Prevents squishing */
+    }
+
+    .dep-img { height: 28px; max-width: 100px; object-fit: contain; }
 
     /* Column 6: Software */
     .repo-software {
