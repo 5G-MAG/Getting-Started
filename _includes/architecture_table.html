@@ -1,4 +1,13 @@
 <div class="architecture-container">
+  <div class="repo-header-row">
+    <div class="header-item">#</div>
+    <div class="header-item">Repository</div>
+    <div class="header-item">Standards</div>
+    <div class="header-item">License</div>
+    <div class="header-item">Dependencies</div>
+    <div class="header-item" style="text-align: right;">Software</div>
+  </div>
+
   {% for id in include.ids %}
     {% assign meta = site.data.repo_metadata[id] %}
     {% if meta %}
