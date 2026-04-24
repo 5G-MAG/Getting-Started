@@ -19,7 +19,7 @@ $content-width: 100rem;
 .btn-3gpp { color: #ffffff !important; background-color: #0070C0 !important; }
 .btn-common { color: #000000 !important; background-color: #BFBFBF !important; }
 
-// --- PR Dashboard Styles (Keep Original) ---
+// --- PR Dashboard Styles (Unchanged) ---
 .release-table {
   width: 100%; border-collapse: collapse; margin-top: 20px; table-layout: fixed;
   th { padding: 12px; text-align: left; border-bottom: 2px solid #eee; }
@@ -30,7 +30,7 @@ $content-width: 100rem;
 .blink-animation { animation: blinker 1.5s linear infinite; }
 @keyframes blinker { 50% { opacity: 0.4; } }
 
-// --- Architecture Table Styles (New, Sandboxed) ---
+// --- Architecture Table Styles ---
 .architecture-container {
     display: flex;
     flex-direction: column;
@@ -41,14 +41,13 @@ $content-width: 100rem;
 
 .repo-header-row, .repo-row {
     display: grid;
-    /* Uses fractions (fr) so columns shrink to fit your 100rem content width */
-    grid-template-columns: 80px 2fr 100px 120px 1.5fr 100px;
-    grid-gap: 15px;
+    grid-template-columns: 95px 1.8fr 140px 140px 240px 140px;
+    grid-gap: 20px;
     align-items: center;
 }
 
 .repo-header-row {
-    padding: 0 25px 10px 25px;
+    padding: 0 30px 10px 30px;
     border-bottom: 1px solid #eee;
     .header-item { font-weight: 800; text-transform: uppercase; font-size: 0.75rem; color: #888; }
 }
@@ -56,50 +55,60 @@ $content-width: 100rem;
 .repo-row {
     border: 2px solid; 
     border-radius: 60px;
-    padding: 12px 25px;
+    padding: 15px 30px;
     min-height: 80px;
     transition: transform 0.2s ease;
     &.auxiliary-dashed { border-style: dashed !important; }
-    &:hover { transform: translateX(5px); background-color: rgba(0,0,0,0.02); }
+    &:hover { transform: translateX(8px); background-color: rgba(255, 255, 255, 0.05); }
 }
 
 .repo-id-group { 
-    display: flex; align-items: center; gap: 8px; 
+    display: flex; align-items: center; gap: 10px; 
     .id-pill {
-        color: #000; font-weight: 800; width: 36px; height: 36px;
+        color: #000; font-weight: 800; width: 40px; height: 40px;
         border-radius: 50%; display: inline-flex; justify-content: center; align-items: center;
+        box-shadow: 0 3px 6px rgba(0,0,0,0.15);
     }
 }
 
-.status-public { color: #2da44e; }
-.status-private { color: #d29922; }
+/* Status Icon Colors - Explicitly Defined */
+.status-icon {
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+.status-public  { color: #2da44e !important; } // Standard GitHub Green
+.status-private { color: #d29922 !important; } // Standard GitHub Warning Orange
 
 .repo-name {
     display: flex; flex-direction: column;
-    .repo-main-link { font-weight: 700; font-size: 1.1rem; text-decoration: none; color: inherit; }
-    .repo-slug-inline { font-size: 0.9rem; color: #888; margin-left: 4px; }
+    .repo-main-link { font-weight: 700; font-size: 1.15rem; text-decoration: none; color: inherit; }
+    .repo-slug-inline { font-size: 0.95rem; color: #999; margin-left: 6px; }
+    .branch-badge { font-family: monospace; font-size: 0.75rem; color: #888; }
 }
 
 .repo-standards { 
-    display: flex; gap: 8px; justify-content: center; 
-    .std-logo { height: 36px; width: auto; object-fit: contain; }
+    display: flex; gap: 12px; justify-content: center; 
+    .std-logo { height: 42px; width: auto; max-width: 70px; object-fit: contain; }
 }
 
-.repo-license { font-weight: 700; font-size: 0.9rem; color: #00A0D2 !important; }
+.repo-license { font-weight: 700; font-size: 0.95rem; color: #00A0D2 !important; text-transform: uppercase; }
 
 .repo-deps {
-    display: flex; flex-wrap: wrap; gap: 6px;
-    .dep-box { background: #fff; padding: 4px 8px; border-radius: 4px; border: 1px solid #ddd; }
-    .dep-img { height: 24px; max-width: 80px; object-fit: contain; }
+    display: flex; flex-wrap: wrap; gap: 8px;
+    .dep-box { background: #fff; padding: 5px 12px; border-radius: 6px; border: 1px solid #ddd; }
+    .dep-img { height: 28px; max-width: 100px; object-fit: contain; }
 }
 
 .repo-software { 
-    display: flex; justify-content: flex-end; gap: 10px; 
-    .soft-icon { height: 32px; width: auto; }
+    display: flex; justify-content: flex-end; gap: 12px; 
+    .soft-icon { height: 36px; filter: drop-shadow(0 2px 3px rgba(0,0,0,0.15)); }
 }
 
-/* Mobile Fallback */
+@media (max-width: 1400px) {
+    .repo-header-row, .repo-row { grid-template-columns: 90px 1.4fr 120px 120px 1.2fr 120px; }
+}
+
 @media (max-width: 1000px) {
     .repo-header-row { display: none; }
-    .repo-row { display: flex; flex-direction: column; align-items: flex-start; border-radius: 20px; }
+    .repo-row { display: flex; flex-direction: column; align-items: flex-start; border-radius: 25px; padding: 25px; }
 }
