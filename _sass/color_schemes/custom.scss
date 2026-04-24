@@ -68,3 +68,79 @@ $content-width: 100rem;
   color: #000000 !important;
   background-color: #BFBFBF !important;
 }
+
+/* Container for the whole architecture list */
+.architecture-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin: 20px 0;
+}
+
+/* Individual Row Styling */
+.repo-row {
+    display: grid;
+    /* Defines the column widths: ID, Name, Standards, License, Deps, Software */
+    grid-template-columns: 80px 2fr 1fr 1fr 2fr 1fr;
+    align-items: center;
+    border: 2px solid #ffcc00; /* Gold border from your diagram */
+    border-radius: 50px;       /* Pill shape */
+    padding: 10px 20px;
+    background-color: transparent;
+    min-height: 60px;
+}
+
+/* Dashed border for draft/early access repositories */
+.repo-row.dashed {
+    border-style: dashed;
+}
+
+/* ID Circle */
+.id-pill {
+    background-color: #ffcc00;
+    color: #000;
+    font-weight: bold;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+}
+
+/* Repo Link */
+.repo-main-link {
+    font-weight: 700;
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Image/Logo Sizing */
+.std-logo, .soft-icon {
+    height: 30px;
+    object-fit: contain;
+}
+
+.dep-box {
+    background: #fff;
+    padding: 4px 8px;
+    border-radius: 4px;
+    display: inline-block;
+    margin-right: 5px;
+}
+
+.dep-img {
+    height: 25px;
+    object-fit: contain;
+}
+
+/* Branch Badge */
+.branch-badge {
+    font-family: monospace;
+    font-size: 0.8rem;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 2px 6px;
+    border-radius: 4px;
+    margin-left: 10px;
+}
