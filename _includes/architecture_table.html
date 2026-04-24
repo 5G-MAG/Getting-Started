@@ -9,7 +9,7 @@
   </div>
 
   {% comment %} 
-    Clean up the input string: remove all spaces, then split by comma.
+    We clean the input string to ensure no spaces interfere with the lookup 
   {% endcomment %}
   {% assign id_list = include.ids | remove: " " | split: "," %}
 
@@ -57,13 +57,15 @@
         </div>
 
         <div class="repo-deps">
-          {% for dep in meta.dependencies %}
-            <div class="dep-box">
-              <img src="{{ site.baseurl }}/assets/deps/{{ dep }}.png" 
-                   class="dep-img" 
-                   alt="{{ dep }}">
-            </div>
-          {% endfor %}
+          {% if meta.dependencies %}
+            {% for dep in meta.dependencies %}
+              <div class="dep-box">
+                <img src="{{ site.baseurl }}/assets/deps/{{ dep }}.png" 
+                     class="dep-img" 
+                     alt="{{ dep }}">
+              </div>
+            {% endfor %}
+          {% endif %}
         </div>
 
         <div class="repo-software">
