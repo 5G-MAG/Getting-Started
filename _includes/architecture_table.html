@@ -1,0 +1,42 @@
+<div class="architecture-container">
+  {% for id in include.ids %}
+    {% assign meta = site.data.repo_metadata[id] %}
+    {% if meta %}
+      <div class="repo-row {% if meta.is_draft %}dashed{% endif %}">
+        
+        <div class="repo-id-group">
+          <div class="id-pill">{{ id }}</div>
+          <div class="status-icon">{% if meta.public %}✔{% else %}⚠️{% endif %}</div>
+        </div>
+
+        <div class="repo-name">
+          <a href="{{ meta.repo_url }}" target="_blank" class="repo-main-link">{{ meta.display_name }}</a>
+          <span class="branch-badge">{{ meta.branch }}</span>
+        </div>
+
+        <div class="repo-standards">
+          {% for std in meta.standards %}
+            <img src="{{ site.baseurl }}/assets/logos/{{ std }}.png" class="std-logo" alt="{{ std }}">
+          {% endfor %}
+        </div>
+
+        <div class="repo-license">{{ meta.license }}</div>
+
+        <div class="repo-deps">
+          {% for dep in meta.dependencies %}
+            <div class="dep-box">
+              <img src="{{ site.baseurl }}/assets/deps/{{ dep }}.png" class="dep-img" alt="{{ dep }}">
+            </div>
+          {% endfor %}
+        </div>
+
+        <div class="repo-software">
+          {% for icon in meta.software %}
+            <img src="{{ site.baseurl }}/assets/icons/{{ icon }}.png" class="soft-icon" title="{{ icon }}">
+          {% endfor %}
+        </div>
+
+      </div>
+    {% endif %}
+  {% endfor %}
+</div>
