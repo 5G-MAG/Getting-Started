@@ -37,16 +37,6 @@ nav_order: 14
   .dot-blue { background-color: #0366d6; }
   .stats-sub { font-size: 0.8em; color: #888; display: block; }
 
-  /* Dashboard button styling consistency */
-  .btn-blue {
-    background-color: #0366d6;
-    color: white !important;
-    padding: 8px 16px;
-    border-radius: 4px;
-    text-decoration: none;
-    font-size: 0.9em;
-    display: inline-block;
-  }
 </style>
 
 <img src="../../assets/images/Banner_V3C_Platform.png" /> 
