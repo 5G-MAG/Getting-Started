@@ -2,10 +2,13 @@
   {% for id in include.ids %}
     {% assign meta = site.data.repo_metadata[id] %}
     {% if meta %}
-      <div class="repo-row {% if meta.is_draft %}dashed{% endif %}">
+      {% assign row_color = meta.color | default: "#ffcc00" %}
+      
+      <div class="repo-row {% if meta.is_draft %}dashed{% endif %}" 
+           style="border-color: {{ row_color }};">
         
         <div class="repo-id-group">
-          <div class="id-pill">{{ id }}</div>
+          <div class="id-pill" style="background-color: {{ row_color }};">{{ id }}</div>
           <div class="status-icon">{% if meta.public %}✔{% else %}⚠️{% endif %}</div>
         </div>
 
@@ -20,7 +23,7 @@
           {% endfor %}
         </div>
 
-        <div class="repo-license">{{ meta.license }}</div>
+        <div class="repo-license" style="color: {{ row_color }};">{{ meta.license }}</div>
 
         <div class="repo-deps">
           {% for dep in meta.dependencies %}
@@ -32,10 +35,9 @@
 
         <div class="repo-software">
           {% for icon in meta.software %}
-            <img src="{{ site.baseurl }}/assets/icons/{{ icon }}.png" class="soft-icon" title="{{ icon }}">
+            <img src="{{ site.baseurl }}/assets/icons/{{ icon }}.png" class="soft-icon" title="{{ icon | capitalize }}">
           {% endfor %}
         </div>
-
       </div>
     {% endif %}
   {% endfor %}
