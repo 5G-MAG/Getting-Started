@@ -8,9 +8,12 @@
     <div class="header-item" style="text-align: right;">Software</div>
   </div>
 
-  {% for id in include.ids %}
+  {% for id in include.ids | split: "," %}
     {% assign meta = site.data.repo_metadata[id] %}
     {% if meta %}
+      {% comment %} 
+        Primary color logic: Defaults to MAG Gold if not in YAML.
+      {% endcomment %}
       {% assign row_color = meta.color | default: "#ffcc00" %}
       
       <div class="repo-row {% if meta.is_auxiliary %}auxiliary-dashed{% endif %}" 
@@ -43,7 +46,8 @@
           {% for std in meta.standards %}
             <img src="{{ site.baseurl }}/assets/logos/{{ std }}.png" 
                  class="std-logo" 
-                 alt="{{ std }}">
+                 alt="{{ std }}"
+                 title="{{ std }}">
           {% endfor %}
         </div>
 
@@ -56,7 +60,8 @@
             <div class="dep-box">
               <img src="{{ site.baseurl }}/assets/deps/{{ dep }}.png" 
                    class="dep-img" 
-                   alt="{{ dep }}">
+                   alt="{{ dep }}"
+                   title="{{ dep }}">
             </div>
           {% endfor %}
         </div>
@@ -65,9 +70,11 @@
           {% for icon in meta.software %}
             <img src="{{ site.baseurl }}/assets/icons/{{ icon }}.png" 
                  class="soft-icon" 
-                 alt="{{ icon }}">
+                 alt="{{ icon }}"
+                 title="{{ icon | capitalize }}">
           {% endfor %}
         </div>
+
       </div>
     {% endif %}
   {% endfor %}
