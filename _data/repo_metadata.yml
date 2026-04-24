@@ -20,7 +20,7 @@ S2:
   branch: "development"
   color: "#FFC000"
   standards: ["3GPP"]
-  license: "5G-MAG PLv1.0"
+  license: "5G-MAG PL v1.0"
   software: ["APK", "Android"]
   public: true
 
@@ -31,7 +31,7 @@ S3:
   branch: "main"
   color: "#FFC000"
   standards: ["3GPP"]
-  license: "5G-MAG PLv1.0"
+  license: "5G-MAG PL v1.0"
   dependencies: ["ExoPlayer"]
   software: ["Android"]
   public: true
@@ -44,7 +44,7 @@ S4:
   color: "#FFC000"
   is_auxiliary: true
   standards: ["3GPP"]
-  license: "5G-MAG PLv1.0"
+  license: "5G-MAG PL v1.0"
   software: ["Android"]
   public: true
 
@@ -55,7 +55,7 @@ S5:
   branch: "main"
   color: "#FFC000"
   standards: ["3GPP"]
-  license: "5G-MAG PLv1.0"
+  license: "5G-MAG PL v1.0"
   dependencies: ["Open5GS", "OpenAPI"]
   software: ["Cloud", "Linux"]
   public: true
@@ -67,7 +67,7 @@ S6:
   branch: "main"
   color: "#FFC000"
   standards: ["3GPP"]
-  license: "5G-MAG PLv1.0"
+  license: "5G-MAG PL v1.0"
   dependencies: ["NGINX", "OpenResty"]
   software: ["Cloud", "Linux"]
   public: true
@@ -79,7 +79,7 @@ S7:
   branch: "main"
   color: "#FFC000"
   standards: ["3GPP"]
-  license: "5G-MAG PLv1.0"
+  license: "5G-MAG PL v1.0"
   dependencies: ["Postman"]
   software: ["API", "Web", "Cloud", "Linux"]
   public: true
@@ -92,6 +92,6 @@ S8:
   color: "#FFC000"
   is_auxiliary: true
   standards: []
-  license: "5G-MAG PLv1.0"
+  license: "5G-MAG PL v1.0"
   software: ["Cloud", "Docker", "Linux"]
   public: true
