@@ -1,9 +1,9 @@
 // -------------------------------------------------------------------
-// 1. BRAND COLORS & BUTTONS
+// 1. BRAND COLORS & BUTTONS (Existing)
 // -------------------------------------------------------------------
 $link-color: #00A0D2;
 $content-width: 100rem;
-$mag-blue: rgb(0, 160, 210); // Specific fixed License Blue
+$mag-blue: rgb(0, 160, 210); // Fixed Blue for License text
 
 .btn-video    { color: #FFFFFF !important; background-color: #C80000 !important; }
 .btn-github   { color: #ffffff !important; background-color: #000000 !important; }
@@ -37,11 +37,11 @@ $mag-blue: rgb(0, 160, 210); // Specific fixed License Blue
 
 .repo-row {
     display: grid;
-    /* Column setup: ID/Status, Name/Slug, Standards, License, Dependencies, Software icons */
-    grid-template-columns: 85px 1.8fr 100px 140px 220px 120px;
+    /* Grid: ID/Status, Name/Slug, Standards, License, Dependencies, Software */
+    grid-template-columns: 85px 1.8fr 120px 140px 220px 120px;
     grid-gap: 15px;
     align-items: center;
-    border: 2px solid; /* Color driven by inline style in HTML from YAML */
+    border: 2px solid; /* Color from YAML inline style */
     border-radius: 50px;
     padding: 10px 25px;
     background-color: transparent;
@@ -49,19 +49,18 @@ $mag-blue: rgb(0, 160, 210); // Specific fixed License Blue
     transition: transform 0.2s ease-in-out, background-color 0.2s ease;
 }
 
-/* Interactivity */
 .repo-row:hover {
     transform: translateX(5px);
     background-color: rgba(255, 255, 255, 0.05);
 }
 
-/* Auxiliary Repository Styling (Dashed Borders) */
+/* Auxiliary Style (Dashed) */
 .repo-row.auxiliary-dashed {
     border-style: dashed !important;
     opacity: 0.85;
 }
 
-/* Column 1: ID Pillar & Status symbols */
+/* ID & Status symbols */
 .repo-id-group {
     display: flex;
     align-items: center;
@@ -88,10 +87,10 @@ $mag-blue: rgb(0, 160, 210); // Specific fixed License Blue
     align-items: center;
 }
 
-.status-public  { color: #2da44e; } // Green Check
-.status-private { color: #d29922; } // Yellow Warning
+.status-public  { color: #2da44e; }
+.status-private { color: #d29922; }
 
-/* Column 2: Name & Slug */
+/* Name & Repository Slug */
 .repo-name {
     display: flex;
     flex-direction: column;
@@ -118,26 +117,28 @@ $mag-blue: rgb(0, 160, 210); // Specific fixed License Blue
 }
 
 .branch-badge {
-    font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+    font-family: "SFMono-Regular", Consolas, monospace;
     font-size: 0.7rem;
     color: #888;
     margin-top: 2px;
 }
 
-/* Column 3: Standards */
+/* Standards Column (Supports Multiple Icons) */
 .repo-standards {
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 8px; // Space between multiple standard logos
 }
 
 .std-logo {
-    height: 32px;
-    max-width: 80px;
+    height: 30px;
+    width: auto;
+    max-width: 50px;
     object-fit: contain;
 }
 
-/* Column 4: License (Always MAG Blue) */
+/* License (MAG Blue) */
 .repo-license {
     font-size: 0.85rem;
     font-weight: 700;
@@ -145,7 +146,7 @@ $mag-blue: rgb(0, 160, 210); // Specific fixed License Blue
     text-transform: uppercase;
 }
 
-/* Column 5: Dependencies */
+/* Dependencies */
 .repo-deps {
     display: flex;
     flex-wrap: wrap;
@@ -153,7 +154,7 @@ $mag-blue: rgb(0, 160, 210); // Specific fixed License Blue
 }
 
 .dep-box {
-    background: #ffffff; // High contrast for dark dependency logos
+    background: #ffffff; 
     padding: 3px 8px;
     border-radius: 4px;
     display: inline-flex;
@@ -167,7 +168,7 @@ $mag-blue: rgb(0, 160, 210); // Specific fixed License Blue
     object-fit: contain;
 }
 
-/* Column 6: Software (Right Aligned) */
+/* Software Icons (Right Aligned) */
 .repo-software {
     display: flex;
     justify-content: flex-end;
@@ -182,18 +183,17 @@ $mag-blue: rgb(0, 160, 210); // Specific fixed License Blue
 }
 
 // -------------------------------------------------------------------
-// 3. RESPONSIVE QUERIES
+// 3. RESPONSIVE
 // -------------------------------------------------------------------
 
-@media (max-width: 1200px) {
+@media (max-width: 1250px) {
     .repo-row {
-        grid-template-columns: 80px 1.4fr 80px 100px 1.4fr 100px;
+        grid-template-columns: 80px 1.4fr 100px 100px 1.4fr 100px;
         font-size: 0.9rem;
-        padding: 10px 15px;
     }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 950px) {
     .repo-row {
         display: flex;
         flex-direction: column;
