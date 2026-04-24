@@ -93,5 +93,5 @@ S8:
   is_auxiliary: true
   standards: []
   license: "5G-MAG PLv1.0"
-  software: ["cloud", "docker", "linux"]
+  software: ["Cloud", "Docker", "Linux"]
   public: true
