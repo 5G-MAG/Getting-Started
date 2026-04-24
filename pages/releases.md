@@ -52,7 +52,7 @@ nav_order: 0
     <tr>
       <td><a href="{{ item.repo_url }}" class="btn">{{ item.short_name }}</a></td>
       <td><a href="{{ item.url }}" class="btn">{{ item.tag }}</a></td>
-      <td>{{ item.date }}</td>
+      <td><strong>{{ item.date }}</strong></td>
     </tr>
     {% endfor %}
   </tbody>
@@ -79,7 +79,7 @@ nav_order: 0
     <tr>
       <td><a href="{{ item.repo_url }}" class="btn">{{ item.short_name }}</a></td>
       <td><a href="{{ item.url }}" class="btn">{{ item.tag }}</a></td>
-      <td>{{ item.date }}</td>
+      <td><strong>{{ item.date }}</strong></td>
     </tr>
       {% endif %}
     {% endfor %}
@@ -106,7 +106,7 @@ nav_order: 0
     <tr>
       <td><a href="{{ item.repo_url }}" class="btn">{{ item.short_name }}</a></td>
       <td><a href="{{ item.url }}" class="btn">{{ item.tag }}</a></td>
-      <td>{{ item.date }}</td>
+      <td><strong>{{ item.date }}</strong></td>
     </tr>
     {% endfor %}
   </tbody>
@@ -132,7 +132,7 @@ nav_order: 0
     <tr>
       <td><a href="{{ item.repo_url }}" class="btn">{{ item.short_name }}</a></td>
       <td><a href="{{ item.url }}" class="btn">{{ item.tag }}</a></td>
-      <td>{{ item.date }}</td>
+      <td><strong>{{ item.date }}</strong></td>
     </tr>
     {% endfor %}
   </tbody>
@@ -158,7 +158,7 @@ nav_order: 0
     <tr>
       <td><a href="{{ item.repo_url }}" class="btn">{{ item.short_name }}</a></td>
       <td><a href="{{ item.url }}" class="btn">{{ item.tag }}</a></td>
-      <td>{{ item.date }}</td>
+      <td><strong>{{ item.date }}</strong></td>
     </tr>
     {% endfor %}
   </tbody>
@@ -184,7 +184,7 @@ nav_order: 0
     <tr>
       <td><a href="{{ item.repo_url }}" class="btn">{{ item.short_name }}</a></td>
       <td><a href="{{ item.url }}" class="btn">{{ item.tag }}</a></td>
-      <td>{{ item.date }}</td>
+      <td><strong>{{ item.date }}</strong></td>
     </tr>
     {% endfor %}
   </tbody>
@@ -210,7 +210,7 @@ nav_order: 0
     <tr>
       <td><a href="{{ item.repo_url }}" class="btn">{{ item.short_name }}</a></td>
       <td><a href="{{ item.url }}" class="btn">{{ item.tag }}</a></td>
-      <td>{{ item.date }}</td>
+      <td><strong>{{ item.date }}</strong></td>
     </tr>
     {% endfor %}
   </tbody>
@@ -236,7 +236,7 @@ nav_order: 0
     <tr>
       <td><a href="{{ item.repo_url }}" class="btn">{{ item.short_name }}</a></td>
       <td><a href="{{ item.url }}" class="btn">{{ item.tag }}</a></td>
-      <td>{{ item.date }}</td>
+      <td><strong>{{ item.date }}</strong></td>
     </tr>
     {% endfor %}
   </tbody>
@@ -262,7 +262,7 @@ nav_order: 0
     <tr>
       <td><a href="{{ item.repo_url }}" class="btn">{{ item.short_name }}</a></td>
       <td><a href="{{ item.url }}" class="btn">{{ item.tag }}</a></td>
-      <td>{{ item.date }}</td>
+      <td><strong>{{ item.date }}</strong></td>
     </tr>
     {% endfor %}
   </tbody>
@@ -288,7 +288,7 @@ nav_order: 0
     <tr>
       <td><a href="{{ item.repo_url }}" class="btn">{{ item.short_name }}</a></td>
       <td><a href="{{ item.url }}" class="btn">{{ item.tag }}</a></td>
-      <td>{{ item.date }}</td>
+      <td><strong>{{ item.date }}</strong></td>
     </tr>
     {% endfor %}
   </tbody>
@@ -314,7 +314,7 @@ nav_order: 0
     <tr>
       <td><a href="{{ item.repo_url }}" class="btn">{{ item.short_name }}</a></td>
       <td><a href="{{ item.url }}" class="btn">{{ item.tag }}</a></td>
-      <td>{{ item.date }}</td>
+      <td><strong>{{ item.date }}</strong></td>
     </tr>
     {% endfor %}
   </tbody>
@@ -340,7 +340,7 @@ nav_order: 0
     <tr>
       <td><a href="{{ item.repo_url }}" class="btn">{{ item.short_name }}</a></td>
       <td><a href="{{ item.url }}" class="btn">{{ item.tag }}</a></td>
-      <td>{{ item.date }}</td>
+      <td><strong>{{ item.date }}</strong></td>
     </tr>
     {% endfor %}
   </tbody>
@@ -366,7 +366,7 @@ nav_order: 0
     <tr>
       <td><a href="{{ item.repo_url }}" class="btn">{{ item.short_name }}</a></td>
       <td><a href="{{ item.url }}" class="btn">{{ item.tag }}</a></td>
-      <td>{{ item.date }}</td>
+      <td><strong>{{ item.date }}</strong></td>
     </tr>
     {% endfor %}
   </tbody>
@@ -392,7 +392,7 @@ nav_order: 0
     <tr>
       <td><a href="{{ item.repo_url }}" class="btn">{{ item.short_name }}</a></td>
       <td><a href="{{ item.url }}" class="btn">{{ item.tag }}</a></td>
-      <td>{{ item.date }}</td>
+      <td><strong>{{ item.date }}</strong></td>
     </tr>
     {% endfor %}
   </tbody>
@@ -418,7 +418,7 @@ nav_order: 0
     <tr>
       <td><a href="{{ item.repo_url }}" class="btn">{{ item.short_name }}</a></td>
       <td><a href="{{ item.url }}" class="btn">{{ item.tag }}</a></td>
-      <td>{{ item.date }}</td>
+      <td><strong>{{ item.date }}</strong></td>
     </tr>
     {% endfor %}
   </tbody>
