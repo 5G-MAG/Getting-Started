@@ -4,89 +4,89 @@
 
 S1:
   repo_slug: "rt-5gms-application-provider"
-  display_name: "Application Provider"
+  display_name: "5GMS Application Provider"
   repo_url: "https://github.com/5G-MAG/rt-5gms-application-provider"
   branch: "main"
   color: "#FFC000"
   standards: ["3GPP"]
   license: "Multiple"
-  software: ["apk", "android"]
+  software: ["APK", "Android"]
   public: true
 
 S2:
   repo_slug: "rt-5gms-application"
-  display_name: "5GMS Application"
+  display_name: "5GMS-Aware Application"
   repo_url: "https://github.com/5G-MAG/rt-5gms-application"
   branch: "development"
   color: "#FFC000"
   standards: ["3GPP"]
   license: "5G-MAG PLv1.0"
-  software: ["apk", "android"]
+  software: ["APK", "Android"]
   public: true
 
 S3:
   repo_slug: "rt-5gms-media-session-handler"
-  display_name: "Media Session Handler"
+  display_name: "5GMS Media Session Handler"
   repo_url: "https://github.com/5G-MAG/rt-5gms-media-session-handler"
   branch: "main"
   color: "#FFC000"
   standards: ["3GPP"]
   license: "5G-MAG PLv1.0"
   dependencies: ["ExoPlayer"]
-  software: ["android"]
+  software: ["Android"]
   public: true
 
 S4:
   repo_slug: "rt-5gms-media-stream-handler"
-  display_name: "Media Stream Handler"
+  display_name: "5GMS Media Stream Handler"
   repo_url: "https://github.com/5G-MAG/rt-5gms-media-stream-handler"
   branch: "main"
   color: "#FFC000"
   is_auxiliary: true
-  standards: []
+  standards: ["3GPP"]
   license: "5G-MAG PLv1.0"
-  software: ["android"]
+  software: ["Android"]
   public: true
 
 S5:
   repo_slug: "rt-5gms-application-function"
-  display_name: "Application Function"
+  display_name: "5GMS Application Function"
   repo_url: "https://github.com/5G-MAG/rt-5gms-application-function"
   branch: "main"
   color: "#FFC000"
   standards: ["3GPP"]
   license: "5G-MAG PLv1.0"
   dependencies: ["Open5GS", "OpenAPI"]
-  software: ["cloud", "linux"]
+  software: ["Cloud", "Linux"]
   public: true
 
 S6:
   repo_slug: "rt-5gms-application-server"
-  display_name: "Application Server"
+  display_name: "5GMS Application Server"
   repo_url: "https://github.com/5G-MAG/rt-5gms-application-server"
   branch: "main"
   color: "#FFC000"
   standards: ["3GPP"]
   license: "5G-MAG PLv1.0"
   dependencies: ["NGINX", "OpenResty"]
-  software: ["cloud", "linux"]
+  software: ["Cloud", "Linux"]
   public: true
 
 S7:
-  repo_slug: "rt-5gc-service-consumers"
-  display_name: "Management Tools"
-  repo_url: "https://github.com/5G-MAG/rt-5gc-service-consumers"
+  repo_slug: "rt-5gms-application-provider"
+  display_name: "5GMS Application Provider"
+  repo_url: "https://github.com/5G-MAG/rt-5gms-application-provider"
   branch: "main"
-  color: "#FF0000"
+  color: "#FFC000"
   standards: ["3GPP"]
   license: "5G-MAG PLv1.0"
   dependencies: ["Postman"]
-  software: ["api", "web", "cloud", "linux"]
+  software: ["Api", "Web", "Cloud", "Linux"]
   public: true
 
 S8:
   repo_slug: "rt-5gms-examples"
-  display_name: "Edge Components"
+  display_name: "5GMS Example Files"
   repo_url: "https://github.com/5G-MAG/rt-5gms-examples"
   branch: "main"
   color: "#FFC000"
