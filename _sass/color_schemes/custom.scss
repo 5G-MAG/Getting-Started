@@ -1,9 +1,10 @@
 // -------------------------------------------------------------------
 // 1. BRAND COLORS & BUTTONS
 // -------------------------------------------------------------------
-$link-color: #00A0D2;
-$mag-blue: rgb(0, 160, 210); 
+$mag-link-blue: #00A0D2;
+$mag-license-blue: rgb(0, 160, 210); 
 
+// Buttons (Scoped to specific classes)
 .btn-video    { color: #FFFFFF !important; background-color: #C80000 !important; }
 .btn-github   { color: #ffffff !important; background-color: #000000 !important; }
 .btn-release  { color: #88D66C !important; background-color: #000000 !important; }
@@ -23,7 +24,7 @@ $mag-blue: rgb(0, 160, 210);
 .btn-common   { color: #000000 !important; background-color: #BFBFBF !important; }
 
 // -------------------------------------------------------------------
-// 2. ARCHITECTURE TABLE SYSTEM
+// 2. ARCHITECTURE TABLE SYSTEM (Fluid & Sandboxed)
 // -------------------------------------------------------------------
 
 .architecture-container {
@@ -31,103 +32,82 @@ $mag-blue: rgb(0, 160, 210);
     flex-direction: column;
     gap: 15px;
     margin: 30px 0;
-    width: 100%;           // Contained to page width
-    max-width: 100%;       // Prevents layout breaking
+    width: 100%;           // Fills the parent container
+    max-width: 100%;       // Prevents breaking site width
     box-sizing: border-box;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    font-family: sans-serif;
 }
 
-/* Legend Header Row - Matches .repo-row grid exactly */
-.repo-header-row {
-    display: grid;
-    grid-template-columns: 95px 1.8fr 140px 140px 240px 140px;
-    grid-gap: 20px;
-    padding: 0 30px 10px 30px;
-    border-bottom: 1px solid rgba(128, 128, 128, 0.3);
-    margin-bottom: 5px;
-}
-
-.header-item {
-    font-weight: 800;
-    text-transform: uppercase;
-    font-size: 0.75rem;
-    letter-spacing: 1px;
-    color: #888;
-}
-
-/* Data Rows */
+/* Fluid Grid Definition */
+.repo-header-row, 
 .repo-row {
     display: grid;
-    grid-template-columns: 95px 1.8fr 140px 140px 240px 140px;
-    grid-gap: 20px;
+    /* ID, Name (Flexible), Standards, License, Deps (Flexible), Software */
+    grid-template-columns: 80px 2.5fr 100px 120px 2fr 100px;
+    grid-gap: 15px;
     align-items: center;
-    border: 2px solid; 
-    border-radius: 60px;
-    padding: 15px 30px;
-    background-color: transparent;
-    min-height: 80px;
-    transition: transform 0.2s ease-in-out, background-color 0.2s ease;
     box-sizing: border-box;
 }
 
-.repo-row:hover {
-    transform: translateX(8px);
-    background-color: rgba(255, 255, 255, 0.07);
+.repo-header-row {
+    padding: 0 20px 10px 20px;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.2);
 }
 
+.repo-row {
+    border: 2px solid; 
+    border-radius: 50px;
+    padding: 12px 20px;
+    min-height: 70px;
+    transition: transform 0.2s ease;
+    background-color: transparent;
+    overflow: hidden; // Prevents content from leaking out
+}
+
+.repo-row:hover { transform: translateX(5px); background: rgba(255,255,255,0.05); }
 .repo-row.auxiliary-dashed { border-style: dashed !important; }
 
-/* Components */
-.repo-id-group { display: flex; align-items: center; gap: 10px; }
+/* Sub-components */
+.header-item { font-weight: 800; text-transform: uppercase; font-size: 0.7rem; color: #888; }
+.repo-id-group { display: flex; align-items: center; gap: 8px; }
 .id-pill {
-    color: #000; font-weight: 800; width: 40px; height: 40px;
-    font-size: 1.1rem; border-radius: 50%; display: inline-flex;
-    justify-content: center; align-items: center; flex-shrink: 0;
-    box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+    color: #000; font-weight: 800; width: 34px; height: 34px;
+    border-radius: 50%; display: inline-flex; justify-content: center; align-items: center; flex-shrink: 0;
 }
-
-.status-icon { font-size: 1.3rem; }
-.status-public  { color: #2da44e; }
+.status-icon { font-size: 1.1rem; }
+.status-public { color: #2da44e; }
 .status-private { color: #d29922; }
 
 .repo-name { display: flex; flex-direction: column; min-width: 0; }
-.repo-main-link { font-weight: 700; font-size: 1.15rem; text-decoration: none; color: inherit; }
-.repo-slug-inline { font-size: 0.95rem; font-weight: 400; color: #999; margin-left: 6px; }
-
-.repo-standards { display: flex; justify-content: center; align-items: center; gap: 12px; }
-.std-logo { height: 42px; width: auto; max-width: 70px; object-fit: contain; }
-
-.repo-license { font-size: 0.95rem; font-weight: 700; color: $mag-blue !important; text-transform: uppercase; }
-
-.repo-deps { display: flex; flex-wrap: wrap; gap: 8px; }
-.dep-box { background: #fff; padding: 5px 12px; border-radius: 6px; display: inline-flex; align-items: center; border: 1px solid #ddd; }
-.dep-img { height: 28px; max-width: 100px; object-fit: contain; }
-
-.repo-software { display: flex; justify-content: flex-end; gap: 12px; }
-.soft-icon { height: 36px; filter: drop-shadow(0 2px 3px rgba(0,0,0,0.15)); }
-
-// -------------------------------------------------------------------
-// 3. RESPONSIVE
-// -------------------------------------------------------------------
-
-@media (max-width: 1400px) {
-    .repo-header-row, .repo-row {
-        grid-template-columns: 90px 1.4fr 120px 120px 1.2fr 120px;
-        font-size: 0.95rem;
-    }
+.repo-main-link { 
+    font-weight: 700; font-size: 1rem; color: inherit; text-decoration: none;
+    white-space: nowrap; overflow: hidden; text-overflow: ellipsis; 
 }
+.repo-slug-inline { font-size: 0.85rem; font-weight: 400; color: #888; margin-left: 4px; }
 
-@media (max-width: 1000px) {
+.repo-standards { display: flex; gap: 8px; justify-content: center; }
+.std-logo { height: 28px; width: auto; max-width: 60px; object-fit: contain; }
+
+.repo-license { font-size: 0.85rem; font-weight: 700; color: $mag-license-blue !important; }
+
+.repo-deps { display: flex; flex-wrap: wrap; gap: 6px; }
+.dep-box { background: #fff; padding: 3px 8px; border-radius: 4px; border: 1px solid #ddd; }
+.dep-img { height: 20px; max-width: 80px; object-fit: contain; }
+
+.repo-software { display: flex; justify-content: flex-end; gap: 8px; }
+.soft-icon { height: 30px; width: auto; }
+
+// -------------------------------------------------------------------
+// 3. RESPONSIVE (Collapse for mobile)
+// -------------------------------------------------------------------
+@media (max-width: 1050px) {
     .repo-header-row { display: none; }
-    .repo-row {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        border-radius: 25px;
-        padding: 25px;
+    .repo-row { 
+        display: flex; 
+        flex-direction: column; 
+        align-items: flex-start; 
+        border-radius: 20px;
+        padding: 20px;
     }
-    .repo-id-group, .repo-name, .repo-standards, .repo-license, .repo-deps, .repo-software {
-        margin-bottom: 12px;
-    }
-    .repo-software { justify-content: flex-start; width: 100%; }
+    .repo-software { justify-content: flex-start; margin-top: 10px; }
 }
