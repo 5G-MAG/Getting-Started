@@ -2,42 +2,63 @@
   {% for id in include.ids %}
     {% assign meta = site.data.repo_metadata[id] %}
     {% if meta %}
+      {% comment %} 
+        Set the primary color for this row. 
+        Defaults to MAG Gold if not specified in YAML.
+      {% endcomment %}
       {% assign row_color = meta.color | default: "#ffcc00" %}
       
-      <div class="repo-row {% if meta.is_draft %}dashed{% endif %}" 
+      <div class="repo-row {% if meta.is_auxiliary %}auxiliary-dashed{% endif %}" 
            style="border-color: {{ row_color }};">
         
         <div class="repo-id-group">
-          <div class="id-pill" style="background-color: {{ row_color }};">{{ id }}</div>
-          <div class="status-icon">{% if meta.public %}✔{% else %}⚠️{% endif %}</div>
+          <div class="id-pill" style="background-color: {{ row_color }};">
+            {{ id }}
+          </div>
+          <div class="status-icon">
+            {% if meta.public %}✔{% else %}⚠️{% endif %}
+          </div>
         </div>
 
         <div class="repo-name">
-          <a href="{{ meta.repo_url }}" target="_blank" class="repo-main-link">{{ meta.display_name }}</a>
+          <a href="{{ meta.repo_url }}" target="_blank" class="repo-main-link">
+            {{ meta.display_name }}
+          </a>
           <span class="branch-badge">{{ meta.branch }}</span>
         </div>
 
         <div class="repo-standards">
           {% for std in meta.standards %}
-            <img src="{{ site.baseurl }}/assets/logos/{{ std }}.png" class="std-logo" alt="{{ std }}">
+            <img src="{{ site.baseurl }}/assets/logos/{{ std }}.png" 
+                 class="std-logo" 
+                 alt="{{ std }} Standard">
           {% endfor %}
         </div>
 
-        <div class="repo-license" style="color: {{ row_color }};">{{ meta.license }}</div>
+        <div class="repo-license" style="color: {{ row_color }};">
+          {{ meta.license }}
+        </div>
 
         <div class="repo-deps">
           {% for dep in meta.dependencies %}
             <div class="dep-box">
-              <img src="{{ site.baseurl }}/assets/deps/{{ dep }}.png" class="dep-img" alt="{{ dep }}">
+              <img src="{{ site.baseurl }}/assets/deps/{{ dep }}.png" 
+                   class="dep-img" 
+                   alt="{{ dep }}" 
+                   title="{{ dep }}">
             </div>
           {% endfor %}
         </div>
 
         <div class="repo-software">
           {% for icon in meta.software %}
-            <img src="{{ site.baseurl }}/assets/icons/{{ icon }}.png" class="soft-icon" title="{{ icon | capitalize }}">
+            <img src="{{ site.baseurl }}/assets/icons/{{ icon }}.png" 
+                 class="soft-icon" 
+                 title="{{ icon | capitalize }}" 
+                 alt="{{ icon }}">
           {% endfor %}
         </div>
+
       </div>
     {% endif %}
   {% endfor %}
