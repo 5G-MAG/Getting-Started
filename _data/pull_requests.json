@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-04-24 00:57",
+  "last_updated": "2026-04-24 21:03",
   "projects": {
     "5G Media Streaming": [
       {
@@ -187,18 +187,7 @@
         "blink": false
       }
     ],
-    "Conversational Avatar": [
-      {
-        "repo": "rt-avatar-content",
-        "title": "Mediapipe animation stream ",
-        "url": "https://github.com/5G-MAG/rt-avatar-content/pull/4",
-        "user": "nlsdvl",
-        "date": "2026-03-06",
-        "days_ago": 49,
-        "color": "green",
-        "blink": false
-      }
-    ],
+    "Conversational Avatar": [],
     "6G Testbed": [],
     "DVB-I over 5G": [
       {
