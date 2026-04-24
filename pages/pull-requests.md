@@ -5,42 +5,6 @@ title: Open Pull Requests
 nav_order: 1
 ---
 
-<style>
-  .release-table {
-    width: 100%; 
-    border-collapse: collapse; 
-    margin-top: 20px; 
-    table-layout: fixed;
-  }
-  .release-table th {
-    padding: 12px;
-    text-align: left;
-    border-bottom: 2px solid #eee;
-  }
-  .release-table td {
-    padding: 12px;
-    border-bottom: 1px solid #eee;
-    vertical-align: top;
-    word-wrap: break-word;
-    overflow-wrap: break-word;
-  }
-  .date-cell {
-    white-space: nowrap;
-    line-height: 1.2;
-  }
-  .days-ago {
-    font-size: 0.8em;
-    color: #666;
-    font-weight: normal;
-  }
-  .no-prs {
-    padding: 20px;
-    color: #999;
-    text-align: center;
-    font-style: italic;
-  }
-</style>
-
 <img src="../assets/images/Banner_ReferenceTools.png" alt="Reference Tools Banner" /> 
 
 # Reference Tools Projects: Open Pull Requests
@@ -72,7 +36,7 @@ nav_order: 1
         <td><a href="{{ item.url }}" class="btn">{{ item.title }}</a></td>
         <td>@{{ item.user }}</td>
         <td class="date-cell">
-          <span style="color: {{ item.color }}; font-weight: bold;">{{ item.date }}</span><br>
+          <span style="color: {{ item.color }}; font-weight: bold;" class="{% if item.blink %}blink-animation{% endif %}">{{ item.date }}</span><br>
           <span class="days-ago">({{ item.days_ago }} days ago)</span>
         </td>
       </tr>
@@ -108,7 +72,7 @@ nav_order: 1
         <td><a href="{{ item.url }}" class="btn">{{ item.title }}</a></td>
         <td>@{{ item.user }}</td>
         <td class="date-cell">
-          <span style="color: {{ item.color }}; font-weight: bold;">{{ item.date }}</span><br>
+          <span style="color: {{ item.color }}; font-weight: bold;" class="{% if item.blink %}blink-animation{% endif %}">{{ item.date }}</span><br>
           <span class="days-ago">({{ item.days_ago }} days ago)</span>
         </td>
       </tr>
@@ -144,7 +108,7 @@ nav_order: 1
         <td><a href="{{ item.url }}" class="btn">{{ item.title }}</a></td>
         <td>@{{ item.user }}</td>
         <td class="date-cell">
-          <span style="color: {{ item.color }}; font-weight: bold;">{{ item.date }}</span><br>
+          <span style="color: {{ item.color }}; font-weight: bold;" class="{% if item.blink %}blink-animation{% endif %}">{{ item.date }}</span><br>
           <span class="days-ago">({{ item.days_ago }} days ago)</span>
         </td>
       </tr>
@@ -180,7 +144,7 @@ nav_order: 1
         <td><a href="{{ item.url }}" class="btn">{{ item.title }}</a></td>
         <td>@{{ item.user }}</td>
         <td class="date-cell">
-          <span style="color: {{ item.color }}; font-weight: bold;">{{ item.date }}</span><br>
+          <span style="color: {{ item.color }}; font-weight: bold;" class="{% if item.blink %}blink-animation{% endif %}">{{ item.date }}</span><br>
           <span class="days-ago">({{ item.days_ago }} days ago)</span>
         </td>
       </tr>
@@ -216,7 +180,7 @@ nav_order: 1
         <td><a href="{{ item.url }}" class="btn">{{ item.title }}</a></td>
         <td>@{{ item.user }}</td>
         <td class="date-cell">
-          <span style="color: {{ item.color }}; font-weight: bold;">{{ item.date }}</span><br>
+          <span style="color: {{ item.color }}; font-weight: bold;" class="{% if item.blink %}blink-animation{% endif %}">{{ item.date }}</span><br>
           <span class="days-ago">({{ item.days_ago }} days ago)</span>
         </td>
       </tr>
@@ -252,7 +216,7 @@ nav_order: 1
         <td><a href="{{ item.url }}" class="btn">{{ item.title }}</a></td>
         <td>@{{ item.user }}</td>
         <td class="date-cell">
-          <span style="color: {{ item.color }}; font-weight: bold;">{{ item.date }}</span><br>
+          <span style="color: {{ item.color }}; font-weight: bold;" class="{% if item.blink %}blink-animation{% endif %}">{{ item.date }}</span><br>
           <span class="days-ago">({{ item.days_ago }} days ago)</span>
         </td>
       </tr>
@@ -288,7 +252,7 @@ nav_order: 1
         <td><a href="{{ item.url }}" class="btn">{{ item.title }}</a></td>
         <td>@{{ item.user }}</td>
         <td class="date-cell">
-          <span style="color: {{ item.color }}; font-weight: bold;">{{ item.date }}</span><br>
+          <span style="color: {{ item.color }}; font-weight: bold;" class="{% if item.blink %}blink-animation{% endif %}">{{ item.date }}</span><br>
           <span class="days-ago">({{ item.days_ago }} days ago)</span>
         </td>
       </tr>
@@ -324,7 +288,7 @@ nav_order: 1
         <td><a href="{{ item.url }}" class="btn">{{ item.title }}</a></td>
         <td>@{{ item.user }}</td>
         <td class="date-cell">
-          <span style="color: {{ item.color }}; font-weight: bold;">{{ item.date }}</span><br>
+          <span style="color: {{ item.color }}; font-weight: bold;" class="{% if item.blink %}blink-animation{% endif %}">{{ item.date }}</span><br>
           <span class="days-ago">({{ item.days_ago }} days ago)</span>
         </td>
       </tr>
@@ -360,7 +324,7 @@ nav_order: 1
         <td><a href="{{ item.url }}" class="btn">{{ item.title }}</a></td>
         <td>@{{ item.user }}</td>
         <td class="date-cell">
-          <span style="color: {{ item.color }}; font-weight: bold;">{{ item.date }}</span><br>
+          <span style="color: {{ item.color }}; font-weight: bold;" class="{% if item.blink %}blink-animation{% endif %}">{{ item.date }}</span><br>
           <span class="days-ago">({{ item.days_ago }} days ago)</span>
         </td>
       </tr>
@@ -396,7 +360,7 @@ nav_order: 1
         <td><a href="{{ item.url }}" class="btn">{{ item.title }}</a></td>
         <td>@{{ item.user }}</td>
         <td class="date-cell">
-          <span style="color: {{ item.color }}; font-weight: bold;">{{ item.date }}</span><br>
+          <span style="color: {{ item.color }}; font-weight: bold;" class="{% if item.blink %}blink-animation{% endif %}">{{ item.date }}</span><br>
           <span class="days-ago">({{ item.days_ago }} days ago)</span>
         </td>
       </tr>
@@ -432,7 +396,7 @@ nav_order: 1
         <td><a href="{{ item.url }}" class="btn">{{ item.title }}</a></td>
         <td>@{{ item.user }}</td>
         <td class="date-cell">
-          <span style="color: {{ item.color }}; font-weight: bold;">{{ item.date }}</span><br>
+          <span style="color: {{ item.color }}; font-weight: bold;" class="{% if item.blink %}blink-animation{% endif %}">{{ item.date }}</span><br>
           <span class="days-ago">({{ item.days_ago }} days ago)</span>
         </td>
       </tr>
@@ -468,7 +432,7 @@ nav_order: 1
         <td><a href="{{ item.url }}" class="btn">{{ item.title }}</a></td>
         <td>@{{ item.user }}</td>
         <td class="date-cell">
-          <span style="color: {{ item.color }}; font-weight: bold;">{{ item.date }}</span><br>
+          <span style="color: {{ item.color }}; font-weight: bold;" class="{% if item.blink %}blink-animation{% endif %}">{{ item.date }}</span><br>
           <span class="days-ago">({{ item.days_ago }} days ago)</span>
         </td>
       </tr>
@@ -504,7 +468,7 @@ nav_order: 1
         <td><a href="{{ item.url }}" class="btn">{{ item.title }}</a></td>
         <td>@{{ item.user }}</td>
         <td class="date-cell">
-          <span style="color: {{ item.color }}; font-weight: bold;">{{ item.date }}</span><br>
+          <span style="color: {{ item.color }}; font-weight: bold;" class="{% if item.blink %}blink-animation{% endif %}">{{ item.date }}</span><br>
           <span class="days-ago">({{ item.days_ago }} days ago)</span>
         </td>
       </tr>
@@ -540,7 +504,7 @@ nav_order: 1
         <td><a href="{{ item.url }}" class="btn">{{ item.title }}</a></td>
         <td>@{{ item.user }}</td>
         <td class="date-cell">
-          <span style="color: {{ item.color }}; font-weight: bold;">{{ item.date }}</span><br>
+          <span style="color: {{ item.color }}; font-weight: bold;" class="{% if item.blink %}blink-animation{% endif %}">{{ item.date }}</span><br>
           <span class="days-ago">({{ item.days_ago }} days ago)</span>
         </td>
       </tr>
@@ -576,7 +540,7 @@ nav_order: 1
         <td><a href="{{ item.url }}" class="btn">{{ item.title }}</a></td>
         <td>@{{ item.user }}</td>
         <td class="date-cell">
-          <span style="color: {{ item.color }}; font-weight: bold;">{{ item.date }}</span><br>
+          <span style="color: {{ item.color }}; font-weight: bold;" class="{% if item.blink %}blink-animation{% endif %}">{{ item.date }}</span><br>
           <span class="days-ago">({{ item.days_ago }} days ago)</span>
         </td>
       </tr>

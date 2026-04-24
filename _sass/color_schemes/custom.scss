@@ -167,3 +167,51 @@ $content-width: 100rem;
     }
     .repo-software { justify-content: flex-start !important; }
 }
+
+// --- PR Dashboard Styles ---
+
+// 1. Table formatting for readability
+.release-table {
+  width: 100%; 
+  border-collapse: collapse; 
+  margin-top: 20px; 
+  table-layout: fixed;
+
+  th {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 2px solid #eee;
+  }
+
+  td {
+    padding: 12px;
+    border-bottom: 1px solid #eee;
+    vertical-align: top;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+}
+
+// 2. Date and Age styling
+.date-cell {
+  white-space: nowrap;
+  line-height: 1.2;
+}
+
+.days-ago {
+  font-size: 0.8em;
+  color: #666;
+  font-weight: normal;
+}
+
+// 3. The Blink Animation
+// We apply this to PRs less than 30 days old
+.blink-animation {
+  animation: blinker 1.5s linear infinite;
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0.4; // Dips to 40% visibility so it's not too jarring
+  }
+}
