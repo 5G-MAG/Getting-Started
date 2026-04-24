@@ -1,113 +1,105 @@
-// -------------------------------------------------------------------
-// 1. BRAND COLORS & BUTTONS
-// -------------------------------------------------------------------
-$mag-link-blue: #00A0D2;
-$mag-license-blue: rgb(0, 160, 210); 
+$link-color: #00A0D2;
+$content-width: 100rem;
 
-// Buttons (Scoped to specific classes)
-.btn-video    { color: #FFFFFF !important; background-color: #C80000 !important; }
-.btn-github   { color: #ffffff !important; background-color: #000000 !important; }
-.btn-release  { color: #88D66C !important; background-color: #000000 !important; }
+.btn-video { color: #FFFFFF !important; background-color: #C80000 !important; }
+.btn-github { color: #ffffff !important; background-color: #000000 !important; }
+.btn-release { color: #88D66C !important; background-color: #000000 !important; }
 .btn-tutorial { color: #FFFFFF !important; background-color: #00A0D2 !important; }
-.btn-5gms     { color: #000000 !important; background-color: #FFC000 !important; }
-.btn-5gcsc    { color: #ffffff !important; background-color: #FF0000 !important; }
-.btn-uedc     { color: #ffffff !important; background-color: #D17F79 !important; }
-.btn-5gbc     { color: #ffffff !important; background-color: #70AD47 !important; }
-.btn-5gbcea   { color: #ffffff !important; background-color: #7030A0 !important; }
-.btn-5mbs     { color: #ffffff !important; background-color: #1AB39F !important; }
-.btn-xr       { color: #ffffff !important; background-color: #ED7D31 !important; }
-.btn-v3c      { color: #ffffff !important; background-color: #CC3399 !important; }
-.btn-testbed  { color: #ffffff !important; background-color: #90A008 !important; }
-.btn-md       { color: #ffffff !important; background-color: #385723 !important; }
-.btn-dvbi     { color: #ffffff !important; background-color: #002060 !important; }
-.btn-3gpp     { color: #ffffff !important; background-color: #0070C0 !important; }
-.btn-common   { color: #000000 !important; background-color: #BFBFBF !important; }
+.btn-5gms { color: #000000 !important; background-color: #FFC000 !important; }
+.btn-5gcsc { color: #ffffff !important; background-color: #FF0000 !important; }
+.btn-uedc { color: #ffffff !important; background-color: #D17F79 !important; }
+.btn-5gbc { color: #ffffff !important; background-color: #70AD47 !important; }
+.btn-5gbcea { color: #ffffff !important; background-color: #7030A0 !important; }
+.btn-5mbs { color: #ffffff !important; background-color: #1AB39F !important; }
+.btn-xr { color: #ffffff !important; background-color: #ED7D31 !important; }
+.btn-v3c { color: #ffffff !important; background-color: #CC3399 !important; }
+.btn-testbed { color: #ffffff !important; background-color: #90A008!important; }
+.btn-md { color: #ffffff !important; background-color: #385723 !important; }
+.btn-dvbi { color: #ffffff !important; background-color: #002060 !important; }
+.btn-3gpp { color: #ffffff !important; background-color: #0070C0 !important; }
+.btn-common { color: #000000 !important; background-color: #BFBFBF !important; }
 
-// -------------------------------------------------------------------
-// 2. ARCHITECTURE TABLE SYSTEM (Fluid & Sandboxed)
-// -------------------------------------------------------------------
+// --- PR Dashboard Styles (Keep Original) ---
+.release-table {
+  width: 100%; border-collapse: collapse; margin-top: 20px; table-layout: fixed;
+  th { padding: 12px; text-align: left; border-bottom: 2px solid #eee; }
+  td { padding: 12px; border-bottom: 1px solid #eee; vertical-align: top; word-wrap: break-word; overflow-wrap: break-word; }
+}
+.date-cell { white-space: nowrap; line-height: 1.2; }
+.days-ago { font-size: 0.8em; color: #666; font-weight: normal; }
+.blink-animation { animation: blinker 1.5s linear infinite; }
+@keyframes blinker { 50% { opacity: 0.4; } }
 
+// --- Architecture Table Styles (New, Sandboxed) ---
 .architecture-container {
     display: flex;
     flex-direction: column;
     gap: 15px;
     margin: 30px 0;
-    width: 100%;           // Fills the parent container
-    max-width: 100%;       // Prevents breaking site width
-    box-sizing: border-box;
-    font-family: sans-serif;
+    width: 100%;
 }
 
-/* Fluid Grid Definition */
-.repo-header-row, 
-.repo-row {
+.repo-header-row, .repo-row {
     display: grid;
-    /* ID, Name (Flexible), Standards, License, Deps (Flexible), Software */
-    grid-template-columns: 80px 2.5fr 100px 120px 2fr 100px;
+    /* Uses fractions (fr) so columns shrink to fit your 100rem content width */
+    grid-template-columns: 80px 2fr 100px 120px 1.5fr 100px;
     grid-gap: 15px;
     align-items: center;
-    box-sizing: border-box;
 }
 
 .repo-header-row {
-    padding: 0 20px 10px 20px;
-    border-bottom: 1px solid rgba(128, 128, 128, 0.2);
+    padding: 0 25px 10px 25px;
+    border-bottom: 1px solid #eee;
+    .header-item { font-weight: 800; text-transform: uppercase; font-size: 0.75rem; color: #888; }
 }
 
 .repo-row {
     border: 2px solid; 
-    border-radius: 50px;
-    padding: 12px 20px;
-    min-height: 70px;
+    border-radius: 60px;
+    padding: 12px 25px;
+    min-height: 80px;
     transition: transform 0.2s ease;
-    background-color: transparent;
-    overflow: hidden; // Prevents content from leaking out
+    &.auxiliary-dashed { border-style: dashed !important; }
+    &:hover { transform: translateX(5px); background-color: rgba(0,0,0,0.02); }
 }
 
-.repo-row:hover { transform: translateX(5px); background: rgba(255,255,255,0.05); }
-.repo-row.auxiliary-dashed { border-style: dashed !important; }
-
-/* Sub-components */
-.header-item { font-weight: 800; text-transform: uppercase; font-size: 0.7rem; color: #888; }
-.repo-id-group { display: flex; align-items: center; gap: 8px; }
-.id-pill {
-    color: #000; font-weight: 800; width: 34px; height: 34px;
-    border-radius: 50%; display: inline-flex; justify-content: center; align-items: center; flex-shrink: 0;
+.repo-id-group { 
+    display: flex; align-items: center; gap: 8px; 
+    .id-pill {
+        color: #000; font-weight: 800; width: 36px; height: 36px;
+        border-radius: 50%; display: inline-flex; justify-content: center; align-items: center;
+    }
 }
-.status-icon { font-size: 1.1rem; }
+
 .status-public { color: #2da44e; }
 .status-private { color: #d29922; }
 
-.repo-name { display: flex; flex-direction: column; min-width: 0; }
-.repo-main-link { 
-    font-weight: 700; font-size: 1rem; color: inherit; text-decoration: none;
-    white-space: nowrap; overflow: hidden; text-overflow: ellipsis; 
+.repo-name {
+    display: flex; flex-direction: column;
+    .repo-main-link { font-weight: 700; font-size: 1.1rem; text-decoration: none; color: inherit; }
+    .repo-slug-inline { font-size: 0.9rem; color: #888; margin-left: 4px; }
 }
-.repo-slug-inline { font-size: 0.85rem; font-weight: 400; color: #888; margin-left: 4px; }
 
-.repo-standards { display: flex; gap: 8px; justify-content: center; }
-.std-logo { height: 28px; width: auto; max-width: 60px; object-fit: contain; }
+.repo-standards { 
+    display: flex; gap: 8px; justify-content: center; 
+    .std-logo { height: 36px; width: auto; object-fit: contain; }
+}
 
-.repo-license { font-size: 0.85rem; font-weight: 700; color: $mag-license-blue !important; }
+.repo-license { font-weight: 700; font-size: 0.9rem; color: #00A0D2 !important; }
 
-.repo-deps { display: flex; flex-wrap: wrap; gap: 6px; }
-.dep-box { background: #fff; padding: 3px 8px; border-radius: 4px; border: 1px solid #ddd; }
-.dep-img { height: 20px; max-width: 80px; object-fit: contain; }
+.repo-deps {
+    display: flex; flex-wrap: wrap; gap: 6px;
+    .dep-box { background: #fff; padding: 4px 8px; border-radius: 4px; border: 1px solid #ddd; }
+    .dep-img { height: 24px; max-width: 80px; object-fit: contain; }
+}
 
-.repo-software { display: flex; justify-content: flex-end; gap: 8px; }
-.soft-icon { height: 30px; width: auto; }
+.repo-software { 
+    display: flex; justify-content: flex-end; gap: 10px; 
+    .soft-icon { height: 32px; width: auto; }
+}
 
-// -------------------------------------------------------------------
-// 3. RESPONSIVE (Collapse for mobile)
-// -------------------------------------------------------------------
-@media (max-width: 1050px) {
+/* Mobile Fallback */
+@media (max-width: 1000px) {
     .repo-header-row { display: none; }
-    .repo-row { 
-        display: flex; 
-        flex-direction: column; 
-        align-items: flex-start; 
-        border-radius: 20px;
-        padding: 20px;
-    }
-    .repo-software { justify-content: flex-start; margin-top: 10px; }
+    .repo-row { display: flex; flex-direction: column; align-items: flex-start; border-radius: 20px; }
 }
