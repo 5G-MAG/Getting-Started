@@ -45,7 +45,7 @@ $content-width: 100rem;
     margin: 20px 0;
     width: 100%;
 
-    /* Header */
+    /* Header Row */
     .repo-header-row {
         display: grid;
         grid-template-columns: 80px 1.8fr 110px 110px 200px 110px;
@@ -58,7 +58,7 @@ $content-width: 100rem;
         }
     }
 
-    /* Rows */
+    /* Repository Row */
     .repo-row {
         display: grid;
         grid-template-columns: 80px 1.8fr 110px 110px 200px 110px;
@@ -74,24 +74,19 @@ $content-width: 100rem;
         &.auxiliary-dashed { border-style: dashed !important; }
     }
 
-    /* Col 1: ID & Status */
+    /* Column Styles */
     .repo-id-group {
         display: flex;
         align-items: center;
         gap: 8px;
-        
         .id-pill {
             font-weight: 800; width: 30px; height: 30px;
             font-size: 0.9rem; border-radius: 50%; display: inline-flex;
             justify-content: center; align-items: center; flex-shrink: 0;
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
-
         .status-icon {
-            font-size: 1.1rem;
-            display: flex;
-            align-items: center;
-
+            font-size: 1.1rem; display: flex; align-items: center;
             .status-public {
                 color: #2da44e !important;
                 filter: invert(48%) sepia(79%) saturate(2476%) hue-rotate(111deg) brightness(95%) contrast(100%) !important;
@@ -100,48 +95,35 @@ $content-width: 100rem;
         }
     }
 
-    /* Col 2: Name & Branch */
     .repo-name {
-        display: flex;
-        flex-direction: column;
+        display: flex; flex-direction: column;
         .repo-main-link { font-weight: 700; font-size: 0.95rem; text-decoration: none; color: inherit; }
         .repo-slug-inline { font-size: 0.8rem; color: #999; margin-left: 4px; }
-        
         .branch-badge { 
-            font-family: monospace; 
-            font-size: 0.75rem;     
-            font-weight: 600;       
-            letter-spacing: 0.3px;
-            color: #777; 
-            margin-top: 1px; 
+            font-family: monospace; font-size: 0.75rem; font-weight: 600; 
+            letter-spacing: 0.3px; color: #777; margin-top: 1px; 
         }
     }
 
-    /* Col 3: Standards */
     .repo-standards {
         display: flex; justify-content: center; align-items: center; gap: 8px;
         .std-logo { height: 30px; width: auto; max-width: 55px; object-fit: contain; }
     }
 
-    /* Col 4: License */
     .repo-license {
-        font-weight: 700; font-size: 0.8rem; color: #00A0D2 !important;
-        text-transform: uppercase;
+        font-weight: 700; font-size: 0.8rem; color: #00A0D2 !important; text-transform: uppercase;
     }
 
-    /* Col 5: Dependencies */
     .repo-deps {
         display: flex; flex-direction: row; flex-wrap: nowrap; gap: 5px;
         align-items: center; overflow-x: hidden;
+        .dep-box {
+            background: #fff; padding: 3px 8px; border-radius: 4px;
+            display: inline-flex; align-items: center; border: 1px solid #ddd; flex-shrink: 0;
+        }
+        .dep-img { height: 20px; max-width: 70px; object-fit: contain; }
     }
-    .dep-box {
-        background: #fff; padding: 3px 8px; border-radius: 4px;
-        display: inline-flex; align-items: center; border: 1px solid #ddd;
-        flex-shrink: 0;
-    }
-    .dep-img { height: 20px; max-width: 70px; object-fit: contain; }
 
-    /* Col 6: Software */
     .repo-software {
         display: flex; justify-content: flex-end; gap: 8px;
         .soft-icon { height: 26px; filter: drop-shadow(0 1px 2px rgba(0,0,0,0.1)); }
@@ -160,43 +142,28 @@ $content-width: 100rem;
         color: #666;
         border: 1px solid #eee;
 
-        .legend-section {
-            display: flex;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 12px;
-        }
-
-        .legend-icon-group {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            flex-wrap: wrap;
-        }
+        .legend-section { display: flex; align-items: center; flex-wrap: wrap; gap: 12px; }
+        .legend-icon-group { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
 
         .legend-title {
-            font-weight: 800;
-            text-transform: uppercase;
-            color: #999;
-            min-width: 80px; 
+            font-weight: 800; text-transform: uppercase; color: #999; min-width: 80px; 
         }
 
-        .legend-icon {
-            height: 14px;
-            width: auto;
-            margin-right: -4px;
-        }
+        .legend-icon { height: 14px; width: auto; margin-right: -4px; }
 
         .legend-style-box {
-            width: 25px;
-            height: 12px;
-            border: 1.5px solid #999;
-            border-radius: 4px;
+            width: 25px; height: 12px; border: 1.5px solid #999; border-radius: 4px;
             &.dashed { border-style: dashed; }
         }
 
-        .status-public { color: #2da44e; font-weight: bold; }
-        .status-private { color: #d29922; }
+        /* Fixed: Legend Public Tick Color */
+        .status-public { 
+            color: #2da44e !important; 
+            filter: invert(48%) sepia(79%) saturate(2476%) hue-rotate(111deg) brightness(95%) contrast(100%) !important;
+            font-weight: bold; 
+            margin-right: 4px;
+        }
+        .status-private { color: #d29922 !important; margin-right: 4px; }
     }
 }
 
