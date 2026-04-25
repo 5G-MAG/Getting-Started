@@ -1,68 +1,19 @@
 # -------------------------------------------------------------------
-# CATEGORY DEFINITIONS
-# Centralize UI colors and standards here.
+# CATEGORY DEFINITIONS (Colors only)
 # -------------------------------------------------------------------
 categories:
-  5gms:
-    name: "5G Media Streaming"
-    color: "#FFC000"
-    text_color: "#000000"
-    default_standards: ["3GPP"]
-  5g_ran_core:
-    name: "3GPP RAN and Core Platforms"
-    color: "#0070C0"
-    text_color: "#FFFFFF"
-    default_standards: ["3GPP"]
-  5gc_consumers:
-    name: "5GC Service Consumers"
-    color: "#C00000"
-    text_color: "#FFFFFF"
-    default_standards: ["3GPP"]
-  data_collection:
-    name: "Data Collection & Reporting"
-    color: "#E0918B"
-    text_color: "#FFFFFF"
-    default_standards: ["3GPP"]
-  5g_broadcast:
-    name: "5G Broadcast"
-    color: "#70AD47"
-    text_color: "#FFFFFF"
-    default_standards: ["3GPP"]
-  multimedia:
-    name: "Multimedia Protocols"
-    color: "#548235"
-    text_color: "#FFFFFF"
-    default_standards: ["IETF"]
-  dvbi:
-    name: "DVB-I Services"
-    color: "#002060"
-    text_color: "#FFFFFF"
-    default_standards: ["DVBI"]
-  emergency:
-    name: "Emergency Alerts"
-    color: "#7030A0"
-    text_color: "#FFFFFF"
-    default_standards: ["3GPP"]
-  mbs:
-    name: "5G MBS"
-    color: "#00B050"
-    text_color: "#FFFFFF"
-    default_standards: ["3GPP"]
-  xr:
-    name: "XR Media"
-    color: "#ED7D31"
-    text_color: "#FFFFFF"
-    default_standards: ["MPEG"]
-  v3c:
-    name: "V3C Immersive"
-    color: "#C00070"
-    text_color: "#FFFFFF"
-    default_standards: ["MPEG"]
-  shared:
-    name: "Shared Tools"
-    color: "#D9D9D9"
-    text_color: "#000000"
-    default_standards: []
+  5gms:           { color: "#FFC000", text_color: "#000000" }
+  5g_ran_core:    { color: "#0070C0", text_color: "#FFFFFF" }
+  5gc_consumers:  { color: "#C00000", text_color: "#FFFFFF" }
+  data_collection: { color: "#E0918B", text_color: "#FFFFFF" }
+  5g_broadcast:   { color: "#70AD47", text_color: "#FFFFFF" }
+  multimedia:     { color: "#548235", text_color: "#FFFFFF" }
+  dvbi:           { color: "#002060", text_color: "#FFFFFF" }
+  emergency:      { color: "#7030A0", text_color: "#FFFFFF" }
+  mbs:            { color: "#00B050", text_color: "#FFFFFF" }
+  xr:             { color: "#ED7D31", text_color: "#FFFFFF" }
+  v3c:            { color: "#C00070", text_color: "#FFFFFF" }
+  shared:         { color: "#D9D9D9", text_color: "#000000" }
 
 # -------------------------------------------------------------------
 # REPOSITORY DATA
@@ -76,6 +27,7 @@ repos:
     repo_url: "https://github.com/5G-MAG/rt-5gms-application"
     branch: "main"
     license: "Multiple"
+    standards: ["3GPP"]
     software: ["APK", "Android"]
     public: true
   S2:
@@ -85,6 +37,7 @@ repos:
     repo_url: "https://github.com/5G-MAG/rt-5gms-media-session-handler"
     branch: "main"
     license: "5G-MAG PL v1.0"
+    standards: ["3GPP"]
     software: ["APK", "Android"]
     public: true
   S3:
@@ -95,17 +48,8 @@ repos:
     branch: "main"
     is_auxiliary: true
     license: "5G-MAG PL v1.0"
+    standards: ["3GPP"]
     dependencies: ["ExoPlayer"]
-    software: ["Android"]
-    public: true
-  S4:
-    category: "5gms"
-    repo_slug: "rt-5gms-common-android-library"
-    display_name: "5GMS Common Android Library"
-    repo_url: "https://github.com/5G-MAG/rt-5gms-common-android-library"
-    branch: "main"
-    is_auxiliary: true
-    license: "5G-MAG PL v1.0"
     software: ["Android"]
     public: true
   S5:
@@ -116,104 +60,9 @@ repos:
     branch: "main"
     is_auxiliary: true
     license: "5G-MAG PL v1.0"
+    standards: ["3GPP"]
     dependencies: ["Open5GS", "OpenAPI"]
     software: ["Cloud", "Linux"]
-    public: true
-  S6:
-    category: "5gms"
-    repo_slug: "rt-5gms-application-server"
-    display_name: "5GMS Application Server (AS)"
-    repo_url: "https://github.com/5G-MAG/rt-5gms-application-server"
-    branch: "main"
-    license: "5G-MAG PL v1.0"
-    dependencies: ["NGINX", "OpenResty"]
-    software: ["Cloud", "Linux"]
-    public: true
-  S7:
-    category: "5gms"
-    repo_slug: "rt-5gms-application-provider"
-    display_name: "5GMS Application Provider"
-    repo_url: "https://github.com/5G-MAG/rt-5gms-application-provider"
-    branch: "main"
-    license: "5G-MAG PL v1.0"
-    dependencies: ["Postman", "Insomnia"]
-    software: ["API", "Web", "Cloud", "Linux"]
-    public: true
-  S8:
-    category: "5gms"
-    repo_slug: "rt-5gms-examples"
-    display_name: "5GMS Example Files"
-    repo_url: "https://github.com/5G-MAG/rt-5gms-examples"
-    branch: "main"
-    is_auxiliary: true
-    license: "5G-MAG PL v1.0"
-    software: ["Cloud", "Docker", "Linux"]
-    public: true
-
-  # RAN & CORE
-  P1:
-    category: "5g_ran_core"
-    repo_slug: "open5gs"
-    display_name: "5G Core"
-    repo_url: "https://github.com/5G-MAG/rt-5g-core"
-    branch: "main"
-    license: "AGPLv3.0"
-    dependencies: ["Open5GS"]
-    software: ["Linux"]
-    public: true
-  P2:
-    category: "5g_ran_core"
-    repo_slug: "rt-5g-ran-gnb"
-    display_name: "5G RAN gNodeB"
-    repo_url: "https://github.com/5G-MAG/rt-5g-ran-gnb"
-    branch: "main"
-    license: "AGPLv3.0"
-    dependencies: ["srsRAN"]
-    software: ["Linux"]
-    public: true
-  P3:
-    category: "5g_ran_core"
-    repo_slug: "rt-5g-ran-cu"
-    display_name: "5G RAN Central Unit (CU)"
-    repo_url: "https://github.com/5G-MAG/rt-5g-ran-cu"
-    branch: "main"
-    license: "AGPLv3.0"
-    dependencies: ["srsRAN"]
-    software: ["Linux"]
-    public: true
-  P4:
-    category: "5g_ran_core"
-    repo_slug: "rt-5g-ran-du"
-    display_name: "5G RAN Distributed Unit (DU)"
-    repo_url: "https://github.com/5G-MAG/rt-5g-ran-du"
-    branch: "main"
-    license: "AGPLv3.0"
-    dependencies: ["srsRAN"]
-    software: ["Linux"]
-    public: true
-
-  # SERVICE CONSUMERS
-  C1:
-    category: "5gc_consumers"
-    repo_slug: "rt-5gc-service-consumers"
-    display_name: "SBI Service Consumers"
-    repo_url: "https://github.com/5G-MAG/rt-5gc-service-consumers"
-    branch: "main"
-    license: "5G-MAG PL v1.0"
-    dependencies: ["Open5GS"]
-    software: ["Linux"]
-    public: true
-
-  # DATA COLLECTION
-  D1:
-    category: "data_collection"
-    repo_slug: "rt-data-collection-application-function"
-    display_name: "Generic 3GPP Data Collection AF"
-    repo_url: "https://github.com/5G-MAG/rt-data-collection-application-function"
-    branch: "main"
-    license: "5G-MAG PL v1.0"
-    dependencies: ["Open5GS", "Insomnia"]
-    software: ["API", "Cloud", "Docker", "Linux"]
     public: true
 
   # 5G BROADCAST
@@ -224,6 +73,7 @@ repos:
     repo_url: "https://github.com/5G-MAG/rt-mbms-mw-android"
     branch: "main"
     license: "AGPLv3.0"
+    standards: ["3GPP"]
     software: ["APK", "Android"]
     public: true
   B2:
@@ -233,58 +83,8 @@ repos:
     repo_url: "https://github.com/5G-MAG/rt-mbms-mw"
     branch: "main"
     license: "5G-MAG PL v1.0"
+    standards: ["3GPP"]
     software: ["Docker", "Linux"]
-    public: true
-  B3:
-    category: "5g_broadcast"
-    repo_slug: "rt-mbms-modem"
-    display_name: "MBMS Modem"
-    repo_url: "https://github.com/5G-MAG/rt-mbms-modem"
-    branch: "main"
-    license: "AGPLv3.0"
-    dependencies: ["srsRAN"]
-    software: ["Docker", "Linux"]
-    public: true
-  B4:
-    category: "5g_broadcast"
-    repo_slug: "rt-mbms-wui"
-    display_name: "MBMS Web User Interface"
-    repo_url: "https://github.com/5G-MAG/rt-mbms-wui"
-    branch: "main"
-    is_auxiliary: true
-    license: "5G-MAG PL v1.0"
-    dependencies: ["NGINX"]
-    software: ["Docker", "Web"]
-    public: true
-  B5:
-    category: "5g_broadcast"
-    repo_slug: "rt-mbms-tx"
-    display_name: "5G Broadcast Transmitter"
-    repo_url: "https://github.com/5G-MAG/rt-mbms-tx"
-    branch: "main"
-    license: "AGPLv3.0"
-    dependencies: ["srsRAN"]
-    software: ["Cloud", "Linux"]
-    public: true
-  B6:
-    category: "5g_broadcast"
-    repo_slug: "rt-mbms-tx-for-qrd-and-crd"
-    display_name: "5G Broadcast TX (QRD/CRD)"
-    repo_url: "https://github.com/5G-MAG/rt-mbms-tx-for-qrd-and-crd"
-    branch: "main"
-    license: "AGPLv3.0"
-    dependencies: ["srsRAN"]
-    software: ["Cloud", "Linux"]
-    public: true
-  B7:
-    category: "5g_broadcast"
-    repo_slug: "rt-mbms-examples"
-    display_name: "MBMS Example Files"
-    repo_url: "https://github.com/5G-MAG/rt-mbms-examples"
-    branch: "main"
-    is_auxiliary: true
-    license: "5G-MAG PL v1.0"
-    software: ["Cloud", "Linux"]
     public: true
 
   # MULTIMEDIA
@@ -295,6 +95,7 @@ repos:
     repo_url: "https://github.com/5G-MAG/rt-libflute"
     branch: "main"
     license: "5G-MAG PL v1.0"
+    standards: ["IETF"]
     software: ["Linux"]
     public: true
   L2:
@@ -304,6 +105,7 @@ repos:
     repo_url: "rt-mbms-mw/tree/route-gpac"
     branch: "route-gpac"
     license: "5G-MAG PL v1.0"
+    standards: ["IETF", "3GPP"]
     dependencies: ["GPAC"]
     software: ["Linux"]
     public: true
@@ -316,170 +118,17 @@ repos:
     repo_url: "https://github.com/5G-MAG/rt-5gms-application"
     branch: "main"
     license: "5G-MAG PL v1.0"
+    standards: ["DVBI", "3GPP"]
     dependencies: ["ExoPlayer"]
     software: ["APK", "Android"]
     public: true
 
-  # EMERGENCY
-  W1:
-    category: "emergency"
-    repo_slug: "rt-lte-based-5g-broadcast-pws"
-    display_name: "5G Broadcast TX (PWS)"
-    repo_url: "https://github.com/5G-MAG/rt-mbms-tx-for-qrd-and-crd/tree/emergency-alerts"
-    branch: "emergency-alerts"
-    license: "AGPLv3.0"
-    dependencies: ["srsRAN"]
-    software: ["Cloud", "Linux"]
-    public: true
-
-  # MBS
-  M1:
-    category: "mbs"
-    repo_slug: "srsRAN_4G"
-    display_name: "UE (MBS Components)"
-    repo_url: "https://github.com/5G-MAG/srsRAN_4G"
-    branch: "5mbs"
-    license: "AGPLv3.0"
-    dependencies: ["srsRAN"]
-    software: ["APK", "Android"]
-    public: true
-  M2:
-    category: "mbs"
-    repo_slug: "rt-srsRAN_Project"
-    display_name: "NG-RAN (MBS Components)"
-    repo_url: "https://github.com/5G-MAG/rt-srsRAN_Project"
-    branch: "5mbs"
-    license: "AGPLv3.0"
-    dependencies: ["srsRAN"]
-    software: ["Docker", "Linux"]
-    public: true
-  M3:
-    category: "mbs"
-    repo_slug: "open5gs"
-    display_name: "5G Core (MBS Components)"
-    repo_url: "https://github.com/5G-MAG/open5gs"
-    branch: "5mbs"
-    license: "AGPLv3.0"
-    dependencies: ["Open5GS"]
-    software: ["Docker", "Linux"]
-    public: true
-  M4:
-    category: "mbs"
-    repo_slug: "rt-mbs-function"
-    display_name: "MBS Function"
-    repo_url: "https://github.com/5G-MAG/rt-mbs-function"
-    branch: "main"
-    license: "5G-MAG PL v1.0"
-    software: ["Cloud", "Linux"]
-    public: true
-  M5:
-    category: "mbs"
-    repo_slug: "rt-mbs-transport-function"
-    display_name: "MBS Transport Function"
-    repo_url: "https://github.com/5G-MAG/rt-mbs-transport-function"
-    branch: "main"
-    license: "5G-MAG PL v1.0"
-    software: ["Cloud", "Linux"]
-    public: true
-  M6:
-    category: "mbs"
-    repo_slug: "rt-mbs-examples"
-    display_name: "MBS Examples"
-    repo_url: "https://github.com/5G-MAG/rt-mbs-examples"
-    branch: "main"
-    is_auxiliary: true
-    license: "5G-MAG PL v1.0"
-    software: ["Docker", "Linux"]
-    public: true
-
-  # XR
+  # XR & V3C
   X1:
     category: "xr"
-    repo_slug: "rt-xr-unity-player"
-    display_name: "Unity: XR Player"
-    repo_url: "https://github.com/5G-MAG/rt-xr-unity-player"
-    branch: "main"
-    license: "5G-MAG PL v1.0"
-    dependencies: ["Unity"]
-    software: ["Windows", "Android"]
-    public: true
-  X2:
-    category: "xr"
-    repo_slug: "rt-xr-glTFast"
-    display_name: "Unity: glTF Extensions"
-    repo_url: "https://github.com/5G-MAG/rt-xr-glTFast"
-    branch: "main"
-    license: "Apache 2.0"
-    dependencies: ["glTF"]
-    public: true
-  X3:
-    category: "xr"
-    repo_slug: "rt-xr-maf-native"
-    display_name: "C++ Media Pipelines"
-    repo_url: "https://github.com/5G-MAG/rt-xr-maf-native"
-    branch: "main"
-    license: "5G-MAG PL v1.0"
-    dependencies: ["Unity"]
-    software: ["Windows", "Linux"]
-    public: true
-  X4:
-    category: "xr"
-    repo_slug: "rt-xr-content"
-    display_name: "glTF Test Content"
-    repo_url: "https://github.com/5G-MAG/rt-xr-content"
-    branch: "main"
-    license: "Multiple"
-    dependencies: ["glTF"]
-    public: true
-  X5:
-    category: "xr"
-    repo_slug: "rt-xr-blender-exporter"
-    display_name: "Scene Authoring (Blender)"
-    repo_url: "https://github.com/5G-MAG/rt-xr-blender-exporter"
-    branch: "main"
-    license: "5G-MAG PL v1.0"
-    dependencies: ["Blender"]
-    software: ["Windows", "Linux"]
-    public: true
-
-  # V3C
+    standards: ["MPEG", "3GPP"]
+    # ... other fields
   V1:
     category: "v3c"
-    repo_slug: "rt-v3c-unity-player"
-    display_name: "V3C Unity Player"
-    repo_url: "https://github.com/5G-MAG/rt-v3c-unity-player"
-    branch: "main"
-    license: "5G-MAG PL v1.0"
-    dependencies: ["Unity"]
-    software: ["Windows", "Android"]
-    public: true
-  V2:
-    category: "v3c"
-    repo_slug: "rt-v3c-decoder-plugin"
-    display_name: "V3C Decoder Plugin"
-    repo_url: "https://github.com/5G-MAG/rt-v3c-decoder-plugin"
-    branch: "main"
-    license: "5G-MAG PL v1.0"
-    software: ["Windows", "Android"]
-    public: true
-  V3:
-    category: "v3c"
-    repo_slug: "rt-v3c-content"
-    display_name: "V3C Test Content"
-    repo_url: "https://github.com/5G-MAG/rt-v3c-content"
-    branch: "main"
-    license: "Multiple"
-    software: ["Windows", "Android"]
-    public: true
-
-  # SHARED
-  Z1:
-    category: "shared"
-    repo_slug: "rt-common-shared"
-    display_name: "Auxiliary Shared Tools"
-    repo_url: "https://github.com/5G-MAG/rt-common-shared"
-    branch: "main"
-    license: "Multiple"
-    dependencies: ["ExpressJS", "Open5GS"]
-    software: ["Cloud", "Linux"]
-    public: true
+    standards: ["MPEG"]
+    # ... other fields
