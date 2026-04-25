@@ -16,7 +16,6 @@
       {% assign cat_id = repo_meta.category %}
       {% assign cat_data = site.data.repo_metadata.categories[cat_id] %}
       {% assign row_bg = cat_data.color | default: "#ffcc00" %}
-      {% assign id_text = cat_data.text_color | default: "#000000" %}
       {% assign final_standards = repo_meta.standards | default: cat_data.default_standards %}
 
       <div class="repo-row {% if repo_meta.is_auxiliary %}auxiliary-dashed{% endif %}" 
@@ -24,14 +23,12 @@
            onclick="toggleRepoCard(event, 'card-{{ id }}')">
         
         <div class="repo-id-group">
-          <div class="id-pill" style="background-color: {{ row_bg }} !important; color: {{ id_text }} !important;">
+          <div class="id-pill" style="background-color: {{ row_bg }} !important; color: {{ cat_data.text_color }} !important;">
             {{ id }}
           </div>
           <div class="status-icon">
             {% if repo_meta.public %}
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M5 13L9 17L19 7" stroke="#2da44e" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 13L9 17L19 7" stroke="#2da44e" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg>
             {% else %}
               <span class="status-private">⚠️</span>
             {% endif %}
@@ -46,13 +43,9 @@
             {% if repo_meta.description %}
             <div id="card-{{ id }}" class="repo-hover-card" onclick="event.stopPropagation()">
               <div class="card-btn-container">
-                <a href="{{ repo_meta.repo_url }}" class="btn btn-{{ cat_id }}" target="_blank">
-                  {{ repo_meta.repo_slug }}
-                </a>
+                <a href="{{ repo_meta.repo_url }}" class="btn btn-{{ cat_id }}" target="_blank">{{ repo_meta.repo_slug }}</a>
               </div>
-              
               <p class="hover-desc">{{ repo_meta.description }}</p>
-              <hr class="hover-divider">
               <div class="hover-links">
                 <a href="{{ repo_meta.repo_url }}/blob/{{ repo_meta.branch }}/README.md" target="_blank">README</a>
                 <a href="{{ repo_meta.repo_url }}/issues" target="_blank">Issues</a>
@@ -92,23 +85,22 @@
 
   <div class="repo-legend">
     <div class="legend-group">
-      <strong>Status:</strong> 
-      <svg width="12" height="12" style="vertical-align:middle;"><path d="M2 7L5 10L11 3" stroke="#2da44e" stroke-width="3" fill="none"/></svg> Public 
-      <span style="margin-left:8px;">⚠️</span> Private
+      <strong>Type:</strong> <span class="leg-box solid"></span> Main <span class="leg-box dashed"></span> Auxiliary
     </div>
-
     <div class="legend-group">
-      <strong>Type:</strong> 
-      <span class="leg-box solid"></span> Main 
-      <span class="leg-box dashed"></span> Auxiliary
-    </div>
-
-    <div class="legend-group">
-      <strong>Software:</strong>
+      <strong>Platforms:</strong>
       <img src="{{ site.baseurl }}/assets/icons/Android.png" class="leg-icon"> Android
       <img src="{{ site.baseurl }}/assets/icons/Linux.png" class="leg-icon"> Linux
       <img src="{{ site.baseurl }}/assets/icons/Docker.png" class="leg-icon"> Docker
+      <img src="{{ site.baseurl }}/assets/icons/Cloud.png" class="leg-icon"> Cloud
+      <img src="{{ site.baseurl }}/assets/icons/Windows.png" class="leg-icon"> Windows
     </div>
+    <div class="legend-group">
+        <strong>Distribution:</strong>
+        <img src="{{ site.baseurl }}/assets/icons/APK.png" class="leg-icon"> APK
+        <img src="{{ site.baseurl }}/assets/icons/API.png" class="leg-icon"> API
+        <img src="{{ site.baseurl }}/assets/icons/Web.png" class="leg-icon"> Web
+      </div>
   </div>
 </div>
 
@@ -116,11 +108,14 @@
 function toggleRepoCard(e, id) {
     e.stopPropagation();
     const card = document.getElementById(id);
+    // Close other cards
     document.querySelectorAll('.repo-hover-card').forEach(c => {
         if(c.id !== id) c.classList.remove('active');
     });
+    // Toggle current
     if(card) card.classList.toggle('active');
 }
+// Close cards on outside click
 document.addEventListener('click', () => {
     document.querySelectorAll('.repo-hover-card').forEach(c => c.classList.remove('active'));
 });
