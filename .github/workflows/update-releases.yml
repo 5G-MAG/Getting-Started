@@ -71,10 +71,7 @@ jobs:
                   print(f"Error fetching {url}: {e}")
                   return None
 
-          # Map to store description updates for the YAML phase
           repo_descriptions = {}
-
-          # Load existing JSON data for persistence
           existing_comm_data = {}
           if os.path.exists('_data/community_stats.json'):
               try:
@@ -95,11 +92,9 @@ jobs:
                   if not repo_data: continue
                   
                   repo_name = repo.split('/')[-1]
-                  # Capture description for YAML update later
                   if repo_data.get('description'):
                       repo_descriptions[repo_name] = repo_data['description']
 
-                  # Dashboard Logic (Traffic/Status)
                   v_api = get_json(f"https://api.github.com/repos/{repo}/traffic/views")
                   c_api = get_json(f"https://api.github.com/repos/{repo}/traffic/clones")
                   c_v_14 = v_api.get('count', 0) if v_api else 0
@@ -120,14 +115,14 @@ jobs:
                       "total_clones": final_c_total, "status": status, "repo_url": f"https://github.com/{repo}"
                   })
 
-                  # Releases & PRs logic (Simplified for space, kept your original logic)
                   all_rels = get_json(f"https://api.github.com/repos/{repo}/releases") or []
                   f_tag = filtered_projects[p_name]['filter'].lower() if p_name in filtered_projects else ""
                   target = next((r for r in all_rels if f_tag in r.get('tag_name', '').lower()), None) if f_tag else next((r for r in all_rels if not r.get('prerelease')), None) or (all_rels[0] if all_rels else None)
                   rel_list.append({
                       "short_name": repo_name, "tag": target.get('tag_name') if target else "No Release",
                       "date": target.get('published_at', '').split('T')[0] if target else "-",
-                      "url": target.get('html_url') if target else f"https://github.com/{repo}/releases"
+                      "url": target.get('html_url') if target else f"https://github.com/{repo}/releases",
+                      "repo_url": f"https://github.com/{repo}"
                   })
 
                   prs = get_json(f"https://api.github.com/repos/{repo}/pulls?state=open") or []
@@ -141,7 +136,7 @@ jobs:
                       })
               rel_out[p_name], pr_out[p_name], comm_out[p_name] = rel_list, pull_list, comm_list
 
-          # 2. Update YAML Metadata (Descriptions)
+          # --- SAFE YAML UPDATE ---
           yaml_path = '_data/repo_metadata.yml'
           if os.path.exists(yaml_path):
               with open(yaml_path, 'r') as f:
@@ -151,10 +146,12 @@ jobs:
               active_slug = None
               for line in lines:
                   if 'repo_slug:' in line:
-                      active_slug = line.split(':')[-1].strip().replace('"', '').replace("'", "")
+                      active_slug = line.split(':')[-1].strip().strip('"').strip("'")
                   
                   if 'description:' in line and active_slug in repo_descriptions:
-                      clean_desc = repo_descriptions[active_slug].replace('"', '\\"')
+                      # Clean description: no newlines, escaped quotes
+                      clean_desc = repo_descriptions[active_slug].replace('"', '\\"').replace('\n', ' ').strip()
+                      # Ensure standard 4-space indentation
                       line = f'    description: "{clean_desc}"\n'
                   
                   updated_lines.append(line)
@@ -162,7 +159,6 @@ jobs:
               with open(yaml_path, 'w') as f:
                   f.writelines(updated_lines)
 
-          # 3. Save JSON Files
           if not os.path.exists('_data'): os.makedirs('_data')
           ts = datetime.now().strftime("%Y-%m-%d %H:%M")
           for n, d in [('releases', rel_out), ('pull_requests', pr_out), ('community_stats', comm_out)]:
