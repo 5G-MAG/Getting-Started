@@ -17,15 +17,15 @@
     {% assign repo_meta = site.data.repo_metadata.repos[id] %}
     
     {% if repo_meta %}
-      {% comment %} 1. Fetch Category Theme Data {% endcomment %}
+      {% comment %} Fetch Category Theme Data {% endcomment %}
       {% assign cat_id = repo_meta.category %}
       {% assign cat_data = site.data.repo_metadata.categories[cat_id] %}
       
-      {% comment %} 2. Set dynamic colors with fallbacks {% endcomment %}
+      {% comment %} Set dynamic colors with fallbacks {% endcomment %}
       {% assign row_bg = cat_data.color | default: "#ffcc00" %}
       {% assign id_text = cat_data.text_color | default: "#000000" %}
 
-      {% comment %} 3. Handle Standards Fallback (Repo list OR Category defaults) {% endcomment %}
+      {% comment %} Handle Standards Fallback {% endcomment %}
       {% assign final_standards = repo_meta.standards | default: cat_data.default_standards %}
 
       <div class="repo-row {% if repo_meta.is_auxiliary %}auxiliary-dashed{% endif %}" 
@@ -88,4 +88,31 @@
       </div>
     {% endif %}
   {% endfor %}
+
+  <div class="repo-legend">
+    <div class="legend-section">
+      <span class="legend-title">Status:</span>
+      <span class="status-public">✔</span> Public Repository
+      <span class="status-private">⚠️</span> Private Repository
+    </div>
+
+    <div class="legend-section">
+      <span class="legend-title">Style:</span>
+      <div class="legend-style-box solid"></div> Main Component
+      <div class="legend-style-box dashed"></div> Auxiliary Library
+    </div>
+
+    <div class="legend-section">
+      <span class="legend-title">Software:</span>
+      <div class="legend-icon-group">
+        <img src="{{ site.baseurl }}/assets/icons/Android.png" class="legend-icon" alt="Android"> Android App
+        <img src="{{ site.baseurl }}/assets/icons/APK.png" class="legend-icon" alt="APK"> APK Available
+        <img src="{{ site.baseurl }}/assets/icons/Linux.png" class="legend-icon" alt="Linux"> Linux
+        <img src="{{ site.baseurl }}/assets/icons/Cloud.png" class="legend-icon" alt="Cloud"> Cloud
+        <img src="{{ site.baseurl }}/assets/icons/Docker.png" class="legend-icon" alt="Docker"> Docker
+        <img src="{{ site.baseurl }}/assets/icons/API.png" class="legend-icon" alt="API"> API Tool
+        <img src="{{ site.baseurl }}/assets/icons/Windows.png" class="legend-icon" alt="Windows"> Windows
+      </div>
+    </div>
+  </div>
 </div>
