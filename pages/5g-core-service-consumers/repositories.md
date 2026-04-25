@@ -14,7 +14,9 @@ nav_order: 3
 
 The following repositories are available. Please refer to the "Scope" section of the different projects for more context.
 
-<img src="../../assets/images/projects/5gc_repos.png" style="width: 80%">
+{% include architecture_table.html ids="C1" %}
+
+*Note: Auxiliary repositories are indicated with a dashed border.*
 
 ---
 
