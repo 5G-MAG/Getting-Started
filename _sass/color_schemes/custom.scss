@@ -22,19 +22,35 @@ $content-width: 100rem;
 
 // --- ADDITIONS FOR TABLE ---
 .architecture-container {
-    width: 100%; margin-top: 2rem; overflow: visible;
+    width: 100%; 
+    margin-top: 2rem; 
+    overflow: visible !important; // Force visibility of children popping out
 
     .repo-header-row, .repo-row {
         display: grid; 
         grid-template-columns: 80px 1.8fr 110px 100px 200px 110px;
-        grid-gap: 15px; align-items: center;
+        grid-gap: 15px; 
+        align-items: center;
     }
 
-    .repo-header-row div { font-weight: 800; text-transform: uppercase; font-size: 11px; color: #999; padding-bottom: 10px; }
+    .repo-header-row div { 
+        font-weight: 800; 
+        text-transform: uppercase; 
+        font-size: 11px; 
+        color: #999; 
+        padding-bottom: 10px; 
+    }
 
     .repo-row {
-        border: 2px solid; border-radius: 40px; padding: 8px 20px; min-height: 55px; 
-        position: relative; cursor: pointer; margin-bottom: 10px; overflow: visible;
+        border: 2px solid; 
+        border-radius: 40px; 
+        padding: 8px 20px; 
+        min-height: 55px; 
+        position: relative; 
+        cursor: pointer; 
+        margin-bottom: 10px; 
+        overflow: visible !important; // Ensure the card isn't cut off by the row border
+        
         &.auxiliary-dashed { border-style: dashed !important; }
         &:hover { background: rgba(0,0,0,0.02); }
     }
@@ -51,41 +67,90 @@ $content-width: 100rem;
     }
 
     .repo-hover-card {
-        display: none; position: absolute; top: 120%; left: 0; width: 320px;
-        background: white !important; border: 1px solid #ddd; border-radius: 10px;
-        padding: 15px; box-shadow: 0 8px 30px rgba(0,0,0,0.15); z-index: 1000;
-        &.active { display: block; }
+        display: none; 
+        position: absolute; 
+        top: 110%; // Positioned just below the row
+        left: 0; 
+        width: 340px;
+        background: #ffffff !important; 
+        border: 1px solid #ddd; 
+        border-radius: 10px;
+        padding: 15px; 
+        box-shadow: 0 10px 30px rgba(0,0,0,0.2); 
+        z-index: 9999 !important; // Ensure it floats above subsequent rows
         
-        // NEW: Layout for the button inside the card
+        &.active { 
+            display: block !important; 
+        }
+
         .card-btn-container {
             margin-bottom: 12px;
             display: flex;
-            .btn { font-size: 11px !important; padding: 4px 10px !important; }
+            .btn { 
+                font-size: 11px !important; 
+                padding: 4px 10px !important; 
+                pointer-events: auto; // Ensures button is clickable inside the card
+            }
         }
 
-        .hover-desc { font-size: 13px; margin-bottom: 10px; color: #444; line-height: 1.4; text-align: left; }
-        .hover-links { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; 
-            a { font-size: 12px; font-weight: 700; color: $link-color; text-decoration: none; }
+        .hover-desc { 
+            font-size: 13px; 
+            margin-bottom: 10px; 
+            color: #444; 
+            line-height: 1.4; 
+            text-align: left; 
+        }
+        
+        .hover-links { 
+            display: grid; 
+            grid-template-columns: 1fr 1fr; 
+            gap: 8px; 
+            border-top: 1px solid #eee;
+            padding-top: 10px;
+            
+            a { 
+                font-size: 12px; 
+                font-weight: 700; 
+                color: $link-color; 
+                text-decoration: none;
+                &:hover { text-decoration: underline; }
+            }
         }
     }
 
     .std-logo { height: 28px; width: auto; }
     .repo-license { color: $link-color; font-weight: 700; font-size: 13px; }
     
-    .repo-deps { display: flex; gap: 5px; 
+    .repo-deps { 
+        display: flex; 
+        gap: 5px; 
         .dep-box { border: 1px solid #ddd; border-radius: 4px; padding: 2px 6px; background: #fff; }
         .dep-img { height: 18px; }
     }
 
-    .repo-software { display: flex; justify-content: flex-end; gap: 8px; 
+    .repo-software { 
+        display: flex; 
+        justify-content: flex-end; 
+        gap: 8px; 
         .soft-icon { height: 24px; }
     }
 
     .repo-legend { 
-        margin-top: 25px; padding: 15px; border-top: 1px solid #eee; font-size: 12px; color: #666;
-        display: flex; gap: 20px;
-        .leg-box { display: inline-block; width: 20px; height: 10px; border: 1px solid #999; vertical-align: middle;
-            &.solid { border-style: solid; } &.dashed { border-style: dashed; }
+        margin-top: 25px; 
+        padding: 15px; 
+        border-top: 1px solid #eee; 
+        font-size: 12px; 
+        color: #666;
+        display: flex; 
+        gap: 20px;
+        .leg-box { 
+            display: inline-block; 
+            width: 20px; 
+            height: 10px; 
+            border: 1px solid #999; 
+            vertical-align: middle;
+            &.solid { border-style: solid; } 
+            &.dashed { border-style: dashed !important; }
         }
     }
 }
