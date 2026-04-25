@@ -113,12 +113,13 @@
       <span class="legend-title">Software:</span>
       <div class="legend-icon-group">
         <img src="{{ site.baseurl }}/assets/icons/Android.png" class="legend-icon" alt="Android"> Android App
-        <img src="{{ site.baseurl }}/assets/icons/APK.png" class="legend-icon" alt="APK"> APK Available
+        <img src="{{ site.baseurl }}/assets/icons/APK.png" class="legend-icon" alt="APK"> APK
         <img src="{{ site.baseurl }}/assets/icons/Linux.png" class="legend-icon" alt="Linux"> Linux
         <img src="{{ site.baseurl }}/assets/icons/Cloud.png" class="legend-icon" alt="Cloud"> Cloud
         <img src="{{ site.baseurl }}/assets/icons/Docker.png" class="legend-icon" alt="Docker"> Docker
         <img src="{{ site.baseurl }}/assets/icons/API.png" class="legend-icon" alt="API"> API Tool
         <img src="{{ site.baseurl }}/assets/icons/Windows.png" class="legend-icon" alt="Windows"> Windows
+        <img src="{{ site.baseurl }}/assets/icons/Web.png" class="legend-icon" alt="Web"> Web
       </div>
     </div>
   </div>
@@ -129,7 +130,7 @@ function toggleRepoCard(event, cardId) {
     event.stopPropagation();
     const card = document.getElementById(cardId);
     
-    // Close others
+    // Close all other open cards
     document.querySelectorAll('.repo-hover-card').forEach(c => {
         if (c.id !== cardId) c.classList.remove('is-active');
     });
@@ -139,7 +140,7 @@ function toggleRepoCard(event, cardId) {
     }
 }
 
-// Close on outside click
+// Close cards when clicking anywhere else on the page
 document.addEventListener('click', function() {
     document.querySelectorAll('.repo-hover-card').forEach(c => {
         c.classList.remove('is-active');
