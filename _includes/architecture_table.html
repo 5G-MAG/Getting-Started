@@ -67,7 +67,7 @@
 
         <div class="repo-standards">
           {% for std in final_standards %}
-            <img src="{{ site.baseurl }}/assets/logos/{{ std }}.png" class="std-logo" alt="{{ std }}">
+            <img src="{{ site.baseurl }}/assets/logos/{{ std }}.png" class="std-logo">
           {% endfor %}
         </div>
 
@@ -76,14 +76,14 @@
         <div class="repo-deps">
           {% for dep in repo_meta.dependencies %}
             <div class="dep-box">
-              <img src="{{ site.baseurl }}/assets/deps/{{ dep }}.png" class="dep-img" alt="{{ dep }}">
+              <img src="{{ site.baseurl }}/assets/deps/{{ dep }}.png" class="dep-img">
             </div>
           {% endfor %}
         </div>
 
         <div class="repo-software">
           {% for icon in repo_meta.software %}
-            <img src="{{ site.baseurl }}/assets/icons/{{ icon }}.png" class="soft-icon" alt="{{ icon }}">
+            <img src="{{ site.baseurl }}/assets/icons/{{ icon }}.png" class="soft-icon">
           {% endfor %}
         </div>
       </div>
@@ -109,13 +109,6 @@
       <img src="{{ site.baseurl }}/assets/icons/Linux.png" class="leg-icon"> Linux
       <img src="{{ site.baseurl }}/assets/icons/Docker.png" class="leg-icon"> Docker
     </div>
-
-    <div class="legend-group">
-      <strong>Standards:</strong>
-      <img src="{{ site.baseurl }}/assets/logos/3GPP.png" class="leg-std"> 3GPP
-      <img src="{{ site.baseurl }}/assets/logos/DVBI.png" class="leg-std"> DVB-I
-      <img src="{{ site.baseurl }}/assets/logos/MPEG.png" class="leg-std"> MPEG
-    </div>
   </div>
 </div>
 
@@ -123,15 +116,11 @@
 function toggleRepoCard(e, id) {
     e.stopPropagation();
     const card = document.getElementById(id);
-    // Close other open cards
     document.querySelectorAll('.repo-hover-card').forEach(c => {
         if(c.id !== id) c.classList.remove('active');
     });
-    // Toggle current
     if(card) card.classList.toggle('active');
 }
-
-// Close card when clicking anywhere else
 document.addEventListener('click', () => {
     document.querySelectorAll('.repo-hover-card').forEach(c => c.classList.remove('active'));
 });
