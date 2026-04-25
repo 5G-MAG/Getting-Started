@@ -15,14 +15,18 @@
     {% if repo_meta %}
       {% assign cat_id = repo_meta.category %}
       {% assign cat_data = site.data.repo_metadata.categories[cat_id] %}
-      {% assign row_bg = cat_data.color | default: "#ffcc00" %}
+      
+      {% assign bg_color = cat_data.color | default: "#BFBFBF" %}
+      {% assign txt_color = cat_data.text_color | default: "#000000" %}
 
       <div class="repo-row {% if repo_meta.is_auxiliary %}auxiliary-dashed{% endif %}" 
-           style="border-color: {{ row_bg }} !important;"
+           style="border-color: {{ bg_color }} !important;"
            onclick="toggleRepoCard(event, 'card-{{ id }}')">
         
         <div class="repo-id-group">
-          <div class="id-pill" style="background-color: {{ row_bg }} !important; color: {{ cat_data.text_color }} !important;">{{ id }}</div>
+          <div class="id-pill" style="background-color: {{ bg_color }} !important; color: {{ txt_color }} !important;">
+            {{ id }}
+          </div>
           <div class="status-icon">
             {% if repo_meta.public %}
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 13L9 17L19 7" stroke="#2da44e" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg>
@@ -38,7 +42,10 @@
             {% if repo_meta.description %}
             <div id="card-{{ id }}" class="repo-hover-card" onclick="event.stopPropagation()">
               <div class="card-btn-container">
-                <a href="{{ repo_meta.repo_url }}" class="btn btn-{{ cat_id }}" target="_blank">{{ repo_meta.repo_slug }}</a>
+                <a href="{{ repo_meta.repo_url }}" class="btn" target="_blank" 
+                   style="background-color: {{ bg_color }} !important; color: {{ txt_color }} !important; border: none !important;">
+                  {{ repo_meta.repo_slug }}
+                </a>
               </div>
               <p class="hover-desc">{{ repo_meta.description }}</p>
               <div class="hover-links">
