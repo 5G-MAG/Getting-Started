@@ -14,7 +14,9 @@ nav_order: 3
 
 The following repositories are available. Please refer to the "Scope" section of the different projects for more context.
 
-<img src="../../assets/images/projects/aiml_repos.png" style="width: 80%">
+{% include architecture_table.html ids="ML1" %}
+
+*Note: Auxiliary repositories are indicated with a dashed border.*
 
 Note that these repositories are currently private and under testing. **Early access** can be requested at: [https://www.5g-mag.com/early-access](https://www.5g-mag.com/early-access)
 
