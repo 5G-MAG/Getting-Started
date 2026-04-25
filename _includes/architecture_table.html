@@ -23,7 +23,7 @@
 
       <div class="repo-row {% if repo_meta.is_auxiliary %}auxiliary-dashed{% endif %}" 
            style="border-color: {{ row_bg }};"
-           onclick="toggleRepoCard(event, 'card-{{ id | slugify }}')">
+           onclick="toggleRepoCard(event, 'card-{{ id }}')">
         
         <div class="repo-id-group">
           <div class="id-pill" style="background-color: {{ row_bg }}; color: {{ id_text }};">
@@ -46,7 +46,7 @@
             </span>
 
             {% if repo_meta.description %}
-            <div id="card-{{ id | slugify }}" class="repo-hover-card" onclick="event.stopPropagation()">
+            <div id="card-{{ id }}" class="repo-hover-card" onclick="event.stopPropagation()">
               <p class="hover-desc">{{ repo_meta.description }}</p>
               <hr class="hover-divider">
               <div class="hover-links">
@@ -97,58 +97,34 @@
   {% endfor %}
 
   <div class="repo-legend">
-    <div class="legend-section">
-      <span class="legend-title">Status:</span>
-      <span class="status-public">✔</span> Public Repository
-      <span class="status-private">⚠️</span> Private Repository
-    </div>
-    <div class="legend-section">
-      <span class="legend-title">Style:</span>
-      <div class="legend-style-box solid"></div> Main Component
-      <div class="legend-style-box dashed"></div> Auxiliary Library
-    </div>
-    <div class="legend-section">
-      <span class="legend-title">Software:</span>
-      <div class="legend-icon-group">
-        <img src="{{ site.baseurl }}/assets/icons/Android.png" class="legend-icon" alt="Android"> Android App
-        <img src="{{ site.baseurl }}/assets/icons/APK.png" class="legend-icon" alt="APK"> APK Available
-        <img src="{{ site.baseurl }}/assets/icons/Linux.png" class="legend-icon" alt="Linux"> Linux
-        <img src="{{ site.baseurl }}/assets/icons/Cloud.png" class="legend-icon" alt="Cloud"> Cloud
-        <img src="{{ site.baseurl }}/assets/icons/Docker.png" class="legend-icon" alt="Docker"> Docker
-        <img src="{{ site.baseurl }}/assets/icons/API.png" class="legend-icon" alt="API"> API Tool
-        <img src="{{ site.baseurl }}/assets/icons/Windows.png" class="legend-icon" alt="Windows"> Windows
       </div>
-    </div>
-  </div>
 </div>
 
 <script>
-/**
- * Toggles the visibility of a repository info card.
- * Closes other open cards and prevents event bubbling.
- */
 function toggleRepoCard(event, cardId) {
+    // Prevent the body click listener from firing immediately
     event.stopPropagation();
+    
     const card = document.getElementById(cardId);
     if (!card) return;
 
-    const isActive = card.classList.contains('is-active');
+    const wasActive = card.classList.contains('is-active');
 
-    // Close all cards first for a clean UI
+    // Close all other open cards
     document.querySelectorAll('.repo-hover-card').forEach(c => {
         c.classList.remove('is-active');
     });
 
-    // If it wasn't already open, open it now
-    if (!isActive) {
+    // Toggle the current one
+    if (!wasActive) {
         card.classList.add('is-active');
     }
 }
 
-// Close any open cards if the user clicks outside a row
+// Close cards when clicking anywhere else on the page
 document.addEventListener('click', function() {
-    document.querySelectorAll('.repo-hover-card').forEach(card => {
-        card.classList.remove('is-active');
+    document.querySelectorAll('.repo-hover-card').forEach(c => {
+        c.classList.remove('is-active');
     });
 });
 </script>
