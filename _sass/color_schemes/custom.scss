@@ -29,24 +29,28 @@ $content-width: 100rem;
 
     .repo-header-row, .repo-row {
         display: grid; 
-        // Rebalanced column widths for better spacing
+        // Rebalanced column widths
         grid-template-columns: 80px 2fr 120px 120px 200px 120px;
         grid-gap: 15px; 
         align-items: center;
     }
 
-    .repo-header-row div { 
-        font-weight: 800; 
-        text-transform: uppercase; 
-        font-size: 11px; 
-        color: #999; 
-        padding-bottom: 12px;
-        display: flex;
-        justify-content: center; 
+    .repo-header-row {
+        padding: 0 20px; // CRITICAL: Matches .repo-row padding to align columns
         
-        &:nth-child(1) { justify-content: center; } 
-        &:nth-child(2) { justify-content: flex-start; padding-left: 5px; } 
-        &:nth-child(6) { justify-content: flex-end; } 
+        div { 
+            font-weight: 800; 
+            text-transform: uppercase; 
+            font-size: 11px; 
+            color: #999; 
+            padding-bottom: 12px;
+            display: flex;
+            justify-content: center; // Default alignment for headers
+            
+            &:nth-child(1) { justify-content: center; } 
+            &:nth-child(2) { justify-content: flex-start; padding-left: 5px; } 
+            &:nth-child(6) { justify-content: flex-end; } 
+        }
     }
 
     .repo-row {
@@ -64,11 +68,15 @@ $content-width: 100rem;
         &:hover { background: rgba(0,0,0,0.02); z-index: 50 !important; }
     }
 
-    .repo-id-group { display: flex; align-items: center; justify-content: center; gap: 8px; }
+    // Column Alignment Logic
+    .repo-id-group  { display: flex; align-items: center; justify-content: center; gap: 8px; }
+    .repo-name      { text-align: left; display: flex; flex-direction: column; justify-content: center; }
+    .repo-standards { display: flex; justify-content: center; }
+    .repo-license   { display: flex; justify-content: center; color: $link-color; font-weight: 700; font-size: 13px; }
+    
     .id-pill { width: 30px; height: 30px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; }
 
     .repo-name { 
-        text-align: left;
         .repo-title-wrapper { position: relative; }
         .repo-main-link { font-weight: 700; font-size: 15px; color: #333; }
         .repo-slug-inline { font-size: 12px; color: #999; margin-left: 4px; }
@@ -100,16 +108,9 @@ $content-width: 100rem;
         }
     }
 
-    .repo-standards, .repo-license { 
-        display: flex; 
-        justify-content: center; 
-        gap: 6px; 
-    }
-    
     .std-logo { height: 26px; width: auto; object-fit: contain; }
-    .repo-license { color: $link-color; font-weight: 700; font-size: 13px; }
     
-    // --- DEPENDENCIES (Updated for height consistency) ---
+    // --- DEPENDENCIES ---
     .repo-deps { 
         display: flex; 
         justify-content: center; 
@@ -122,11 +123,11 @@ $content-width: 100rem;
             background: #fff; 
             display: flex; 
             align-items: center; 
-            height: 32px; // Fixed height for vertical alignment
+            height: 32px; 
         }
 
         .dep-img { 
-            height: 24px; // Matched to software icons
+            height: 24px; 
             width: auto; 
             object-fit: contain; 
         }
@@ -139,7 +140,7 @@ $content-width: 100rem;
         align-items: center; 
         gap: 8px; 
         .soft-icon { 
-            height: 24px; // Master height
+            height: 24px; 
             width: 24px; 
             object-fit: contain; 
         }
