@@ -45,6 +45,12 @@
 
             {% if repo_meta.description %}
             <div id="card-{{ id }}" class="repo-hover-card" onclick="event.stopPropagation()">
+              <div class="card-btn-container">
+                <a href="{{ repo_meta.repo_url }}" class="btn btn-{{ cat_id }}" target="_blank">
+                  {{ repo_meta.repo_slug }}
+                </a>
+              </div>
+              
               <p class="hover-desc">{{ repo_meta.description }}</p>
               <hr class="hover-divider">
               <div class="hover-links">
@@ -89,15 +95,3 @@
     <div><strong>Style:</strong> <span class="leg-box solid"></span> Main <span class="leg-box dashed"></span> Auxiliary</div>
   </div>
 </div>
-
-<script>
-function toggleRepoCard(e, id) {
-    e.stopPropagation();
-    const card = document.getElementById(id);
-    document.querySelectorAll('.repo-hover-card').forEach(c => { if(c.id !== id) c.classList.remove('active'); });
-    if(card) card.classList.toggle('active');
-}
-document.addEventListener('click', () => {
-    document.querySelectorAll('.repo-hover-card').forEach(c => c.classList.remove('active'));
-});
-</script>
