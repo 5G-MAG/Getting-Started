@@ -31,6 +31,7 @@ jobs:
           import json
           import os
           import time
+          import re
           from datetime import datetime
 
           # 1. Configuration
@@ -60,7 +61,6 @@ jobs:
               req = urllib.request.Request(url)
               req.add_header('User-Agent', 'Github-Action-Bot')
               req.add_header('Accept', 'application/vnd.github+json')
-              req.add_header('X-GitHub-Api-Version', '2022-11-28')
               if token:
                   req.add_header('Authorization', f'Bearer {token}')
               try:
@@ -136,7 +136,7 @@ jobs:
                       })
               rel_out[p_name], pr_out[p_name], comm_out[p_name] = rel_list, pull_list, comm_list
 
-          # --- SAFE YAML UPDATE ---
+          # --- UPDATED ROBUST YAML UPDATE ---
           yaml_path = '_data/repo_metadata.yml'
           if os.path.exists(yaml_path):
               with open(yaml_path, 'r') as f:
@@ -145,14 +145,24 @@ jobs:
               updated_lines = []
               active_slug = None
               for line in lines:
+                  # Detect repo_slug and strip any messy quotes
                   if 'repo_slug:' in line:
-                      active_slug = line.split(':')[-1].strip().strip('"').strip("'")
+                      active_slug = line.split(':')[-1].strip().replace('"', '').replace("'", "")
                   
-                  if 'description:' in line and active_slug in repo_descriptions:
-                      # Clean description: no newlines, escaped quotes
-                      clean_desc = repo_descriptions[active_slug].replace('"', '\\"').replace('\n', ' ').strip()
-                      # Ensure standard 4-space indentation
-                      line = f'    description: "{clean_desc}"\n'
+                  if 'description:' in line:
+                      # If we have a new description, use it; otherwise, just fix existing syntax
+                      raw_desc = repo_descriptions.get(active_slug)
+                      if not raw_desc:
+                          # Fallback: extract existing description text to sanitize it
+                          match = re.search(r'description:\s*"(.*)"', line)
+                          if match: raw_desc = match.group(1)
+                      
+                      if raw_desc:
+                          # Escape internal double quotes and remove newlines
+                          clean_desc = raw_desc.replace('"', '\\"').replace('\n', ' ').strip()
+                          # Preserve the original line's indentation exactly
+                          indent = line[:line.find('description:')]
+                          line = f'{indent}description: "{clean_desc}"\n'
                   
                   updated_lines.append(line)
               
