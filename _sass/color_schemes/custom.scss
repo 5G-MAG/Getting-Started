@@ -97,11 +97,76 @@ $content-width: 100rem;
 
     .repo-name {
         display: flex; flex-direction: column;
+        
+        .repo-title-wrapper {
+            position: relative;
+            display: inline-block;
+
+            &:hover .repo-hover-card {
+                display: block;
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
         .repo-main-link { font-weight: 700; font-size: 0.95rem; text-decoration: none; color: inherit; }
         .repo-slug-inline { font-size: 0.8rem; color: #999; margin-left: 4px; }
         .branch-badge { 
             font-family: monospace; font-size: 0.75rem; font-weight: 600; 
             letter-spacing: 0.3px; color: #777; margin-top: 1px; 
+        }
+
+        /* NEW: Hover Card Styles */
+        .repo-hover-card {
+            display: none;
+            position: absolute;
+            top: 120%;
+            left: 0;
+            width: 280px;
+            background: #ffffff;
+            border: 1px solid #ddd;
+            border-radius: 12px;
+            padding: 15px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+            z-index: 1000;
+            opacity: 0;
+            transform: translateY(10px);
+            transition: opacity 0.2s ease, transform 0.2s ease;
+            color: #333;
+            pointer-events: auto;
+
+            .hover-desc {
+                font-size: 0.85rem;
+                line-height: 1.5;
+                margin-bottom: 10px;
+                font-weight: 400;
+                color: #555;
+                text-align: left;
+            }
+
+            .hover-divider {
+                border: 0;
+                border-top: 1px solid #eee;
+                margin: 10px 0;
+            }
+
+            .hover-links {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 8px;
+                
+                a {
+                    font-size: 0.75rem;
+                    color: $link-color;
+                    text-decoration: none;
+                    font-weight: 600;
+                    display: flex;
+                    align-items: center;
+                    gap: 5px;
+                    &:hover { text-decoration: underline; }
+                    i { width: 14px; color: #666; }
+                }
+            }
         }
     }
 
