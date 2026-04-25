@@ -39,8 +39,11 @@ $content-width: 100rem;
         font-size: 11px; 
         color: #999; 
         padding-bottom: 10px;
-        text-align: center;
-        &:nth-child(2) { text-align: left; }
+        display: flex;
+        justify-content: center;
+        
+        &:nth-child(2) { justify-content: flex-start; }
+        &:nth-child(6) { justify-content: flex-end; }
     }
 
     .repo-row {
@@ -71,7 +74,7 @@ $content-width: 100rem;
     .repo-hover-card {
         display: none; 
         position: absolute; 
-        top: 110%; // REVERTED TO PREVIOUS WORKING POSITION
+        top: 110%; 
         left: 0; 
         width: 340px;
         background: #ffffff !important; 
@@ -105,7 +108,7 @@ $content-width: 100rem;
     .repo-deps { 
         display: flex; justify-content: center; gap: 6px; 
         .dep-box { border: 1px solid #eee; border-radius: 4px; padding: 4px 8px; background: #fff; display: flex; align-items: center; }
-        .dep-img { height: 22px; width: auto; } // KEEPING THE BIGGER LOGOS
+        .dep-img { height: 22px; width: auto; }
     }
 
     .repo-software { 
