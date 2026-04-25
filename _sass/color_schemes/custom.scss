@@ -1,119 +1,98 @@
-// 1. GLOBALS
-$link-color: #00A0D2;
-
-.architecture-container {
-    display: flex; flex-direction: column; gap: 12px; width: 100%; margin: 20px 0;
-    overflow: visible !important;
-
-    // Header
-    .repo-header-row {
-        display: grid; grid-template-columns: 80px 1.8fr 110px 110px 200px 110px;
-        grid-gap: 15px; padding: 0 20px 10px; border-bottom: 1px solid #eee;
-        .header-item { font-weight: 800; text-transform: uppercase; font-size: 11px; color: #999; }
-    }
-
-    // Row
-    .repo-row {
-        display: grid; grid-template-columns: 80px 1.8fr 110px 110px 200px 110px;
-        grid-gap: 15px; align-items: center; border: 1.5px solid; border-radius: 40px; 
-        padding: 8px 20px; min-height: 55px; position: relative; cursor: pointer;
-        overflow: visible !important; background: transparent;
-        transition: transform 0.2s;
-        &:hover { transform: translateX(4px); background: rgba(0,0,0,0.01); }
-        &.auxiliary-dashed { border-style: dashed !important; }
-    }
-
-    // ID & Status (THE GREEN TICK FIX)
-    .repo-id-group {
-        display: flex; align-items: center; gap: 10px;
-        .id-pill {
-            font-weight: 800; width: 32px; height: 32px; border-radius: 50%;
-            display: flex; justify-content: center; align-items: center; flex-shrink: 0;
-        }
-        .status-public { 
-            color: #2da44e !important; 
-            filter: none !important; // Kill the violet filter
-            -webkit-filter: none !important;
-            font-weight: 900 !important;
-        }
-        .status-private { color: #d29922 !important; font-weight: 900 !important; }
-    }
-
-    // Name & Card Layer
-    .repo-name {
-        display: flex; flex-direction: column;
-        .repo-title-wrapper { position: relative; overflow: visible !important; }
-        .repo-main-link { font-weight: 700; font-size: 15px; color: #333; }
-        .repo-slug-inline { font-size: 12px; color: #999; margin-left: 4px; }
-        .branch-badge { font-family: monospace; font-size: 11px; color: #777; }
-
-        .repo-hover-card {
-            display: none !important; 
-            position: absolute; top: 110%; left: 0; width: 340px;
-            background: #ffffff !important; border: 1px solid #ddd !important; 
-            border-radius: 12px; padding: 20px; box-shadow: 0 10px 40px rgba(0,0,0,0.2) !important;
-            z-index: 100000 !important; color: #333 !important; text-align: left;
-            
-            &.is-active { display: block !important; }
-            .hover-desc { font-size: 13px; line-height: 1.5; margin-bottom: 12px; color: #444 !important; }
-            .hover-divider { border-top: 1px solid #eee; margin: 10px 0; border-bottom: none; }
-            .hover-links {
-                display: grid; grid-template-columns: 1fr 1fr; gap: 8px;
-                a { font-size: 12px; color: $link-color !important; font-weight: 700; text-decoration: none; }
-            }
-        }
-    }
-
-    // Dependencies (LINEAR FIX)
-    .repo-deps {
-        display: flex !important; // Force flex
-        flex-direction: row !important; // Force linear
-        flex-wrap: nowrap !important; // Stop stacking
-        gap: 6px !important;
-        align-items: center;
-        overflow: hidden;
-        .dep-box { 
-            background: #fff; padding: 4px 8px; border-radius: 4px; 
-            border: 1px solid #ddd; flex-shrink: 0; display: flex !important;
-        }
-        .dep-img { height: 18px; width: auto; object-fit: contain; }
-    }
-
-    // Legend
-    .repo-legend {
-        margin-top: 30px; padding: 20px; background: #f9f9f9; border: 1px solid #eee; border-radius: 12px;
-        .legend-section { display: flex; align-items: center; gap: 15px; margin-bottom: 8px; font-size: 12px; }
-        .legend-title { font-weight: 800; color: #999; min-width: 80px; text-transform: uppercase; }
-        .status-public { color: #2da44e !important; font-weight: bold; }
-        .legend-icon { height: 16px; margin: 0 4px; vertical-align: middle; }
-        .legend-style-box { 
-            width: 25px; height: 12px; border: 1.5px solid #999; border-radius: 3px; 
-            &.solid { border-style: solid; } &.dashed { border-style: dashed; }
-        }
-    }
-}
-
-// Global button styles (restored)
+// 1. GLOBAL UI BUTTONS (Untouched)
 .btn-video     { color: #FFFFFF !important; background-color: #C80000 !important; }
 .btn-github    { color: #ffffff !important; background-color: #000000 !important; }
 .btn-release   { color: #88D66C !important; background-color: #000000 !important; }
 .btn-tutorial  { color: #FFFFFF !important; background-color: #00A0D2 !important; }
-.btn-5gms      { color: #000000 !important; background-color: #FFC000 !important; }
-.btn-5gcsc     { color: #ffffff !important; background-color: #FF0000 !important; }
-.btn-uedc      { color: #ffffff !important; background-color: #D17F79 !important; }
-.btn-5gbc      { color: #ffffff !important; background-color: #70AD47 !important; }
-.btn-5gbcea    { color: #ffffff !important; background-color: #7030A0 !important; }
-.btn-5mbs      { color: #ffffff !important; background-color: #1AB39F !important; }
-.btn-xr        { color: #ffffff !important; background-color: #ED7D31 !important; }
-.btn-v3c       { color: #ffffff !important; background-color: #CC3399 !important; }
-.btn-testbed   { color: #ffffff !important; background-color: #90A008 !important; }
-.btn-md        { color: #ffffff !important; background-color: #385723 !important; }
-.btn-dvbi      { color: #ffffff !important; background-color: #002060 !important; }
-.btn-3gpp      { color: #ffffff !important; background-color: #0070C0 !important; }
 .btn-common    { color: #000000 !important; background-color: #BFBFBF !important; }
 
+// 2. PR DASHBOARD (Isolated)
+.release-table {
+    width: 100%; margin-top: 20px; border-collapse: collapse;
+    th, td { padding: 12px; text-align: left; border-bottom: 1px solid #eee; }
+}
+
+// 3. ARCHITECTURE TABLE (NAMESPACE: .arch-tbl-v2)
+// This namespace prevents styles from leaking out to the rest of the site.
+.arch-tbl-v2 {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 2em 0;
+    font-family: inherit;
+
+    .arch-container { display: flex; flex-direction: column; gap: 12px; overflow: visible !important; }
+
+    // Grid System
+    .arch-header, .arch-row {
+        display: grid !important;
+        grid-template-columns: 85px 1.8fr 110px 100px 200px 110px !important;
+        grid-gap: 15px; align-items: center;
+    }
+
+    .arch-header {
+        padding: 0 20px 10px; border-bottom: 1px solid #eee;
+        div { font-weight: 800; text-transform: uppercase; font-size: 11px; color: #999; }
+    }
+
+    .arch-row {
+        border: 2px solid; border-radius: 40px; padding: 10px 20px; 
+        min-height: 60px; position: relative; cursor: pointer;
+        background: transparent !important; overflow: visible !important;
+        &.is-aux { border-style: dashed !important; }
+        &:hover { background: rgba(0,0,0,0.02) !important; }
+    }
+
+    // Colors & Icons
+    .arch-tick-green { color: #2da44e !important; font-weight: 900 !important; font-style: normal !important; filter: none !important; }
+    .arch-warn-gold { color: #d29922 !important; font-weight: 900 !important; }
+    .arch-text-blue { color: #00A0D2 !important; font-weight: 700; font-size: 13px; }
+
+    // Column Units
+    .arch-pill { 
+        width: 32px; height: 32px; border-radius: 50%; font-weight: 800;
+        display: flex; align-items: center; justify-content: center; font-size: 14px;
+    }
+    .arch-flex-center { display: flex; align-items: center; gap: 10px; }
+    .arch-flex-row { display: flex !important; flex-direction: row !important; gap: 6px !important; }
+    .arch-flex-end { display: flex; justify-content: flex-end; gap: 8px; }
+    .arch-relative { position: relative; }
+
+    // Images
+    .arch-img-std { height: 30px; width: auto; }
+    .arch-img-dep { height: 20px; width: auto; }
+    .arch-img-soft { height: 26px; width: auto; }
+    .arch-dep-unit { background: #fff; padding: 4px 8px; border-radius: 4px; border: 1px solid #ddd; display: flex; }
+
+    // Typography
+    .arch-main-link { font-weight: 700; font-size: 15px; color: #333 !important; }
+    .arch-slug { color: #999; font-size: 12px; margin-left: 5px; }
+    .arch-branch { font-family: monospace; font-size: 11px; color: #777; }
+
+    // THE CARD (LAYER)
+    .arch-card {
+        display: none; position: absolute; top: 120%; left: 0; width: 340px;
+        background: white !important; border: 1px solid #ddd !important; border-radius: 12px;
+        padding: 20px; box-shadow: 0 10px 40px rgba(0,0,0,0.2); z-index: 99999;
+        &.active { display: block !important; }
+        .arch-card-text { font-size: 13px; line-height: 1.5; color: #444 !important; margin-bottom: 12px; }
+        .arch-card-links {
+            display: grid; grid-template-columns: 1fr 1fr; gap: 10px;
+            a { font-size: 12px; color: #00A0D2 !important; font-weight: 700; text-decoration: none; }
+        }
+    }
+
+    // Legend
+    .arch-legend {
+        margin-top: 30px; padding: 20px; border: 1px solid #eee; border-radius: 12px; background: #fafafa;
+        display: flex; flex-direction: column; gap: 10px;
+        .arch-leg-item { font-size: 12px; display: flex; align-items: center; gap: 10px; }
+        .arch-box-solid { width: 25px; height: 12px; border: 1.5px solid #999; }
+        .arch-box-dashed { width: 25px; height: 12px; border: 1.5px dashed #999; }
+    }
+}
+
+// Responsive
 @media (max-width: 900px) {
-    .architecture-container .repo-header-row { display: none; }
-    .architecture-container .repo-row { display: flex; flex-direction: column; align-items: flex-start; padding: 15px; border-radius: 15px; }
-    .repo-deps { flex-wrap: wrap !important; }
+    .arch-tbl-v2 .arch-header { display: none !important; }
+    .arch-tbl-v2 .arch-row { display: flex !important; flex-direction: column !important; align-items: flex-start !important; border-radius: 15px; }
+    .arch-tbl-v2 .arch-flex-row { flex-wrap: wrap !important; }
 }
