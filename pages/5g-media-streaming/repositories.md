@@ -91,7 +91,7 @@ Additional information:
 ## Auxiliary repositories
 
 ### 5GMS Common Android Library
-[rt-5gms-common-android-library](https://github.com/5G-MAG/rt-5gms-common-android-library){: .btn .btn-common }
+[rt-5gms-common-android-library](https://github.com/5G-MAG/rt-5gms-common-android-library){: .btn .btn-5gms }
 
 The 5GMS Common Library is an Android library that includes models and helper classes used within the different client-side Android applications such as the 5GMSd-Aware Application, 5GMSd Media Stream Handler and the 5GMSd Media Session Handler.
 

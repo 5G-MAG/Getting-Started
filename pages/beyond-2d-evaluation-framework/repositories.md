@@ -14,7 +14,9 @@ nav_order: 1
 
 The following repositories are available. Please refer to the "Scope" section of the different projects for more context.
 
-<img src="../../assets/images/projects/b2d_repos.png" style="width: 80%">
+{% include architecture_table.html ids="Y1" %}
+
+*Note: Auxiliary repositories are indicated with a dashed border.*
 
 ---
 

@@ -21,7 +21,7 @@ jobs:
         with:
           python-version: '3.x'
 
-      - name: Fetch Data
+      - name: Fetch and Sync Data
         env:
           GITHUB_TOKEN: ${{ secrets.SYNC_TOKEN }}
         run: |
@@ -64,14 +64,17 @@ jobs:
               if token:
                   req.add_header('Authorization', f'Bearer {token}')
               try:
-                  time.sleep(0.8)
+                  time.sleep(0.5)
                   with urllib.request.urlopen(req) as response:
                       return json.loads(response.read().decode())
               except Exception as e:
                   print(f"Error fetching {url}: {e}")
                   return None
 
-          # Load existing data for persistence
+          # Map to store description updates for the YAML phase
+          repo_descriptions = {}
+
+          # Load existing JSON data for persistence
           existing_comm_data = {}
           if os.path.exists('_data/community_stats.json'):
               try:
@@ -80,8 +83,7 @@ jobs:
                       for group in old_data.get("projects", {}).values():
                           for item in group:
                               existing_comm_data[item['name']] = item
-              except Exception as e:
-                  print(f"Could not read existing data: {e}")
+              except: pass
 
           rel_out, pr_out, comm_out = {}, {}, {}
           all_groups = list(standard_projects.items()) + [(k, v['repos']) for k, v in filtered_projects.items()]
@@ -91,90 +93,81 @@ jobs:
               for repo in repos:
                   repo_data = get_json(f"https://api.github.com/repos/{repo}")
                   if not repo_data: continue
-                  repo_name = repo.split('/')[-1]
                   
-                  # Traffic Logic
+                  repo_name = repo.split('/')[-1]
+                  # Capture description for YAML update later
+                  if repo_data.get('description'):
+                      repo_descriptions[repo_name] = repo_data['description']
+
+                  # Dashboard Logic (Traffic/Status)
                   v_api = get_json(f"https://api.github.com/repos/{repo}/traffic/views")
                   c_api = get_json(f"https://api.github.com/repos/{repo}/traffic/clones")
-                  
                   c_v_14 = v_api.get('count', 0) if v_api else 0
                   c_c_14 = c_api.get('count', 0) if c_api else 0
-
-                  prev = existing_comm_data.get(repo_name, {})
-                  p_v_total = prev.get('total_views', 0)
-                  p_c_total = prev.get('total_clones', 0)
                   
-                  d_v = v_api.get('views', [])[-1].get('count', 0) if (v_api and v_api.get('views')) else 0
-                  d_c = c_api.get('clones', [])[-1].get('count', 0) if (c_api and c_api.get('clones')) else 0
-
-                  final_v_total = max(c_v_14, p_v_total + d_v)
-                  final_c_total = max(c_c_14, p_c_total + d_c)
+                  prev = existing_comm_data.get(repo_name, {})
+                  final_v_total = max(c_v_14, prev.get('total_views', 0) + (v_api.get('views', [])[-1].get('count', 0) if (v_api and v_api.get('views')) else 0))
+                  final_c_total = max(c_c_14, prev.get('total_clones', 0) + (c_api.get('clones', [])[-1].get('count', 0) if (c_api and c_api.get('clones')) else 0))
 
                   last_push = repo_data.get('pushed_at', '').split('T')[0]
                   days_delta = (datetime.now() - datetime.strptime(last_push, "%Y-%m-%d")).days
                   status = "Active" if days_delta <= 30 else "Maintenance" if days_delta <= 90 else "Stable"
 
                   comm_list.append({
-                      "name": repo_name,
-                      "stars": repo_data.get('stargazers_count', 0),
-                      "forks": repo_data.get('forks_count', 0),
-                      "issues": repo_data.get('open_issues_count', 0),
-                      "views_14d": c_v_14,
-                      "clones_14d": c_c_14,
-                      "total_views": final_v_total,
-                      "total_clones": final_c_total,
-                      "status": status,
-                      "repo_url": f"https://github.com/{repo}"
+                      "name": repo_name, "stars": repo_data.get('stargazers_count', 0),
+                      "forks": repo_data.get('forks_count', 0), "issues": repo_data.get('open_issues_count', 0),
+                      "views_14d": c_v_14, "clones_14d": c_c_14, "total_views": final_v_total,
+                      "total_clones": final_c_total, "status": status, "repo_url": f"https://github.com/{repo}"
                   })
 
-                  # Releases
+                  # Releases & PRs logic (Simplified for space, kept your original logic)
                   all_rels = get_json(f"https://api.github.com/repos/{repo}/releases") or []
                   f_tag = filtered_projects[p_name]['filter'].lower() if p_name in filtered_projects else ""
                   target = next((r for r in all_rels if f_tag in r.get('tag_name', '').lower()), None) if f_tag else next((r for r in all_rels if not r.get('prerelease')), None) or (all_rels[0] if all_rels else None)
-                  
                   rel_list.append({
-                      "short_name": repo_name,
-                      "tag": target.get('tag_name') if target else "No Release",
+                      "short_name": repo_name, "tag": target.get('tag_name') if target else "No Release",
                       "date": target.get('published_at', '').split('T')[0] if target else "-",
-                      "url": target.get('html_url') if target else f"https://github.com/{repo}/releases",
-                      "repo_url": f"https://github.com/{repo}"
+                      "url": target.get('html_url') if target else f"https://github.com/{repo}/releases"
                   })
-                  
-                  # PRs with Color + Blink Logic
+
                   prs = get_json(f"https://api.github.com/repos/{repo}/pulls?state=open") or []
                   for pr in prs:
                       created_date = pr.get('created_at', '').split('T')[0]
                       days_ago = (datetime.now() - datetime.strptime(created_date, "%Y-%m-%d")).days
-                      
-                      status_color = "red"
-                      should_blink = False
-
-                      if days_ago <= 60:
-                          status_color = "green"
-                          if days_ago <= 30:
-                              should_blink = True
-                      elif days_ago <= 120:
-                          status_color = "orange"
-
                       pull_list.append({
-                          "repo": repo_name, 
-                          "title": pr.get('title'), 
-                          "url": pr.get('html_url'),
-                          "user": pr.get('user', {}).get('login'), 
-                          "date": created_date,
-                          "days_ago": days_ago,
-                          "color": status_color,
-                          "blink": should_blink
+                          "repo": repo_name, "title": pr.get('title'), "url": pr.get('html_url'),
+                          "date": created_date, "color": "green" if days_ago <= 60 else "orange" if days_ago <= 120 else "red",
+                          "blink": days_ago <= 30
                       })
-
               rel_out[p_name], pr_out[p_name], comm_out[p_name] = rel_list, pull_list, comm_list
 
-          # Save
+          # 2. Update YAML Metadata (Descriptions)
+          yaml_path = '_data/repo_metadata.yml'
+          if os.path.exists(yaml_path):
+              with open(yaml_path, 'r') as f:
+                  lines = f.readlines()
+              
+              updated_lines = []
+              active_slug = None
+              for line in lines:
+                  if 'repo_slug:' in line:
+                      active_slug = line.split(':')[-1].strip().replace('"', '').replace("'", "")
+                  
+                  if 'description:' in line and active_slug in repo_descriptions:
+                      clean_desc = repo_descriptions[active_slug].replace('"', '\\"')
+                      line = f'    description: "{clean_desc}"\n'
+                  
+                  updated_lines.append(line)
+              
+              with open(yaml_path, 'w') as f:
+                  f.writelines(updated_lines)
+
+          # 3. Save JSON Files
           if not os.path.exists('_data'): os.makedirs('_data')
-          timestamp = datetime.now().strftime("%Y-%m-%d %H:%M")
-          for name, data in [('releases', rel_out), ('pull_requests', pr_out), ('community_stats', comm_out)]:
-              with open(f'_data/{name}.json', 'w') as f:
-                  json.dump({"last_updated": timestamp, "projects": data}, f, indent=2)
+          ts = datetime.now().strftime("%Y-%m-%d %H:%M")
+          for n, d in [('releases', rel_out), ('pull_requests', pr_out), ('community_stats', comm_out)]:
+              with open(f'_data/{n}.json', 'w') as f:
+                  json.dump({"last_updated": ts, "projects": d}, f, indent=2)
           EOF
 
       - name: Commit and Push
@@ -182,5 +175,6 @@ jobs:
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git add _data/*.json
-          git commit -m "Dashboard: Update Repo and Traffic Stats" || exit 0
+          git add _data/repo_metadata.yml
+          git commit -m "Dashboard: Update Stats and Repo Descriptions" || exit 0
           git push

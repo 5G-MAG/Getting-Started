@@ -14,7 +14,9 @@ nav_order: 3
 
 The following repositories are available. Please refer to the "Scope" section of the different projects for more context.
 
-<img src="../../assets/images/projects/mbs_repos.png" style="width: 80%">
+{% include architecture_table.html ids="M1,M2,M3,M4,M5,M6" %}
+
+*Note: Auxiliary repositories are indicated with a dashed border.*
 
 ---
 

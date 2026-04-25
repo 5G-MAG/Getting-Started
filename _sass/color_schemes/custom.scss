@@ -1,217 +1,157 @@
-// -------------------------------------------------------------------
-// 1. GLOBAL VARIABLES & BUTTONS (UNCHANGED)
-// -------------------------------------------------------------------
+// --- BUTTON COLORS DEFINED HERE ---
+// These map to the 'category' field in your _data/repo_metadata.yml
 $link-color: #00A0D2;
 $content-width: 100rem;
 
-.btn-video    { color: #FFFFFF !important; background-color: #C80000 !important; }
-.btn-github   { color: #ffffff !important; background-color: #000000 !important; }
-.btn-release  { color: #88D66C !important; background-color: #000000 !important; }
-.btn-tutorial { color: #FFFFFF !important; background-color: #00A0D2 !important; }
-.btn-5gms     { color: #000000 !important; background-color: #FFC000 !important; }
-.btn-5gcsc    { color: #ffffff !important; background-color: #FF0000 !important; }
-.btn-uedc     { color: #ffffff !important; background-color: #D17F79 !important; }
-.btn-5gbc     { color: #ffffff !important; background-color: #70AD47 !important; }
-.btn-5gbcea   { color: #ffffff !important; background-color: #7030A0 !important; }
-.btn-5mbs     { color: #ffffff !important; background-color: #1AB39F !important; }
-.btn-xr       { color: #ffffff !important; background-color: #ED7D31 !important; }
-.btn-v3c      { color: #ffffff !important; background-color: #CC3399 !important; }
-.btn-testbed  { color: #ffffff !important; background-color: #90A008 !important; }
-.btn-md       { color: #ffffff !important; background-color: #385723 !important; }
-.btn-dvbi     { color: #ffffff !important; background-color: #002060 !important; }
-.btn-3gpp     { color: #ffffff !important; background-color: #0070C0 !important; }
-.btn-common   { color: #000000 !important; background-color: #BFBFBF !important; }
+.btn-github    { color: #ffffff !important; background-color: #000000 !important; }
+.btn-release   { color: #88D66C !important; background-color: #000000 !important; }
+.btn-tutorial  { color: #FFFFFF !important; background-color: #00A0D2 !important; }
+.btn-5gms      { color: #000000 !important; background-color: #FFC000 !important; }
+.btn-5gcsc     { color: #ffffff !important; background-color: #FF0000 !important; }
+.btn-uedc      { color: #ffffff !important; background-color: #D17F79 !important; }
+.btn-5gbc      { color: #ffffff !important; background-color: #70AD47 !important; }
+.btn-5gbcea    { color: #ffffff !important; background-color: #7030A0 !important; }
+.btn-5mbs      { color: #ffffff !important; background-color: #1AB39F !important; }
+.btn-xr        { color: #ffffff !important; background-color: #ED7D31 !important; }
+.btn-v3c       { color: #ffffff !important; background-color: #CC3399 !important; }
+.btn-b2d       { color: #ffffff !important; background-color: #90A008 !important; }
+.btn-aiml      { color: #ffffff !important; background-color: #01A002 !important; }
+.btn-md        { color: #ffffff !important; background-color: #385723 !important; }
+.btn-dvbi      { color: #ffffff !important; background-color: #002060 !important; }
+.btn-3gpp      { color: #ffffff !important; background-color: #0070C0 !important; }
+.btn-common    { color: #000000 !important; background-color: #BFBFBF !important; }
 
-// -------------------------------------------------------------------
-// 2. PR DASHBOARD STYLES (ORIGINAL)
-// -------------------------------------------------------------------
-.release-table {
-    width: 100%; border-collapse: collapse; margin-top: 20px; table-layout: fixed;
-    th { padding: 12px; text-align: left; border-bottom: 2px solid #eee; }
-    td { padding: 12px; border-bottom: 1px solid #eee; vertical-align: top; word-wrap: break-word; overflow-wrap: break-word; }
-}
-.date-cell { white-space: nowrap; line-height: 1.2; }
-.days-ago { font-size: 0.8em; color: #666; font-weight: normal; }
-.blink-animation { animation: blinker 1.5s linear infinite; }
-@keyframes blinker { 50% { opacity: 0.4; } }
-
-// -------------------------------------------------------------------
-// 3. ARCHITECTURE TABLE SYSTEM (COMPACT VERSION)
-// -------------------------------------------------------------------
-
+// --- ARCHITECTURE TABLE ---
 .architecture-container {
-    display: flex;
-    flex-direction: column;
-    gap: 10px; // Tighter spacing between rows
-    margin: 20px 0;
-    width: 100%;
+    width: 100%; 
+    margin-top: 2rem; 
+    overflow: visible !important; 
 
-    /* Compact Header Row */
+    .repo-header-row, .repo-row {
+        display: grid; 
+        // Rebalanced column widths
+        grid-template-columns: 80px 2fr 120px 120px 200px 120px;
+        grid-gap: 15px; 
+        align-items: center;
+    }
+
     .repo-header-row {
-        display: grid;
-        grid-template-columns: 80px 1.8fr 110px 110px 200px 110px; // Narrower columns
-        grid-gap: 15px;
-        padding: 0 20px 8px 20px;
-        border-bottom: 1px solid #eee;
-        .header-item {
-            font-weight: 800; text-transform: uppercase; font-size: 0.65rem; // Smaller text
-            letter-spacing: 0.5px; color: #999;
-        }
-    }
-
-    /* Compact Repository Row */
-    .repo-row {
-        display: grid;
-        grid-template-columns: 80px 1.8fr 110px 110px 200px 110px;
-        grid-gap: 15px;
-        align-items: center;
-        border: 1.5px solid; // Thinner border
-        border-radius: 40px; // Less bulky rounding
-        padding: 8px 20px;   // Significantly reduced vertical padding
-        min-height: 55px;    // Much shorter row
-        transition: transform 0.2s ease-in-out, background-color 0.2s ease;
-        background-color: transparent;
-
-        &:hover { transform: translateX(5px); background-color: rgba(255, 255, 255, 0.05); }
-        &.auxiliary-dashed { border-style: dashed !important; }
-    }
-
-    /* Column 1: ID & Status */
-    .repo-id-group {
-        display: flex;
-        align-items: center;
-        gap: 8px;
+        padding: 0 20px; // CRITICAL: Matches .repo-row padding to align columns
         
-        .id-pill {
-            color: #000; font-weight: 800; width: 30px; height: 30px; // Smaller pill
-            font-size: 0.9rem; border-radius: 50%; display: inline-flex;
-            justify-content: center; align-items: center; flex-shrink: 0;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-
-        .status-icon {
-            font-size: 1.1rem; // Smaller icon
+        div { 
+            font-weight: 800; 
+            text-transform: uppercase; 
+            font-size: 11px; 
+            color: #999; 
+            padding-bottom: 12px;
             display: flex;
-            align-items: center;
-
-            .status-public {
-                color: #2da44e !important;
-                filter: invert(48%) sepia(79%) saturate(2476%) hue-rotate(111deg) brightness(95%) contrast(100%) !important;
-            }
-            .status-private { color: #d29922 !important; }
+            justify-content: center; // Default alignment for headers
+            
+            &:nth-child(1) { justify-content: center; } 
+            &:nth-child(2) { justify-content: flex-start; padding-left: 5px; } 
+            &:nth-child(6) { justify-content: flex-end; } 
         }
     }
 
-    /* Column 2: Name & Slug */
-    .repo-name {
-        display: flex;
-        flex-direction: column;
-        .repo-main-link { font-weight: 700; font-size: 0.95rem; text-decoration: none; color: inherit; } // Smaller font
-        .repo-slug-inline { font-size: 0.8rem; color: #999; margin-left: 4px; }
-        .branch-badge { font-family: monospace; font-size: 0.65rem; color: #888; margin-top: -2px; }
+    .repo-row {
+        border: 2px solid; 
+        border-radius: 40px; 
+        padding: 8px 20px; 
+        min-height: 60px; 
+        position: relative; 
+        cursor: pointer; 
+        margin-bottom: 10px; 
+        background: #fff;
+        overflow: visible !important; 
+        
+        &.auxiliary-dashed { border-style: dashed !important; }
+        &:hover { background: rgba(0,0,0,0.02); z-index: 50 !important; }
     }
 
-    /* Column 3: Standards */
-    .repo-standards {
-        display: flex; justify-content: center; align-items: center; gap: 8px;
-        .std-logo { height: 30px; width: auto; max-width: 55px; object-fit: contain; } // Smaller logos
+    // Column Alignment Logic
+    .repo-id-group  { display: flex; align-items: center; justify-content: center; gap: 8px; }
+    .repo-name      { text-align: left; display: flex; flex-direction: column; justify-content: center; }
+    .repo-standards { display: flex; justify-content: center; }
+    .repo-license   { display: flex; justify-content: center; color: $link-color; font-weight: 700; font-size: 13px; }
+    
+    .id-pill { width: 30px; height: 30px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; }
+
+    .repo-name { 
+        .repo-title-wrapper { position: relative; }
+        .repo-main-link { font-weight: 700; font-size: 15px; color: #333; }
+        .repo-slug-inline { font-size: 12px; color: #999; margin-left: 4px; }
+        .branch-badge { font-family: monospace; font-size: 11px; color: #777; display: block; }
     }
 
-    /* Column 4: License */
-    .repo-license {
-        font-weight: 700; font-size: 0.8rem; color: #00A0D2 !important; // Smaller font
-        text-transform: uppercase;
+    .repo-hover-card {
+        display: none; 
+        position: absolute; 
+        top: 110%; left: 0; width: 340px;
+        background: #ffffff !important; 
+        border: 1px solid #ddd; border-radius: 10px;
+        padding: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.2); z-index: 9999 !important; 
+        
+        &.active { display: block !important; }
+
+        .card-btn-container {
+            margin-bottom: 12px;
+            display: flex;
+            .btn { font-size: 11px !important; padding: 4px 10px !important; pointer-events: auto; }
+        }
+
+        .hover-desc { font-size: 13.5px; margin-bottom: 15px; color: #333; line-height: 1.5; text-align: left; }
+        
+        .hover-links { 
+            display: grid; grid-template-columns: 1fr 1fr; gap: 8px; 
+            border-top: 1px solid #eee; padding-top: 12px;
+            a { font-size: 12px; font-weight: 700; color: $link-color; text-decoration: none; }
+        }
     }
 
-    /* Column 5: Dependencies */
-    .repo-deps {
+    .std-logo { height: 26px; width: auto; object-fit: contain; }
+    
+    // --- DEPENDENCIES ---
+    .repo-deps { 
         display: flex; 
-        flex-direction: row; 
-        flex-wrap: nowrap; 
-        gap: 5px;
-        align-items: center;
-        overflow-x: hidden;
+        justify-content: center; 
+        gap: 6px; 
+
+        .dep-box { 
+            border: 1px solid #eee; 
+            border-radius: 4px; 
+            padding: 2px 6px; 
+            background: #fff; 
+            display: flex; 
+            align-items: center; 
+            height: 32px; 
+        }
+
+        .dep-img { 
+            height: 24px; 
+            width: auto; 
+            object-fit: contain; 
+        }
     }
 
-    .dep-box {
-        background: #fff; padding: 3px 8px; border-radius: 4px; // Thinner boxes
-        display: inline-flex; align-items: center; border: 1px solid #ddd;
-        flex-shrink: 0;
+    // --- SOFTWARE ---
+    .repo-software { 
+        display: flex; 
+        justify-content: flex-end; 
+        align-items: center; 
+        gap: 8px; 
+        .soft-icon { 
+            height: 24px; 
+            width: 24px; 
+            object-fit: contain; 
+        }
     }
 
-    .dep-img { height: 20px; max-width: 70px; object-fit: contain; } // Smaller dependency images
+    .repo-legend { 
+        margin-top: 35px; padding: 20px; border-top: 1px solid #eee; 
+        font-size: 12px; color: #666; display: flex; flex-wrap: wrap; gap: 25px; align-items: center;
 
-    /* Column 6: Software */
-    .repo-software {
-        display: flex; justify-content: flex-end; gap: 8px;
-        .soft-icon { height: 26px; filter: drop-shadow(0 1px 2px rgba(0,0,0,0.1)); } // Smaller icons
+        .legend-group { display: flex; align-items: center; gap: 8px; }
+        .leg-box { width: 24px; height: 12px; border: 2px solid #999; &.solid { border-style: solid; } &.dashed { border-style: dashed !important; } }
+        .leg-icon { height: 18px; width: auto; object-fit: contain; }
     }
-}
-
-// -------------------------------------------------------------------
-// 4. RESPONSIVE (ADJUSTED FOR COMPACT SIZES)
-// -------------------------------------------------------------------
-@media (max-width: 1200px) {
-    .architecture-container .repo-header-row, 
-    .architecture-container .repo-row {
-        grid-template-columns: 70px 1.2fr 90px 90px 1.2fr 90px;
-    }
-}
-
-@media (max-width: 900px) {
-    .architecture-container .repo-header-row { display: none; }
-    .architecture-container .repo-row {
-        display: flex; flex-direction: column; align-items: flex-start;
-        border-radius: 15px; padding: 15px;
-        div { margin-bottom: 5px; }
-    }
-    .repo-software { justify-content: flex-start !important; }
-}
-
-// --- PR Dashboard Styles ---
-
-// 1. Table formatting for readability
-.release-table {
-  width: 100%; 
-  border-collapse: collapse; 
-  margin-top: 20px; 
-  table-layout: fixed;
-
-  th {
-    padding: 12px;
-    text-align: left;
-    border-bottom: 2px solid #eee;
-  }
-
-  td {
-    padding: 12px;
-    border-bottom: 1px solid #eee;
-    vertical-align: top;
-    word-wrap: break-word;
-    overflow-wrap: break-word;
-  }
-}
-
-// 2. Date and Age styling
-.date-cell {
-  white-space: nowrap;
-  line-height: 1.2;
-}
-
-.days-ago {
-  font-size: 0.8em;
-  color: #666;
-  font-weight: normal;
-}
-
-// 3. The Blink Animation
-// We apply this to PRs less than 30 days old
-.blink-animation {
-  animation: blinker 1.5s linear infinite;
-}
-
-@keyframes blinker {
-  50% {
-    opacity: 0.4; // Dips to 40% visibility so it's not too jarring
-  }
 }
