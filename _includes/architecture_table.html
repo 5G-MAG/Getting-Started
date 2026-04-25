@@ -22,28 +22,26 @@
       {% assign final_standards = repo_meta.standards | default: cat_data.default_standards %}
 
       <div class="repo-row {% if repo_meta.is_auxiliary %}auxiliary-dashed{% endif %}" 
-           style="border-color: {{ row_bg }};"
+           style="border-color: {{ row_bg }} !important;"
            onclick="toggleRepoCard(event, 'card-{{ id }}')">
         
         <div class="repo-id-group">
-          <div class="id-pill" style="background-color: {{ row_bg }}; color: {{ id_text }};">
+          <div class="id-pill" style="background-color: {{ row_bg }} !important; color: {{ id_text }} !important;">
             {{ id }}
           </div>
           <div class="status-icon">
             {% if repo_meta.public %}
-              <span class="status-public" title="Public">✔</span>
+              <span class="status-public">✔</span>
             {% else %}
-              <span class="status-private" title="Private">⚠️</span>
+              <span class="status-private">⚠️</span>
             {% endif %}
           </div>
         </div>
 
         <div class="repo-name">
           <div class="repo-title-wrapper">
-            <span class="repo-main-link">
-              {{ repo_meta.display_name }} 
-              <span class="repo-slug-inline">({{ repo_meta.repo_slug }})</span>
-            </span>
+            <span class="repo-main-link">{{ repo_meta.display_name }}</span>
+            <span class="repo-slug-inline">({{ repo_meta.repo_slug }})</span>
 
             {% if repo_meta.description %}
             <div id="card-{{ id }}" class="repo-hover-card" onclick="event.stopPropagation()">
@@ -113,11 +111,11 @@
 </div>
 
 <script>
-function toggleRepoCard(event, cardId) {
-    event.stopPropagation();
-    const card = document.getElementById(cardId);
+function toggleRepoCard(e, id) {
+    e.stopPropagation();
+    const card = document.getElementById(id);
     document.querySelectorAll('.repo-hover-card').forEach(c => {
-        if (c.id !== cardId) c.classList.remove('is-active');
+        if (c.id !== id) c.classList.remove('is-active');
     });
     if (card) card.classList.toggle('is-active');
 }
