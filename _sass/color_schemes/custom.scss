@@ -29,7 +29,7 @@ $content-width: 100rem;
 
     .repo-header-row, .repo-row {
         display: grid; 
-        // 1. Rebalanced column widths for better spacing
+        // Rebalanced column widths for better spacing
         grid-template-columns: 80px 2fr 120px 120px 200px 120px;
         grid-gap: 15px; 
         align-items: center;
@@ -42,13 +42,11 @@ $content-width: 100rem;
         color: #999; 
         padding-bottom: 12px;
         display: flex;
-        
-        // 2. Defaulting headers to center to align with icons below
         justify-content: center; 
         
-        &:nth-child(1) { justify-content: center; } // '#' over the ID pill
-        &:nth-child(2) { justify-content: flex-start; padding-left: 5px; } // 'REPOSITORY' text start
-        &:nth-child(6) { justify-content: flex-end; } // 'SOFTWARE' icons end
+        &:nth-child(1) { justify-content: center; } 
+        &:nth-child(2) { justify-content: flex-start; padding-left: 5px; } 
+        &:nth-child(6) { justify-content: flex-end; } 
     }
 
     .repo-row {
@@ -102,8 +100,7 @@ $content-width: 100rem;
         }
     }
 
-    // 3. Ensuring row content is centered to match the headers
-    .repo-standards, .repo-license, .repo-deps { 
+    .repo-standards, .repo-license { 
         display: flex; 
         justify-content: center; 
         gap: 6px; 
@@ -112,14 +109,40 @@ $content-width: 100rem;
     .std-logo { height: 26px; width: auto; object-fit: contain; }
     .repo-license { color: $link-color; font-weight: 700; font-size: 13px; }
     
-    .repo-deps .dep-box { 
-        border: 1px solid #eee; border-radius: 4px; padding: 4px 8px; background: #fff; 
-        display: flex; align-items: center; 
+    // --- DEPENDENCIES (Updated for height consistency) ---
+    .repo-deps { 
+        display: flex; 
+        justify-content: center; 
+        gap: 6px; 
+
+        .dep-box { 
+            border: 1px solid #eee; 
+            border-radius: 4px; 
+            padding: 2px 6px; 
+            background: #fff; 
+            display: flex; 
+            align-items: center; 
+            height: 32px; // Fixed height for vertical alignment
+        }
+
+        .dep-img { 
+            height: 24px; // Matched to software icons
+            width: auto; 
+            object-fit: contain; 
+        }
     }
 
+    // --- SOFTWARE ---
     .repo-software { 
-        display: flex; justify-content: flex-end; align-items: center; gap: 8px; 
-        .soft-icon { height: 24px; width: 24px; object-fit: contain; }
+        display: flex; 
+        justify-content: flex-end; 
+        align-items: center; 
+        gap: 8px; 
+        .soft-icon { 
+            height: 24px; // Master height
+            width: 24px; 
+            object-fit: contain; 
+        }
     }
 
     .repo-legend { 
