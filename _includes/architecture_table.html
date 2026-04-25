@@ -5,7 +5,7 @@
     <div class="header-item">Standards</div>
     <div class="header-item">License</div>
     <div class="header-item">Dependencies</div>
-    <div class="header-item" style="text-align: right;">Software</div>
+    <div class="header-item">Software</div>
   </div>
 
   {% assign id_list = include.ids | remove: " " | split: "," %}
@@ -67,7 +67,7 @@
 
         <div class="repo-standards">
           {% for std in final_standards %}
-            <img src="{{ site.baseurl }}/assets/logos/{{ std }}.png" class="std-logo">
+            <img src="{{ site.baseurl }}/assets/logos/{{ std }}.png" class="std-logo" alt="{{ std }}">
           {% endfor %}
         </div>
 
@@ -76,14 +76,14 @@
         <div class="repo-deps">
           {% for dep in repo_meta.dependencies %}
             <div class="dep-box">
-              <img src="{{ site.baseurl }}/assets/deps/{{ dep }}.png" class="dep-img">
+              <img src="{{ site.baseurl }}/assets/deps/{{ dep }}.png" class="dep-img" alt="{{ dep }}">
             </div>
           {% endfor %}
         </div>
 
         <div class="repo-software">
           {% for icon in repo_meta.software %}
-            <img src="{{ site.baseurl }}/assets/icons/{{ icon }}.png" class="soft-icon">
+            <img src="{{ site.baseurl }}/assets/icons/{{ icon }}.png" class="soft-icon" alt="{{ icon }}">
           {% endfor %}
         </div>
       </div>
@@ -91,7 +91,48 @@
   {% endfor %}
 
   <div class="repo-legend">
-    <div><strong>Status:</strong> <svg width="12" height="12" style="vertical-align:middle;"><path d="M2 7L5 10L11 3" stroke="#2da44e" stroke-width="3" fill="none"/></svg> Public <span style="margin-left:8px;">⚠️</span> Private</div>
-    <div><strong>Style:</strong> <span class="leg-box solid"></span> Main <span class="leg-box dashed"></span> Auxiliary</div>
+    <div class="legend-group">
+      <strong>Status:</strong> 
+      <svg width="12" height="12" style="vertical-align:middle;"><path d="M2 7L5 10L11 3" stroke="#2da44e" stroke-width="3" fill="none"/></svg> Public 
+      <span style="margin-left:8px;">⚠️</span> Private
+    </div>
+
+    <div class="legend-group">
+      <strong>Type:</strong> 
+      <span class="leg-box solid"></span> Main 
+      <span class="leg-box dashed"></span> Auxiliary
+    </div>
+
+    <div class="legend-group">
+      <strong>Software:</strong>
+      <img src="{{ site.baseurl }}/assets/icons/Android.png" class="leg-icon"> Android
+      <img src="{{ site.baseurl }}/assets/icons/Linux.png" class="leg-icon"> Linux
+      <img src="{{ site.baseurl }}/assets/icons/Docker.png" class="leg-icon"> Docker
+    </div>
+
+    <div class="legend-group">
+      <strong>Standards:</strong>
+      <img src="{{ site.baseurl }}/assets/logos/3GPP.png" class="leg-std"> 3GPP
+      <img src="{{ site.baseurl }}/assets/logos/DVBI.png" class="leg-std"> DVB-I
+      <img src="{{ site.baseurl }}/assets/logos/MPEG.png" class="leg-std"> MPEG
+    </div>
   </div>
 </div>
+
+<script>
+function toggleRepoCard(e, id) {
+    e.stopPropagation();
+    const card = document.getElementById(id);
+    // Close other open cards
+    document.querySelectorAll('.repo-hover-card').forEach(c => {
+        if(c.id !== id) c.classList.remove('active');
+    });
+    // Toggle current
+    if(card) card.classList.toggle('active');
+}
+
+// Close card when clicking anywhere else
+document.addEventListener('click', () => {
+    document.querySelectorAll('.repo-hover-card').forEach(c => c.classList.remove('active'));
+});
+</script>
