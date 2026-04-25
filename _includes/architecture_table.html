@@ -8,28 +8,22 @@
     <div class="header-item" style="text-align: right;">Software</div>
   </div>
 
-  {% comment %} 
-    Clean input IDs and iterate through the new YAML structure 
-  {% endcomment %}
   {% assign id_list = include.ids | remove: " " | split: "," %}
 
   {% for id in id_list %}
     {% assign repo_meta = site.data.repo_metadata.repos[id] %}
     
     {% if repo_meta %}
-      {% comment %} Fetch Category Theme Data {% endcomment %}
       {% assign cat_id = repo_meta.category %}
       {% assign cat_data = site.data.repo_metadata.categories[cat_id] %}
       
-      {% comment %} Set dynamic colors with fallbacks {% endcomment %}
       {% assign row_bg = cat_data.color | default: "#ffcc00" %}
       {% assign id_text = cat_data.text_color | default: "#000000" %}
-
-      {% comment %} Handle Standards Fallback {% endcomment %}
       {% assign final_standards = repo_meta.standards | default: cat_data.default_standards %}
 
       <div class="repo-row {% if repo_meta.is_auxiliary %}auxiliary-dashed{% endif %}" 
-           style="border-color: {{ row_bg }};">
+           style="border-color: {{ row_bg }};"
+           onclick="toggleRepoCard(event, 'card-{{ id | slugify }}')">
         
         <div class="repo-id-group">
           <div class="id-pill" style="background-color: {{ row_bg }}; color: {{ id_text }};">
@@ -46,13 +40,13 @@
 
         <div class="repo-name">
           <div class="repo-title-wrapper">
-            <a href="{{ repo_meta.repo_url }}" target="_blank" class="repo-main-link">
+            <span class="repo-main-link">
               {{ repo_meta.display_name }} 
               <span class="repo-slug-inline">({{ repo_meta.repo_slug }})</span>
-            </a>
+            </span>
 
             {% if repo_meta.description %}
-            <div class="repo-hover-card">
+            <div id="card-{{ id | slugify }}" class="repo-hover-card" onclick="event.stopPropagation()">
               <p class="hover-desc">{{ repo_meta.description }}</p>
               <hr class="hover-divider">
               <div class="hover-links">
@@ -71,29 +65,23 @@
               </div>
             </div>
             {% endif %}
-            </div>
+          </div>
           <span class="branch-badge">{{ repo_meta.branch }}</span>
         </div>
 
         <div class="repo-standards">
           {% for std in final_standards %}
-            <img src="{{ site.baseurl }}/assets/logos/{{ std }}.png" 
-                 class="std-logo" 
-                 alt="{{ std }}">
+            <img src="{{ site.baseurl }}/assets/logos/{{ std }}.png" class="std-logo" alt="{{ std }}">
           {% endfor %}
         </div>
 
-        <div class="repo-license">
-          {{ repo_meta.license }}
-        </div>
+        <div class="repo-license">{{ repo_meta.license }}</div>
 
         <div class="repo-deps">
           {% if repo_meta.dependencies %}
             {% for dep in repo_meta.dependencies %}
               <div class="dep-box">
-                <img src="{{ site.baseurl }}/assets/deps/{{ dep }}.png" 
-                     class="dep-img" 
-                     alt="{{ dep }}">
+                <img src="{{ site.baseurl }}/assets/deps/{{ dep }}.png" class="dep-img" alt="{{ dep }}">
               </div>
             {% endfor %}
           {% endif %}
@@ -101,9 +89,7 @@
 
         <div class="repo-software">
           {% for icon in repo_meta.software %}
-            <img src="{{ site.baseurl }}/assets/icons/{{ icon }}.png" 
-                 class="soft-icon" 
-                 alt="{{ icon }}">
+            <img src="{{ site.baseurl }}/assets/icons/{{ icon }}.png" class="soft-icon" alt="{{ icon }}">
           {% endfor %}
         </div>
       </div>
@@ -116,13 +102,11 @@
       <span class="status-public">✔</span> Public Repository
       <span class="status-private">⚠️</span> Private Repository
     </div>
-
     <div class="legend-section">
       <span class="legend-title">Style:</span>
       <div class="legend-style-box solid"></div> Main Component
       <div class="legend-style-box dashed"></div> Auxiliary Library
     </div>
-
     <div class="legend-section">
       <span class="legend-title">Software:</span>
       <div class="legend-icon-group">
@@ -137,3 +121,34 @@
     </div>
   </div>
 </div>
+
+<script>
+/**
+ * Toggles the visibility of a repository info card.
+ * Closes other open cards and prevents event bubbling.
+ */
+function toggleRepoCard(event, cardId) {
+    event.stopPropagation();
+    const card = document.getElementById(cardId);
+    if (!card) return;
+
+    const isActive = card.classList.contains('is-active');
+
+    // Close all cards first for a clean UI
+    document.querySelectorAll('.repo-hover-card').forEach(c => {
+        c.classList.remove('is-active');
+    });
+
+    // If it wasn't already open, open it now
+    if (!isActive) {
+        card.classList.add('is-active');
+    }
+}
+
+// Close any open cards if the user clicks outside a row
+document.addEventListener('click', function() {
+    document.querySelectorAll('.repo-hover-card').forEach(card => {
+        card.classList.remove('is-active');
+    });
+});
+</script>
