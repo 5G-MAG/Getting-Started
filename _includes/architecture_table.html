@@ -81,20 +81,27 @@
   {% endfor %}
 
   <div class="repo-legend">
-    <div class="legend-group"><strong>Type:</strong> <span class="leg-box solid"></span> Main <span class="leg-box dashed"></span> Auxiliary</div>
     <div class="legend-group">
-      <strong>Platforms:</strong>
-      <img src="{{ site.baseurl }}/assets/icons/Android.png" class="leg-icon"> Android
-      <img src="{{ site.baseurl }}/assets/icons/Linux.png" class="leg-icon"> Linux
-      <img src="{{ site.baseurl }}/assets/icons/Docker.png" class="leg-icon"> Docker
-      <img src="{{ site.baseurl }}/assets/icons/Cloud.png" class="leg-icon"> Cloud
-      <img src="{{ site.baseurl }}/assets/icons/Windows.png" class="leg-icon"> Windows
+        <strong>Type:</strong> 
+        <span class="leg-box solid"></span> Main 
+        <span class="leg-box dashed"></span> Auxiliary
     </div>
+
     <div class="legend-group">
-      <strong>Distribution:</strong>
-      <img src="{{ site.baseurl }}/assets/icons/APK.png" class="leg-icon"> APK
+        <strong>Status:</strong>
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" style="margin-bottom:-2px;"><path d="M5 13L9 17L19 7" stroke="#2da44e" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg> Public 
+        <span style="margin-left: 8px;">⚠️ Private</span>
+    </div>
+
+    <div class="legend-group">
+      <img src="{{ site.baseurl }}/assets/icons/Android.png" class="leg-icon"> Android
       <img src="{{ site.baseurl }}/assets/icons/API.png" class="leg-icon"> API
+      <img src="{{ site.baseurl }}/assets/icons/APK.png" class="leg-icon"> APK
+      <img src="{{ site.baseurl }}/assets/icons/Cloud.png" class="leg-icon"> Cloud
+      <img src="{{ site.baseurl }}/assets/icons/Docker.png" class="leg-icon"> Docker
+      <img src="{{ site.baseurl }}/assets/icons/Linux.png" class="leg-icon"> Linux
       <img src="{{ site.baseurl }}/assets/icons/Web.png" class="leg-icon"> Web
+      <img src="{{ site.baseurl }}/assets/icons/Windows.png" class="leg-icon"> Windows
     </div>
   </div>
 </div>
