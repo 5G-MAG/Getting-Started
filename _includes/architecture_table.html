@@ -57,7 +57,7 @@
             </div>
             {% endif %}
           </div>
-          <span class="branch-badge">{{ cat_id }}</span>
+          <span class="branch-badge">{{ repo.branch | default: "main" }}</span>
         </div>
 
         <div class="repo-standards">
