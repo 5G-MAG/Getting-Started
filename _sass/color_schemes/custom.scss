@@ -56,10 +56,10 @@ $content-width: 100rem;
         
         &.auxiliary-dashed { border-style: dashed !important; }
         
-        // This ensures the row you click/hover stays on top of the rows below it
+        // Critical: High z-index on hover to prevent clipping by the next row
         &:hover { 
             background: rgba(0,0,0,0.02); 
-            z-index: 50; 
+            z-index: 50 !important; 
         }
     }
 
@@ -85,7 +85,7 @@ $content-width: 100rem;
         border-radius: 10px;
         padding: 15px; 
         box-shadow: 0 10px 30px rgba(0,0,0,0.2); 
-        z-index: 9999 !important; 
+        z-index: 9999 !important; // Force layer to the absolute front
         
         &.active { 
             display: block !important; 
@@ -142,11 +142,11 @@ $content-width: 100rem;
     .repo-software { 
         display: flex; 
         justify-content: flex-end; 
-        align-items: center; // Centering vertical
+        align-items: center; 
         gap: 8px; 
         .soft-icon { 
             height: 24px; 
-            width: 24px; // Force square container for centering
+            width: 24px; 
             object-fit: contain; 
         }
     }
@@ -174,6 +174,5 @@ $content-width: 100rem;
         }
 
         .leg-icon { height: 20px; width: auto; object-fit: contain; }
-        .leg-std { height: 24px; width: auto; object-fit: contain; }
     }
 }
