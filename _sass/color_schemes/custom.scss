@@ -20,7 +20,7 @@ $content-width: 100rem;
 .btn-3gpp      { color: #ffffff !important; background-color: #0070C0 !important; }
 .btn-common    { color: #000000 !important; background-color: #BFBFBF !important; }
 
-// --- ADDITIONS FOR TABLE ---
+// --- ARCHITECTURE TABLE ---
 .architecture-container {
     width: 100%; 
     margin-top: 2rem; 
@@ -55,17 +55,14 @@ $content-width: 100rem;
         overflow: visible !important; 
         
         &.auxiliary-dashed { border-style: dashed !important; }
-        
-        // Critical: High z-index on hover to prevent clipping by the next row
         &:hover { 
             background: rgba(0,0,0,0.02); 
-            z-index: 50 !important; 
+            z-index: 50 !important; // Bring hovered row forward
         }
     }
 
     .repo-id-group { display: flex; align-items: center; justify-content: center; gap: 8px; }
     .id-pill { width: 30px; height: 30px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; }
-    .status-private { color: #d29922; font-weight: 800; }
 
     .repo-name { 
         .repo-title-wrapper { position: relative; }
@@ -83,46 +80,24 @@ $content-width: 100rem;
         background: #ffffff !important; 
         border: 1px solid #ddd; 
         border-radius: 10px;
-        padding: 15px; 
-        box-shadow: 0 10px 30px rgba(0,0,0,0.2); 
-        z-index: 9999 !important; // Force layer to the absolute front
+        padding: 18px; 
+        box-shadow: 0 10px 40px rgba(0,0,0,0.2); 
+        z-index: 9999 !important; 
         
-        &.active { 
-            display: block !important; 
-        }
+        &.active { display: block !important; }
 
         .card-btn-container {
             margin-bottom: 12px;
             display: flex;
-            .btn { 
-                font-size: 11px !important; 
-                padding: 4px 10px !important; 
-                pointer-events: auto; 
-            }
+            .btn { font-size: 11px !important; padding: 4px 10px !important; pointer-events: auto; }
         }
 
-        .hover-desc { 
-            font-size: 13px; 
-            margin-bottom: 10px; 
-            color: #444; 
-            line-height: 1.4; 
-            text-align: left; 
-        }
+        .hover-desc { font-size: 13px; margin-bottom: 15px; color: #444; line-height: 1.5; text-align: left; }
         
         .hover-links { 
-            display: grid; 
-            grid-template-columns: 1fr 1fr; 
-            gap: 8px; 
-            border-top: 1px solid #eee;
-            padding-top: 10px;
-            
-            a { 
-                font-size: 12px; 
-                font-weight: 700; 
-                color: $link-color; 
-                text-decoration: none;
-                &:hover { text-decoration: underline; }
-            }
+            display: grid; grid-template-columns: 1fr 1fr; gap: 8px; 
+            border-top: 1px solid #eee; padding-top: 12px;
+            a { font-size: 12px; font-weight: 700; color: $link-color; text-decoration: none; &:hover { text-decoration: underline; } }
         }
     }
 
@@ -132,47 +107,28 @@ $content-width: 100rem;
     .repo-license { text-align: center; color: $link-color; font-weight: 700; font-size: 13px; }
     
     .repo-deps { 
-        display: flex; 
-        justify-content: center;
-        gap: 5px; 
-        .dep-box { border: 1px solid #ddd; border-radius: 4px; padding: 2px 6px; background: #fff; display: flex; align-items: center; }
-        .dep-img { height: 16px; width: auto; }
+        display: flex; justify-content: center; gap: 6px; 
+        .dep-box { 
+            border: 1px solid #eee; border-radius: 4px; padding: 4px 8px; 
+            background: #fff; display: flex; align-items: center; 
+        }
+        .dep-img { height: 22px; width: auto; } // Increased logo size
     }
 
     .repo-software { 
-        display: flex; 
-        justify-content: flex-end; 
-        align-items: center; 
-        gap: 8px; 
-        .soft-icon { 
-            height: 24px; 
-            width: 24px; 
-            object-fit: contain; 
-        }
+        display: flex; justify-content: flex-end; align-items: center; gap: 8px; 
+        .soft-icon { height: 24px; width: 24px; object-fit: contain; }
     }
 
     .repo-legend { 
-        margin-top: 35px; 
-        padding: 20px; 
-        border-top: 1px solid #eee; 
-        font-size: 13px; 
-        color: #555;
-        display: flex; 
-        flex-wrap: wrap;
-        gap: 25px;
-        align-items: center;
+        margin-top: 35px; padding: 20px; border-top: 1px solid #eee; 
+        font-size: 12px; color: #666; display: flex; flex-wrap: wrap; gap: 25px; align-items: center;
 
         .legend-group { display: flex; align-items: center; gap: 8px; }
-        
-        .leg-box { 
-            display: inline-block; 
-            width: 24px; 
-            height: 12px; 
-            border: 2px solid #999; 
+        .leg-box { width: 24px; height: 12px; border: 2px solid #999; 
             &.solid { border-style: solid; } 
             &.dashed { border-style: dashed !important; }
         }
-
-        .leg-icon { height: 20px; width: auto; object-fit: contain; }
+        .leg-icon { height: 18px; width: auto; object-fit: contain; }
     }
 }
