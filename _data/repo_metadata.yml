@@ -1,55 +1,55 @@
 # -------------------------------------------------------------------
 # CATEGORY DEFINITIONS
-# Controls the UI colors for the ID pills and row borders.
+# Colors strictly mapped from your SCSS button definitions.
 # -------------------------------------------------------------------
 categories:
   5gms:
     name: "5G Media Streaming"
-    color: "#FFC000"
+    color: "#FFC000"           # .btn-5gms
     text_color: "#000000"
   5g_ran_core:
     name: "3GPP RAN and Core Platforms"
-    color: "#0070C0"
+    color: "#0070C0"           # .btn-3gpp
     text_color: "#FFFFFF"
   5gc_consumers:
     name: "5GC Service Consumers"
-    color: "#C00000"
+    color: "#FF0000"           # .btn-5gcsc
     text_color: "#FFFFFF"
   data_collection:
     name: "Data Collection & Reporting"
-    color: "#E0918B"
+    color: "#D17F79"           # .btn-uedc
     text_color: "#FFFFFF"
   5g_broadcast:
     name: "5G Broadcast"
-    color: "#70AD47"
+    color: "#70AD47"           # .btn-5gbc
     text_color: "#FFFFFF"
   multimedia:
     name: "Multimedia Protocols"
-    color: "#548235"
+    color: "#385723"           # .btn-md
     text_color: "#FFFFFF"
   dvbi:
     name: "DVB-I Services"
-    color: "#002060"
+    color: "#002060"           # .btn-dvbi
     text_color: "#FFFFFF"
   emergency:
     name: "Emergency Alerts"
-    color: "#7030A0"
+    color: "#7030A0"           # .btn-5gbcea
     text_color: "#FFFFFF"
   mbs:
     name: "5G MBS"
-    color: "#00B050"
+    color: "#1AB39F"           # .btn-5mbs
     text_color: "#FFFFFF"
   xr:
     name: "XR Media"
-    color: "#ED7D31"
+    color: "#ED7D31"           # .btn-xr
     text_color: "#FFFFFF"
   v3c:
     name: "V3C Immersive"
-    color: "#C00070"
+    color: "#CC3399"           # .btn-v3c
     text_color: "#FFFFFF"
   shared:
     name: "Shared Tools"
-    color: "#D9D9D9"
+    color: "#BFBFBF"           # .btn-common
     text_color: "#000000"
 
 # -------------------------------------------------------------------
