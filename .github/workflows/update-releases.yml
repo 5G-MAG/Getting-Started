@@ -136,7 +136,7 @@ jobs:
                       })
               rel_out[p_name], pr_out[p_name], comm_out[p_name] = rel_list, pull_list, comm_list
 
-          # --- UPDATED ROBUST YAML UPDATE ---
+          # --- RECOVERY AND SAFE UPDATE LOGIC ---
           yaml_path = '_data/repo_metadata.yml'
           if os.path.exists(yaml_path):
               with open(yaml_path, 'r') as f:
@@ -145,22 +145,23 @@ jobs:
               updated_lines = []
               active_slug = None
               for line in lines:
-                  # Detect repo_slug and strip any messy quotes
+                  # Detect repo_slug and strip any messy existing quotes
                   if 'repo_slug:' in line:
                       active_slug = line.split(':')[-1].strip().replace('"', '').replace("'", "")
                   
                   if 'description:' in line:
-                      # If we have a new description, use it; otherwise, just fix existing syntax
+                      # Get the fresh description from GitHub if available
                       raw_desc = repo_descriptions.get(active_slug)
+                      
+                      # If GitHub fetch failed, sanitize the existing line in the file
                       if not raw_desc:
-                          # Fallback: extract existing description text to sanitize it
                           match = re.search(r'description:\s*"(.*)"', line)
                           if match: raw_desc = match.group(1)
                       
                       if raw_desc:
-                          # Escape internal double quotes and remove newlines
+                          # 1. Escape double quotes 2. Flatten newlines 3. Strip extra whitespace
                           clean_desc = raw_desc.replace('"', '\\"').replace('\n', ' ').strip()
-                          # Preserve the original line's indentation exactly
+                          # Preserve original indentation
                           indent = line[:line.find('description:')]
                           line = f'{indent}description: "{clean_desc}"\n'
                   
@@ -182,5 +183,5 @@ jobs:
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git add _data/*.json
           git add _data/repo_metadata.yml
-          git commit -m "Dashboard: Update Stats and Repo Descriptions" || exit 0
+          git commit -m "Dashboard: Update Stats and Sanitize YAML" || exit 0
           git push
