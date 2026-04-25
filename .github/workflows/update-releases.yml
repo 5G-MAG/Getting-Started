@@ -90,33 +90,30 @@ jobs:
               updated_lines = []
               active_slug = None
               for line in lines:
-                  # 1. Improved Slug Detection: extracts the slug even if it's currently quoted or spaced
+                  # 1. Identify the current repo slug
                   if 'repo_slug:' in line:
                       match = re.search(r'repo_slug:\s*["\']?([^"\s\n\']+)["\']?', line)
                       if match:
                           active_slug = match.group(1)
                   
-                  # 2. Fix the description line
+                  # 2. Fix the description line using Literal Block |
                   if 'description:' in line:
-                      # Try to get fresh text from GitHub first
                       raw_text = repo_descriptions.get(active_slug)
                       
-                      # Fallback: extract the current text between the outer quotes if GitHub is unreachable
+                      # Fallback: extract existing text if API call failed
                       if not raw_text:
                           match = re.search(r'description:\s*"(.*)"', line)
                           if match:
-                              raw_text = match.group(1)
+                              raw_text = match.group(1).replace('\\"', '"')
                       
                       if raw_text:
-                          # SANITIZE: 
-                          # - Replace existing backslashes first to avoid double-escaping
-                          # - Escape all double quotes with backslashes
-                          # - Replace any newlines with spaces
-                          safe_text = raw_text.replace('\\"', '"').replace('"', '\\"').replace('\n', ' ').strip()
-                          
-                          # Maintain the original line's indentation
+                          # Clean the text of newlines and extra spaces
+                          clean_text = raw_text.replace('\n', ' ').strip()
                           indent = line[:line.find('description:')]
-                          line = f'{indent}description: "{safe_text}"\n'
+                          # Write as a block to avoid quote/colon issues
+                          updated_lines.append(f'{indent}description: |\n')
+                          updated_lines.append(f'{indent}  {clean_text}\n')
+                          continue 
                   
                   updated_lines.append(line)
               
@@ -129,5 +126,5 @@ jobs:
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git add _data/repo_metadata.yml
-          git commit -m "Dashboard: Sanitize YAML descriptions and escape quotes" || exit 0
+          git commit -m "Dashboard: Use YAML literal blocks for descriptions" || exit 0
           git push
