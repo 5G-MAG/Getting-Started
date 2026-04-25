@@ -1,4 +1,5 @@
-// --- ORIGINAL CORE ---
+// --- BUTTON COLORS DEFINED HERE ---
+// These map to the 'category' field in your _data/repo_metadata.yml
 $link-color: #00A0D2;
 $content-width: 100rem;
 
@@ -40,10 +41,11 @@ $content-width: 100rem;
         color: #999; 
         padding-bottom: 10px;
         display: flex;
-        justify-content: center;
+        justify-content: flex-start; // ALL LABELS ALIGNED LEFT
         
-        &:nth-child(2) { justify-content: flex-start; }
-        &:nth-child(6) { justify-content: flex-end; }
+        // Optional: Keep software on the right if preferred, 
+        // otherwise remove the line below to keep it left.
+        &:nth-child(6) { justify-content: flex-end; } 
     }
 
     .repo-row {
@@ -101,12 +103,12 @@ $content-width: 100rem;
         }
     }
 
-    .repo-standards { display: flex; justify-content: center; gap: 5px; }
+    .repo-standards { display: flex; justify-content: flex-start; gap: 5px; } // Content also left aligned
     .std-logo { height: 26px; width: auto; object-fit: contain; }
-    .repo-license { text-align: center; color: $link-color; font-weight: 700; font-size: 13px; }
+    .repo-license { text-align: left; color: $link-color; font-weight: 700; font-size: 13px; } // Content also left aligned
     
     .repo-deps { 
-        display: flex; justify-content: center; gap: 6px; 
+        display: flex; justify-content: flex-start; gap: 6px; // Content also left aligned
         .dep-box { border: 1px solid #eee; border-radius: 4px; padding: 4px 8px; background: #fff; display: flex; align-items: center; }
         .dep-img { height: 22px; width: auto; }
     }
