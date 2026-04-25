@@ -14,7 +14,7 @@ nav_order: 3
 
 The following repositories are available. Please refer to the "Scope" section of the different projects for more context.
 
-{% include architecture_table.html ids="V1,V2,V3" %}
+{% include architecture_table.html ids="AV1,AV2,AV3" %}
 
 *Note: Auxiliary repositories are indicated with a dashed border.*
 
