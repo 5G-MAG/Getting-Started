@@ -29,7 +29,8 @@ $content-width: 100rem;
 
     .repo-header-row, .repo-row {
         display: grid; 
-        grid-template-columns: 80px 1.8fr 110px 100px 200px 110px;
+        // 1. Rebalanced column widths for better spacing
+        grid-template-columns: 80px 2fr 120px 120px 200px 120px;
         grid-gap: 15px; 
         align-items: center;
     }
@@ -39,20 +40,22 @@ $content-width: 100rem;
         text-transform: uppercase; 
         font-size: 11px; 
         color: #999; 
-        padding-bottom: 10px;
+        padding-bottom: 12px;
         display: flex;
-        justify-content: flex-start; // ALL LABELS ALIGNED LEFT
         
-        // Optional: Keep software on the right if preferred, 
-        // otherwise remove the line below to keep it left.
-        &:nth-child(6) { justify-content: flex-end; } 
+        // 2. Defaulting headers to center to align with icons below
+        justify-content: center; 
+        
+        &:nth-child(1) { justify-content: center; } // '#' over the ID pill
+        &:nth-child(2) { justify-content: flex-start; padding-left: 5px; } // 'REPOSITORY' text start
+        &:nth-child(6) { justify-content: flex-end; } // 'SOFTWARE' icons end
     }
 
     .repo-row {
         border: 2px solid; 
         border-radius: 40px; 
         padding: 8px 20px; 
-        min-height: 55px; 
+        min-height: 60px; 
         position: relative; 
         cursor: pointer; 
         margin-bottom: 10px; 
@@ -67,6 +70,7 @@ $content-width: 100rem;
     .id-pill { width: 30px; height: 30px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; }
 
     .repo-name { 
+        text-align: left;
         .repo-title-wrapper { position: relative; }
         .repo-main-link { font-weight: 700; font-size: 15px; color: #333; }
         .repo-slug-inline { font-size: 12px; color: #999; margin-left: 4px; }
@@ -76,15 +80,10 @@ $content-width: 100rem;
     .repo-hover-card {
         display: none; 
         position: absolute; 
-        top: 110%; 
-        left: 0; 
-        width: 340px;
+        top: 110%; left: 0; width: 340px;
         background: #ffffff !important; 
-        border: 1px solid #ddd; 
-        border-radius: 10px;
-        padding: 15px; 
-        box-shadow: 0 10px 30px rgba(0,0,0,0.2); 
-        z-index: 9999 !important; 
+        border: 1px solid #ddd; border-radius: 10px;
+        padding: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.2); z-index: 9999 !important; 
         
         &.active { display: block !important; }
 
@@ -94,7 +93,7 @@ $content-width: 100rem;
             .btn { font-size: 11px !important; padding: 4px 10px !important; pointer-events: auto; }
         }
 
-        .hover-desc { font-size: 13px; margin-bottom: 15px; color: #444; line-height: 1.4; text-align: left; }
+        .hover-desc { font-size: 13.5px; margin-bottom: 15px; color: #333; line-height: 1.5; text-align: left; }
         
         .hover-links { 
             display: grid; grid-template-columns: 1fr 1fr; gap: 8px; 
@@ -103,14 +102,19 @@ $content-width: 100rem;
         }
     }
 
-    .repo-standards { display: flex; justify-content: flex-start; gap: 5px; } // Content also left aligned
-    .std-logo { height: 26px; width: auto; object-fit: contain; }
-    .repo-license { text-align: left; color: $link-color; font-weight: 700; font-size: 13px; } // Content also left aligned
+    // 3. Ensuring row content is centered to match the headers
+    .repo-standards, .repo-license, .repo-deps { 
+        display: flex; 
+        justify-content: center; 
+        gap: 6px; 
+    }
     
-    .repo-deps { 
-        display: flex; justify-content: flex-start; gap: 6px; // Content also left aligned
-        .dep-box { border: 1px solid #eee; border-radius: 4px; padding: 4px 8px; background: #fff; display: flex; align-items: center; }
-        .dep-img { height: 22px; width: auto; }
+    .std-logo { height: 26px; width: auto; object-fit: contain; }
+    .repo-license { color: $link-color; font-weight: 700; font-size: 13px; }
+    
+    .repo-deps .dep-box { 
+        border: 1px solid #eee; border-radius: 4px; padding: 4px 8px; background: #fff; 
+        display: flex; align-items: center; 
     }
 
     .repo-software { 
