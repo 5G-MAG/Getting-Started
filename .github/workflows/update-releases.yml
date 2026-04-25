@@ -72,16 +72,6 @@ jobs:
                   return None
 
           repo_descriptions = {}
-          existing_comm_data = {}
-          if os.path.exists('_data/community_stats.json'):
-              try:
-                  with open('_data/community_stats.json', 'r') as f:
-                      old_data = json.load(f)
-                      for group in old_data.get("projects", {}).values():
-                          for item in group:
-                              existing_comm_data[item['name']] = item
-              except: pass
-
           all_groups = list(standard_projects.items()) + [(k, v['repos']) for k, v in filtered_projects.items()]
 
           for p_name, repos in all_groups:
@@ -100,24 +90,31 @@ jobs:
               updated_lines = []
               active_slug = None
               for line in lines:
-                  # 1. Identify the current repo slug
+                  # 1. Improved Slug Detection: extracts the slug even if it's currently quoted or spaced
                   if 'repo_slug:' in line:
-                      active_slug = line.split(':')[-1].strip().replace('"', '').replace("'", "")
+                      match = re.search(r'repo_slug:\s*["\']?([^"\s\n\']+)["\']?', line)
+                      if match:
+                          active_slug = match.group(1)
                   
                   # 2. Fix the description line
                   if 'description:' in line:
                       # Try to get fresh text from GitHub first
                       raw_text = repo_descriptions.get(active_slug)
                       
-                      # If GitHub failed, try to recover text from the existing line (even if it's broken)
+                      # Fallback: extract the current text between the outer quotes if GitHub is unreachable
                       if not raw_text:
                           match = re.search(r'description:\s*"(.*)"', line)
-                          if match: raw_text = match.group(1)
+                          if match:
+                              raw_text = match.group(1)
                       
                       if raw_text:
-                          # SANITIZE: Escape internal quotes and remove newlines
-                          safe_text = raw_text.replace('"', '\\"').replace('\n', ' ').strip()
-                          # Match existing indentation
+                          # SANITIZE: 
+                          # - Replace existing backslashes first to avoid double-escaping
+                          # - Escape all double quotes with backslashes
+                          # - Replace any newlines with spaces
+                          safe_text = raw_text.replace('\\"', '"').replace('"', '\\"').replace('\n', ' ').strip()
+                          
+                          # Maintain the original line's indentation
                           indent = line[:line.find('description:')]
                           line = f'{indent}description: "{safe_text}"\n'
                   
