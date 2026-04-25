@@ -9,24 +9,34 @@
   </div>
 
   {% comment %} 
-    We clean the input string to ensure no spaces interfere with the lookup 
+    Clean input IDs and iterate through the new YAML structure 
   {% endcomment %}
   {% assign id_list = include.ids | remove: " " | split: "," %}
 
   {% for id in id_list %}
-    {% assign meta = site.data.repo_metadata[id] %}
-    {% if meta %}
-      {% assign row_color = meta.color | default: "#ffcc00" %}
+    {% assign repo_meta = site.data.repo_metadata.repos[id] %}
+    
+    {% if repo_meta %}
+      {% comment %} 1. Fetch Category Theme Data {% endcomment %}
+      {% assign cat_id = repo_meta.category %}
+      {% assign cat_data = site.data.repo_metadata.categories[cat_id] %}
       
-      <div class="repo-row {% if meta.is_auxiliary %}auxiliary-dashed{% endif %}" 
-           style="border-color: {{ row_color }};">
+      {% comment %} 2. Set dynamic colors with fallbacks {% endcomment %}
+      {% assign row_bg = cat_data.color | default: "#ffcc00" %}
+      {% assign id_text = cat_data.text_color | default: "#000000" %}
+
+      {% comment %} 3. Handle Standards Fallback (Repo list OR Category defaults) {% endcomment %}
+      {% assign final_standards = repo_meta.standards | default: cat_data.default_standards %}
+
+      <div class="repo-row {% if repo_meta.is_auxiliary %}auxiliary-dashed{% endif %}" 
+           style="border-color: {{ row_bg }};">
         
         <div class="repo-id-group">
-          <div class="id-pill" style="background-color: {{ row_color }};">
+          <div class="id-pill" style="background-color: {{ row_bg }}; color: {{ id_text }};">
             {{ id }}
           </div>
           <div class="status-icon">
-            {% if meta.public %}
+            {% if repo_meta.public %}
               <span class="status-public" title="Public Repository">✔</span>
             {% else %}
               <span class="status-private" title="Private Repository">⚠️</span>
@@ -36,16 +46,16 @@
 
         <div class="repo-name">
           <div class="repo-title-row">
-            <a href="{{ meta.repo_url }}" target="_blank" class="repo-main-link">
-              {{ meta.display_name }} 
-              <span class="repo-slug-inline">({{ meta.repo_slug }})</span>
+            <a href="{{ repo_meta.repo_url }}" target="_blank" class="repo-main-link">
+              {{ repo_meta.display_name }} 
+              <span class="repo-slug-inline">({{ repo_meta.repo_slug }})</span>
             </a>
           </div>
-          <span class="branch-badge">{{ meta.branch }}</span>
+          <span class="branch-badge">{{ repo_meta.branch }}</span>
         </div>
 
         <div class="repo-standards">
-          {% for std in meta.standards %}
+          {% for std in final_standards %}
             <img src="{{ site.baseurl }}/assets/logos/{{ std }}.png" 
                  class="std-logo" 
                  alt="{{ std }}">
@@ -53,12 +63,12 @@
         </div>
 
         <div class="repo-license">
-          {{ meta.license }}
+          {{ repo_meta.license }}
         </div>
 
         <div class="repo-deps">
-          {% if meta.dependencies %}
-            {% for dep in meta.dependencies %}
+          {% if repo_meta.dependencies %}
+            {% for dep in repo_meta.dependencies %}
               <div class="dep-box">
                 <img src="{{ site.baseurl }}/assets/deps/{{ dep }}.png" 
                      class="dep-img" 
@@ -69,7 +79,7 @@
         </div>
 
         <div class="repo-software">
-          {% for icon in meta.software %}
+          {% for icon in repo_meta.software %}
             <img src="{{ site.baseurl }}/assets/icons/{{ icon }}.png" 
                  class="soft-icon" 
                  alt="{{ icon }}">
