@@ -4,7 +4,6 @@
 $link-color: #00A0D2;
 $content-width: 100rem;
 
-// Color Palette for UI Buttons
 .btn-video     { color: #FFFFFF !important; background-color: #C80000 !important; }
 .btn-github    { color: #ffffff !important; background-color: #000000 !important; }
 .btn-release   { color: #88D66C !important; background-color: #000000 !important; }
@@ -37,207 +36,104 @@ $content-width: 100rem;
 @keyframes blinker { 50% { opacity: 0.4; } }
 
 // -------------------------------------------------------------------
-// 3. ARCHITECTURE TABLE SYSTEM (COMPACT)
+// 3. ARCHITECTURE TABLE SYSTEM
 // -------------------------------------------------------------------
 .architecture-container {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    margin: 20px 0;
-    width: 100%;
+    display: flex; flex-direction: column; gap: 10px; margin: 20px 0; width: 100%;
 
-    /* Header Row */
     .repo-header-row {
         display: grid;
         grid-template-columns: 80px 1.8fr 110px 110px 200px 110px;
-        grid-gap: 15px;
-        padding: 0 20px 8px 20px;
-        border-bottom: 1px solid #eee;
-        .header-item {
-            font-weight: 800; text-transform: uppercase; font-size: 0.65rem;
-            letter-spacing: 0.5px; color: #999;
-        }
+        grid-gap: 15px; padding: 0 20px 8px 20px; border-bottom: 1px solid #eee;
+        .header-item { font-weight: 800; text-transform: uppercase; font-size: 0.65rem; letter-spacing: 0.5px; color: #999; }
     }
 
-    /* Repository Row */
     .repo-row {
         display: grid;
         grid-template-columns: 80px 1.8fr 110px 110px 200px 110px;
-        grid-gap: 15px;
-        align-items: center;
-        border: 1.5px solid; 
-        border-radius: 40px; 
-        padding: 8px 20px;
-        min-height: 55px;
-        transition: transform 0.2s ease-in-out, background-color 0.2s ease;
-        position: relative; 
-        cursor: pointer;
-        
+        grid-gap: 15px; align-items: center; border: 1.5px solid; border-radius: 40px; 
+        padding: 8px 20px; min-height: 55px; transition: transform 0.2s ease-in-out;
+        position: relative; cursor: pointer;
         &:hover { transform: translateX(5px); background-color: rgba(0, 0, 0, 0.02); }
         &.auxiliary-dashed { border-style: dashed !important; }
     }
 
-    /* ID and Status Icons */
     .repo-id-group {
-        display: flex;
-        align-items: center;
-        gap: 8px;
+        display: flex; align-items: center; gap: 8px;
         .id-pill {
-            font-weight: 800; width: 30px; height: 30px;
-            font-size: 0.9rem; border-radius: 50%; display: inline-flex;
-            justify-content: center; align-items: center; flex-shrink: 0;
+            font-weight: 800; width: 30px; height: 30px; font-size: 0.9rem; border-radius: 50%;
+            display: inline-flex; justify-content: center; align-items: center; flex-shrink: 0;
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
-        .status-icon {
-            font-size: 1.1rem; display: flex; align-items: center;
-            .status-public { color: #2da44e !important; }
-            .status-private { color: #d29922 !important; }
-        }
+        // Fixed Tick Styles
+        .status-public { color: #2da44e !important; font-weight: bold; }
+        .status-private { color: #d29922 !important; font-weight: bold; }
     }
 
-    /* Repo Name & Interactive Card */
     .repo-name {
         display: flex; flex-direction: column;
-        
-        .repo-title-wrapper {
-            position: relative;
-            display: inline-block;
-        }
-
+        .repo-title-wrapper { position: relative; display: inline-block; }
         .repo-main-link { font-weight: 700; font-size: 0.95rem; text-decoration: none; color: inherit; }
         .repo-slug-inline { font-size: 0.8rem; color: #999; margin-left: 4px; }
-        .branch-badge { 
-            font-family: monospace; font-size: 0.75rem; font-weight: 600; 
-            letter-spacing: 0.3px; color: #777; margin-top: 1px; 
-        }
+        .branch-badge { font-family: monospace; font-size: 0.75rem; color: #777; margin-top: 1px; }
 
-        /* NEW: Click-triggered Info Card */
         .repo-hover-card {
-            display: none; 
-            position: absolute;
-            top: 110%;
-            left: 0;
-            width: 340px;
-            background: #ffffff !important;
-            border: 2px solid #ddd;
-            border-radius: 12px;
-            padding: 18px;
-            box-shadow: 0 15px 35px rgba(0,0,0,0.25);
-            z-index: 9999 !important;
-            color: #333;
-            cursor: default;
+            display: none !important; // Hidden by default
+            position: absolute; top: 115%; left: 0; width: 340px;
+            background: #ffffff !important; border: 1px solid #ccc; border-radius: 12px;
+            padding: 18px; box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            z-index: 10000 !important; color: #333; cursor: default;
 
             &.is-active {
-                display: block !important;
-                animation: fadeIn 0.2s ease-out;
+                display: block !important; // Forced display when clicked
             }
 
-            .hover-desc {
-                font-size: 0.85rem;
-                line-height: 1.5;
-                margin-bottom: 12px;
-                font-weight: 500;
-                color: #222;
-                text-align: left;
-            }
-
-            .hover-divider { border: 0; border-top: 1px solid #eaeaea; margin: 12px 0; }
-
+            .hover-desc { font-size: 0.85rem; line-height: 1.5; margin-bottom: 12px; color: #222; }
+            .hover-divider { border: 0; border-top: 1px solid #eee; margin: 12px 0; }
             .hover-links {
-                display: grid;
-                grid-template-columns: 1fr 1fr;
-                gap: 10px;
-                a {
-                    font-size: 0.75rem;
-                    color: $link-color;
-                    text-decoration: none;
-                    font-weight: 700;
-                    display: flex;
-                    align-items: center;
-                    gap: 6px;
-                    &:hover { text-decoration: underline; }
-                    i { width: 14px; color: #555; font-size: 0.9rem; }
-                }
+                display: grid; grid-template-columns: 1fr 1fr; gap: 10px;
+                a { font-size: 0.75rem; color: $link-color; font-weight: 700; display: flex; align-items: center; gap: 6px; }
             }
         }
     }
 
-    /* Standards Logos */
     .repo-standards {
-        display: flex; justify-content: center; align-items: center; gap: 8px;
+        display: flex; justify-content: center; gap: 8px;
         .std-logo { height: 30px; width: auto; max-width: 55px; object-fit: contain; }
     }
 
-    /* License Style */
-    .repo-license {
-        font-weight: 700; font-size: 0.8rem; color: $link-color !important; text-transform: uppercase;
-    }
+    .repo-license { font-weight: 700; font-size: 0.8rem; color: $link-color !important; text-transform: uppercase; }
 
-    /* Dependencies */
     .repo-deps {
-        display: flex; flex-direction: row; flex-wrap: nowrap; gap: 5px;
-        align-items: center; overflow: hidden;
-        .dep-box {
-            background: #fff; padding: 3px 8px; border-radius: 4px;
-            display: inline-flex; align-items: center; border: 1px solid #ddd; flex-shrink: 0;
-        }
+        display: flex; gap: 5px; align-items: center; overflow: hidden;
+        .dep-box { background: #fff; padding: 3px 8px; border-radius: 4px; border: 1px solid #ddd; flex-shrink: 0; }
         .dep-img { height: 20px; max-width: 70px; object-fit: contain; }
     }
 
-    /* Software Icons */
     .repo-software {
         display: flex; justify-content: flex-end; gap: 8px;
-        .soft-icon { height: 26px; filter: drop-shadow(0 1px 2px rgba(0,0,0,0.1)); }
+        .soft-icon { height: 26px; }
     }
 
-    /* LEGEND STYLING */
     .repo-legend {
-        display: flex;
-        flex-direction: column;
-        gap: 12px;
-        margin-top: 15px;
-        padding: 15px 20px;
-        background: rgba(0, 0, 0, 0.02); 
-        border-radius: 12px;
-        font-size: 0.75rem;
-        color: #666;
-        border: 1px solid #eee;
-
-        .legend-section { display: flex; align-items: center; flex-wrap: wrap; gap: 12px; }
-        .legend-icon-group { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+        display: flex; flex-direction: column; gap: 12px; margin-top: 15px;
+        padding: 15px 20px; background: rgba(0, 0, 0, 0.02); border-radius: 12px;
+        font-size: 0.75rem; color: #666; border: 1px solid #eee;
+        .legend-section { display: flex; align-items: center; gap: 12px; }
         .legend-title { font-weight: 800; text-transform: uppercase; color: #999; min-width: 80px; }
-        .legend-icon { height: 14px; width: auto; margin-right: -4px; }
-        .legend-style-box {
-            width: 25px; height: 12px; border: 1.5px solid #999; border-radius: 4px;
-            &.dashed { border-style: dashed; }
-        }
-        .status-public { color: #2da44e !important; font-weight: bold; margin-right: 4px; }
-        .status-private { color: #d29922 !important; margin-right: 4px; }
+        .legend-icon { height: 14px; margin-right: -4px; }
+        .legend-style-box { width: 25px; height: 12px; border: 1.5px solid #999; border-radius: 4px; &.dashed { border-style: dashed; } }
     }
 }
 
 // -------------------------------------------------------------------
-// 4. RESPONSIVE & ANIMATIONS
+// 4. RESPONSIVE
 // -------------------------------------------------------------------
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(-5px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
-@media (max-width: 1200px) {
-    .architecture-container .repo-header-row, 
-    .architecture-container .repo-row {
-        grid-template-columns: 70px 1.2fr 90px 90px 1.2fr 90px;
-    }
-}
-
 @media (max-width: 900px) {
     .architecture-container .repo-header-row { display: none; }
     .architecture-container .repo-row {
         display: flex; flex-direction: column; align-items: flex-start;
         border-radius: 15px; padding: 15px;
-        div { margin-bottom: 5px; }
     }
-    .repo-software { justify-content: flex-start !important; }
-    .repo-hover-card { width: 90% !important; left: 5% !important; }
+    .repo-hover-card { width: 95% !important; left: 2.5% !important; }
 }
