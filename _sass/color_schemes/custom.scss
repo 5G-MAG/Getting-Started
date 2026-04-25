@@ -4,23 +4,24 @@
 $link-color: #00A0D2;
 $content-width: 100rem;
 
-.btn-video    { color: #FFFFFF !important; background-color: #C80000 !important; }
-.btn-github   { color: #ffffff !important; background-color: #000000 !important; }
-.btn-release  { color: #88D66C !important; background-color: #000000 !important; }
-.btn-tutorial { color: #FFFFFF !important; background-color: #00A0D2 !important; }
-.btn-5gms     { color: #000000 !important; background-color: #FFC000 !important; }
-.btn-5gcsc    { color: #ffffff !important; background-color: #FF0000 !important; }
-.btn-uedc     { color: #ffffff !important; background-color: #D17F79 !important; }
-.btn-5gbc     { color: #ffffff !important; background-color: #70AD47 !important; }
-.btn-5gbcea   { color: #ffffff !important; background-color: #7030A0 !important; }
-.btn-5mbs     { color: #ffffff !important; background-color: #1AB39F !important; }
-.btn-xr       { color: #ffffff !important; background-color: #ED7D31 !important; }
-.btn-v3c      { color: #ffffff !important; background-color: #CC3399 !important; }
-.btn-testbed  { color: #ffffff !important; background-color: #90A008 !important; }
-.btn-md       { color: #ffffff !important; background-color: #385723 !important; }
-.btn-dvbi     { color: #ffffff !important; background-color: #002060 !important; }
-.btn-3gpp     { color: #ffffff !important; background-color: #0070C0 !important; }
-.btn-common   { color: #000000 !important; background-color: #BFBFBF !important; }
+// Color Palette for UI Buttons
+.btn-video     { color: #FFFFFF !important; background-color: #C80000 !important; }
+.btn-github    { color: #ffffff !important; background-color: #000000 !important; }
+.btn-release   { color: #88D66C !important; background-color: #000000 !important; }
+.btn-tutorial  { color: #FFFFFF !important; background-color: #00A0D2 !important; }
+.btn-5gms      { color: #000000 !important; background-color: #FFC000 !important; }
+.btn-5gcsc     { color: #ffffff !important; background-color: #FF0000 !important; }
+.btn-uedc      { color: #ffffff !important; background-color: #D17F79 !important; }
+.btn-5gbc      { color: #ffffff !important; background-color: #70AD47 !important; }
+.btn-5gbcea    { color: #ffffff !important; background-color: #7030A0 !important; }
+.btn-5mbs      { color: #ffffff !important; background-color: #1AB39F !important; }
+.btn-xr        { color: #ffffff !important; background-color: #ED7D31 !important; }
+.btn-v3c       { color: #ffffff !important; background-color: #CC3399 !important; }
+.btn-testbed   { color: #ffffff !important; background-color: #90A008 !important; }
+.btn-md        { color: #ffffff !important; background-color: #385723 !important; }
+.btn-dvbi      { color: #ffffff !important; background-color: #002060 !important; }
+.btn-3gpp      { color: #ffffff !important; background-color: #0070C0 !important; }
+.btn-common    { color: #000000 !important; background-color: #BFBFBF !important; }
 
 // -------------------------------------------------------------------
 // 2. PR DASHBOARD STYLES
@@ -69,14 +70,14 @@ $content-width: 100rem;
         padding: 8px 20px;
         min-height: 55px;
         transition: transform 0.2s ease-in-out, background-color 0.2s ease;
-        position: relative; /* Fixed reference for the card */
+        position: relative; 
         cursor: pointer;
         
-        &:hover { transform: translateX(5px); background-color: rgba(255, 255, 255, 0.05); }
+        &:hover { transform: translateX(5px); background-color: rgba(0, 0, 0, 0.02); }
         &.auxiliary-dashed { border-style: dashed !important; }
     }
 
-    /* Column Styles */
+    /* ID and Status Icons */
     .repo-id-group {
         display: flex;
         align-items: center;
@@ -89,14 +90,12 @@ $content-width: 100rem;
         }
         .status-icon {
             font-size: 1.1rem; display: flex; align-items: center;
-            .status-public {
-                color: #2da44e !important;
-                filter: invert(48%) sepia(79%) saturate(2476%) hue-rotate(111deg) brightness(95%) contrast(100%) !important;
-            }
+            .status-public { color: #2da44e !important; }
             .status-private { color: #d29922 !important; }
         }
     }
 
+    /* Repo Name & Interactive Card */
     .repo-name {
         display: flex; flex-direction: column;
         
@@ -118,19 +117,19 @@ $content-width: 100rem;
             position: absolute;
             top: 110%;
             left: 0;
-            width: 320px;
-            background: #ffffff !important; // Forced solid background
+            width: 340px;
+            background: #ffffff !important;
             border: 2px solid #ddd;
             border-radius: 12px;
             padding: 18px;
             box-shadow: 0 15px 35px rgba(0,0,0,0.25);
-            z-index: 9999 !important; // Highest layer priority
+            z-index: 9999 !important;
             color: #333;
             cursor: default;
 
-            /* Toggle class via JS */
             &.is-active {
-                display: block;
+                display: block !important;
+                animation: fadeIn 0.2s ease-out;
             }
 
             .hover-desc {
@@ -142,17 +141,12 @@ $content-width: 100rem;
                 text-align: left;
             }
 
-            .hover-divider {
-                border: 0;
-                border-top: 1px solid #eaeaea;
-                margin: 12px 0;
-            }
+            .hover-divider { border: 0; border-top: 1px solid #eaeaea; margin: 12px 0; }
 
             .hover-links {
                 display: grid;
                 grid-template-columns: 1fr 1fr;
                 gap: 10px;
-                
                 a {
                     font-size: 0.75rem;
                     color: $link-color;
@@ -168,18 +162,21 @@ $content-width: 100rem;
         }
     }
 
+    /* Standards Logos */
     .repo-standards {
         display: flex; justify-content: center; align-items: center; gap: 8px;
         .std-logo { height: 30px; width: auto; max-width: 55px; object-fit: contain; }
     }
 
+    /* License Style */
     .repo-license {
-        font-weight: 700; font-size: 0.8rem; color: #00A0D2 !important; text-transform: uppercase;
+        font-weight: 700; font-size: 0.8rem; color: $link-color !important; text-transform: uppercase;
     }
 
+    /* Dependencies */
     .repo-deps {
         display: flex; flex-direction: row; flex-wrap: nowrap; gap: 5px;
-        align-items: center; overflow-x: hidden;
+        align-items: center; overflow: hidden;
         .dep-box {
             background: #fff; padding: 3px 8px; border-radius: 4px;
             display: inline-flex; align-items: center; border: 1px solid #ddd; flex-shrink: 0;
@@ -187,6 +184,7 @@ $content-width: 100rem;
         .dep-img { height: 20px; max-width: 70px; object-fit: contain; }
     }
 
+    /* Software Icons */
     .repo-software {
         display: flex; justify-content: flex-end; gap: 8px;
         .soft-icon { height: 26px; filter: drop-shadow(0 1px 2px rgba(0,0,0,0.1)); }
@@ -207,32 +205,25 @@ $content-width: 100rem;
 
         .legend-section { display: flex; align-items: center; flex-wrap: wrap; gap: 12px; }
         .legend-icon-group { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
-
-        .legend-title {
-            font-weight: 800; text-transform: uppercase; color: #999; min-width: 80px; 
-        }
-
+        .legend-title { font-weight: 800; text-transform: uppercase; color: #999; min-width: 80px; }
         .legend-icon { height: 14px; width: auto; margin-right: -4px; }
-
         .legend-style-box {
             width: 25px; height: 12px; border: 1.5px solid #999; border-radius: 4px;
             &.dashed { border-style: dashed; }
         }
-
-        /* Fixed: Legend Public Tick Color */
-        .status-public { 
-            color: #2da44e !important; 
-            filter: invert(48%) sepia(79%) saturate(2476%) hue-rotate(111deg) brightness(95%) contrast(100%) !important;
-            font-weight: bold; 
-            margin-right: 4px;
-        }
+        .status-public { color: #2da44e !important; font-weight: bold; margin-right: 4px; }
         .status-private { color: #d29922 !important; margin-right: 4px; }
     }
 }
 
 // -------------------------------------------------------------------
-// 4. RESPONSIVE
+// 4. RESPONSIVE & ANIMATIONS
 // -------------------------------------------------------------------
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-5px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
 @media (max-width: 1200px) {
     .architecture-container .repo-header-row, 
     .architecture-container .repo-row {
