@@ -55,10 +55,7 @@ $content-width: 100rem;
         overflow: visible !important; 
         
         &.auxiliary-dashed { border-style: dashed !important; }
-        &:hover { 
-            background: rgba(0,0,0,0.02); 
-            z-index: 50 !important; // Bring hovered row forward
-        }
+        &:hover { background: rgba(0,0,0,0.02); z-index: 50 !important; }
     }
 
     .repo-id-group { display: flex; align-items: center; justify-content: center; gap: 8px; }
@@ -74,14 +71,14 @@ $content-width: 100rem;
     .repo-hover-card {
         display: none; 
         position: absolute; 
-        top: 110%; 
+        top: 110%; // REVERTED TO PREVIOUS WORKING POSITION
         left: 0; 
         width: 340px;
         background: #ffffff !important; 
         border: 1px solid #ddd; 
         border-radius: 10px;
-        padding: 18px; 
-        box-shadow: 0 10px 40px rgba(0,0,0,0.2); 
+        padding: 15px; 
+        box-shadow: 0 10px 30px rgba(0,0,0,0.2); 
         z-index: 9999 !important; 
         
         &.active { display: block !important; }
@@ -92,27 +89,23 @@ $content-width: 100rem;
             .btn { font-size: 11px !important; padding: 4px 10px !important; pointer-events: auto; }
         }
 
-        .hover-desc { font-size: 13px; margin-bottom: 15px; color: #444; line-height: 1.5; text-align: left; }
+        .hover-desc { font-size: 13px; margin-bottom: 15px; color: #444; line-height: 1.4; text-align: left; }
         
         .hover-links { 
             display: grid; grid-template-columns: 1fr 1fr; gap: 8px; 
             border-top: 1px solid #eee; padding-top: 12px;
-            a { font-size: 12px; font-weight: 700; color: $link-color; text-decoration: none; &:hover { text-decoration: underline; } }
+            a { font-size: 12px; font-weight: 700; color: $link-color; text-decoration: none; }
         }
     }
 
     .repo-standards { display: flex; justify-content: center; gap: 5px; }
     .std-logo { height: 26px; width: auto; object-fit: contain; }
-    
     .repo-license { text-align: center; color: $link-color; font-weight: 700; font-size: 13px; }
     
     .repo-deps { 
         display: flex; justify-content: center; gap: 6px; 
-        .dep-box { 
-            border: 1px solid #eee; border-radius: 4px; padding: 4px 8px; 
-            background: #fff; display: flex; align-items: center; 
-        }
-        .dep-img { height: 22px; width: auto; } // Increased logo size
+        .dep-box { border: 1px solid #eee; border-radius: 4px; padding: 4px 8px; background: #fff; display: flex; align-items: center; }
+        .dep-img { height: 22px; width: auto; } // KEEPING THE BIGGER LOGOS
     }
 
     .repo-software { 
@@ -125,10 +118,7 @@ $content-width: 100rem;
         font-size: 12px; color: #666; display: flex; flex-wrap: wrap; gap: 25px; align-items: center;
 
         .legend-group { display: flex; align-items: center; gap: 8px; }
-        .leg-box { width: 24px; height: 12px; border: 2px solid #999; 
-            &.solid { border-style: solid; } 
-            &.dashed { border-style: dashed !important; }
-        }
+        .leg-box { width: 24px; height: 12px; border: 2px solid #999; &.solid { border-style: solid; } &.dashed { border-style: dashed !important; } }
         .leg-icon { height: 18px; width: auto; object-fit: contain; }
     }
 }
