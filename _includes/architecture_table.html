@@ -1,96 +1,103 @@
-<div class="arch-tbl-v2">
-  <div class="arch-container">
-    <div class="arch-header">
-      <div class="arch-col-id">#</div>
-      <div class="arch-col-name">Repository</div>
-      <div class="arch-col-std">Standards</div>
-      <div class="arch-col-lic">License</div>
-      <div class="arch-col-dep">Dependencies</div>
-      <div class="arch-col-soft">Software</div>
-    </div>
+<div class="architecture-container">
+  <div class="repo-header-row">
+    <div class="header-item">#</div>
+    <div class="header-item">Repository</div>
+    <div class="header-item">Standards</div>
+    <div class="header-item">License</div>
+    <div class="header-item">Dependencies</div>
+    <div class="header-item" style="text-align: right;">Software</div>
+  </div>
 
-    {% assign id_list = include.ids | remove: " " | split: "," %}
+  {% assign id_list = include.ids | remove: " " | split: "," %}
 
-    {% for id in id_list %}
-      {% assign repo_meta = site.data.repo_metadata.repos[id] %}
-      {% if repo_meta %}
-        {% assign cat_id = repo_meta.category %}
-        {% assign cat_data = site.data.repo_metadata.categories[cat_id] %}
-        {% assign row_bg = cat_data.color | default: "#ffcc00" %}
-        {% assign id_text = cat_data.text_color | default: "#000000" %}
-        {% assign final_standards = repo_meta.standards | default: cat_data.default_standards %}
+  {% for id in id_list %}
+    {% assign repo_meta = site.data.repo_metadata.repos[id] %}
+    {% if repo_meta %}
+      {% assign cat_id = repo_meta.category %}
+      {% assign cat_data = site.data.repo_metadata.categories[cat_id] %}
+      {% assign row_bg = cat_data.color | default: "#ffcc00" %}
+      {% assign id_text = cat_data.text_color | default: "#000000" %}
+      {% assign final_standards = repo_meta.standards | default: cat_data.default_standards %}
 
-        <div class="arch-row {% if repo_meta.is_auxiliary %}is-aux{% endif %}" 
-             style="border-color: {{ row_bg }} !important;"
-             onclick="archToggleCard(event, 'card-{{ id }}')">
-          
-          <div class="arch-col-id arch-flex-center">
-            <div class="arch-pill" style="background-color: {{ row_bg }} !important; color: {{ id_text }} !important;">
-              {{ id }}
-            </div>
-            <div class="arch-status">
-              {% if repo_meta.public %}<span class="arch-tick-green">✔</span>{% else %}<span class="arch-warn-gold">⚠️</span>{% endif %}
-            </div>
+      <div class="repo-row {% if repo_meta.is_auxiliary %}auxiliary-dashed{% endif %}" 
+           style="border-color: {{ row_bg }} !important;"
+           onclick="toggleRepoCard(event, 'card-{{ id }}')">
+        
+        <div class="repo-id-group">
+          <div class="id-pill" style="background-color: {{ row_bg }} !important; color: {{ id_text }} !important;">
+            {{ id }}
           </div>
-
-          <div class="arch-col-name arch-relative">
-            <div class="arch-title-box">
-              <span class="arch-main-link">{{ repo_meta.display_name }}</span>
-              <span class="arch-slug">({{ repo_meta.repo_slug }})</span>
-              
-              {% if repo_meta.description %}
-              <div id="card-{{ id }}" class="arch-card" onclick="event.stopPropagation()">
-                <p class="arch-card-text">{{ repo_meta.description }}</p>
-                <div class="arch-card-links">
-                  <a href="{{ repo_meta.repo_url }}/blob/{{ repo_meta.branch }}/README.md" target="_blank">README</a>
-                  <a href="{{ repo_meta.repo_url }}/issues" target="_blank">Issues</a>
-                  <a href="{{ repo_meta.repo_url }}/pulls" target="_blank">PRs</a>
-                  <a href="{{ repo_meta.repo_url }}/releases" target="_blank">Releases</a>
-                </div>
-              </div>
-              {% endif %}
-            </div>
-            <div class="arch-branch">{{ repo_meta.branch }}</div>
-          </div>
-
-          <div class="arch-col-std arch-flex-center">
-            {% for std in final_standards %}
-              <img src="{{ site.baseurl }}/assets/logos/{{ std }}.png" class="arch-img-std">
-            {% endfor %}
-          </div>
-
-          <div class="arch-col-lic arch-text-blue">{{ repo_meta.license }}</div>
-
-          <div class="arch-col-dep arch-flex-row">
-            {% for dep in repo_meta.dependencies %}
-              <div class="arch-dep-unit">
-                <img src="{{ site.baseurl }}/assets/deps/{{ dep }}.png" class="arch-img-dep">
-              </div>
-            {% endfor %}
-          </div>
-
-          <div class="arch-col-soft arch-flex-end">
-            {% for icon in repo_meta.software %}
-              <img src="{{ site.baseurl }}/assets/icons/{{ icon }}.png" class="arch-img-soft">
-            {% endfor %}
+          <div class="status-icon">
+            {% if repo_meta.public %}
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M5 13L9 17L19 7" stroke="#2da44e" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            {% else %}
+              <span class="status-private">⚠️</span>
+            {% endif %}
           </div>
         </div>
-      {% endif %}
-    {% endfor %}
 
-    <div class="arch-legend">
-      <div class="arch-leg-item"><strong>Status:</strong> <span class="arch-tick-green">✔</span> Public <span class="arch-warn-gold">⚠️</span> Private</div>
-      <div class="arch-leg-item"><strong>Style:</strong> <div class="arch-box-solid"></div> Main <div class="arch-box-dashed"></div> Auxiliary</div>
-    </div>
+        <div class="repo-name">
+          <div class="repo-title-wrapper">
+            <span class="repo-main-link">{{ repo_meta.display_name }}</span>
+            <span class="repo-slug-inline">({{ repo_meta.repo_slug }})</span>
+
+            {% if repo_meta.description %}
+            <div id="card-{{ id }}" class="repo-hover-card" onclick="event.stopPropagation()">
+              <p class="hover-desc">{{ repo_meta.description }}</p>
+              <hr class="hover-divider">
+              <div class="hover-links">
+                <a href="{{ repo_meta.repo_url }}/blob/{{ repo_meta.branch }}/README.md" target="_blank">README</a>
+                <a href="{{ repo_meta.repo_url }}/issues" target="_blank">Issues</a>
+                <a href="{{ repo_meta.repo_url }}/pulls" target="_blank">PRs</a>
+                <a href="{{ repo_meta.repo_url }}/releases" target="_blank">Releases</a>
+              </div>
+            </div>
+            {% endif %}
+          </div>
+          <span class="branch-badge">{{ repo_meta.branch }}</span>
+        </div>
+
+        <div class="repo-standards">
+          {% for std in final_standards %}
+            <img src="{{ site.baseurl }}/assets/logos/{{ std }}.png" class="std-logo">
+          {% endfor %}
+        </div>
+
+        <div class="repo-license">{{ repo_meta.license }}</div>
+
+        <div class="repo-deps">
+          {% for dep in repo_meta.dependencies %}
+            <div class="dep-box">
+              <img src="{{ site.baseurl }}/assets/deps/{{ dep }}.png" class="dep-img">
+            </div>
+          {% endfor %}
+        </div>
+
+        <div class="repo-software">
+          {% for icon in repo_meta.software %}
+            <img src="{{ site.baseurl }}/assets/icons/{{ icon }}.png" class="soft-icon">
+          {% endfor %}
+        </div>
+      </div>
+    {% endif %}
+  {% endfor %}
+
+  <div class="repo-legend">
+    <div><strong>Status:</strong> <svg width="12" height="12" style="vertical-align:middle;"><path d="M2 7L5 10L11 3" stroke="#2da44e" stroke-width="3" fill="none"/></svg> Public <span style="margin-left:8px;">⚠️</span> Private</div>
+    <div><strong>Style:</strong> <span class="leg-box solid"></span> Main <span class="leg-box dashed"></span> Auxiliary</div>
   </div>
 </div>
 
 <script>
-function archToggleCard(e, id) {
+function toggleRepoCard(e, id) {
     e.stopPropagation();
-    const target = document.getElementById(id);
-    document.querySelectorAll('.arch-card').forEach(c => { if(c.id !== id) c.classList.remove('active'); });
-    if(target) target.classList.toggle('active');
+    const card = document.getElementById(id);
+    document.querySelectorAll('.repo-hover-card').forEach(c => { if(c.id !== id) c.classList.remove('active'); });
+    if(card) card.classList.toggle('active');
 }
-document.addEventListener('click', () => { document.querySelectorAll('.arch-card').forEach(c => c.classList.remove('active')); });
+document.addEventListener('click', () => {
+    document.querySelectorAll('.repo-hover-card').forEach(c => c.classList.remove('active'));
+});
 </script>
