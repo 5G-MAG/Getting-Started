@@ -85,7 +85,6 @@ $content-width: 100rem;
             font-size: 0.9rem; border-radius: 50%; display: inline-flex;
             justify-content: center; align-items: center; flex-shrink: 0;
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-            // Color and BG are handled by Liquid inline styles
         }
 
         .status-icon {
@@ -110,8 +109,8 @@ $content-width: 100rem;
         
         .branch-badge { 
             font-family: monospace; 
-            font-size: 0.75rem;     // Increased for better legibility
-            font-weight: 600;       // Added weight
+            font-size: 0.75rem;     
+            font-weight: 600;       
             letter-spacing: 0.3px;
             color: #777; 
             margin-top: 1px; 
@@ -146,6 +145,58 @@ $content-width: 100rem;
     .repo-software {
         display: flex; justify-content: flex-end; gap: 8px;
         .soft-icon { height: 26px; filter: drop-shadow(0 1px 2px rgba(0,0,0,0.1)); }
+    }
+
+    /* LEGEND STYLING */
+    .repo-legend {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        margin-top: 15px;
+        padding: 15px 20px;
+        background: rgba(0, 0, 0, 0.02); 
+        border-radius: 12px;
+        font-size: 0.75rem;
+        color: #666;
+        border: 1px solid #eee;
+
+        .legend-section {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .legend-icon-group {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .legend-title {
+            font-weight: 800;
+            text-transform: uppercase;
+            color: #999;
+            min-width: 80px; 
+        }
+
+        .legend-icon {
+            height: 14px;
+            width: auto;
+            margin-right: -4px;
+        }
+
+        .legend-style-box {
+            width: 25px;
+            height: 12px;
+            border: 1.5px solid #999;
+            border-radius: 4px;
+            &.dashed { border-style: dashed; }
+        }
+
+        .status-public { color: #2da44e; font-weight: bold; }
+        .status-private { color: #d29922; }
     }
 }
 
