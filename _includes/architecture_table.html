@@ -45,12 +45,33 @@
         </div>
 
         <div class="repo-name">
-          <div class="repo-title-row">
+          <div class="repo-title-wrapper">
             <a href="{{ repo_meta.repo_url }}" target="_blank" class="repo-main-link">
               {{ repo_meta.display_name }} 
               <span class="repo-slug-inline">({{ repo_meta.repo_slug }})</span>
             </a>
-          </div>
+
+            {% if repo_meta.description %}
+            <div class="repo-hover-card">
+              <p class="hover-desc">{{ repo_meta.description }}</p>
+              <hr class="hover-divider">
+              <div class="hover-links">
+                <a href="{{ repo_meta.repo_url }}/blob/{{ repo_meta.branch }}/README.md" target="_blank">
+                  <i class="fas fa-book"></i> README
+                </a>
+                <a href="{{ repo_meta.repo_url }}/issues" target="_blank">
+                  <i class="fas fa-exclamation-circle"></i> Issues
+                </a>
+                <a href="{{ repo_meta.repo_url }}/pulls" target="_blank">
+                  <i class="fas fa-code-branch"></i> PRs
+                </a>
+                <a href="{{ repo_meta.repo_url }}/releases" target="_blank">
+                  <i class="fas fa-tag"></i> Releases
+                </a>
+              </div>
+            </div>
+            {% endif %}
+            </div>
           <span class="branch-badge">{{ repo_meta.branch }}</span>
         </div>
 
