@@ -50,13 +50,20 @@ $content-width: 100rem;
         .branch-badge { font-family: monospace; font-size: 11px; color: #777; display: block; }
     }
 
-    // THE CARD LAYER
     .repo-hover-card {
         display: none; position: absolute; top: 120%; left: 0; width: 320px;
         background: white !important; border: 1px solid #ddd; border-radius: 10px;
         padding: 15px; box-shadow: 0 8px 30px rgba(0,0,0,0.15); z-index: 1000;
         &.active { display: block; }
-        .hover-desc { font-size: 13px; margin-bottom: 10px; color: #444; line-height: 1.4; }
+        
+        // NEW: Layout for the button inside the card
+        .card-btn-container {
+            margin-bottom: 12px;
+            display: flex;
+            .btn { font-size: 11px !important; padding: 4px 10px !important; }
+        }
+
+        .hover-desc { font-size: 13px; margin-bottom: 10px; color: #444; line-height: 1.4; text-align: left; }
         .hover-links { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; 
             a { font-size: 12px; font-weight: 700; color: $link-color; text-decoration: none; }
         }
