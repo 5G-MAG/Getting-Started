@@ -1,27 +1,37 @@
-// --- BUTTON COLORS DEFINED HERE ---
+// -------------------------------------------------------------------
+// BUTTON COLORS DEFINED HERE
 // These map to the 'category' field in your _data/repo_metadata.yml
+// -------------------------------------------------------------------
 $link-color: #00A0D2;
 $content-width: 100rem;
 
-.btn-github    { color: #ffffff !important; background-color: #000000 !important; }
-.btn-release   { color: #88D66C !important; background-color: #000000 !important; }
-.btn-tutorial  { color: #FFFFFF !important; background-color: #00A0D2 !important; }
-.btn-5gms      { color: #000000 !important; background-color: #FFC000 !important; }
-.btn-5gcsc     { color: #ffffff !important; background-color: #FF0000 !important; }
-.btn-uedc      { color: #ffffff !important; background-color: #D17F79 !important; }
-.btn-5gbc      { color: #ffffff !important; background-color: #70AD47 !important; }
-.btn-5gbcea    { color: #ffffff !important; background-color: #7030A0 !important; }
-.btn-5mbs      { color: #ffffff !important; background-color: #1AB39F !important; }
-.btn-xr        { color: #ffffff !important; background-color: #ED7D31 !important; }
-.btn-v3c       { color: #ffffff !important; background-color: #CC3399 !important; }
-.btn-b2d       { color: #ffffff !important; background-color: #90A008 !important; }
-.btn-aiml      { color: #ffffff !important; background-color: #01A002 !important; }
-.btn-md        { color: #ffffff !important; background-color: #385723 !important; }
-.btn-dvbi      { color: #ffffff !important; background-color: #002060 !important; }
-.btn-3gpp      { color: #ffffff !important; background-color: #0070C0 !important; }
-.btn-common    { color: #000000 !important; background-color: #BFBFBF !important; }
+// --- Action & Utility Buttons ---
+.btn-github     { color: #ffffff !important; background-color: #000000 !important; }
+.btn-release    { color: #88D66C !important; background-color: #000000 !important; }
+.btn-tutorial   { color: #FFFFFF !important; background-color: #00A0D2 !important; }
 
-// --- ARCHITECTURE TABLE ---
+// --- Primary Platforms ---
+.btn-3gpp       { color: #ffffff !important; background-color: #0070C0 !important; } // 3GPP RAN/Core
+.btn-5gbc       { color: #ffffff !important; background-color: #70AD47 !important; } // 5G Broadcast TVR
+.btn-5gbcea     { color: #ffffff !important; background-color: #7030A0 !important; } // 5G Broadcast Emergency
+.btn-5gms       { color: #000000 !important; background-color: #FFC000 !important; } // 5G Media Streaming
+.btn-5mbs       { color: #ffffff !important; background-color: #1AB39F !important; } // 5G MBS
+.btn-5gcsc      { color: #ffffff !important; background-color: #FF0000 !important; } // 5GC Consumers
+.btn-testbed    { color: #ffffff !important; background-color: #D17F79 !important; } // 6G Testbed (Coral)
+.btn-aiml       { color: #ffffff !important; background-color: #4A5568 !important; } // AI/ML (Graphite)
+.btn-beyond2d   { color: #ffffff !important; background-color: #00A3C1 !important; } // Beyond 2D (Cyan)
+.btn-api        { color: #ffffff !important; background-color: #5C6BC0 !important; } // Network API (Slate Blue)
+.btn-uedc       { color: #ffffff !important; background-color: #607D8B !important; } // Data Collection (Grey/Slate)
+.btn-avatar     { color: #ffffff !important; background-color: #D17F79 !important; } // Avatar (Coral)
+.btn-xr         { color: #ffffff !important; background-color: #ED7D31 !important; } // XR Media
+.btn-v3c        { color: #ffffff !important; background-color: #CC3399 !important; } // V3C Immersive
+.btn-dvbi       { color: #ffffff !important; background-color: #002060 !important; } // DVB-I
+.btn-md         { color: #ffffff !important; background-color: #385723 !important; } // Multimedia Protocols
+.btn-common     { color: #000000 !important; background-color: #BFBFBF !important; } // Shared Tools
+
+// -------------------------------------------------------------------
+// ARCHITECTURE TABLE
+// -------------------------------------------------------------------
 .architecture-container {
     width: 100%; 
     margin-top: 2rem; 
@@ -36,7 +46,7 @@ $content-width: 100rem;
     }
 
     .repo-header-row {
-        padding: 0 20px; // CRITICAL: Matches .repo-row padding to align columns
+        padding: 0 20px; // Matches .repo-row padding to align columns
         
         div { 
             font-weight: 800; 
@@ -45,7 +55,7 @@ $content-width: 100rem;
             color: #999; 
             padding-bottom: 12px;
             display: flex;
-            justify-content: center; // Default alignment for headers
+            justify-content: center; 
             
             &:nth-child(1) { justify-content: center; } 
             &:nth-child(2) { justify-content: flex-start; padding-left: 5px; } 
