@@ -368,7 +368,7 @@ repos:
   T1:
     category: "6gtestbed"
     repo_slug: "6G-Testbed"
-    display_name: ""6G Testbed and AI Traffic Characterization""
+    display_name: "6G Testbed and AI Traffic Characterization"
     description: |
       Reference Tools: This repository is related to "5GC Service Consumers"
     repo_url: "https://github.com/5G-MAG/6G-Testbed"
@@ -381,18 +381,78 @@ repos:
   # AI and ML Evaluation Framework
   ML1:
     category: "aiml"
-    # Placeholder for new category
-
+    repo_slug: "rt-ai-ml-evaluation-framework"
+    display_name: "AI and ML Evaluation Framework"
+    description: |
+      Reference Tools: This repository is related to "5GC Service Consumers"
+    repo_url: "https://github.com/5G-MAG/rt-ai-ml-evaluation-framework"
+    branch: "main"
+    license: "5G-MAG PL v1.0"
+    standards: ["3GPP"]
+    software: ["Linux"]
+    public: false
   # Beyond 2D Video Evaluation Framework
   Y1:
     category: "beyond2d"
-    # Placeholder for new category
-
+    repo_slug: "rt-beyond2d-evaluation-framework"
+    display_name: "Beyond 2D Video Evaluation Framework"
+    description: |
+      Reference Tools: This repository is related to "5GC Service Consumers"
+    repo_url: "https://github.com/5G-MAG/rt-beyond2d-evaluation-framework"
+    branch: "main"
+    license: "5G-MAG PL v1.0"
+    standards: ["3GPP"]
+    software: ["Linux"]
+    public: true
   # Conversational Avatar Real-Time Communications
   AV1:
     category: "avatar"
-    # Placeholder for new category
-
+    repo_slug: "rt-avatar-content"
+    display_name: "TBD"
+    description: |
+      Reference Tools: This repository is related to "Conversational Avatar Real-Time Communications"
+    repo_url: "https://github.com/5G-MAG/rt-avatar-contentk"
+    branch: "main"
+    license: "5G-MAG PL v1.0"
+    standards: []
+    software: []
+    public: false
+  AV2:
+    category: "avatar"
+    repo_slug: "rt-avatar-call"
+    display_name: "TBD"
+    description: |
+      Reference Tools: This repository is related to "Conversational Avatar Real-Time Communications"
+    repo_url: "https://github.com/5G-MAG/rt-avatar-call"
+    branch: "main"
+    license: "5G-MAG PL v1.0"
+    standards: []
+    software: []
+    public: false
+  AV3:
+    category: "avatar"
+    repo_slug: "rt-avatar-unity-tracker"
+    display_name: "TBD"
+    description: |
+      Reference Tools: This repository is related to "Conversational Avatar Real-Time Communications"
+    repo_url: "https://github.com/5G-MAG/rt-avatar-unity-tracker"
+    branch: "main"
+    license: "5G-MAG PL v1.0"
+    standards: []
+    software: []
+    public: false
+  AV4:
+    category: "avatar"
+    repo_slug: "rt-3gpp-swap"
+    display_name: "TBD"
+    description: |
+      Reference Tools: This repository is related to "Conversational Avatar Real-Time Communications"
+    repo_url: "https://github.com/5G-MAG/rt-3gpp-swap"
+    branch: "main"
+    license: "5G-MAG PL v1.0"
+    standards: []
+    software: []
+    public: false
   # DVB-I Services
   I1:
     category: "dvbi"
