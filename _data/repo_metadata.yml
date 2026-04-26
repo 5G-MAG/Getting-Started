@@ -1,6 +1,79 @@
 # -------------------------------------------------------------------
+# CATEGORY DEFINITIONS
+# Colors: Original mappings + unique tones for new categories
+# -------------------------------------------------------------------
+categories:
+  3gpp_ran_core:
+    name: "3GPP RAN and Core Platforms"
+    color: "#0070C0"           # .btn-3gpp
+    text_color: "#FFFFFF"
+  5g_broadcast_tvr:
+    name: "5G Broadcast - TV & Radio Hybrid Services"
+    color: "#70AD47"           # .btn-5gbc
+    text_color: "#FFFFFF"
+  5g_broadcast_pws:
+    name: "5G Broadcast - Emergency Alerts"
+    color: "#7030A0"           # .btn-5gbcea
+    text_color: "#FFFFFF"    
+  5gms:
+    name: "5G Media Streaming"
+    color: "#FFC000"           # .btn-5gms
+    text_color: "#000000"
+  mbs:
+    name: "5G Multicast Broadcast Services"
+    color: "#1AB39F"           # .btn-5mbs
+    text_color: "#FFFFFF"
+  5gc_consumers:
+    name: "5GC Service Consumers"
+    color: "#FF0000"           # .btn-5gcsc
+    text_color: "#FFFFFF"
+  6gtestbed:
+    name: "6G Testbed and AI Traffic Characterization"
+    color: "#D17F79"           # .btn-testbed (Original Coral)
+    text_color: "#FFFFFF"
+  aiml:
+    name: "AI and ML Evaluation Framework"
+    color: "#4A5568"           # New: Deep Graphite
+    text_color: "#FFFFFF"
+  beyond2d:
+    name: "Beyond 2D Video Evaluation Framework"
+    color: "#00A3C1"           # New: Vibrant Cyan
+    text_color: "#FFFFFF"
+  avatar:
+    name: "Conversational Avatar Real-Time Communications"
+    color: "#D17F79"           # .btn-avatar (Kept as requested or distinct)
+    text_color: "#FFFFFF"
+  dvbi:
+    name: "DVB-I Services"
+    color: "#002060"           # .btn-dvbi
+    text_color: "#FFFFFF"
+  multimedia:
+    name: "Multimedia Protocols"
+    color: "#385723"           # .btn-md
+    text_color: "#FFFFFF"
+  network_api:
+    name: "Network Capability Exposure through APIs"
+    color: "#5C6BC0"           # New: Slate Blue
+    text_color: "#FFFFFF"
+  data_collection:
+    name: "Data Collection & Reporting"
+    color: "#607D8B"           # New: Infrastructure Grey
+    text_color: "#FFFFFF"
+  v3c:
+    name: "V3C Immersive"
+    color: "#CC3399"           # .btn-v3c
+    text_color: "#FFFFFF"
+  xr:
+    name: "XR Media"
+    color: "#ED7D31"           # .btn-xr
+    text_color: "#FFFFFF"
+  shared:
+    name: "Shared Tools"
+    color: "#BFBFBF"           # .btn-common
+    text_color: "#000000"
+
+# -------------------------------------------------------------------
 # REPOSITORY DATA
-# Standards (logos), Dependencies (deps), and Software (icons)
 # -------------------------------------------------------------------
 repos:
 
@@ -9,8 +82,7 @@ repos:
     category: "3gpp_ran_core"
     repo_slug: "open5gs"
     display_name: "5G Core"
-    description: |
-      Reference Tools: This is a third-party dependency
+    description: "Reference Tools: This is a third-party dependency"
     repo_url: "https://github.com/5G-MAG/rt-5g-core"
     branch: "main"
     license: "AGPLv3.0"
@@ -22,8 +94,7 @@ repos:
     category: "3gpp_ran_core"
     repo_slug: "rt-5g-ran-gnb"
     display_name: "5G RAN gNodeB"
-    description: |
-      Software-defined 5G gNodeB implementation providing the radio access interface.
+    description: "Software-defined 5G gNodeB implementation providing the radio access interface."
     repo_url: "https://github.com/5G-MAG/rt-5g-ran-gnb"
     branch: "main"
     license: "AGPLv3.0"
@@ -35,8 +106,7 @@ repos:
     category: "3gpp_ran_core"
     repo_slug: "rt-5g-ran-cu"
     display_name: "5G RAN Central Unit (CU)"
-    description: |
-      Centralized unit of the gNodeB managing the RRC and PDCP protocol layers.
+    description: "Centralized unit of the gNodeB managing the RRC and PDCP protocol layers."
     repo_url: "https://github.com/5G-MAG/rt-5g-ran-cu"
     branch: "main"
     license: "AGPLv3.0"
@@ -48,8 +118,7 @@ repos:
     category: "3gpp_ran_core"
     repo_slug: "rt-5g-ran-du"
     display_name: "5G RAN Distributed Unit (DU)"
-    description: |
-      Distributed unit of the gNodeB managing the RLC, MAC, and Physical layers.
+    description: "Distributed unit of the gNodeB managing the RLC, MAC, and Physical layers."
     repo_url: "https://github.com/5G-MAG/rt-5g-ran-du"
     branch: "main"
     license: "AGPLv3.0"
@@ -63,8 +132,7 @@ repos:
     category: "5g_broadcast_tvr"
     repo_slug: "rt-mbms-mw-android"
     display_name: "MBMS Android Middleware"
-    description: |
-      Reference Tools: This repository is related to "5G Broadcast: TV and Radio Hybrid Services"
+    description: "Reference Tools: This repository is related to \"5G Broadcast: TV and Radio Hybrid Services\""
     repo_url: "https://github.com/5G-MAG/rt-mbms-mw-android"
     branch: "main"
     license: "AGPLv3.0"
@@ -75,8 +143,7 @@ repos:
     category: "5g_broadcast_tvr"
     repo_slug: "rt-mbms-mw"
     display_name: "MBMS Middleware"
-    description: |
-      Reference Tools: This repository is related to "5G Broadcast: TV and Radio Hybrid Services"
+    description: "Reference Tools: This repository is related to \"5G Broadcast: TV and Radio Hybrid Services\""
     repo_url: "https://github.com/5G-MAG/rt-mbms-mw"
     branch: "main"
     license: "5G-MAG PL v1.0"
@@ -87,8 +154,7 @@ repos:
     category: "5g_broadcast_tvr"
     repo_slug: "rt-mbms-modem"
     display_name: "MBMS Modem"
-    description: |
-      Reference Tools: This repository is related to "5G Broadcast: TV and Radio Hybrid Services"
+    description: "Reference Tools: This repository is related to \"5G Broadcast: TV and Radio Hybrid Services\""
     repo_url: "https://github.com/5G-MAG/rt-mbms-modem"
     branch: "main"
     license: "AGPLv3.0"
@@ -100,8 +166,7 @@ repos:
     category: "5g_broadcast_tvr"
     repo_slug: "rt-mbms-wui"
     display_name: "MBMS Web User Interface"
-    description: |
-      Web-based dashboard for monitoring and managing MBMS middleware status.
+    description: "Web-based dashboard for monitoring and managing MBMS middleware status."
     repo_url: "https://github.com/5G-MAG/rt-mbms-wui"
     branch: "main"
     is_auxiliary: true
@@ -114,8 +179,7 @@ repos:
     category: "5g_broadcast_tvr"
     repo_slug: "rt-mbms-tx"
     display_name: "5G Broadcast Transmitter"
-    description: |
-      Reference Tools: This repository is related to "5G Broadcast: TV and Radio Hybrid Services"
+    description: "Reference Tools: This repository is related to \"5G Broadcast: TV and Radio Hybrid Services\""
     repo_url: "https://github.com/5G-MAG/rt-mbms-tx"
     branch: "main"
     license: "AGPLv3.0"
@@ -127,8 +191,7 @@ repos:
     category: "5g_broadcast_tvr"
     repo_slug: "rt-mbms-tx-for-qrd-and-crd"
     display_name: "5G Broadcast TX (QRD/CRD)"
-    description: |
-      Reference Tools: This repository is related to "5G Broadcast: TV and Radio Hybrid Services"
+    description: "Reference Tools: This repository is related to \"5G Broadcast: TV and Radio Hybrid Services\""
     repo_url: "https://github.com/5G-MAG/rt-mbms-tx-for-qrd-and-crd"
     branch: "main"
     license: "AGPLv3.0"
@@ -140,8 +203,7 @@ repos:
     category: "5g_broadcast_tvr"
     repo_slug: "rt-mbms-examples"
     display_name: "MBMS Example Files"
-    description: |
-      Reference Tools: This repository is related to "5G Broadcast: TV and Radio Hybrid Services"
+    description: "Reference Tools: This repository is related to \"5G Broadcast: TV and Radio Hybrid Services\""
     repo_url: "https://github.com/5G-MAG/rt-mbms-examples"
     branch: "main"
     is_auxiliary: true
@@ -155,8 +217,7 @@ repos:
     category: "5g_broadcast_pws"
     repo_slug: "rt-lte-based-5g-broadcast-pws"
     display_name: "5G Broadcast TX (PWS)"
-    description: |
-      Implementation of Public Warning System (PWS) alerts over 5G Broadcast.
+    description: "Implementation of Public Warning System (PWS) alerts over 5G Broadcast."
     repo_url: "https://github.com/5G-MAG/rt-mbms-tx-for-qrd-and-crd/tree/emergency-alerts"
     branch: "emergency-alerts"
     license: "AGPLv3.0"
@@ -170,8 +231,7 @@ repos:
     category: "5gms"
     repo_slug: "rt-5gms-application"
     display_name: "5GMS-Aware Application"
-    description: |
-      Reference Tools: This repository is related to "5G Media Streaming (5GMS)"
+    description: "Reference Tools: This repository is related to \"5G Media Streaming (5GMS)\""
     repo_url: "https://github.com/5G-MAG/rt-5gms-application"
     branch: "main"
     license: "Multiple"
@@ -182,8 +242,7 @@ repos:
     category: "5gms"
     repo_slug: "rt-5gms-media-session-handler"
     display_name: "5GMS Media Session Handler"
-    description: |
-      Reference Tools: This repository is related to "5G Media Streaming (5GMS)"
+    description: "Reference Tools: This repository is related to \"5G Media Streaming (5GMS)\""
     repo_url: "https://github.com/5G-MAG/rt-5gms-media-session-handler"
     branch: "main"
     license: "5G-MAG PL v1.0"
@@ -194,8 +253,7 @@ repos:
     category: "5gms"
     repo_slug: "rt-5gms-media-stream-handler"
     display_name: "5GMS Media Stream Handler"
-    description: |
-      Reference Tools: This repository is related to "5G Media Streaming (5GMS)"
+    description: "Reference Tools: This repository is related to \"5G Media Streaming (5GMS)\""
     repo_url: "https://github.com/5G-MAG/rt-5gms-media-stream-handler"
     branch: "main"
     is_auxiliary: true
@@ -208,8 +266,7 @@ repos:
     category: "5gms"
     repo_slug: "rt-5gms-common-android-library"
     display_name: "5GMS Common Android Library"
-    description: |
-      Reference Tools: This repository is related to "5G Media Streaming (5GMS)"
+    description: "Reference Tools: This repository is related to \"5G Media Streaming (5GMS)\""
     repo_url: "https://github.com/5G-MAG/rt-5gms-common-android-library"
     branch: "main"
     is_auxiliary: true
@@ -221,8 +278,7 @@ repos:
     category: "5gms"
     repo_slug: "rt-5gms-application-function"
     display_name: "5GMS Application Function (AF)"
-    description: |
-      Reference Tools: This repository is related to "5G Media Streaming (5GMS)"
+    description: "Reference Tools: This repository is related to \"5G Media Streaming (5GMS)\""
     repo_url: "https://github.com/5G-MAG/rt-5gms-application-function"
     branch: "main"
     is_auxiliary: true
@@ -235,8 +291,7 @@ repos:
     category: "5gms"
     repo_slug: "rt-5gms-application-server"
     display_name: "5GMS Application Server (AS)"
-    description: |
-      Reference Tools: This repository is related to "5G Media Streaming (5GMS)"
+    description: "Reference Tools: This repository is related to \"5G Media Streaming (5GMS)\""
     repo_url: "https://github.com/5G-MAG/rt-5gms-application-server"
     branch: "main"
     license: "5G-MAG PL v1.0"
@@ -248,8 +303,7 @@ repos:
     category: "5gms"
     repo_slug: "rt-5gms-application-provider"
     display_name: "5GMS Application Provider"
-    description: |
-      Reference Tools: This repository is related to "5G Media Streaming (5GMS)"
+    description: "Reference Tools: This repository is related to \"5G Media Streaming (5GMS)\""
     repo_url: "https://github.com/5G-MAG/rt-5gms-application-provider"
     branch: "main"
     license: "5G-MAG PL v1.0"
@@ -261,8 +315,7 @@ repos:
     category: "5gms"
     repo_slug: "rt-5gms-examples"
     display_name: "5GMS Example Files"
-    description: |
-      This repository is related to: 5G Media Streaming (5GMS)
+    description: "Reference Tools: This repository is related to \"5G Media Streaming (5GMS)\""
     repo_url: "https://github.com/5G-MAG/rt-5gms-examples"
     branch: "main"
     is_auxiliary: true
@@ -276,8 +329,7 @@ repos:
     category: "mbs"
     repo_slug: "srsRAN_4G"
     display_name: "UE (MBS Components)"
-    description: |
-      User Equipment components supporting Multicast/Broadcast Services (MBS).
+    description: "User Equipment components supporting Multicast/Broadcast Services (MBS)."
     repo_url: "https://github.com/5G-MAG/srsRAN_4G"
     branch: "5mbs"
     license: "AGPLv3.0"
@@ -289,8 +341,7 @@ repos:
     category: "mbs"
     repo_slug: "rt-srsRAN_Project"
     display_name: "NG-RAN (MBS Components)"
-    description: |
-      Reference Tools: This is a third-party dependency
+    description: "Reference Tools: This is a third-party dependency"
     repo_url: "https://github.com/5G-MAG/rt-srsRAN_Project"
     branch: "5mbs"
     license: "AGPLv3.0"
@@ -302,8 +353,7 @@ repos:
     category: "mbs"
     repo_slug: "open5gs"
     display_name: "5G Core (MBS Components)"
-    description: |
-      Reference Tools: This is a third-party dependency
+    description: "Reference Tools: This is a third-party dependency"
     repo_url: "https://github.com/5G-MAG/open5gs"
     branch: "5mbs"
     license: "AGPLv3.0"
@@ -315,8 +365,7 @@ repos:
     category: "mbs"
     repo_slug: "rt-mbs-function"
     display_name: "MBS Function"
-    description: |
-      Reference Tools: This repository is related to "5G Multicast Broadcast Services"
+    description: "Reference Tools: This repository is related to \"5G Multicast Broadcast Services\""
     repo_url: "https://github.com/5G-MAG/rt-mbs-function"
     branch: "main"
     license: "5G-MAG PL v1.0"
@@ -327,8 +376,7 @@ repos:
     category: "mbs"
     repo_slug: "rt-mbs-transport-function"
     display_name: "MBS Transport Function"
-    description: |
-      This repository is related to: 5G Multicast Broadcast Services
+    description: "Reference Tools: This repository is related to \"5G Multicast Broadcast Services\""
     repo_url: "https://github.com/5G-MAG/rt-mbs-transport-function"
     branch: "main"
     license: "5G-MAG PL v1.0"
@@ -339,8 +387,7 @@ repos:
     category: "mbs"
     repo_slug: "rt-mbs-examples"
     display_name: "MBS Examples"
-    description: |
-      Reference Tools: This repository is related to "5G Multicast Broadcast Services"
+    description: "Reference Tools: This repository is related to \"5G Multicast Broadcast Services\""
     repo_url: "https://github.com/5G-MAG/rt-mbs-examples"
     branch: "main"
     is_auxiliary: true
@@ -354,8 +401,7 @@ repos:
     category: "5gc_consumers"
     repo_slug: "rt-5gc-service-consumers"
     display_name: "SBI Service Consumers"
-    description: |
-      Reference Tools: This repository is related to "5GC Service Consumers"
+    description: "Reference Tools: This repository is related to \"5GC Service Consumers\""
     repo_url: "https://github.com/5G-MAG/rt-5gc-service-consumers"
     branch: "main"
     license: "5G-MAG PL v1.0"
@@ -368,9 +414,8 @@ repos:
   T1:
     category: "6gtestbed"
     repo_slug: "6G-Testbed"
-    display_name: "6G Testbed and AI Traffic Characterization"
-    description: |
-      Reference Tools: This repository is related to "5GC Service Consumers"
+    display_name: "6G Testbed"
+    description: "Reference Tools: This repository is related to \"6G Testbed and AI Traffic Characterization\""
     repo_url: "https://github.com/5G-MAG/6G-Testbed"
     branch: "main"
     license: "5G-MAG PL v1.0"
@@ -382,36 +427,35 @@ repos:
   ML1:
     category: "aiml"
     repo_slug: "rt-ai-ml-evaluation-framework"
-    display_name: "AI and ML Evaluation Framework"
-    description: |
-      Reference Tools: This repository is related to "5GC Service Consumers"
+    display_name: "AI/ML Framework"
+    description: "Reference Tools: This repository is related to \"AI and ML Evaluation Framework\""
     repo_url: "https://github.com/5G-MAG/rt-ai-ml-evaluation-framework"
     branch: "main"
     license: "5G-MAG PL v1.0"
     standards: ["3GPP"]
     software: ["Linux"]
     public: false
+
   # Beyond 2D Video Evaluation Framework
   Y1:
     category: "beyond2d"
     repo_slug: "rt-beyond2d-evaluation-framework"
-    display_name: "Beyond 2D Video Evaluation Framework"
-    description: |
-      Reference Tools: This repository is related to "5GC Service Consumers"
+    display_name: "Beyond 2D Framework"
+    description: "Reference Tools: This repository is related to \"Beyond 2D Video Evaluation Framework\""
     repo_url: "https://github.com/5G-MAG/rt-beyond2d-evaluation-framework"
     branch: "main"
     license: "5G-MAG PL v1.0"
     standards: ["3GPP"]
     software: ["Linux"]
     public: true
+
   # Conversational Avatar Real-Time Communications
   AV1:
     category: "avatar"
     repo_slug: "rt-avatar-content"
-    display_name: "TBD"
-    description: |
-      Reference Tools: This repository is related to "Conversational Avatar Real-Time Communications"
-    repo_url: "https://github.com/5G-MAG/rt-avatar-contentk"
+    display_name: "Avatar Content"
+    description: "Reference Tools: This repository is related to \"Conversational Avatar Real-Time Communications\""
+    repo_url: "https://github.com/5G-MAG/rt-avatar-content"
     branch: "main"
     license: "5G-MAG PL v1.0"
     standards: []
@@ -420,9 +464,8 @@ repos:
   AV2:
     category: "avatar"
     repo_slug: "rt-avatar-call"
-    display_name: "TBD"
-    description: |
-      Reference Tools: This repository is related to "Conversational Avatar Real-Time Communications"
+    display_name: "Avatar Call"
+    description: "Reference Tools: This repository is related to \"Conversational Avatar Real-Time Communications\""
     repo_url: "https://github.com/5G-MAG/rt-avatar-call"
     branch: "main"
     license: "5G-MAG PL v1.0"
@@ -432,9 +475,8 @@ repos:
   AV3:
     category: "avatar"
     repo_slug: "rt-avatar-unity-tracker"
-    display_name: "TBD"
-    description: |
-      Reference Tools: This repository is related to "Conversational Avatar Real-Time Communications"
+    display_name: "Avatar Unity Tracker"
+    description: "Reference Tools: This repository is related to \"Conversational Avatar Real-Time Communications\""
     repo_url: "https://github.com/5G-MAG/rt-avatar-unity-tracker"
     branch: "main"
     license: "5G-MAG PL v1.0"
@@ -444,22 +486,21 @@ repos:
   AV4:
     category: "avatar"
     repo_slug: "rt-3gpp-swap"
-    display_name: "TBD"
-    description: |
-      Reference Tools: This repository is related to "Conversational Avatar Real-Time Communications"
+    display_name: "3GPP SWAP"
+    description: "Reference Tools: This repository is related to \"Conversational Avatar Real-Time Communications\""
     repo_url: "https://github.com/5G-MAG/rt-3gpp-swap"
     branch: "main"
     license: "5G-MAG PL v1.0"
     standards: []
     software: []
     public: false
+
   # DVB-I Services
   I1:
     category: "dvbi"
     repo_slug: "rt-5gms-application"
     display_name: "DVB-I Reference App"
-    description: |
-      Reference Tools: This repository is related to "5G Media Streaming (5GMS)"
+    description: "Reference Tools: This repository is related to \"DVB-I Services\""
     repo_url: "https://github.com/5G-MAG/rt-5gms-application"
     branch: "main"
     license: "5G-MAG PL v1.0"
@@ -472,9 +513,8 @@ repos:
   L1:
     category: "multimedia"
     repo_slug: "rt-libflute"
-    display_name: "FLUTE Transmitter/Receiver"
-    description: |
-      Reference Tools: This repository is related to "Multimedia Delivery Protocols"
+    display_name: "FLUTE Transceiver"
+    description: "Reference Tools: This repository is related to \"Multimedia Protocols\""
     repo_url: "https://github.com/5G-MAG/rt-libflute"
     branch: "main"
     license: "5G-MAG PL v1.0"
@@ -484,9 +524,8 @@ repos:
   L2:
     category: "multimedia"
     repo_slug: "rt-mbms-mw"
-    display_name: "rt-mbms-mw (ROUTE)"
-    description: |
-      Reference Tools: This repository is related to "5G Broadcast: TV and Radio Hybrid Services"
+    display_name: "MBMS Middleware (ROUTE)"
+    description: "Reference Tools: This repository is related to \"Multimedia Protocols\""
     repo_url: "https://github.com/5G-MAG/rt-mbms-mw/tree/route-gpac"
     branch: "route-gpac"
     license: "5G-MAG PL v1.0"
@@ -498,15 +537,20 @@ repos:
   # Network Capability Exposure through APIs
   N1:
     category: "network_api"
-    # Placeholder for new category
+    repo_slug: "rt-network-api"
+    display_name: "Network API"
+    description: "Reference Tools: This repository is related to \"Network Capability Exposure through APIs\""
+    repo_url: "https://github.com/5G-MAG/rt-network-api"
+    branch: "main"
+    license: "5G-MAG PL v1.0"
+    public: false
 
   # Data Collection & Reporting
   D1:
     category: "data_collection"
     repo_slug: "rt-data-collection-application-function"
     display_name: "Generic 3GPP Data Collection AF"
-    description: |
-      Reference Tools: This repository is related to "UE Data Collection, Reporting and Event Exposure"
+    description: "Reference Tools: This repository is related to \"Data Collection & Reporting\""
     repo_url: "https://github.com/5G-MAG/rt-data-collection-application-function"
     branch: "main"
     license: "5G-MAG PL v1.0"
@@ -520,8 +564,7 @@ repos:
     category: "v3c"
     repo_slug: "rt-v3c-unity-player"
     display_name: "V3C Unity Player"
-    description: |
-      Reference Tools: This repository is related to "V3C Immersive Platform"
+    description: "Reference Tools: This repository is related to \"V3C Immersive\""
     repo_url: "https://github.com/5G-MAG/rt-v3c-unity-player"
     branch: "main"
     license: "5G-MAG PL v1.0"
@@ -533,8 +576,7 @@ repos:
     category: "v3c"
     repo_slug: "rt-v3c-decoder-plugin"
     display_name: "V3C Decoder Plugin"
-    description: |
-      Reference Tools: This repository is related to "V3C Immersive Platform"
+    description: "Reference Tools: This repository is related to \"V3C Immersive\""
     repo_url: "https://github.com/5G-MAG/rt-v3c-decoder-plugin"
     branch: "main"
     license: "5G-MAG PL v1.0"
@@ -545,8 +587,7 @@ repos:
     category: "v3c"
     repo_slug: "rt-v3c-content"
     display_name: "V3C Test Content"
-    description: |
-      Reference Tools: This repository is related to "V3C Immersive Platform"
+    description: "Reference Tools: This repository is related to \"V3C Immersive\""
     repo_url: "https://github.com/5G-MAG/rt-v3c-content"
     branch: "main"
     license: "Multiple"
@@ -559,8 +600,7 @@ repos:
     category: "xr"
     repo_slug: "rt-xr-unity-player"
     display_name: "Unity: XR Player"
-    description: |
-      Reference Tools: This repository is related to "XR Media with MPEG-I Scene Description"
+    description: "Reference Tools: This repository is related to \"XR Media\""
     repo_url: "https://github.com/5G-MAG/rt-xr-unity-player"
     branch: "main"
     license: "5G-MAG PL v1.0"
@@ -572,8 +612,7 @@ repos:
     category: "xr"
     repo_slug: "rt-xr-glTFast"
     display_name: "Unity: glTF Extensions"
-    description: |
-      Fast glTF loader extensions for immersive media assets in Unity.
+    description: "Fast glTF loader extensions for immersive media assets in Unity."
     repo_url: "https://github.com/5G-MAG/rt-xr-glTFast"
     branch: "main"
     license: "Apache 2.0"
@@ -584,8 +623,7 @@ repos:
     category: "xr"
     repo_slug: "rt-xr-maf-native"
     display_name: "C++ Media Pipelines"
-    description: |
-      Native C++ media pipelines for low-latency XR data processing.
+    description: "Native C++ media pipelines for low-latency XR data processing."
     repo_url: "https://github.com/5G-MAG/rt-xr-maf-native"
     branch: "main"
     license: "5G-MAG PL v1.0"
@@ -597,8 +635,7 @@ repos:
     category: "xr"
     repo_slug: "rt-xr-content"
     display_name: "glTF Test Content"
-    description: |
-      Reference Tools: This repository is related to "XR Media with MPEG-I Scene Description"
+    description: "Reference Tools: This repository is related to \"XR Media\""
     repo_url: "https://github.com/5G-MAG/rt-xr-content"
     branch: "main"
     license: "Multiple"
@@ -609,8 +646,7 @@ repos:
     category: "xr"
     repo_slug: "rt-xr-blender-exporter"
     display_name: "Scene Authoring (Blender)"
-    description: |
-      Reference Tools: This repository is related to "XR Media with MPEG-I Scene Description"
+    description: "Reference Tools: This repository is related to \"XR Media\""
     repo_url: "https://github.com/5G-MAG/rt-xr-blender-exporter"
     branch: "main"
     license: "5G-MAG PL v1.0"
@@ -624,8 +660,7 @@ repos:
     category: "shared"
     repo_slug: "rt-common-shared"
     display_name: "Auxiliary Shared Tools"
-    description: |
-      Reference Tools: This repository is related to "Auxiliary tools common to various projects"
+    description: "Reference Tools: This repository is related to \"Shared Tools\""
     repo_url: "https://github.com/5G-MAG/rt-common-shared"
     branch: "main"
     license: "Multiple"
