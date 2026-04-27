@@ -22,32 +22,22 @@ Note that these repositories are currently private and under testing. **Early ac
 
 ---
 
-## AI/ML Evaluation Framework
-[rt-ai-ml-evaluation-framework](https://github.com/5G-MAG/rt-ai-ml-evaluation-framework){: .btn .btn-testbed }
-
-This repository holds code related to the implementation of the AI/ML evaluation framework as defined in 3GPP SA4 TR26.927.
-
-Additional information:
-* [Information and how to download, build, install and run](https://github.com/5G-MAG/rt-ai-ml-evaluation-framework#readme)
-
----
-
 ## Latest Releases
 
-<table class="release-table" style="width:100%; border-collapse: collapse; margin-top: 20px; table-layout: fixed;">
+<table class="release-table">
   <thead>
-    <tr style="text-align: left; border-bottom: 2px solid #eee;">
-      <th style="padding: 12px; width: 40%;">Repository</th>
-      <th style="padding: 12px; width: 40%;">Version</th>
-      <th style="padding: 12px; width: 20%;">Date</th>
+    <tr>
+      <th style="width: 40%;">Repository</th>
+      <th style="width: 40%;">Version</th>
+      <th style="width: 20%;">Date</th>
     </tr>
   </thead>
   <tbody>
     {% for item in site.data.releases.projects["AI ML"] %}
-    <tr style="border-bottom: 1px solid #eee;">
-      <td style="padding: 12px; overflow: hidden; text-overflow: ellipsis;"><a href="{{ item.url }}" class="btn">{{ item.short_name }}</a></td>
-      <td style="padding: 12px; overflow: hidden; text-overflow: ellipsis;"><a href="{{ item.url }}" class="btn">{{ item.tag }}</a></td>
-      <td style="padding: 12px;">{{ item.date }}</td>
+    <tr>
+      <td><a href="https://github.com/5G-MAG/{{ item.short_name }}" class="btn btn-aiml">{{ item.short_name }}</a></td>
+      <td><a href="{{ item.url }}" class="btn btn-aiml">{{ item.tag }}</a></td>
+      <td><span class="date-cell-release {% if item.blink %}blink-animation{% endif %}"><strong>{{ item.date }}</strong></span></td>
     </tr>
     {% endfor %}
   </tbody>
