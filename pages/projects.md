@@ -66,10 +66,10 @@ has_children: true
     <td><br></td>
   <tr>
     <td markdown="span" align="center"><a href="./xr-media-integration-in-5g/"><img width="70%" style="border:5px solid black;" src="../assets/images/Reference_Tools_XR_Media_MPEG_I_SD.png"><a/></td>
-    <td markdown="span" align="center"><a href=""><img width="70%" style="border:5px solid black;" src=""><a/></td>
+    <td markdown="span" align="center"><a href=""><img width="70%" style="border:5px solid black;" src="https://hub.5g-mag.com/assets/images/Button_ReferenceTools.png"><a/></td>
   </tr>
   <tr>
     <td markdown="span" align="center">[Project Documentation](./xr-media-integration-in-5g/){: .btn .btn-blue } [Project Roadmap](https://github.com/orgs/5G-MAG/projects/48/views/16){: .btn .btn-blue } [Latest Releases](./releases.html#latest-releases---xr-media-with-mpeg-i-scene-description){: .btn .btn-blue } </td>
-    <td markdown="span" align="center">[Project Documentation](){: .btn .btn-blue } [Project Roadmap](){: .btn .btn-blue } [Latest Releases](){: .btn .btn-blue } </td>
+    <td markdown="span" align="center"></td>
   </tr>
 </table>
