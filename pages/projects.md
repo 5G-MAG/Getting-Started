@@ -38,47 +38,38 @@ has_children: true
   </tr>
     <td><br></td>
   <tr>
-    <td markdown="span" align="center"><a href="./6g-testbed-ai-traffic/"><img width="70%" style="border:5px solid black;" src="../assets/images/Reference_Tools_6G_Testbed_AI_Traffic.png"><a/></td>
-    <td markdown="span" align="center"><a href="./ai-ml-evaluation-framework/"><img width="70%" style="border:5px solid black;" src="../assets/images/Reference_Tools_AIML_Evaluation_Framework.png"><a/></td>
-  </tr>
-  <tr>
-    <td markdown="span" align="center">[Project Documentation](./6g-testbed-ai-traffic/){: .btn .btn-blue } [Project Roadmap](https://github.com/orgs/5G-MAG/projects/48/views/yy){: .btn .btn-blue } [Latest Releases](./releases.html#latest-releases---6g-testbed-and-ai-traffic-characterization){: .btn .btn-blue } </td>
-    <td markdown="span" align="center">[Project Documentation](./ai-ml-evaluation-framework/){: .btn .btn-blue } [Project Roadmap](https://github.com/orgs/5G-MAG/projects/48/views/9){: .btn .btn-blue } [Latest Releases](./releases.html#latest-releases---ai-ml-in-mobile-media-services){: .btn .btn-blue } </td>
-  </tr>
-    <td><br></td>
-  <tr>
-    <td markdown="span" align="center"><a href="./beyond-2d-evaluation-framework/"><img width="70%" style="border:5px solid black;" src="../assets/images/Reference_Tools_Beyond2D_Video_Evaluation.png"><a/></td>
     <td markdown="span" align="center"><a href="./avatar-communications/"><img width="70%" style="border:5px solid black;" src="../assets/images/Reference_Tools_Avatar_Communications.png"><a/></td>
-  </tr>
-  <tr>
-    <td markdown="span" align="center">[Project Documentation](./beyond-2d-evaluation-framework/){: .btn .btn-blue } [Project Roadmap](https://github.com/orgs/5G-MAG/projects/48/views/10){: .btn .btn-blue } [Latest Releases](./releases.html#latest-releases---beyond-2d-video-experiences){: .btn .btn-blue } </td>
-    <td markdown="span" align="center">[Project Documentation](./avatar-communications/){: .btn .btn-blue } [Project Roadmap](https://github.com/orgs/5G-MAG/projects/48/views/xx){: .btn .btn-blue } [Latest Releases](./releases.html#latest-releases---conversational-avatar-real-time-communications){: .btn .btn-blue } </td>
-  </tr>
-    <td><br></td>
-  <tr>
     <td markdown="span" align="center"><a href="./dvbi-over-5g/"><img width="70%" style="border:5px solid black;" src="../assets/images/Reference_Tools_DVB_I_over_5G.png"><a/></td>
-    <td markdown="span" align="center"><a href="./multimedia-content-delivery/"><img width="70%" style="border:5px solid black;" src="../assets/images/Reference_Tools_Multimedia_delivery_protocols.png"><a/></td>  
-  </tr>
+  </tr>
   <tr>
+    <td markdown="span" align="center">[Project Documentation](./avatar-communications/){: .btn .btn-blue } [Project Roadmap](https://github.com/orgs/5G-MAG/projects/48/views/xx){: .btn .btn-blue } [Latest Releases](./releases.html#latest-releases---conversational-avatar-real-time-communications){: .btn .btn-blue } </td>
     <td markdown="span" align="center">[Project Documentation](./dvbi-over-5g/){: .btn .btn-blue } [Project Roadmap](https://github.com/orgs/5G-MAG/projects/48/views/11){: .btn .btn-blue } [Latest Releases](./releases.html#latest-releases---dvb-i-over-5g-systems){: .btn .btn-blue } </td>
-    <td markdown="span" align="center">[Project Documentation](./multimedia-content-delivery/){: .btn .btn-blue } [Project Roadmap](https://github.com/orgs/5G-MAG/projects/48/views/14){: .btn .btn-blue } [Latest Releases](./releases.html#latest-releases---multimedia-content-delivery-protocols){: .btn .btn-blue } </td>
-  </tr>
+  </tr>
     <td><br></td>
   <tr>
+    <td markdown="span" align="center"><a href="./multimedia-content-delivery/"><img width="70%" style="border:5px solid black;" src="../assets/images/Reference_Tools_Multimedia_delivery_protocols.png"><a/></td>  
     <td markdown="span" align="center"><a href="./network-apis/"><img width="70%" style="border:5px solid black;" src="../assets/images/Reference_Tools_Network_APIs.png"><a/></td>
-    <td markdown="span" align="center"><a href="./ue-data-collection-reporting-exposure/"><img width="70%" style="border:5px solid black;" src="../assets/images/Reference_Tools_UE_data_collection.png"><a/></td>
-  </tr>
+  </tr>
   <tr>
+    <td markdown="span" align="center">[Project Documentation](./multimedia-content-delivery/){: .btn .btn-blue } [Project Roadmap](https://github.com/orgs/5G-MAG/projects/48/views/14){: .btn .btn-blue } [Latest Releases](./releases.html#latest-releases---multimedia-content-delivery-protocols){: .btn .btn-blue } </td>
     <td markdown="span" align="center">[Project Documentation](./network-apis/){: .btn .btn-blue } [Project Roadmap](https://github.com/orgs/5G-MAG/projects/48/views/19){: .btn .btn-blue } [Latest Releases](./releases.html#latest-releases---network-apis){: .btn .btn-blue } </td>
-    <td markdown="span" align="center">[Project Documentation](./ue-data-collection-reporting-exposure/){: .btn .btn-blue } [Project Roadmap](https://github.com/orgs/5G-MAG/projects/48/views/8){: .btn .btn-blue } [Latest Releases](./releases.html#latest-releases---ue-data-collection-reporting--event-exposure){: .btn .btn-blue } </td>
   </tr>
     <td><br></td>
   <tr>
+    <td markdown="span" align="center"><a href="./ue-data-collection-reporting-exposure/"><img width="70%" style="border:5px solid black;" src="../assets/images/Reference_Tools_UE_data_collection.png"><a/></td>
     <td markdown="span" align="center"><a href="./v3c-immersive-platform/"><img width="70%" style="border:5px solid black;" src="../assets/images/Reference_Tools_V3C_Immersive_Platform.png"><a/></td>
-    <td markdown="span" align="center"><a href="./xr-media-integration-in-5g/"><img width="70%" style="border:5px solid black;" src="../assets/images/Reference_Tools_XR_Media_MPEG_I_SD.png"><a/></td>
   </tr>
   <tr>
+    <td markdown="span" align="center">[Project Documentation](./ue-data-collection-reporting-exposure/){: .btn .btn-blue } [Project Roadmap](https://github.com/orgs/5G-MAG/projects/48/views/8){: .btn .btn-blue } [Latest Releases](./releases.html#latest-releases---ue-data-collection-reporting--event-exposure){: .btn .btn-blue } </td>
     <td markdown="span" align="center">[Project Documentation](./v3c-immersive-platform/){: .btn .btn-blue } [Project Roadmap](https://github.com/orgs/5G-MAG/projects/48/views/15){: .btn .btn-blue } [Latest Releases](./releases.html#latest-releases---v3c-immersive-platform){: .btn .btn-blue } </td>
+  </tr>
+    <td><br></td>
+  <tr>
+    <td markdown="span" align="center"><a href="./xr-media-integration-in-5g/"><img width="70%" style="border:5px solid black;" src="../assets/images/Reference_Tools_XR_Media_MPEG_I_SD.png"><a/></td>
+    <td markdown="span" align="center"><a href=""><img width="70%" style="border:5px solid black;" src=""><a/></td>
+  </tr>
+  <tr>
     <td markdown="span" align="center">[Project Documentation](./xr-media-integration-in-5g/){: .btn .btn-blue } [Project Roadmap](https://github.com/orgs/5G-MAG/projects/48/views/16){: .btn .btn-blue } [Latest Releases](./releases.html#latest-releases---xr-media-with-mpeg-i-scene-description){: .btn .btn-blue } </td>
+    <td markdown="span" align="center">[Project Documentation](){: .btn .btn-blue } [Project Roadmap](){: .btn .btn-blue } [Latest Releases](){: .btn .btn-blue } </td>
   </tr>
 </table>
