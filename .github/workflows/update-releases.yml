@@ -36,7 +36,6 @@ jobs:
 
           # 1. Configuration
           standard_projects = {
-              "3GPP RAN and Core Platforms": ["5G-MAG/rt-5g-core", "5G-MAG/rt-5g-ran-gnb", "5G-MAG/rt-5g-ran-cu", "5G-MAG/rt-5g-ran-du"],
               "5G Media Streaming": ["5G-MAG/rt-5gms-application-provider", "5G-MAG/rt-5gms-application", "5G-MAG/rt-5gms-application-function", "5G-MAG/rt-5gms-application-server", "5G-MAG/rt-5gms-media-stream-handler", "5G-MAG/rt-5gms-media-session-handler", "5G-MAG/rt-5gms-common-android-library", "5G-MAG/rt-5gms-examples"],
               "5G Core Service Consumers": ["5G-MAG/rt-5gc-service-consumers"],
               "UE Data Collection": ["5G-MAG/rt-data-collection-application-function"],
@@ -50,7 +49,7 @@ jobs:
               "Conversational Avatar": ["5G-MAG/rt-avatar-content", "5G-MAG/rt-avatar-call", "5G-MAG/rt-avatar-unity-tracker", "5G-MAG/rt-3gpp-swap"],
               "6G Testbed": ["5G-MAG/6G-Testbed"],
               "DVB-I over 5G": ["5G-MAG/rt-5gms-application"],
-              "Network Capability Exposure": ["5G-MAG/rt-network-api"]
+              "Network APIs": ["5G-MAG/rt-mcp-server". "5G-MAG/rt-5gms-application-provider, "5G-MAG/rt-camara-examples""]
           }
 
           filtered_projects = {
