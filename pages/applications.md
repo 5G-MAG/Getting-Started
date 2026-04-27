@@ -26,11 +26,11 @@ has_children: true
   <tr>
     <td markdown="span" align="center" width="33%"><a href="./xr.html"><img style="border:5px solid black;" src="../assets/images/Category_XR.png" width="95%"><a/></td>
     <td markdown="span" align="center" width="33%"><a href="./volumetric.html"><img style="border:5px solid black;" src="../assets/images/Category_Volumetric.png" width="95%"><a/></td>
-    <td markdown="span" align="center" width="33%"><a href=""><img style="border:5px solid black;" src="https://hub.5g-mag.com/assets/images/Button_ReferenceTools.png" width="95%"><a/></td>
+    <td markdown="span" align="center" width="33%"><a href="./networkapis.html"><img style="border:5px solid black;" src="../assets/images/Category_Network_APIs.png" width="95%"><a/></td>
   </tr>
   <tr>
     <td markdown="span" align="center" width="33%">[eXtended Reality (XR): 3D Scenes and Avatar Communications](./xr.html){: .btn .btn-blue }</td>
     <td markdown="span" align="center" width="33%">[Volumetric Video and Beyond 2D Video Experiences](./volumetric.html){: .btn .btn-blue }</td>
-    <td markdown="span" align="center" width="33%"></td>
+    <td markdown="span" align="center" width="33%">[Applications and Services with Network APIs](./networkapis.html){: .btn .btn-blue }</td>
   </tr>
 </table>
