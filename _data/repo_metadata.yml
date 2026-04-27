@@ -199,7 +199,7 @@ repos:
   B6:
     category: "5g_broadcast_tvr"
     repo_slug: "rt-mbms-tx-for-qrd-and-crd"
-    display_name: "5G Broadcast TX (QRD/CRD)"
+    display_name: "5G Broadcast TX for QRD and CRD"
     description: |
       Reference Tools: This repository is related to "5G Broadcast: TV and Radio Hybrid Services" and "5G Broadcast: Emergency Alerts""
     repo_url: "https://github.com/5G-MAG/rt-mbms-tx-for-qrd-and-crd"
@@ -227,7 +227,7 @@ repos:
   W1:
     category: "5g_broadcast_pws"
     repo_slug: "rt-lte-based-5g-broadcast-pws"
-    display_name: "5G Broadcast TX (PWS)"
+    display_name: "5G Broadcast TX with PWS support"
     description: |
       Implementation of Public Warning System (PWS) alerts over 5G Broadcast.
     repo_url: "https://github.com/5G-MAG/rt-mbms-tx-for-qrd-and-crd/tree/emergency-alerts"
@@ -348,7 +348,7 @@ repos:
   M1:
     category: "mbs"
     repo_slug: "srsRAN_4G"
-    display_name: "UE (MBS Components)"
+    display_name: "UE with MBS Components"
     description: |
       Reference Tools: This is a third-party dependency
     repo_url: "https://github.com/5G-MAG/srsRAN_4G"
@@ -361,7 +361,7 @@ repos:
   M2:
     category: "mbs"
     repo_slug: "rt-srsRAN_Project"
-    display_name: "NG-RAN (MBS Components)"
+    display_name: "NG-RAN with MBS components"
     description: |
       Reference Tools: This is a third-party dependency
     repo_url: "https://github.com/5G-MAG/rt-srsRAN_Project"
@@ -374,7 +374,7 @@ repos:
   M3:
     category: "mbs"
     repo_slug: "open5gs"
-    display_name: "5G Core (MBS Components)"
+    display_name: "5G Core with MBS components"
     description: |
       Reference Tools: This is a third-party dependency
     repo_url: "https://github.com/5G-MAG/open5gs"
@@ -426,7 +426,7 @@ repos:
   C1:
     category: "5gc_consumers"
     repo_slug: "rt-5gc-service-consumers"
-    display_name: "SBI Service Consumers"
+    display_name: "5GC Service Consumers"
     description: |
       Reference Tools: This repository is related to "5GC Service Consumers"
     repo_url: "https://github.com/5G-MAG/rt-5gc-service-consumers"
@@ -441,7 +441,7 @@ repos:
   T1:
     category: "6gtestbed"
     repo_slug: "6G-Testbed"
-    display_name: "6G Testbed"
+    display_name: "6G Testbed and AI Traffic Characterization"
     description: |
       Testbeds: This repository is related to "6G Testbed and AI Traffic Characterization"
     repo_url: "https://github.com/5G-MAG/6G-Testbed"
@@ -455,7 +455,7 @@ repos:
   ML1:
     category: "aiml"
     repo_slug: "rt-ai-ml-evaluation-framework"
-    display_name: "AI/ML Framework"
+    display_name: "AI and ML Evaluation Framework"
     description: |
       Testbed: This repository is related to "AI & ML Evaluation Framework"
     repo_url: "https://github.com/5G-MAG/rt-ai-ml-evaluation-framework"
@@ -469,7 +469,7 @@ repos:
   Y1:
     category: "beyond2d"
     repo_slug: "rt-beyond2d-evaluation-framework"
-    display_name: "Beyond 2D Framework"
+    display_name: "Beyond 2D Video Evaluation Framework"
     description: |
       Testbeds: This repository is related to "Beyond 2D Video Evaluation Framework"
     repo_url: "https://github.com/5G-MAG/rt-beyond2d-evaluation-framework"
@@ -663,7 +663,7 @@ repos:
   X1:
     category: "xr"
     repo_slug: "rt-xr-unity-player"
-    display_name: "Unity: XR Player"
+    display_name: "XR Unity Player"
     description: |
       Reference Tools: This repository is related to "XR Media with MPEG-I Scene Description"
     repo_url: "https://github.com/5G-MAG/rt-xr-unity-player"
@@ -676,7 +676,7 @@ repos:
   X2:
     category: "xr"
     repo_slug: "rt-xr-glTFast"
-    display_name: "Unity: glTF Extensions"
+    display_name: "glTF Extensions"
     description: |
       Fast glTF loader extensions for immersive media assets in Unity.
     repo_url: "https://github.com/5G-MAG/rt-xr-glTFast"
@@ -688,7 +688,7 @@ repos:
   X3:
     category: "xr"
     repo_slug: "rt-xr-maf-native"
-    display_name: "C++ Media Pipelines"
+    display_name: "XR Media Pipelines"
     description: |
       Media pipelines factory and plugins implementing the Media Access Function (MAF) API
     repo_url: "https://github.com/5G-MAG/rt-xr-maf-native"
@@ -701,7 +701,7 @@ repos:
   X4:
     category: "xr"
     repo_slug: "rt-xr-content"
-    display_name: "glTF Test Content"
+    display_name: "XR Scenes and Test Content"
     description: |
       Reference Tools: This repository is related to "XR Media with MPEG-I Scene Description"
     repo_url: "https://github.com/5G-MAG/rt-xr-content"
