@@ -81,10 +81,10 @@ repos:
   P1:
     category: "3gpp_ran_core"
     repo_slug: "open5gs"
-    display_name: "5G Core"
+    display_name: "Fork of Open5GS"
     description: |
       Reference Tools: This is a third-party dependency
-    repo_url: "https://github.com/5G-MAG/rt-5g-core"
+    repo_url: "https://github.com/5G-MAG/open5gs"
     branch: "main"
     license: "AGPLv3.0"
     standards: ["3GPP"]
@@ -93,11 +93,11 @@ repos:
     public: true
   P2:
     category: "3gpp_ran_core"
-    repo_slug: "rt-5g-ran-gnb"
-    display_name: "5G RAN gNodeB"
+    repo_slug: "rt-srsRAN_Project"
+    display_name: "Fork of srsRAN Project"
     description: |
       Software-defined 5G gNodeB implementation providing the radio access interface.
-    repo_url: "https://github.com/5G-MAG/rt-5g-ran-gnb"
+    repo_url: "https://github.com/5G-MAG/rt-srsRAN_Project"
     branch: "main"
     license: "AGPLv3.0"
     standards: ["3GPP"]
@@ -106,12 +106,12 @@ repos:
     public: true
   P3:
     category: "3gpp_ran_core"
-    repo_slug: "rt-5g-ran-cu"
-    display_name: "5G RAN Central Unit (CU)"
+    repo_slug: "srsRAN_4G"
+    display_name: "Fork of srsRAN_4G"
     description: |
       Centralized unit of the gNodeB managing the RRC and PDCP protocol layers.
-    repo_url: "https://github.com/5G-MAG/rt-5g-ran-cu"
-    branch: "main"
+    repo_url: "https://github.com/5G-MAG/srsRAN_4G"
+    branch: "master"
     license: "AGPLv3.0"
     standards: ["3GPP"]
     dependencies: ["srsRAN"]
@@ -119,12 +119,12 @@ repos:
     public: true
   P4:
     category: "3gpp_ran_core"
-    repo_slug: "rt-5g-ran-du"
-    display_name: "5G RAN Distributed Unit (DU)"
+    repo_slug: "srsRAN"
+    display_name: "Fork of srsRAN (discontinued version prior to srsRAN_4G)"
     description: |
       Distributed unit of the gNodeB managing the RLC, MAC, and Physical layers.
-    repo_url: "https://github.com/5G-MAG/rt-5g-ran-du"
-    branch: "main"
+    repo_url: "https://github.com/5G-MAG/srsRAN"
+    branch: "main_srsran_4g"
     license: "AGPLv3.0"
     standards: ["3GPP"]
     dependencies: ["srsRAN"]
