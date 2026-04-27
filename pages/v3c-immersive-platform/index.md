@@ -3,7 +3,7 @@ layout: default
 title: V3C Immersive Platform
 parent: The Projects
 has_children: true
-nav_order: 14
+nav_order: 11
 ---
 
 <style>
