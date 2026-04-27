@@ -1,9 +1,9 @@
 ---
 layout: default
 title: Beyond 2D Evaluation
-parent: The Projects
+parent: Testbeds
 has_children: true
-nav_order: 9
+nav_order: 2
 ---
 
 <style>
