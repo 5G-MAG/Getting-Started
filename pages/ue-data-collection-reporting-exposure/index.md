@@ -3,7 +3,7 @@ layout: default
 title: UE Data Collection
 parent: The Projects
 has_children: true
-nav_order: 13
+nav_order: 10
 ---
 
 <style>
