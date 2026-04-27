@@ -1,9 +1,9 @@
 ---
 layout: default
 title: AI / ML Evaluation
-parent: The Projects
+parent: Testbeds
 has_children: true
-nav_order: 8
+nav_order: 1
 ---
 
 <style>
