@@ -3,7 +3,7 @@ layout: default
 title: 3GPP RAN and Core
 parent: The Projects
 has_children: true
-nav_order: 1
+nav_order: 0
 ---
 
 <img src="../../assets/images/Banner_3GPP_Platforms.png" /> 
