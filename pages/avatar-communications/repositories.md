@@ -14,33 +14,9 @@ nav_order: 3
 
 The following repositories are available. Please refer to the "Scope" section of the different projects for more context.
 
-{% include architecture_table.html ids="AV1,AV2,AV3" %}
+{% include architecture_table.html ids="AV1,AV2,AV3,AV4" %}
 
 *Note: Auxiliary repositories are indicated with a dashed border.*
-
----
-
-## Avatar Test Content
-[rt-avatar-content](https://github.com/5G-MAG/rt-avatar-content){: .btn .btn-xr }
-
-This repository holds reference MPEG ARF content for real time avatar communication.
-
-Additional information:
-* [Information and how to download, build, install and run](https://github.com/5G-MAG/rt-avatar-content#readme)
-
-## Avatar Call
-[rt-avatar-call](https://github.com/5G-MAG/rt-avatar-call){: .btn .btn-xr }
-
-This repository supports the development of a reference framework for avatar communication. The goal is to demonstrate WebRTC communication using the MPEG ARF and related animation compression.
-
-Additional information:
-* [Information and how to download, build, install and run](https://github.com/5G-MAG/rt-avatar-call#readme)
-
-## Avatar Unity Tracker
-[rt-avatar-unity-tracker](https://github.com/5G-MAG/rt-avatar-unity-tracker){: .btn .btn-xr }
-
-Additional information:
-* [Information and how to download, build, install and run](https://github.com/5G-MAG/rt-avatar-call#readme)
 
 ---
 
