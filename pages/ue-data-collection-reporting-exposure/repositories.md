@@ -20,35 +20,22 @@ The following repositories are available. Please refer to the "Scope" section of
 
 ---
 
-## Data Collection Application Function
-[rt-data-collection-application-function](https://github.com/5G-MAG/rt-data-collection-application-function){: .btn .btn-uedc }
-
-This repository provides a 5G Data Collection Service Provider library and Application Function. The library is designed to be used by this stand alone Application Function or to be used as an embedded service within other Application Functions such as the 5GMS Application Function. The library can provide the interfaces designated as R1-R6 in the 3GPP TS 26.531 specification (See Clause 4.2). The default Application Function implementation here implements some of the data reports and events defined in 3GPP TS 26.531, 3GPP TS 26.532 and 3GPP TS 29.517.
-
-Additional information:
-* [Information and how to download, build, install and run](https://github.com/5G-MAG/rt-data-collection-application-function)
-* [Releases](https://github.com/5G-MAG/rt-data-collection-application-function/releases)
-* [Packages](https://github.com/orgs/5G-MAG/packages?repo_name=rt-data-collection-application-function)
-* [Docker](https://github.com/5G-MAG/rt-data-collection-application-function/tree/main/docker)
-
----
-
 ## Latest Releases
 
-<table class="release-table" style="width:100%; border-collapse: collapse; margin-top: 20px; table-layout: fixed;">
+<table class="release-table">
   <thead>
-    <tr style="text-align: left; border-bottom: 2px solid #eee;">
-      <th style="padding: 12px; width: 40%;">Repository</th>
-      <th style="padding: 12px; width: 40%;">Version</th>
-      <th style="padding: 12px; width: 20%;">Date</th>
+    <tr>
+      <th style="width: 40%;">Repository</th>
+      <th style="width: 40%;">Version</th>
+      <th style="width: 20%;">Date</th>
     </tr>
   </thead>
   <tbody>
     {% for item in site.data.releases.projects["UE Data Collection"] %}
-    <tr style="border-bottom: 1px solid #eee;">
-      <td style="padding: 12px; overflow: hidden; text-overflow: ellipsis;"><a href="{{ item.url }}" class="btn">{{ item.short_name }}</a></td>
-      <td style="padding: 12px; overflow: hidden; text-overflow: ellipsis;"><a href="{{ item.url }}" class="btn">{{ item.tag }}</a></td>
-      <td style="padding: 12px;">{{ item.date }}</td>
+    <tr>
+      <td><a href="https://github.com/5G-MAG/{{ item.short_name }}" class="btn btn-uedc">{{ item.short_name }}</a></td>
+      <td><a href="{{ item.url }}" class="btn btn-uedc">{{ item.tag }}</a></td>
+      <td><span class="date-cell-release {% if item.blink %}blink-animation{% endif %}"><strong>{{ item.date }}</strong></span></td>
     </tr>
     {% endfor %}
   </tbody>
