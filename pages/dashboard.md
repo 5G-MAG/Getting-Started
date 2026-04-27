@@ -420,6 +420,33 @@ has_children: true
 
 ---
 
+<img src="../assets/images/Banner_Network_APIs.png"/> 
+
+## Community Stats - Network Capability Exposure through APIs
+[Project Documentation](./network-apis/){: .btn .btn-blue }
+
+<table class="health-table">
+  {{ table_header }}
+  <tbody>
+    {% for item in site.data.community_stats.projects["Network APIs"] %}
+    <tr>
+      <td><a href="{{ item.repo_url }}" style="font-weight: bold; color: #0366d6;">{{ item.name }}</a></td>
+      <td>⭐ {{ item.stars }}</td>
+      <td>🍴 {{ item.forks }}</td>
+      <td>👀 {{ item.total_views }} <span class="stats-sub">{{ item.views_14d }} new</span></td>
+      <td>📥 {{ item.total_clones }} <span class="stats-sub">{{ item.clones_14d }} new</span></td>
+      <td>
+        {% if item.status == "Active" %}<span class="dot dot-green"></span> <strong>Active</strong>
+        {% elsif item.status == "Maintenance" %}<span class="dot dot-orange"></span> <strong>Maintenance</strong>
+        {% else %}<span class="dot dot-blue"></span> <strong>Stable</strong>{% endif %}
+      </td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+
+---
+
 <img src="../assets/images/Banner_UEDC.png"/> 
 
 ## Community Stats - UE Data Collection, Reporting & Event Exposure
