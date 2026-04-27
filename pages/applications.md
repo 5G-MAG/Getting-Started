@@ -26,23 +26,11 @@ has_children: true
   <tr>
     <td markdown="span" align="center" width="33%"><a href="./xr.html"><img style="border:5px solid black;" src="../assets/images/Category_XR.png" width="95%"><a/></td>
     <td markdown="span" align="center" width="33%"><a href="./volumetric.html"><img style="border:5px solid black;" src="../assets/images/Category_Volumetric.png" width="95%"><a/></td>
-    <td markdown="span" align="center" width="33%"><a href="./testbeds.html"><img style="border:5px solid black;" src="../assets/images/Category_Testbeds.png" width="95%"><a/></td>
+    <td markdown="span" align="center" width="33%"><a href=""><img style="border:5px solid black;" src="" width="95%"><a/></td>
   </tr>
   <tr>
     <td markdown="span" align="center" width="33%">[eXtended Reality (XR): 3D Scenes and Avatar Communications](./xr.html){: .btn .btn-blue }</td>
     <td markdown="span" align="center" width="33%">[Volumetric Video and Beyond 2D Video Experiences](./volumetric.html){: .btn .btn-blue }</td>
-    <td markdown="span" align="center" width="33%">[Testbeds and Evaluation Frameworks](./testbeds.html){: .btn .btn-blue }</td>
-  </tr>
-    <td><br></td>
-  <tr>
-    <td markdown="span" align="center" width="33%"><a href="./common-tools/index.html"><img style="border:5px solid black;" src="../assets/images/Category_CommonTools.png" width="95%"><a/></td>
-    <td markdown="span" align="center" width="33%"><a href="./3gpp-ran-and-core-platforms/index.html"><img style="border:5px solid black;" src="../assets/images/Category_3GPPPlatforms.png" width="95%"><a/></td>
-    <td markdown="span" align="center" width="33%"><a href="./external-tools/index.html"><img style="border:5px solid black;" src="../assets/images/Category_ExternalTools.png" width="95%"><a/></td>
-  </tr>
-  <tr>
-    <td markdown="span" align="center" width="33%">[Auxiliary Tools common to various projects](./common-tools/index.html){: .btn .btn-blue } [Latest Releases](./releases.html#auxiliary-tools-common-to-various-projects){: .btn .btn-blue }
-</td>
-    <td markdown="span" align="center" width="33%">[3GPP RAN and Core Platforms](./3gpp-ran-and-core-platforms/index.html){: .btn .btn-blue }</td>
-    <td markdown="span" align="center" width="33%">[External Tools from related projects](./external-tools/index.html){: .btn .btn-blue }</td>
+    <td markdown="span" align="center" width="33%">[New here...](){: .btn .btn-blue }</td>
   </tr>
 </table>
