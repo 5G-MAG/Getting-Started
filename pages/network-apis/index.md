@@ -39,7 +39,7 @@ nav_order: 100
 
 </style>
 
-<img src="../../assets/images/Banner_NetworkAPIs.png" /> 
+<img src="../../assets/images/Banner_Network_APIs.png" /> 
 
 [Scope](./scope.html){: .btn .btn-blue } [Project Roadmap](./projects.html){: .btn .btn-blue } [GitHub Repos](./repositories.html){: .btn .btn-github } [Releases](./repositories.html#latest-releases){: .btn .btn-release } [Tutorials](./tutorials.html){: .btn .btn-tutorial } [Video Library](./tutorials.html#video-library){: .btn .btn-video } [Requirements](./requirements.html){: .btn .btn-blue }
 
