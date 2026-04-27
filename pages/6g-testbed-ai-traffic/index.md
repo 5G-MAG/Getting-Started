@@ -1,9 +1,9 @@
 ---
 layout: default
 title: 6G Testbed - AI Traffic
-parent: The Projects
+parent: Testbeds
 has_children: true
-nav_order: 7
+nav_order: 0
 ---
 
 <style>
