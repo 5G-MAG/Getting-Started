@@ -14,7 +14,7 @@ categories:
   5g_broadcast_pws:
     name: "5G Broadcast - Emergency Alerts"
     color: "#7030A0"           # .btn-5gbcea
-    text_color: "#FFFFFF"    
+    text_color: "#FFFFFF"
   5gms:
     name: "5G Media Streaming"
     color: "#FFC000"           # .btn-5gms
@@ -29,19 +29,19 @@ categories:
     text_color: "#FFFFFF"
   6gtestbed:
     name: "6G Testbed and AI Traffic Characterization"
-    color: "#D17F79"           # .btn-testbed (Original Coral)
+    color: "#0099CC"           # .btn-testbed
     text_color: "#FFFFFF"
   aiml:
     name: "AI and ML Evaluation Framework"
-    color: "#4A5568"           # New: Deep Graphite
+    color: "#0099CC"           # .btn-aiml
     text_color: "#FFFFFF"
   beyond2d:
     name: "Beyond 2D Video Evaluation Framework"
-    color: "#00A3C1"           # New: Vibrant Cyan
+    color: "#0099CC"           # .btn-beyond2d
     text_color: "#FFFFFF"
   avatar:
     name: "Conversational Avatar Real-Time Communications"
-    color: "#D17F79"           # .btn-avatar (Kept as requested or distinct)
+    color: "#FF9900"           # .btn-avatar
     text_color: "#FFFFFF"
   dvbi:
     name: "DVB-I Services"
@@ -53,11 +53,11 @@ categories:
     text_color: "#FFFFFF"
   network_api:
     name: "Network Capability Exposure through APIs"
-    color: "#5C6BC0"           # New: Slate Blue
+    color: "#A50021"           # .btn-api
     text_color: "#FFFFFF"
   data_collection:
     name: "Data Collection & Reporting"
-    color: "#607D8B"           # New: Infrastructure Grey
+    color: "#D17F79"           # .btn-uedc
     text_color: "#FFFFFF"
   v3c:
     name: "V3C Immersive"
@@ -571,14 +571,36 @@ repos:
     software: ["Linux"]
     public: true
 
-  # Network Capability Exposure through APIs
+# Network Capability Exposure through APIs
   N1:
     category: "network_api"
-    repo_slug: "rt-network-api"
-    display_name: "Network API"
+    repo_slug: "rt-mcp-server"
+    display_name: "MCP Server"
     description: |
-      Reference Tools: This repository is related to \"Network Capability Exposure through APIs\"
-    repo_url: "https://github.com/5G-MAG/rt-network-api"
+      Reference Tools: This repository is related to "Network Capability Exposure through APIs"
+    repo_url: "https://github.com/5G-MAG/rt-mcp-server"
+    branch: "main"
+    license: "5G-MAG PL v1.0"
+    public: false
+
+  N2:
+    category: "network_api"
+    repo_slug: "rt-5gms-application-provider"
+    display_name: "5GMS Application Provider"
+    description: |
+      Reference Tools: This repository is related to "Network Capability Exposure through APIs"
+    repo_url: "https://github.com/5G-MAG/rt-5gms-application-provider"
+    branch: "main"
+    license: "5G-MAG PL v1.0"
+    public: false
+
+  N3:
+    category: "network_api"
+    repo_slug: "rt-camara-examples"
+    display_name: "CAMARA API Examples"
+    description: |
+      Reference Tools: This repository is related to "Network Capability Exposure through APIs"
+    repo_url: "https://github.com/5G-MAG/rt-camara-examples"
     branch: "main"
     license: "5G-MAG PL v1.0"
     public: false
