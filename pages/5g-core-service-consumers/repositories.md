@@ -20,17 +20,6 @@ The following repositories are available. Please refer to the "Scope" section of
 
 ---
 
-## 5GC Service Consumers
-[rt-5gc-service-consumers](https://github.com/5G-MAG/rt-5gc-service-consumers){: .btn .btn-5gcsc }
-
-This repository contains a collection of reusable service consumer libraries designed to interact with the 5GC Network Functions using service interfaces.
-
-Additional information:
-* [Information and how to download, build, install and run](https://github.com/5G-MAG/rt-5gc-service-consumers#readme)
-* [Releases](https://github.com/5G-MAG/rt-5gc-service-consumers/releases)
-
----
-
 ## Latest Releases
 
 <table class="release-table" style="width:100%; border-collapse: collapse; margin-top: 20px; table-layout: fixed;">
