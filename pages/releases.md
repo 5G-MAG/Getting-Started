@@ -303,7 +303,7 @@ nav_order: 0
 
 <img src="../assets/images/Banner_Network_APIs.png"/> 
 
-## Community Stats - Network Capability Exposure through APIs
+## Latest Releases - Network Capability Exposure through APIs
 [Project Documentation](./network-apis/){: .btn .btn-blue }
 
 <table class="release-table">
