@@ -519,6 +519,52 @@ nav_order: 1
 
 ---
 
+<img src="../assets/images/Banner_Network_APIs.png"/> 
+
+## Open PRs - Network Capability Exposure through APIs
+[Project Documentation](./network-apis/){: .btn .btn-blue }
+
+<table class="release-table">
+  <thead>
+    <tr>
+      <th style="width: 25%;">Repository</th>
+      <th style="width: 40%;">Pull Request</th>
+      <th style="width: 20%;">Author & Activity</th>
+      <th style="width: 15%;">Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% assign prs = site.data.pull_requests.projects["Network APIs"] %}
+    {% if prs.size > 0 %}
+      {% for item in prs %}
+      <tr>
+        <td><a href="https://github.com/5G-MAG/{{ item.repo }}" class="btn btn-api">{{ item.repo }}</a></td>
+        <td class="pr-title-cell"><a href="{{ item.url }}" class="btn">{{ item.title }}</a></td>
+        <td>
+          <div class="author-activity">
+            <span class="author-name">@{{ item.user }}</span>
+            {% if item.last_comment_by %}
+              <span class="days-ago">
+                Last comment: <strong>@{{ item.last_comment_by }}</strong><br>
+                on {{ item.last_comment_date }}
+              </span>
+            {% endif %}
+          </div>
+        </td>
+        <td class="date-cell">
+          <span style="color: {{ item.color }}; font-weight: bold;" class="{% if item.blink %}blink-animation{% endif %}">{{ item.date }}</span><br>
+          <span class="days-ago">({{ item.days_ago }} days ago)</span>
+        </td>
+      </tr>
+      {% endfor %}
+    {% else %}
+      <tr><td colspan="4" class="no-prs">No open pull requests</td></tr>
+    {% endif %}
+  </tbody>
+</table>
+
+---
+
 <img src="../assets/images/Banner_UEDC.png"/> 
 
 ## Open PRs - UE Data Collection, Reporting & Event Exposure
