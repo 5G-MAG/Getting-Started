@@ -15,7 +15,7 @@ nav_order: 4
     <td markdown="span" align="center"><a href="./ai-ml-evaluation-framework/"><img width="70%" style="border:5px solid black;" src="../assets/images/Reference_Tools_AIML_Evaluation_Framework.png"><a/></td>
   </tr>
   <tr>
-    <td markdown="span" align="center">[Project Documentation](./6g-testbed-ai-traffic/){: .btn .btn-blue } [Project Roadmap](https://github.com/orgs/5G-MAG/projects/48/views/yy){: .btn .btn-blue } [Latest Releases](./#latest-releases---6g-testbed-ai-traffic){: .btn .btn-blue } </td>
+    <td markdown="span" align="center">[Project Documentation](./6g-testbed-ai-traffic/){: .btn .btn-blue } [Project Roadmap](https://github.com/orgs/5G-MAG/projects/48/views/yy){: .btn .btn-blue } [Latest Releases](./releases.html#latest-releases---6g-testbed-ai-traffic){: .btn .btn-blue } </td>
     <td markdown="span" align="center">[Project Documentation](./ai-ml-evaluation-framework/){: .btn .btn-blue } [Project Roadmap](https://github.com/orgs/5G-MAG/projects/48/views/9){: .btn .btn-blue } [Latest Releases](./releases.html#latest-releases---aiml-in-mobile-media-services){: .btn .btn-blue } </td>
   </tr>
     <td><br></td>
