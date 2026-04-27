@@ -20,16 +20,6 @@ The following repositories are available. Please refer to the "Scope" section of
 
 ---
 
-## DVB-I Reference Application
-[rt-5gms-application / fivegmag_ExoDvbi_player](https://github.com/5G-MAG/rt-5gms-application/tree/development/fivegmag_ExoDvbi_player){: .btn .btn-dvbi }
-
-This project uses the Android ExoPlayer and the DVB-I Reference Client functionality to provide the capabilities to select and play back media content.
-
-Additional information:
-* [Information and how to download, build, install and run](https://github.com/5G-MAG/rt-5gms-application/tree/development/fivegmag_ExoDvbi_player#readme)
-
----
-
 ## Latest Releases
 
 <table class="release-table">
