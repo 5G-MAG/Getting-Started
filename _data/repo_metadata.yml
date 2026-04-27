@@ -171,11 +171,11 @@ repos:
     public: true
   B4:
     category: "5g_broadcast_tvr"
-    repo_slug: "rt-mbms-wui"
+    repo_slug: "rt-wui"
     display_name: "MBMS Web User Interface"
     description: |
       Web-based dashboard for monitoring and managing MBMS middleware status.
-    repo_url: "https://github.com/5G-MAG/rt-mbms-wui"
+    repo_url: "https://github.com/5G-MAG/rt-wui"
     branch: "main"
     is_auxiliary: true
     license: "5G-MAG PL v1.0"
