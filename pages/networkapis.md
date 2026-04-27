@@ -16,7 +16,7 @@ has_children: true
     <td markdown="span" align="center"><a href=""><img width="70%" style="border:5px solid black;" src="https://hub.5g-mag.com/assets/images/Button_ReferenceTools.png"><a/></td>
   </tr>
   <tr>
-    <td markdown="span" align="center">[Project Documentation](./v3c-immersive-platform/){: .btn .btn-blue } [Project Roadmap](https://github.com/orgs/5G-MAG/projects/48/views/15){: .btn .btn-blue } [Latest Releases](./releases.html#project-volumetric-video-experiences-with-mpeg-v3c){: .btn .btn-blue } </td>
+    <td markdown="span" align="center">[Project Documentation](./network-apis/){: .btn .btn-blue } [Project Roadmap](https://github.com/orgs/5G-MAG/projects/48/views/19){: .btn .btn-blue }</td>
     <td markdown="span" align="center"></td>
   </tr>
 </table>
