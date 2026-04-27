@@ -49,7 +49,7 @@ jobs:
               "Conversational Avatar": ["5G-MAG/rt-avatar-content", "5G-MAG/rt-avatar-call", "5G-MAG/rt-avatar-unity-tracker", "5G-MAG/rt-3gpp-swap"],
               "6G Testbed": ["5G-MAG/6G-Testbed"],
               "DVB-I over 5G": ["5G-MAG/rt-5gms-application"],
-              "Network APIs": ["5G-MAG/rt-mcp-server". "5G-MAG/rt-5gms-application-provider", "5G-MAG/rt-camara-examples"]
+              "Network APIs": ["5G-MAG/rt-mcp-server", "5G-MAG/rt-5gms-application-provider", "5G-MAG/rt-camara-examples"]
           }
 
           filtered_projects = {
