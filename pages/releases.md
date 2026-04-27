@@ -301,6 +301,32 @@ nav_order: 0
 
 ---
 
+<img src="../assets/images/Banner_Network_APIs.png"/> 
+
+## Community Stats - Network Capability Exposure through APIs
+[Project Documentation](./network-apis/){: .btn .btn-blue }
+
+<table class="release-table">
+  <thead>
+    <tr>
+      <th style="width: 40%;">Repository</th>
+      <th style="width: 40%;">Version</th>
+      <th style="width: 20%;">Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for item in site.data.releases.projects["Network APIs"] %}
+    <tr>
+      <td><a href="https://github.com/5G-MAG/{{ item.short_name }}" class="btn btn-api">{{ item.short_name }}</a></td>
+      <td><a href="{{ item.url }}" class="btn btn-api">{{ item.tag }}</a></td>
+      <td><span class="date-cell-release {% if item.blink %}blink-animation{% endif %}"><strong>{{ item.date }}</strong></span></td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+
+---
+
 <img src="../assets/images/Banner_UEDC.png"/> 
 
 ## Latest Releases - UE Data Collection, Reporting & Event Exposure
