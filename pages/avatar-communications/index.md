@@ -3,7 +3,7 @@ layout: default
 title: Avatar Communications
 parent: The Projects
 has_children: true
-nav_order: 10
+nav_order: 6
 ---
 
 <style>
