@@ -9,8 +9,6 @@ nav_order: 2
 
 <img src="../../../assets/images/Banner_5GBCTVR.png" /> 
 
-[Scope](../scope.html){: .btn .btn-blue } [Project Roadmap](../projects.html){: .btn .btn-blue } [GitHub Repos](../repositories.html){: .btn .btn-github } [Releases](../repositories.html#latest-releases){: .btn .btn-release } [Tutorials](../tutorials.html){: .btn .btn-tutorial } [Video Library](../tutorials.html#video-library){: .btn .btn-video } [Requirements](../requirements.html){: .btn .btn-blue }
-
 # Tutorial - RTP Playback over 5G Broadcast (Linux)
 
 This tutorial provides the required steps to test the reception of an RTP stream processed by the [MBMS Modem](https://github.com/5G-MAG/rt-mbms-modem) and played in a third-party media player such as ffplay or VLC.
