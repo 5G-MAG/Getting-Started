@@ -9,8 +9,6 @@ nav_order: 2
 
 <img src="../../../assets/images/Banner_5MBS.png" /> 
 
-[Scope](../scope.html){: .btn .btn-blue } [Project Roadmap](../projects.html){: .btn .btn-blue } [GitHub Repos](../repositories.html){: .btn .btn-github } [Releases](../repositories.html#latest-releases){: .btn .btn-release } [Tutorials](../tutorials.html){: .btn .btn-tutorial } [Video Library](../tutorials.html#video-library){: .btn .btn-video } [Requirements](../requirements.html){: .btn .btn-blue }
-
 # Tutorial - Operating the MBS Function and APIs
 
 The MBS Function is responsible for controlling the MBS User Services sessions. It does this by managing MBS Sessions with the
