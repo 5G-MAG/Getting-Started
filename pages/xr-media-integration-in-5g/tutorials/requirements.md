@@ -1,12 +1,13 @@
 ---
 layout: default
-title: Requirements
-parent: XR with MPEG-I SD
+title:  Requirements
+grand_parent: XR with MPEG-I SD
+parent: Tutorials
 has_children: false
 nav_order: 5
 ---
 
-<img src="../../assets/images/Banner_XR.png" /> 
+<img src="../../../assets/images/Banner_XR.png" /> 
 
 # Requirements
 
