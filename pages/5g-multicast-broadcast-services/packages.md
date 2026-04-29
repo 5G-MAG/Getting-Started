@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Repositories
+title: Packages
 parent: 5G Multicast Broadcast Services
 has_children: false
 nav_order: 3
