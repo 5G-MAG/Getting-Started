@@ -7,7 +7,7 @@ has_children: true
 
 <img src="../assets/images/Banner_ReferenceTools.png" /> 
 
-# All the 5G-MAG Reference Tools Projects (A-Z)
+# The 5G-MAG Reference Tools Projects (A-Z)
 
 <table>
   <tr>
