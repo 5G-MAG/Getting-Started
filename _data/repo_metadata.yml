@@ -347,8 +347,8 @@ repos:
   # 5G Multicast Broadcast Services
   M1:
     category: "mbs"
-    repo_slug: "srsRAN_4G"
-    display_name: "UE with MBS Components"
+    repo_slug: "srsRAN_4G_mbs"
+    display_name: "UE with support for MBS"
     description: |
       5G-MAG maintains a fork of srsRAN_4G for the development and adaptation of NG-RAN procedures to support other Reference Tools.
     repo_url: "https://github.com/5G-MAG/srsRAN_4G"
@@ -357,33 +357,33 @@ repos:
     standards: ["3GPP"]
     dependencies: ["srsRAN"]
     software: ["APK", "Android"]
-    public: true
+    public: false
   M2:
     category: "mbs"
-    repo_slug: "rt-srsRAN_Project"
-    display_name: "NG-RAN with MBS components"
+    repo_slug: "srsRAN_Project_mbs"
+    display_name: "NG-RAN with support for MBS"
     description: |
       5G-MAG maintains a fork of srsRAN_Project for the development and adaptation of NG-RAN procedures to support other Reference Tools.
-    repo_url: "https://github.com/5G-MAG/rt-srsRAN_Project"
+    repo_url: "https://github.com/5G-MAG/srsRAN_Project"
     branch: "5mbs"
     license: "AGPLv3.0"
     standards: ["3GPP"]
     dependencies: ["srsRAN"]
     software: ["Docker", "Linux"]
-    public: true
+    public: false
   M3:
     category: "mbs"
-    repo_slug: "open5gs"
+    repo_slug: "open5gs_mbs"
     display_name: "5G Core with MBS components"
     description: |
       5G-MAG maintains a fork of open5gs for the development and adaptation of 5GC network functions to support other Reference Tools.
-    repo_url: "https://github.com/5G-MAG/open5gs"
+    repo_url: "https://github.com/5G-MAG/open5gs_mbs"
     branch: "5mbs"
     license: "AGPLv3.0"
     standards: ["3GPP"]
     dependencies: ["Open5GS"]
     software: ["Docker", "Linux"]
-    public: true
+    public: false
   M4:
     category: "mbs"
     repo_slug: "rt-mbs-function"
