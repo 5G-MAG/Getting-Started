@@ -4,7 +4,7 @@ title: SDR - Requirements
 parent: Tutorials
 grand_parent: 5G Broadcast - TV/Radio
 has_children: false
-nav_order: 6
+nav_order: 7
 ---
 
 <img src="../../../assets/images/Banner_5GBCTVR.png" /> 
