@@ -3,7 +3,7 @@ layout: default
 title: Repositories
 parent: 6G Testbed - AI Traffic
 has_children: false
-nav_order: 3
+nav_order: 2
 ---
 
 <img src="../../assets/images/Banner_6GTestbedAITraffic.png" /> 
