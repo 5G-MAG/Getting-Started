@@ -7,6 +7,8 @@ has_children: false
 nav_order: 7
 ---
 
+<img src="../../../assets/images/Banner_5GMS.png" /> 
+
 # Tutorial - CMCD Reporting
 
 ## Introduction
