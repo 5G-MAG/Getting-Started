@@ -9,8 +9,6 @@ nav_order: 0
 
 <img src="../../../assets/images/Banner_5GBCTVR.png" /> 
 
-[Scope](../scope.html){: .btn .btn-blue } [Project Roadmap](../projects.html){: .btn .btn-blue } [GitHub Repos](../repositories.html){: .btn .btn-github } [Releases](../repositories.html#latest-releases){: .btn .btn-release } [Tutorials](../tutorials.html){: .btn .btn-tutorial } [Video Library](../tutorials.html#video-library){: .btn .btn-video } [Requirements](../requirements.html){: .btn .btn-blue }
-
 # Tutorial - Seamless Switching between Unicast and Broadcast (Android)
 
 This tutorial describes the end-to-end setup for showcasing seamless switching between 5G Broadcast and unicast delivery on an Android device.
