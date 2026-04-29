@@ -1,14 +1,13 @@
 ---
 layout: default
 title: Requirements
-parent: V3C Immersive Platform
+parent: Tutorials
+grand_parent: V3C Immersive Platform
 has_children: false
-nav_order: 4
+nav_order: 1
 ---
 
-<img src="../../assets/images/Banner_V3C_Platform.png" /> 
-
-[Scope](./scope.html){: .btn .btn-blue } [Project Roadmap](./projects.html){: .btn .btn-blue } [GitHub Repos](./repositories.html){: .btn .btn-github } [Releases](./repositories.html#latest-releases){: .btn .btn-release } [Tutorials](./tutorials.html){: .btn .btn-tutorial } [Video Library](./tutorials.html#video-library){: .btn .btn-video }
+<img src="../../../assets/images/Banner_V3C_Platform.png" /> 
 
 # Requirements
 
