@@ -9,9 +9,6 @@ nav_order: 1
 
 <img src="../../../assets/images/Banner_XR.png" /> 
 
-[Scope](../scope.html){: .btn .btn-blue } [Project Roadmap](../projects.html){: .btn .btn-blue } [GitHub Repos](../repositories.html){: .btn .btn-github } [Releases](../repositories.html#latest-releases){: .btn .btn-release } [Tutorials](../tutorials.html){: .btn .btn-tutorial } [Video Library](../tutorials.html#video-library){: .btn .btn-video } [Requirements](../requirements.html){: .btn .btn-blue }
-
-
 # Building and using XR Player on Android Smartphone
 
 This guide covers compiling the XR player sample Unity project for Android and configuring it with specific glTF content.
