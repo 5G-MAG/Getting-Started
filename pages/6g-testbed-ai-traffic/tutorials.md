@@ -3,7 +3,7 @@ layout: default
 title: Tutorials
 parent: 6G Testbed - AI Traffic
 has_children: true
-nav_order: 4
+nav_order: 3
 ---
 
 <img src="../../assets/images/Banner_6GTestbedAITraffic.png" /> 
