@@ -40,14 +40,3 @@ The following repositories are available. Please refer to the "Scope" section of
     {% endfor %}
   </tbody>
 </table>
-
----
-# Packages
-
-This project also provides or makes use of the following packages GitHub Container packages.
-
-## UE Data Collection, Reporting and Event Exposure
-
-Components | Package
- --|--
- DCAF | [https://github.com/5G-MAG/rt-data-collection-application-function/pkgs/container/data-collection-af](https://github.com/5G-MAG/rt-data-collection-application-function/pkgs/container/data-collection-af)
