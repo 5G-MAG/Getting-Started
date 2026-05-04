@@ -12,24 +12,6 @@ nav_order: 4
 
 # Tutorials, Tests and Examples
 
-## Tutorial: Initial support of MBS in the 5GC
-
-This tutorial provides an overview on the initial implementation of MBS in Open5GS Core.
-
-[Go to the Tutorial: Initial support of MBS in the 5GC](./tutorials/mbs-in-5gc.html){: .btn .btn-tutorial }
-
-## Tutorial: MBS support in the 5GC (Docker deployment)
-
-This tutorial provides an overview on the Docker deployment implementation of MBS in Open5GS Core.
-
-[Go to the Tutorial: MBS support in the 5GC (Docker deployment)](./tutorials/mbs-in-5gc.html){: .btn .btn-tutorial }
-
-## Tutorial - Managing MBS Sessions and TMGIs
-
-This tutorial provides an overview on the initial implementation of MBS in Open5GS Core.
-
-[Go to the Tutorial: Managing MBS Sessions and TMGIs](./tutorials/mbs-in-5gc.html){: .btn .btn-tutorial }
-
 ## Tutorial: MBS Transport Function (MBSTF) API examples
 
 This tutorial provides an overview on the initial implementation of the MBSTF.
@@ -42,16 +24,43 @@ This tutorial provides an overview on the initial implementation of the MBSF.
 
 [Go to the Tutorial: Operating the MBS Function and APIs](./tutorials/mbsf.html){: .btn .btn-tutorial }
 
+## Tutorial: Initial support of MBS in the 5GC
+
+This tutorial provides an overview on the initial implementation of MBS in Open5GS Core.
+
+[Go to the Tutorial: Initial support of MBS in the 5GC](./tutorials/mbs-in-5gc.html){: .btn .btn-tutorial }
+
+## Tutorial: MBS support in the 5GC (Docker deployment)
+
+This tutorial provides an overview on the Docker deployment implementation of MBS in Open5GS Core.
+
+[Go to the Tutorial: MBS support in the 5GC (Docker deployment)](./tutorials/mbs-in-5gc.html){: .btn .btn-tutorial }
+
+## Tutorial: Operating the MBS 5GC, NG-RAN and UE
+
+This tutorial provides an overview on the implementation of MBS in Open5GS Core, srsRAN NG-RAN and srsRAN UE.
+
+[Go to the Tutorial: Operating the MBS 5GC, NG-RAN and UE](./tutorials/mbs_5gc_ran_ue.html){: .btn .btn-tutorial }
+
+## Tutorial - Managing MBS Sessions and TMGIs
+
+This tutorial provides an overview on the management of MBS Session and TMGIs with the MBS 5GC implmenetatoin.
+
+[Go to the Tutorial: Managing MBS Sessions and TMGIs](./tutorials/managing-mbs-sessions-tmgi.html){: .btn .btn-tutorial }
+
 # Video Library
 Our [YouTube channel](https://www.youtube.com/@5GMAG) hosts some practical videos provided by developers on the use of the 5G-MAG Reference Tools.
 
 Some of the videos are also available here:
 
-## Basic implementation of MBS Function (MBSF)
-<iframe width="560" height="315" src="https://www.youtube.com/embed/0re77KNmxYQ?si=PVTIFSEPJr6rMMPU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
 ## Basic implementation of MBS Transport Function (MBSTF)
 <iframe width="560" height="315" src="https://www.youtube.com/embed/anrtRfPttmo?si=gDIJirDWv4E9-kxR" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
+## Basic implementation of MBS Function (MBSF)
+<iframe width="560" height="315" src="https://www.youtube.com/embed/0re77KNmxYQ?si=PVTIFSEPJr6rMMPU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 ## Initial support of 5MBS core network functions
 <iframe width="560" height="315" src="https://www.youtube.com/embed/lJh2F0xXxpE?si=JYYykzC9l1fFBd2_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+## End-to-end setup with 5GC, NG-RAN and UE for MBS Broadcast Services
+<iframe width="560" height="315" src="https://www.youtube.com/embed/cdYV99cDuJE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>

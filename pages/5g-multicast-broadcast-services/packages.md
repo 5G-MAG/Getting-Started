@@ -49,7 +49,7 @@ Components | Package
  AMF with MBS | [https://github.com/5G-MAG/rt-mbs-examples/pkgs/container/amf_with_mbs](https://github.com/5G-MAG/rt-mbs-examples/pkgs/container/amf_with_mbs)
  UE with MBS | [https://github.com/5G-MAG/rt-mbs-examples/pkgs/container/ue_with_mbs](https://github.com/5G-MAG/rt-mbs-examples/pkgs/container/ue_with_mbs)
 
-## MBS User Services Network Functions (3GPP TS 26.502)
+### MBS User Services Network Functions (3GPP TS 26.502)
 
 Components | Package
  --|--
