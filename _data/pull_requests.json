@@ -1,7 +1,21 @@
 {
-  "last_updated": "2026-05-04 01:01",
+  "last_updated": "2026-05-05 00:57",
   "projects": {
     "5G Media Streaming": [
+      {
+        "number": "#106",
+        "status": "Ready",
+        "repo": "rt-5gms-application-provider",
+        "title": "add additional metrics selection in UI",
+        "url": "https://github.com/5G-MAG/rt-5gms-application-provider/pull/106",
+        "user": "Neolomoxem",
+        "last_comment_by": null,
+        "last_comment_date": null,
+        "date": "2026-05-04",
+        "days_ago": 1,
+        "color": "green",
+        "blink": true
+      },
       {
         "number": "#104",
         "status": "Ready",
@@ -12,7 +26,7 @@
         "last_comment_by": "ErikGaida",
         "last_comment_date": "2026-05-01",
         "date": "2026-03-17",
-        "days_ago": 48,
+        "days_ago": 49,
         "color": "green",
         "blink": false
       },
@@ -26,7 +40,7 @@
         "last_comment_by": "jordijoangimenez",
         "last_comment_date": "2026-04-30",
         "date": "2026-03-13",
-        "days_ago": 52,
+        "days_ago": 53,
         "color": "green",
         "blink": false
       },
@@ -40,7 +54,7 @@
         "last_comment_by": "jordijoangimenez",
         "last_comment_date": "2026-03-01",
         "date": "2026-02-25",
-        "days_ago": 68,
+        "days_ago": 69,
         "color": "green",
         "blink": false
       },
@@ -54,7 +68,7 @@
         "last_comment_by": "dsilhavy",
         "last_comment_date": "2026-03-27",
         "date": "2026-02-20",
-        "days_ago": 73,
+        "days_ago": 74,
         "color": "green",
         "blink": false
       },
@@ -68,7 +82,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-04-29",
-        "days_ago": 5,
+        "days_ago": 6,
         "color": "green",
         "blink": true
       },
@@ -82,7 +96,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-04-29",
-        "days_ago": 5,
+        "days_ago": 6,
         "color": "green",
         "blink": true
       },
@@ -96,7 +110,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-04-29",
-        "days_ago": 5,
+        "days_ago": 6,
         "color": "green",
         "blink": true
       },
@@ -110,7 +124,7 @@
         "last_comment_by": "ErikGaida",
         "last_comment_date": "2026-05-01",
         "date": "2026-05-01",
-        "days_ago": 3,
+        "days_ago": 4,
         "color": "green",
         "blink": true
       }
@@ -128,7 +142,7 @@
         "last_comment_by": "jordijoangimenez",
         "last_comment_date": "2025-10-22",
         "date": "2024-11-20",
-        "days_ago": 530,
+        "days_ago": 531,
         "color": "red",
         "blink": false
       },
@@ -142,7 +156,7 @@
         "last_comment_by": "rbouqueau",
         "last_comment_date": "2025-10-31",
         "date": "2021-11-30",
-        "days_ago": 1616,
+        "days_ago": 1617,
         "color": "red",
         "blink": false
       },
@@ -156,7 +170,7 @@
         "last_comment_by": "rbouqueau",
         "last_comment_date": "2021-10-23",
         "date": "2021-10-23",
-        "days_ago": 1654,
+        "days_ago": 1655,
         "color": "red",
         "blink": false
       },
@@ -170,7 +184,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2025-08-27",
-        "days_ago": 250,
+        "days_ago": 251,
         "color": "red",
         "blink": false
       }
@@ -186,7 +200,7 @@
         "last_comment_by": "jordijoangimenez",
         "last_comment_date": "2025-10-07",
         "date": "2025-05-09",
-        "days_ago": 360,
+        "days_ago": 361,
         "color": "red",
         "blink": false
       }
@@ -204,7 +218,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-03-24",
-        "days_ago": 41,
+        "days_ago": 42,
         "color": "green",
         "blink": false
       }
@@ -220,7 +234,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-03-27",
-        "days_ago": 38,
+        "days_ago": 39,
         "color": "green",
         "blink": false
       },
@@ -234,7 +248,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-03-12",
-        "days_ago": 53,
+        "days_ago": 54,
         "color": "green",
         "blink": false
       },
@@ -248,7 +262,7 @@
         "last_comment_by": "dsilhavy",
         "last_comment_date": "2023-10-18",
         "date": "2023-05-16",
-        "days_ago": 1084,
+        "days_ago": 1085,
         "color": "red",
         "blink": false
       },
@@ -262,7 +276,7 @@
         "last_comment_by": "rbouqueau",
         "last_comment_date": "2025-10-31",
         "date": "2021-11-30",
-        "days_ago": 1616,
+        "days_ago": 1617,
         "color": "red",
         "blink": false
       },
@@ -276,7 +290,7 @@
         "last_comment_by": "rbouqueau",
         "last_comment_date": "2021-10-23",
         "date": "2021-10-23",
-        "days_ago": 1654,
+        "days_ago": 1655,
         "color": "red",
         "blink": false
       }
@@ -292,7 +306,7 @@
         "last_comment_by": "aaronmontilla",
         "last_comment_date": "2026-04-30",
         "date": "2026-03-23",
-        "days_ago": 42,
+        "days_ago": 43,
         "color": "green",
         "blink": false
       }
@@ -310,7 +324,7 @@
         "last_comment_by": "jordijoangimenez",
         "last_comment_date": "2026-03-01",
         "date": "2026-02-25",
-        "days_ago": 68,
+        "days_ago": 69,
         "color": "green",
         "blink": false
       }
@@ -326,9 +340,23 @@
         "last_comment_by": "aaronmontilla",
         "last_comment_date": "2026-04-30",
         "date": "2026-03-23",
-        "days_ago": 42,
+        "days_ago": 43,
         "color": "green",
         "blink": false
+      },
+      {
+        "number": "#106",
+        "status": "Ready",
+        "repo": "rt-5gms-application-provider",
+        "title": "add additional metrics selection in UI",
+        "url": "https://github.com/5G-MAG/rt-5gms-application-provider/pull/106",
+        "user": "Neolomoxem",
+        "last_comment_by": null,
+        "last_comment_date": null,
+        "date": "2026-05-04",
+        "days_ago": 1,
+        "color": "green",
+        "blink": true
       },
       {
         "number": "#104",
@@ -340,7 +368,7 @@
         "last_comment_by": "ErikGaida",
         "last_comment_date": "2026-05-01",
         "date": "2026-03-17",
-        "days_ago": 48,
+        "days_ago": 49,
         "color": "green",
         "blink": false
       },
@@ -354,7 +382,7 @@
         "last_comment_by": "jordijoangimenez",
         "last_comment_date": "2026-04-30",
         "date": "2026-03-13",
-        "days_ago": 52,
+        "days_ago": 53,
         "color": "green",
         "blink": false
       }
@@ -370,7 +398,7 @@
         "last_comment_by": "jordijoangimenez",
         "last_comment_date": "2025-10-22",
         "date": "2024-11-20",
-        "days_ago": 530,
+        "days_ago": 531,
         "color": "red",
         "blink": false
       }
@@ -386,7 +414,7 @@
         "last_comment_by": "ErikGaida",
         "last_comment_date": "2026-05-03",
         "date": "2026-03-27",
-        "days_ago": 38,
+        "days_ago": 39,
         "color": "green",
         "blink": false
       },
@@ -400,7 +428,7 @@
         "last_comment_by": "joseprrm",
         "last_comment_date": "2026-03-13",
         "date": "2026-03-13",
-        "days_ago": 52,
+        "days_ago": 53,
         "color": "green",
         "blink": false
       },
@@ -414,7 +442,7 @@
         "last_comment_by": "jordijoangimenez",
         "last_comment_date": "2026-04-23",
         "date": "2026-03-06",
-        "days_ago": 59,
+        "days_ago": 60,
         "color": "green",
         "blink": false
       },
@@ -428,7 +456,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-02-23",
-        "days_ago": 70,
+        "days_ago": 71,
         "color": "green",
         "blink": false
       }
