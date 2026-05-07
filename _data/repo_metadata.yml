@@ -271,7 +271,6 @@ repos:
       The 5GMS Media Stream Handler is a 5GMS client component that forms part of the 5G Media Services framework as defined in ETSI TS 126.501.
     repo_url: "https://github.com/5G-MAG/rt-5gms-media-stream-handler"
     branch: "main"
-    is_auxiliary: true
     license: "5G-MAG PL v1.0"
     standards: ["3GPP"]
     dependencies: ["ExoPlayer"]
@@ -298,7 +297,6 @@ repos:
       The 5GMS Application Function (AF) is a Network Function that forms part of the 5G Media Services framework as defined in ETSI TS 126.501.
     repo_url: "https://github.com/5G-MAG/rt-5gms-application-function"
     branch: "main"
-    is_auxiliary: true
     license: "5G-MAG PL v1.0"
     standards: ["3GPP"]
     dependencies: ["Open5GS", "OpenAPI"]
