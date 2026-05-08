@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-05-07 01:01",
+  "last_updated": "2026-05-08 01:01",
   "projects": {
     "5G Media Streaming": [
       {
@@ -12,7 +12,7 @@
         "last_comment_by": "ErikGaida",
         "last_comment_date": "2026-05-01",
         "date": "2026-03-17",
-        "days_ago": 51,
+        "days_ago": 52,
         "color": "green",
         "blink": false
       },
@@ -23,10 +23,10 @@
         "title": "Added import/export Feature",
         "url": "https://github.com/5G-MAG/rt-5gms-application-provider/pull/101",
         "user": "ErikGaida",
-        "last_comment_by": "jordijoangimenez",
-        "last_comment_date": "2026-05-05",
+        "last_comment_by": "ErikGaida",
+        "last_comment_date": "2026-05-07",
         "date": "2026-03-13",
-        "days_ago": 55,
+        "days_ago": 56,
         "color": "green",
         "blink": false
       },
@@ -40,7 +40,7 @@
         "last_comment_by": "jordijoangimenez",
         "last_comment_date": "2026-03-01",
         "date": "2026-02-25",
-        "days_ago": 71,
+        "days_ago": 72,
         "color": "green",
         "blink": false
       },
@@ -54,7 +54,7 @@
         "last_comment_by": "dsilhavy",
         "last_comment_date": "2026-03-27",
         "date": "2026-02-20",
-        "days_ago": 76,
+        "days_ago": 77,
         "color": "green",
         "blink": false
       },
@@ -68,7 +68,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-04-29",
-        "days_ago": 8,
+        "days_ago": 9,
         "color": "green",
         "blink": true
       },
@@ -82,7 +82,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-04-29",
-        "days_ago": 8,
+        "days_ago": 9,
         "color": "green",
         "blink": true
       },
@@ -96,7 +96,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-04-29",
-        "days_ago": 8,
+        "days_ago": 9,
         "color": "green",
         "blink": true
       },
@@ -110,7 +110,7 @@
         "last_comment_by": "ErikGaida",
         "last_comment_date": "2026-05-01",
         "date": "2026-05-01",
-        "days_ago": 6,
+        "days_ago": 7,
         "color": "green",
         "blink": true
       }
@@ -128,7 +128,7 @@
         "last_comment_by": "jordijoangimenez",
         "last_comment_date": "2025-10-22",
         "date": "2024-11-20",
-        "days_ago": 533,
+        "days_ago": 534,
         "color": "red",
         "blink": false
       },
@@ -142,7 +142,7 @@
         "last_comment_by": "rbouqueau",
         "last_comment_date": "2025-10-31",
         "date": "2021-11-30",
-        "days_ago": 1619,
+        "days_ago": 1620,
         "color": "red",
         "blink": false
       },
@@ -156,7 +156,7 @@
         "last_comment_by": "rbouqueau",
         "last_comment_date": "2021-10-23",
         "date": "2021-10-23",
-        "days_ago": 1657,
+        "days_ago": 1658,
         "color": "red",
         "blink": false
       },
@@ -170,7 +170,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2025-08-27",
-        "days_ago": 253,
+        "days_ago": 254,
         "color": "red",
         "blink": false
       }
@@ -186,7 +186,7 @@
         "last_comment_by": "jordijoangimenez",
         "last_comment_date": "2025-10-07",
         "date": "2025-05-09",
-        "days_ago": 363,
+        "days_ago": 364,
         "color": "red",
         "blink": false
       }
@@ -204,7 +204,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-03-24",
-        "days_ago": 44,
+        "days_ago": 45,
         "color": "green",
         "blink": false
       }
@@ -220,7 +220,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-03-27",
-        "days_ago": 41,
+        "days_ago": 42,
         "color": "green",
         "blink": false
       },
@@ -234,7 +234,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-03-12",
-        "days_ago": 56,
+        "days_ago": 57,
         "color": "green",
         "blink": false
       },
@@ -248,7 +248,7 @@
         "last_comment_by": "dsilhavy",
         "last_comment_date": "2023-10-18",
         "date": "2023-05-16",
-        "days_ago": 1087,
+        "days_ago": 1088,
         "color": "red",
         "blink": false
       },
@@ -262,7 +262,7 @@
         "last_comment_by": "rbouqueau",
         "last_comment_date": "2025-10-31",
         "date": "2021-11-30",
-        "days_ago": 1619,
+        "days_ago": 1620,
         "color": "red",
         "blink": false
       },
@@ -276,7 +276,7 @@
         "last_comment_by": "rbouqueau",
         "last_comment_date": "2021-10-23",
         "date": "2021-10-23",
-        "days_ago": 1657,
+        "days_ago": 1658,
         "color": "red",
         "blink": false
       }
@@ -292,7 +292,7 @@
         "last_comment_by": "aaronmontilla",
         "last_comment_date": "2026-04-30",
         "date": "2026-03-23",
-        "days_ago": 45,
+        "days_ago": 46,
         "color": "green",
         "blink": false
       }
@@ -310,7 +310,7 @@
         "last_comment_by": "jordijoangimenez",
         "last_comment_date": "2026-03-01",
         "date": "2026-02-25",
-        "days_ago": 71,
+        "days_ago": 72,
         "color": "green",
         "blink": false
       }
@@ -326,7 +326,7 @@
         "last_comment_by": "aaronmontilla",
         "last_comment_date": "2026-04-30",
         "date": "2026-03-23",
-        "days_ago": 45,
+        "days_ago": 46,
         "color": "green",
         "blink": false
       },
@@ -340,7 +340,7 @@
         "last_comment_by": "ErikGaida",
         "last_comment_date": "2026-05-01",
         "date": "2026-03-17",
-        "days_ago": 51,
+        "days_ago": 52,
         "color": "green",
         "blink": false
       },
@@ -351,10 +351,10 @@
         "title": "Added import/export Feature",
         "url": "https://github.com/5G-MAG/rt-5gms-application-provider/pull/101",
         "user": "ErikGaida",
-        "last_comment_by": "jordijoangimenez",
-        "last_comment_date": "2026-05-05",
+        "last_comment_by": "ErikGaida",
+        "last_comment_date": "2026-05-07",
         "date": "2026-03-13",
-        "days_ago": 55,
+        "days_ago": 56,
         "color": "green",
         "blink": false
       }
@@ -370,12 +370,40 @@
         "last_comment_by": "jordijoangimenez",
         "last_comment_date": "2025-10-22",
         "date": "2024-11-20",
-        "days_ago": 533,
+        "days_ago": 534,
         "color": "red",
         "blink": false
       }
     ],
     "5G Multicast Broadcast": [
+      {
+        "number": "#33",
+        "status": "Ready",
+        "repo": "rt-mbs-function",
+        "title": "Release of MBS Function v0.2.0",
+        "url": "https://github.com/5G-MAG/rt-mbs-function/pull/33",
+        "user": "davidjwbbc",
+        "last_comment_by": null,
+        "last_comment_date": null,
+        "date": "2026-05-07",
+        "days_ago": 1,
+        "color": "green",
+        "blink": true
+      },
+      {
+        "number": "#60",
+        "status": "Ready",
+        "repo": "rt-mbs-transport-function",
+        "title": "Release of MBS Transport Function v1.3.0",
+        "url": "https://github.com/5G-MAG/rt-mbs-transport-function/pull/60",
+        "user": "davidjwbbc",
+        "last_comment_by": null,
+        "last_comment_date": null,
+        "date": "2026-05-07",
+        "days_ago": 1,
+        "color": "green",
+        "blink": true
+      },
       {
         "number": "#15",
         "status": "Ready",
@@ -386,7 +414,7 @@
         "last_comment_by": "joseprrm",
         "last_comment_date": "2026-03-13",
         "date": "2026-03-13",
-        "days_ago": 55,
+        "days_ago": 56,
         "color": "green",
         "blink": false
       },
@@ -400,7 +428,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-02-23",
-        "days_ago": 73,
+        "days_ago": 74,
         "color": "green",
         "blink": false
       }
