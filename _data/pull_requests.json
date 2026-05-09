@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-05-08 01:01",
+  "last_updated": "2026-05-09 01:00",
   "projects": {
     "5G Media Streaming": [
       {
@@ -10,39 +10,25 @@
         "url": "https://github.com/5G-MAG/rt-5gms-application-provider/pull/104",
         "user": "ErikGaida",
         "last_comment_by": "ErikGaida",
-        "last_comment_date": "2026-05-01",
+        "last_comment_date": "2026-05-08",
         "date": "2026-03-17",
-        "days_ago": 52,
+        "days_ago": 53,
         "color": "green",
         "blink": false
       },
       {
-        "number": "#101",
-        "status": "Ready",
-        "repo": "rt-5gms-application-provider",
-        "title": "Added import/export Feature",
-        "url": "https://github.com/5G-MAG/rt-5gms-application-provider/pull/101",
-        "user": "ErikGaida",
-        "last_comment_by": "ErikGaida",
-        "last_comment_date": "2026-05-07",
-        "date": "2026-03-13",
-        "days_ago": 56,
-        "color": "green",
-        "blink": false
-      },
-      {
-        "number": "#49",
-        "status": "Ready",
+        "number": "#51",
+        "status": "Draft",
         "repo": "rt-5gms-application",
-        "title": "Feature MWC Demo",
-        "url": "https://github.com/5G-MAG/rt-5gms-application/pull/49",
+        "title": "Feature/release changes",
+        "url": "https://github.com/5G-MAG/rt-5gms-application/pull/51",
         "user": "dsilhavy",
-        "last_comment_by": "jordijoangimenez",
-        "last_comment_date": "2026-03-01",
-        "date": "2026-02-25",
-        "days_ago": 72,
+        "last_comment_by": null,
+        "last_comment_date": null,
+        "date": "2026-05-08",
+        "days_ago": 1,
         "color": "green",
-        "blink": false
+        "blink": true
       },
       {
         "number": "#108",
@@ -54,49 +40,21 @@
         "last_comment_by": "dsilhavy",
         "last_comment_date": "2026-03-27",
         "date": "2026-02-20",
-        "days_ago": 77,
+        "days_ago": 78,
         "color": "green",
         "blink": false
       },
       {
-        "number": "#83",
-        "status": "Ready",
-        "repo": "rt-5gms-media-stream-handler",
-        "title": "Upgrade Kotlin and dependencies",
-        "url": "https://github.com/5G-MAG/rt-5gms-media-stream-handler/pull/83",
+        "number": "#39",
+        "status": "Draft",
+        "repo": "rt-5gms-examples",
+        "title": "Docker setup changes for 5GMS client version 1.3.0",
+        "url": "https://github.com/5G-MAG/rt-5gms-examples/pull/39",
         "user": "dsilhavy",
         "last_comment_by": null,
         "last_comment_date": null,
-        "date": "2026-04-29",
-        "days_ago": 9,
-        "color": "green",
-        "blink": true
-      },
-      {
-        "number": "#62",
-        "status": "Ready",
-        "repo": "rt-5gms-media-session-handler",
-        "title": "Feature/v1.3.0 changes",
-        "url": "https://github.com/5G-MAG/rt-5gms-media-session-handler/pull/62",
-        "user": "dsilhavy",
-        "last_comment_by": null,
-        "last_comment_date": null,
-        "date": "2026-04-29",
-        "days_ago": 9,
-        "color": "green",
-        "blink": true
-      },
-      {
-        "number": "#36",
-        "status": "Ready",
-        "repo": "rt-5gms-common-android-library",
-        "title": "Feature/v1.3.0 changes",
-        "url": "https://github.com/5G-MAG/rt-5gms-common-android-library/pull/36",
-        "user": "dsilhavy",
-        "last_comment_by": null,
-        "last_comment_date": null,
-        "date": "2026-04-29",
-        "days_ago": 9,
+        "date": "2026-05-08",
+        "days_ago": 1,
         "color": "green",
         "blink": true
       },
@@ -108,9 +66,9 @@
         "url": "https://github.com/5G-MAG/rt-5gms-examples/pull/38",
         "user": "ErikGaida",
         "last_comment_by": "ErikGaida",
-        "last_comment_date": "2026-05-01",
+        "last_comment_date": "2026-05-08",
         "date": "2026-05-01",
-        "days_ago": 7,
+        "days_ago": 8,
         "color": "green",
         "blink": true
       }
@@ -128,7 +86,7 @@
         "last_comment_by": "jordijoangimenez",
         "last_comment_date": "2025-10-22",
         "date": "2024-11-20",
-        "days_ago": 534,
+        "days_ago": 535,
         "color": "red",
         "blink": false
       },
@@ -142,7 +100,7 @@
         "last_comment_by": "rbouqueau",
         "last_comment_date": "2025-10-31",
         "date": "2021-11-30",
-        "days_ago": 1620,
+        "days_ago": 1621,
         "color": "red",
         "blink": false
       },
@@ -156,7 +114,7 @@
         "last_comment_by": "rbouqueau",
         "last_comment_date": "2021-10-23",
         "date": "2021-10-23",
-        "days_ago": 1658,
+        "days_ago": 1659,
         "color": "red",
         "blink": false
       },
@@ -170,7 +128,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2025-08-27",
-        "days_ago": 254,
+        "days_ago": 255,
         "color": "red",
         "blink": false
       }
@@ -186,7 +144,7 @@
         "last_comment_by": "jordijoangimenez",
         "last_comment_date": "2025-10-07",
         "date": "2025-05-09",
-        "days_ago": 364,
+        "days_ago": 365,
         "color": "red",
         "blink": false
       }
@@ -204,7 +162,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-03-24",
-        "days_ago": 45,
+        "days_ago": 46,
         "color": "green",
         "blink": false
       }
@@ -220,7 +178,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-03-27",
-        "days_ago": 42,
+        "days_ago": 43,
         "color": "green",
         "blink": false
       },
@@ -234,7 +192,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-03-12",
-        "days_ago": 57,
+        "days_ago": 58,
         "color": "green",
         "blink": false
       },
@@ -248,7 +206,7 @@
         "last_comment_by": "dsilhavy",
         "last_comment_date": "2023-10-18",
         "date": "2023-05-16",
-        "days_ago": 1088,
+        "days_ago": 1089,
         "color": "red",
         "blink": false
       },
@@ -262,7 +220,7 @@
         "last_comment_by": "rbouqueau",
         "last_comment_date": "2025-10-31",
         "date": "2021-11-30",
-        "days_ago": 1620,
+        "days_ago": 1621,
         "color": "red",
         "blink": false
       },
@@ -276,7 +234,7 @@
         "last_comment_by": "rbouqueau",
         "last_comment_date": "2021-10-23",
         "date": "2021-10-23",
-        "days_ago": 1658,
+        "days_ago": 1659,
         "color": "red",
         "blink": false
       }
@@ -289,10 +247,10 @@
         "title": "feature: m1-mcp-server added",
         "url": "https://github.com/5G-MAG/rt-common-shared/pull/66",
         "user": "aaronmontilla",
-        "last_comment_by": "aaronmontilla",
-        "last_comment_date": "2026-04-30",
+        "last_comment_by": "jordijoangimenez",
+        "last_comment_date": "2026-05-08",
         "date": "2026-03-23",
-        "days_ago": 46,
+        "days_ago": 47,
         "color": "green",
         "blink": false
       }
@@ -301,18 +259,18 @@
     "6G Testbed": [],
     "DVB-I over 5G": [
       {
-        "number": "#49",
-        "status": "Ready",
+        "number": "#51",
+        "status": "Draft",
         "repo": "rt-5gms-application",
-        "title": "Feature MWC Demo",
-        "url": "https://github.com/5G-MAG/rt-5gms-application/pull/49",
+        "title": "Feature/release changes",
+        "url": "https://github.com/5G-MAG/rt-5gms-application/pull/51",
         "user": "dsilhavy",
-        "last_comment_by": "jordijoangimenez",
-        "last_comment_date": "2026-03-01",
-        "date": "2026-02-25",
-        "days_ago": 72,
+        "last_comment_by": null,
+        "last_comment_date": null,
+        "date": "2026-05-08",
+        "days_ago": 1,
         "color": "green",
-        "blink": false
+        "blink": true
       }
     ],
     "Network APIs": [
@@ -323,10 +281,10 @@
         "title": "feature: m1-mcp-server added",
         "url": "https://github.com/5G-MAG/rt-common-shared/pull/66",
         "user": "aaronmontilla",
-        "last_comment_by": "aaronmontilla",
-        "last_comment_date": "2026-04-30",
+        "last_comment_by": "jordijoangimenez",
+        "last_comment_date": "2026-05-08",
         "date": "2026-03-23",
-        "days_ago": 46,
+        "days_ago": 47,
         "color": "green",
         "blink": false
       },
@@ -338,23 +296,9 @@
         "url": "https://github.com/5G-MAG/rt-5gms-application-provider/pull/104",
         "user": "ErikGaida",
         "last_comment_by": "ErikGaida",
-        "last_comment_date": "2026-05-01",
+        "last_comment_date": "2026-05-08",
         "date": "2026-03-17",
-        "days_ago": 52,
-        "color": "green",
-        "blink": false
-      },
-      {
-        "number": "#101",
-        "status": "Ready",
-        "repo": "rt-5gms-application-provider",
-        "title": "Added import/export Feature",
-        "url": "https://github.com/5G-MAG/rt-5gms-application-provider/pull/101",
-        "user": "ErikGaida",
-        "last_comment_by": "ErikGaida",
-        "last_comment_date": "2026-05-07",
-        "date": "2026-03-13",
-        "days_ago": 56,
+        "days_ago": 53,
         "color": "green",
         "blink": false
       }
@@ -370,7 +314,7 @@
         "last_comment_by": "jordijoangimenez",
         "last_comment_date": "2025-10-22",
         "date": "2024-11-20",
-        "days_ago": 534,
+        "days_ago": 535,
         "color": "red",
         "blink": false
       }
@@ -383,10 +327,10 @@
         "title": "Release of MBS Function v0.2.0",
         "url": "https://github.com/5G-MAG/rt-mbs-function/pull/33",
         "user": "davidjwbbc",
-        "last_comment_by": null,
-        "last_comment_date": null,
+        "last_comment_by": "jordijoangimenez",
+        "last_comment_date": "2026-05-08",
         "date": "2026-05-07",
-        "days_ago": 1,
+        "days_ago": 2,
         "color": "green",
         "blink": true
       },
@@ -400,7 +344,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-05-07",
-        "days_ago": 1,
+        "days_ago": 2,
         "color": "green",
         "blink": true
       },
@@ -414,7 +358,7 @@
         "last_comment_by": "joseprrm",
         "last_comment_date": "2026-03-13",
         "date": "2026-03-13",
-        "days_ago": 56,
+        "days_ago": 57,
         "color": "green",
         "blink": false
       },
@@ -428,7 +372,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-02-23",
-        "days_ago": 74,
+        "days_ago": 75,
         "color": "green",
         "blink": false
       }
