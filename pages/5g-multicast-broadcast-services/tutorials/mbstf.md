@@ -124,7 +124,7 @@ at reference point Nmb9. An example of such a 5G Core can be found in
 the [5G-MAG/open5gs](https://github.com/5G-MAG/open5gs/tree/5mbs) repository in the
 `5mbs` branch.
 
-Start the NRF, SCP, AMF, MB-SMF and MB-UPF. We recommend executing the TMUX scripts in [rt-mbs-examples/tree/main/scripts/tmux](https://github.com/5G-MAG/rt-mbs-examples/tree/main/scripts/tmux) or following these instructions. Note that an Insomnia collection is also available in [rt-mbs-examples/tree/main/insomnia/5G-MAG_MBSTF-insomnia_collection.yaml](https://github.com/5G-MAG/rt-mbs-examples/tree/main/insomnia/5G-MAG_MBSTF-insomnia_collection.yaml).
+Start the NRF, SCP, AMF, MB-SMF and MB-UPF. We recommend executing the TMUX scripts in [rt-mbs-examples/tree/main/scripts/tmux](https://github.com/5G-MAG/rt-mbs-examples/tree/main/scripts/tmux) or following these instructions. Note that an Insomnia collection is also available in [rt-mbs-examples/tree/main/insomnia/5G-MAG_MBSTF-insomnia_collection.yaml](https://github.com/5G-MAG/rt-mbs-examples/tree/main/insomnia/5G-MAG_MBSTF-insomnia_collection.yaml). When using the Insomnia collection, please remind to set the `Preferred HTTP version` to `HTTP/2 PriorKnowledge`.
 
 ```sh
 git clone --depth 1 --recurse-submodules -b 5mbs https://github.com/5G-MAG/open5gs.git ~/open5gs
