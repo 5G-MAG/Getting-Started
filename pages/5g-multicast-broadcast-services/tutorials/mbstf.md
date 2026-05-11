@@ -122,9 +122,9 @@ sequenceDiagram
 To use this you will need a 5G Core with an MB-UPF and an MB-SMF that are both capable of allocating an ingress tunnel
 at reference point Nmb9. An example of such a 5G Core can be found in
 the [5G-MAG/open5gs](https://github.com/5G-MAG/open5gs/tree/5mbs) repository in the
-`5mbs` branch.<!-- Change this to the 5mbs branch when tunnelling is merged -->
+`5mbs` branch.
 
-Start the NRF, SCP, AMF, MB-SMF and MB-UPF.
+Start the NRF, SCP, AMF, MB-SMF and MB-UPF. We recommend executing the TMUX scripts in [rt-mbs-examples/tree/main/scripts/tmux](https://github.com/5G-MAG/rt-mbs-examples/tree/main/scripts/tmux) or following these instructions. Note that an Insomnia collection is also available in [rt-mbs-examples/tree/main/insomnia/5G-MAG_MBSTF-insomnia_collection.yaml](https://github.com/5G-MAG/rt-mbs-examples/tree/main/insomnia/5G-MAG_MBSTF-insomnia_collection.yaml).
 
 ```sh
 git clone --depth 1 --recurse-submodules -b 5mbs https://github.com/5G-MAG/open5gs.git ~/open5gs
