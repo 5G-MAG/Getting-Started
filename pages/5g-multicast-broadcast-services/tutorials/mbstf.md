@@ -398,6 +398,10 @@ Copy the following into a file called `DistSession-PULL-request.json`:
       "portNumber": 5678
     },
     "upTrafficFlowInfo": {
+      "transportSessionId": 1234,
+      "srcIpAddr": {
+        "ipv4Addr": "127.0.0.7"
+      },
       "destIpAddr": {
         "ipv4Addr": "232.0.0.1"
       },
@@ -554,6 +558,10 @@ Copy the following into a file called `DistSession-PUSH-request.json`:
       "portNumber": 5678
     },
     "upTrafficFlowInfo": {
+      "transportSessionId": 1234,
+      "srcIpAddr": {
+        "ipv4Addr": "127.0.0.7"
+      },
       "destIpAddr": {
         "ipv4Addr": "232.0.0.1"
       },
@@ -769,6 +777,10 @@ Copy the following into a file called `DistSession-DASH-PULL-request.json`:
       "portNumber": 5678
     },
     "upTrafficFlowInfo": {
+      "transportSessionId": 1234,
+      "srcIpAddr": {
+        "ipv4Addr": "127.0.0.7"
+      },
       "destIpAddr": {
         "ipv4Addr": "232.0.0.1"
       },
@@ -1018,6 +1030,10 @@ Copy the following into a file called `DistSession-DASH-PUSH-request.json`:
       "portNumber": 5678
     },
     "upTrafficFlowInfo": {
+      "transportSessionId": 1234,
+      "srcIpAddr": {
+        "ipv4Addr": "127.0.0.7"
+      },
       "destIpAddr": {
         "ipv4Addr": "232.0.0.1"
       },
