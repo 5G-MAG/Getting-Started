@@ -68,17 +68,12 @@ block-beta
 ## Prerequisites
 
 This tutorial assumes that you have cloned and built
-the [rt-mbs-transport-function repository](https://github.com/5G-MAG/rt-mbs-transport-function) and the [5MBS branch of the open5gs repository](https://github.com/5G-MAG/open5gs/tree/5mbs).
+the [rt-mbs-transport-function repository](https://github.com/5G-MAG/rt-mbs-transport-function).
 
-A 5G Core with UDP tunnelling should be running for these examples (unless installing the *netcat* package to fake an MB-UPF UDP tunnel) with at least the NRF, SCP, MB-SMF, MB-UPF and MB-AMF Network Functions (see the instructions in our [Open5GS 5MBS branch](https://github.com/5G-MAG/open5gs/tree/5mbs) README).
+A 5G Core with UDP tunnelling should be running for these examples (unless using the *netcat* package to fake an MB-UPF UDP tunnel) with at least the NRF, SCP, MB-SMF, MB-UPF and MB-AMF Network Functions (see the instructions in our [Open5GS 5MBS branch](https://github.com/5G-MAG/open5gs/tree/5mbs) README).
 
-There should also be an MBSTF running (see the instructions in the [rt-mbs-transport-function](https://github.com/5G-MAG/rt-mbs-transport-function) README).
-
-For convenience we are providing a bash script that starts all required components including the MBSTF. You can
-find the script [here](https://github.com/5G-MAG/rt-mbs-examples/blob/main/scripts/tmux).
-The instructions to use the script can be
-found [here](https://github.com/5G-MAG/rt-mbs-examples/tree/main/scripts/tmux#mbstf-tutorial-startup-script). If you use
-the script you can omit the steps 2 and 3 for this tutorial.
+For convenience we are providing a bash script that starts all required components including the MBSTF, 5GC NFs and Media Server. You can
+find the script [here](https://github.com/5G-MAG/rt-mbs-examples/blob/main/scripts/tmux). The instructions to use the script can be found [here](https://github.com/5G-MAG/rt-mbs-examples/tree/main/scripts/tmux#mbstf-tutorial-startup-script). If you use the script you can omit the steps 2 and 3 in this tutorial.
 
 For these examples you will also need Wireshark, to view the results.
 
