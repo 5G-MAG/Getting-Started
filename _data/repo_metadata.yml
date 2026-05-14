@@ -597,7 +597,7 @@ repos:
     repo_slug: "rt-camara-examples"
     display_name: "CAMARA API Examples"
     description: |
-      Reference Tools: This repository is related to "Network Capability Exposure through APIs"
+      This repository contains example files and tools in relation to the CAMARA Project
     repo_url: "https://github.com/5G-MAG/rt-camara-examples"
     branch: "main"
     license: "5G-MAG PL v1.0"
