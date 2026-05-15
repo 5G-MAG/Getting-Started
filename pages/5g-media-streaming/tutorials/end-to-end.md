@@ -413,62 +413,77 @@ interfaces and APIs defined in the 5GMSd architecture.
 ### 4.a Common Configuration
 
 The 5GMSd-Aware Application supports `m8` input via REST endpoints or local files. For that reason, a configuration file
-located in `app/src/main/assets/config.properties.xml` is used. It contains a list of the possible `m8` endpoints. Per
+located in `app/src/main/assets/app_config.json` is used. It contains a list of the possible `m8` endpoints and their
+corresponding metadata endpoints. Per
 default, a single 5G-MAG hosted endpoint is linked:
 
-````xml
-<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
-<properties>
-    <entry key="m85GMAGHost">https://rt.5g-mag.com/</entry>
-</properties>
+````json
+{
+  "sources": [
+    {
+      "name": "5G-MAG online reference",
+      "m8Url": "https://rt.5g-mag.com/m8.json",
+      "metadataUrl": "https://rt.5g-mag.com/metadata.json"
+    }
+  ]
+}
 ```` 
 
-For our local AS and AF setup we only need to extend this list with the `M8` endpoint we created previously:
+For our local AS and AF setup we only need to extend this list with the `M8` endpoint we created previously. If you are
+using the Docker based setup we also provide a static webserver that hosts the `metadata.json` and the corresponding
+poster images. An example of the configuration file after adding the Docker endpoint looks like this:
 
-````xml
-<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
-<properties>
-    <entry key="m8LocalAfAndAs">m8/config_local_af.json</entry>
-    <entry key="m85LocalHost">http://<YOUR_MACHINE_IP_HERE>/
-    </entry>
-</properties>
+````json
+{
+  "sources": [
+    {
+      "name": "5G-MAG online reference",
+      "m8Url": "https://rt.5g-mag.com/m8.json",
+      "metadataUrl": "https://rt.5g-mag.com/metadata.json"
+    },
+    {
+      "name": "Docker",
+      "m8Url": "<YOUR_MACHINE_IP_HERE>:8000/m8.json",
+      "metadataUrl": "<YOUR_MACHINE_IP_HERE>:3344/metadata.json"
+    }
+  ]
+}
 ````
 
-Replace `<YOUR_MACHINE_IP_HERE>` with the IP of the machine that is running the AF and the AS, for instance:
+Replace `<YOUR_MACHINE_IP_HERE>` with the IP of the machine for instance:
 
-````xml
-<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
-<properties>
-    <entry key="m8LocalAfAndAs">m8/config_local_af.json</entry>
-    <entry key="m85LocalHost">http://192.168.178.55/</entry>
-</properties>
+````json
+{
+  "sources": [
+    {
+      "name": "5G-MAG online reference",
+      "m8Url": "https://rt.5g-mag.com/m8.json",
+      "metadataUrl": "https://rt.5g-mag.com/metadata.json"
+    },
+    {
+      "name": "Docker",
+      "m8Url": "http://192.168.178.56:8000/m8.json",
+      "metadataUrl": "http://192.168.178.56:3344/metadata.json"
+    }
+  ]
+}
 ````
 
 ### 4.a Alternative: Development Configuration
 
-If you are using the development web server instead of the common AF and AS installation, simply open
-`app/src/main/assets/config.properties.xml` and uncomment the following two lines. These two local `.json` files
-correspond to the default configuration on the static webserver.
-
-````xml
-<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
-<properties>
-    <entry key="m8LocalSingleMedia">m8/config_single_media.json</entry>
-    <entry key="m8LocalMultiMedia">m8/config_multi_media.json</entry>
-</properties>
-````
-
-Navigate to `app/src/main/assets/m8` and adjust the IP address of the `m5BaseUrl` in `config_single_media.json` and
-`config_multi_media.json` to point to your local webserver.
-
 As an alternative, you can also use the `M8` endpoint of the development web server. For that reason, uncomment the
 following line and replace the IP address with the IP address of your machine.
 
-````xml
-<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
-<properties>
-    <entry key="m8LocalDummyHost">http://192.168.178.55:3003/m8/</entry>
-</properties>
+````json
+{
+  "sources": [
+    {
+      "name": "Development setup",
+      "m8Url": "http://192.168.178.56:3003/m8.json",
+      "metadataUrl": "http://192.168.178.56:3003/metadata.json"
+    }
+  ]
+}
 ````
 
 ### 4.b Installation
@@ -484,4 +499,4 @@ Unlock your Android phone and start the `MediaSessionHandler` if it is not alrea
 `5GMSd-Aware Application`. Select an `M8` entry from the dropdown and then select one of the available stream URLs.
 Next, click on _Start Playback_. The output should look like this:
 
-<img width="757" alt="Bildschirm­foto 2023-04-26 um 09 43 13" src="https://user-images.githubusercontent.com/2427039/234528696-0411099a-2cf1-4397-b1d9-2b84760bdde3.png">
+<img width="757" alt="5GMS UI" src="../../../assets/images/5gms/5gms-ui.png">
