@@ -12,17 +12,17 @@ nav_order: 4
 
 # Tutorials, Tests and Examples
 
-## Tutorial: MBS Transport Function (MBSTF) API examples
+## Tutorial: MBS Transport Function (MBSTF) Testing
 
 This tutorial provides an overview on the initial implementation of the MBSTF.
 
-[Go to the Tutorial: MBS Transport Function (MBSTF) API examples](./tutorials/mbstf.html){: .btn .btn-tutorial }
+[Go to the Tutorial: MBS Transport Function (MBSTF) Testing](./tutorials/mbstf.html){: .btn .btn-tutorial }
 
-## Tutorial: Operating the MBS Function and APIs
+## Tutorial: MBS Function Operation and APIs
 
 This tutorial provides an overview on the initial implementation of the MBSF.
 
-[Go to the Tutorial: Operating the MBS Function and APIs](./tutorials/mbsf.html){: .btn .btn-tutorial }
+[Go to the Tutorial: MBS Function Operation and APIs](./tutorials/mbsf.html){: .btn .btn-tutorial }
 
 ## Tutorial: Initial support of MBS in the 5GC
 
@@ -36,13 +36,13 @@ This tutorial provides an overview on the Docker deployment implementation of MB
 
 [Go to the Tutorial: MBS support in the 5GC (Docker deployment)](./tutorials/mbs-in-5gc.html){: .btn .btn-tutorial }
 
-## Tutorial: Operating the MBS 5GC, NG-RAN and UE
+## Tutorial: MBS End-to-End: Operating MBS User Services, MBS 5GC, NG-RAN and UE
 
 This tutorial provides an overview on the implementation of MBS in Open5GS Core, srsRAN NG-RAN and srsRAN UE.
 
-[Go to the Tutorial: Operating the MBS 5GC, NG-RAN and UE](./tutorials/mbs_5gc_ran_ue.html){: .btn .btn-tutorial }
+[Go to the Tutorial: MBS End-to-End](./tutorials/mbs-end-to-end.html){: .btn .btn-tutorial }
 
-## Tutorial - Managing MBS Sessions and TMGIs
+## Tutorial - MB-SMF: Managing MBS Sessions and TMGIs
 
 This tutorial provides an overview on the management of MBS Session and TMGIs with the MBS 5GC implmenetatoin.
 
