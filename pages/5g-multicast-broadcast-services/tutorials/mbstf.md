@@ -70,17 +70,16 @@ This tutorial assumes that you have cloned and built the [rt-mbs-transport-funct
 
 A 5G Core with UDP tunnelling should be running for these examples (unless using the *netcat* package to fake an MB-UPF UDP tunnel) with at least the NRF, SCP, MB-SMF, MB-UPF and MB-AMF Network Functions (see the instructions in our [Open5GS 5MBS branch](https://github.com/5G-MAG/open5gs/tree/5mbs) README).
 
-For convenience we are providing a bash script that starts all required components including the MBSTF, 5GC NFs and Media Server. You can
-find the script [here](https://github.com/5G-MAG/rt-mbs-examples/blob/main/scripts/tmux). The instructions to use the script can be found [here](https://github.com/5G-MAG/rt-mbs-examples/tree/main/scripts/tmux#mbstf-tutorial-startup-script). If you use the script you can omit the steps 2 and 3 in this tutorial.
+For convenience we are providing a bash script that starts all required components including the MBSTF, 5GC NFs and Media Server using [tmux](https://github.com/5G-MAG/rt-mbs-examples/blob/main/scripts/tmux). The instructions to use the script can be found [here](https://github.com/5G-MAG/rt-mbs-examples/tree/main/scripts/tmux#mbstf-tutorial-startup-script). If you use the script you can omit the steps 2 and 3 in this tutorial.
 
 For these examples you will also need Wireshark, to view the results.
 
 ## Description
 
-In this tutorial we will configure the MBSTF with a variety of MBS Distribution Session types. This tutorial will also cover optional integration with the MB-SMF and MB-UPF.
+In this tutorial we will configure the MBSTF with examples of MBS Distribution Session types. This tutorial will also cover optional integration with the MB-SMF and MB-UPF.
 
 We will be using the `curl` command line tool to send HTTP requests to the API. However, if you prefer a graphical user interface to trigger the calls we are also offering an
-Insomnia collection. You can find the collection [here](https://github.com/5G-MAG/rt-mbs-examples/tree/main/insomnia). When using the Insomnia collection, please remind to set the `Preferred HTTP version` to `HTTP/2 PriorKnowledge`.
+[Insomnia collection](https://github.com/5G-MAG/rt-mbs-examples/tree/main/insomnia). When using the Insomnia collection, please remind to set the `Preferred HTTP version` to `HTTP/2 PriorKnowledge`.
 
 ---
 
@@ -120,7 +119,7 @@ sequenceDiagram
     deactivate MBUPF
 ```
 
-To use this you will need a 5G Core with an MB-UPF and an MB-SMF that are both capable of allocating an ingress tunnel at reference point Nmb9.
+To use this you will need a 5G Core with an MB-UPF and an MB-SMF that are both capable of allocating an ingress tunnel at reference point Nmb9. Launch the following commands or the tmux script.
 
 ```sh
 git clone --depth 1 --recurse-submodules -b 5mbs https://github.com/5G-MAG/open5gs.git ~/open5gs
@@ -134,8 +133,7 @@ install/bin/open5gs-amfd > amf.log 2>&1 &
 install/bin/open5gs-smfd > smf.log 2>&1 &
 sudo -E install/bin/open5gs-upfd > upf.log 2>&1 &
 ```
-
-Copy this Nmbsmf_MBSSession *CreateReqData* JSON object into a file called `create-mbs-session.json`:
+You can create an MBS Session with the Insomnia collection or with curl. For the latter, copy this Nmbsmf_MBSSession *CreateReqData* JSON object into a file called `create-mbs-session.json`:
 
 ```json
 {
@@ -274,8 +272,7 @@ The media server is now running on TCP port 3004 and ready to serve objects for 
 
 ## Step 3: Run the MBSTF
 
-If the build and install instructions from [rt-mbs-transport-function](https://github.com/5G-MAG/rt-mbs-transport-function) have been followed, then the MBSTF
-can be run using:
+Build and install the MBSTF following the instructions from [rt-mbs-transport-function](https://github.com/5G-MAG/rt-mbs-transport-function). The MBSTF can be launched using the tmux script or using:
 
 ```bash
 sudo /usr/local/bin/open5gs-mbstfd &
@@ -307,8 +304,7 @@ sudo /usr/local/bin/open5gs-mbstfd &
 
 ## Step 5: Testing SINGLE shot MBS Distribution Session for PULL operation
 
-This tests the single-shot object operating mode (`SINGLE`) for the pull-based object acquisition method. This executes
-the following highlighted steps from MBS User Service
+This tests the single-shot object operating mode (`SINGLE`) for the pull-based object acquisition method. This executes the following highlighted steps from MBS User Service
 provisioning using the command line to perform the actions that the MBSF would otherwise perform.
 
 ```mermaid
