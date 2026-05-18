@@ -11,8 +11,7 @@ nav_order: 0
 
 # Tutorial - MBS Transport Function (MBSTF) Testing
 
-This tutorial describes the initial reference implementation of the MBS Transport Function (MBSTF) as specified in 3GPP
-TS 26.517 and 3GPP TS 29.581. You can check out the videos to see more details or follow the write-up tutorial.
+This tutorial describes the initial reference implementation of the MBS Transport Function (MBSTF) as specified in 3GPP TS 26.517 and 3GPP TS 29.581. You can check out the videos to see more details or follow the write-up tutorial.
 
 ## Tutorial videos
 
