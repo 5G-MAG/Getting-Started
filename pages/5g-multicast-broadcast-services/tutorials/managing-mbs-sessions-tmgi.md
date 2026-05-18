@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Managing MBS Sessions & TMGI
+title: MB-SMF Testing
 parent: Tutorials
 grand_parent: 5G Multicast Broadcast Services
 has_children: false
@@ -9,7 +9,7 @@ nav_order: 5
 
 <img src="../../../assets/images/Banner_5MBS.png" /> 
 
-# Tutorial - Managing MBS Sessions and TMGIs
+# Tutorial - MB-SMF Testing: Managing MBS Sessions and TMGIs
 
 MBS Sessions can be of two different types, Broadcast MBS Sessions and Multicast MBS Sessions. Broadcast MBS Sessions
 can be seen as a subset of the Multicast MBS Sessions functionality. In the MBS Sessions context, two kinds of
