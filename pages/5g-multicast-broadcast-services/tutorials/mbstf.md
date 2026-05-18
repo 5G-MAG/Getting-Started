@@ -70,17 +70,19 @@ block-beta
 This tutorial assumes that you have cloned and built
 the [rt-mbs-transport-function repository](https://github.com/5G-MAG/rt-mbs-transport-function).
 
+A 5G Core with UDP tunnelling should be running for these examples (unless using the *netcat* package to fake an MB-UPF UDP tunnel) with at least the NRF, SCP, MB-SMF, MB-UPF and MB-AMF Network Functions (see the instructions in our [Open5GS 5MBS branch](https://github.com/5G-MAG/open5gs/tree/5mbs) README).
+
+For convenience we are providing a bash script that starts all required components including the MBSTF, 5GC NFs and Media Server. You can
+find the script [here](https://github.com/5G-MAG/rt-mbs-examples/blob/main/scripts/tmux). The instructions to use the script can be found [here](https://github.com/5G-MAG/rt-mbs-examples/tree/main/scripts/tmux#mbstf-tutorial-startup-script). If you use the script you can omit the steps 2 and 3 in this tutorial.
+
+For these examples you will also need Wireshark, to view the results.
+
 ## Description
 
-In this tutorial we will configure the MBSTF with a variety of MBS Distribution Session types. This tutorial will also
-cover optional integration with the MB-SMF and MB-UPF.
+In this tutorial we will configure the MBSTF with a variety of MBS Distribution Session types. This tutorial will also cover optional integration with the MB-SMF and MB-UPF.
 
-You should follow the build instructions for
-the [rt-mbs-transport-function repository](https://github.com/5G-MAG/rt-mbs-transport-function) found in the README.md
-on the repository main page.
-
-For these examples you will also need Wireshark, to view the results, and either build the 5G-MAG version of Open5GS
-with UDP tunnelling or the install the *netcat* package to fake an MB-UPF UDP tunnel.
+We will be using the `curl` command line tool to send HTTP requests to the API. However, if you prefer a graphical user interface to trigger the calls we are also offering an
+Insomnia collection. You can find the collection [here](https://github.com/5G-MAG/rt-mbs-examples/tree/main/insomnia). When using the Insomnia collection, please remind to set the `Preferred HTTP version` to `HTTP/2 PriorKnowledge`.
 
 ---
 
@@ -119,12 +121,7 @@ sequenceDiagram
     deactivate MBUPF
 ```
 
-To use this you will need a 5G Core with an MB-UPF and an MB-SMF that are both capable of allocating an ingress tunnel
-at reference point Nmb9. An example of such a 5G Core can be found in
-the [5G-MAG/open5gs](https://github.com/5G-MAG/open5gs/tree/5mbs) repository in the
-`5mbs` branch.<!-- Change this to the 5mbs branch when tunnelling is merged -->
-
-Start the NRF, SCP, AMF, MB-SMF and MB-UPF.
+To use this you will need a 5G Core with an MB-UPF and an MB-SMF that are both capable of allocating an ingress tunnel at reference point Nmb9.
 
 ```sh
 git clone --depth 1 --recurse-submodules -b 5mbs https://github.com/5G-MAG/open5gs.git ~/open5gs
@@ -398,6 +395,10 @@ Copy the following into a file called `DistSession-PULL-request.json`:
       "portNumber": 5678
     },
     "upTrafficFlowInfo": {
+      "transportSessionId": 1234,
+      "srcIpAddr": {
+        "ipv4Addr": "127.0.0.7"
+      },
       "destIpAddr": {
         "ipv4Addr": "232.0.0.1"
       },
@@ -554,6 +555,10 @@ Copy the following into a file called `DistSession-PUSH-request.json`:
       "portNumber": 5678
     },
     "upTrafficFlowInfo": {
+      "transportSessionId": 1234,
+      "srcIpAddr": {
+        "ipv4Addr": "127.0.0.7"
+      },
       "destIpAddr": {
         "ipv4Addr": "232.0.0.1"
       },
@@ -769,6 +774,10 @@ Copy the following into a file called `DistSession-DASH-PULL-request.json`:
       "portNumber": 5678
     },
     "upTrafficFlowInfo": {
+      "transportSessionId": 1234,
+      "srcIpAddr": {
+        "ipv4Addr": "127.0.0.7"
+      },
       "destIpAddr": {
         "ipv4Addr": "232.0.0.1"
       },
@@ -1018,6 +1027,10 @@ Copy the following into a file called `DistSession-DASH-PUSH-request.json`:
       "portNumber": 5678
     },
     "upTrafficFlowInfo": {
+      "transportSessionId": 1234,
+      "srcIpAddr": {
+        "ipv4Addr": "127.0.0.7"
+      },
       "destIpAddr": {
         "ipv4Addr": "232.0.0.1"
       },
