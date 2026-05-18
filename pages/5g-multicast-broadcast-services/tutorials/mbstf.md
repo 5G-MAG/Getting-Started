@@ -1,6 +1,6 @@
 ---
 layout: default-codewrap
-title: MBSTF API examples
+title: MBSTF Testing
 parent: Tutorials
 grand_parent: 5G Multicast Broadcast Services
 has_children: false
@@ -9,11 +9,10 @@ nav_order: 0
 
 <img src="../../../assets/images/Banner_5MBS.png" /> 
 
-# Tutorial - MBS Transport Function (MBSTF) API examples
+# Tutorial - MBS Transport Function (MBSTF) Testing
 
 This tutorial describes the initial reference implementation of the MBS Transport Function (MBSTF) as specified in 3GPP
-TS 26.517 and 3GPP TS 29.581. You can check out the videos to
-see more details or follow the write-up tutorial.
+TS 26.517 and 3GPP TS 29.581. You can check out the videos to see more details or follow the write-up tutorial.
 
 ## Tutorial videos
 
@@ -67,8 +66,7 @@ block-beta
 
 ## Prerequisites
 
-This tutorial assumes that you have cloned and built
-the [rt-mbs-transport-function repository](https://github.com/5G-MAG/rt-mbs-transport-function).
+This tutorial assumes that you have cloned and built the [rt-mbs-transport-function repository](https://github.com/5G-MAG/rt-mbs-transport-function).
 
 A 5G Core with UDP tunnelling should be running for these examples (unless using the *netcat* package to fake an MB-UPF UDP tunnel) with at least the NRF, SCP, MB-SMF, MB-UPF and MB-AMF Network Functions (see the instructions in our [Open5GS 5MBS branch](https://github.com/5G-MAG/open5gs/tree/5mbs) README).
 
@@ -86,10 +84,11 @@ Insomnia collection. You can find the collection [here](https://github.com/5G-MA
 
 ---
 
-### Step 1a: (Optional) Create an MBS Session on the MB-UPF with UDP tunnel
+## Step 1: Creating an MBS Session on the MB-UPF with UDP tunnel (or a fake UDP tunnel)
 
-This is the first option for creating a UDP tunnel for multicast distribution. This implements the following highlighted
-steps from creating an MBS User Service.
+### Step 1a: Using MB-SMF to CREATE an MBS Session on the MB-UPF with UDP tunnel
+
+This is the first option for creating a UDP tunnel for multicast distribution. This implements the following highlighted steps from creating an MBS User Service.
 
 ```mermaid
 ---
@@ -207,16 +206,13 @@ The response will look similar to this:
 }
 ````
 
-It contains the UDP tunnel details at JSON path `.mbsSession.ingressTunAddr`. These will need to be
-substituted in the `.distSession.mbUpfTunAddr` object in the Distribution Session JSON objects in the following steps in
-order to direct the output to the MB-UPF.
+It contains the UDP tunnel details at JSON path `.mbsSession.ingressTunAddr`. These will need to be substituted in the `.distSession.mbUpfTunAddr` object in the Distribution Session JSON objects in the following steps in order to direct the output to the MB-UPF.
 
 ---
 
 ### Step 1b: (Optional) Fake a UDP tunnel
 
-This can be useful if you just want to inspect the output of the MBSTF in isolation. Instead of running an MBS-enabled
-5G Core, you can simulate the receiving end of the UDP tunnel that would normally be provided by the MB-UPF.
+This can be useful if you just want to inspect the output of the MBSTF in isolation. Instead of running an MBS-enabled 5G Core, you can simulate the receiving end of the UDP tunnel that would normally be provided by the MB-UPF.
 
 For this we will need the `netcat` or `nc` command from the *netcat* package (*nmap-ncat* on RHEL based systems).
 
@@ -228,17 +224,13 @@ nc -u -l 127.0.0.7 5678 > /dev/null &
 
 ---
 
-### Step 2: Start the mock media express server
+## Step 2: Start a test media server
 
-When configured to operate in one of the pull-based object acquisition methods, the MBSTF requires an HTTP server from
-which to request the objects. For the purposes of these tutorials we
-will use a simple HTTP server based on the *NodeJS* [*Express*](https://expressjs.com/) module which has been configured
-to serve some simple media objects. This simulates a media server or CDN that would be provided by the MBS Application
-Provider (AF/AS).
+When configured to operate in one of the pull-based object acquisition methods, the MBSTF requires an HTTP server from which to request the objects. For the purposes of these tutorials we will use a simple HTTP server based on the *NodeJS* [*Express*](https://expressjs.com/) module which has been configured to serve some simple media objects. This simulates a media server or CDN that would be provided by the MBS Application Provider (AF/AS).
 
-You can install and run the *Express* mock media server directly or via Docker:
+You can install and run the *Express* simple media server directly or via Docker from the rt-mbs-examples repository:
 
-#### Option 1: Running the Express server outside of Docker
+### Step 2a: Running the Express server outside of Docker
 
 1. Clone the rt-mbs-examples repository:
    ```bash
@@ -246,44 +238,43 @@ You can install and run the *Express* mock media server directly or via Docker:
    git clone -b development https://github.com/5G-MAG/rt-mbs-examples.git
    ```
 
-1. Prepare the *Express* server for running:
+2. Prepare the *Express* server for running:
    ```bash
    cd ~/rt-mbs-examples/express-mock-media-server
    npm install
    ```
 
-1. Run the *Express* server:
+3. Run the *Express* server:
    ```bash
    cd ~/rt-mbs-examples/express-mock-media-server
    npm start
    ```
 
-The mock media server is now running on TCP port 3004 and ready to serve objects for the following tutorial examples.
+The media server is now running on TCP port 3004 and ready to serve objects for the following tutorial examples.
 
-#### Option 2: Running the Express server in Docker
+### Step 2b: Running the Express server in Docker
 
 1. Clone the rt-mbs-examples repository:
    ```bash
    cd ~
    git clone -b development https://github.com/5G-MAG/rt-mbs-examples.git
    ```
-1. Navigate to the Docker directory:
+2. Navigate to the Docker directory:
    ```bash
    cd ~/rt-mbs-examples/express-mock-media-server/docker
    ```
-1. Start the Express server:
+3. Start the Express server:
    ```bash
    docker compose up --build 
    ```
 
-The mock media server is now running on TCP port 3004 and ready to serve objects for the following tutorial examples.
+The media server is now running on TCP port 3004 and ready to serve objects for the following tutorial examples.
 
 ---
 
-### Step 3: Run the MBSTF
+## Step 3: Run the MBSTF
 
-If the build and install instructions
-from [rt-mbs-transport-function](https://github.com/5G-MAG/rt-mbs-transport-function) have been followed, then the MBSTF
+If the build and install instructions from [rt-mbs-transport-function](https://github.com/5G-MAG/rt-mbs-transport-function) have been followed, then the MBSTF
 can be run using:
 
 ```bash
@@ -292,39 +283,29 @@ sudo /usr/local/bin/open5gs-mbstfd &
 
 ---
 
-### Step 4: Start and configure Wireshark to capture the encapsulated FLUTE
+## Step 4: Start and configure Wireshark to capture the encapsulated FLUTE packets
 
 1. Set up packet decoding:
-    - In the *Analyze* menu, select *Decode As...* to open the "Decode As..." dialog.
-    - **Dissect the reference point Nmb9 unicast tunnel.** If a rule does not exist for UDP with a port number matching
-      the UDP tunnel (the `portNumber` given for the first tunnel (`ingressTunAddr`) in the response in Step 1a or
-      `5678` for Step 1b),
-      then
-      create a new rule, set the field to `UDP port`, set the port number to the tunnel port and set the Current
-      decoding as `IPv4`.
-    - **Dissect the multicast packets carried inside the reference point Nmb9 unicast tunnel.** If a rule does not exist
-      for the UDP port `5000` (the port we will use for the multicast) then create a new rule for a "UDP port", set the
-      port number to `5000` and the Current decoding to `ALC`.
-    - Select the *Save* or *OK* button to close the dialog. Saving will store the rules for next time Wireshark is
-      started.
-      ![wireshark Decode As dialog example](../../../assets/images/5mbs/wireshark-decode-as-dialog.png)
 
-2. Select (but don't start) the correct interface for capture. This will usually be the Ethernet interface if you used
-   Step 1a or the local loopback (lo) interface if you are using Step 1b.
+* In the *Analyze* menu, select *Decode As...* to open the "Decode As..." dialog.
+* **Dissect the reference point Nmb9 unicast tunnel.** If a rule does not exist for UDP with a port number matching the UDP tunnel (the `portNumber` given for the first tunnel (`ingressTunAddr`) in the response in Step 1a or `5678` for Step 1b), then create a new rule, set the field to `UDP port`, set the port number to the tunnel port and set the Current decoding as `IPv4`.
+* **Dissect the multicast packets carried inside the reference point Nmb9 unicast tunnel.** If a rule does not exist for the UDP port `5000` (the port we will use for the multicast) then create a new rule for a "UDP port", set the port number to `5000` and the Current decoding to `ALC`.
+* Select the *Save* or *OK* button to close the dialog. Saving will store the rules for next time Wireshark is started.
+  ![wireshark Decode As dialog example](../../../assets/images/5mbs/wireshark-decode-as-dialog.png)
 
-   Note: If Wireshark is not showing your Ethernet interface try starting it with sudo rights: `sudo wireshark`
+2. Select (but don't start) the correct interface for capture. This will usually be the Ethernet interface if you used Step 1a or the local loopback (lo) interface if you are using Step 1b.
 
-3. Enter the filter expression if...:
-    - You followed Step 1a, enter a filter of `ip.src == <tunnel-ip-address>`, where `<tunnel-ip-address>` is the IP
-      address
-      of the tunnel given in the response for 1a (`ingressTunAddr`).
-    - You followed Step 1b, enter a filter of `ip.src == 127.0.0.7`.
+   Note: If Wireshark is not showing your Ethernet interface try starting it with sudo rights: `sudo wireshark`.
 
-4. Then start the capture.
+4. Enter the filter expression if...:
+* You followed Step 1a, enter a filter of `ip.src == <tunnel-ip-address>`, where `<tunnel-ip-address>` is the IP address of the tunnel given in the response for 1a (`ingressTunAddr`).
+* You followed Step 1b, enter a filter of `ip.src == 127.0.0.7`.
+
+5. Then start the capture.
 
 ---
 
-### Step 5: Create a single shot MBS Distribution Session for pull operation
+## Step 5: Testing SINGLE shot MBS Distribution Session for PULL operation
 
 This tests the single-shot object operating mode (`SINGLE`) for the pull-based object acquisition method. This executes
 the following highlighted steps from MBS User Service
@@ -423,13 +404,10 @@ Copy the following into a file called `DistSession-PULL-request.json`:
 
 If you are using the option to use a running MB-SMF/MB-UPF (Step 1a) then make the following changes to the JSON above:
 
-- Change the MB-UPF tunnel IP address `distSession.mbUpfTunAddr.ipv4Addr` from 127.0.0.7 to the destination IP address
-  of the Nmb9 tunnel returned in the MB-SMF response (sequence step 5).
-- Change the MB-UPF tunnel port number `distSession.mbUpfTunAddr.portNumber` from 5678 to the destination port number
-  for the Nmb9 tunnel returned in the MB-SMF response (sequence step 5).
+* Change the MB-UPF tunnel IP address `distSession.mbUpfTunAddr.ipv4Addr` from 127.0.0.7 to the destination IP address of the Nmb9 tunnel returned in the MB-SMF response (sequence step 5).
+* Change the MB-UPF tunnel port number `distSession.mbUpfTunAddr.portNumber` from 5678 to the destination port number for the Nmb9 tunnel returned in the MB-SMF response (sequence step 5).
 
-Then send the *DistSession* JSON object in `DistSession-PULL-request.json` to the MBSTF to configure it (sequence step
-6):
+Then send the *DistSession* JSON object in `DistSession-PULL-request.json` to the MBSTF to configure it (sequence step 6):
 
 ```bash
 curl --http2-prior-knowledge -H 'Content-Type: application/json' --data-binary @DistSession-PULL-request.json http://127.0.0.62:7777/nmbstf-distsession/v1/dist-sessions
@@ -467,16 +445,16 @@ packet it can be noticed that:
 
 1. There are outer IP and UDP protocol headers showing the packet is sent from 127.0.0.1:58158 to 127.0.0.7:49484
    &#x2780; because an MB-UPF was used for this example which presented its tunnel at 127.0.0.7:49484.
-1. The next (inner) pair of IP and UDP headers show that this encapsulated packet is from 127.0.0.1:5000 to multicast
+2. The next (inner) pair of IP and UDP headers show that this encapsulated packet is from 127.0.0.1:5000 to multicast
    address 232.0.0.1:5000 &#x2781;, as requested in the *DistributionSession* creation request to the MBSTF.
-1. The packet contents are a FLUTE packet for **Transport Session Identifier** 0 and **Transport Object Identifier** 0 (**"
+3. The packet contents are a FLUTE packet for **Transport Session Identifier** 0 and **Transport Object Identifier** 0 (**"
    TSI: 0 TOI: 0"**, from the packet summary &#x2782;) which indicates that the transport object is the FDT Instance
    document. The contents of the FDT Instance document show that the FLUTE Session is currently sending a 39-byte
    transmission object &#x2785; referenced as `TOI="1"` &#x2783; with a content location of "http://127.0.0.2/object1"
    &#x2784;. The "http://127.0.0.2" prefix is the one requested by the *objDistributionBaseUrl* field in the
    *DistributionSession* configured in the MBSTF, and has replaced the origin prefix of "http://127.0.0.1:3004" (
    *objIngestBaseUrl* field).
-1. The next packet contains the same multicast packet &#x2786; sent from the MB-UPF to the gNodeB using GTP-U tunnel
+4. The next packet contains the same multicast packet &#x2786; sent from the MB-UPF to the gNodeB using GTP-U tunne
    encapsulation.
 
 This next screenshot shows the FLUTE packet for **TOI 1**, the ingested media object *object1* itself.
@@ -485,11 +463,10 @@ This next screenshot shows the FLUTE packet for **TOI 1**, the ingested media ob
 
 ---
 
-### Step 6: Create a single shot MBS Distribution Session for push operation
+## Step 6: Testing a SINGLE shot MBS Distribution Session for PUSH operation
 
 This tests the SINGLE distribution mode for *PUSH*ed content. This executes the following highlighted steps from MBS
-User Service
-provisioning using the command line to perform the actions that the MBSF and AP would otherwise perform.
+User Service provisioning using the command line to perform the actions that the MBSF and AP would otherwise perform.
 
 ```mermaid
 ---
@@ -576,10 +553,8 @@ Copy the following into a file called `DistSession-PUSH-request.json`:
 
 If you are using the option to use a running MB-SMF/MB-UPF (Step 1a) then make the following changes to the JSON above:
 
-- Change the MB-UPF tunnel IP address `distSession.mbUpfTunAddr.ipv4Addr` from 127.0.0.7 to the destination IP address
-  of the Nmb9 tunnel returned in the MB-SMF response (sequence step 5).
-- Change the MB-UPF tunnel port number `distSession.mbUpfTunAddr.portNumber` from 5678 to the destination port number
-  for the Nmb9 tunnel returned in the MB-SMF response (sequence step 5).
+* Change the MB-UPF tunnel IP address `distSession.mbUpfTunAddr.ipv4Addr` from 127.0.0.7 to the destination IP address of the Nmb9 tunnel returned in the MB-SMF response (sequence step 5).
+* Change the MB-UPF tunnel port number `distSession.mbUpfTunAddr.portNumber` from 5678 to the destination port number for the Nmb9 tunnel returned in the MB-SMF response (sequence step 5).
 
 Then send the *DistSession* object to the MBSTF to configure it (sequence step 6):
 
@@ -637,7 +612,7 @@ the rest of the file in packet number 11.
 
 ---
 
-### Step 7: Create a streaming MBS Distribution Session for pull operation on the DASH manifest
+## Step 7: Create a STREAMING MBS Distribution Session for PULL operation on the DASH manifest
 
 This tests the STREAMING distribution mode for *PULL*ed DASH manifest file (MPD) with activity state change.
 This executes the following highlighted steps from MBS User Service provisioning using the command line to
@@ -934,7 +909,7 @@ Based on our example above the REST call looks like this:
 curl --http2-prior-knowledge -X DELETE http://127.0.0.62:7777/nmbstf-distsession/v1/dist-sessions/541ebbd2-ebf9-496b-a3b8-dcd1c17fbc9d
 ```
 
-### Step 8: Create a streaming MBS Distribution Session for push operation on the DASH manifest
+## Step 8: Create a STREAMING MBS Distribution Session for PUSH operation on the DASH manifest
 
 This tests the STREAMING distribution mode for *PUSH*ed DASH manifest file (MPD). This executes the following
 highlighted steps
@@ -1006,7 +981,7 @@ This configuration behaves in a similar manner as the *PULL* *STREAMING* configu
    Instance `File` entry, is subject to substitution with the *objDistributionBaseUrl* value from the configuration (it
    is the only file pushed to the *objIngestBaseUrl* URL prefix). All initialization segments and media segments will be
    distributed with the *Content-Location* attribute set to the original media server URL.
-1. The MPD is not automatically refreshed. To refresh, push another MPD to the ingest URL.
+2. The MPD is not automatically refreshed. To refresh, push another MPD to the ingest URL.
 
 With the following processes running:
 
