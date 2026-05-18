@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-05-12 00:59",
+  "last_updated": "2026-05-18 01:07",
   "projects": {
     "5G Media Streaming": [
       {
@@ -315,6 +315,14 @@
         "blink": false,
         "color": "green",
         "url": "https://github.com/5G-MAG/rt-5gms-application-provider/releases/tag/rt-5gms-application-provider-1.1.0-rc"
+      },
+      {
+        "short_name": "rt-camara-examples",
+        "tag": "No Release",
+        "date": "-",
+        "blink": false,
+        "color": "green",
+        "url": "https://github.com/5G-MAG/rt-camara-examples/releases"
       }
     ],
     "5G Broadcast Emergency Alerts": [

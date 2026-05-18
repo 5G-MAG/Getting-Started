@@ -1,35 +1,7 @@
 {
-  "last_updated": "2026-05-12 00:59",
+  "last_updated": "2026-05-18 01:07",
   "projects": {
     "5G Media Streaming": [
-      {
-        "number": "#104",
-        "status": "Ready",
-        "repo": "rt-5gms-application-provider",
-        "title": "Feature/102 track external provisioning sessions",
-        "url": "https://github.com/5G-MAG/rt-5gms-application-provider/pull/104",
-        "user": "ErikGaida",
-        "last_comment_by": "ErikGaida",
-        "last_comment_date": "2026-05-08",
-        "date": "2026-03-17",
-        "days_ago": 56,
-        "color": "green",
-        "blink": false
-      },
-      {
-        "number": "#51",
-        "status": "Draft",
-        "repo": "rt-5gms-application",
-        "title": "Feature/release changes",
-        "url": "https://github.com/5G-MAG/rt-5gms-application/pull/51",
-        "user": "dsilhavy",
-        "last_comment_by": null,
-        "last_comment_date": null,
-        "date": "2026-05-08",
-        "days_ago": 4,
-        "color": "green",
-        "blink": true
-      },
       {
         "number": "#108",
         "status": "Ready",
@@ -40,37 +12,9 @@
         "last_comment_by": "dsilhavy",
         "last_comment_date": "2026-03-27",
         "date": "2026-02-20",
-        "days_ago": 81,
+        "days_ago": 87,
         "color": "green",
         "blink": false
-      },
-      {
-        "number": "#39",
-        "status": "Draft",
-        "repo": "rt-5gms-examples",
-        "title": "Docker setup changes for 5GMS client version 1.3.0",
-        "url": "https://github.com/5G-MAG/rt-5gms-examples/pull/39",
-        "user": "dsilhavy",
-        "last_comment_by": null,
-        "last_comment_date": null,
-        "date": "2026-05-08",
-        "days_ago": 4,
-        "color": "green",
-        "blink": true
-      },
-      {
-        "number": "#38",
-        "status": "Ready",
-        "repo": "rt-5gms-examples",
-        "title": "Add optional maf-client configuration to enable feature",
-        "url": "https://github.com/5G-MAG/rt-5gms-examples/pull/38",
-        "user": "ErikGaida",
-        "last_comment_by": "ErikGaida",
-        "last_comment_date": "2026-05-08",
-        "date": "2026-05-01",
-        "days_ago": 11,
-        "color": "green",
-        "blink": true
       }
     ],
     "5G Core Service Consumers": [],
@@ -86,7 +30,7 @@
         "last_comment_by": "jordijoangimenez",
         "last_comment_date": "2025-10-22",
         "date": "2024-11-20",
-        "days_ago": 538,
+        "days_ago": 544,
         "color": "red",
         "blink": false
       },
@@ -100,7 +44,7 @@
         "last_comment_by": "rbouqueau",
         "last_comment_date": "2025-10-31",
         "date": "2021-11-30",
-        "days_ago": 1624,
+        "days_ago": 1630,
         "color": "red",
         "blink": false
       },
@@ -114,7 +58,7 @@
         "last_comment_by": "rbouqueau",
         "last_comment_date": "2021-10-23",
         "date": "2021-10-23",
-        "days_ago": 1662,
+        "days_ago": 1668,
         "color": "red",
         "blink": false
       },
@@ -128,7 +72,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2025-08-27",
-        "days_ago": 258,
+        "days_ago": 264,
         "color": "red",
         "blink": false
       }
@@ -144,7 +88,7 @@
         "last_comment_by": "jordijoangimenez",
         "last_comment_date": "2025-10-07",
         "date": "2025-05-09",
-        "days_ago": 368,
+        "days_ago": 374,
         "color": "red",
         "blink": false
       }
@@ -162,7 +106,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-03-24",
-        "days_ago": 49,
+        "days_ago": 55,
         "color": "green",
         "blink": false
       }
@@ -178,7 +122,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-03-27",
-        "days_ago": 46,
+        "days_ago": 52,
         "color": "green",
         "blink": false
       },
@@ -192,7 +136,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-03-12",
-        "days_ago": 61,
+        "days_ago": 67,
         "color": "green",
         "blink": false
       },
@@ -206,7 +150,7 @@
         "last_comment_by": "dsilhavy",
         "last_comment_date": "2023-10-18",
         "date": "2023-05-16",
-        "days_ago": 1092,
+        "days_ago": 1098,
         "color": "red",
         "blink": false
       },
@@ -220,7 +164,7 @@
         "last_comment_by": "rbouqueau",
         "last_comment_date": "2025-10-31",
         "date": "2021-11-30",
-        "days_ago": 1624,
+        "days_ago": 1630,
         "color": "red",
         "blink": false
       },
@@ -234,7 +178,7 @@
         "last_comment_by": "rbouqueau",
         "last_comment_date": "2021-10-23",
         "date": "2021-10-23",
-        "days_ago": 1662,
+        "days_ago": 1668,
         "color": "red",
         "blink": false
       }
@@ -247,32 +191,32 @@
         "title": "feature: m1-mcp-server added",
         "url": "https://github.com/5G-MAG/rt-common-shared/pull/66",
         "user": "aaronmontilla",
-        "last_comment_by": "jordijoangimenez",
-        "last_comment_date": "2026-05-11",
+        "last_comment_by": "dsilhavy",
+        "last_comment_date": "2026-05-12",
         "date": "2026-03-23",
-        "days_ago": 50,
+        "days_ago": 56,
         "color": "green",
         "blink": false
       }
     ],
     "Conversational Avatar": [],
-    "6G Testbed": [],
-    "DVB-I over 5G": [
+    "6G Testbed": [
       {
-        "number": "#51",
-        "status": "Draft",
-        "repo": "rt-5gms-application",
-        "title": "Feature/release changes",
-        "url": "https://github.com/5G-MAG/rt-5gms-application/pull/51",
-        "user": "dsilhavy",
-        "last_comment_by": null,
-        "last_comment_date": null,
-        "date": "2026-05-08",
-        "days_ago": 4,
+        "number": "#6",
+        "status": "Ready",
+        "repo": "6G-Testbed",
+        "title": "Add realtime video analysis and chat with token IDs scenarios",
+        "url": "https://github.com/5G-MAG/6G-Testbed/pull/6",
+        "user": "jianbing119",
+        "last_comment_by": "jordijoangimenez",
+        "last_comment_date": "2026-05-13",
+        "date": "2026-05-12",
+        "days_ago": 6,
         "color": "green",
         "blink": true
       }
     ],
+    "DVB-I over 5G": [],
     "Network APIs": [
       {
         "number": "#66",
@@ -281,26 +225,26 @@
         "title": "feature: m1-mcp-server added",
         "url": "https://github.com/5G-MAG/rt-common-shared/pull/66",
         "user": "aaronmontilla",
-        "last_comment_by": "jordijoangimenez",
-        "last_comment_date": "2026-05-11",
+        "last_comment_by": "dsilhavy",
+        "last_comment_date": "2026-05-12",
         "date": "2026-03-23",
-        "days_ago": 50,
+        "days_ago": 56,
         "color": "green",
         "blink": false
       },
       {
-        "number": "#104",
+        "number": "#1",
         "status": "Ready",
-        "repo": "rt-5gms-application-provider",
-        "title": "Feature/102 track external provisioning sessions",
-        "url": "https://github.com/5G-MAG/rt-5gms-application-provider/pull/104",
-        "user": "ErikGaida",
-        "last_comment_by": "ErikGaida",
-        "last_comment_date": "2026-05-08",
-        "date": "2026-03-17",
-        "days_ago": 56,
+        "repo": "rt-camara-examples",
+        "title": "Initial Insomnia collections for CQM APIs",
+        "url": "https://github.com/5G-MAG/rt-camara-examples/pull/1",
+        "user": "jordijoangimenez",
+        "last_comment_by": "jordijoangimenez",
+        "last_comment_date": "2026-05-13",
+        "date": "2026-05-13",
+        "days_ago": 5,
         "color": "green",
-        "blink": false
+        "blink": true
       }
     ],
     "5G Broadcast Emergency Alerts": [
@@ -314,40 +258,12 @@
         "last_comment_by": "jordijoangimenez",
         "last_comment_date": "2025-10-22",
         "date": "2024-11-20",
-        "days_ago": 538,
+        "days_ago": 544,
         "color": "red",
         "blink": false
       }
     ],
     "5G Multicast Broadcast": [
-      {
-        "number": "#33",
-        "status": "Ready",
-        "repo": "rt-mbs-function",
-        "title": "Release of MBS Function v0.2.0",
-        "url": "https://github.com/5G-MAG/rt-mbs-function/pull/33",
-        "user": "davidjwbbc",
-        "last_comment_by": "jordijoangimenez",
-        "last_comment_date": "2026-05-11",
-        "date": "2026-05-07",
-        "days_ago": 5,
-        "color": "green",
-        "blink": true
-      },
-      {
-        "number": "#60",
-        "status": "Ready",
-        "repo": "rt-mbs-transport-function",
-        "title": "Release of MBS Transport Function v1.3.0",
-        "url": "https://github.com/5G-MAG/rt-mbs-transport-function/pull/60",
-        "user": "davidjwbbc",
-        "last_comment_by": "jordijoangimenez",
-        "last_comment_date": "2026-05-11",
-        "date": "2026-05-07",
-        "days_ago": 5,
-        "color": "green",
-        "blink": true
-      },
       {
         "number": "#17",
         "status": "Ready",
@@ -355,38 +271,24 @@
         "title": "Fix/mbs deps: Alignment with MBS RCs",
         "url": "https://github.com/5G-MAG/rt-mbs-examples/pull/17",
         "user": "jordijoangimenez",
-        "last_comment_by": null,
-        "last_comment_date": null,
+        "last_comment_by": "jordijoangimenez",
+        "last_comment_date": "2026-05-12",
         "date": "2026-05-11",
-        "days_ago": 1,
+        "days_ago": 7,
         "color": "green",
         "blink": true
       },
       {
-        "number": "#15",
-        "status": "Ready",
-        "repo": "rt-mbs-examples",
-        "title": "Copy 5g-mbs-dev repository and fix so it works here",
-        "url": "https://github.com/5G-MAG/rt-mbs-examples/pull/15",
-        "user": "joseprrm",
-        "last_comment_by": "joseprrm",
-        "last_comment_date": "2026-03-13",
-        "date": "2026-03-13",
-        "days_ago": 60,
-        "color": "green",
-        "blink": false
-      },
-      {
         "number": "#13",
-        "status": "Draft",
+        "status": "Ready",
         "repo": "rt-mbs-examples",
         "title": "Add Insomnia collection and environment for TMGI Service API",
         "url": "https://github.com/5G-MAG/rt-mbs-examples/pull/13",
         "user": "dsilhavy",
-        "last_comment_by": null,
-        "last_comment_date": null,
+        "last_comment_by": "jordijoangimenez",
+        "last_comment_date": "2026-05-13",
         "date": "2026-02-23",
-        "days_ago": 78,
+        "days_ago": 84,
         "color": "green",
         "blink": false
       }
