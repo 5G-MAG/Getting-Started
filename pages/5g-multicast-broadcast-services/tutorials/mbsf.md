@@ -9,10 +9,9 @@ nav_order: 1
 
 <img src="../../../assets/images/Banner_5MBS.png" /> 
 
-# Tutorial - Operating the MBS Function and APIs
+# Tutorial - Operating the MBS Function (MBSF) and APIs
 
-The MBS Function is responsible for controlling the MBS User Services sessions. It does this by managing MBS Sessions with the
-MB-SMF, managing MBS Distribution Sessions with the MBSTF(s) and creating and propagating the User Service Announcements. 
+The MBS Function is responsible for controlling the MBS User Services sessions. It does this by managing MBS Sessions with the MB-SMF, managing MBS Distribution Sessions with the MBSTF(s) and creating and propagating the User Service Announcements. 
 
 The initial implementation of the MBSF performs the first two tasks, managing the MB-SMF and MBSTF(s), but does not implement the Service Announcement at this time.
 
@@ -71,22 +70,18 @@ block-beta
 
 ## Prerequisites
 
-This tutorial assumes that you have cloned and built the [rt-mbs-function repository](https://github.com/5G-MAG/rt-mbs-function), [rt-mbs-transport-function repository](https://github.com/5G-MAG/rt-mbs-transport-function) and the [5MBS branch of the open5gs repository](https://github.com/5G-MAG/open5gs/tree/5mbs).
+This tutorial assumes that you have cloned and built the [rt-mbs-function repository](https://github.com/5G-MAG/rt-mbs-function) and [rt-mbs-transport-function repository](https://github.com/5G-MAG/rt-mbs-transport-function).
 
-A 5G Core must be running for these examples with at least the NRF, SCP, MB-SMF, MB-UPF, MB-AMF and UDM Network
-Functions (see the instructions in our [Open5GS 5MBS branch](https://github.com/5G-MAG/open5gs/tree/5mbs) README). 
+A 5G Core with UDP tunnelling should be running for these examples (unless using the *netcat* package to fake an MB-UPF UDP tunnel) with at least the NRF, SCP, MB-SMF, MB-UPF and MB-AMF Network Functions (see the instructions in our [Open5GS 5MBS branch](https://github.com/5G-MAG/open5gs/tree/5mbs)).
 
-There should also be an MBSTF running (see the instructions in the [rt-mbs-transport-function](https://github.com/5G-MAG/rt-mbs-transport-function) README).
-
-For convenience we are providing a bash script that starts all required components including the MBSF. You can
-find the script [here](https://github.com/5G-MAG/rt-mbs-examples/blob/main/scripts/tmux/mbs-function-tutorial-startup.sh).
-The instructions to use the script can be
-found [here](https://github.com/5G-MAG/rt-mbs-examples/tree/main/scripts/tmux#mbsf-tutorial-startup-script). If you use
-the script you can omit the step "Running the MBSF for this tutorial".
+For convenience we are providing a bash script that starts all required components including the MBSTF, 5GC NFs and Media Server using [tmux](https://github.com/5G-MAG/rt-mbs-examples/blob/main/scripts/tmux). The instructions to use the script can be found [here](https://github.com/5G-MAG/rt-mbs-examples/tree/main/scripts/tmux#mbsf-tutorial-startup-script). If you use the script you can omit some of the steps in this tutorial.
 
 ## Description
 
 In this tutorial we will cover the configuration of the MBSF via the APIs at reference point Nmb10. The configuration is split into 2 main areas, the MBS User Services and the MBS User Data Ingest Sessions.
+
+We will be using the `curl` command line tool to send HTTP requests to the API. However, if you prefer a graphical user interface to trigger the calls we are also offering an
+[Insomnia collection](https://github.com/5G-MAG/rt-mbs-examples/tree/main/insomnia). When using the Insomnia collection, please remind to set the `Preferred HTTP version` to `HTTP/2 PriorKnowledge`.
 
 ```mermaid
 ---
@@ -158,8 +153,7 @@ With an MBS aware 5G Core running, and an MBSTF running (see above in [Prerequis
 The following sections cover the operations that can be performed on MBS User Services via the Nmb10 API. The operations
 covered are Create, Update, Retrieve and Delete. For that purpose we will be using the `curl` command line tool to send
 HTTP requests to the API. However, if you prefer a graphical user interface to trigger the calls we are also offering an
-Insomnia collection. You can find the
-collection [here](https://github.com/5G-MAG/rt-mbs-examples/tree/main/insomnia).
+Insomnia collection. You can find the collection [here](https://github.com/5G-MAG/rt-mbs-examples/tree/main/insomnia).
 
 ### Create MBS User Service
 
@@ -400,7 +394,34 @@ The resulting response should be a *201 Created* HTTP status code with the body 
 				"ssm":	{
 					"sourceIpAddr":	{
 						"ipv4Addr":	"127.0.0.5"
-					},
+					},{
+  "mbsUserServId": "{{ _.mbs_user_service_id }}",
+  "mbsDisSessInfos": {
+    "AP_MBS_SESSION_1": {
+      "mbsSessionId": {
+        "ssm": {
+          "sourceIpAddr": {
+            "ipv4Addr": "127.0.0.5"
+          },
+          "destIpAddr": {
+            "ipv4Addr": "232.10.0.7"
+          }
+        }
+      },
+      "mbsDistSessState": "ACTIVE",
+      "maxContBitRate": "10 Mbps",
+      "distrMethod": "OBJECT",
+      "objDistrInfo": {
+        "operatingMode": "CAROUSEL",
+        "objAcqMethod": "PULL",
+        "objIngUri": "http://localhost:3004/",
+        "objAcqIds": ["carousel"],
+        "objDistrUri": "http://127.0.0.2/"
+      }
+    }
+  },
+	"suppFeat": "3"
+}
 					"destIpAddr":	{
 						"ipv4Addr":	"232.10.0.5"
 					}
@@ -568,5 +589,68 @@ The response, if the MBS User Data Ingest Session can be found, will be an HTTP 
 < 
 ```
 
-{: .note }
-The MBSF can also parse MbsServiceArea. Where a TAC is specified, the DistributionSessionInfo part of the UserDataIngSession includes the optional tgtServAreas property with the format: `"tgtServAreas": {"taiList": [{"plmnId": {"mcc": "001", "mnc": "001"}, "tac": "<TAC-value>"}]}`
+## Example MBS User Data Ingest Sessions
+
+### MBS User Data Ingest Session request body including MBS Service Area
+
+The MBSF can parse MbsServiceArea. Where a TAC is specified, the DistributionSessionInfo part of the UserDataIngSession includes the optional tgtServAreas property with the format:
+
+```
+"tgtServAreas": {
+	"taiList": [
+		{"plmnId": {"mcc": "001", "mnc": "001"}, "tac": "ABCDEF"}
+	]
+}
+```
+
+### MBS User Data Ingest Session request body including Activation Periods
+
+The MBSF can parse Activation Periods with specific time window(s) during which the broadcast/multicast session is active and transmitting data over the network.
+```
+"actPeriods": [
+	{"startTime": "2026-04-07T10:29:46Z", "stopTime": "2030-04-07T23:59:59.999999Z"}
+]
+```
+
+Repetitions can also be indicated:
+
+```
+"actPeriodsRepRule": {
+	"startTime": "2026-04-07T10:30:00Z", "duration": 60, "repetitionInterval": 120
+},
+```
+
+### MBS User Data Ingest Session request body for CAROUSEL operating mode
+
+The MBSF can create CAROUSEL session where the server will repeatedly cycle through and broadcast the set of files (a file carousel).
+
+```
+{
+  "mbsUserServId": "{<mbs_user_data_ing_session_id>}",
+  "mbsDisSessInfos": {
+    "AP_MBS_SESSION_1": {
+      "mbsSessionId": {
+        "ssm": {
+          "sourceIpAddr": {
+            "ipv4Addr": "127.0.0.5"
+          },
+          "destIpAddr": {
+            "ipv4Addr": "232.10.0.7"
+          }
+        }
+      },
+      "mbsDistSessState": "ACTIVE",
+      "maxContBitRate": "10 Mbps",
+      "distrMethod": "OBJECT",
+      "objDistrInfo": {
+        "operatingMode": "CAROUSEL",
+        "objAcqMethod": "PULL",
+        "objIngUri": "http://localhost:3004/",
+        "objAcqIds": ["carousel"],
+        "objDistrUri": "http://127.0.0.2/"
+      }
+    }
+  },
+	"suppFeat": "3"
+}
+```
