@@ -1,6 +1,6 @@
 ---
 layout: default
-title: MBS 5GC, NG-RAN, UE
+title: MBS End-to-End
 parent: Tutorials
 grand_parent: 5G Multicast Broadcast Services
 has_children: false
@@ -9,7 +9,7 @@ nav_order: 4
 
 <img src="../../../assets/images/Banner_5MBS.png" /> 
 
-# Tutorial - Operating the MBS 5GC, NG-RAN and UE
+# Tutorial - MBS End-to-End: Operating MBS User Services, MBS 5GC, NG-RAN and UE
 
 TBC
 
