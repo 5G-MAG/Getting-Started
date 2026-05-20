@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-05-19 01:08",
+  "last_updated": "2026-05-20 01:09",
   "projects": {
     "5G Media Streaming": [
       {
@@ -12,23 +12,9 @@
         "last_comment_by": "dsilhavy",
         "last_comment_date": "2026-03-27",
         "date": "2026-02-20",
-        "days_ago": 88,
+        "days_ago": 89,
         "color": "green",
         "blink": false
-      },
-      {
-        "number": "#63",
-        "status": "Ready",
-        "repo": "rt-5gms-media-session-handler",
-        "title": "Fix fatal exception due to UI element",
-        "url": "https://github.com/5G-MAG/rt-5gms-media-session-handler/pull/63",
-        "user": "sygupt",
-        "last_comment_by": null,
-        "last_comment_date": null,
-        "date": "2026-05-18",
-        "days_ago": 1,
-        "color": "green",
-        "blink": true
       }
     ],
     "5G Core Service Consumers": [],
@@ -44,7 +30,7 @@
         "last_comment_by": "jordijoangimenez",
         "last_comment_date": "2025-10-22",
         "date": "2024-11-20",
-        "days_ago": 545,
+        "days_ago": 546,
         "color": "red",
         "blink": false
       },
@@ -58,7 +44,7 @@
         "last_comment_by": "rbouqueau",
         "last_comment_date": "2025-10-31",
         "date": "2021-11-30",
-        "days_ago": 1631,
+        "days_ago": 1632,
         "color": "red",
         "blink": false
       },
@@ -72,7 +58,7 @@
         "last_comment_by": "rbouqueau",
         "last_comment_date": "2021-10-23",
         "date": "2021-10-23",
-        "days_ago": 1669,
+        "days_ago": 1670,
         "color": "red",
         "blink": false
       },
@@ -86,7 +72,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2025-08-27",
-        "days_ago": 265,
+        "days_ago": 266,
         "color": "red",
         "blink": false
       }
@@ -102,7 +88,7 @@
         "last_comment_by": "jordijoangimenez",
         "last_comment_date": "2025-10-07",
         "date": "2025-05-09",
-        "days_ago": 375,
+        "days_ago": 376,
         "color": "red",
         "blink": false
       }
@@ -120,7 +106,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-03-24",
-        "days_ago": 56,
+        "days_ago": 57,
         "color": "green",
         "blink": false
       }
@@ -136,7 +122,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-03-27",
-        "days_ago": 53,
+        "days_ago": 54,
         "color": "green",
         "blink": false
       },
@@ -150,7 +136,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-03-12",
-        "days_ago": 68,
+        "days_ago": 69,
         "color": "green",
         "blink": false
       },
@@ -164,7 +150,7 @@
         "last_comment_by": "dsilhavy",
         "last_comment_date": "2023-10-18",
         "date": "2023-05-16",
-        "days_ago": 1099,
+        "days_ago": 1100,
         "color": "red",
         "blink": false
       },
@@ -178,7 +164,7 @@
         "last_comment_by": "rbouqueau",
         "last_comment_date": "2025-10-31",
         "date": "2021-11-30",
-        "days_ago": 1631,
+        "days_ago": 1632,
         "color": "red",
         "blink": false
       },
@@ -192,7 +178,7 @@
         "last_comment_by": "rbouqueau",
         "last_comment_date": "2021-10-23",
         "date": "2021-10-23",
-        "days_ago": 1669,
+        "days_ago": 1670,
         "color": "red",
         "blink": false
       }
@@ -206,9 +192,9 @@
         "url": "https://github.com/5G-MAG/rt-common-shared/pull/66",
         "user": "aaronmontilla",
         "last_comment_by": "dsilhavy",
-        "last_comment_date": "2026-05-12",
+        "last_comment_date": "2026-05-19",
         "date": "2026-03-23",
-        "days_ago": 57,
+        "days_ago": 58,
         "color": "green",
         "blink": false
       }
@@ -225,7 +211,7 @@
         "last_comment_by": "jordijoangimenez",
         "last_comment_date": "2026-05-13",
         "date": "2026-05-12",
-        "days_ago": 7,
+        "days_ago": 8,
         "color": "green",
         "blink": true
       }
@@ -240,9 +226,9 @@
         "url": "https://github.com/5G-MAG/rt-common-shared/pull/66",
         "user": "aaronmontilla",
         "last_comment_by": "dsilhavy",
-        "last_comment_date": "2026-05-12",
+        "last_comment_date": "2026-05-19",
         "date": "2026-03-23",
-        "days_ago": 57,
+        "days_ago": 58,
         "color": "green",
         "blink": false
       },
@@ -256,7 +242,7 @@
         "last_comment_by": "jordijoangimenez",
         "last_comment_date": "2026-05-13",
         "date": "2026-05-13",
-        "days_ago": 6,
+        "days_ago": 7,
         "color": "green",
         "blink": true
       }
@@ -272,26 +258,12 @@
         "last_comment_by": "jordijoangimenez",
         "last_comment_date": "2025-10-22",
         "date": "2024-11-20",
-        "days_ago": 545,
+        "days_ago": 546,
         "color": "red",
         "blink": false
       }
     ],
     "5G Multicast Broadcast": [
-      {
-        "number": "#17",
-        "status": "Ready",
-        "repo": "rt-mbs-examples",
-        "title": "Fix/mbs deps: Alignment with MBS RCs",
-        "url": "https://github.com/5G-MAG/rt-mbs-examples/pull/17",
-        "user": "jordijoangimenez",
-        "last_comment_by": "jordijoangimenez",
-        "last_comment_date": "2026-05-18",
-        "date": "2026-05-11",
-        "days_ago": 8,
-        "color": "green",
-        "blink": true
-      },
       {
         "number": "#13",
         "status": "Ready",
@@ -302,7 +274,7 @@
         "last_comment_by": "jordijoangimenez",
         "last_comment_date": "2026-05-13",
         "date": "2026-02-23",
-        "days_ago": 85,
+        "days_ago": 86,
         "color": "green",
         "blink": false
       }
