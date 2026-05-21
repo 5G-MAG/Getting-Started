@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-05-20 01:09",
+  "last_updated": "2026-05-21 01:09",
   "projects": {
     "5G Media Streaming": [
       {
@@ -12,9 +12,23 @@
         "last_comment_by": "dsilhavy",
         "last_comment_date": "2026-03-27",
         "date": "2026-02-20",
-        "days_ago": 89,
+        "days_ago": 90,
         "color": "green",
         "blink": false
+      },
+      {
+        "number": "#40",
+        "status": "Ready",
+        "repo": "rt-5gms-examples",
+        "title": "Development",
+        "url": "https://github.com/5G-MAG/rt-5gms-examples/pull/40",
+        "user": "shilinding",
+        "last_comment_by": null,
+        "last_comment_date": null,
+        "date": "2026-05-20",
+        "days_ago": 1,
+        "color": "green",
+        "blink": true
       }
     ],
     "5G Core Service Consumers": [],
@@ -30,7 +44,7 @@
         "last_comment_by": "jordijoangimenez",
         "last_comment_date": "2025-10-22",
         "date": "2024-11-20",
-        "days_ago": 546,
+        "days_ago": 547,
         "color": "red",
         "blink": false
       },
@@ -44,7 +58,7 @@
         "last_comment_by": "rbouqueau",
         "last_comment_date": "2025-10-31",
         "date": "2021-11-30",
-        "days_ago": 1632,
+        "days_ago": 1633,
         "color": "red",
         "blink": false
       },
@@ -58,7 +72,7 @@
         "last_comment_by": "rbouqueau",
         "last_comment_date": "2021-10-23",
         "date": "2021-10-23",
-        "days_ago": 1670,
+        "days_ago": 1671,
         "color": "red",
         "blink": false
       },
@@ -72,7 +86,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2025-08-27",
-        "days_ago": 266,
+        "days_ago": 267,
         "color": "red",
         "blink": false
       }
@@ -88,7 +102,7 @@
         "last_comment_by": "jordijoangimenez",
         "last_comment_date": "2025-10-07",
         "date": "2025-05-09",
-        "days_ago": 376,
+        "days_ago": 377,
         "color": "red",
         "blink": false
       }
@@ -106,7 +120,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-03-24",
-        "days_ago": 57,
+        "days_ago": 58,
         "color": "green",
         "blink": false
       }
@@ -122,7 +136,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-03-27",
-        "days_ago": 54,
+        "days_ago": 55,
         "color": "green",
         "blink": false
       },
@@ -136,7 +150,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-03-12",
-        "days_ago": 69,
+        "days_ago": 70,
         "color": "green",
         "blink": false
       },
@@ -150,7 +164,7 @@
         "last_comment_by": "dsilhavy",
         "last_comment_date": "2023-10-18",
         "date": "2023-05-16",
-        "days_ago": 1100,
+        "days_ago": 1101,
         "color": "red",
         "blink": false
       },
@@ -164,7 +178,7 @@
         "last_comment_by": "rbouqueau",
         "last_comment_date": "2025-10-31",
         "date": "2021-11-30",
-        "days_ago": 1632,
+        "days_ago": 1633,
         "color": "red",
         "blink": false
       },
@@ -178,7 +192,7 @@
         "last_comment_by": "rbouqueau",
         "last_comment_date": "2021-10-23",
         "date": "2021-10-23",
-        "days_ago": 1670,
+        "days_ago": 1671,
         "color": "red",
         "blink": false
       }
@@ -194,7 +208,7 @@
         "last_comment_by": "dsilhavy",
         "last_comment_date": "2026-05-19",
         "date": "2026-03-23",
-        "days_ago": 58,
+        "days_ago": 59,
         "color": "green",
         "blink": false
       }
@@ -211,7 +225,7 @@
         "last_comment_by": "jordijoangimenez",
         "last_comment_date": "2026-05-13",
         "date": "2026-05-12",
-        "days_ago": 8,
+        "days_ago": 9,
         "color": "green",
         "blink": true
       }
@@ -228,7 +242,7 @@
         "last_comment_by": "dsilhavy",
         "last_comment_date": "2026-05-19",
         "date": "2026-03-23",
-        "days_ago": 58,
+        "days_ago": 59,
         "color": "green",
         "blink": false
       },
@@ -242,7 +256,7 @@
         "last_comment_by": "jordijoangimenez",
         "last_comment_date": "2026-05-13",
         "date": "2026-05-13",
-        "days_ago": 7,
+        "days_ago": 8,
         "color": "green",
         "blink": true
       }
@@ -258,7 +272,7 @@
         "last_comment_by": "jordijoangimenez",
         "last_comment_date": "2025-10-22",
         "date": "2024-11-20",
-        "days_ago": 546,
+        "days_ago": 547,
         "color": "red",
         "blink": false
       }
@@ -274,7 +288,7 @@
         "last_comment_by": "jordijoangimenez",
         "last_comment_date": "2026-05-13",
         "date": "2026-02-23",
-        "days_ago": 86,
+        "days_ago": 87,
         "color": "green",
         "blink": false
       }
