@@ -20,139 +20,53 @@ CMCD Reporting executes the collection of Common Media Client Data (CMCD) from t
 For details please refer to the [corresponding section](end-to-end.html#1-installing-the-application-function) in
 the [basic end-to-end guide](end-to-end.html).
 
-### Step 2: Install the Application Server
-
-For details please refer to the [corresponding section](end-to-end.html#2-installing-the-application-server) in
-the [basic end-to-end guide](end-to-end.html).
-
-### Step 3: Start the Application Server
-
-For details please refer to the [corresponding section](end-to-end.html#3-running-the-application-server) in
-the [basic end-to-end guide](end-to-end.html).
-
-### Step 4: Basic Configuration of the Application Function
+### Step 2: Basic Configuration of the Application Function
 
 Follow the [basic configuration steps](end-to-end.html#configuration-of-the-af) documented in
 the [basic end-to-end guide](end-to-end.html).
 
-### Step 5: Start the Application Function
+### Step 3: Start the Application Function
 
 Follow the [command](end-to-end.html#starting-the-af) documented in the [basic end-to-end guide](end-to-end.html).
 
+### Step 4: Install the Application Server
 
-### Step 6: Deploy the cmcd-toolkit
+For details please refer to the [corresponding section](end-to-end.html#2-installing-the-application-server) in
+the [basic end-to-end guide](end-to-end.html).
 
-#### Step 6.1 Run git clone https://github.com/5G-MAG/cmcd-toolkit.git
-    
-#### Step 6.2 Compose
+### Step 5: Enable/Disable CMCD in the Application Server
+
+Config the URL of CMCD Collector in `src/rt_5gms_as/context.py`
+- If you would like to enable CMCD on AS, set the cmcd_collector_url like `"cmcd_collector_url = http://<DASHBOARD_IP>:3000/cmcd/response-mode"`；just replace the `<DASHBOARD_IP>` with the IP of the machine where the CMCD dashboard is running on.
+- If you would like to disable CMCD on AS, leave the cmcd_collector_url NULL as default
+
+### Step 6: Start the Application Server
+
+For details please refer to the [corresponding section](end-to-end.html#3-running-the-application-server) in
+the [basic end-to-end guide](end-to-end.html).
+
+### Step 7: Deploy the cmcd-toolkit
+
+#### Step 7.1 Clone cmcd-toolkit 
 ````bash
-chmod 777 cmcd-toolkit/grafana/local-stack/dashboards/cmcd-dashboard.json
-run docker compose up
+git clone https://github.com/5G-MAG/cmcd-toolkit.git
 ````
 
-#### Step 6.3 Login to grafana at http://<DASHBOARD_IP>:8081
+#### Step 7.2 Compose
+````bash
+chmod 777 cmcd-toolkit/grafana/local-stack/dashboards/cmcd-dashboard.json(?????????)
+RUN docker compose up
+````
+
+#### Step 7.3 Login to grafana at http://<DASHBOARD_IP>:8081
         ○ User: admin
         ○ Password: grafana
-    
-### Step 7: Config for Openresty 
-Now that we have set up the cmcd-toolkit dashboard. The next we'll hook the Lua script converting CMCD v1 to v2 to openresty.
 
-#### Step 7.1 Config for Openresty 
-Config for Openresty as the nginx.conf file printed as below:
-In init_by_lua_block, for "collector_event_url" the IP, modify the <DASHBOARD_IP> to the IP of the machine where the CMCD dashboard was deployed.
-
-````json
-http {
-    error_log  logs/error.log  notice;
-    access_log logs/access.log;
-    include       mime.types;
-    default_type  application/octet-stream;
-
-    sendfile        on;
-    keepalive_timeout  65;
-
-    # ===============================
-    # Lua runtime environment
-    # ===============================
-    lua_package_path "/usr/local/openresty/site/lualib/?.lua;/usr/local/openresty/lualib/?.lua;/usr/share/lua/5.1/?.lua;;";
-    lua_shared_dict cmcd_cfg 1m;
-
-    # ===============================
-    # Put collector URL into shared dict
-    # ===============================
-    init_by_lua_block {
-        local dict = ngx.shared.cmcd_cfg
-        dict:set("collector_event_url", "http://<DASHBOARD_IP>:3000/cmcd/response-mode")
-    }
-
-    server {
-        listen 0.0.0.0:8088;
-        server_name localhost;
-    
-        access_log  logs/access.log;
-    
-        rewrite_by_lua_block {
-            ngx.log(ngx.ERR, "SERVER REWRITE HIT: ", ngx.var.request_uri)
-        }
-    
-        # ===============================
-        # CMCD → event-mode JSON
-        # ===============================
-        location ^~ /media/ {
-            rewrite_by_lua_block {
-                ngx.log(ngx.ERR, "INLINE REWRITE HIT: ", ngx.var.request_uri)
-                dofile("/usr/local/openresty/nginx/lua/cmcd_response_json.lua")
-                }
-                
-            content_by_lua_block {
-                ngx.exit(204)
-            }
-        }
-    
-        log_by_lua_block {
-            ngx.log(ngx.ERR, "LOG PHASE HIT: ", ngx.var.request_uri)
-        }
-    
-        location / {
-            root   html;
-            index  index.html index.htm;
-        }
-    
-        error_page   500 502 503 504  /50x.html;
-        location = /50x.html { root html; }
-    }
-}
-````
-
-#### Step 7.2 Hook the Lua script converting CMCD v1 to v2 to openresty
-````bash
-sudo cp /local/mnt/workspace/shilding/nginx.conf /usr/local/openresty/nginx/conf
-sudo cp /local/mnt/workspace/shilding/cmcd_response_json.lua /usr/local/openresty/nginx/lua
-
-sudo chown root:root /usr/local/openresty/nginx/lua/*.lua
-sudo chmod 644      /usr/local/openresty/nginx/lua/*.lua
-````
-
-#### Step 7.3 Reload configuration
-````bash
-sudo /usr/local/openresty/nginx/sbin/nginx -t && sudo systemctl reload openresty
-````
-
-### Step 8: Update the dashboard(Only need if you update the dashboards)
-````bash 
-cp the updated cmcd-dashboard.json to cmcd-toolkit/grafana/local-stack/dashboards/
-cd cmcd-toolkit/grafana/local-stack/dashboards/
-chmod 777 cmcd-dashboard.json
-
-cd ./cmcd-toolkit/
-docker compose restart
-````
-
-### Step 9: Test the dashboard with fake CMCD
-Run the cmd below on AS or on other machine(replace the ip to AS's IP), you'll see a new CMCD has been received in the dashboard:
+### Step 8: Verify the dashboard with fake CMCD message
+Run the cmd below(replace the `<DASHBOARD_IP>` with the CMCD dashboard's IP). If works, you should see a new CMCD reporting has been received in the dashboard:
 ````bash
 ts=$(date +%s%3N)
-curl -i "http://127.0.0.1:8088/media/test.m4s?CMCD=\
+curl -i "http://<DASHBOARD_IP>:8088/media/test.m4s?CMCD=\
 cid=\"_30fps/bbb2_30fps.mpd\",\
 sid=\"demo\",\
 su,\
@@ -172,10 +86,6 @@ ts=${ts},\
 v=1"
 ````
 
-### Step 10: Support on the Application Server(need to do)
-Need to merge the nginx.conf to the nginx.conf.tmpl
-
-
 
 ## Client-side Setup
 As we are all set on the server-side now we can focus on the client side.
@@ -188,16 +98,20 @@ While consuming content via our previously installed 5GMSd Application Server an
 <img src="../../../assets/images/5gms/app-playback.png" width="40%" /> 
 
 ### Step 3: Inspecting the CMCD Report in Dashboard
-Navigate to http://<DASHBOARD_IP> :8081/dashboards in your browser
+Navigate to `http://<DASHBOARD_IP>:8081/dashboards` in your browser, like below you should see:
 <img src="../../../assets/images/5gms/cmcd-dashboard.png" width="70%" /> 
 
 
 ## Logs for Debugging
 ### Nginx access:   
+````bash
     tail -n 0 -f /usr/local/openresty/nginx/logs/access.log
+````
 
-### Nginx error  :    
+### Nginx error  : 
+````bash   
     tail -n 0 -f /usr/local/openresty/nginx/logs/error.log    
+````
 
 ### CMCD Collector(watch the conversion result CMCD v1 to v2):   
 ````bash
