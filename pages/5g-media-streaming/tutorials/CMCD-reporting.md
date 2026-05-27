@@ -11,7 +11,11 @@ nav_order: 7
 
 ## Introduction
 
-CMCD Reporting executes the collection of Common Media Client Data (CMCD) from the Media Player and the forwarding of CMCD metrics through the 5G Media Streaming system for monitoring and analysis purposes. CMCD information is reported in‑band with media requests using HTTP query parameters or request headers and is extracted by the Application Server during normal media delivery. The Application Server forwards the collected CMCD metrics to a metrics collector, where they can be visualized using a dashboard to analyze media session behavior and content delivery characteristics. This tutorial describes how to set up and enable CMCD Reporting using the 5G‑MAG Reference Tools and how to access the resulting CMCD metrics.
+CMCD Reporting enables the collection of CMCD(Common Media Client Data, [CTA-5004](https://cdn.cta.tech/cta/media/media/resources/standards/pdfs/cta-5004-final.pdf)) from the media player and the forwarding of CMCD metrics through the 5G Media Streaming system for monitoring and analysis.
+
+CMCD information is reported in-band with media requests using HTTP query parameters or request headers, and is extracted by the Application Server during normal media delivery. The Application Server then forwards the collected and formatted CMCD metrics to a CMCD Collector, where they can be visualized via a dashboard for analyzing media session behavior and content delivery characteristics.
+
+This tutorial describes how to set up and enable CMCD Reporting in the 5G‑MAG Reference Tools, and how to access the CMCD dashboard.
 
 ## Server-side Setup
 
@@ -54,19 +58,19 @@ git clone https://github.com/5G-MAG/cmcd-toolkit.git
 
 #### Step 7.2 Compose
 ````bash
-chmod 777 cmcd-toolkit/grafana/local-stack/dashboards/cmcd-dashboard.json(?????????)
+chmod 777 cmcd-toolkit/grafana/local-stack/dashboards/cmcd-dashboard.json
 RUN docker compose up
 ````
 
 #### Step 7.3 Login to grafana at http://<DASHBOARD_IP>:8081
-        ○ User: admin
-        ○ Password: grafana
+    + User: admin
+    + Password: grafana
 
 ### Step 8: Verify the dashboard with fake CMCD message
-Run the cmd below(replace the `<DASHBOARD_IP>` with the CMCD dashboard's IP). If works, you should see a new CMCD reporting has been received in the dashboard:
+Run the cmd below(replace the `<YOUR_MACHINE_IP_HERE>` with the IP of the machine that the 5GMS Application Server is running on). If works, you should see a new CMCD reporting has been received in the dashboard.
 ````bash
 ts=$(date +%s%3N)
-curl -i "http://<DASHBOARD_IP>:8088/media/test.m4s?CMCD=\
+curl -i "http://<YOUR_MACHINE_IP_HERE>/media/test.m4s?CMCD=\
 cid=\"_30fps/bbb2_30fps.mpd\",\
 sid=\"demo\",\
 su,\
@@ -103,14 +107,16 @@ Navigate to `http://<DASHBOARD_IP>:8081/dashboards` in your browser, like below 
 
 
 ## Logs for Debugging
-### Nginx access:   
+### Nginx access（application-server）:   
 ````bash
-    tail -n 0 -f /usr/local/openresty/nginx/logs/access.log
+    ps -ef | grep nginx # View log path
+    tail -n 0 -f <Your access log path>
 ````
 
 ### Nginx error  : 
 ````bash   
-    tail -n 0 -f /usr/local/openresty/nginx/logs/error.log    
+    ps -ef | grep nginx # View log path
+    tail -n 0 -f <Your error log path>
 ````
 
 ### CMCD Collector(watch the conversion result CMCD v1 to v2):   
