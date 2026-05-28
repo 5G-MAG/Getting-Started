@@ -40,9 +40,9 @@ the [basic end-to-end guide](end-to-end.html).
 
 ### Step 5: Enable/Disable CMCD in the Application Server
 
-Config the URL of CMCD Collector in `src/rt_5gms_as/context.py`
-- If you would like to enable CMCD on AS, set the cmcd_collector_url like `"cmcd_collector_url = http://<DASHBOARD_IP>:3000/cmcd/response-mode"`；just replace the `<DASHBOARD_IP>` with the IP of the machine where the CMCD dashboard is running on.
-- If you would like to disable CMCD on AS, leave the cmcd_collector_url NULL as default
+Config the URL of CMCD Collector in `src/rt_5gms_as/context.py`:
+- If you would like to enable CMCD on AS, set the `cmcd_collector_url` like `"cmcd_collector_url = http://<CMCD_DASHBOARD_IP>:3000/cmcd/response-mode"`; just replace the `<CMCD_DASHBOARD_IP>` with the IP of the machine where the CMCD dashboard is running on. As an example, the `cmcd_collector_url` can look like this `http://10.64.39.13:3000/cmcd/response-mode`.
+- If you would like to disable CMCD on AS, leave the cmcd_collector_url NULL as default.
 
 ### Step 6: Start the Application Server
 
@@ -99,33 +99,35 @@ Please follow the instructions documented in the basic end-to-end guide setup gu
 
 ### Step 2: Creating CMCD Report
 While consuming content via our previously installed 5GMSd Application Server and 5GMSd Application Function the client is automatically collecting and sending CMCD Reports.
-<img src="../../../assets/images/5gms/app-playback.png" width="40%" /> 
+
+<img src="../../../assets/images/5gms/app-playback.png" width="35%" /> 
 
 ### Step 3: Inspecting the CMCD Report in Dashboard
-Navigate to `http://<DASHBOARD_IP>:8081/dashboards` in your browser, like below you should see:
-<img src="../../../assets/images/5gms/cmcd-dashboard.png" width="70%" /> 
+Navigate to `http://<CMCD_DASHBOARD_IP>:8081/dashboards` in your browser, like below you should see:
+
+<img src="../../../assets/images/5gms/cmcd-dashboard.png" width="85%" /> 
 
 
 ## Logs for Debugging
-### Nginx access（application-server）:   
+### Nginx access（watch the CMCD msg on AS）:   
 ````bash
-    ps -ef | grep nginx # View log path
+    ps -ef | grep nginx # Find log path
     tail -n 0 -f <Your access log path>
 ````
 
-### Nginx error  : 
+### Nginx error : 
 ````bash   
-    ps -ef | grep nginx # View log path
+    ps -ef | grep nginx # Find log path
     tail -n 0 -f <Your error log path>
 ````
 
-### CMCD Collector(watch the conversion result CMCD v1 to v2):   
+### CMCD Collector(watch the conversion result from CMCD v1 to v2):   
 ````bash
     docker logs -f --tail 10 cmcd-toolkit-collector-1
 ````
 <img src="../../../assets/images/5gms/cmcd-toolkit-collector-log.png" width="100%" /> 
 
-### Fluentd(watch the log of database of the dashboard)
+### Fluentd(watch the log of the dashboard database)
 ````bash
     docker logs cmcd-toolkit-fluentd-1 | grep -i "node.collector"
 ````
