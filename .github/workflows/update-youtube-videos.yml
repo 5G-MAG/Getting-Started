@@ -25,11 +25,11 @@ jobs:
           from datetime import datetime
 
           PLAYLIST_ID = "PLFqKJZ78_IWUibB6dMiabaVNDFLSGBWlx"
-          RSS_URL = f"https://www.youtube.com/feeds/videos.xml?playlist_id={PLAYLIST_ID}"
+          RSS_URL = "https://www.youtube.com/feeds/videos.xml?playlist_id=" + PLAYLIST_ID
           MD_FILE = "pages/5g-media-streaming/tutorials.md"
 
           # --- Fetch and parse RSS feed ---
-          print(f"Fetching RSS feed: {RSS_URL}")
+          print("Fetching RSS feed: " + RSS_URL)
           with urllib.request.urlopen(RSS_URL) as response:
               xml_content = response.read()
 
@@ -53,28 +53,25 @@ jobs:
 
           # Sort newest first
           videos.sort(key=lambda x: x[0], reverse=True)
-          print(f"Found {len(videos)} videos. Most recent: {videos[0][2] if videos else 'none'}")
+          print("Found " + str(len(videos)) + " videos.")
 
           # --- Build responsive HTML grid ---
-          # Each video is wrapped in a div that keeps the 16:9 ratio at any width.
-          # The outer grid is two columns on wide screens, one column on narrow screens.
           items_html = ""
           for _, vid_id, title in videos:
               safe_title = title.replace('"', '&quot;')
-              items_html += f"""  <div class="yt-item">
-      <div class="yt-embed-wrapper">
-        <iframe
-          src="https://www.youtube.com/embed/{vid_id}"
-          title="{safe_title}"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          referrerpolicy="strict-origin-when-cross-origin"
-          allowfullscreen></iframe>
-      </div>
-    </div>\n"""
+              items_html += '  <div class="yt-item">\n'
+              items_html += '    <div class="yt-embed-wrapper">\n'
+              items_html += '      <iframe\n'
+              items_html += '        src="https://www.youtube.com/embed/' + vid_id + '"\n'
+              items_html += '        title="' + safe_title + '"\n'
+              items_html += '        frameborder="0"\n'
+              items_html += '        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"\n'
+              items_html += '        referrerpolicy="strict-origin-when-cross-origin"\n'
+              items_html += '        allowfullscreen></iframe>\n'
+              items_html += '    </div>\n'
+              items_html += '  </div>\n'
 
-          new_block = (
-              "<!-- YOUTUBE-GRID-START -->\n"
+          style_block = (
               "<style>\n"
               "  .yt-grid {\n"
               "    display: grid;\n"
@@ -82,11 +79,9 @@ jobs:
               "    gap: 1rem;\n"
               "    width: 100%;\n"
               "  }\n"
-              "  /* Single column on narrow screens (e.g. mobile) */\n"
               "  @media (max-width: 640px) {\n"
               "    .yt-grid { grid-template-columns: 1fr; }\n"
               "  }\n"
-              "  /* Keeps each iframe at 16:9 regardless of container width */\n"
               "  .yt-embed-wrapper {\n"
               "    position: relative;\n"
               "    width: 100%;\n"
@@ -102,10 +97,15 @@ jobs:
               "    height: 100%;\n"
               "  }\n"
               "</style>\n"
-              "<div class=\"yt-grid\">\n"
+          )
+
+          new_block = (
+              "<!-- YOUTUBE-GRID-START -->\n"
+              + style_block
+              + '<div class="yt-grid">\n'
               + items_html
               + "</div>\n"
-              "<!-- YOUTUBE-GRID-END -->"
+              + "<!-- YOUTUBE-GRID-END -->"
           )
 
           # --- Replace the block in the Markdown file ---
@@ -118,7 +118,6 @@ jobs:
               print("Replaced existing video grid block.")
           else:
               print("WARNING: markers not found in the Markdown file.")
-              print("Please add the markers manually — see README in the PR.")
               updated = content
 
           with open(MD_FILE, 'w', encoding='utf-8') as f:
