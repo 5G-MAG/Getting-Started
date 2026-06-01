@@ -51,16 +51,6 @@ This tutorial provides an overview on the management of MBS Session and TMGIs wi
 # Video Library
 Our [YouTube channel](https://www.youtube.com/@5GMAG) hosts some practical videos provided by developers on the use of the 5G-MAG Reference Tools.
 
-Some of the videos are also available here:
+<!-- YOUTUBE-GRID-START -->
 
-## Basic implementation of MBS Transport Function (MBSTF)
-<iframe width="560" height="315" src="https://www.youtube.com/embed/anrtRfPttmo?si=gDIJirDWv4E9-kxR" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
-## Basic implementation of MBS Function (MBSF)
-<iframe width="560" height="315" src="https://www.youtube.com/embed/0re77KNmxYQ?si=PVTIFSEPJr6rMMPU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
-## Initial support of 5MBS core network functions
-<iframe width="560" height="315" src="https://www.youtube.com/embed/lJh2F0xXxpE?si=JYYykzC9l1fFBd2_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
-## End-to-end setup with 5GC, NG-RAN and UE for MBS Broadcast Services
-<iframe width="560" height="315" src="https://www.youtube.com/embed/cdYV99cDuJE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<!-- YOUTUBE-GRID-END -->
