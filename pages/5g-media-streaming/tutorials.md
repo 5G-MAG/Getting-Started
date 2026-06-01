@@ -61,39 +61,30 @@ Our [YouTube channel](https://www.youtube.com/@5GMAG) hosts some practical video
 
 ### General end-to-end setup, components and features
 
+<!-- YOUTUBE-GRID-START -->
 <table>
   <tr>
     <td align="center">
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/2IU_18Dvhew" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      <iframe width="560" height="315"
+        src="https://www.youtube.com/embed/2IU_18Dvhew"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen></iframe>
     </td>
     <td align="center">
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/L5nGVf-WhNE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-    </td>
-  </tr>
-  <tr>
-    <td align="center">
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/lJG1hNty_AU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-    </td>
-    <td align="center">
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/fv_LoZXk5Oc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-    </td>
-  </tr>
-  <tr>
-    <td align="center">
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/hiHWE3DyhdM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-    </td>
-    <td align="center">
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/qewsQhGi8aE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-    </td>
-  </tr>
- <tr>
-    <td align="center">
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/SOA7OGF86Gg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-    </td>
-    <td align="center">
+      <iframe width="560" height="315"
+        src="https://www.youtube.com/embed/L5nGVf-WhNE"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen></iframe>
     </td>
   </tr>
 </table>
+<!-- YOUTUBE-GRID-END -->
 
 ### Demonstrators
 
