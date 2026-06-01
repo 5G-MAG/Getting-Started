@@ -1,0 +1,112 @@
+name: Update YouTube Video Grid
+
+on:
+  schedule:
+    - cron: '0 6 * * *'  # Runs daily at 06:00 UTC
+  workflow_dispatch:      # Allows manual trigger from GitHub Actions tab
+
+jobs:
+  update-videos:
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write     # Needed to commit changes back to the repo
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Fetch YouTube RSS and update tutorials.md
+        run: |
+          python3 << 'EOF'
+          import urllib.request
+          import xml.etree.ElementTree as ET
+          import re
+          from datetime import datetime
+
+          PLAYLIST_ID = "PLFqKJZ78_IWUibB6dMiabaVNDFLSGBWlx"
+          RSS_URL = f"https://www.youtube.com/feeds/videos.xml?playlist_id={PLAYLIST_ID}"
+          MD_FILE = "pages/5g-media-streaming/tutorials.md"
+
+          # --- Fetch and parse RSS feed ---
+          print(f"Fetching RSS feed: {RSS_URL}")
+          with urllib.request.urlopen(RSS_URL) as response:
+              xml_content = response.read()
+
+          ns = {
+              'atom': 'http://www.w3.org/2005/Atom',
+              'yt':   'http://www.youtube.com/xml/schemas/2015',
+              'media':'http://search.yahoo.com/mrss/',
+          }
+
+          root = ET.fromstring(xml_content)
+          entries = root.findall('atom:entry', ns)
+
+          # Build list of (published_datetime, video_id, title)
+          videos = []
+          for entry in entries:
+              video_id = entry.find('yt:videoId', ns).text
+              title    = entry.find('atom:title', ns).text
+              published = entry.find('atom:published', ns).text
+              dt = datetime.fromisoformat(published.replace('Z', '+00:00'))
+              videos.append((dt, video_id, title))
+
+          # Sort newest first
+          videos.sort(key=lambda x: x[0], reverse=True)
+          print(f"Found {len(videos)} videos. Most recent: {videos[0][2] if videos else 'none'}")
+
+          # --- Build the HTML table ---
+          rows = []
+          for i in range(0, len(videos), 2):
+              cells = ""
+              for j in range(i, min(i + 2, len(videos))):
+                  _, vid_id, title = videos[j]
+                  safe_title = title.replace('"', '&quot;')
+                  cells += f"""    <td align="center">
+                <iframe width="560" height="315"
+                  src="https://www.youtube.com/embed/{vid_id}"
+                  title="{safe_title}"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerpolicy="strict-origin-when-cross-origin"
+                  allowfullscreen></iframe>
+              </td>\n"""
+              # Pad with empty cell if odd number of videos on last row
+              if len(videos) % 2 != 0 and i == len(videos) - 1:
+                  cells += "    <td></td>\n"
+              rows.append(f"  <tr>\n{cells}  </tr>")
+
+          new_table = (
+              "<!-- YOUTUBE-GRID-START -->\n"
+              "<table>\n"
+              + "\n".join(rows)
+              + "\n</table>\n"
+              "<!-- YOUTUBE-GRID-END -->"
+          )
+
+          # --- Replace the block in the Markdown file ---
+          with open(MD_FILE, 'r', encoding='utf-8') as f:
+              content = f.read()
+
+          pattern = r'<!-- YOUTUBE-GRID-START -->.*?<!-- YOUTUBE-GRID-END -->'
+          if re.search(pattern, content, flags=re.DOTALL):
+              updated = re.sub(pattern, new_table, content, flags=re.DOTALL)
+              print("Replaced existing video grid block.")
+          else:
+              print("WARNING: markers not found in the Markdown file.")
+              print("Please add the markers manually — see the README in the PR.")
+              updated = content  # No change; avoid overwriting unintentionally
+
+          with open(MD_FILE, 'w', encoding='utf-8') as f:
+              f.write(updated)
+
+          print("Done.")
+          EOF
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add pages/5g-media-streaming/tutorials.md
+          git diff --cached --quiet && echo "No changes to commit." || \
+            (git commit -m "chore: update YouTube video grid [skip ci]" && git push)
