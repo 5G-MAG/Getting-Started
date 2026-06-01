@@ -1,0 +1,148 @@
+name: Update YouTube Video Grids
+
+on:
+  schedule:
+    - cron: '0 6 * * *'  # Runs daily at 06:00 UTC
+  workflow_dispatch:      # Allows manual trigger from GitHub Actions tab
+
+jobs:
+  update-videos:
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write     # Needed to commit changes back to the repo
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Fetch YouTube RSS feeds and update Markdown files
+        run: |
+          python3 << 'EOF'
+          import urllib.request
+          import xml.etree.ElementTree as ET
+          import re
+          from datetime import datetime
+
+          # --- Configuration: add more entries here for additional pages ---
+          PAGES = [
+              {
+                  "playlist_id": "PLFqKJZ78_IWUibB6dMiabaVNDFLSGBWlx",
+                  "md_file":     "pages/5g-media-streaming/tutorials.md",
+              },
+              {
+                  "playlist_id": "PLFqKJZ78_IWXSCsSEKeyAay10luuVF9io",
+                  "md_file":     "pages/5g-multicast-broadcast-services/tutorials.md",
+              },
+          ]
+
+          ns = {
+              'atom': 'http://www.w3.org/2005/Atom',
+              'yt':   'http://www.youtube.com/xml/schemas/2015',
+              'media':'http://search.yahoo.com/mrss/',
+          }
+
+          def build_grid_block(playlist_id):
+              rss_url = "https://www.youtube.com/feeds/videos.xml?playlist_id=" + playlist_id
+              print("Fetching: " + rss_url)
+              with urllib.request.urlopen(rss_url) as response:
+                  xml_content = response.read()
+
+              root = ET.fromstring(xml_content)
+              entries = root.findall('atom:entry', ns)
+
+              videos = []
+              for entry in entries:
+                  video_id  = entry.find('yt:videoId', ns).text
+                  title     = entry.find('atom:title', ns).text
+                  published = entry.find('atom:published', ns).text
+                  dt = datetime.fromisoformat(published.replace('Z', '+00:00'))
+                  videos.append((dt, video_id, title))
+
+              videos.sort(key=lambda x: x[0], reverse=True)
+              print("  Found " + str(len(videos)) + " videos.")
+
+              items_html = ""
+              for _, vid_id, title in videos:
+                  safe_title = title.replace('"', '&quot;')
+                  items_html += '  <div class="yt-item">\n'
+                  items_html += '    <div class="yt-embed-wrapper">\n'
+                  items_html += '      <iframe\n'
+                  items_html += '        src="https://www.youtube.com/embed/' + vid_id + '"\n'
+                  items_html += '        title="' + safe_title + '"\n'
+                  items_html += '        frameborder="0"\n'
+                  items_html += '        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"\n'
+                  items_html += '        referrerpolicy="strict-origin-when-cross-origin"\n'
+                  items_html += '        allowfullscreen></iframe>\n'
+                  items_html += '    </div>\n'
+                  items_html += '  </div>\n'
+
+              style_block = (
+                  "<style>\n"
+                  "  .yt-grid {\n"
+                  "    display: grid;\n"
+                  "    grid-template-columns: repeat(2, 1fr);\n"
+                  "    gap: 1rem;\n"
+                  "    width: 100%;\n"
+                  "  }\n"
+                  "  @media (max-width: 640px) {\n"
+                  "    .yt-grid { grid-template-columns: 1fr; }\n"
+                  "  }\n"
+                  "  .yt-embed-wrapper {\n"
+                  "    position: relative;\n"
+                  "    width: 100%;\n"
+                  "    padding-bottom: 56.25%;\n"
+                  "    height: 0;\n"
+                  "    overflow: hidden;\n"
+                  "  }\n"
+                  "  .yt-embed-wrapper iframe {\n"
+                  "    position: absolute;\n"
+                  "    top: 0;\n"
+                  "    left: 0;\n"
+                  "    width: 100%;\n"
+                  "    height: 100%;\n"
+                  "  }\n"
+                  "</style>\n"
+              )
+
+              return (
+                  "<!-- YOUTUBE-GRID-START -->\n"
+                  + style_block
+                  + '<div class="yt-grid">\n'
+                  + items_html
+                  + "</div>\n"
+                  + "<!-- YOUTUBE-GRID-END -->"
+              )
+
+          def update_md_file(md_file, new_block):
+              with open(md_file, 'r', encoding='utf-8') as f:
+                  content = f.read()
+
+              pattern = r'<!-- YOUTUBE-GRID-START -->.*?<!-- YOUTUBE-GRID-END -->'
+              if re.search(pattern, content, flags=re.DOTALL):
+                  updated = re.sub(pattern, new_block, content, flags=re.DOTALL)
+                  print("  Updated: " + md_file)
+              else:
+                  print("  WARNING: markers not found in " + md_file + " — skipping.")
+                  return
+
+              with open(md_file, 'w', encoding='utf-8') as f:
+                  f.write(updated)
+
+          # --- Process each page ---
+          for page in PAGES:
+              print("Processing playlist: " + page["playlist_id"])
+              new_block = build_grid_block(page["playlist_id"])
+              update_md_file(page["md_file"], new_block)
+
+          print("All done.")
+          EOF
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add pages/5g-media-streaming/tutorials.md
+          git add pages/5g-multicast-broadcast-services/tutorials.md
+          git diff --cached --quiet && echo "No changes to commit." || \
+            (git commit -m "chore: update YouTube video grids [skip ci]" && git push)
