@@ -62,108 +62,143 @@ Our [YouTube channel](https://www.youtube.com/@5GMAG) hosts some practical video
 ### General end-to-end setup, components and features
 
 <!-- YOUTUBE-GRID-START -->
-<table>
-  <tr>
-    <td align="center">
-      <iframe width="560" height="315"
+<style>
+  .yt-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    width: 100%;
+  }
+  @media (max-width: 640px) {
+    .yt-grid { grid-template-columns: 1fr; }
+  }
+  .yt-embed-wrapper {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+  }
+  .yt-embed-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+</style>
+<div class="yt-grid">
+  <div class="yt-item">
+    <div class="yt-embed-wrapper">
+      <iframe
         src="https://www.youtube.com/embed/uEfBaTqh5vw"
         title="Overview of the latest updates to the 5G Media Streaming Project - 5G-MAG Reference Tools"
         frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         referrerpolicy="strict-origin-when-cross-origin"
         allowfullscreen></iframe>
-    </td>
-    <td align="center">
-      <iframe width="560" height="315"
+    </div>
+  </div>
+  <div class="yt-item">
+    <div class="yt-embed-wrapper">
+      <iframe
         src="https://www.youtube.com/embed/SOA7OGF86Gg"
         title="Introducing the new 5GMS Application Provider Portal - 5G-MAG Reference Tools"
         frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         referrerpolicy="strict-origin-when-cross-origin"
         allowfullscreen></iframe>
-    </td>
-  </tr>
-  <tr>
-    <td align="center">
-      <iframe width="560" height="315"
+    </div>
+  </div>
+  <div class="yt-item">
+    <div class="yt-embed-wrapper">
+      <iframe
         src="https://www.youtube.com/embed/AvjtVrTrWsA"
         title="5G Media Streaming at IBC 2025"
         frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         referrerpolicy="strict-origin-when-cross-origin"
         allowfullscreen></iframe>
-    </td>
-    <td align="center">
-      <iframe width="560" height="315"
+    </div>
+  </div>
+  <div class="yt-item">
+    <div class="yt-embed-wrapper">
+      <iframe
         src="https://www.youtube.com/embed/vEhv0RYGbKo"
         title="5G Media Streaming at FOKUS Media Web Symposium 2024"
         frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         referrerpolicy="strict-origin-when-cross-origin"
         allowfullscreen></iframe>
-    </td>
-  </tr>
-  <tr>
-    <td align="center">
-      <iframe width="560" height="315"
+    </div>
+  </div>
+  <div class="yt-item">
+    <div class="yt-embed-wrapper">
+      <iframe
         src="https://www.youtube.com/embed/hiHWE3DyhdM"
         title="5G Media Streaming QoE Metrics Reporting - 5G-MAG Reference Tools"
         frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         referrerpolicy="strict-origin-when-cross-origin"
         allowfullscreen></iframe>
-    </td>
-    <td align="center">
-      <iframe width="560" height="315"
+    </div>
+  </div>
+  <div class="yt-item">
+    <div class="yt-embed-wrapper">
+      <iframe
         src="https://www.youtube.com/embed/qewsQhGi8aE"
         title="Introducing the 5GMS Application Provider Management Portal - 5G-MAG Reference Tools"
         frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         referrerpolicy="strict-origin-when-cross-origin"
         allowfullscreen></iframe>
-    </td>
-  </tr>
-  <tr>
-    <td align="center">
-      <iframe width="560" height="315"
+    </div>
+  </div>
+  <div class="yt-item">
+    <div class="yt-embed-wrapper">
+      <iframe
         src="https://www.youtube.com/embed/fv_LoZXk5Oc"
         title="5GMS Consumpion Reporting, Network Assistance and Dynamic Policies - 5G-MAG Reference Tools"
         frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         referrerpolicy="strict-origin-when-cross-origin"
         allowfullscreen></iframe>
-    </td>
-    <td align="center">
-      <iframe width="560" height="315"
+    </div>
+  </div>
+  <div class="yt-item">
+    <div class="yt-embed-wrapper">
+      <iframe
         src="https://www.youtube.com/embed/lJG1hNty_AU"
         title="5G Media Streaming supported by 5G-MAG Reference Tools - DEVELOPER XCHANGE"
         frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         referrerpolicy="strict-origin-when-cross-origin"
         allowfullscreen></iframe>
-    </td>
-  </tr>
-  <tr>
-    <td align="center">
-      <iframe width="560" height="315"
+    </div>
+  </div>
+  <div class="yt-item">
+    <div class="yt-embed-wrapper">
+      <iframe
         src="https://www.youtube.com/embed/L5nGVf-WhNE"
         title="5G Media Streaming End-to-end setup with Android clients - 5G-MAG Reference Tools"
         frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         referrerpolicy="strict-origin-when-cross-origin"
         allowfullscreen></iframe>
-    </td>
-    <td align="center">
-      <iframe width="560" height="315"
+    </div>
+  </div>
+  <div class="yt-item">
+    <div class="yt-embed-wrapper">
+      <iframe
         src="https://www.youtube.com/embed/2IU_18Dvhew"
         title="5G Media Streaming in the BBC R&D standalone testbed - 5G-MAG Reference Tools"
         frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         referrerpolicy="strict-origin-when-cross-origin"
         allowfullscreen></iframe>
-    </td>
-  </tr>
-</table>
+    </div>
+  </div>
+</div>
 <!-- YOUTUBE-GRID-END -->
 
 ### Demonstrators
