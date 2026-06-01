@@ -52,5 +52,86 @@ This tutorial provides an overview on the management of MBS Session and TMGIs wi
 Our [YouTube channel](https://www.youtube.com/@5GMAG) hosts some practical videos provided by developers on the use of the 5G-MAG Reference Tools.
 
 <!-- YOUTUBE-GRID-START -->
-
+<style>
+  .yt-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    width: 100%;
+  }
+  @media (max-width: 640px) {
+    .yt-grid { grid-template-columns: 1fr; }
+  }
+  .yt-embed-wrapper {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+  }
+  .yt-embed-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+</style>
+<div class="yt-grid">
+  <div class="yt-item">
+    <div class="yt-embed-wrapper">
+      <iframe
+        src="https://www.youtube.com/embed/e_xK_ckkhgc"
+        title="Demonstrating MBS User Service Announcement mechanisms - 5G-MAG Reference Tools"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen></iframe>
+    </div>
+  </div>
+  <div class="yt-item">
+    <div class="yt-embed-wrapper">
+      <iframe
+        src="https://www.youtube.com/embed/MF9rhnaEEP8"
+        title="Demonstrating the OBJECT_CAROUSEL operating mode - 5G-MAG Reference Tools"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen></iframe>
+    </div>
+  </div>
+  <div class="yt-item">
+    <div class="yt-embed-wrapper">
+      <iframe
+        src="https://www.youtube.com/embed/0re77KNmxYQ"
+        title="TUTORIAL - Basic implementation of MBS Function (MBSF) - Multicast Broadcast Services (MBS)"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen></iframe>
+    </div>
+  </div>
+  <div class="yt-item">
+    <div class="yt-embed-wrapper">
+      <iframe
+        src="https://www.youtube.com/embed/anrtRfPttmo"
+        title="TUTORIAL - Basic implementation of MBS Transport Function - Multicast Broadcast Services (MBS)"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen></iframe>
+    </div>
+  </div>
+  <div class="yt-item">
+    <div class="yt-embed-wrapper">
+      <iframe
+        src="https://www.youtube.com/embed/lJh2F0xXxpE"
+        title="TUTORIAL - Initial support of 5MBS core network functions"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen></iframe>
+    </div>
+  </div>
+</div>
 <!-- YOUTUBE-GRID-END -->
