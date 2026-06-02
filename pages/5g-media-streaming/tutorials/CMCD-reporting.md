@@ -7,6 +7,8 @@ has_children: false
 nav_order: 7
 ---
 
+<img src="../../../assets/images/Banner_5GMS.png" /> 
+
 # Tutorial - CMCD Reporting
 
 ## Introduction
@@ -100,7 +102,7 @@ Please follow the instructions documented in the basic end-to-end guide setup gu
 ### Step 2: Creating CMCD Report
 While consuming content via our previously installed 5GMSd Application Server and 5GMSd Application Function the client is automatically collecting and sending CMCD Reports.
 
-<img src="../../../assets/images/5gms/app-playback.png" width="35%" /> 
+<img src="../../../assets/images/5gms/app-playback.png" width="40%" /> 
 
 ### Step 3: Inspecting the CMCD Report in Dashboard
 Navigate to `http://<CMCD_DASHBOARD_IP>:8081/dashboards` in your browser, like below you should see:
@@ -109,14 +111,16 @@ Navigate to `http://<CMCD_DASHBOARD_IP>:8081/dashboards` in your browser, like b
 
 
 ## Logs for Debugging
-### Nginx access（watch the CMCD msg on AS）:   
+### Nginx access（watch the CMCD msg AS received）:   
 ````bash
+    docker exec -it <AS container ID> bash # enter the container
     ps -ef | grep nginx # Find log path
     tail -n 0 -f <Your access log path>
 ````
 
 ### Nginx error : 
 ````bash   
+    docker exec -it <AS container ID> bash # enter the container
     ps -ef | grep nginx # Find log path
     tail -n 0 -f <Your error log path>
 ````
