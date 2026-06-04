@@ -23,17 +23,17 @@ This tutorial describes how to set up and enable CMCD Reporting in the 5G‑MAG 
 
 ### Step 1: Install the Application Function
 
-For details please refer to the [corresponding section](end-to-end.md#1-installing-the-application-function) in
-the [basic end-to-end guide](end-to-end.md).
+For details please refer to the [corresponding section](end-to-end.html#1-installing-the-application-function) in
+the [basic end-to-end guide](end-to-end.html).
 
 ### Step 2: Basic Configuration of the Application Function
 
-Follow the [basic configuration steps](end-to-end.md#configuration-of-the-af) documented in
-the [basic end-to-end guide](end-to-end.md).
+Follow the [basic configuration steps](end-to-end.html#configuration-of-the-af) documented in
+the [basic end-to-end guide](end-to-end.html).
 
 ### Step 3: Start the Application Function
 
-Follow the [command](end-to-end.md#starting-the-af) documented in the [basic end-to-end guide](end-to-end.md).
+Follow the [command](end-to-end.html#starting-the-af) documented in the [basic end-to-end guide](end-to-end.html).
 
 ### Step 4: Install the Application Server
 
