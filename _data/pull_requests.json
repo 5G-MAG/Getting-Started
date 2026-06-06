@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-06-05 01:12",
+  "last_updated": "2026-06-06 01:08",
   "projects": {
     "5G Media Streaming": [
       {
@@ -10,9 +10,9 @@
         "url": "https://github.com/5G-MAG/rt-5gms-application-provider/pull/109",
         "user": "jordijoangimenez",
         "last_comment_by": "jordijoangimenez",
-        "last_comment_date": "2026-06-01",
+        "last_comment_date": "2026-06-05",
         "date": "2026-05-21",
-        "days_ago": 15,
+        "days_ago": 16,
         "color": "green",
         "blink": true
       },
@@ -26,7 +26,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-05-21",
-        "days_ago": 15,
+        "days_ago": 16,
         "color": "green",
         "blink": true
       },
@@ -40,7 +40,7 @@
         "last_comment_by": "rjb1000",
         "last_comment_date": "2026-05-26",
         "date": "2026-05-23",
-        "days_ago": 13,
+        "days_ago": 14,
         "color": "green",
         "blink": true
       },
@@ -54,27 +54,12 @@
         "last_comment_by": "shilinding",
         "last_comment_date": "2026-05-26",
         "date": "2026-02-20",
-        "days_ago": 105,
+        "days_ago": 106,
         "color": "orange",
         "blink": false
       }
     ],
-    "5G Core Service Consumers": [
-      {
-        "number": "#28",
-        "status": "Ready",
-        "repo": "rt-5gc-service-consumers",
-        "title": "Release v2.1.1 5G Core Service Consumers",
-        "url": "https://github.com/5G-MAG/rt-5gc-service-consumers/pull/28",
-        "user": "davidjwbbc",
-        "last_comment_by": null,
-        "last_comment_date": null,
-        "date": "2026-05-29",
-        "days_ago": 7,
-        "color": "green",
-        "blink": true
-      }
-    ],
+    "5G Core Service Consumers": [],
     "UE Data Collection": [],
     "5G Broadcast TV Radio": [
       {
@@ -87,7 +72,7 @@
         "last_comment_by": "jordijoangimenez",
         "last_comment_date": "2025-10-22",
         "date": "2024-11-20",
-        "days_ago": 562,
+        "days_ago": 563,
         "color": "red",
         "blink": false
       },
@@ -101,7 +86,7 @@
         "last_comment_by": "rbouqueau",
         "last_comment_date": "2025-10-31",
         "date": "2021-11-30",
-        "days_ago": 1648,
+        "days_ago": 1649,
         "color": "red",
         "blink": false
       },
@@ -115,7 +100,7 @@
         "last_comment_by": "rbouqueau",
         "last_comment_date": "2021-10-23",
         "date": "2021-10-23",
-        "days_ago": 1686,
+        "days_ago": 1687,
         "color": "red",
         "blink": false
       },
@@ -129,7 +114,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2025-08-27",
-        "days_ago": 282,
+        "days_ago": 283,
         "color": "red",
         "blink": false
       }
@@ -145,7 +130,7 @@
         "last_comment_by": "jordijoangimenez",
         "last_comment_date": "2025-10-07",
         "date": "2025-05-09",
-        "days_ago": 392,
+        "days_ago": 393,
         "color": "red",
         "blink": false
       }
@@ -163,7 +148,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-03-24",
-        "days_ago": 73,
+        "days_ago": 74,
         "color": "green",
         "blink": false
       }
@@ -179,7 +164,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-03-27",
-        "days_ago": 70,
+        "days_ago": 71,
         "color": "green",
         "blink": false
       },
@@ -193,7 +178,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-03-12",
-        "days_ago": 85,
+        "days_ago": 86,
         "color": "green",
         "blink": false
       },
@@ -207,7 +192,7 @@
         "last_comment_by": "dsilhavy",
         "last_comment_date": "2023-10-18",
         "date": "2023-05-16",
-        "days_ago": 1116,
+        "days_ago": 1117,
         "color": "red",
         "blink": false
       },
@@ -221,7 +206,7 @@
         "last_comment_by": "rbouqueau",
         "last_comment_date": "2025-10-31",
         "date": "2021-11-30",
-        "days_ago": 1648,
+        "days_ago": 1649,
         "color": "red",
         "blink": false
       },
@@ -235,7 +220,7 @@
         "last_comment_by": "rbouqueau",
         "last_comment_date": "2021-10-23",
         "date": "2021-10-23",
-        "days_ago": 1686,
+        "days_ago": 1687,
         "color": "red",
         "blink": false
       }
@@ -251,7 +236,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-05-31",
-        "days_ago": 5,
+        "days_ago": 6,
         "color": "green",
         "blink": true
       },
@@ -265,7 +250,7 @@
         "last_comment_by": "dsilhavy",
         "last_comment_date": "2026-05-19",
         "date": "2026-03-23",
-        "days_ago": 74,
+        "days_ago": 75,
         "color": "green",
         "blink": false
       }
@@ -282,7 +267,7 @@
         "last_comment_by": "jordijoangimenez",
         "last_comment_date": "2026-05-13",
         "date": "2026-05-12",
-        "days_ago": 24,
+        "days_ago": 25,
         "color": "green",
         "blink": true
       }
@@ -298,7 +283,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-05-21",
-        "days_ago": 15,
+        "days_ago": 16,
         "color": "green",
         "blink": true
       }
@@ -314,7 +299,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-05-31",
-        "days_ago": 5,
+        "days_ago": 6,
         "color": "green",
         "blink": true
       },
@@ -328,7 +313,7 @@
         "last_comment_by": "dsilhavy",
         "last_comment_date": "2026-05-19",
         "date": "2026-03-23",
-        "days_ago": 74,
+        "days_ago": 75,
         "color": "green",
         "blink": false
       },
@@ -340,9 +325,9 @@
         "url": "https://github.com/5G-MAG/rt-5gms-application-provider/pull/109",
         "user": "jordijoangimenez",
         "last_comment_by": "jordijoangimenez",
-        "last_comment_date": "2026-06-01",
+        "last_comment_date": "2026-06-05",
         "date": "2026-05-21",
-        "days_ago": 15,
+        "days_ago": 16,
         "color": "green",
         "blink": true
       },
@@ -356,7 +341,7 @@
         "last_comment_by": "jordijoangimenez",
         "last_comment_date": "2026-05-13",
         "date": "2026-05-13",
-        "days_ago": 23,
+        "days_ago": 24,
         "color": "green",
         "blink": true
       }
@@ -372,51 +357,51 @@
         "last_comment_by": "jordijoangimenez",
         "last_comment_date": "2025-10-22",
         "date": "2024-11-20",
-        "days_ago": 562,
+        "days_ago": 563,
         "color": "red",
         "blink": false
       }
     ],
     "5G Multicast Broadcast": [
       {
-        "number": "#34",
+        "number": "#36",
         "status": "Ready",
         "repo": "rt-mbs-function",
-        "title": "Feature: User Service Announcement Channel",
-        "url": "https://github.com/5G-MAG/rt-mbs-function/pull/34",
+        "title": "Release v1.0.0 - Multicast/Broadcast Services Function (MBSF)",
+        "url": "https://github.com/5G-MAG/rt-mbs-function/pull/36",
         "user": "davidjwbbc",
-        "last_comment_by": "davidjwbbc",
-        "last_comment_date": "2026-06-04",
-        "date": "2026-05-27",
-        "days_ago": 9,
+        "last_comment_by": null,
+        "last_comment_date": null,
+        "date": "2026-06-05",
+        "days_ago": 1,
         "color": "green",
         "blink": true
       },
       {
-        "number": "#61",
+        "number": "#63",
         "status": "Ready",
         "repo": "rt-mbs-transport-function",
-        "title": "Bug fixes for issues found while testing MBSF",
-        "url": "https://github.com/5G-MAG/rt-mbs-transport-function/pull/61",
+        "title": "Release v1.3.1 - Multicast/Broadcast Services Transport Function",
+        "url": "https://github.com/5G-MAG/rt-mbs-transport-function/pull/63",
         "user": "davidjwbbc",
         "last_comment_by": null,
         "last_comment_date": null,
-        "date": "2026-05-27",
-        "days_ago": 9,
+        "date": "2026-06-05",
+        "days_ago": 1,
         "color": "green",
         "blink": true
       },
       {
-        "number": "#38",
+        "number": "#39",
         "status": "Ready",
         "repo": "open5gs",
-        "title": "Bug-fix: Improve MBS Session ID comparison",
-        "url": "https://github.com/5G-MAG/open5gs/pull/38",
+        "title": "Release v0.1.4 - Open5GS with MBS",
+        "url": "https://github.com/5G-MAG/open5gs/pull/39",
         "user": "davidjwbbc",
         "last_comment_by": null,
         "last_comment_date": null,
-        "date": "2026-05-27",
-        "days_ago": 9,
+        "date": "2026-06-05",
+        "days_ago": 1,
         "color": "green",
         "blink": true
       },
@@ -430,23 +415,9 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-05-29",
-        "days_ago": 7,
+        "days_ago": 8,
         "color": "green",
         "blink": true
-      },
-      {
-        "number": "#13",
-        "status": "Ready",
-        "repo": "rt-mbs-examples",
-        "title": "Add Insomnia collection and environment for TMGI Service API",
-        "url": "https://github.com/5G-MAG/rt-mbs-examples/pull/13",
-        "user": "dsilhavy",
-        "last_comment_by": "jordijoangimenez",
-        "last_comment_date": "2026-05-13",
-        "date": "2026-02-23",
-        "days_ago": 102,
-        "color": "orange",
-        "blink": false
       }
     ]
   }
