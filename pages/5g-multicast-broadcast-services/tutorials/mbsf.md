@@ -717,7 +717,7 @@ mbsaf:
       port: 8888
 ```
 
-Using Wireshark it is possible to check the transmission of the service announcement every 10 seconds from 127.0.0.67 to 232.0.0.1 containing the details to fetch content and control plane information related to the MBSS User Service and Data Ingest Session.
+Using Wireshark it is possible to check the transmission of the service announcement every 10 seconds from 127.0.0.67 to 232.0.0.1 containing the details to fetch content and control plane information related to the MBS User Service and Data Ingest Session.
 
 ![Wireshark capture](../../../assets/images/5mbs/wireshark-service-announcement-1.png)
 
