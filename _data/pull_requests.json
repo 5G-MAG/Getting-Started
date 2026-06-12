@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-06-11 01:14",
+  "last_updated": "2026-06-12 01:17",
   "projects": {
     "5G Media Streaming": [
       {
@@ -12,7 +12,7 @@
         "last_comment_by": "jordijoangimenez",
         "last_comment_date": "2026-06-05",
         "date": "2026-05-21",
-        "days_ago": 21,
+        "days_ago": 22,
         "color": "green",
         "blink": true
       },
@@ -26,7 +26,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-05-21",
-        "days_ago": 21,
+        "days_ago": 22,
         "color": "green",
         "blink": true
       },
@@ -40,7 +40,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-06-10",
-        "days_ago": 1,
+        "days_ago": 2,
         "color": "green",
         "blink": true
       },
@@ -54,7 +54,7 @@
         "last_comment_by": "shilinding",
         "last_comment_date": "2026-05-26",
         "date": "2026-02-20",
-        "days_ago": 111,
+        "days_ago": 112,
         "color": "orange",
         "blink": false
       }
@@ -72,7 +72,7 @@
         "last_comment_by": "jordijoangimenez",
         "last_comment_date": "2025-10-22",
         "date": "2024-11-20",
-        "days_ago": 568,
+        "days_ago": 569,
         "color": "red",
         "blink": false
       },
@@ -86,7 +86,7 @@
         "last_comment_by": "rbouqueau",
         "last_comment_date": "2025-10-31",
         "date": "2021-11-30",
-        "days_ago": 1654,
+        "days_ago": 1655,
         "color": "red",
         "blink": false
       },
@@ -100,7 +100,7 @@
         "last_comment_by": "rbouqueau",
         "last_comment_date": "2021-10-23",
         "date": "2021-10-23",
-        "days_ago": 1692,
+        "days_ago": 1693,
         "color": "red",
         "blink": false
       },
@@ -114,7 +114,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2025-08-27",
-        "days_ago": 288,
+        "days_ago": 289,
         "color": "red",
         "blink": false
       }
@@ -130,7 +130,7 @@
         "last_comment_by": "jordijoangimenez",
         "last_comment_date": "2025-10-07",
         "date": "2025-05-09",
-        "days_ago": 398,
+        "days_ago": 399,
         "color": "red",
         "blink": false
       }
@@ -148,7 +148,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-03-24",
-        "days_ago": 79,
+        "days_ago": 80,
         "color": "green",
         "blink": false
       }
@@ -164,7 +164,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-03-27",
-        "days_ago": 76,
+        "days_ago": 77,
         "color": "green",
         "blink": false
       },
@@ -178,7 +178,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-03-12",
-        "days_ago": 91,
+        "days_ago": 92,
         "color": "orange",
         "blink": false
       },
@@ -192,7 +192,7 @@
         "last_comment_by": "dsilhavy",
         "last_comment_date": "2023-10-18",
         "date": "2023-05-16",
-        "days_ago": 1122,
+        "days_ago": 1123,
         "color": "red",
         "blink": false
       },
@@ -206,7 +206,7 @@
         "last_comment_by": "rbouqueau",
         "last_comment_date": "2025-10-31",
         "date": "2021-11-30",
-        "days_ago": 1654,
+        "days_ago": 1655,
         "color": "red",
         "blink": false
       },
@@ -220,7 +220,7 @@
         "last_comment_by": "rbouqueau",
         "last_comment_date": "2021-10-23",
         "date": "2021-10-23",
-        "days_ago": 1692,
+        "days_ago": 1693,
         "color": "red",
         "blink": false
       }
@@ -236,7 +236,7 @@
         "last_comment_by": "dsilhavy",
         "last_comment_date": "2026-05-19",
         "date": "2026-03-23",
-        "days_ago": 80,
+        "days_ago": 81,
         "color": "green",
         "blink": false
       }
@@ -253,9 +253,9 @@
         "last_comment_by": "jordijoangimenez",
         "last_comment_date": "2026-06-08",
         "date": "2026-05-12",
-        "days_ago": 30,
+        "days_ago": 31,
         "color": "green",
-        "blink": true
+        "blink": false
       }
     ],
     "DVB-I over 5G": [
@@ -269,7 +269,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-05-21",
-        "days_ago": 21,
+        "days_ago": 22,
         "color": "green",
         "blink": true
       }
@@ -285,7 +285,7 @@
         "last_comment_by": "dsilhavy",
         "last_comment_date": "2026-05-19",
         "date": "2026-03-23",
-        "days_ago": 80,
+        "days_ago": 81,
         "color": "green",
         "blink": false
       },
@@ -299,7 +299,7 @@
         "last_comment_by": "jordijoangimenez",
         "last_comment_date": "2026-06-05",
         "date": "2026-05-21",
-        "days_ago": 21,
+        "days_ago": 22,
         "color": "green",
         "blink": true
       },
@@ -313,7 +313,7 @@
         "last_comment_by": "jordijoangimenez",
         "last_comment_date": "2026-05-13",
         "date": "2026-05-13",
-        "days_ago": 29,
+        "days_ago": 30,
         "color": "green",
         "blink": true
       }
@@ -329,23 +329,23 @@
         "last_comment_by": "jordijoangimenez",
         "last_comment_date": "2025-10-22",
         "date": "2024-11-20",
-        "days_ago": 568,
+        "days_ago": 569,
         "color": "red",
         "blink": false
       }
     ],
     "5G Multicast Broadcast": [
       {
-        "number": "#19",
+        "number": "#26",
         "status": "Ready",
         "repo": "rt-mbs-examples",
-        "title": "Updated the 5G-MBS internal deployment for testing",
-        "url": "https://github.com/5G-MAG/rt-mbs-examples/pull/19",
-        "user": "jsroldan",
-        "last_comment_by": null,
-        "last_comment_date": null,
-        "date": "2026-05-29",
-        "days_ago": 13,
+        "title": "Arranging dockers and general fixes to the MBS Examples repository",
+        "url": "https://github.com/5G-MAG/rt-mbs-examples/pull/26",
+        "user": "jordijoangimenez",
+        "last_comment_by": "jordijoangimenez",
+        "last_comment_date": "2026-06-11",
+        "date": "2026-06-11",
+        "days_ago": 1,
         "color": "green",
         "blink": true
       }
