@@ -654,3 +654,73 @@ The MBSF can create CAROUSEL session where the server will repeatedly cycle thro
 	"suppFeat": "3"
 }
 ```
+## Analysing MBS User Service Announcements
+
+An MBS AF is co-located with the MBSF to serve User Service Announcement bundles:
+* The User Service Announcement Channel is triggered when the MBS Application Provider provisions an MBS Service with the VIA_MBS_DISTRIBUTION_SESSION service announcement mode and then goes on to create an associated, active MBS User Data Ingest Session via the API at reference point Nmb10.
+* MBSF publishes announcement bundle documents to a document root folder so that they are exposed by the co-located MBS AF via HTTP.
+* MBSF creates a special MBS Distribution Session on an MBSTF for the User Service Announcement Carousel via reference point Nmb2.
+* MBSF pushes a carousel manifest to the MBSTF via reference point MBS-11 listing User Service Announcement bundles for currently active MBS User Data Ingest Sessions.
+* MBSTF retrieves these User Service Announcement bundles from the co-located MBS AF via reference point MBS-11.
+* If the USER_SER_AD event type has been subscribed to by the MBS Application Provider, then a USER_SER_AD notification is sent to it via reference point Nmb10 when a new bundle is ready.
+
+These features are configured in `mbsf.yaml`, including the listening addresses for the co-located MBS AF at reference points MBS-1, MBS-5 and MBS-11 and parameters of the MBS User Service Announcement Channel (repetition rate, SSM address and bit rate):
+
+```
+logger:
+  file:
+    path: /var/local/log/open5gs/mbsf.log
+
+global:
+  max:
+    ue: 128  # The number of UE can be increased depending on memory size.
+
+mbsf:
+  sbi:
+    server:
+      - address: 127.0.0.67
+        port: 7777
+    client:
+      scp:
+        - uri: http://127.0.0.200:7777
+      nrf:
+        - uri: http://127.0.0.10:7777
+
+  mbsUserServices:
+    - addr: 127.0.0.67
+      port: 7777
+
+  mbsUserDataIngestSession:
+    - addr: 127.0.0.67
+      port: 7777
+
+  serverResponseCacheControl:
+    - defaultMaxAge: 60
+      mbsUserServiceMaxAge: 60
+      mbsUserDataIngestSessionMaxAge: 60
+
+  userServiceAnnouncement:
+    announcementRepetitionTime: 10000
+    ssmPort: 3000
+    ssmSourceAddress: 127.0.0.67
+    ssmDestinationAddress: 232.0.0.1
+    mbr: 10 Mbps
+    docRoot: /var/local/cache/mbsf/user-service-announcements
+
+  activeDistributionSessionsSoftLimit: 1000
+  activeUserServicesSoftLimit: 50
+  actPeriodGoToEstablishedState: 60
+
+mbsaf:
+  server:
+    - addr: 127.0.0.67  # MBS-11 (to MBSTF)
+      port: 8888
+```
+
+Using Wireshark it is possible to check the transmission of the service announcement every 10 seconds from 127.0.0.67 to 232.0.0.1 containing the details to fetch content and control plane information related to the MBS User Service and Data Ingest Session.
+
+![Wireshark capture](../../../assets/images/5mbs/wireshark-service-announcement-1.png)
+
+![Wireshark capture](../../../assets/images/5mbs/wireshark-service-announcement-2.png)
+
+![Wireshark capture](../../../assets/images/5mbs/wireshark-service-announcement-3.png)
