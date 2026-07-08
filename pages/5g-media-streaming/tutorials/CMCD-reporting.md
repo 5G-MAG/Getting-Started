@@ -110,6 +110,79 @@ Navigate to `http://<CMCD_DASHBOARD_IP>:8081/dashboards` in your browser, like b
 <img src="../../../assets/images/5gms/cmcd-dashboard.png" width="85%" /> 
 
 
+## Bitrate Limitation
+
+### Step 1: Clone the Repository
+
+```bash
+git clone https://github.com/5G-MAG/6G-Testbed.git
+```
+
+### Step 2: Build NetEmu
+
+Navigate to the `netemu` directory and follow the build instructions:
+
+```bash
+cd 6G-Testbed/netemu
+```
+
+Reference: https://github.com/5G-MAG/6G-Testbed/tree/main/netemu
+
+### Step 3: Create an Impairment Profile
+
+```bash
+cd examples
+```
+
+Add the following profile to `profiles.yaml`:
+
+```yaml
+# Congested network profile
+congested-test:
+  description: "Heavy network congestion"
+  delay_ms: 300
+  jitter_ms: 50
+  loss_pct: 1.0
+  rate_mbit: 3  # Bandwidth limit (Mbps)
+```
+
+This profile simulates a congested network with **3 Mbps bandwidth**, **300 ms latency**, **50 ms jitter**, and **1% packet loss**.
+
+### Step 4: Apply the Impairment
+
+```bash
+cd ..
+python3 impair.py
+```
+
+Select the `congested-test` profile when prompted.
+
+### Step 5: Verify the Configuration
+
+```bash
+tc class show dev <network-interface>
+```
+
+Example:
+
+```bash
+tc class show dev eth0
+```
+
+### Step 6: Remove the Impairment
+
+```bash
+tc qdisc del dev <network-interface> root
+```
+
+Example:
+
+```bash
+tc qdisc del dev eth0 root
+```
+
+
+
 ## Logs for Debugging
 ### Nginx access（watch the CMCD msg AS received）:   
 ````bash
