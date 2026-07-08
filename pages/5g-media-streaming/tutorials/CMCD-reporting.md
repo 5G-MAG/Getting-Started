@@ -10,14 +10,14 @@ nav_order: 7
 <img src="../../../assets/images/Banner_5GMS.png" /> 
 
 # Tutorial - CMCD Reporting
-
+ 
 ## Introduction
-
-CMCD Reporting enables the collection of CMCD(Common Media Client Data, [CTA-5004](https://cdn.cta.tech/cta/media/media/resources/standards/pdfs/cta-5004-final.pdf)) from the media player and the forwarding of CMCD metrics through the 5G Media Streaming system for monitoring and analysis.
-
-CMCD information is reported in-band with media requests using HTTP query parameters or request headers, and is extracted by the Application Server during normal media delivery. The Application Server then forwards the collected and formatted CMCD metrics to a CMCD Collector, where they can be visualized via a dashboard for analyzing media session behavior and content delivery characteristics.
-
-This tutorial describes how to set up and enable CMCD Reporting in the 5G‑MAG Reference Tools, and how to access the CMCD dashboard.
+ 
+CMCD Reporting enables the collection of Common Media Client Data (CMCD, [CTA-5004](https://cdn.cta.tech/cta/media/media/resources/standards/pdfs/cta-5004-final.pdf)), a standardized mechanism that allows media players to expose playback metrics to the network. Reported metrics may include bitrate, measured throughput, buffer length, and playback status, providing visibility into media delivery performance and end-user QoE.
+ 
+CMCD metrics are conveyed in-band with media requests using HTTP request headers or query parameters. During media delivery, the Application Server extracts the CMCD information from incoming requests and forwards the collected metrics to a CMCD Collector. The collected metrics can then be visualized through a dashboard, enabling operators and developers to monitor media sessions and analyze delivery behavior in real time.
+ 
+This tutorial describes how to configure and enable CMCD Reporting in the 5G-MAG Reference Tools.
 
 ## Server-side Setup
 
@@ -43,8 +43,8 @@ the [basic end-to-end guide](end-to-end.html).
 ### Step 5: Enable/Disable CMCD in the Application Server
 
 Config the URL of CMCD Collector in `src/rt_5gms_as/context.py`:
-- If you would like to enable CMCD on AS, set the `cmcd_collector_url` like `"cmcd_collector_url = http://<CMCD_DASHBOARD_IP>:3000/cmcd/response-mode"`; just replace the `<CMCD_DASHBOARD_IP>` with the IP of the machine where the CMCD dashboard is running on. As an example, the `cmcd_collector_url` can look like this `http://10.64.39.13:3000/cmcd/response-mode`.
-- If you would like to disable CMCD on AS, leave the cmcd_collector_url NULL as default.
+- If you would like to enable CMCD Reporting, set the `cmcd_collector_url` like `"cmcd_collector_url = http://<CMCD_DASHBOARD_IP>:3000/cmcd/response-mode"`; just replace the `<CMCD_DASHBOARD_IP>` with the IP of the machine where the CMCD dashboard is running on. As an example, the `cmcd_collector_url` can look like this `http://10.64.39.13:3000/cmcd/response-mode`.
+- If you would like to disable CMCD Reporting, leave the cmcd_collector_url NULL as default.
 
 ### Step 6: Start the Application Server
 
@@ -64,7 +64,7 @@ chmod 777 cmcd-toolkit/grafana/local-stack/dashboards/cmcd-dashboard.json
 RUN docker compose up
 ````
 
-#### Step 7.3 Login to grafana at http://<DASHBOARD_IP>:8081
+#### Step 7.3 Login to grafana at http://<CMCD_DASHBOARD_IP>:8081
     + User: admin
     + Password: grafana
 
@@ -110,7 +110,8 @@ Navigate to `http://<CMCD_DASHBOARD_IP>:8081/dashboards` in your browser, like b
 <img src="../../../assets/images/5gms/cmcd-dashboard.png" width="85%" /> 
 
 
-## Bitrate Limitation
+## Network Impairment
+To demonstrate how CMCD provides visibility into adaptive bitrate streaming behavior under changing network conditions, we use the NetEmu from the 5G-MAG 6G-Testbed project to add impairments to the network.
 
 ### Step 1: Clone the Repository
 
@@ -118,23 +119,16 @@ Navigate to `http://<CMCD_DASHBOARD_IP>:8081/dashboards` in your browser, like b
 git clone https://github.com/5G-MAG/6G-Testbed.git
 ```
 
-### Step 2: Build NetEmu
-
-Navigate to the `netemu` directory and follow the build instructions:
-
+### Step 2: Install NetEmu
 ```bash
 cd 6G-Testbed/netemu
+pip install -e .
 ```
 
-Reference: https://github.com/5G-MAG/6G-Testbed/tree/main/netemu
+For details please refer to the [corresponding section](https://github.com/5G-MAG/6G-Testbed/tree/main/netemu).
 
 ### Step 3: Create an Impairment Profile
-
-```bash
-cd examples
-```
-
-Add the following profile to `profiles.yaml`:
+Add a new profile `1 Mbps bandwidth, 300 ms latency, 50 ms jitter, and 1% packet loss` to the `examples/profiles.yaml`:
 
 ```yaml
 # Congested network profile
@@ -143,21 +137,25 @@ congested-test:
   delay_ms: 300
   jitter_ms: 50
   loss_pct: 1.0
-  rate_mbit: 3  # Bandwidth limit (Mbps)
+  rate_mbit: 1  # Bandwidth limit (Mbps)
 ```
 
-This profile simulates a congested network with **3 Mbps bandwidth**, **300 ms latency**, **50 ms jitter**, and **1% packet loss**.
+[!NOTE]
+Remember to replace the `<network-interface>` with your network interface in the `profiles.yaml`, like this `default_interface: "eth0"`
+`
+```yaml
+    # Default interface for network emulation
+    default_interface: "<network-interface>"
+```
 
-### Step 4: Apply the Impairment
+### Apply the impairments
 
 ```bash
 cd ..
 python3 impair.py
 ```
 
-Select the `congested-test` profile when prompted.
-
-### Step 5: Verify the Configuration
+### Check the applied impairments
 
 ```bash
 tc class show dev <network-interface>
@@ -166,19 +164,16 @@ tc class show dev <network-interface>
 Example:
 
 ```bash
-tc class show dev eth0
+root@~$ tc class show dev eno1
+
+class htb 1:11 parent 1:1 leaf 10: prio 0 rate 1Mbit ceil 1Mbit burst 1600b cburst 1600b
+class htb 1:1 root rate 1Mbit ceil 1Mbit burst 1600b cburst 1600b
 ```
 
-### Step 6: Remove the Impairment
+### Remove the Impairments
 
 ```bash
 tc qdisc del dev <network-interface> root
-```
-
-Example:
-
-```bash
-tc qdisc del dev eth0 root
 ```
 
 
