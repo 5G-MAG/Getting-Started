@@ -81,6 +81,17 @@ Our [YouTube channel](https://www.youtube.com/@5GMAG) hosts some practical video
   <div class="yt-item">
     <div class="yt-embed-wrapper">
       <iframe
+        src="https://www.youtube.com/embed/cdYV99cDuJE"
+        title="End-to-End setup with 5GC, NG-RAN and UE for MBS Broadcast Services - 5G-MAG Reference Tools"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen></iframe>
+    </div>
+  </div>
+  <div class="yt-item">
+    <div class="yt-embed-wrapper">
+      <iframe
         src="https://www.youtube.com/embed/e_xK_ckkhgc"
         title="Demonstrating MBS User Service Announcement mechanisms - 5G-MAG Reference Tools"
         frameborder="0"
