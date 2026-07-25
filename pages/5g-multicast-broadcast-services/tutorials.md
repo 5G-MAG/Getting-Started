@@ -82,7 +82,7 @@ Our [YouTube channel](https://www.youtube.com/@5GMAG) hosts some practical video
     <div class="yt-embed-wrapper">
       <iframe
         src="https://www.youtube.com/embed/cdYV99cDuJE"
-        title="End-to-End setup with 5GC, NG-RAN and UE for MBS Broadcast Services - 5G-MAG Reference Tools"
+        title="End-to-End setup with 5GC, NG-RAN and UE for MBS Broadcast Services - Developer Exchange"
         frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         referrerpolicy="strict-origin-when-cross-origin"
@@ -93,7 +93,7 @@ Our [YouTube channel](https://www.youtube.com/@5GMAG) hosts some practical video
     <div class="yt-embed-wrapper">
       <iframe
         src="https://www.youtube.com/embed/e_xK_ckkhgc"
-        title="Demonstrating MBS User Service Announcement mechanisms - 5G-MAG Reference Tools"
+        title="Demonstrating MBS User Service Announcement mechanisms - Developer Exchange"
         frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         referrerpolicy="strict-origin-when-cross-origin"
@@ -104,7 +104,7 @@ Our [YouTube channel](https://www.youtube.com/@5GMAG) hosts some practical video
     <div class="yt-embed-wrapper">
       <iframe
         src="https://www.youtube.com/embed/MF9rhnaEEP8"
-        title="Demonstrating the OBJECT_CAROUSEL operating mode - 5G-MAG Reference Tools"
+        title="Demonstrating the OBJECT_CAROUSEL operating mode - Developer Exchange"
         frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         referrerpolicy="strict-origin-when-cross-origin"
@@ -115,7 +115,7 @@ Our [YouTube channel](https://www.youtube.com/@5GMAG) hosts some practical video
     <div class="yt-embed-wrapper">
       <iframe
         src="https://www.youtube.com/embed/0re77KNmxYQ"
-        title="TUTORIAL - Basic implementation of MBS Function (MBSF) - Multicast Broadcast Services (MBS)"
+        title="Basic implementation of MBS Function (MBSF) - Developer Exchange"
         frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         referrerpolicy="strict-origin-when-cross-origin"
@@ -126,7 +126,7 @@ Our [YouTube channel](https://www.youtube.com/@5GMAG) hosts some practical video
     <div class="yt-embed-wrapper">
       <iframe
         src="https://www.youtube.com/embed/anrtRfPttmo"
-        title="TUTORIAL - Basic implementation of MBS Transport Function - Multicast Broadcast Services (MBS)"
+        title="Basic implementation of MBS Transport Function - Developer Exchange"
         frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         referrerpolicy="strict-origin-when-cross-origin"
@@ -137,7 +137,7 @@ Our [YouTube channel](https://www.youtube.com/@5GMAG) hosts some practical video
     <div class="yt-embed-wrapper">
       <iframe
         src="https://www.youtube.com/embed/lJh2F0xXxpE"
-        title="TUTORIAL - Initial support of 5MBS core network functions"
+        title="Initial support of 5MBS core network functions - Developer Exchange"
         frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         referrerpolicy="strict-origin-when-cross-origin"

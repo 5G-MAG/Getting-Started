@@ -91,8 +91,19 @@ Our [YouTube channel](https://www.youtube.com/@5GMAG) hosts some practical video
   <div class="yt-item">
     <div class="yt-embed-wrapper">
       <iframe
+        src="https://www.youtube.com/embed/WhMLUO0Bh2U"
+        title="Initial steps exposing APIs to AI systems through the MCP - Developer Exchange"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen></iframe>
+    </div>
+  </div>
+  <div class="yt-item">
+    <div class="yt-embed-wrapper">
+      <iframe
         src="https://www.youtube.com/embed/uEfBaTqh5vw"
-        title="Overview of the latest updates to the 5G Media Streaming Project - 5G-MAG Reference Tools"
+        title="Overview of the latest updates to the 5G Media Streaming Project - Developer Exchange"
         frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         referrerpolicy="strict-origin-when-cross-origin"
@@ -103,7 +114,7 @@ Our [YouTube channel](https://www.youtube.com/@5GMAG) hosts some practical video
     <div class="yt-embed-wrapper">
       <iframe
         src="https://www.youtube.com/embed/SOA7OGF86Gg"
-        title="Introducing the new 5GMS Application Provider Portal - 5G-MAG Reference Tools"
+        title="Introducing the new 5GMS Application Provider Portal - Developer Exchange"
         frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         referrerpolicy="strict-origin-when-cross-origin"
@@ -136,7 +147,7 @@ Our [YouTube channel](https://www.youtube.com/@5GMAG) hosts some practical video
     <div class="yt-embed-wrapper">
       <iframe
         src="https://www.youtube.com/embed/hiHWE3DyhdM"
-        title="5G Media Streaming QoE Metrics Reporting - 5G-MAG Reference Tools"
+        title="5G Media Streaming QoE Metrics Reporting - Developer Exchange"
         frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         referrerpolicy="strict-origin-when-cross-origin"
@@ -147,7 +158,7 @@ Our [YouTube channel](https://www.youtube.com/@5GMAG) hosts some practical video
     <div class="yt-embed-wrapper">
       <iframe
         src="https://www.youtube.com/embed/qewsQhGi8aE"
-        title="Introducing the 5GMS Application Provider Management Portal - 5G-MAG Reference Tools"
+        title="Introducing the 5GMS Application Provider Management Portal - Developer Exchange"
         frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         referrerpolicy="strict-origin-when-cross-origin"
@@ -158,7 +169,7 @@ Our [YouTube channel](https://www.youtube.com/@5GMAG) hosts some practical video
     <div class="yt-embed-wrapper">
       <iframe
         src="https://www.youtube.com/embed/fv_LoZXk5Oc"
-        title="5GMS Consumpion Reporting, Network Assistance and Dynamic Policies - 5G-MAG Reference Tools"
+        title="5GMS Consumpion Reporting, Network Assistance and Dynamic Policies - Developer Exchange"
         frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         referrerpolicy="strict-origin-when-cross-origin"
@@ -169,7 +180,7 @@ Our [YouTube channel](https://www.youtube.com/@5GMAG) hosts some practical video
     <div class="yt-embed-wrapper">
       <iframe
         src="https://www.youtube.com/embed/lJG1hNty_AU"
-        title="5G Media Streaming supported by 5G-MAG Reference Tools - DEVELOPER XCHANGE"
+        title="5G Media Streaming supported by 5G-MAG Reference Tools - Developer Exchange"
         frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         referrerpolicy="strict-origin-when-cross-origin"
@@ -180,7 +191,7 @@ Our [YouTube channel](https://www.youtube.com/@5GMAG) hosts some practical video
     <div class="yt-embed-wrapper">
       <iframe
         src="https://www.youtube.com/embed/L5nGVf-WhNE"
-        title="5G Media Streaming End-to-end setup with Android clients - 5G-MAG Reference Tools"
+        title="5G Media Streaming End-to-end setup with Android clients - Developer Exchange"
         frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         referrerpolicy="strict-origin-when-cross-origin"
@@ -191,7 +202,7 @@ Our [YouTube channel](https://www.youtube.com/@5GMAG) hosts some practical video
     <div class="yt-embed-wrapper">
       <iframe
         src="https://www.youtube.com/embed/2IU_18Dvhew"
-        title="5G Media Streaming in the BBC R&D standalone testbed - 5G-MAG Reference Tools"
+        title="5G Media Streaming in the BBC R&D standalone testbed - Developer Exchange"
         frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         referrerpolicy="strict-origin-when-cross-origin"
