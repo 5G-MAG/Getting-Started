@@ -91,6 +91,28 @@ Our [YouTube channel](https://www.youtube.com/@5GMAG) hosts some practical video
   <div class="yt-item">
     <div class="yt-embed-wrapper">
       <iframe
+        src="https://www.youtube.com/embed/hcFRGmg8YBU"
+        title="5G Media Streaming: Latest Additions - Developer Exchange"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen></iframe>
+    </div>
+  </div>
+  <div class="yt-item">
+    <div class="yt-embed-wrapper">
+      <iframe
+        src="https://www.youtube.com/embed/Cqta-eo9490"
+        title="Advanced Media Delivery: CMCD Metrics in Action - Developer Exchange"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen></iframe>
+    </div>
+  </div>
+  <div class="yt-item">
+    <div class="yt-embed-wrapper">
+      <iframe
         src="https://www.youtube.com/embed/WhMLUO0Bh2U"
         title="Initial steps exposing APIs to AI systems through the MCP - Developer Exchange"
         frameborder="0"

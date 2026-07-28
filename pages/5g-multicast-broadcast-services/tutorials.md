@@ -81,6 +81,28 @@ Our [YouTube channel](https://www.youtube.com/@5GMAG) hosts some practical video
   <div class="yt-item">
     <div class="yt-embed-wrapper">
       <iframe
+        src="https://www.youtube.com/embed/zP5JhHugnRE"
+        title="Connecting MBSTF to the MBS System - Developer Exchange"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen></iframe>
+    </div>
+  </div>
+  <div class="yt-item">
+    <div class="yt-embed-wrapper">
+      <iframe
+        src="https://www.youtube.com/embed/e_VRVDAoJdk"
+        title="MBS User Services for 5G MBS (Release 18) - Developer Exchange"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen></iframe>
+    </div>
+  </div>
+  <div class="yt-item">
+    <div class="yt-embed-wrapper">
+      <iframe
         src="https://www.youtube.com/embed/cdYV99cDuJE"
         title="End-to-End setup with 5GC, NG-RAN and UE for MBS Broadcast Services - Developer Exchange"
         frameborder="0"
