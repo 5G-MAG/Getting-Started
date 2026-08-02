@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-08-01 03:28",
+  "last_updated": "2026-08-02 03:27",
   "projects": {
     "5G Media Streaming": [
       {
@@ -12,7 +12,7 @@
         "last_comment_by": "ErikGaida",
         "last_comment_date": "2026-06-18",
         "date": "2026-05-21",
-        "days_ago": 72,
+        "days_ago": 73,
         "color": "green",
         "blink": false
       },
@@ -26,7 +26,7 @@
         "last_comment_by": "dsilhavy",
         "last_comment_date": "2026-07-27",
         "date": "2026-07-27",
-        "days_ago": 5,
+        "days_ago": 6,
         "color": "green",
         "blink": true
       }
@@ -44,7 +44,7 @@
         "last_comment_by": "jordijoangimenez",
         "last_comment_date": "2025-10-22",
         "date": "2024-11-20",
-        "days_ago": 619,
+        "days_ago": 620,
         "color": "red",
         "blink": false
       },
@@ -58,7 +58,7 @@
         "last_comment_by": "rbouqueau",
         "last_comment_date": "2025-10-31",
         "date": "2021-11-30",
-        "days_ago": 1705,
+        "days_ago": 1706,
         "color": "red",
         "blink": false
       },
@@ -72,7 +72,7 @@
         "last_comment_by": "rbouqueau",
         "last_comment_date": "2021-10-23",
         "date": "2021-10-23",
-        "days_ago": 1743,
+        "days_ago": 1744,
         "color": "red",
         "blink": false
       },
@@ -86,9 +86,9 @@
         "last_comment_by": "alessandro-lucco",
         "last_comment_date": "2026-07-21",
         "date": "2026-07-02",
-        "days_ago": 30,
+        "days_ago": 31,
         "color": "green",
-        "blink": true
+        "blink": false
       },
       {
         "number": "#18",
@@ -100,7 +100,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2025-08-27",
-        "days_ago": 339,
+        "days_ago": 340,
         "color": "red",
         "blink": false
       }
@@ -116,7 +116,7 @@
         "last_comment_by": "jordijoangimenez",
         "last_comment_date": "2025-10-07",
         "date": "2025-05-09",
-        "days_ago": 449,
+        "days_ago": 450,
         "color": "red",
         "blink": false
       }
@@ -134,7 +134,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-03-24",
-        "days_ago": 130,
+        "days_ago": 131,
         "color": "orange",
         "blink": false
       }
@@ -150,7 +150,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-07-28",
-        "days_ago": 4,
+        "days_ago": 5,
         "color": "green",
         "blink": true
       },
@@ -164,7 +164,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-03-27",
-        "days_ago": 127,
+        "days_ago": 128,
         "color": "orange",
         "blink": false
       },
@@ -178,7 +178,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-03-12",
-        "days_ago": 142,
+        "days_ago": 143,
         "color": "orange",
         "blink": false
       },
@@ -192,7 +192,7 @@
         "last_comment_by": "dsilhavy",
         "last_comment_date": "2023-10-18",
         "date": "2023-05-16",
-        "days_ago": 1173,
+        "days_ago": 1174,
         "color": "red",
         "blink": false
       },
@@ -206,7 +206,7 @@
         "last_comment_by": "rbouqueau",
         "last_comment_date": "2025-10-31",
         "date": "2021-11-30",
-        "days_ago": 1705,
+        "days_ago": 1706,
         "color": "red",
         "blink": false
       },
@@ -220,7 +220,7 @@
         "last_comment_by": "rbouqueau",
         "last_comment_date": "2021-10-23",
         "date": "2021-10-23",
-        "days_ago": 1743,
+        "days_ago": 1744,
         "color": "red",
         "blink": false
       }
@@ -236,7 +236,7 @@
         "last_comment_by": "davidjwbbc",
         "last_comment_date": "2026-07-03",
         "date": "2026-07-03",
-        "days_ago": 29,
+        "days_ago": 30,
         "color": "green",
         "blink": true
       },
@@ -250,7 +250,7 @@
         "last_comment_by": "dsilhavy",
         "last_comment_date": "2026-07-10",
         "date": "2026-07-03",
-        "days_ago": 29,
+        "days_ago": 30,
         "color": "green",
         "blink": true
       }
@@ -266,7 +266,7 @@
         "last_comment_by": "nlsdvl",
         "last_comment_date": "2026-07-08",
         "date": "2026-06-23",
-        "days_ago": 39,
+        "days_ago": 40,
         "color": "green",
         "blink": false
       }
@@ -282,7 +282,7 @@
         "last_comment_by": "AirMek2026",
         "last_comment_date": "2026-07-31",
         "date": "2026-05-12",
-        "days_ago": 81,
+        "days_ago": 82,
         "color": "green",
         "blink": false
       }
@@ -298,7 +298,7 @@
         "last_comment_by": "ErikGaida",
         "last_comment_date": "2026-06-18",
         "date": "2026-05-21",
-        "days_ago": 72,
+        "days_ago": 73,
         "color": "green",
         "blink": false
       }
@@ -314,7 +314,7 @@
         "last_comment_by": "davidjwbbc",
         "last_comment_date": "2026-07-03",
         "date": "2026-07-03",
-        "days_ago": 29,
+        "days_ago": 30,
         "color": "green",
         "blink": true
       },
@@ -328,7 +328,7 @@
         "last_comment_by": "dsilhavy",
         "last_comment_date": "2026-07-10",
         "date": "2026-07-03",
-        "days_ago": 29,
+        "days_ago": 30,
         "color": "green",
         "blink": true
       },
@@ -342,7 +342,7 @@
         "last_comment_by": "dsilhavy",
         "last_comment_date": "2026-07-10",
         "date": "2026-07-01",
-        "days_ago": 31,
+        "days_ago": 32,
         "color": "green",
         "blink": false
       }
@@ -358,7 +358,7 @@
         "last_comment_by": "jordijoangimenez",
         "last_comment_date": "2025-10-22",
         "date": "2024-11-20",
-        "days_ago": 619,
+        "days_ago": 620,
         "color": "red",
         "blink": false
       }
@@ -374,7 +374,7 @@
         "last_comment_by": "jordijoangimenez",
         "last_comment_date": "2026-07-29",
         "date": "2026-07-28",
-        "days_ago": 4,
+        "days_ago": 5,
         "color": "green",
         "blink": true
       },
@@ -388,7 +388,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-07-28",
-        "days_ago": 4,
+        "days_ago": 5,
         "color": "green",
         "blink": true
       },
@@ -402,7 +402,7 @@
         "last_comment_by": "ErikGaida",
         "last_comment_date": "2026-07-28",
         "date": "2026-07-03",
-        "days_ago": 29,
+        "days_ago": 30,
         "color": "green",
         "blink": true
       },
@@ -416,7 +416,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-07-28",
-        "days_ago": 4,
+        "days_ago": 5,
         "color": "green",
         "blink": true
       },
@@ -430,7 +430,7 @@
         "last_comment_by": "davidjwbbc",
         "last_comment_date": "2026-07-03",
         "date": "2026-07-03",
-        "days_ago": 29,
+        "days_ago": 30,
         "color": "green",
         "blink": true
       },
@@ -444,7 +444,7 @@
         "last_comment_by": "devbbc",
         "last_comment_date": "2026-07-23",
         "date": "2026-07-16",
-        "days_ago": 16,
+        "days_ago": 17,
         "color": "green",
         "blink": true
       },
@@ -458,9 +458,9 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-07-02",
-        "days_ago": 30,
+        "days_ago": 31,
         "color": "green",
-        "blink": true
+        "blink": false
       },
       {
         "number": "#29",
@@ -472,7 +472,7 @@
         "last_comment_by": "dsilhavy",
         "last_comment_date": "2026-07-31",
         "date": "2026-07-30",
-        "days_ago": 2,
+        "days_ago": 3,
         "color": "green",
         "blink": true
       },
@@ -486,7 +486,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-07-28",
-        "days_ago": 4,
+        "days_ago": 5,
         "color": "green",
         "blink": true
       }
