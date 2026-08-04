@@ -1,14 +1,14 @@
 {
-  "last_updated": "2026-08-03 03:30",
+  "last_updated": "2026-08-04 02:58",
   "projects": {
     "5G Media Streaming": [
       {
         "short_name": "rt-5gms-application-provider",
-        "tag": "rt-5gms-application-provider-1.2.0",
-        "date": "2026-05-26",
-        "blink": false,
+        "tag": "rt-5gms-application-provider-1.3.0",
+        "date": "2026-08-03",
+        "blink": true,
         "color": "green",
-        "url": "https://github.com/5G-MAG/rt-5gms-application-provider/releases/tag/rt-5gms-application-provider-1.2.0"
+        "url": "https://github.com/5G-MAG/rt-5gms-application-provider/releases/tag/rt-5gms-application-provider-1.3.0"
       },
       {
         "short_name": "rt-5gms-application",
@@ -20,19 +20,19 @@
       },
       {
         "short_name": "rt-5gms-application-function",
-        "tag": "rt-5gms-application-function-v1.4.6",
-        "date": "2026-05-26",
-        "blink": false,
+        "tag": "rt-5gms-application-function-v1.4.7",
+        "date": "2026-08-03",
+        "blink": true,
         "color": "green",
-        "url": "https://github.com/5G-MAG/rt-5gms-application-function/releases/tag/rt-5gms-application-function-v1.4.6"
+        "url": "https://github.com/5G-MAG/rt-5gms-application-function/releases/tag/rt-5gms-application-function-v1.4.7"
       },
       {
         "short_name": "rt-5gms-application-server",
-        "tag": "rt-5gms-application-server-1.2.4",
-        "date": "2025-03-20",
-        "blink": false,
+        "tag": "rt-5gms-application-server-1.2.5",
+        "date": "2026-08-03",
+        "blink": true,
         "color": "green",
-        "url": "https://github.com/5G-MAG/rt-5gms-application-server/releases/tag/rt-5gms-application-server-1.2.4"
+        "url": "https://github.com/5G-MAG/rt-5gms-application-server/releases/tag/rt-5gms-application-server-1.2.5"
       },
       {
         "short_name": "rt-5gms-media-stream-handler",
@@ -60,11 +60,11 @@
       },
       {
         "short_name": "rt-5gms-examples",
-        "tag": "rt-5gms-examples-v1.2.1",
-        "date": "2026-05-26",
-        "blink": false,
+        "tag": "rt-5gms-examples-v1.3.0",
+        "date": "2026-08-03",
+        "blink": true,
         "color": "green",
-        "url": "https://github.com/5G-MAG/rt-5gms-examples/releases/tag/rt-5gms-examples-v1.2.1"
+        "url": "https://github.com/5G-MAG/rt-5gms-examples/releases/tag/rt-5gms-examples-v1.3.0"
       }
     ],
     "5G Core Service Consumers": [
@@ -238,11 +238,11 @@
     "Auxiliary Tools": [
       {
         "short_name": "rt-common-shared",
-        "tag": "No Release",
-        "date": "-",
-        "blink": false,
+        "tag": "rt-common-shared-v1.0.0",
+        "date": "2026-08-03",
+        "blink": true,
         "color": "green",
-        "url": "https://github.com/5G-MAG/rt-common-shared/releases"
+        "url": "https://github.com/5G-MAG/rt-common-shared/releases/tag/rt-common-shared-v1.0.0"
       }
     ],
     "Conversational Avatar": [
@@ -302,19 +302,19 @@
     "Network APIs": [
       {
         "short_name": "rt-common-shared",
-        "tag": "No Release",
-        "date": "-",
-        "blink": false,
+        "tag": "rt-common-shared-v1.0.0",
+        "date": "2026-08-03",
+        "blink": true,
         "color": "green",
-        "url": "https://github.com/5G-MAG/rt-common-shared/releases"
+        "url": "https://github.com/5G-MAG/rt-common-shared/releases/tag/rt-common-shared-v1.0.0"
       },
       {
         "short_name": "rt-5gms-application-provider",
-        "tag": "rt-5gms-application-provider-1.2.0",
-        "date": "2026-05-26",
-        "blink": false,
+        "tag": "rt-5gms-application-provider-1.3.0",
+        "date": "2026-08-03",
+        "blink": true,
         "color": "green",
-        "url": "https://github.com/5G-MAG/rt-5gms-application-provider/releases/tag/rt-5gms-application-provider-1.2.0"
+        "url": "https://github.com/5G-MAG/rt-5gms-application-provider/releases/tag/rt-5gms-application-provider-1.3.0"
       },
       {
         "short_name": "rt-camara-examples",
