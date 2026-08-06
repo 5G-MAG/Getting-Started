@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-08-05 02:55",
+  "last_updated": "2026-08-06 02:58",
   "projects": {
     "5G Media Streaming": [
       {
@@ -12,7 +12,7 @@
         "last_comment_by": "ErikGaida",
         "last_comment_date": "2026-06-18",
         "date": "2026-05-21",
-        "days_ago": 76,
+        "days_ago": 77,
         "color": "green",
         "blink": false
       }
@@ -30,7 +30,7 @@
         "last_comment_by": "jordijoangimenez",
         "last_comment_date": "2025-10-22",
         "date": "2024-11-20",
-        "days_ago": 623,
+        "days_ago": 624,
         "color": "red",
         "blink": false
       },
@@ -44,7 +44,7 @@
         "last_comment_by": "rbouqueau",
         "last_comment_date": "2025-10-31",
         "date": "2021-11-30",
-        "days_ago": 1709,
+        "days_ago": 1710,
         "color": "red",
         "blink": false
       },
@@ -58,7 +58,7 @@
         "last_comment_by": "rbouqueau",
         "last_comment_date": "2021-10-23",
         "date": "2021-10-23",
-        "days_ago": 1747,
+        "days_ago": 1748,
         "color": "red",
         "blink": false
       },
@@ -72,7 +72,7 @@
         "last_comment_by": "alessandro-lucco",
         "last_comment_date": "2026-07-21",
         "date": "2026-07-02",
-        "days_ago": 34,
+        "days_ago": 35,
         "color": "green",
         "blink": false
       },
@@ -86,7 +86,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2025-08-27",
-        "days_ago": 343,
+        "days_ago": 344,
         "color": "red",
         "blink": false
       }
@@ -102,7 +102,7 @@
         "last_comment_by": "jordijoangimenez",
         "last_comment_date": "2025-10-07",
         "date": "2025-05-09",
-        "days_ago": 453,
+        "days_ago": 454,
         "color": "red",
         "blink": false
       }
@@ -120,7 +120,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-03-24",
-        "days_ago": 134,
+        "days_ago": 135,
         "color": "orange",
         "blink": false
       }
@@ -136,23 +136,9 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-07-28",
-        "days_ago": 8,
+        "days_ago": 9,
         "color": "green",
         "blink": true
-      },
-      {
-        "number": "#57",
-        "status": "Ready",
-        "repo": "rt-libflute",
-        "title": "Feature/#50",
-        "url": "https://github.com/5G-MAG/rt-libflute/pull/57",
-        "user": "dsilhavy",
-        "last_comment_by": "davidjwbbc",
-        "last_comment_date": "2026-08-04",
-        "date": "2026-03-27",
-        "days_ago": 131,
-        "color": "orange",
-        "blink": false
       },
       {
         "number": "#56",
@@ -164,7 +150,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-03-12",
-        "days_ago": 146,
+        "days_ago": 147,
         "color": "orange",
         "blink": false
       },
@@ -178,7 +164,7 @@
         "last_comment_by": "dsilhavy",
         "last_comment_date": "2023-10-18",
         "date": "2023-05-16",
-        "days_ago": 1177,
+        "days_ago": 1178,
         "color": "red",
         "blink": false
       },
@@ -192,7 +178,7 @@
         "last_comment_by": "rbouqueau",
         "last_comment_date": "2025-10-31",
         "date": "2021-11-30",
-        "days_ago": 1709,
+        "days_ago": 1710,
         "color": "red",
         "blink": false
       },
@@ -206,26 +192,12 @@
         "last_comment_by": "rbouqueau",
         "last_comment_date": "2021-10-23",
         "date": "2021-10-23",
-        "days_ago": 1747,
+        "days_ago": 1748,
         "color": "red",
         "blink": false
       }
     ],
     "Auxiliary Tools": [
-      {
-        "number": "#70",
-        "status": "Ready",
-        "repo": "rt-common-shared",
-        "title": "Remove MBS override and use a modified openapi-generator-cli.jar",
-        "url": "https://github.com/5G-MAG/rt-common-shared/pull/70",
-        "user": "davidjwbbc",
-        "last_comment_by": "davidjwbbc",
-        "last_comment_date": "2026-07-03",
-        "date": "2026-07-03",
-        "days_ago": 33,
-        "color": "green",
-        "blink": false
-      },
       {
         "number": "#69",
         "status": "Ready",
@@ -236,7 +208,7 @@
         "last_comment_by": "dsilhavy",
         "last_comment_date": "2026-07-10",
         "date": "2026-07-03",
-        "days_ago": 33,
+        "days_ago": 34,
         "color": "green",
         "blink": false
       }
@@ -252,7 +224,7 @@
         "last_comment_by": "nlsdvl",
         "last_comment_date": "2026-07-08",
         "date": "2026-06-23",
-        "days_ago": 43,
+        "days_ago": 44,
         "color": "green",
         "blink": false
       }
@@ -268,7 +240,7 @@
         "last_comment_by": "AirMek2026",
         "last_comment_date": "2026-07-31",
         "date": "2026-05-12",
-        "days_ago": 85,
+        "days_ago": 86,
         "color": "green",
         "blink": false
       }
@@ -284,26 +256,12 @@
         "last_comment_by": "ErikGaida",
         "last_comment_date": "2026-06-18",
         "date": "2026-05-21",
-        "days_ago": 76,
+        "days_ago": 77,
         "color": "green",
         "blink": false
       }
     ],
     "Network APIs": [
-      {
-        "number": "#70",
-        "status": "Ready",
-        "repo": "rt-common-shared",
-        "title": "Remove MBS override and use a modified openapi-generator-cli.jar",
-        "url": "https://github.com/5G-MAG/rt-common-shared/pull/70",
-        "user": "davidjwbbc",
-        "last_comment_by": "davidjwbbc",
-        "last_comment_date": "2026-07-03",
-        "date": "2026-07-03",
-        "days_ago": 33,
-        "color": "green",
-        "blink": false
-      },
       {
         "number": "#69",
         "status": "Ready",
@@ -314,7 +272,7 @@
         "last_comment_by": "dsilhavy",
         "last_comment_date": "2026-07-10",
         "date": "2026-07-03",
-        "days_ago": 33,
+        "days_ago": 34,
         "color": "green",
         "blink": false
       },
@@ -328,7 +286,7 @@
         "last_comment_by": "dsilhavy",
         "last_comment_date": "2026-07-10",
         "date": "2026-07-01",
-        "days_ago": 35,
+        "days_ago": 36,
         "color": "green",
         "blink": false
       }
@@ -344,7 +302,7 @@
         "last_comment_by": "jordijoangimenez",
         "last_comment_date": "2025-10-22",
         "date": "2024-11-20",
-        "days_ago": 623,
+        "days_ago": 624,
         "color": "red",
         "blink": false
       }
@@ -360,7 +318,7 @@
         "last_comment_by": "davidjwbbc",
         "last_comment_date": "2026-08-03",
         "date": "2026-07-28",
-        "days_ago": 8,
+        "days_ago": 9,
         "color": "green",
         "blink": true
       },
@@ -374,23 +332,9 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-07-28",
-        "days_ago": 8,
+        "days_ago": 9,
         "color": "green",
         "blink": true
-      },
-      {
-        "number": "#38",
-        "status": "Ready",
-        "repo": "rt-mbs-function",
-        "title": "Alignment with rt-common-shared",
-        "url": "https://github.com/5G-MAG/rt-mbs-function/pull/38",
-        "user": "davidjwbbc",
-        "last_comment_by": "ErikGaida",
-        "last_comment_date": "2026-07-28",
-        "date": "2026-07-03",
-        "days_ago": 33,
-        "color": "green",
-        "blink": false
       },
       {
         "number": "#67",
@@ -402,23 +346,9 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-07-28",
-        "days_ago": 8,
+        "days_ago": 9,
         "color": "green",
         "blink": true
-      },
-      {
-        "number": "#65",
-        "status": "Ready",
-        "repo": "rt-mbs-transport-function",
-        "title": "Alignment with rt-common-shared",
-        "url": "https://github.com/5G-MAG/rt-mbs-transport-function/pull/65",
-        "user": "davidjwbbc",
-        "last_comment_by": "davidjwbbc",
-        "last_comment_date": "2026-07-03",
-        "date": "2026-07-03",
-        "days_ago": 33,
-        "color": "green",
-        "blink": false
       },
       {
         "number": "#42",
@@ -430,7 +360,7 @@
         "last_comment_by": "devbbc",
         "last_comment_date": "2026-07-23",
         "date": "2026-07-16",
-        "days_ago": 20,
+        "days_ago": 21,
         "color": "green",
         "blink": true
       },
@@ -444,7 +374,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-07-02",
-        "days_ago": 34,
+        "days_ago": 35,
         "color": "green",
         "blink": false
       },
@@ -458,7 +388,7 @@
         "last_comment_by": "dsilhavy",
         "last_comment_date": "2026-07-31",
         "date": "2026-07-30",
-        "days_ago": 6,
+        "days_ago": 7,
         "color": "green",
         "blink": true
       },
@@ -472,7 +402,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-07-28",
-        "days_ago": 8,
+        "days_ago": 9,
         "color": "green",
         "blink": true
       }
