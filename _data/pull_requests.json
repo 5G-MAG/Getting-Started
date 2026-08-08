@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-08-07 02:55",
+  "last_updated": "2026-08-08 01:59",
   "projects": {
     "5G Media Streaming": [
       {
@@ -12,7 +12,7 @@
         "last_comment_by": "ErikGaida",
         "last_comment_date": "2026-06-18",
         "date": "2026-05-21",
-        "days_ago": 78,
+        "days_ago": 79,
         "color": "green",
         "blink": false
       }
@@ -30,7 +30,7 @@
         "last_comment_by": "jordijoangimenez",
         "last_comment_date": "2025-10-22",
         "date": "2024-11-20",
-        "days_ago": 625,
+        "days_ago": 626,
         "color": "red",
         "blink": false
       },
@@ -44,7 +44,7 @@
         "last_comment_by": "rbouqueau",
         "last_comment_date": "2025-10-31",
         "date": "2021-11-30",
-        "days_ago": 1711,
+        "days_ago": 1712,
         "color": "red",
         "blink": false
       },
@@ -58,7 +58,7 @@
         "last_comment_by": "rbouqueau",
         "last_comment_date": "2021-10-23",
         "date": "2021-10-23",
-        "days_ago": 1749,
+        "days_ago": 1750,
         "color": "red",
         "blink": false
       },
@@ -72,7 +72,7 @@
         "last_comment_by": "alessandro-lucco",
         "last_comment_date": "2026-07-21",
         "date": "2026-07-02",
-        "days_ago": 36,
+        "days_ago": 37,
         "color": "green",
         "blink": false
       },
@@ -86,7 +86,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2025-08-27",
-        "days_ago": 345,
+        "days_ago": 346,
         "color": "red",
         "blink": false
       }
@@ -102,7 +102,7 @@
         "last_comment_by": "jordijoangimenez",
         "last_comment_date": "2025-10-07",
         "date": "2025-05-09",
-        "days_ago": 455,
+        "days_ago": 456,
         "color": "red",
         "blink": false
       }
@@ -120,12 +120,26 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-03-24",
-        "days_ago": 136,
+        "days_ago": 137,
         "color": "orange",
         "blink": false
       }
     ],
     "Multimedia Protocols": [
+      {
+        "number": "#62",
+        "status": "Ready",
+        "repo": "rt-libflute",
+        "title": "RFC 6726/5651/5052 compliance: FLUTE version 2, wide TSI, FDT Instance ID wraparound, Close Session/Object flags, EXT_FTI bootstrap",
+        "url": "https://github.com/5G-MAG/rt-libflute/pull/62",
+        "user": "jordijoangimenez",
+        "last_comment_by": "jordijoangimenez",
+        "last_comment_date": "2026-08-07",
+        "date": "2026-08-07",
+        "days_ago": 1,
+        "color": "green",
+        "blink": true
+      },
       {
         "number": "#61",
         "status": "Ready",
@@ -136,7 +150,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-08-06",
-        "days_ago": 1,
+        "days_ago": 2,
         "color": "green",
         "blink": true
       },
@@ -147,26 +161,12 @@
         "title": "Fix unbounded FDT growth (same-TOI resend, and content-change cases)",
         "url": "https://github.com/5G-MAG/rt-libflute/pull/60",
         "user": "jordijoangimenez",
-        "last_comment_by": "jordijoangimenez",
-        "last_comment_date": "2026-08-06",
+        "last_comment_by": "dsilhavy",
+        "last_comment_date": "2026-08-07",
         "date": "2026-07-28",
-        "days_ago": 10,
+        "days_ago": 11,
         "color": "green",
         "blink": true
-      },
-      {
-        "number": "#56",
-        "status": "Ready",
-        "repo": "rt-libflute",
-        "title": "Feature/end to end test tunneled mode",
-        "url": "https://github.com/5G-MAG/rt-libflute/pull/56",
-        "user": "dsilhavy",
-        "last_comment_by": "jordijoangimenez",
-        "last_comment_date": "2026-08-06",
-        "date": "2026-03-12",
-        "days_ago": 148,
-        "color": "orange",
-        "blink": false
       },
       {
         "number": "#7",
@@ -178,7 +178,7 @@
         "last_comment_by": "dsilhavy",
         "last_comment_date": "2023-10-18",
         "date": "2023-05-16",
-        "days_ago": 1179,
+        "days_ago": 1180,
         "color": "red",
         "blink": false
       },
@@ -192,7 +192,7 @@
         "last_comment_by": "rbouqueau",
         "last_comment_date": "2025-10-31",
         "date": "2021-11-30",
-        "days_ago": 1711,
+        "days_ago": 1712,
         "color": "red",
         "blink": false
       },
@@ -206,7 +206,7 @@
         "last_comment_by": "rbouqueau",
         "last_comment_date": "2021-10-23",
         "date": "2021-10-23",
-        "days_ago": 1749,
+        "days_ago": 1750,
         "color": "red",
         "blink": false
       }
@@ -222,7 +222,7 @@
         "last_comment_by": "dsilhavy",
         "last_comment_date": "2026-07-10",
         "date": "2026-07-03",
-        "days_ago": 35,
+        "days_ago": 36,
         "color": "green",
         "blink": false
       }
@@ -238,7 +238,7 @@
         "last_comment_by": "nlsdvl",
         "last_comment_date": "2026-07-08",
         "date": "2026-06-23",
-        "days_ago": 45,
+        "days_ago": 46,
         "color": "green",
         "blink": false
       }
@@ -251,10 +251,10 @@
         "title": "Add realtime video analysis and chat with token IDs scenarios",
         "url": "https://github.com/5G-MAG/6G-Testbed/pull/6",
         "user": "jianbing119",
-        "last_comment_by": "ntienvie",
-        "last_comment_date": "2026-08-06",
+        "last_comment_by": "AirMek2026",
+        "last_comment_date": "2026-08-07",
         "date": "2026-05-12",
-        "days_ago": 87,
+        "days_ago": 88,
         "color": "green",
         "blink": false
       }
@@ -270,7 +270,7 @@
         "last_comment_by": "ErikGaida",
         "last_comment_date": "2026-06-18",
         "date": "2026-05-21",
-        "days_ago": 78,
+        "days_ago": 79,
         "color": "green",
         "blink": false
       }
@@ -286,7 +286,7 @@
         "last_comment_by": "dsilhavy",
         "last_comment_date": "2026-07-10",
         "date": "2026-07-03",
-        "days_ago": 35,
+        "days_ago": 36,
         "color": "green",
         "blink": false
       },
@@ -300,7 +300,7 @@
         "last_comment_by": "dsilhavy",
         "last_comment_date": "2026-07-10",
         "date": "2026-07-01",
-        "days_ago": 37,
+        "days_ago": 38,
         "color": "green",
         "blink": false
       }
@@ -316,7 +316,7 @@
         "last_comment_by": "jordijoangimenez",
         "last_comment_date": "2025-10-22",
         "date": "2024-11-20",
-        "days_ago": 625,
+        "days_ago": 626,
         "color": "red",
         "blink": false
       }
@@ -329,10 +329,10 @@
         "title": "Various bug fixes: replacement for PR #42",
         "url": "https://github.com/5G-MAG/rt-mbs-function/pull/48",
         "user": "davidjwbbc",
-        "last_comment_by": "rjb1000",
-        "last_comment_date": "2026-08-06",
+        "last_comment_by": "dsilhavy",
+        "last_comment_date": "2026-08-07",
         "date": "2026-08-06",
-        "days_ago": 1,
+        "days_ago": 2,
         "color": "green",
         "blink": true
       },
@@ -340,27 +340,13 @@
         "number": "#41",
         "status": "Ready",
         "repo": "rt-mbs-function",
-        "title": "Add Meson to the apt install dependency list and remove the",
+        "title": "Add Meson to the apt install dependency list and remove the Regression tests Section from the readme",
         "url": "https://github.com/5G-MAG/rt-mbs-function/pull/41",
         "user": "ErikGaida",
-        "last_comment_by": null,
-        "last_comment_date": null,
+        "last_comment_by": "ErikGaida",
+        "last_comment_date": "2026-08-07",
         "date": "2026-07-28",
-        "days_ago": 10,
-        "color": "green",
-        "blink": true
-      },
-      {
-        "number": "#67",
-        "status": "Ready",
-        "repo": "rt-mbs-transport-function",
-        "title": "Fix null-pointer crash when a STREAMING object isn't a manifest",
-        "url": "https://github.com/5G-MAG/rt-mbs-transport-function/pull/67",
-        "user": "jordijoangimenez",
-        "last_comment_by": null,
-        "last_comment_date": null,
-        "date": "2026-07-28",
-        "days_ago": 10,
+        "days_ago": 11,
         "color": "green",
         "blink": true
       },
@@ -374,9 +360,37 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-07-02",
-        "days_ago": 36,
+        "days_ago": 37,
         "color": "green",
         "blink": false
+      },
+      {
+        "number": "#32",
+        "status": "Ready",
+        "repo": "rt-mbs-examples",
+        "title": "Docker set up for MBS User Service",
+        "url": "https://github.com/5G-MAG/rt-mbs-examples/pull/32",
+        "user": "devbbc",
+        "last_comment_by": null,
+        "last_comment_date": null,
+        "date": "2026-08-07",
+        "days_ago": 1,
+        "color": "green",
+        "blink": true
+      },
+      {
+        "number": "#31",
+        "status": "Ready",
+        "repo": "rt-mbs-examples",
+        "title": "Feature/external path config",
+        "url": "https://github.com/5G-MAG/rt-mbs-examples/pull/31",
+        "user": "dsilhavy",
+        "last_comment_by": null,
+        "last_comment_date": null,
+        "date": "2026-08-07",
+        "days_ago": 1,
+        "color": "green",
+        "blink": true
       },
       {
         "number": "#29",
@@ -388,21 +402,7 @@
         "last_comment_by": "dsilhavy",
         "last_comment_date": "2026-07-31",
         "date": "2026-07-30",
-        "days_ago": 8,
-        "color": "green",
-        "blink": true
-      },
-      {
-        "number": "#28",
-        "status": "Ready",
-        "repo": "rt-mbs-examples",
-        "title": "Add MBSF  CRUD integration test",
-        "url": "https://github.com/5G-MAG/rt-mbs-examples/pull/28",
-        "user": "ErikGaida",
-        "last_comment_by": null,
-        "last_comment_date": null,
-        "date": "2026-07-28",
-        "days_ago": 10,
+        "days_ago": 9,
         "color": "green",
         "blink": true
       }
