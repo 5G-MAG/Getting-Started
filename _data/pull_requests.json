@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-08-12 02:23",
+  "last_updated": "2026-08-13 02:24",
   "projects": {
     "5G Media Streaming": [
       {
@@ -12,12 +12,27 @@
         "last_comment_by": "ErikGaida",
         "last_comment_date": "2026-06-18",
         "date": "2026-05-21",
-        "days_ago": 83,
+        "days_ago": 84,
         "color": "green",
         "blink": false
       }
     ],
-    "5G Core Service Consumers": [],
+    "5G Core Service Consumers": [
+      {
+        "number": "#29",
+        "status": "Ready",
+        "repo": "rt-5gc-service-consumers",
+        "title": "Fix MBS Session Id / SSM handling for BROADCAST sessions + MNC-length-aware PLMN Id",
+        "url": "https://github.com/5G-MAG/rt-5gc-service-consumers/pull/29",
+        "user": "jordijoangimenez",
+        "last_comment_by": null,
+        "last_comment_date": null,
+        "date": "2026-08-12",
+        "days_ago": 1,
+        "color": "green",
+        "blink": true
+      }
+    ],
     "UE Data Collection": [],
     "5G Broadcast TV Radio": [
       {
@@ -30,7 +45,7 @@
         "last_comment_by": "jordijoangimenez",
         "last_comment_date": "2025-10-22",
         "date": "2024-11-20",
-        "days_ago": 630,
+        "days_ago": 631,
         "color": "red",
         "blink": false
       },
@@ -44,7 +59,7 @@
         "last_comment_by": "rbouqueau",
         "last_comment_date": "2025-10-31",
         "date": "2021-11-30",
-        "days_ago": 1716,
+        "days_ago": 1717,
         "color": "red",
         "blink": false
       },
@@ -58,7 +73,7 @@
         "last_comment_by": "rbouqueau",
         "last_comment_date": "2021-10-23",
         "date": "2021-10-23",
-        "days_ago": 1754,
+        "days_ago": 1755,
         "color": "red",
         "blink": false
       },
@@ -72,7 +87,7 @@
         "last_comment_by": "alessandro-lucco",
         "last_comment_date": "2026-07-21",
         "date": "2026-07-02",
-        "days_ago": 41,
+        "days_ago": 42,
         "color": "green",
         "blink": false
       },
@@ -86,7 +101,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2025-08-27",
-        "days_ago": 350,
+        "days_ago": 351,
         "color": "red",
         "blink": false
       }
@@ -102,7 +117,7 @@
         "last_comment_by": "jordijoangimenez",
         "last_comment_date": "2025-10-07",
         "date": "2025-05-09",
-        "days_ago": 460,
+        "days_ago": 461,
         "color": "red",
         "blink": false
       }
@@ -120,7 +135,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-03-24",
-        "days_ago": 141,
+        "days_ago": 142,
         "color": "orange",
         "blink": false
       }
@@ -130,13 +145,13 @@
         "number": "#68",
         "status": "Ready",
         "repo": "rt-libflute",
-        "title": "Fix receive loop never re-arming after a transient socket error",
+        "title": "Tunnel mode reception, AL-FEC support and various bugfixes",
         "url": "https://github.com/5G-MAG/rt-libflute/pull/68",
         "user": "jordijoangimenez",
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-08-11",
-        "days_ago": 1,
+        "days_ago": 2,
         "color": "green",
         "blink": true
       },
@@ -150,7 +165,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-08-11",
-        "days_ago": 1,
+        "days_ago": 2,
         "color": "green",
         "blink": true
       },
@@ -164,7 +179,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-08-11",
-        "days_ago": 1,
+        "days_ago": 2,
         "color": "green",
         "blink": true
       },
@@ -178,7 +193,7 @@
         "last_comment_by": "jordijoangimenez",
         "last_comment_date": "2026-08-11",
         "date": "2026-08-07",
-        "days_ago": 5,
+        "days_ago": 6,
         "color": "green",
         "blink": true
       },
@@ -192,7 +207,7 @@
         "last_comment_by": "jordijoangimenez",
         "last_comment_date": "2026-08-11",
         "date": "2026-08-06",
-        "days_ago": 6,
+        "days_ago": 7,
         "color": "green",
         "blink": true
       },
@@ -206,7 +221,7 @@
         "last_comment_by": "dsilhavy",
         "last_comment_date": "2026-08-07",
         "date": "2026-07-28",
-        "days_ago": 15,
+        "days_ago": 16,
         "color": "green",
         "blink": true
       },
@@ -220,7 +235,7 @@
         "last_comment_by": "rbouqueau",
         "last_comment_date": "2025-10-31",
         "date": "2021-11-30",
-        "days_ago": 1716,
+        "days_ago": 1717,
         "color": "red",
         "blink": false
       },
@@ -234,7 +249,7 @@
         "last_comment_by": "rbouqueau",
         "last_comment_date": "2021-10-23",
         "date": "2021-10-23",
-        "days_ago": 1754,
+        "days_ago": 1755,
         "color": "red",
         "blink": false
       }
@@ -250,7 +265,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-08-11",
-        "days_ago": 1,
+        "days_ago": 2,
         "color": "green",
         "blink": true
       },
@@ -264,7 +279,7 @@
         "last_comment_by": "dsilhavy",
         "last_comment_date": "2026-07-10",
         "date": "2026-07-03",
-        "days_ago": 40,
+        "days_ago": 41,
         "color": "green",
         "blink": false
       }
@@ -280,7 +295,7 @@
         "last_comment_by": "nlsdvl",
         "last_comment_date": "2026-07-08",
         "date": "2026-06-23",
-        "days_ago": 50,
+        "days_ago": 51,
         "color": "green",
         "blink": false
       }
@@ -296,7 +311,7 @@
         "last_comment_by": "ntienvie",
         "last_comment_date": "2026-08-12",
         "date": "2026-05-12",
-        "days_ago": 92,
+        "days_ago": 93,
         "color": "orange",
         "blink": false
       }
@@ -312,7 +327,7 @@
         "last_comment_by": "ErikGaida",
         "last_comment_date": "2026-06-18",
         "date": "2026-05-21",
-        "days_ago": 83,
+        "days_ago": 84,
         "color": "green",
         "blink": false
       }
@@ -328,7 +343,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-08-11",
-        "days_ago": 1,
+        "days_ago": 2,
         "color": "green",
         "blink": true
       },
@@ -342,7 +357,7 @@
         "last_comment_by": "dsilhavy",
         "last_comment_date": "2026-07-10",
         "date": "2026-07-03",
-        "days_ago": 40,
+        "days_ago": 41,
         "color": "green",
         "blink": false
       },
@@ -356,7 +371,7 @@
         "last_comment_by": "dsilhavy",
         "last_comment_date": "2026-07-10",
         "date": "2026-07-01",
-        "days_ago": 42,
+        "days_ago": 43,
         "color": "green",
         "blink": false
       }
@@ -372,7 +387,7 @@
         "last_comment_by": "jordijoangimenez",
         "last_comment_date": "2025-10-22",
         "date": "2024-11-20",
-        "days_ago": 630,
+        "days_ago": 631,
         "color": "red",
         "blink": false
       }
@@ -388,7 +403,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-08-11",
-        "days_ago": 1,
+        "days_ago": 2,
         "color": "green",
         "blink": true
       },
@@ -402,7 +417,7 @@
         "last_comment_by": "dsilhavy",
         "last_comment_date": "2026-08-07",
         "date": "2026-08-06",
-        "days_ago": 6,
+        "days_ago": 7,
         "color": "green",
         "blink": true
       },
@@ -416,7 +431,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-08-11",
-        "days_ago": 1,
+        "days_ago": 2,
         "color": "green",
         "blink": true
       },
@@ -430,7 +445,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-08-11",
-        "days_ago": 1,
+        "days_ago": 2,
         "color": "green",
         "blink": true
       },
@@ -444,7 +459,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-07-02",
-        "days_ago": 41,
+        "days_ago": 42,
         "color": "green",
         "blink": false
       },
@@ -455,10 +470,10 @@
         "title": "Docker set up for MBS User Services",
         "url": "https://github.com/5G-MAG/rt-mbs-examples/pull/32",
         "user": "devbbc",
-        "last_comment_by": null,
-        "last_comment_date": null,
+        "last_comment_by": "devbbc",
+        "last_comment_date": "2026-08-12",
         "date": "2026-08-07",
-        "days_ago": 5,
+        "days_ago": 6,
         "color": "green",
         "blink": true
       },
@@ -472,7 +487,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-08-07",
-        "days_ago": 5,
+        "days_ago": 6,
         "color": "green",
         "blink": true
       },
@@ -486,7 +501,7 @@
         "last_comment_by": "dsilhavy",
         "last_comment_date": "2026-07-31",
         "date": "2026-07-30",
-        "days_ago": 13,
+        "days_ago": 14,
         "color": "green",
         "blink": true
       }
