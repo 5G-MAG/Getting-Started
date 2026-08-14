@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-08-13 02:24",
+  "last_updated": "2026-08-14 02:23",
   "projects": {
     "5G Media Streaming": [
       {
@@ -12,7 +12,7 @@
         "last_comment_by": "ErikGaida",
         "last_comment_date": "2026-06-18",
         "date": "2026-05-21",
-        "days_ago": 84,
+        "days_ago": 85,
         "color": "green",
         "blink": false
       }
@@ -28,7 +28,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-08-12",
-        "days_ago": 1,
+        "days_ago": 2,
         "color": "green",
         "blink": true
       }
@@ -45,7 +45,7 @@
         "last_comment_by": "jordijoangimenez",
         "last_comment_date": "2025-10-22",
         "date": "2024-11-20",
-        "days_ago": 631,
+        "days_ago": 632,
         "color": "red",
         "blink": false
       },
@@ -59,7 +59,7 @@
         "last_comment_by": "rbouqueau",
         "last_comment_date": "2025-10-31",
         "date": "2021-11-30",
-        "days_ago": 1717,
+        "days_ago": 1718,
         "color": "red",
         "blink": false
       },
@@ -73,7 +73,7 @@
         "last_comment_by": "rbouqueau",
         "last_comment_date": "2021-10-23",
         "date": "2021-10-23",
-        "days_ago": 1755,
+        "days_ago": 1756,
         "color": "red",
         "blink": false
       },
@@ -87,7 +87,7 @@
         "last_comment_by": "alessandro-lucco",
         "last_comment_date": "2026-07-21",
         "date": "2026-07-02",
-        "days_ago": 42,
+        "days_ago": 43,
         "color": "green",
         "blink": false
       },
@@ -101,7 +101,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2025-08-27",
-        "days_ago": 351,
+        "days_ago": 352,
         "color": "red",
         "blink": false
       }
@@ -117,7 +117,7 @@
         "last_comment_by": "jordijoangimenez",
         "last_comment_date": "2025-10-07",
         "date": "2025-05-09",
-        "days_ago": 461,
+        "days_ago": 462,
         "color": "red",
         "blink": false
       }
@@ -135,7 +135,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-03-24",
-        "days_ago": 142,
+        "days_ago": 143,
         "color": "orange",
         "blink": false
       }
@@ -148,10 +148,10 @@
         "title": "Tunnel mode reception, AL-FEC support and various bugfixes",
         "url": "https://github.com/5G-MAG/rt-libflute/pull/68",
         "user": "jordijoangimenez",
-        "last_comment_by": null,
-        "last_comment_date": null,
+        "last_comment_by": "jordijoangimenez",
+        "last_comment_date": "2026-08-13",
         "date": "2026-08-11",
-        "days_ago": 2,
+        "days_ago": 3,
         "color": "green",
         "blink": true
       },
@@ -165,7 +165,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-08-11",
-        "days_ago": 2,
+        "days_ago": 3,
         "color": "green",
         "blink": true
       },
@@ -179,7 +179,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-08-11",
-        "days_ago": 2,
+        "days_ago": 3,
         "color": "green",
         "blink": true
       },
@@ -190,10 +190,10 @@
         "title": "Compliance with TS 26.517 and TS 26.346 (FLUTE v1, RFC 3986): wide TSI, FDT Instance ID wraparound, Close Session/Object flags, EXT_FTI bootstrap",
         "url": "https://github.com/5G-MAG/rt-libflute/pull/62",
         "user": "jordijoangimenez",
-        "last_comment_by": "jordijoangimenez",
-        "last_comment_date": "2026-08-11",
+        "last_comment_by": "rjb1000",
+        "last_comment_date": "2026-08-13",
         "date": "2026-08-07",
-        "days_ago": 6,
+        "days_ago": 7,
         "color": "green",
         "blink": true
       },
@@ -205,9 +205,9 @@
         "url": "https://github.com/5G-MAG/rt-libflute/pull/61",
         "user": "jordijoangimenez",
         "last_comment_by": "jordijoangimenez",
-        "last_comment_date": "2026-08-11",
+        "last_comment_date": "2026-08-13",
         "date": "2026-08-06",
-        "days_ago": 7,
+        "days_ago": 8,
         "color": "green",
         "blink": true
       },
@@ -218,10 +218,10 @@
         "title": "Fix unbounded FDT growth (same-TOI resend, and content-change cases)",
         "url": "https://github.com/5G-MAG/rt-libflute/pull/60",
         "user": "jordijoangimenez",
-        "last_comment_by": "dsilhavy",
-        "last_comment_date": "2026-08-07",
+        "last_comment_by": "jordijoangimenez",
+        "last_comment_date": "2026-08-13",
         "date": "2026-07-28",
-        "days_ago": 16,
+        "days_ago": 17,
         "color": "green",
         "blink": true
       },
@@ -235,7 +235,7 @@
         "last_comment_by": "rbouqueau",
         "last_comment_date": "2025-10-31",
         "date": "2021-11-30",
-        "days_ago": 1717,
+        "days_ago": 1718,
         "color": "red",
         "blink": false
       },
@@ -249,39 +249,25 @@
         "last_comment_by": "rbouqueau",
         "last_comment_date": "2021-10-23",
         "date": "2021-10-23",
-        "days_ago": 1755,
+        "days_ago": 1756,
         "color": "red",
         "blink": false
       }
     ],
     "Auxiliary Tools": [
       {
-        "number": "#72",
+        "number": "#74",
         "status": "Ready",
         "repo": "rt-common-shared",
-        "title": "Fix CJson copy-assignment operator missing return statement (SIGILL crash)",
-        "url": "https://github.com/5G-MAG/rt-common-shared/pull/72",
-        "user": "jordijoangimenez",
+        "title": "Reallign C++ OpenAPI templates from 3GPP-Rel18 branch",
+        "url": "https://github.com/5G-MAG/rt-common-shared/pull/74",
+        "user": "davidjwbbc",
         "last_comment_by": null,
         "last_comment_date": null,
-        "date": "2026-08-11",
-        "days_ago": 2,
+        "date": "2026-08-13",
+        "days_ago": 1,
         "color": "green",
         "blink": true
-      },
-      {
-        "number": "#69",
-        "status": "Ready",
-        "repo": "rt-common-shared",
-        "title": "Feature/docker monitor",
-        "url": "https://github.com/5G-MAG/rt-common-shared/pull/69",
-        "user": "jordijoangimenez",
-        "last_comment_by": "dsilhavy",
-        "last_comment_date": "2026-07-10",
-        "date": "2026-07-03",
-        "days_ago": 41,
-        "color": "green",
-        "blink": false
       }
     ],
     "Conversational Avatar": [
@@ -295,7 +281,7 @@
         "last_comment_by": "nlsdvl",
         "last_comment_date": "2026-07-08",
         "date": "2026-06-23",
-        "days_ago": 51,
+        "days_ago": 52,
         "color": "green",
         "blink": false
       }
@@ -311,7 +297,7 @@
         "last_comment_by": "ntienvie",
         "last_comment_date": "2026-08-12",
         "date": "2026-05-12",
-        "days_ago": 93,
+        "days_ago": 94,
         "color": "orange",
         "blink": false
       }
@@ -327,39 +313,25 @@
         "last_comment_by": "ErikGaida",
         "last_comment_date": "2026-06-18",
         "date": "2026-05-21",
-        "days_ago": 84,
+        "days_ago": 85,
         "color": "green",
         "blink": false
       }
     ],
     "Network APIs": [
       {
-        "number": "#72",
+        "number": "#74",
         "status": "Ready",
         "repo": "rt-common-shared",
-        "title": "Fix CJson copy-assignment operator missing return statement (SIGILL crash)",
-        "url": "https://github.com/5G-MAG/rt-common-shared/pull/72",
-        "user": "jordijoangimenez",
+        "title": "Reallign C++ OpenAPI templates from 3GPP-Rel18 branch",
+        "url": "https://github.com/5G-MAG/rt-common-shared/pull/74",
+        "user": "davidjwbbc",
         "last_comment_by": null,
         "last_comment_date": null,
-        "date": "2026-08-11",
-        "days_ago": 2,
+        "date": "2026-08-13",
+        "days_ago": 1,
         "color": "green",
         "blink": true
-      },
-      {
-        "number": "#69",
-        "status": "Ready",
-        "repo": "rt-common-shared",
-        "title": "Feature/docker monitor",
-        "url": "https://github.com/5G-MAG/rt-common-shared/pull/69",
-        "user": "jordijoangimenez",
-        "last_comment_by": "dsilhavy",
-        "last_comment_date": "2026-07-10",
-        "date": "2026-07-03",
-        "days_ago": 41,
-        "color": "green",
-        "blink": false
       },
       {
         "number": "#4",
@@ -371,7 +343,7 @@
         "last_comment_by": "dsilhavy",
         "last_comment_date": "2026-07-10",
         "date": "2026-07-01",
-        "days_ago": 43,
+        "days_ago": 44,
         "color": "green",
         "blink": false
       }
@@ -387,12 +359,26 @@
         "last_comment_by": "jordijoangimenez",
         "last_comment_date": "2025-10-22",
         "date": "2024-11-20",
-        "days_ago": 631,
+        "days_ago": 632,
         "color": "red",
         "blink": false
       }
     ],
     "5G Multicast Broadcast": [
+      {
+        "number": "#50",
+        "status": "Ready",
+        "repo": "rt-mbs-function",
+        "title": "Fix segfault when receiving an error response from the MB-SMF",
+        "url": "https://github.com/5G-MAG/rt-mbs-function/pull/50",
+        "user": "davidjwbbc",
+        "last_comment_by": null,
+        "last_comment_date": null,
+        "date": "2026-08-13",
+        "days_ago": 1,
+        "color": "green",
+        "blink": true
+      },
       {
         "number": "#49",
         "status": "Ready",
@@ -403,21 +389,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-08-11",
-        "days_ago": 2,
-        "color": "green",
-        "blink": true
-      },
-      {
-        "number": "#48",
-        "status": "Ready",
-        "repo": "rt-mbs-function",
-        "title": "Various bug fixes: replacement for PR #42",
-        "url": "https://github.com/5G-MAG/rt-mbs-function/pull/48",
-        "user": "davidjwbbc",
-        "last_comment_by": "dsilhavy",
-        "last_comment_date": "2026-08-07",
-        "date": "2026-08-06",
-        "days_ago": 7,
+        "days_ago": 3,
         "color": "green",
         "blink": true
       },
@@ -431,7 +403,21 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-08-11",
-        "days_ago": 2,
+        "days_ago": 3,
+        "color": "green",
+        "blink": true
+      },
+      {
+        "number": "#46",
+        "status": "Ready",
+        "repo": "open5gs",
+        "title": "Improve handling of MBS UDP tunnels",
+        "url": "https://github.com/5G-MAG/open5gs/pull/46",
+        "user": "davidjwbbc",
+        "last_comment_by": null,
+        "last_comment_date": null,
+        "date": "2026-08-13",
+        "days_ago": 1,
         "color": "green",
         "blink": true
       },
@@ -445,7 +431,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-08-11",
-        "days_ago": 2,
+        "days_ago": 3,
         "color": "green",
         "blink": true
       },
@@ -459,7 +445,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-07-02",
-        "days_ago": 42,
+        "days_ago": 43,
         "color": "green",
         "blink": false
       },
@@ -473,35 +459,7 @@
         "last_comment_by": "devbbc",
         "last_comment_date": "2026-08-12",
         "date": "2026-08-07",
-        "days_ago": 6,
-        "color": "green",
-        "blink": true
-      },
-      {
-        "number": "#31",
-        "status": "Ready",
-        "repo": "rt-mbs-examples",
-        "title": "Feature/external path config",
-        "url": "https://github.com/5G-MAG/rt-mbs-examples/pull/31",
-        "user": "dsilhavy",
-        "last_comment_by": null,
-        "last_comment_date": null,
-        "date": "2026-08-07",
-        "days_ago": 6,
-        "color": "green",
-        "blink": true
-      },
-      {
-        "number": "#29",
-        "status": "Ready",
-        "repo": "rt-mbs-examples",
-        "title": "Non-interactive tmux tutorial mode + loadable demo templates",
-        "url": "https://github.com/5G-MAG/rt-mbs-examples/pull/29",
-        "user": "jordijoangimenez",
-        "last_comment_by": "dsilhavy",
-        "last_comment_date": "2026-07-31",
-        "date": "2026-07-30",
-        "days_ago": 14,
+        "days_ago": 7,
         "color": "green",
         "blink": true
       }

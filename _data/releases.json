@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-08-13 02:24",
+  "last_updated": "2026-08-14 02:23",
   "projects": {
     "5G Media Streaming": [
       {
@@ -356,7 +356,7 @@
         "short_name": "open5gs",
         "tag": "v0.1.4-5mbs-v2.7.2-o5gs",
         "date": "2026-07-14",
-        "blink": true,
+        "blink": false,
         "color": "green",
         "url": "https://github.com/5G-MAG/open5gs/releases/tag/v0.1.4-5mbs-v2.7.2-o5gs"
       },
