@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-08-14 02:23",
+  "last_updated": "2026-08-15 01:30",
   "projects": {
     "5G Media Streaming": [
       {
@@ -12,7 +12,7 @@
         "last_comment_by": "ErikGaida",
         "last_comment_date": "2026-06-18",
         "date": "2026-05-21",
-        "days_ago": 85,
+        "days_ago": 86,
         "color": "green",
         "blink": false
       }
@@ -20,7 +20,7 @@
     "5G Core Service Consumers": [
       {
         "number": "#29",
-        "status": "Ready",
+        "status": "Draft",
         "repo": "rt-5gc-service-consumers",
         "title": "Fix MBS Session Id / SSM handling for BROADCAST sessions + MNC-length-aware PLMN Id",
         "url": "https://github.com/5G-MAG/rt-5gc-service-consumers/pull/29",
@@ -28,7 +28,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-08-12",
-        "days_ago": 2,
+        "days_ago": 3,
         "color": "green",
         "blink": true
       }
@@ -45,7 +45,7 @@
         "last_comment_by": "jordijoangimenez",
         "last_comment_date": "2025-10-22",
         "date": "2024-11-20",
-        "days_ago": 632,
+        "days_ago": 633,
         "color": "red",
         "blink": false
       },
@@ -59,7 +59,7 @@
         "last_comment_by": "rbouqueau",
         "last_comment_date": "2025-10-31",
         "date": "2021-11-30",
-        "days_ago": 1718,
+        "days_ago": 1719,
         "color": "red",
         "blink": false
       },
@@ -73,7 +73,7 @@
         "last_comment_by": "rbouqueau",
         "last_comment_date": "2021-10-23",
         "date": "2021-10-23",
-        "days_ago": 1756,
+        "days_ago": 1757,
         "color": "red",
         "blink": false
       },
@@ -87,7 +87,7 @@
         "last_comment_by": "alessandro-lucco",
         "last_comment_date": "2026-07-21",
         "date": "2026-07-02",
-        "days_ago": 43,
+        "days_ago": 44,
         "color": "green",
         "blink": false
       },
@@ -101,7 +101,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2025-08-27",
-        "days_ago": 352,
+        "days_ago": 353,
         "color": "red",
         "blink": false
       }
@@ -117,7 +117,7 @@
         "last_comment_by": "jordijoangimenez",
         "last_comment_date": "2025-10-07",
         "date": "2025-05-09",
-        "days_ago": 462,
+        "days_ago": 463,
         "color": "red",
         "blink": false
       }
@@ -135,7 +135,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-03-24",
-        "days_ago": 143,
+        "days_ago": 144,
         "color": "orange",
         "blink": false
       }
@@ -143,7 +143,7 @@
     "Multimedia Protocols": [
       {
         "number": "#68",
-        "status": "Ready",
+        "status": "Draft",
         "repo": "rt-libflute",
         "title": "Tunnel mode reception, AL-FEC support and various bugfixes",
         "url": "https://github.com/5G-MAG/rt-libflute/pull/68",
@@ -151,13 +151,13 @@
         "last_comment_by": "jordijoangimenez",
         "last_comment_date": "2026-08-13",
         "date": "2026-08-11",
-        "days_ago": 3,
+        "days_ago": 4,
         "color": "green",
         "blink": true
       },
       {
         "number": "#65",
-        "status": "Ready",
+        "status": "Draft",
         "repo": "rt-libflute",
         "title": "FLUTE version 2 on transmit (not 3GPP-compliant \u2014 reference/future work, depends on #62)",
         "url": "https://github.com/5G-MAG/rt-libflute/pull/65",
@@ -165,13 +165,13 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-08-11",
-        "days_ago": 3,
+        "days_ago": 4,
         "color": "green",
         "blink": true
       },
       {
         "number": "#64",
-        "status": "Ready",
+        "status": "Draft",
         "repo": "rt-libflute",
         "title": "RFC 6330 RaptorQ FEC (not 3GPP-mandated \u2014 reference/future work, depends on #61)",
         "url": "https://github.com/5G-MAG/rt-libflute/pull/64",
@@ -179,13 +179,13 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-08-11",
-        "days_ago": 3,
+        "days_ago": 4,
         "color": "green",
         "blink": true
       },
       {
         "number": "#62",
-        "status": "Ready",
+        "status": "Draft",
         "repo": "rt-libflute",
         "title": "Compliance with TS 26.517 and TS 26.346 (FLUTE v1, RFC 3986): wide TSI, FDT Instance ID wraparound, Close Session/Object flags, EXT_FTI bootstrap",
         "url": "https://github.com/5G-MAG/rt-libflute/pull/62",
@@ -193,21 +193,21 @@
         "last_comment_by": "rjb1000",
         "last_comment_date": "2026-08-13",
         "date": "2026-08-07",
-        "days_ago": 7,
+        "days_ago": 8,
         "color": "green",
         "blink": true
       },
       {
         "number": "#61",
-        "status": "Ready",
+        "status": "Draft",
         "repo": "rt-libflute",
         "title": "Implement RFC 5053 Raptor",
         "url": "https://github.com/5G-MAG/rt-libflute/pull/61",
         "user": "jordijoangimenez",
-        "last_comment_by": "jordijoangimenez",
-        "last_comment_date": "2026-08-13",
+        "last_comment_by": "dsilhavy",
+        "last_comment_date": "2026-08-14",
         "date": "2026-08-06",
-        "days_ago": 8,
+        "days_ago": 9,
         "color": "green",
         "blink": true
       },
@@ -221,7 +221,7 @@
         "last_comment_by": "jordijoangimenez",
         "last_comment_date": "2026-08-13",
         "date": "2026-07-28",
-        "days_ago": 17,
+        "days_ago": 18,
         "color": "green",
         "blink": true
       },
@@ -235,7 +235,7 @@
         "last_comment_by": "rbouqueau",
         "last_comment_date": "2025-10-31",
         "date": "2021-11-30",
-        "days_ago": 1718,
+        "days_ago": 1719,
         "color": "red",
         "blink": false
       },
@@ -249,7 +249,7 @@
         "last_comment_by": "rbouqueau",
         "last_comment_date": "2021-10-23",
         "date": "2021-10-23",
-        "days_ago": 1756,
+        "days_ago": 1757,
         "color": "red",
         "blink": false
       }
@@ -265,7 +265,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-08-13",
-        "days_ago": 1,
+        "days_ago": 2,
         "color": "green",
         "blink": true
       }
@@ -281,7 +281,7 @@
         "last_comment_by": "nlsdvl",
         "last_comment_date": "2026-07-08",
         "date": "2026-06-23",
-        "days_ago": 52,
+        "days_ago": 53,
         "color": "green",
         "blink": false
       }
@@ -297,7 +297,7 @@
         "last_comment_by": "ntienvie",
         "last_comment_date": "2026-08-12",
         "date": "2026-05-12",
-        "days_ago": 94,
+        "days_ago": 95,
         "color": "orange",
         "blink": false
       }
@@ -313,7 +313,7 @@
         "last_comment_by": "ErikGaida",
         "last_comment_date": "2026-06-18",
         "date": "2026-05-21",
-        "days_ago": 85,
+        "days_ago": 86,
         "color": "green",
         "blink": false
       }
@@ -329,7 +329,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-08-13",
-        "days_ago": 1,
+        "days_ago": 2,
         "color": "green",
         "blink": true
       },
@@ -343,7 +343,7 @@
         "last_comment_by": "dsilhavy",
         "last_comment_date": "2026-07-10",
         "date": "2026-07-01",
-        "days_ago": 44,
+        "days_ago": 45,
         "color": "green",
         "blink": false
       }
@@ -359,29 +359,15 @@
         "last_comment_by": "jordijoangimenez",
         "last_comment_date": "2025-10-22",
         "date": "2024-11-20",
-        "days_ago": 632,
+        "days_ago": 633,
         "color": "red",
         "blink": false
       }
     ],
     "5G Multicast Broadcast": [
       {
-        "number": "#50",
-        "status": "Ready",
-        "repo": "rt-mbs-function",
-        "title": "Fix segfault when receiving an error response from the MB-SMF",
-        "url": "https://github.com/5G-MAG/rt-mbs-function/pull/50",
-        "user": "davidjwbbc",
-        "last_comment_by": null,
-        "last_comment_date": null,
-        "date": "2026-08-13",
-        "days_ago": 1,
-        "color": "green",
-        "blink": true
-      },
-      {
         "number": "#49",
-        "status": "Ready",
+        "status": "Draft",
         "repo": "rt-mbs-function",
         "title": "Fix MBS Broadcast distribution session lifecycle and Service Announcement crashes",
         "url": "https://github.com/5G-MAG/rt-mbs-function/pull/49",
@@ -389,41 +375,41 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-08-11",
-        "days_ago": 3,
+        "days_ago": 4,
         "color": "green",
         "blink": true
       },
       {
         "number": "#71",
-        "status": "Ready",
+        "status": "Draft",
         "repo": "rt-mbs-transport-function",
         "title": "Fix MBS Broadcast content delivery crashes and Distribution Session bugs",
         "url": "https://github.com/5G-MAG/rt-mbs-transport-function/pull/71",
         "user": "jordijoangimenez",
-        "last_comment_by": null,
-        "last_comment_date": null,
+        "last_comment_by": "davidjwbbc",
+        "last_comment_date": "2026-08-14",
         "date": "2026-08-11",
-        "days_ago": 3,
+        "days_ago": 4,
         "color": "green",
         "blink": true
       },
       {
-        "number": "#46",
+        "number": "#47",
         "status": "Ready",
         "repo": "open5gs",
-        "title": "Improve handling of MBS UDP tunnels",
-        "url": "https://github.com/5G-MAG/open5gs/pull/46",
+        "title": "Fixes for memory access issues identified by ASAN",
+        "url": "https://github.com/5G-MAG/open5gs/pull/47",
         "user": "davidjwbbc",
         "last_comment_by": null,
         "last_comment_date": null,
-        "date": "2026-08-13",
+        "date": "2026-08-14",
         "days_ago": 1,
         "color": "green",
         "blink": true
       },
       {
         "number": "#45",
-        "status": "Ready",
+        "status": "Draft",
         "repo": "open5gs",
         "title": "Fix MBS Broadcast 5GC session setup/delivery bugs, plus a regular-attach-blocking SMF bug",
         "url": "https://github.com/5G-MAG/open5gs/pull/45",
@@ -431,7 +417,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-08-11",
-        "days_ago": 3,
+        "days_ago": 4,
         "color": "green",
         "blink": true
       },
@@ -445,7 +431,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-07-02",
-        "days_ago": 43,
+        "days_ago": 44,
         "color": "green",
         "blink": false
       },
@@ -456,10 +442,10 @@
         "title": "Docker set up for MBS User Services",
         "url": "https://github.com/5G-MAG/rt-mbs-examples/pull/32",
         "user": "devbbc",
-        "last_comment_by": "devbbc",
-        "last_comment_date": "2026-08-12",
+        "last_comment_by": "rjb1000",
+        "last_comment_date": "2026-08-14",
         "date": "2026-08-07",
-        "days_ago": 7,
+        "days_ago": 8,
         "color": "green",
         "blink": true
       }
