@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-08-22 01:29",
+  "last_updated": "2026-08-23 01:44",
   "projects": {
     "5G Media Streaming": [
       {
@@ -12,7 +12,7 @@
         "last_comment_by": "ErikGaida",
         "last_comment_date": "2026-06-18",
         "date": "2026-05-21",
-        "days_ago": 93,
+        "days_ago": 94,
         "color": "orange",
         "blink": false
       }
@@ -28,7 +28,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-08-12",
-        "days_ago": 10,
+        "days_ago": 11,
         "color": "green",
         "blink": true
       }
@@ -45,7 +45,7 @@
         "last_comment_by": "jordijoangimenez",
         "last_comment_date": "2025-10-22",
         "date": "2024-11-20",
-        "days_ago": 640,
+        "days_ago": 641,
         "color": "red",
         "blink": false
       },
@@ -59,7 +59,7 @@
         "last_comment_by": "rbouqueau",
         "last_comment_date": "2025-10-31",
         "date": "2021-11-30",
-        "days_ago": 1726,
+        "days_ago": 1727,
         "color": "red",
         "blink": false
       },
@@ -73,7 +73,7 @@
         "last_comment_by": "rbouqueau",
         "last_comment_date": "2021-10-23",
         "date": "2021-10-23",
-        "days_ago": 1764,
+        "days_ago": 1765,
         "color": "red",
         "blink": false
       },
@@ -87,7 +87,7 @@
         "last_comment_by": "alessandro-lucco",
         "last_comment_date": "2026-07-21",
         "date": "2026-07-02",
-        "days_ago": 51,
+        "days_ago": 52,
         "color": "green",
         "blink": false
       },
@@ -101,7 +101,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2025-08-27",
-        "days_ago": 360,
+        "days_ago": 361,
         "color": "red",
         "blink": false
       }
@@ -117,7 +117,7 @@
         "last_comment_by": "jordijoangimenez",
         "last_comment_date": "2025-10-07",
         "date": "2025-05-09",
-        "days_ago": 470,
+        "days_ago": 471,
         "color": "red",
         "blink": false
       }
@@ -135,79 +135,93 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-03-24",
-        "days_ago": 151,
+        "days_ago": 152,
         "color": "orange",
         "blink": false
       }
     ],
     "Multimedia Protocols": [
       {
+        "number": "#84",
+        "status": "Draft",
+        "repo": "rt-libflute",
+        "title": "Fix root CTest test discovery",
+        "url": "https://github.com/5G-MAG/rt-libflute/pull/84",
+        "user": "Theater-ahyeon",
+        "last_comment_by": "jordijoangimenez",
+        "last_comment_date": "2026-08-22",
+        "date": "2026-08-22",
+        "days_ago": 1,
+        "color": "green",
+        "blink": true
+      },
+      {
         "number": "#68",
         "status": "Draft",
         "repo": "rt-libflute",
-        "title": "Tunnel mode reception, AL-FEC support and various bugfixes",
+        "title": "Tunnel-mode reception, and five object-handling fixes (compression, partitioning, transfer length)",
         "url": "https://github.com/5G-MAG/rt-libflute/pull/68",
         "user": "jordijoangimenez",
-        "last_comment_by": "rjb1000",
-        "last_comment_date": "2026-08-17",
+        "last_comment_by": "jordijoangimenez",
+        "last_comment_date": "2026-08-22",
         "date": "2026-08-11",
-        "days_ago": 11,
+        "days_ago": 12,
         "color": "green",
         "blink": true
       },
       {
         "number": "#65",
-        "status": "Draft",
+        "status": "Ready",
         "repo": "rt-libflute",
-        "title": "FLUTE version 2 on transmit (not 3GPP-compliant \u2014 reference/future work, depends on #62)",
+        "title": "FLUTE version 2 (RFC 6726) signalling, off by default: step one of three, no conformance claimed",
         "url": "https://github.com/5G-MAG/rt-libflute/pull/65",
         "user": "jordijoangimenez",
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-08-11",
-        "days_ago": 11,
+        "days_ago": 12,
         "color": "green",
         "blink": true
       },
       {
         "number": "#64",
-        "status": "Draft",
+        "status": "Ready",
         "repo": "rt-libflute",
-        "title": "RFC 6330 RaptorQ FEC (not 3GPP-mandated \u2014 reference/future work, depends on #61)",
+        "title": "RFC 6330 RaptorQ FEC scheme (not 3GPP-mandated, offered as reference work)",
         "url": "https://github.com/5G-MAG/rt-libflute/pull/64",
         "user": "jordijoangimenez",
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-08-11",
-        "days_ago": 11,
+        "days_ago": 12,
         "color": "green",
         "blink": true
       },
       {
         "number": "#62",
-        "status": "Draft",
+        "status": "Ready",
         "repo": "rt-libflute",
-        "title": "Compliance with TS 26.517 and TS 26.346 (FLUTE v1, RFC 3986): wide TSI, FDT Instance ID wraparound, Close Session/Object flags, EXT_FTI bootstrap",
+        "title": "FLUTE v1 (RFC 3926) and MBMS Download Profile conformance, plus assorted correctness fixes",
         "url": "https://github.com/5G-MAG/rt-libflute/pull/62",
         "user": "jordijoangimenez",
         "last_comment_by": "rjb1000",
         "last_comment_date": "2026-08-13",
         "date": "2026-08-07",
-        "days_ago": 15,
+        "days_ago": 16,
         "color": "green",
         "blink": true
       },
       {
         "number": "#61",
-        "status": "Draft",
+        "status": "Ready",
         "repo": "rt-libflute",
-        "title": "Implement RFC 5053 Raptor",
+        "title": "RFC 5053 Raptor FEC scheme: codec, FLUTE integration, and the missing-symbol accessor",
         "url": "https://github.com/5G-MAG/rt-libflute/pull/61",
         "user": "jordijoangimenez",
         "last_comment_by": "dsilhavy",
         "last_comment_date": "2026-08-14",
         "date": "2026-08-06",
-        "days_ago": 16,
+        "days_ago": 17,
         "color": "green",
         "blink": true
       },
@@ -221,7 +235,7 @@
         "last_comment_by": "rbouqueau",
         "last_comment_date": "2025-10-31",
         "date": "2021-11-30",
-        "days_ago": 1726,
+        "days_ago": 1727,
         "color": "red",
         "blink": false
       },
@@ -235,7 +249,7 @@
         "last_comment_by": "rbouqueau",
         "last_comment_date": "2021-10-23",
         "date": "2021-10-23",
-        "days_ago": 1764,
+        "days_ago": 1765,
         "color": "red",
         "blink": false
       }
@@ -252,7 +266,7 @@
         "last_comment_by": "nlsdvl",
         "last_comment_date": "2026-07-08",
         "date": "2026-06-23",
-        "days_ago": 60,
+        "days_ago": 61,
         "color": "green",
         "blink": false
       }
@@ -268,7 +282,7 @@
         "last_comment_by": "jordijoangimenez",
         "last_comment_date": "2026-08-18",
         "date": "2026-05-12",
-        "days_ago": 102,
+        "days_ago": 103,
         "color": "orange",
         "blink": false
       }
@@ -284,7 +298,7 @@
         "last_comment_by": "ErikGaida",
         "last_comment_date": "2026-06-18",
         "date": "2026-05-21",
-        "days_ago": 93,
+        "days_ago": 94,
         "color": "orange",
         "blink": false
       }
@@ -300,7 +314,7 @@
         "last_comment_by": "dsilhavy",
         "last_comment_date": "2026-07-10",
         "date": "2026-07-01",
-        "days_ago": 52,
+        "days_ago": 53,
         "color": "green",
         "blink": false
       }
@@ -316,7 +330,7 @@
         "last_comment_by": "jordijoangimenez",
         "last_comment_date": "2025-10-22",
         "date": "2024-11-20",
-        "days_ago": 640,
+        "days_ago": 641,
         "color": "red",
         "blink": false
       }
@@ -332,7 +346,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-08-21",
-        "days_ago": 1,
+        "days_ago": 2,
         "color": "green",
         "blink": true
       },
@@ -346,7 +360,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-08-11",
-        "days_ago": 11,
+        "days_ago": 12,
         "color": "green",
         "blink": true
       },
@@ -360,7 +374,7 @@
         "last_comment_by": "rjb1000",
         "last_comment_date": "2026-08-21",
         "date": "2026-08-21",
-        "days_ago": 1,
+        "days_ago": 2,
         "color": "green",
         "blink": true
       },
@@ -374,7 +388,7 @@
         "last_comment_by": "davidjwbbc",
         "last_comment_date": "2026-08-14",
         "date": "2026-08-11",
-        "days_ago": 11,
+        "days_ago": 12,
         "color": "green",
         "blink": true
       },
@@ -388,7 +402,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-08-14",
-        "days_ago": 8,
+        "days_ago": 9,
         "color": "green",
         "blink": true
       },
@@ -402,7 +416,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-08-11",
-        "days_ago": 11,
+        "days_ago": 12,
         "color": "green",
         "blink": true
       },
@@ -416,7 +430,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-07-02",
-        "days_ago": 51,
+        "days_ago": 52,
         "color": "green",
         "blink": false
       },
@@ -430,7 +444,7 @@
         "last_comment_by": "rjb1000",
         "last_comment_date": "2026-08-14",
         "date": "2026-08-07",
-        "days_ago": 15,
+        "days_ago": 16,
         "color": "green",
         "blink": true
       }
