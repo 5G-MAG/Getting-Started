@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-08-27 08:32",
+  "last_updated": "2026-08-28 10:47",
   "projects": {
     "5G Media Streaming": [
       {
@@ -12,7 +12,7 @@
         "last_comment_by": "ErikGaida",
         "last_comment_date": "2026-06-18",
         "date": "2026-05-21",
-        "days_ago": 98,
+        "days_ago": 99,
         "color": "orange",
         "blink": false
       }
@@ -28,12 +28,41 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-08-12",
-        "days_ago": 15,
+        "days_ago": 16,
         "color": "green",
         "blink": true
       }
     ],
-    "UE Data Collection": [],
+    "UE Data Collection": [
+      {
+        "number": "#32",
+        "status": "Ready",
+        "repo": "rt-data-collection-application-function",
+        "title": "Add end-to-end CRUD integration coverage for DCAF R1, R2, and R6 APIs",
+        "url": "https://github.com/5G-MAG/rt-data-collection-application-function/pull/32",
+        "user": "ErikGaida",
+        "last_comment_by": null,
+        "last_comment_date": null,
+        "date": "2026-08-27",
+        "days_ago": 1,
+        "color": "green",
+        "blink": true
+      },
+      {
+        "number": "#31",
+        "status": "Ready",
+        "repo": "rt-data-collection-application-function",
+        "title": "Fix HTTP status code handling in data reporting functions",
+        "url": "https://github.com/5G-MAG/rt-data-collection-application-function/pull/31",
+        "user": "ErikGaida",
+        "last_comment_by": null,
+        "last_comment_date": null,
+        "date": "2026-08-27",
+        "days_ago": 1,
+        "color": "green",
+        "blink": true
+      }
+    ],
     "5G Broadcast TV Radio": [
       {
         "number": "#9",
@@ -45,7 +74,7 @@
         "last_comment_by": "jordijoangimenez",
         "last_comment_date": "2025-10-22",
         "date": "2024-11-20",
-        "days_ago": 645,
+        "days_ago": 646,
         "color": "red",
         "blink": false
       },
@@ -59,7 +88,7 @@
         "last_comment_by": "rbouqueau",
         "last_comment_date": "2025-10-31",
         "date": "2021-11-30",
-        "days_ago": 1731,
+        "days_ago": 1732,
         "color": "red",
         "blink": false
       },
@@ -73,7 +102,7 @@
         "last_comment_by": "rbouqueau",
         "last_comment_date": "2021-10-23",
         "date": "2021-10-23",
-        "days_ago": 1769,
+        "days_ago": 1770,
         "color": "red",
         "blink": false
       },
@@ -87,7 +116,7 @@
         "last_comment_by": "alessandro-lucco",
         "last_comment_date": "2026-07-21",
         "date": "2026-07-02",
-        "days_ago": 56,
+        "days_ago": 57,
         "color": "green",
         "blink": false
       },
@@ -101,7 +130,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2025-08-27",
-        "days_ago": 365,
+        "days_ago": 366,
         "color": "red",
         "blink": false
       }
@@ -117,7 +146,7 @@
         "last_comment_by": "jordijoangimenez",
         "last_comment_date": "2025-10-07",
         "date": "2025-05-09",
-        "days_ago": 475,
+        "days_ago": 476,
         "color": "red",
         "blink": false
       }
@@ -135,7 +164,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-03-24",
-        "days_ago": 156,
+        "days_ago": 157,
         "color": "orange",
         "blink": false
       }
@@ -151,7 +180,7 @@
         "last_comment_by": "jordijoangimenez",
         "last_comment_date": "2026-08-23",
         "date": "2026-08-23",
-        "days_ago": 4,
+        "days_ago": 5,
         "color": "green",
         "blink": true
       },
@@ -165,7 +194,7 @@
         "last_comment_by": "jordijoangimenez",
         "last_comment_date": "2026-08-22",
         "date": "2026-08-22",
-        "days_ago": 5,
+        "days_ago": 6,
         "color": "green",
         "blink": true
       },
@@ -179,7 +208,7 @@
         "last_comment_by": "jordijoangimenez",
         "last_comment_date": "2026-08-23",
         "date": "2026-08-11",
-        "days_ago": 16,
+        "days_ago": 17,
         "color": "green",
         "blink": true
       },
@@ -193,7 +222,7 @@
         "last_comment_by": "jordijoangimenez",
         "last_comment_date": "2026-08-23",
         "date": "2026-08-11",
-        "days_ago": 16,
+        "days_ago": 17,
         "color": "green",
         "blink": true
       },
@@ -207,7 +236,7 @@
         "last_comment_by": "jordijoangimenez",
         "last_comment_date": "2026-08-23",
         "date": "2026-08-11",
-        "days_ago": 16,
+        "days_ago": 17,
         "color": "green",
         "blink": true
       },
@@ -221,7 +250,7 @@
         "last_comment_by": "jordijoangimenez",
         "last_comment_date": "2026-08-23",
         "date": "2026-08-07",
-        "days_ago": 20,
+        "days_ago": 21,
         "color": "green",
         "blink": true
       },
@@ -235,7 +264,7 @@
         "last_comment_by": "jordijoangimenez",
         "last_comment_date": "2026-08-23",
         "date": "2026-08-06",
-        "days_ago": 21,
+        "days_ago": 22,
         "color": "green",
         "blink": true
       },
@@ -249,7 +278,7 @@
         "last_comment_by": "rbouqueau",
         "last_comment_date": "2025-10-31",
         "date": "2021-11-30",
-        "days_ago": 1731,
+        "days_ago": 1732,
         "color": "red",
         "blink": false
       },
@@ -263,7 +292,7 @@
         "last_comment_by": "rbouqueau",
         "last_comment_date": "2021-10-23",
         "date": "2021-10-23",
-        "days_ago": 1769,
+        "days_ago": 1770,
         "color": "red",
         "blink": false
       }
@@ -280,7 +309,7 @@
         "last_comment_by": "nlsdvl",
         "last_comment_date": "2026-07-08",
         "date": "2026-06-23",
-        "days_ago": 65,
+        "days_ago": 66,
         "color": "green",
         "blink": false
       }
@@ -293,10 +322,10 @@
         "title": "netemu measurement package, agentic scenarios, Markov traffic models",
         "url": "https://github.com/5G-MAG/6G-Testbed/pull/10",
         "user": "ibouazizi",
-        "last_comment_by": null,
-        "last_comment_date": null,
+        "last_comment_by": "dsilhavy",
+        "last_comment_date": "2026-08-27",
         "date": "2026-08-26",
-        "days_ago": 1,
+        "days_ago": 2,
         "color": "green",
         "blink": true
       },
@@ -310,7 +339,7 @@
         "last_comment_by": "jordijoangimenez",
         "last_comment_date": "2026-08-18",
         "date": "2026-05-12",
-        "days_ago": 107,
+        "days_ago": 108,
         "color": "orange",
         "blink": false
       }
@@ -326,7 +355,7 @@
         "last_comment_by": "ErikGaida",
         "last_comment_date": "2026-06-18",
         "date": "2026-05-21",
-        "days_ago": 98,
+        "days_ago": 99,
         "color": "orange",
         "blink": false
       }
@@ -342,7 +371,7 @@
         "last_comment_by": "dsilhavy",
         "last_comment_date": "2026-07-10",
         "date": "2026-07-01",
-        "days_ago": 57,
+        "days_ago": 58,
         "color": "green",
         "blink": false
       }
@@ -358,7 +387,7 @@
         "last_comment_by": "jordijoangimenez",
         "last_comment_date": "2025-10-22",
         "date": "2024-11-20",
-        "days_ago": 645,
+        "days_ago": 646,
         "color": "red",
         "blink": false
       }
@@ -374,7 +403,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-08-21",
-        "days_ago": 6,
+        "days_ago": 7,
         "color": "green",
         "blink": true
       },
@@ -388,7 +417,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-08-11",
-        "days_ago": 16,
+        "days_ago": 17,
         "color": "green",
         "blink": true
       },
@@ -402,7 +431,7 @@
         "last_comment_by": "rjb1000",
         "last_comment_date": "2026-08-21",
         "date": "2026-08-21",
-        "days_ago": 6,
+        "days_ago": 7,
         "color": "green",
         "blink": true
       },
@@ -416,7 +445,7 @@
         "last_comment_by": "davidjwbbc",
         "last_comment_date": "2026-08-14",
         "date": "2026-08-11",
-        "days_ago": 16,
+        "days_ago": 17,
         "color": "green",
         "blink": true
       },
@@ -430,7 +459,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-08-14",
-        "days_ago": 13,
+        "days_ago": 14,
         "color": "green",
         "blink": true
       },
@@ -444,7 +473,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-08-11",
-        "days_ago": 16,
+        "days_ago": 17,
         "color": "green",
         "blink": true
       },
@@ -458,7 +487,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-07-02",
-        "days_ago": 56,
+        "days_ago": 57,
         "color": "green",
         "blink": false
       },
@@ -472,7 +501,7 @@
         "last_comment_by": "rjb1000",
         "last_comment_date": "2026-08-14",
         "date": "2026-08-07",
-        "days_ago": 20,
+        "days_ago": 21,
         "color": "green",
         "blink": true
       }
