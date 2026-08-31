@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-08-30 04:46",
+  "last_updated": "2026-08-31 04:49",
   "projects": {
     "5G Media Streaming": [
       {
@@ -258,7 +258,7 @@
         "short_name": "rt-avatar-call",
         "tag": "v0.9.1",
         "date": "2026-07-31",
-        "blink": true,
+        "blink": false,
         "color": "green",
         "url": "https://github.com/5G-MAG/rt-avatar-call/releases/tag/v0.9.1"
       },
