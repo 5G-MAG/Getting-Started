@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-09-01 04:30",
+  "last_updated": "2026-09-02 03:53",
   "projects": {
     "5G Media Streaming": [
       {
@@ -220,11 +220,11 @@
     "Multimedia Protocols": [
       {
         "short_name": "rt-libflute",
-        "tag": "rt-libflute-0.12.3",
-        "date": "2026-04-24",
-        "blink": false,
+        "tag": "rt-libflute-0.12.4",
+        "date": "2026-09-01",
+        "blink": true,
         "color": "green",
-        "url": "https://github.com/5G-MAG/rt-libflute/releases/tag/rt-libflute-0.12.3"
+        "url": "https://github.com/5G-MAG/rt-libflute/releases/tag/rt-libflute-0.12.4"
       },
       {
         "short_name": "rt-mbms-mw",
