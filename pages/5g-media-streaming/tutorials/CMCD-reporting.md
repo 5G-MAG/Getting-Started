@@ -20,39 +20,31 @@ CMCD metrics are conveyed in-band with media requests using HTTP request headers
 This tutorial describes how to configure and enable CMCD Reporting in the 5G-MAG Reference Tools.
 
 ## Server-side Setup
-
 ### Step 1: Install the Application Function
-
 For details please refer to the [corresponding section](end-to-end.html#1-installing-the-application-function) in
 the [basic end-to-end guide](end-to-end.html).
 
 ### Step 2: Basic Configuration of the Application Function
-
 Follow the [basic configuration steps](end-to-end.html#configuration-of-the-af) documented in
 the [basic end-to-end guide](end-to-end.html).
 
 ### Step 3: Start the Application Function
-
 Follow the [command](end-to-end.html#starting-the-af) documented in the [basic end-to-end guide](end-to-end.html).
 
 ### Step 4: Install the Application Server
-
 For details please refer to the [corresponding section](end-to-end.html#2-installing-the-application-server) in
 the [basic end-to-end guide](end-to-end.html).
 
 ### Step 5: Enable/Disable CMCD in the Application Server
-
-Config the URL of CMCD Collector in `src/rt_5gms_as/context.py`:
+Configure the URL of CMCD Collector in `src/rt_5gms_as/context.py`:
 - If you would like to enable CMCD Reporting, set the `cmcd_collector_url` like `"cmcd_collector_url = http://<CMCD_DASHBOARD_IP>:3000/cmcd/response-mode"`; just replace the `<CMCD_DASHBOARD_IP>` with the IP of the machine where the CMCD dashboard is running on. As an example, the `cmcd_collector_url` can look like this `http://10.64.39.13:3000/cmcd/response-mode`.
-- If you would like to disable CMCD Reporting, leave the cmcd_collector_url NULL as default.
+- If you would like to disable CMCD Reporting, leave `cmcd_collector_url` unset (default).
 
 ### Step 6: Start the Application Server
-
 For details please refer to the [corresponding section](end-to-end.html#3-running-the-application-server) in
 the [basic end-to-end guide](end-to-end.html).
 
 ### Step 7: Deploy the cmcd-toolkit
-
 #### Step 7.1 Clone cmcd-toolkit 
 ````bash
 git clone https://github.com/5G-MAG/cmcd-toolkit.git
@@ -61,14 +53,14 @@ git clone https://github.com/5G-MAG/cmcd-toolkit.git
 #### Step 7.2 Compose
 ````bash
 chmod 777 cmcd-toolkit/grafana/local-stack/dashboards/cmcd-dashboard.json
-RUN docker compose up
+docker compose up
 ````
 
 #### Step 7.3 Login to grafana at http://<CMCD_DASHBOARD_IP>:8081
     + User: admin
     + Password: grafana
 
-### Step 8: Verify the dashboard with fake CMCD message
+### Step 8: Verify the Dashboard Using a CMCD Test Message
 Run the cmd below(replace the `<YOUR_MACHINE_IP_HERE>` with the IP of the machine that the 5GMS Application Server is running on). If works, you should see a new CMCD reporting has been received in the dashboard.
 ````bash
 ts=$(date +%s%3N)
@@ -97,24 +89,21 @@ v=1"
 As we are all set on the server-side now we can focus on the client side.
 
 ### Step 1: Installation, Configuration and Running the 5GMSd Client
-Please follow the instructions documented in the basic end-to-end guide setup guide.
+Please follow the instructions documented in the basic end-to-end guide.
 
 ### Step 2: Creating CMCD Report
 While consuming content via our previously installed 5GMSd Application Server and 5GMSd Application Function the client is automatically collecting and sending CMCD Reports.
-
 <img src="../../../assets/images/5gms/app-playback.png" width="40%" /> 
 
 ### Step 3: Inspecting the CMCD Report in Dashboard
 Navigate to `http://<CMCD_DASHBOARD_IP>:8081/dashboards` in your browser, like below you should see:
-
 <img src="../../../assets/images/5gms/cmcd-dashboard.png" width="85%" /> 
 
 
-## Network Impairment
+## Network Impairments
 To demonstrate how CMCD provides visibility into adaptive bitrate streaming behavior under changing network conditions, we use the NetEmu from the 5G-MAG 6G-Testbed project to add impairments to the network.
 
 ### Step 1: Clone the Repository
-
 ```bash
 git clone https://github.com/5G-MAG/6G-Testbed.git
 ```
@@ -127,7 +116,8 @@ pip install -e .
 
 For details please refer to the [corresponding section](https://github.com/5G-MAG/6G-Testbed/tree/main/netemu).
 
-### Step 3: Create an Impairment Profile
+### Step 3: Configure Network Impairments
+#### Step 3.1 Create an Impairment Profile
 Add a new profile `1 Mbps bandwidth, 300 ms latency, 50 ms jitter, and 1% packet loss` to the `examples/profiles.yaml`:
 
 ```yaml
@@ -140,29 +130,25 @@ congested-test:
   rate_mbit: 1  # Bandwidth limit (Mbps)
 ```
 
-[!NOTE]
-Remember to replace the `<network-interface>` with your network interface in the `profiles.yaml`, like this `default_interface: "eth0"`
-`
-```yaml
-    # Default interface for network emulation
-    default_interface: "<network-interface>"
-```
+> [!NOTE]
+> Remember to replace the `<network-interface>` with your network interface in `profiles.yaml`, for example:
+>
+> ```yaml
+> default_interface: "eth0"
+> ```
 
-### Apply the impairments
-
+#### Step 3.2 Apply the impairments
 ```bash
 cd ..
 python3 impair.py
 ```
 
-### Check the applied impairments
-
+#### Step 3.3 Check the applied impairments
 ```bash
 tc class show dev <network-interface>
 ```
 
 Example:
-
 ```bash
 root@~$ tc class show dev eno1
 
@@ -170,48 +156,45 @@ class htb 1:11 parent 1:1 leaf 10: prio 0 rate 1Mbit ceil 1Mbit burst 1600b cbur
 class htb 1:1 root rate 1Mbit ceil 1Mbit burst 1600b cburst 1600b
 ```
 
-### Remove the Impairments
-
+#### Step 3.4 Remove the impairments
 ```bash
 tc qdisc del dev <network-interface> root
 ```
 
-
-
-## Logs for Debugging
-### Nginx access（watch the CMCD msg AS received）:   
-````bash
+## Logs for Troubleshooting
+### Nginx access Log(watch the CMCD msg AS received):   
+```bash
     docker exec -it <AS container ID> bash # enter the container
     ps -ef | grep nginx # Find log path
     tail -n 0 -f <Your access log path>
-````
+```
 
-### Nginx error : 
-````bash   
+### Nginx error Log: 
+```bash   
     docker exec -it <AS container ID> bash # enter the container
     ps -ef | grep nginx # Find log path
     tail -n 0 -f <Your error log path>
-````
+```
 
-### CMCD Collector(watch the conversion result from CMCD v1 to v2):   
-````bash
+### CMCD Collector Log(watch the conversion result from CMCD v1 to v2):   
+```bash
     docker logs -f --tail 10 cmcd-toolkit-collector-1
-````
+```
 <img src="../../../assets/images/5gms/cmcd-toolkit-collector-log.png" width="100%" /> 
 
-### Fluentd(watch the log of the dashboard database)
-````bash
+### Fluentd Log(watch the log of the dashboard database)
+```bash
     docker logs cmcd-toolkit-fluentd-1 | grep -i "node.collector"
-````
+```
 
-### Grafana(watch the log of the dashboard) 
-````bash
+### Grafana Log(watch the log of the dashboard) 
+```bash
     docker compose logs grafana | egrep -i "provision|dashboard|yaml|error|warn" | tail -n 200
-````
+```
     
     
 ## Database for Debugging
-````bash
+```bash
 shilding@jianqin-gv:~$docker exec -it cmcd-toolkit-influxdb-1 influx
 --------------
 USE analytics;
@@ -280,4 +263,4 @@ cmcd_key_sid
 cmcd_mode
 request_ip
 request_user_agent
-````
+```
