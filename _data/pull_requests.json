@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-09-18 04:04",
+  "last_updated": "2026-09-19 04:02",
   "projects": {
     "5G Media Streaming": [
       {
@@ -12,7 +12,7 @@
         "last_comment_by": "ErikGaida",
         "last_comment_date": "2026-06-18",
         "date": "2026-05-21",
-        "days_ago": 120,
+        "days_ago": 121,
         "color": "orange",
         "blink": false
       }
@@ -28,7 +28,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-08-12",
-        "days_ago": 37,
+        "days_ago": 38,
         "color": "green",
         "blink": false
       }
@@ -44,7 +44,7 @@
         "last_comment_by": "ErikGaida",
         "last_comment_date": "2026-08-28",
         "date": "2026-08-27",
-        "days_ago": 22,
+        "days_ago": 23,
         "color": "green",
         "blink": true
       }
@@ -60,7 +60,7 @@
         "last_comment_by": "jordijoangimenez",
         "last_comment_date": "2025-10-22",
         "date": "2024-11-20",
-        "days_ago": 667,
+        "days_ago": 668,
         "color": "red",
         "blink": false
       },
@@ -74,7 +74,7 @@
         "last_comment_by": "rbouqueau",
         "last_comment_date": "2025-10-31",
         "date": "2021-11-30",
-        "days_ago": 1753,
+        "days_ago": 1754,
         "color": "red",
         "blink": false
       },
@@ -88,7 +88,7 @@
         "last_comment_by": "rbouqueau",
         "last_comment_date": "2021-10-23",
         "date": "2021-10-23",
-        "days_ago": 1791,
+        "days_ago": 1792,
         "color": "red",
         "blink": false
       },
@@ -102,7 +102,7 @@
         "last_comment_by": "alessandro-lucco",
         "last_comment_date": "2026-07-21",
         "date": "2026-07-02",
-        "days_ago": 78,
+        "days_ago": 79,
         "color": "green",
         "blink": false
       },
@@ -116,7 +116,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2025-08-27",
-        "days_ago": 387,
+        "days_ago": 388,
         "color": "red",
         "blink": false
       }
@@ -132,7 +132,7 @@
         "last_comment_by": "jordijoangimenez",
         "last_comment_date": "2025-10-07",
         "date": "2025-05-09",
-        "days_ago": 497,
+        "days_ago": 498,
         "color": "red",
         "blink": false
       }
@@ -150,7 +150,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-03-24",
-        "days_ago": 178,
+        "days_ago": 179,
         "color": "orange",
         "blink": false
       }
@@ -166,7 +166,7 @@
         "last_comment_by": "jordijoangimenez",
         "last_comment_date": "2026-08-23",
         "date": "2026-08-23",
-        "days_ago": 26,
+        "days_ago": 27,
         "color": "green",
         "blink": true
       },
@@ -180,7 +180,7 @@
         "last_comment_by": "jordijoangimenez",
         "last_comment_date": "2026-08-23",
         "date": "2026-08-11",
-        "days_ago": 38,
+        "days_ago": 39,
         "color": "green",
         "blink": false
       },
@@ -194,7 +194,7 @@
         "last_comment_by": "jordijoangimenez",
         "last_comment_date": "2026-08-23",
         "date": "2026-08-11",
-        "days_ago": 38,
+        "days_ago": 39,
         "color": "green",
         "blink": false
       },
@@ -208,7 +208,7 @@
         "last_comment_by": "jordijoangimenez",
         "last_comment_date": "2026-08-23",
         "date": "2026-08-11",
-        "days_ago": 38,
+        "days_ago": 39,
         "color": "green",
         "blink": false
       },
@@ -222,7 +222,7 @@
         "last_comment_by": "jordijoangimenez",
         "last_comment_date": "2026-09-16",
         "date": "2026-08-07",
-        "days_ago": 42,
+        "days_ago": 43,
         "color": "green",
         "blink": false
       },
@@ -236,7 +236,7 @@
         "last_comment_by": "jordijoangimenez",
         "last_comment_date": "2026-08-23",
         "date": "2026-08-06",
-        "days_ago": 43,
+        "days_ago": 44,
         "color": "green",
         "blink": false
       },
@@ -250,7 +250,7 @@
         "last_comment_by": "rbouqueau",
         "last_comment_date": "2025-10-31",
         "date": "2021-11-30",
-        "days_ago": 1753,
+        "days_ago": 1754,
         "color": "red",
         "blink": false
       },
@@ -264,7 +264,7 @@
         "last_comment_by": "rbouqueau",
         "last_comment_date": "2021-10-23",
         "date": "2021-10-23",
-        "days_ago": 1791,
+        "days_ago": 1792,
         "color": "red",
         "blink": false
       }
@@ -281,7 +281,7 @@
         "last_comment_by": "nlsdvl",
         "last_comment_date": "2026-07-08",
         "date": "2026-06-23",
-        "days_ago": 87,
+        "days_ago": 88,
         "color": "green",
         "blink": false
       },
@@ -295,7 +295,7 @@
         "last_comment_by": "nlsdvl",
         "last_comment_date": "2026-09-17",
         "date": "2026-09-17",
-        "days_ago": 1,
+        "days_ago": 2,
         "color": "green",
         "blink": true
       }
@@ -311,7 +311,7 @@
         "last_comment_by": "dsilhavy",
         "last_comment_date": "2026-09-04",
         "date": "2026-08-26",
-        "days_ago": 23,
+        "days_ago": 24,
         "color": "green",
         "blink": true
       }
@@ -327,7 +327,7 @@
         "last_comment_by": "ErikGaida",
         "last_comment_date": "2026-06-18",
         "date": "2026-05-21",
-        "days_ago": 120,
+        "days_ago": 121,
         "color": "orange",
         "blink": false
       }
@@ -343,7 +343,7 @@
         "last_comment_by": "dsilhavy",
         "last_comment_date": "2026-07-10",
         "date": "2026-07-01",
-        "days_ago": 79,
+        "days_ago": 80,
         "color": "green",
         "blink": false
       }
@@ -359,7 +359,7 @@
         "last_comment_by": "jordijoangimenez",
         "last_comment_date": "2025-10-22",
         "date": "2024-11-20",
-        "days_ago": 667,
+        "days_ago": 668,
         "color": "red",
         "blink": false
       }
@@ -372,10 +372,10 @@
         "title": "Fix MBS Broadcast distribution session lifecycle and Service Announcement crashes",
         "url": "https://github.com/5G-MAG/rt-mbs-function/pull/49",
         "user": "jordijoangimenez",
-        "last_comment_by": null,
-        "last_comment_date": null,
+        "last_comment_by": "jordijoangimenez",
+        "last_comment_date": "2026-09-18",
         "date": "2026-08-11",
-        "days_ago": 38,
+        "days_ago": 39,
         "color": "green",
         "blink": false
       },
@@ -387,29 +387,29 @@
         "url": "https://github.com/5G-MAG/rt-mbs-transport-function/pull/71",
         "user": "jordijoangimenez",
         "last_comment_by": "jordijoangimenez",
-        "last_comment_date": "2026-09-07",
+        "last_comment_date": "2026-09-18",
         "date": "2026-08-11",
-        "days_ago": 38,
+        "days_ago": 39,
         "color": "green",
         "blink": false
       },
       {
-        "number": "#50",
+        "number": "#52",
         "status": "Ready",
         "repo": "open5gs",
-        "title": "Bug-fix: Automatic TMGI freeing",
-        "url": "https://github.com/5G-MAG/open5gs/pull/50",
-        "user": "davidjwbbc",
-        "last_comment_by": "ErikGaida",
-        "last_comment_date": "2026-09-10",
-        "date": "2026-09-07",
-        "days_ago": 11,
+        "title": "dbi: build against mongo-c-driver 2.x as well as 1.x",
+        "url": "https://github.com/5G-MAG/open5gs/pull/52",
+        "user": "jordijoangimenez",
+        "last_comment_by": "jordijoangimenez",
+        "last_comment_date": "2026-09-18",
+        "date": "2026-09-18",
+        "days_ago": 1,
         "color": "green",
         "blink": true
       },
       {
         "number": "#45",
-        "status": "Draft",
+        "status": "Ready",
         "repo": "open5gs",
         "title": "Fix MBS Broadcast 5GC session setup/delivery bugs, plus a regular-attach-blocking SMF bug",
         "url": "https://github.com/5G-MAG/open5gs/pull/45",
@@ -417,7 +417,7 @@
         "last_comment_by": "jordijoangimenez",
         "last_comment_date": "2026-09-09",
         "date": "2026-08-11",
-        "days_ago": 38,
+        "days_ago": 39,
         "color": "green",
         "blink": false
       },
@@ -431,9 +431,23 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-07-02",
-        "days_ago": 78,
+        "days_ago": 79,
         "color": "green",
         "blink": false
+      },
+      {
+        "number": "#34",
+        "status": "Ready",
+        "repo": "rt-mbs-examples",
+        "title": "Print each component's checkout, branch and built binary when a tmux tutorial starts",
+        "url": "https://github.com/5G-MAG/rt-mbs-examples/pull/34",
+        "user": "jordijoangimenez",
+        "last_comment_by": "jordijoangimenez",
+        "last_comment_date": "2026-09-18",
+        "date": "2026-09-18",
+        "days_ago": 1,
+        "color": "green",
+        "blink": true
       },
       {
         "number": "#33",
@@ -442,10 +456,10 @@
         "title": "MBS Broadcast end-to-end demonstration: 5GC, MBSF, MBSTF, gNB and UE with DASH over broadcast",
         "url": "https://github.com/5G-MAG/rt-mbs-examples/pull/33",
         "user": "jordijoangimenez",
-        "last_comment_by": "ErikGaida",
-        "last_comment_date": "2026-09-17",
+        "last_comment_by": "jordijoangimenez",
+        "last_comment_date": "2026-09-18",
         "date": "2026-09-07",
-        "days_ago": 11,
+        "days_ago": 12,
         "color": "green",
         "blink": true
       }
