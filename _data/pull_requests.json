@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-09-20 04:20",
+  "last_updated": "2026-09-21 04:18",
   "projects": {
     "5G Media Streaming": [
       {
@@ -12,7 +12,7 @@
         "last_comment_by": "ErikGaida",
         "last_comment_date": "2026-06-18",
         "date": "2026-05-21",
-        "days_ago": 122,
+        "days_ago": 123,
         "color": "orange",
         "blink": false
       }
@@ -28,7 +28,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-08-12",
-        "days_ago": 39,
+        "days_ago": 40,
         "color": "green",
         "blink": false
       }
@@ -44,7 +44,7 @@
         "last_comment_by": "ErikGaida",
         "last_comment_date": "2026-08-28",
         "date": "2026-08-27",
-        "days_ago": 24,
+        "days_ago": 25,
         "color": "green",
         "blink": true
       }
@@ -60,7 +60,7 @@
         "last_comment_by": "jordijoangimenez",
         "last_comment_date": "2025-10-22",
         "date": "2024-11-20",
-        "days_ago": 669,
+        "days_ago": 670,
         "color": "red",
         "blink": false
       },
@@ -74,7 +74,7 @@
         "last_comment_by": "rbouqueau",
         "last_comment_date": "2025-10-31",
         "date": "2021-11-30",
-        "days_ago": 1755,
+        "days_ago": 1756,
         "color": "red",
         "blink": false
       },
@@ -88,7 +88,7 @@
         "last_comment_by": "rbouqueau",
         "last_comment_date": "2021-10-23",
         "date": "2021-10-23",
-        "days_ago": 1793,
+        "days_ago": 1794,
         "color": "red",
         "blink": false
       },
@@ -102,7 +102,7 @@
         "last_comment_by": "alessandro-lucco",
         "last_comment_date": "2026-07-21",
         "date": "2026-07-02",
-        "days_ago": 80,
+        "days_ago": 81,
         "color": "green",
         "blink": false
       },
@@ -116,7 +116,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2025-08-27",
-        "days_ago": 389,
+        "days_ago": 390,
         "color": "red",
         "blink": false
       }
@@ -132,7 +132,7 @@
         "last_comment_by": "jordijoangimenez",
         "last_comment_date": "2025-10-07",
         "date": "2025-05-09",
-        "days_ago": 499,
+        "days_ago": 500,
         "color": "red",
         "blink": false
       }
@@ -150,8 +150,8 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-03-24",
-        "days_ago": 180,
-        "color": "orange",
+        "days_ago": 181,
+        "color": "red",
         "blink": false
       }
     ],
@@ -166,7 +166,7 @@
         "last_comment_by": "jordijoangimenez",
         "last_comment_date": "2026-08-23",
         "date": "2026-08-23",
-        "days_ago": 28,
+        "days_ago": 29,
         "color": "green",
         "blink": true
       },
@@ -180,7 +180,7 @@
         "last_comment_by": "jordijoangimenez",
         "last_comment_date": "2026-08-23",
         "date": "2026-08-11",
-        "days_ago": 40,
+        "days_ago": 41,
         "color": "green",
         "blink": false
       },
@@ -194,7 +194,7 @@
         "last_comment_by": "jordijoangimenez",
         "last_comment_date": "2026-08-23",
         "date": "2026-08-11",
-        "days_ago": 40,
+        "days_ago": 41,
         "color": "green",
         "blink": false
       },
@@ -208,7 +208,7 @@
         "last_comment_by": "jordijoangimenez",
         "last_comment_date": "2026-08-23",
         "date": "2026-08-11",
-        "days_ago": 40,
+        "days_ago": 41,
         "color": "green",
         "blink": false
       },
@@ -222,7 +222,7 @@
         "last_comment_by": "jordijoangimenez",
         "last_comment_date": "2026-09-16",
         "date": "2026-08-07",
-        "days_ago": 44,
+        "days_ago": 45,
         "color": "green",
         "blink": false
       },
@@ -236,7 +236,7 @@
         "last_comment_by": "jordijoangimenez",
         "last_comment_date": "2026-08-23",
         "date": "2026-08-06",
-        "days_ago": 45,
+        "days_ago": 46,
         "color": "green",
         "blink": false
       },
@@ -250,7 +250,7 @@
         "last_comment_by": "rbouqueau",
         "last_comment_date": "2025-10-31",
         "date": "2021-11-30",
-        "days_ago": 1755,
+        "days_ago": 1756,
         "color": "red",
         "blink": false
       },
@@ -264,7 +264,7 @@
         "last_comment_by": "rbouqueau",
         "last_comment_date": "2021-10-23",
         "date": "2021-10-23",
-        "days_ago": 1793,
+        "days_ago": 1794,
         "color": "red",
         "blink": false
       }
@@ -281,7 +281,7 @@
         "last_comment_by": "nlsdvl",
         "last_comment_date": "2026-07-08",
         "date": "2026-06-23",
-        "days_ago": 89,
+        "days_ago": 90,
         "color": "green",
         "blink": false
       },
@@ -295,7 +295,7 @@
         "last_comment_by": "nlsdvl",
         "last_comment_date": "2026-09-17",
         "date": "2026-09-17",
-        "days_ago": 3,
+        "days_ago": 4,
         "color": "green",
         "blink": true
       }
@@ -311,7 +311,7 @@
         "last_comment_by": "dsilhavy",
         "last_comment_date": "2026-09-04",
         "date": "2026-08-26",
-        "days_ago": 25,
+        "days_ago": 26,
         "color": "green",
         "blink": true
       }
@@ -327,25 +327,25 @@
         "last_comment_by": "ErikGaida",
         "last_comment_date": "2026-06-18",
         "date": "2026-05-21",
-        "days_ago": 122,
+        "days_ago": 123,
         "color": "orange",
         "blink": false
       }
     ],
     "Network APIs": [
       {
-        "number": "#4",
+        "number": "#6",
         "status": "Ready",
         "repo": "rt-camara-examples",
-        "title": "feat: add Dedicated Networks MCP server",
-        "url": "https://github.com/5G-MAG/rt-camara-examples/pull/4",
-        "user": "aaronmontilla",
-        "last_comment_by": "dsilhavy",
-        "last_comment_date": "2026-07-10",
-        "date": "2026-07-01",
-        "days_ago": 81,
+        "title": "fix: redesign Dedicated Networks Portal for a more consistent flow across the 4 APIs",
+        "url": "https://github.com/5G-MAG/rt-camara-examples/pull/6",
+        "user": "jordijoangimenez",
+        "last_comment_by": null,
+        "last_comment_date": null,
+        "date": "2026-09-20",
+        "days_ago": 1,
         "color": "green",
-        "blink": false
+        "blink": true
       }
     ],
     "5G Broadcast Emergency Alerts": [
@@ -359,7 +359,7 @@
         "last_comment_by": "jordijoangimenez",
         "last_comment_date": "2025-10-22",
         "date": "2024-11-20",
-        "days_ago": 669,
+        "days_ago": 670,
         "color": "red",
         "blink": false
       }
@@ -375,7 +375,7 @@
         "last_comment_by": "jordijoangimenez",
         "last_comment_date": "2026-09-19",
         "date": "2026-08-11",
-        "days_ago": 40,
+        "days_ago": 41,
         "color": "green",
         "blink": false
       },
@@ -389,7 +389,7 @@
         "last_comment_by": "jordijoangimenez",
         "last_comment_date": "2026-09-18",
         "date": "2026-08-11",
-        "days_ago": 40,
+        "days_ago": 41,
         "color": "green",
         "blink": false
       },
@@ -401,9 +401,9 @@
         "url": "https://github.com/5G-MAG/open5gs/pull/52",
         "user": "jordijoangimenez",
         "last_comment_by": "jordijoangimenez",
-        "last_comment_date": "2026-09-18",
+        "last_comment_date": "2026-09-20",
         "date": "2026-09-18",
-        "days_ago": 2,
+        "days_ago": 3,
         "color": "green",
         "blink": true
       },
@@ -417,7 +417,7 @@
         "last_comment_by": "jordijoangimenez",
         "last_comment_date": "2026-09-09",
         "date": "2026-08-11",
-        "days_ago": 40,
+        "days_ago": 41,
         "color": "green",
         "blink": false
       },
@@ -431,23 +431,9 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-07-02",
-        "days_ago": 80,
+        "days_ago": 81,
         "color": "green",
         "blink": false
-      },
-      {
-        "number": "#34",
-        "status": "Ready",
-        "repo": "rt-mbs-examples",
-        "title": "Print each component's checkout, branch and built binary when a tmux tutorial starts",
-        "url": "https://github.com/5G-MAG/rt-mbs-examples/pull/34",
-        "user": "jordijoangimenez",
-        "last_comment_by": "jordijoangimenez",
-        "last_comment_date": "2026-09-18",
-        "date": "2026-09-18",
-        "days_ago": 2,
-        "color": "green",
-        "blink": true
       },
       {
         "number": "#33",
@@ -456,10 +442,10 @@
         "title": "MBS Broadcast end-to-end demonstration: 5GC, MBSF, MBSTF, gNB and UE with DASH over broadcast",
         "url": "https://github.com/5G-MAG/rt-mbs-examples/pull/33",
         "user": "jordijoangimenez",
-        "last_comment_by": "jordijoangimenez",
-        "last_comment_date": "2026-09-19",
+        "last_comment_by": "ErikGaida",
+        "last_comment_date": "2026-09-20",
         "date": "2026-09-07",
-        "days_ago": 13,
+        "days_ago": 14,
         "color": "green",
         "blink": true
       }
