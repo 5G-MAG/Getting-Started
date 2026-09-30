@@ -96,7 +96,7 @@ repos:
     repo_slug: "rt-srsRAN_Project"
     display_name: "Fork of srsRAN Project"
     description: |
-      5G-MAG's Fork of srsRAN Project
+      5G-MAG's fork of srsRAN Project
     repo_url: "https://github.com/5G-MAG/rt-srsRAN_Project"
     branch: "main"
     license: "AGPLv3.0"
@@ -441,7 +441,7 @@ repos:
     repo_slug: "6G-Testbed"
     display_name: "6G Testbed and AI Traffic Characterization"
     description: |
-      6G Testbed and AI Traffic Characterization
+      6G AI Traffic Characterization Testbed
     repo_url: "https://github.com/5G-MAG/6G-Testbed"
     branch: "main"
     license: "5G-MAG PL v1.0"
@@ -597,7 +597,7 @@ repos:
     repo_slug: "rt-camara-examples"
     display_name: "CAMARA API Examples"
     description: |
-      CAMARA API  Tools and Examples
+      CAMARA API Tools and Examples
     repo_url: "https://github.com/5G-MAG/rt-camara-examples"
     branch: "main"
     license: "5G-MAG PL v1.0"
