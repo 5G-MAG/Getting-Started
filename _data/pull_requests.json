@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-09-30 04:58",
+  "last_updated": "2026-10-01 05:11",
   "projects": {
     "5G Media Streaming": [
       {
@@ -12,7 +12,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-09-29",
-        "days_ago": 1,
+        "days_ago": 2,
         "color": "green",
         "blink": true
       },
@@ -26,7 +26,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-09-29",
-        "days_ago": 1,
+        "days_ago": 2,
         "color": "green",
         "blink": true
       },
@@ -40,7 +40,7 @@
         "last_comment_by": "ErikGaida",
         "last_comment_date": "2026-06-18",
         "date": "2026-05-21",
-        "days_ago": 132,
+        "days_ago": 133,
         "color": "orange",
         "blink": false
       },
@@ -54,7 +54,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-09-29",
-        "days_ago": 1,
+        "days_ago": 2,
         "color": "green",
         "blink": true
       },
@@ -68,7 +68,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-09-29",
-        "days_ago": 1,
+        "days_ago": 2,
         "color": "green",
         "blink": true
       },
@@ -82,7 +82,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-09-29",
-        "days_ago": 1,
+        "days_ago": 2,
         "color": "green",
         "blink": true
       },
@@ -96,7 +96,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-09-29",
-        "days_ago": 1,
+        "days_ago": 2,
         "color": "green",
         "blink": true
       },
@@ -110,7 +110,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-09-29",
-        "days_ago": 1,
+        "days_ago": 2,
         "color": "green",
         "blink": true
       },
@@ -124,7 +124,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-09-29",
-        "days_ago": 1,
+        "days_ago": 2,
         "color": "green",
         "blink": true
       }
@@ -140,7 +140,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-09-29",
-        "days_ago": 1,
+        "days_ago": 2,
         "color": "green",
         "blink": true
       },
@@ -152,9 +152,9 @@
         "url": "https://github.com/5G-MAG/rt-5gc-service-consumers/pull/31",
         "user": "jordijoangimenez",
         "last_comment_by": "jordijoangimenez",
-        "last_comment_date": "2026-09-29",
+        "last_comment_date": "2026-09-30",
         "date": "2026-09-22",
-        "days_ago": 8,
+        "days_ago": 9,
         "color": "green",
         "blink": true
       },
@@ -166,9 +166,9 @@
         "url": "https://github.com/5G-MAG/rt-5gc-service-consumers/pull/29",
         "user": "jordijoangimenez",
         "last_comment_by": "jordijoangimenez",
-        "last_comment_date": "2026-09-22",
+        "last_comment_date": "2026-09-30",
         "date": "2026-08-12",
-        "days_ago": 49,
+        "days_ago": 50,
         "color": "green",
         "blink": false
       }
@@ -184,7 +184,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-09-29",
-        "days_ago": 1,
+        "days_ago": 2,
         "color": "green",
         "blink": true
       },
@@ -198,7 +198,7 @@
         "last_comment_by": "ErikGaida",
         "last_comment_date": "2026-08-28",
         "date": "2026-08-27",
-        "days_ago": 34,
+        "days_ago": 35,
         "color": "green",
         "blink": false
       }
@@ -214,7 +214,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-09-29",
-        "days_ago": 1,
+        "days_ago": 2,
         "color": "green",
         "blink": true
       },
@@ -228,7 +228,7 @@
         "last_comment_by": "jordijoangimenez",
         "last_comment_date": "2025-10-22",
         "date": "2024-11-20",
-        "days_ago": 679,
+        "days_ago": 680,
         "color": "red",
         "blink": false
       },
@@ -242,7 +242,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-09-29",
-        "days_ago": 1,
+        "days_ago": 2,
         "color": "green",
         "blink": true
       },
@@ -256,7 +256,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-09-29",
-        "days_ago": 1,
+        "days_ago": 2,
         "color": "green",
         "blink": true
       },
@@ -270,7 +270,7 @@
         "last_comment_by": "rbouqueau",
         "last_comment_date": "2025-10-31",
         "date": "2021-11-30",
-        "days_ago": 1765,
+        "days_ago": 1766,
         "color": "red",
         "blink": false
       },
@@ -284,9 +284,23 @@
         "last_comment_by": "rbouqueau",
         "last_comment_date": "2021-10-23",
         "date": "2021-10-23",
-        "days_ago": 1803,
+        "days_ago": 1804,
         "color": "red",
         "blink": false
+      },
+      {
+        "number": "#55",
+        "status": "Ready",
+        "repo": "rt-mbms-modem",
+        "title": "rest: report the pre-FEC BER estimate from srsRAN in the channel status",
+        "url": "https://github.com/5G-MAG/rt-mbms-modem/pull/55",
+        "user": "jordijoangimenez",
+        "last_comment_by": null,
+        "last_comment_date": null,
+        "date": "2026-09-30",
+        "days_ago": 1,
+        "color": "green",
+        "blink": true
       },
       {
         "number": "#54",
@@ -298,7 +312,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-09-29",
-        "days_ago": 1,
+        "days_ago": 2,
         "color": "green",
         "blink": true
       },
@@ -312,8 +326,8 @@
         "last_comment_by": "jordijoangimenez",
         "last_comment_date": "2026-09-23",
         "date": "2026-07-02",
-        "days_ago": 90,
-        "color": "green",
+        "days_ago": 91,
+        "color": "orange",
         "blink": false
       },
       {
@@ -326,7 +340,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-09-29",
-        "days_ago": 1,
+        "days_ago": 2,
         "color": "green",
         "blink": true
       },
@@ -340,7 +354,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2025-08-27",
-        "days_ago": 399,
+        "days_ago": 400,
         "color": "red",
         "blink": false
       }
@@ -356,7 +370,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-09-29",
-        "days_ago": 1,
+        "days_ago": 2,
         "color": "green",
         "blink": true
       },
@@ -370,7 +384,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-09-29",
-        "days_ago": 1,
+        "days_ago": 2,
         "color": "green",
         "blink": true
       },
@@ -384,7 +398,7 @@
         "last_comment_by": "jordijoangimenez",
         "last_comment_date": "2026-09-29",
         "date": "2025-05-09",
-        "days_ago": 509,
+        "days_ago": 510,
         "color": "red",
         "blink": false
       },
@@ -398,7 +412,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-09-29",
-        "days_ago": 1,
+        "days_ago": 2,
         "color": "green",
         "blink": true
       },
@@ -412,7 +426,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-09-29",
-        "days_ago": 1,
+        "days_ago": 2,
         "color": "green",
         "blink": true
       }
@@ -428,7 +442,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-09-29",
-        "days_ago": 1,
+        "days_ago": 2,
         "color": "green",
         "blink": true
       },
@@ -442,7 +456,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-09-29",
-        "days_ago": 1,
+        "days_ago": 2,
         "color": "green",
         "blink": true
       },
@@ -456,7 +470,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-09-29",
-        "days_ago": 1,
+        "days_ago": 2,
         "color": "green",
         "blink": true
       }
@@ -472,7 +486,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-09-29",
-        "days_ago": 1,
+        "days_ago": 2,
         "color": "green",
         "blink": true
       }
@@ -488,7 +502,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-09-29",
-        "days_ago": 1,
+        "days_ago": 2,
         "color": "green",
         "blink": true
       },
@@ -502,7 +516,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-03-24",
-        "days_ago": 190,
+        "days_ago": 191,
         "color": "red",
         "blink": false
       }
@@ -518,7 +532,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-09-29",
-        "days_ago": 1,
+        "days_ago": 2,
         "color": "green",
         "blink": true
       },
@@ -532,7 +546,7 @@
         "last_comment_by": "jordijoangimenez",
         "last_comment_date": "2026-08-23",
         "date": "2026-08-23",
-        "days_ago": 38,
+        "days_ago": 39,
         "color": "green",
         "blink": false
       },
@@ -546,7 +560,7 @@
         "last_comment_by": "jordijoangimenez",
         "last_comment_date": "2026-08-23",
         "date": "2026-08-11",
-        "days_ago": 50,
+        "days_ago": 51,
         "color": "green",
         "blink": false
       },
@@ -560,7 +574,7 @@
         "last_comment_by": "jordijoangimenez",
         "last_comment_date": "2026-08-23",
         "date": "2026-08-11",
-        "days_ago": 50,
+        "days_ago": 51,
         "color": "green",
         "blink": false
       },
@@ -574,7 +588,7 @@
         "last_comment_by": "jordijoangimenez",
         "last_comment_date": "2026-08-23",
         "date": "2026-08-11",
-        "days_ago": 50,
+        "days_ago": 51,
         "color": "green",
         "blink": false
       },
@@ -588,7 +602,7 @@
         "last_comment_by": "jordijoangimenez",
         "last_comment_date": "2026-09-16",
         "date": "2026-08-07",
-        "days_ago": 54,
+        "days_ago": 55,
         "color": "green",
         "blink": false
       },
@@ -602,7 +616,7 @@
         "last_comment_by": "jordijoangimenez",
         "last_comment_date": "2026-08-23",
         "date": "2026-08-06",
-        "days_ago": 55,
+        "days_ago": 56,
         "color": "green",
         "blink": false
       },
@@ -616,7 +630,7 @@
         "last_comment_by": "rbouqueau",
         "last_comment_date": "2025-10-31",
         "date": "2021-11-30",
-        "days_ago": 1765,
+        "days_ago": 1766,
         "color": "red",
         "blink": false
       },
@@ -630,7 +644,7 @@
         "last_comment_by": "rbouqueau",
         "last_comment_date": "2021-10-23",
         "date": "2021-10-23",
-        "days_ago": 1803,
+        "days_ago": 1804,
         "color": "red",
         "blink": false
       }
@@ -646,7 +660,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-09-29",
-        "days_ago": 1,
+        "days_ago": 2,
         "color": "green",
         "blink": true
       }
@@ -662,7 +676,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-09-29",
-        "days_ago": 1,
+        "days_ago": 2,
         "color": "green",
         "blink": true
       },
@@ -676,7 +690,7 @@
         "last_comment_by": "jordijoangimenez",
         "last_comment_date": "2026-09-29",
         "date": "2026-06-23",
-        "days_ago": 99,
+        "days_ago": 100,
         "color": "orange",
         "blink": false
       },
@@ -690,7 +704,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-09-29",
-        "days_ago": 1,
+        "days_ago": 2,
         "color": "green",
         "blink": true
       },
@@ -704,7 +718,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-09-29",
-        "days_ago": 1,
+        "days_ago": 2,
         "color": "green",
         "blink": true
       },
@@ -718,7 +732,7 @@
         "last_comment_by": "jordijoangimenez",
         "last_comment_date": "2026-09-29",
         "date": "2026-09-17",
-        "days_ago": 13,
+        "days_ago": 14,
         "color": "green",
         "blink": true
       }
@@ -734,7 +748,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-09-29",
-        "days_ago": 1,
+        "days_ago": 2,
         "color": "green",
         "blink": true
       },
@@ -748,7 +762,7 @@
         "last_comment_by": "AirMek2026",
         "last_comment_date": "2026-09-21",
         "date": "2026-08-26",
-        "days_ago": 35,
+        "days_ago": 36,
         "color": "green",
         "blink": false
       }
@@ -764,7 +778,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-09-29",
-        "days_ago": 1,
+        "days_ago": 2,
         "color": "green",
         "blink": true
       },
@@ -778,7 +792,7 @@
         "last_comment_by": "ErikGaida",
         "last_comment_date": "2026-06-18",
         "date": "2026-05-21",
-        "days_ago": 132,
+        "days_ago": 133,
         "color": "orange",
         "blink": false
       }
@@ -794,7 +808,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-09-29",
-        "days_ago": 1,
+        "days_ago": 2,
         "color": "green",
         "blink": true
       },
@@ -808,7 +822,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-09-29",
-        "days_ago": 1,
+        "days_ago": 2,
         "color": "green",
         "blink": true
       },
@@ -822,7 +836,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-09-29",
-        "days_ago": 1,
+        "days_ago": 2,
         "color": "green",
         "blink": true
       },
@@ -836,7 +850,7 @@
         "last_comment_by": "jordijoangimenez",
         "last_comment_date": "2026-09-29",
         "date": "2026-09-20",
-        "days_ago": 10,
+        "days_ago": 11,
         "color": "green",
         "blink": true
       }
@@ -852,7 +866,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-09-29",
-        "days_ago": 1,
+        "days_ago": 2,
         "color": "green",
         "blink": true
       },
@@ -866,7 +880,7 @@
         "last_comment_by": "jordijoangimenez",
         "last_comment_date": "2025-10-22",
         "date": "2024-11-20",
-        "days_ago": 679,
+        "days_ago": 680,
         "color": "red",
         "blink": false
       }
@@ -882,7 +896,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-09-29",
-        "days_ago": 1,
+        "days_ago": 2,
         "color": "green",
         "blink": true
       },
@@ -894,9 +908,9 @@
         "url": "https://github.com/5G-MAG/rt-mbs-function/pull/49",
         "user": "jordijoangimenez",
         "last_comment_by": "davidjwbbc",
-        "last_comment_date": "2026-09-23",
+        "last_comment_date": "2026-09-30",
         "date": "2026-08-11",
-        "days_ago": 50,
+        "days_ago": 51,
         "color": "green",
         "blink": false
       },
@@ -910,7 +924,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-09-29",
-        "days_ago": 1,
+        "days_ago": 2,
         "color": "green",
         "blink": true
       },
@@ -921,10 +935,10 @@
         "title": "Fix MBS Broadcast content delivery crashes and Distribution Session bugs",
         "url": "https://github.com/5G-MAG/rt-mbs-transport-function/pull/71",
         "user": "jordijoangimenez",
-        "last_comment_by": "jordijoangimenez",
-        "last_comment_date": "2026-09-29",
+        "last_comment_by": "davidjwbbc",
+        "last_comment_date": "2026-09-30",
         "date": "2026-08-11",
-        "days_ago": 50,
+        "days_ago": 51,
         "color": "green",
         "blink": false
       },
@@ -938,7 +952,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-09-29",
-        "days_ago": 1,
+        "days_ago": 2,
         "color": "green",
         "blink": true
       },
@@ -952,9 +966,23 @@
         "last_comment_by": "jordijoangimenez",
         "last_comment_date": "2026-09-09",
         "date": "2026-08-11",
-        "days_ago": 50,
+        "days_ago": 51,
         "color": "green",
         "blink": false
+      },
+      {
+        "number": "#6",
+        "status": "Ready",
+        "repo": "srsRAN_4G",
+        "title": "phch: estimate the pre-FEC bit error rate of decoded DL-SCH code blocks",
+        "url": "https://github.com/5G-MAG/srsRAN_4G/pull/6",
+        "user": "jordijoangimenez",
+        "last_comment_by": null,
+        "last_comment_date": null,
+        "date": "2026-09-30",
+        "days_ago": 1,
+        "color": "green",
+        "blink": true
       },
       {
         "number": "#5",
@@ -966,7 +994,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-09-29",
-        "days_ago": 1,
+        "days_ago": 2,
         "color": "green",
         "blink": true
       },
@@ -980,8 +1008,8 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-07-02",
-        "days_ago": 90,
-        "color": "green",
+        "days_ago": 91,
+        "color": "orange",
         "blink": false
       },
       {
@@ -994,7 +1022,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-09-29",
-        "days_ago": 1,
+        "days_ago": 2,
         "color": "green",
         "blink": true
       },
@@ -1008,7 +1036,7 @@
         "last_comment_by": "jordijoangimenez",
         "last_comment_date": "2026-09-24",
         "date": "2026-09-07",
-        "days_ago": 23,
+        "days_ago": 24,
         "color": "green",
         "blink": true
       }
