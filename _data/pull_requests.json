@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-10-09 05:33",
+  "last_updated": "2026-10-10 05:16",
   "projects": {
     "5G Media Streaming": [
       {
@@ -12,7 +12,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-09-29",
-        "days_ago": 10,
+        "days_ago": 11,
         "color": "green",
         "blink": true
       },
@@ -26,7 +26,7 @@
         "last_comment_by": "jordijoangimenez",
         "last_comment_date": "2026-10-03",
         "date": "2026-10-03",
-        "days_ago": 6,
+        "days_ago": 7,
         "color": "green",
         "blink": true
       },
@@ -40,7 +40,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-09-29",
-        "days_ago": 10,
+        "days_ago": 11,
         "color": "green",
         "blink": true
       },
@@ -54,7 +54,7 @@
         "last_comment_by": "ErikGaida",
         "last_comment_date": "2026-06-18",
         "date": "2026-05-21",
-        "days_ago": 141,
+        "days_ago": 142,
         "color": "orange",
         "blink": false
       },
@@ -68,7 +68,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-09-29",
-        "days_ago": 10,
+        "days_ago": 11,
         "color": "green",
         "blink": true
       },
@@ -82,7 +82,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-09-29",
-        "days_ago": 10,
+        "days_ago": 11,
         "color": "green",
         "blink": true
       },
@@ -96,7 +96,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-09-29",
-        "days_ago": 10,
+        "days_ago": 11,
         "color": "green",
         "blink": true
       },
@@ -110,7 +110,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-09-29",
-        "days_ago": 10,
+        "days_ago": 11,
         "color": "green",
         "blink": true
       },
@@ -124,7 +124,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-09-29",
-        "days_ago": 10,
+        "days_ago": 11,
         "color": "green",
         "blink": true
       },
@@ -138,7 +138,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-10-08",
-        "days_ago": 1,
+        "days_ago": 2,
         "color": "green",
         "blink": true
       },
@@ -152,7 +152,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-09-29",
-        "days_ago": 10,
+        "days_ago": 11,
         "color": "green",
         "blink": true
       }
@@ -168,21 +168,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-09-29",
-        "days_ago": 10,
-        "color": "green",
-        "blink": true
-      },
-      {
-        "number": "#31",
-        "status": "Ready",
-        "repo": "rt-5gc-service-consumers",
-        "title": "MBS compliance fixes: SSM/session handling, NCGI/TAI, session-area updates",
-        "url": "https://github.com/5G-MAG/rt-5gc-service-consumers/pull/31",
-        "user": "jordijoangimenez",
-        "last_comment_by": "jordijoangimenez",
-        "last_comment_date": "2026-10-06",
-        "date": "2026-09-22",
-        "days_ago": 17,
+        "days_ago": 11,
         "color": "green",
         "blink": true
       }
@@ -198,7 +184,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-10-01",
-        "days_ago": 8,
+        "days_ago": 9,
         "color": "green",
         "blink": true
       },
@@ -212,7 +198,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-09-29",
-        "days_ago": 10,
+        "days_ago": 11,
         "color": "green",
         "blink": true
       },
@@ -223,10 +209,10 @@
         "title": "Add end-to-end CRUD integration coverage for DCAF R1, R2, and R6 APIs",
         "url": "https://github.com/5G-MAG/rt-data-collection-application-function/pull/32",
         "user": "ErikGaida",
-        "last_comment_by": "dsilhavy",
-        "last_comment_date": "2026-10-02",
+        "last_comment_by": "ErikGaida",
+        "last_comment_date": "2026-10-09",
         "date": "2026-08-27",
-        "days_ago": 43,
+        "days_ago": 44,
         "color": "green",
         "blink": false
       }
@@ -242,7 +228,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-09-29",
-        "days_ago": 10,
+        "days_ago": 11,
         "color": "green",
         "blink": true
       },
@@ -256,7 +242,7 @@
         "last_comment_by": "jordijoangimenez",
         "last_comment_date": "2025-10-22",
         "date": "2024-11-20",
-        "days_ago": 688,
+        "days_ago": 689,
         "color": "red",
         "blink": false
       },
@@ -270,7 +256,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-09-29",
-        "days_ago": 10,
+        "days_ago": 11,
         "color": "green",
         "blink": true
       },
@@ -284,7 +270,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-09-29",
-        "days_ago": 10,
+        "days_ago": 11,
         "color": "green",
         "blink": true
       },
@@ -298,7 +284,7 @@
         "last_comment_by": "rbouqueau",
         "last_comment_date": "2025-10-31",
         "date": "2021-11-30",
-        "days_ago": 1774,
+        "days_ago": 1775,
         "color": "red",
         "blink": false
       },
@@ -312,7 +298,7 @@
         "last_comment_by": "rbouqueau",
         "last_comment_date": "2021-10-23",
         "date": "2021-10-23",
-        "days_ago": 1812,
+        "days_ago": 1813,
         "color": "red",
         "blink": false
       },
@@ -326,7 +312,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-09-30",
-        "days_ago": 9,
+        "days_ago": 10,
         "color": "green",
         "blink": true
       },
@@ -340,7 +326,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-09-29",
-        "days_ago": 10,
+        "days_ago": 11,
         "color": "green",
         "blink": true
       },
@@ -354,7 +340,7 @@
         "last_comment_by": "jordijoangimenez",
         "last_comment_date": "2026-09-23",
         "date": "2026-07-02",
-        "days_ago": 99,
+        "days_ago": 100,
         "color": "orange",
         "blink": false
       },
@@ -368,7 +354,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-09-29",
-        "days_ago": 10,
+        "days_ago": 11,
         "color": "green",
         "blink": true
       },
@@ -382,26 +368,12 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2025-08-27",
-        "days_ago": 408,
+        "days_ago": 409,
         "color": "red",
         "blink": false
       }
     ],
     "XR Media": [
-      {
-        "number": "#95",
-        "status": "Ready",
-        "repo": "rt-xr-unity-player",
-        "title": "docs: apply the 5G-MAG README format",
-        "url": "https://github.com/5G-MAG/rt-xr-unity-player/pull/95",
-        "user": "jordijoangimenez",
-        "last_comment_by": null,
-        "last_comment_date": null,
-        "date": "2026-09-29",
-        "days_ago": 10,
-        "color": "green",
-        "blink": true
-      },
       {
         "number": "#34",
         "status": "Ready",
@@ -412,7 +384,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-09-29",
-        "days_ago": 10,
+        "days_ago": 11,
         "color": "green",
         "blink": true
       },
@@ -426,7 +398,7 @@
         "last_comment_by": "jordijoangimenez",
         "last_comment_date": "2026-09-29",
         "date": "2025-05-09",
-        "days_ago": 518,
+        "days_ago": 519,
         "color": "red",
         "blink": false
       },
@@ -440,7 +412,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-09-29",
-        "days_ago": 10,
+        "days_ago": 11,
         "color": "green",
         "blink": true
       },
@@ -454,12 +426,26 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-09-29",
-        "days_ago": 10,
+        "days_ago": 11,
         "color": "green",
         "blink": true
       }
     ],
     "V3C Immersive": [
+      {
+        "number": "#20",
+        "status": "Draft",
+        "repo": "rt-v3c-unity-player",
+        "title": "Quest: run the player in a Meta Quest headset (rig, interface, multiview)",
+        "url": "https://github.com/5G-MAG/rt-v3c-unity-player/pull/20",
+        "user": "jordijoangimenez",
+        "last_comment_by": null,
+        "last_comment_date": null,
+        "date": "2026-10-09",
+        "days_ago": 1,
+        "color": "green",
+        "blink": true
+      },
       {
         "number": "#17",
         "status": "Ready",
@@ -470,7 +456,7 @@
         "last_comment_by": "jordijoangimenez",
         "last_comment_date": "2026-10-08",
         "date": "2026-10-08",
-        "days_ago": 1,
+        "days_ago": 2,
         "color": "green",
         "blink": true
       },
@@ -484,7 +470,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-10-08",
-        "days_ago": 1,
+        "days_ago": 2,
         "color": "green",
         "blink": true
       },
@@ -498,7 +484,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-10-08",
-        "days_ago": 1,
+        "days_ago": 2,
         "color": "green",
         "blink": true
       },
@@ -512,7 +498,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-10-08",
-        "days_ago": 1,
+        "days_ago": 2,
         "color": "green",
         "blink": true
       },
@@ -526,7 +512,7 @@
         "last_comment_by": "jordijoangimenez",
         "last_comment_date": "2026-10-08",
         "date": "2026-10-08",
-        "days_ago": 1,
+        "days_ago": 2,
         "color": "green",
         "blink": true
       },
@@ -540,7 +526,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-10-08",
-        "days_ago": 1,
+        "days_ago": 2,
         "color": "green",
         "blink": true
       },
@@ -554,7 +540,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-10-08",
-        "days_ago": 1,
+        "days_ago": 2,
         "color": "green",
         "blink": true
       },
@@ -568,7 +554,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-10-08",
-        "days_ago": 1,
+        "days_ago": 2,
         "color": "green",
         "blink": true
       },
@@ -582,7 +568,21 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-09-29",
-        "days_ago": 10,
+        "days_ago": 11,
+        "color": "green",
+        "blink": true
+      },
+      {
+        "number": "#19",
+        "status": "Ready",
+        "repo": "rt-v3c-decoder-plugin",
+        "title": "reader, scheduler: sleep while waiting instead of spinning on the clock",
+        "url": "https://github.com/5G-MAG/rt-v3c-decoder-plugin/pull/19",
+        "user": "jordijoangimenez",
+        "last_comment_by": null,
+        "last_comment_date": null,
+        "date": "2026-10-09",
+        "days_ago": 1,
         "color": "green",
         "blink": true
       },
@@ -596,7 +596,7 @@
         "last_comment_by": "jordijoangimenez",
         "last_comment_date": "2026-10-08",
         "date": "2026-10-08",
-        "days_ago": 1,
+        "days_ago": 2,
         "color": "green",
         "blink": true
       },
@@ -610,7 +610,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-10-08",
-        "days_ago": 1,
+        "days_ago": 2,
         "color": "green",
         "blink": true
       },
@@ -624,7 +624,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-10-08",
-        "days_ago": 1,
+        "days_ago": 2,
         "color": "green",
         "blink": true
       },
@@ -638,7 +638,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-10-08",
-        "days_ago": 1,
+        "days_ago": 2,
         "color": "green",
         "blink": true
       },
@@ -652,7 +652,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-10-08",
-        "days_ago": 1,
+        "days_ago": 2,
         "color": "green",
         "blink": true
       },
@@ -666,7 +666,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-10-08",
-        "days_ago": 1,
+        "days_ago": 2,
         "color": "green",
         "blink": true
       },
@@ -680,7 +680,7 @@
         "last_comment_by": "jordijoangimenez",
         "last_comment_date": "2026-10-08",
         "date": "2026-10-08",
-        "days_ago": 1,
+        "days_ago": 2,
         "color": "green",
         "blink": true
       },
@@ -694,7 +694,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-09-29",
-        "days_ago": 10,
+        "days_ago": 11,
         "color": "green",
         "blink": true
       },
@@ -708,7 +708,7 @@
         "last_comment_by": "jordijoangimenez",
         "last_comment_date": "2026-10-08",
         "date": "2026-10-08",
-        "days_ago": 1,
+        "days_ago": 2,
         "color": "green",
         "blink": true
       },
@@ -722,7 +722,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-10-08",
-        "days_ago": 1,
+        "days_ago": 2,
         "color": "green",
         "blink": true
       },
@@ -736,7 +736,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-10-08",
-        "days_ago": 1,
+        "days_ago": 2,
         "color": "green",
         "blink": true
       },
@@ -750,7 +750,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-09-29",
-        "days_ago": 10,
+        "days_ago": 11,
         "color": "green",
         "blink": true
       }
@@ -766,7 +766,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-09-29",
-        "days_ago": 10,
+        "days_ago": 11,
         "color": "green",
         "blink": true
       }
@@ -782,7 +782,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-09-29",
-        "days_ago": 10,
+        "days_ago": 11,
         "color": "green",
         "blink": true
       },
@@ -796,7 +796,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-03-24",
-        "days_ago": 199,
+        "days_ago": 200,
         "color": "red",
         "blink": false
       }
@@ -812,7 +812,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-09-29",
-        "days_ago": 10,
+        "days_ago": 11,
         "color": "green",
         "blink": true
       },
@@ -826,7 +826,7 @@
         "last_comment_by": "jordijoangimenez",
         "last_comment_date": "2026-08-23",
         "date": "2026-08-23",
-        "days_ago": 47,
+        "days_ago": 48,
         "color": "green",
         "blink": false
       },
@@ -838,9 +838,9 @@
         "url": "https://github.com/5G-MAG/rt-libflute/pull/68",
         "user": "jordijoangimenez",
         "last_comment_by": "jordijoangimenez",
-        "last_comment_date": "2026-10-08",
+        "last_comment_date": "2026-10-09",
         "date": "2026-08-11",
-        "days_ago": 59,
+        "days_ago": 60,
         "color": "green",
         "blink": false
       },
@@ -854,7 +854,7 @@
         "last_comment_by": "jordijoangimenez",
         "last_comment_date": "2026-08-23",
         "date": "2026-08-11",
-        "days_ago": 59,
+        "days_ago": 60,
         "color": "green",
         "blink": false
       },
@@ -868,21 +868,7 @@
         "last_comment_by": "jordijoangimenez",
         "last_comment_date": "2026-08-23",
         "date": "2026-08-11",
-        "days_ago": 59,
-        "color": "green",
-        "blink": false
-      },
-      {
-        "number": "#61",
-        "status": "Ready",
-        "repo": "rt-libflute",
-        "title": "RFC 5053 Raptor FEC scheme: codec, FLUTE integration, and the missing-symbol accessor",
-        "url": "https://github.com/5G-MAG/rt-libflute/pull/61",
-        "user": "jordijoangimenez",
-        "last_comment_by": "jordijoangimenez",
-        "last_comment_date": "2026-08-23",
-        "date": "2026-08-06",
-        "days_ago": 64,
+        "days_ago": 60,
         "color": "green",
         "blink": false
       },
@@ -896,7 +882,7 @@
         "last_comment_by": "rbouqueau",
         "last_comment_date": "2025-10-31",
         "date": "2021-11-30",
-        "days_ago": 1774,
+        "days_ago": 1775,
         "color": "red",
         "blink": false
       },
@@ -910,7 +896,7 @@
         "last_comment_by": "rbouqueau",
         "last_comment_date": "2021-10-23",
         "date": "2021-10-23",
-        "days_ago": 1812,
+        "days_ago": 1813,
         "color": "red",
         "blink": false
       }
@@ -926,7 +912,7 @@
         "last_comment_by": "jordijoangimenez",
         "last_comment_date": "2026-10-08",
         "date": "2026-10-08",
-        "days_ago": 1,
+        "days_ago": 2,
         "color": "green",
         "blink": true
       },
@@ -940,57 +926,57 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-09-29",
-        "days_ago": 10,
+        "days_ago": 11,
         "color": "green",
         "blink": true
       }
     ],
     "Conversational Avatar": [
       {
-        "number": "#6",
+        "number": "#7",
         "status": "Ready",
         "repo": "rt-avatar-content",
-        "title": "docs: apply the 5G-MAG README format",
-        "url": "https://github.com/5G-MAG/rt-avatar-content/pull/6",
-        "user": "jordijoangimenez",
+        "title": "content supporting rt-avatar-call v0.10.154",
+        "url": "https://github.com/5G-MAG/rt-avatar-content/pull/7",
+        "user": "nlsdvl",
         "last_comment_by": null,
         "last_comment_date": null,
-        "date": "2026-09-29",
-        "days_ago": 10,
+        "date": "2026-10-09",
+        "days_ago": 1,
         "color": "green",
         "blink": true
       },
       {
-        "number": "#5",
+        "number": "#53",
         "status": "Ready",
-        "repo": "rt-avatar-content",
-        "title": "Blendshapes for mouth open and head joints",
-        "url": "https://github.com/5G-MAG/rt-avatar-content/pull/5",
+        "repo": "rt-avatar-call",
+        "title": "Update UnityARF to 1.1.0.155",
+        "url": "https://github.com/5G-MAG/rt-avatar-call/pull/53",
         "user": "nlsdvl",
-        "last_comment_by": "jordijoangimenez",
-        "last_comment_date": "2026-09-29",
-        "date": "2026-06-23",
-        "days_ago": 108,
-        "color": "orange",
-        "blink": false
-      },
-      {
-        "number": "#10",
-        "status": "Ready",
-        "repo": "rt-3gpp-swap",
-        "title": "docs: apply the 5G-MAG README format",
-        "url": "https://github.com/5G-MAG/rt-3gpp-swap/pull/10",
-        "user": "jordijoangimenez",
         "last_comment_by": null,
         "last_comment_date": null,
-        "date": "2026-09-29",
-        "days_ago": 10,
+        "date": "2026-10-09",
+        "days_ago": 1,
+        "color": "green",
+        "blink": true
+      },
+      {
+        "number": "#52",
+        "status": "Ready",
+        "repo": "rt-avatar-call",
+        "title": "rt-avatar-call v0.10.154",
+        "url": "https://github.com/5G-MAG/rt-avatar-call/pull/52",
+        "user": "nlsdvl",
+        "last_comment_by": null,
+        "last_comment_date": null,
+        "date": "2026-10-09",
+        "days_ago": 1,
         "color": "green",
         "blink": true
       },
       {
         "number": "#9",
-        "status": "Draft",
+        "status": "Ready",
         "repo": "rt-3gpp-swap",
         "title": "Close TS 26.113 \u00a713.2.4 (SWAP) conformance gaps; add license",
         "url": "https://github.com/5G-MAG/rt-3gpp-swap/pull/9",
@@ -998,7 +984,7 @@
         "last_comment_by": "jordijoangimenez",
         "last_comment_date": "2026-09-29",
         "date": "2026-09-17",
-        "days_ago": 22,
+        "days_ago": 23,
         "color": "green",
         "blink": true
       }
@@ -1014,7 +1000,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-09-29",
-        "days_ago": 10,
+        "days_ago": 11,
         "color": "green",
         "blink": true
       },
@@ -1028,7 +1014,7 @@
         "last_comment_by": "ibouazizi",
         "last_comment_date": "2026-10-08",
         "date": "2026-08-26",
-        "days_ago": 44,
+        "days_ago": 45,
         "color": "green",
         "blink": false
       }
@@ -1044,7 +1030,7 @@
         "last_comment_by": "jordijoangimenez",
         "last_comment_date": "2026-10-03",
         "date": "2026-10-03",
-        "days_ago": 6,
+        "days_ago": 7,
         "color": "green",
         "blink": true
       },
@@ -1058,7 +1044,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-09-29",
-        "days_ago": 10,
+        "days_ago": 11,
         "color": "green",
         "blink": true
       },
@@ -1072,7 +1058,7 @@
         "last_comment_by": "ErikGaida",
         "last_comment_date": "2026-06-18",
         "date": "2026-05-21",
-        "days_ago": 141,
+        "days_ago": 142,
         "color": "orange",
         "blink": false
       }
@@ -1088,7 +1074,7 @@
         "last_comment_by": "jordijoangimenez",
         "last_comment_date": "2026-10-08",
         "date": "2026-10-08",
-        "days_ago": 1,
+        "days_ago": 2,
         "color": "green",
         "blink": true
       },
@@ -1102,7 +1088,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-09-29",
-        "days_ago": 10,
+        "days_ago": 11,
         "color": "green",
         "blink": true
       },
@@ -1116,7 +1102,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-09-29",
-        "days_ago": 10,
+        "days_ago": 11,
         "color": "green",
         "blink": true
       }
@@ -1132,7 +1118,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-09-29",
-        "days_ago": 10,
+        "days_ago": 11,
         "color": "green",
         "blink": true
       },
@@ -1146,12 +1132,40 @@
         "last_comment_by": "jordijoangimenez",
         "last_comment_date": "2025-10-22",
         "date": "2024-11-20",
-        "days_ago": 688,
+        "days_ago": 689,
         "color": "red",
         "blink": false
       }
     ],
     "5G Multicast Broadcast": [
+      {
+        "number": "#71",
+        "status": "Ready",
+        "repo": "rt-mbs-function",
+        "title": "mbsf: send the request that was waiting for an MBSTF discovery",
+        "url": "https://github.com/5G-MAG/rt-mbs-function/pull/71",
+        "user": "jordijoangimenez",
+        "last_comment_by": null,
+        "last_comment_date": null,
+        "date": "2026-10-09",
+        "days_ago": 1,
+        "color": "green",
+        "blink": true
+      },
+      {
+        "number": "#69",
+        "status": "Ready",
+        "repo": "rt-mbs-function",
+        "title": "mbsf: MBS5 answers carry Cache-Control max-age, and a 405 carries Allow",
+        "url": "https://github.com/5G-MAG/rt-mbs-function/pull/69",
+        "user": "jordijoangimenez",
+        "last_comment_by": null,
+        "last_comment_date": null,
+        "date": "2026-10-09",
+        "days_ago": 1,
+        "color": "green",
+        "blink": true
+      },
       {
         "number": "#60",
         "status": "Ready",
@@ -1162,23 +1176,9 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-09-29",
-        "days_ago": 10,
+        "days_ago": 11,
         "color": "green",
         "blink": true
-      },
-      {
-        "number": "#49",
-        "status": "Ready",
-        "repo": "rt-mbs-function",
-        "title": "Fix MBS Broadcast distribution session lifecycle and Service Announcement crashes",
-        "url": "https://github.com/5G-MAG/rt-mbs-function/pull/49",
-        "user": "jordijoangimenez",
-        "last_comment_by": "jordijoangimenez",
-        "last_comment_date": "2026-10-07",
-        "date": "2026-08-11",
-        "days_ago": 59,
-        "color": "green",
-        "blink": false
       },
       {
         "number": "#76",
@@ -1190,7 +1190,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-09-29",
-        "days_ago": 10,
+        "days_ago": 11,
         "color": "green",
         "blink": true
       },
@@ -1204,7 +1204,7 @@
         "last_comment_by": "jordijoangimenez",
         "last_comment_date": "2026-10-01",
         "date": "2026-08-11",
-        "days_ago": 59,
+        "days_ago": 60,
         "color": "green",
         "blink": false
       },
@@ -1218,23 +1218,9 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-09-29",
-        "days_ago": 10,
+        "days_ago": 11,
         "color": "green",
         "blink": true
-      },
-      {
-        "number": "#45",
-        "status": "Ready",
-        "repo": "open5gs",
-        "title": "Fix MBS Broadcast 5GC session setup/delivery bugs, plus a regular-attach-blocking SMF bug",
-        "url": "https://github.com/5G-MAG/open5gs/pull/45",
-        "user": "jordijoangimenez",
-        "last_comment_by": "jordijoangimenez",
-        "last_comment_date": "2026-10-07",
-        "date": "2026-08-11",
-        "days_ago": 59,
-        "color": "green",
-        "blink": false
       },
       {
         "number": "#6",
@@ -1246,7 +1232,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-09-30",
-        "days_ago": 9,
+        "days_ago": 10,
         "color": "green",
         "blink": true
       },
@@ -1260,7 +1246,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-09-29",
-        "days_ago": 10,
+        "days_ago": 11,
         "color": "green",
         "blink": true
       },
@@ -1274,7 +1260,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-07-02",
-        "days_ago": 99,
+        "days_ago": 100,
         "color": "orange",
         "blink": false
       },
@@ -1288,7 +1274,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-09-29",
-        "days_ago": 10,
+        "days_ago": 11,
         "color": "green",
         "blink": true
       },
@@ -1302,7 +1288,7 @@
         "last_comment_by": "jordijoangimenez",
         "last_comment_date": "2026-10-07",
         "date": "2026-09-07",
-        "days_ago": 32,
+        "days_ago": 33,
         "color": "green",
         "blink": false
       }
