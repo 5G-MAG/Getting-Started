@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-10-16 04:00",
+  "last_updated": "2026-10-17 03:51",
   "projects": {
     "5G Media Streaming": [
       {
@@ -248,19 +248,19 @@
     "Conversational Avatar": [
       {
         "short_name": "rt-avatar-content",
-        "tag": "No Release",
-        "date": "-",
-        "blink": false,
+        "tag": "v0.10.154",
+        "date": "2026-10-16",
+        "blink": true,
         "color": "green",
-        "url": "https://github.com/5G-MAG/rt-avatar-content/releases"
+        "url": "https://github.com/5G-MAG/rt-avatar-content/releases/tag/v0.10.154"
       },
       {
         "short_name": "rt-avatar-call",
-        "tag": "v0.9.1",
-        "date": "2026-07-31",
-        "blink": false,
+        "tag": "v0.10.154",
+        "date": "2026-10-16",
+        "blink": true,
         "color": "green",
-        "url": "https://github.com/5G-MAG/rt-avatar-call/releases/tag/v0.9.1"
+        "url": "https://github.com/5G-MAG/rt-avatar-call/releases/tag/v0.10.154"
       },
       {
         "short_name": "rt-avatar-unity-tracker",
@@ -272,11 +272,11 @@
       },
       {
         "short_name": "rt-3gpp-swap",
-        "tag": "No Release",
-        "date": "-",
-        "blink": false,
+        "tag": "v0.9",
+        "date": "2026-10-16",
+        "blink": true,
         "color": "green",
-        "url": "https://github.com/5G-MAG/rt-3gpp-swap/releases"
+        "url": "https://github.com/5G-MAG/rt-3gpp-swap/releases/tag/v0.9"
       }
     ],
     "6G Testbed": [
