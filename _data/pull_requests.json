@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-10-19 04:06",
+  "last_updated": "2026-10-20 04:19",
   "projects": {
     "5G Media Streaming": [
       {
@@ -12,21 +12,7 @@
         "last_comment_by": "jordijoangimenez",
         "last_comment_date": "2026-10-03",
         "date": "2026-10-03",
-        "days_ago": 16,
-        "color": "green",
-        "blink": true
-      },
-      {
-        "number": "#53",
-        "status": "Ready",
-        "repo": "rt-5gms-application",
-        "title": "docs: apply the 5G-MAG README format",
-        "url": "https://github.com/5G-MAG/rt-5gms-application/pull/53",
-        "user": "jordijoangimenez",
-        "last_comment_by": null,
-        "last_comment_date": null,
-        "date": "2026-09-29",
-        "days_ago": 20,
+        "days_ago": 17,
         "color": "green",
         "blink": true
       },
@@ -40,7 +26,7 @@
         "last_comment_by": "ErikGaida",
         "last_comment_date": "2026-06-18",
         "date": "2026-05-21",
-        "days_ago": 151,
+        "days_ago": 152,
         "color": "orange",
         "blink": false
       },
@@ -51,10 +37,10 @@
         "title": "docs: apply the 5G-MAG README format",
         "url": "https://github.com/5G-MAG/rt-5gms-application-function/pull/203",
         "user": "jordijoangimenez",
-        "last_comment_by": null,
-        "last_comment_date": null,
+        "last_comment_by": "jordijoangimenez",
+        "last_comment_date": "2026-10-19",
         "date": "2026-09-29",
-        "days_ago": 20,
+        "days_ago": 21,
         "color": "green",
         "blink": true
       },
@@ -68,7 +54,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-09-29",
-        "days_ago": 20,
+        "days_ago": 21,
         "color": "green",
         "blink": true
       },
@@ -82,35 +68,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-09-29",
-        "days_ago": 20,
-        "color": "green",
-        "blink": true
-      },
-      {
-        "number": "#64",
-        "status": "Ready",
-        "repo": "rt-5gms-media-session-handler",
-        "title": "docs: apply the 5G-MAG README format",
-        "url": "https://github.com/5G-MAG/rt-5gms-media-session-handler/pull/64",
-        "user": "jordijoangimenez",
-        "last_comment_by": null,
-        "last_comment_date": null,
-        "date": "2026-09-29",
-        "days_ago": 20,
-        "color": "green",
-        "blink": true
-      },
-      {
-        "number": "#37",
-        "status": "Ready",
-        "repo": "rt-5gms-common-android-library",
-        "title": "docs: apply the 5G-MAG README format",
-        "url": "https://github.com/5G-MAG/rt-5gms-common-android-library/pull/37",
-        "user": "jordijoangimenez",
-        "last_comment_by": null,
-        "last_comment_date": null,
-        "date": "2026-09-29",
-        "days_ago": 20,
+        "days_ago": 21,
         "color": "green",
         "blink": true
       },
@@ -124,21 +82,7 @@
         "last_comment_by": "dsilhavy",
         "last_comment_date": "2026-10-15",
         "date": "2026-10-08",
-        "days_ago": 11,
-        "color": "green",
-        "blink": true
-      },
-      {
-        "number": "#45",
-        "status": "Ready",
-        "repo": "rt-5gms-examples",
-        "title": "docs: apply the 5G-MAG README format",
-        "url": "https://github.com/5G-MAG/rt-5gms-examples/pull/45",
-        "user": "jordijoangimenez",
-        "last_comment_by": null,
-        "last_comment_date": null,
-        "date": "2026-09-29",
-        "days_ago": 20,
+        "days_ago": 12,
         "color": "green",
         "blink": true
       }
@@ -154,7 +98,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-09-29",
-        "days_ago": 20,
+        "days_ago": 21,
         "color": "green",
         "blink": true
       }
@@ -170,7 +114,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-10-01",
-        "days_ago": 18,
+        "days_ago": 19,
         "color": "green",
         "blink": true
       },
@@ -184,7 +128,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-09-29",
-        "days_ago": 20,
+        "days_ago": 21,
         "color": "green",
         "blink": true
       },
@@ -198,26 +142,12 @@
         "last_comment_by": "ErikGaida",
         "last_comment_date": "2026-10-09",
         "date": "2026-08-27",
-        "days_ago": 53,
+        "days_ago": 54,
         "color": "green",
         "blink": false
       }
     ],
     "5G Broadcast TV Radio": [
-      {
-        "number": "#29",
-        "status": "Ready",
-        "repo": "rt-mbms-tx-for-qrd-and-crd",
-        "title": "docs: apply the 5G-MAG README format",
-        "url": "https://github.com/5G-MAG/rt-mbms-tx-for-qrd-and-crd/pull/29",
-        "user": "jordijoangimenez",
-        "last_comment_by": null,
-        "last_comment_date": null,
-        "date": "2026-09-29",
-        "days_ago": 20,
-        "color": "green",
-        "blink": true
-      },
       {
         "number": "#9",
         "status": "Draft",
@@ -228,37 +158,9 @@
         "last_comment_by": "jordijoangimenez",
         "last_comment_date": "2025-10-22",
         "date": "2024-11-20",
-        "days_ago": 698,
+        "days_ago": 699,
         "color": "red",
         "blink": false
-      },
-      {
-        "number": "#7",
-        "status": "Ready",
-        "repo": "rt-mbms-tx",
-        "title": "docs: apply the 5G-MAG README format",
-        "url": "https://github.com/5G-MAG/rt-mbms-tx/pull/7",
-        "user": "jordijoangimenez",
-        "last_comment_by": null,
-        "last_comment_date": null,
-        "date": "2026-09-29",
-        "days_ago": 20,
-        "color": "green",
-        "blink": true
-      },
-      {
-        "number": "#13",
-        "status": "Ready",
-        "repo": "rt-mbms-mw-android",
-        "title": "docs: apply the 5G-MAG README format",
-        "url": "https://github.com/5G-MAG/rt-mbms-mw-android/pull/13",
-        "user": "jordijoangimenez",
-        "last_comment_by": null,
-        "last_comment_date": null,
-        "date": "2026-09-29",
-        "days_ago": 20,
-        "color": "green",
-        "blink": true
       },
       {
         "number": "#18",
@@ -270,7 +172,7 @@
         "last_comment_by": "rbouqueau",
         "last_comment_date": "2025-10-31",
         "date": "2021-11-30",
-        "days_ago": 1784,
+        "days_ago": 1785,
         "color": "red",
         "blink": false
       },
@@ -284,7 +186,7 @@
         "last_comment_by": "rbouqueau",
         "last_comment_date": "2021-10-23",
         "date": "2021-10-23",
-        "days_ago": 1822,
+        "days_ago": 1823,
         "color": "red",
         "blink": false
       },
@@ -298,20 +200,6 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-09-30",
-        "days_ago": 19,
-        "color": "green",
-        "blink": true
-      },
-      {
-        "number": "#54",
-        "status": "Ready",
-        "repo": "rt-mbms-modem",
-        "title": "docs: apply the 5G-MAG README format",
-        "url": "https://github.com/5G-MAG/rt-mbms-modem/pull/54",
-        "user": "jordijoangimenez",
-        "last_comment_by": null,
-        "last_comment_date": null,
-        "date": "2026-09-29",
         "days_ago": 20,
         "color": "green",
         "blink": true
@@ -326,23 +214,9 @@
         "last_comment_by": "jordijoangimenez",
         "last_comment_date": "2026-09-23",
         "date": "2026-07-02",
-        "days_ago": 109,
+        "days_ago": 110,
         "color": "orange",
         "blink": false
-      },
-      {
-        "number": "#20",
-        "status": "Ready",
-        "repo": "rt-mbms-examples",
-        "title": "docs: apply the 5G-MAG README format",
-        "url": "https://github.com/5G-MAG/rt-mbms-examples/pull/20",
-        "user": "jordijoangimenez",
-        "last_comment_by": null,
-        "last_comment_date": null,
-        "date": "2026-09-29",
-        "days_ago": 20,
-        "color": "green",
-        "blink": true
       },
       {
         "number": "#18",
@@ -354,7 +228,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2025-08-27",
-        "days_ago": 418,
+        "days_ago": 419,
         "color": "red",
         "blink": false
       }
@@ -370,7 +244,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-10-12",
-        "days_ago": 7,
+        "days_ago": 8,
         "color": "green",
         "blink": true
       },
@@ -384,7 +258,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-10-14",
-        "days_ago": 5,
+        "days_ago": 6,
         "color": "green",
         "blink": true
       },
@@ -398,7 +272,7 @@
         "last_comment_by": "jordijoangimenez",
         "last_comment_date": "2026-10-13",
         "date": "2026-10-12",
-        "days_ago": 7,
+        "days_ago": 8,
         "color": "green",
         "blink": true
       },
@@ -412,7 +286,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-09-29",
-        "days_ago": 20,
+        "days_ago": 21,
         "color": "green",
         "blink": true
       },
@@ -426,7 +300,7 @@
         "last_comment_by": "jordijoangimenez",
         "last_comment_date": "2026-09-29",
         "date": "2025-05-09",
-        "days_ago": 528,
+        "days_ago": 529,
         "color": "red",
         "blink": false
       },
@@ -440,7 +314,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-09-29",
-        "days_ago": 20,
+        "days_ago": 21,
         "color": "green",
         "blink": true
       },
@@ -454,7 +328,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-10-12",
-        "days_ago": 7,
+        "days_ago": 8,
         "color": "green",
         "blink": true
       },
@@ -468,7 +342,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-09-29",
-        "days_ago": 20,
+        "days_ago": 21,
         "color": "green",
         "blink": true
       }
@@ -484,7 +358,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-10-09",
-        "days_ago": 10,
+        "days_ago": 11,
         "color": "green",
         "blink": true
       },
@@ -498,7 +372,7 @@
         "last_comment_by": "jordijoangimenez",
         "last_comment_date": "2026-10-08",
         "date": "2026-10-08",
-        "days_ago": 11,
+        "days_ago": 12,
         "color": "green",
         "blink": true
       },
@@ -512,7 +386,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-10-08",
-        "days_ago": 11,
+        "days_ago": 12,
         "color": "green",
         "blink": true
       },
@@ -526,7 +400,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-10-08",
-        "days_ago": 11,
+        "days_ago": 12,
         "color": "green",
         "blink": true
       },
@@ -540,7 +414,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-10-08",
-        "days_ago": 11,
+        "days_ago": 12,
         "color": "green",
         "blink": true
       },
@@ -554,7 +428,7 @@
         "last_comment_by": "jordijoangimenez",
         "last_comment_date": "2026-10-08",
         "date": "2026-10-08",
-        "days_ago": 11,
+        "days_ago": 12,
         "color": "green",
         "blink": true
       },
@@ -568,7 +442,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-10-08",
-        "days_ago": 11,
+        "days_ago": 12,
         "color": "green",
         "blink": true
       },
@@ -582,7 +456,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-10-08",
-        "days_ago": 11,
+        "days_ago": 12,
         "color": "green",
         "blink": true
       },
@@ -596,21 +470,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-10-08",
-        "days_ago": 11,
-        "color": "green",
-        "blink": true
-      },
-      {
-        "number": "#2",
-        "status": "Ready",
-        "repo": "rt-v3c-unity-player",
-        "title": "docs: apply the 5G-MAG README format",
-        "url": "https://github.com/5G-MAG/rt-v3c-unity-player/pull/2",
-        "user": "jordijoangimenez",
-        "last_comment_by": null,
-        "last_comment_date": null,
-        "date": "2026-09-29",
-        "days_ago": 20,
+        "days_ago": 12,
         "color": "green",
         "blink": true
       },
@@ -624,7 +484,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-10-09",
-        "days_ago": 10,
+        "days_ago": 11,
         "color": "green",
         "blink": true
       },
@@ -638,7 +498,7 @@
         "last_comment_by": "bart-kroon",
         "last_comment_date": "2026-10-14",
         "date": "2026-10-08",
-        "days_ago": 11,
+        "days_ago": 12,
         "color": "green",
         "blink": true
       },
@@ -652,7 +512,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-10-08",
-        "days_ago": 11,
+        "days_ago": 12,
         "color": "green",
         "blink": true
       },
@@ -666,7 +526,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-10-08",
-        "days_ago": 11,
+        "days_ago": 12,
         "color": "green",
         "blink": true
       },
@@ -680,7 +540,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-10-08",
-        "days_ago": 11,
+        "days_ago": 12,
         "color": "green",
         "blink": true
       },
@@ -694,7 +554,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-10-08",
-        "days_ago": 11,
+        "days_ago": 12,
         "color": "green",
         "blink": true
       },
@@ -708,7 +568,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-10-08",
-        "days_ago": 11,
+        "days_ago": 12,
         "color": "green",
         "blink": true
       },
@@ -722,21 +582,7 @@
         "last_comment_by": "bart-kroon",
         "last_comment_date": "2026-10-14",
         "date": "2026-10-08",
-        "days_ago": 11,
-        "color": "green",
-        "blink": true
-      },
-      {
-        "number": "#4",
-        "status": "Ready",
-        "repo": "rt-v3c-decoder-plugin",
-        "title": "docs: apply the 5G-MAG README format",
-        "url": "https://github.com/5G-MAG/rt-v3c-decoder-plugin/pull/4",
-        "user": "jordijoangimenez",
-        "last_comment_by": null,
-        "last_comment_date": null,
-        "date": "2026-09-29",
-        "days_ago": 20,
+        "days_ago": 12,
         "color": "green",
         "blink": true
       },
@@ -750,7 +596,7 @@
         "last_comment_by": "bart-kroon",
         "last_comment_date": "2026-10-14",
         "date": "2026-10-08",
-        "days_ago": 11,
+        "days_ago": 12,
         "color": "green",
         "blink": true
       },
@@ -764,7 +610,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-10-08",
-        "days_ago": 11,
+        "days_ago": 12,
         "color": "green",
         "blink": true
       },
@@ -778,56 +624,13 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-10-08",
-        "days_ago": 11,
-        "color": "green",
-        "blink": true
-      },
-      {
-        "number": "#1",
-        "status": "Ready",
-        "repo": "rt-v3c-content",
-        "title": "docs: apply the 5G-MAG README format",
-        "url": "https://github.com/5G-MAG/rt-v3c-content/pull/1",
-        "user": "jordijoangimenez",
-        "last_comment_by": null,
-        "last_comment_date": null,
-        "date": "2026-09-29",
-        "days_ago": 20,
+        "days_ago": 12,
         "color": "green",
         "blink": true
       }
     ],
-    "Beyond 2D": [
-      {
-        "number": "#8",
-        "status": "Ready",
-        "repo": "rt-beyond2d-evaluation-framework",
-        "title": "docs: apply the 5G-MAG README format",
-        "url": "https://github.com/5G-MAG/rt-beyond2d-evaluation-framework/pull/8",
-        "user": "jordijoangimenez",
-        "last_comment_by": null,
-        "last_comment_date": null,
-        "date": "2026-09-29",
-        "days_ago": 20,
-        "color": "green",
-        "blink": true
-      }
-    ],
+    "Beyond 2D": [],
     "AI ML": [
-      {
-        "number": "#5",
-        "status": "Ready",
-        "repo": "rt-ai-ml-evaluation-framework",
-        "title": "docs: apply the 5G-MAG README format",
-        "url": "https://github.com/5G-MAG/rt-ai-ml-evaluation-framework/pull/5",
-        "user": "jordijoangimenez",
-        "last_comment_by": null,
-        "last_comment_date": null,
-        "date": "2026-09-29",
-        "days_ago": 20,
-        "color": "green",
-        "blink": true
-      },
       {
         "number": "#4",
         "status": "Ready",
@@ -838,7 +641,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-03-24",
-        "days_ago": 209,
+        "days_ago": 210,
         "color": "red",
         "blink": false
       }
@@ -854,7 +657,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-10-16",
-        "days_ago": 3,
+        "days_ago": 4,
         "color": "green",
         "blink": true
       },
@@ -868,7 +671,7 @@
         "last_comment_by": "jordijoangimenez",
         "last_comment_date": "2026-08-23",
         "date": "2026-08-23",
-        "days_ago": 57,
+        "days_ago": 58,
         "color": "green",
         "blink": false
       },
@@ -882,7 +685,7 @@
         "last_comment_by": "jordijoangimenez",
         "last_comment_date": "2026-08-23",
         "date": "2026-08-11",
-        "days_ago": 69,
+        "days_ago": 70,
         "color": "green",
         "blink": false
       },
@@ -896,7 +699,7 @@
         "last_comment_by": "jordijoangimenez",
         "last_comment_date": "2026-08-23",
         "date": "2026-08-11",
-        "days_ago": 69,
+        "days_ago": 70,
         "color": "green",
         "blink": false
       },
@@ -910,7 +713,7 @@
         "last_comment_by": "rbouqueau",
         "last_comment_date": "2025-10-31",
         "date": "2021-11-30",
-        "days_ago": 1784,
+        "days_ago": 1785,
         "color": "red",
         "blink": false
       },
@@ -924,7 +727,7 @@
         "last_comment_by": "rbouqueau",
         "last_comment_date": "2021-10-23",
         "date": "2021-10-23",
-        "days_ago": 1822,
+        "days_ago": 1823,
         "color": "red",
         "blink": false
       }
@@ -940,21 +743,7 @@
         "last_comment_by": "jordijoangimenez",
         "last_comment_date": "2026-10-08",
         "date": "2026-10-08",
-        "days_ago": 11,
-        "color": "green",
-        "blink": true
-      },
-      {
-        "number": "#75",
-        "status": "Ready",
-        "repo": "rt-common-shared",
-        "title": "docs: apply the 5G-MAG README format",
-        "url": "https://github.com/5G-MAG/rt-common-shared/pull/75",
-        "user": "jordijoangimenez",
-        "last_comment_by": null,
-        "last_comment_date": null,
-        "date": "2026-09-29",
-        "days_ago": 20,
+        "days_ago": 12,
         "color": "green",
         "blink": true
       }
@@ -962,7 +751,7 @@
     "Conversational Avatar": [
       {
         "number": "#8",
-        "status": "Draft",
+        "status": "Ready",
         "repo": "rt-avatar-content",
         "title": "feature/unityarf 1.1.0.155",
         "url": "https://github.com/5G-MAG/rt-avatar-content/pull/8",
@@ -970,7 +759,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-10-16",
-        "days_ago": 3,
+        "days_ago": 4,
         "color": "green",
         "blink": true
       }
@@ -986,7 +775,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-09-29",
-        "days_ago": 20,
+        "days_ago": 21,
         "color": "green",
         "blink": true
       },
@@ -1000,7 +789,7 @@
         "last_comment_by": "ibouazizi",
         "last_comment_date": "2026-10-08",
         "date": "2026-08-26",
-        "days_ago": 54,
+        "days_ago": 55,
         "color": "green",
         "blink": false
       }
@@ -1016,21 +805,7 @@
         "last_comment_by": "jordijoangimenez",
         "last_comment_date": "2026-10-03",
         "date": "2026-10-03",
-        "days_ago": 16,
-        "color": "green",
-        "blink": true
-      },
-      {
-        "number": "#53",
-        "status": "Ready",
-        "repo": "rt-5gms-application",
-        "title": "docs: apply the 5G-MAG README format",
-        "url": "https://github.com/5G-MAG/rt-5gms-application/pull/53",
-        "user": "jordijoangimenez",
-        "last_comment_by": null,
-        "last_comment_date": null,
-        "date": "2026-09-29",
-        "days_ago": 20,
+        "days_ago": 17,
         "color": "green",
         "blink": true
       },
@@ -1044,7 +819,7 @@
         "last_comment_by": "ErikGaida",
         "last_comment_date": "2026-06-18",
         "date": "2026-05-21",
-        "days_ago": 151,
+        "days_ago": 152,
         "color": "orange",
         "blink": false
       }
@@ -1060,40 +835,12 @@
         "last_comment_by": "jordijoangimenez",
         "last_comment_date": "2026-10-08",
         "date": "2026-10-08",
-        "days_ago": 11,
-        "color": "green",
-        "blink": true
-      },
-      {
-        "number": "#75",
-        "status": "Ready",
-        "repo": "rt-common-shared",
-        "title": "docs: apply the 5G-MAG README format",
-        "url": "https://github.com/5G-MAG/rt-common-shared/pull/75",
-        "user": "jordijoangimenez",
-        "last_comment_by": null,
-        "last_comment_date": null,
-        "date": "2026-09-29",
-        "days_ago": 20,
+        "days_ago": 12,
         "color": "green",
         "blink": true
       }
     ],
     "5G Broadcast Emergency Alerts": [
-      {
-        "number": "#29",
-        "status": "Ready",
-        "repo": "rt-mbms-tx-for-qrd-and-crd",
-        "title": "docs: apply the 5G-MAG README format",
-        "url": "https://github.com/5G-MAG/rt-mbms-tx-for-qrd-and-crd/pull/29",
-        "user": "jordijoangimenez",
-        "last_comment_by": null,
-        "last_comment_date": null,
-        "date": "2026-09-29",
-        "days_ago": 20,
-        "color": "green",
-        "blink": true
-      },
       {
         "number": "#9",
         "status": "Draft",
@@ -1104,7 +851,7 @@
         "last_comment_by": "jordijoangimenez",
         "last_comment_date": "2025-10-22",
         "date": "2024-11-20",
-        "days_ago": 698,
+        "days_ago": 699,
         "color": "red",
         "blink": false
       }
@@ -1120,7 +867,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-10-15",
-        "days_ago": 4,
+        "days_ago": 5,
         "color": "green",
         "blink": true
       },
@@ -1134,7 +881,7 @@
         "last_comment_by": "jordijoangimenez",
         "last_comment_date": "2026-10-16",
         "date": "2026-10-09",
-        "days_ago": 10,
+        "days_ago": 11,
         "color": "green",
         "blink": true
       },
@@ -1148,7 +895,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-09-29",
-        "days_ago": 20,
+        "days_ago": 21,
         "color": "green",
         "blink": true
       },
@@ -1159,10 +906,10 @@
         "title": "mbstf: announce an object for at least a minimum time in the FDT, whatever the origin says",
         "url": "https://github.com/5G-MAG/rt-mbs-transport-function/pull/81",
         "user": "jordijoangimenez",
-        "last_comment_by": null,
-        "last_comment_date": null,
+        "last_comment_by": "davidjwbbc",
+        "last_comment_date": "2026-10-19",
         "date": "2026-10-16",
-        "days_ago": 3,
+        "days_ago": 4,
         "color": "green",
         "blink": true
       },
@@ -1176,7 +923,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-10-16",
-        "days_ago": 3,
+        "days_ago": 4,
         "color": "green",
         "blink": true
       },
@@ -1190,7 +937,7 @@
         "last_comment_by": "jordijoangimenez",
         "last_comment_date": "2026-10-16",
         "date": "2026-09-29",
-        "days_ago": 20,
+        "days_ago": 21,
         "color": "green",
         "blink": true
       },
@@ -1204,7 +951,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-10-16",
-        "days_ago": 3,
+        "days_ago": 4,
         "color": "green",
         "blink": true
       },
@@ -1218,7 +965,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-10-16",
-        "days_ago": 3,
+        "days_ago": 4,
         "color": "green",
         "blink": true
       },
@@ -1232,7 +979,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-09-29",
-        "days_ago": 20,
+        "days_ago": 21,
         "color": "green",
         "blink": true
       },
@@ -1246,7 +993,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-09-30",
-        "days_ago": 19,
+        "days_ago": 20,
         "color": "green",
         "blink": true
       },
@@ -1260,7 +1007,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-09-29",
-        "days_ago": 20,
+        "days_ago": 21,
         "color": "green",
         "blink": true
       },
@@ -1274,23 +1021,9 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-07-02",
-        "days_ago": 109,
+        "days_ago": 110,
         "color": "orange",
         "blink": false
-      },
-      {
-        "number": "#36",
-        "status": "Ready",
-        "repo": "rt-mbs-examples",
-        "title": "docs: apply the 5G-MAG README format",
-        "url": "https://github.com/5G-MAG/rt-mbs-examples/pull/36",
-        "user": "jordijoangimenez",
-        "last_comment_by": null,
-        "last_comment_date": null,
-        "date": "2026-09-29",
-        "days_ago": 20,
-        "color": "green",
-        "blink": true
       },
       {
         "number": "#33",
@@ -1302,7 +1035,7 @@
         "last_comment_by": "jordijoangimenez",
         "last_comment_date": "2026-10-07",
         "date": "2026-09-07",
-        "days_ago": 42,
+        "days_ago": 43,
         "color": "green",
         "blink": false
       }
