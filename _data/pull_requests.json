@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-11-13 05:58",
+  "last_updated": "2026-11-14 05:48",
   "projects": {
     "5G Media Streaming": [
       {
@@ -12,7 +12,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-10-21",
-        "days_ago": 23,
+        "days_ago": 24,
         "color": "green",
         "blink": true
       },
@@ -26,7 +26,7 @@
         "last_comment_by": "jordijoangimenez",
         "last_comment_date": "2026-10-03",
         "date": "2026-10-03",
-        "days_ago": 41,
+        "days_ago": 42,
         "color": "green",
         "blink": false
       },
@@ -40,7 +40,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-09-29",
-        "days_ago": 45,
+        "days_ago": 46,
         "color": "green",
         "blink": false
       },
@@ -54,7 +54,7 @@
         "last_comment_by": "github-actions[bot]",
         "last_comment_date": "2026-11-05",
         "date": "2026-11-05",
-        "days_ago": 8,
+        "days_ago": 9,
         "color": "green",
         "blink": true
       },
@@ -65,10 +65,10 @@
         "title": "Add media delivery session identification",
         "url": "https://github.com/5G-MAG/rt-5gms-media-stream-handler/pull/86",
         "user": "ErikGaida",
-        "last_comment_by": "ErikGaida",
-        "last_comment_date": "2026-11-06",
+        "last_comment_by": "jordijoangimenez",
+        "last_comment_date": "2026-11-13",
         "date": "2026-10-24",
-        "days_ago": 20,
+        "days_ago": 21,
         "color": "green",
         "blink": true
       },
@@ -79,10 +79,10 @@
         "title": "Add media delivery session identification to the Media Session Handler",
         "url": "https://github.com/5G-MAG/rt-5gms-media-session-handler/pull/66",
         "user": "ErikGaida",
-        "last_comment_by": "ErikGaida",
-        "last_comment_date": "2026-10-28",
+        "last_comment_by": "jordijoangimenez",
+        "last_comment_date": "2026-11-13",
         "date": "2026-10-24",
-        "days_ago": 20,
+        "days_ago": 21,
         "color": "green",
         "blink": true
       },
@@ -93,10 +93,10 @@
         "title": "Add media delivery session identifiers to PlaybackRequest and ConsumptionReport",
         "url": "https://github.com/5G-MAG/rt-5gms-common-android-library/pull/38",
         "user": "ErikGaida",
-        "last_comment_by": "dsilhavy",
-        "last_comment_date": "2026-10-26",
+        "last_comment_by": "jordijoangimenez",
+        "last_comment_date": "2026-11-13",
         "date": "2026-10-24",
-        "days_ago": 20,
+        "days_ago": 21,
         "color": "green",
         "blink": true
       },
@@ -110,7 +110,7 @@
         "last_comment_by": "ErikGaida",
         "last_comment_date": "2026-11-09",
         "date": "2026-10-08",
-        "days_ago": 36,
+        "days_ago": 37,
         "color": "green",
         "blink": false
       }
@@ -124,10 +124,10 @@
         "title": "Fix DCAF subproject integration",
         "url": "https://github.com/5G-MAG/rt-data-collection-application-function/pull/34",
         "user": "ErikGaida",
-        "last_comment_by": "dsilhavy",
-        "last_comment_date": "2026-11-06",
+        "last_comment_by": "jordijoangimenez",
+        "last_comment_date": "2026-11-13",
         "date": "2026-10-01",
-        "days_ago": 43,
+        "days_ago": 44,
         "color": "green",
         "blink": false
       },
@@ -141,7 +141,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-09-29",
-        "days_ago": 45,
+        "days_ago": 46,
         "color": "green",
         "blink": false
       },
@@ -155,7 +155,7 @@
         "last_comment_by": "dsilhavy",
         "last_comment_date": "2026-11-06",
         "date": "2026-08-27",
-        "days_ago": 78,
+        "days_ago": 79,
         "color": "green",
         "blink": false
       }
@@ -171,7 +171,7 @@
         "last_comment_by": "jordijoangimenez",
         "last_comment_date": "2025-10-22",
         "date": "2024-11-20",
-        "days_ago": 723,
+        "days_ago": 724,
         "color": "red",
         "blink": false
       },
@@ -185,7 +185,7 @@
         "last_comment_by": "rbouqueau",
         "last_comment_date": "2025-10-31",
         "date": "2021-11-30",
-        "days_ago": 1809,
+        "days_ago": 1810,
         "color": "red",
         "blink": false
       },
@@ -199,7 +199,7 @@
         "last_comment_by": "rbouqueau",
         "last_comment_date": "2021-10-23",
         "date": "2021-10-23",
-        "days_ago": 1847,
+        "days_ago": 1848,
         "color": "red",
         "blink": false
       },
@@ -213,7 +213,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-09-30",
-        "days_ago": 44,
+        "days_ago": 45,
         "color": "green",
         "blink": false
       },
@@ -227,7 +227,7 @@
         "last_comment_by": "jordijoangimenez",
         "last_comment_date": "2026-09-23",
         "date": "2026-07-02",
-        "days_ago": 134,
+        "days_ago": 135,
         "color": "orange",
         "blink": false
       },
@@ -241,7 +241,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2025-08-27",
-        "days_ago": 443,
+        "days_ago": 444,
         "color": "red",
         "blink": false
       }
@@ -257,7 +257,7 @@
         "last_comment_by": "jordijoangimenez",
         "last_comment_date": "2026-11-10",
         "date": "2026-10-12",
-        "days_ago": 32,
+        "days_ago": 33,
         "color": "green",
         "blink": false
       },
@@ -271,7 +271,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-11-03",
-        "days_ago": 10,
+        "days_ago": 11,
         "color": "green",
         "blink": true
       },
@@ -285,7 +285,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-10-27",
-        "days_ago": 17,
+        "days_ago": 18,
         "color": "green",
         "blink": true
       },
@@ -299,7 +299,7 @@
         "last_comment_by": "jordijoangimenez",
         "last_comment_date": "2026-09-29",
         "date": "2025-05-09",
-        "days_ago": 553,
+        "days_ago": 554,
         "color": "red",
         "blink": false
       },
@@ -313,23 +313,23 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-09-29",
-        "days_ago": 45,
+        "days_ago": 46,
         "color": "green",
         "blink": false
       },
       {
-        "number": "#33",
+        "number": "#35",
         "status": "Ready",
         "repo": "rt-xr-maf-native",
-        "title": "Decode timed metadata tracks and report the buffer format",
-        "url": "https://github.com/5G-MAG/rt-xr-maf-native/pull/33",
-        "user": "jordijoangimenez",
-        "last_comment_by": "jordijoangimenez",
-        "last_comment_date": "2026-11-10",
-        "date": "2026-10-12",
-        "days_ago": 32,
+        "title": "Development",
+        "url": "https://github.com/5G-MAG/rt-xr-maf-native/pull/35",
+        "user": "nlsdvl",
+        "last_comment_by": null,
+        "last_comment_date": null,
+        "date": "2026-11-13",
+        "days_ago": 1,
         "color": "green",
-        "blink": false
+        "blink": true
       }
     ],
     "V3C Immersive": [
@@ -343,7 +343,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-10-09",
-        "days_ago": 35,
+        "days_ago": 36,
         "color": "green",
         "blink": false
       },
@@ -357,7 +357,7 @@
         "last_comment_by": "jordijoangimenez",
         "last_comment_date": "2026-10-08",
         "date": "2026-10-08",
-        "days_ago": 36,
+        "days_ago": 37,
         "color": "green",
         "blink": false
       },
@@ -371,7 +371,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-10-08",
-        "days_ago": 36,
+        "days_ago": 37,
         "color": "green",
         "blink": false
       },
@@ -385,7 +385,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-10-08",
-        "days_ago": 36,
+        "days_ago": 37,
         "color": "green",
         "blink": false
       },
@@ -399,7 +399,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-10-08",
-        "days_ago": 36,
+        "days_ago": 37,
         "color": "green",
         "blink": false
       },
@@ -413,7 +413,7 @@
         "last_comment_by": "jordijoangimenez",
         "last_comment_date": "2026-10-08",
         "date": "2026-10-08",
-        "days_ago": 36,
+        "days_ago": 37,
         "color": "green",
         "blink": false
       },
@@ -427,7 +427,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-10-08",
-        "days_ago": 36,
+        "days_ago": 37,
         "color": "green",
         "blink": false
       },
@@ -441,7 +441,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-10-08",
-        "days_ago": 36,
+        "days_ago": 37,
         "color": "green",
         "blink": false
       },
@@ -455,7 +455,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-10-08",
-        "days_ago": 36,
+        "days_ago": 37,
         "color": "green",
         "blink": false
       },
@@ -469,7 +469,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-10-09",
-        "days_ago": 35,
+        "days_ago": 36,
         "color": "green",
         "blink": false
       },
@@ -483,7 +483,7 @@
         "last_comment_by": "bart-kroon",
         "last_comment_date": "2026-10-14",
         "date": "2026-10-08",
-        "days_ago": 36,
+        "days_ago": 37,
         "color": "green",
         "blink": false
       },
@@ -497,7 +497,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-10-08",
-        "days_ago": 36,
+        "days_ago": 37,
         "color": "green",
         "blink": false
       },
@@ -511,7 +511,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-10-08",
-        "days_ago": 36,
+        "days_ago": 37,
         "color": "green",
         "blink": false
       },
@@ -525,7 +525,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-10-08",
-        "days_ago": 36,
+        "days_ago": 37,
         "color": "green",
         "blink": false
       },
@@ -539,7 +539,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-10-08",
-        "days_ago": 36,
+        "days_ago": 37,
         "color": "green",
         "blink": false
       },
@@ -553,7 +553,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-10-08",
-        "days_ago": 36,
+        "days_ago": 37,
         "color": "green",
         "blink": false
       },
@@ -567,7 +567,7 @@
         "last_comment_by": "bart-kroon",
         "last_comment_date": "2026-10-14",
         "date": "2026-10-08",
-        "days_ago": 36,
+        "days_ago": 37,
         "color": "green",
         "blink": false
       },
@@ -581,7 +581,7 @@
         "last_comment_by": "bart-kroon",
         "last_comment_date": "2026-10-14",
         "date": "2026-10-08",
-        "days_ago": 36,
+        "days_ago": 37,
         "color": "green",
         "blink": false
       },
@@ -595,7 +595,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-10-08",
-        "days_ago": 36,
+        "days_ago": 37,
         "color": "green",
         "blink": false
       },
@@ -609,7 +609,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-10-08",
-        "days_ago": 36,
+        "days_ago": 37,
         "color": "green",
         "blink": false
       }
@@ -626,7 +626,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-03-24",
-        "days_ago": 234,
+        "days_ago": 235,
         "color": "red",
         "blink": false
       }
@@ -642,7 +642,7 @@
         "last_comment_by": "jordijoangimenez",
         "last_comment_date": "2026-08-23",
         "date": "2026-08-23",
-        "days_ago": 82,
+        "days_ago": 83,
         "color": "green",
         "blink": false
       },
@@ -656,7 +656,7 @@
         "last_comment_by": "jordijoangimenez",
         "last_comment_date": "2026-08-23",
         "date": "2026-08-11",
-        "days_ago": 94,
+        "days_ago": 95,
         "color": "orange",
         "blink": false
       },
@@ -670,7 +670,7 @@
         "last_comment_by": "jordijoangimenez",
         "last_comment_date": "2026-08-23",
         "date": "2026-08-11",
-        "days_ago": 94,
+        "days_ago": 95,
         "color": "orange",
         "blink": false
       },
@@ -684,7 +684,7 @@
         "last_comment_by": "rbouqueau",
         "last_comment_date": "2025-10-31",
         "date": "2021-11-30",
-        "days_ago": 1809,
+        "days_ago": 1810,
         "color": "red",
         "blink": false
       },
@@ -698,7 +698,7 @@
         "last_comment_by": "rbouqueau",
         "last_comment_date": "2021-10-23",
         "date": "2021-10-23",
-        "days_ago": 1847,
+        "days_ago": 1848,
         "color": "red",
         "blink": false
       }
@@ -714,7 +714,7 @@
         "last_comment_by": "jordijoangimenez",
         "last_comment_date": "2026-10-08",
         "date": "2026-10-08",
-        "days_ago": 36,
+        "days_ago": 37,
         "color": "green",
         "blink": false
       }
@@ -730,35 +730,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-10-29",
-        "days_ago": 15,
-        "color": "green",
-        "blink": true
-      },
-      {
-        "number": "#60",
-        "status": "Ready",
-        "repo": "rt-avatar-call",
-        "title": "Keep the application registered, and clean up after a call",
-        "url": "https://github.com/5G-MAG/rt-avatar-call/pull/60",
-        "user": "jordijoangimenez",
-        "last_comment_by": null,
-        "last_comment_date": null,
-        "date": "2026-11-10",
-        "days_ago": 3,
-        "color": "green",
-        "blink": true
-      },
-      {
-        "number": "#59",
-        "status": "Ready",
-        "repo": "rt-avatar-call",
-        "title": "Incoming calls: listen as a user, ring, Accept or Decline",
-        "url": "https://github.com/5G-MAG/rt-avatar-call/pull/59",
-        "user": "jordijoangimenez",
-        "last_comment_by": "jordijoangimenez",
-        "last_comment_date": "2026-11-10",
-        "date": "2026-10-29",
-        "days_ago": 15,
+        "days_ago": 16,
         "color": "green",
         "blink": true
       }
@@ -774,7 +746,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-09-29",
-        "days_ago": 45,
+        "days_ago": 46,
         "color": "green",
         "blink": false
       },
@@ -788,7 +760,7 @@
         "last_comment_by": "ibouazizi",
         "last_comment_date": "2026-10-08",
         "date": "2026-08-26",
-        "days_ago": 79,
+        "days_ago": 80,
         "color": "green",
         "blink": false
       }
@@ -804,7 +776,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-10-21",
-        "days_ago": 23,
+        "days_ago": 24,
         "color": "green",
         "blink": true
       },
@@ -818,7 +790,7 @@
         "last_comment_by": "jordijoangimenez",
         "last_comment_date": "2026-10-03",
         "date": "2026-10-03",
-        "days_ago": 41,
+        "days_ago": 42,
         "color": "green",
         "blink": false
       }
@@ -834,7 +806,7 @@
         "last_comment_by": "jordijoangimenez",
         "last_comment_date": "2026-10-08",
         "date": "2026-10-08",
-        "days_ago": 36,
+        "days_ago": 37,
         "color": "green",
         "blink": false
       }
@@ -850,7 +822,7 @@
         "last_comment_by": "jordijoangimenez",
         "last_comment_date": "2025-10-22",
         "date": "2024-11-20",
-        "days_ago": 723,
+        "days_ago": 724,
         "color": "red",
         "blink": false
       }
@@ -866,7 +838,7 @@
         "last_comment_by": "dsilhavy",
         "last_comment_date": "2026-10-21",
         "date": "2026-10-16",
-        "days_ago": 28,
+        "days_ago": 29,
         "color": "green",
         "blink": true
       },
@@ -880,7 +852,7 @@
         "last_comment_by": "jordijoangimenez",
         "last_comment_date": "2026-10-20",
         "date": "2026-10-16",
-        "days_ago": 28,
+        "days_ago": 29,
         "color": "green",
         "blink": true
       },
@@ -894,7 +866,7 @@
         "last_comment_by": "jordijoangimenez",
         "last_comment_date": "2026-10-20",
         "date": "2026-10-16",
-        "days_ago": 28,
+        "days_ago": 29,
         "color": "green",
         "blink": true
       },
@@ -908,7 +880,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-09-30",
-        "days_ago": 44,
+        "days_ago": 45,
         "color": "green",
         "blink": false
       },
@@ -922,7 +894,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-09-29",
-        "days_ago": 45,
+        "days_ago": 46,
         "color": "green",
         "blink": false
       },
@@ -936,7 +908,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-07-02",
-        "days_ago": 134,
+        "days_ago": 135,
         "color": "orange",
         "blink": false
       },
@@ -950,7 +922,7 @@
         "last_comment_by": "dsilhavy",
         "last_comment_date": "2026-10-30",
         "date": "2026-09-07",
-        "days_ago": 67,
+        "days_ago": 68,
         "color": "green",
         "blink": false
       }
