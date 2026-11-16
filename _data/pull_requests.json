@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-11-15 05:47",
+  "last_updated": "2026-11-16 05:47",
   "projects": {
     "5G Media Streaming": [
       {
@@ -12,7 +12,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-10-21",
-        "days_ago": 25,
+        "days_ago": 26,
         "color": "green",
         "blink": true
       },
@@ -26,7 +26,7 @@
         "last_comment_by": "jordijoangimenez",
         "last_comment_date": "2026-10-03",
         "date": "2026-10-03",
-        "days_ago": 43,
+        "days_ago": 44,
         "color": "green",
         "blink": false
       },
@@ -40,7 +40,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-09-29",
-        "days_ago": 47,
+        "days_ago": 48,
         "color": "green",
         "blink": false
       },
@@ -54,7 +54,7 @@
         "last_comment_by": "github-actions[bot]",
         "last_comment_date": "2026-11-05",
         "date": "2026-11-05",
-        "days_ago": 10,
+        "days_ago": 11,
         "color": "green",
         "blink": true
       },
@@ -68,7 +68,7 @@
         "last_comment_by": "jordijoangimenez",
         "last_comment_date": "2026-11-13",
         "date": "2026-10-24",
-        "days_ago": 22,
+        "days_ago": 23,
         "color": "green",
         "blink": true
       },
@@ -82,7 +82,7 @@
         "last_comment_by": "jordijoangimenez",
         "last_comment_date": "2026-11-13",
         "date": "2026-10-24",
-        "days_ago": 22,
+        "days_ago": 23,
         "color": "green",
         "blink": true
       },
@@ -96,7 +96,7 @@
         "last_comment_by": "jordijoangimenez",
         "last_comment_date": "2026-11-13",
         "date": "2026-10-24",
-        "days_ago": 22,
+        "days_ago": 23,
         "color": "green",
         "blink": true
       },
@@ -110,7 +110,7 @@
         "last_comment_by": "ErikGaida",
         "last_comment_date": "2026-11-09",
         "date": "2026-10-08",
-        "days_ago": 38,
+        "days_ago": 39,
         "color": "green",
         "blink": false
       }
@@ -127,7 +127,7 @@
         "last_comment_by": "jordijoangimenez",
         "last_comment_date": "2026-11-13",
         "date": "2026-10-01",
-        "days_ago": 45,
+        "days_ago": 46,
         "color": "green",
         "blink": false
       },
@@ -141,7 +141,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-09-29",
-        "days_ago": 47,
+        "days_ago": 48,
         "color": "green",
         "blink": false
       },
@@ -155,7 +155,7 @@
         "last_comment_by": "dsilhavy",
         "last_comment_date": "2026-11-06",
         "date": "2026-08-27",
-        "days_ago": 80,
+        "days_ago": 81,
         "color": "green",
         "blink": false
       }
@@ -171,7 +171,7 @@
         "last_comment_by": "jordijoangimenez",
         "last_comment_date": "2025-10-22",
         "date": "2024-11-20",
-        "days_ago": 725,
+        "days_ago": 726,
         "color": "red",
         "blink": false
       },
@@ -185,7 +185,7 @@
         "last_comment_by": "rbouqueau",
         "last_comment_date": "2025-10-31",
         "date": "2021-11-30",
-        "days_ago": 1811,
+        "days_ago": 1812,
         "color": "red",
         "blink": false
       },
@@ -199,7 +199,7 @@
         "last_comment_by": "rbouqueau",
         "last_comment_date": "2021-10-23",
         "date": "2021-10-23",
-        "days_ago": 1849,
+        "days_ago": 1850,
         "color": "red",
         "blink": false
       },
@@ -213,7 +213,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-09-30",
-        "days_ago": 46,
+        "days_ago": 47,
         "color": "green",
         "blink": false
       },
@@ -227,7 +227,7 @@
         "last_comment_by": "jordijoangimenez",
         "last_comment_date": "2026-09-23",
         "date": "2026-07-02",
-        "days_ago": 136,
+        "days_ago": 137,
         "color": "orange",
         "blink": false
       },
@@ -241,7 +241,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2025-08-27",
-        "days_ago": 445,
+        "days_ago": 446,
         "color": "red",
         "blink": false
       }
@@ -257,7 +257,7 @@
         "last_comment_by": "jordijoangimenez",
         "last_comment_date": "2026-11-10",
         "date": "2026-10-12",
-        "days_ago": 34,
+        "days_ago": 35,
         "color": "green",
         "blink": false
       },
@@ -271,7 +271,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-11-03",
-        "days_ago": 12,
+        "days_ago": 13,
         "color": "green",
         "blink": true
       },
@@ -285,7 +285,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-10-27",
-        "days_ago": 19,
+        "days_ago": 20,
         "color": "green",
         "blink": true
       },
@@ -299,7 +299,7 @@
         "last_comment_by": "jordijoangimenez",
         "last_comment_date": "2026-09-29",
         "date": "2025-05-09",
-        "days_ago": 555,
+        "days_ago": 556,
         "color": "red",
         "blink": false
       },
@@ -313,7 +313,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-09-29",
-        "days_ago": 47,
+        "days_ago": 48,
         "color": "green",
         "blink": false
       },
@@ -327,7 +327,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-11-13",
-        "days_ago": 2,
+        "days_ago": 3,
         "color": "green",
         "blink": true
       }
@@ -343,7 +343,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-10-09",
-        "days_ago": 37,
+        "days_ago": 38,
         "color": "green",
         "blink": false
       },
@@ -357,7 +357,7 @@
         "last_comment_by": "jordijoangimenez",
         "last_comment_date": "2026-10-08",
         "date": "2026-10-08",
-        "days_ago": 38,
+        "days_ago": 39,
         "color": "green",
         "blink": false
       },
@@ -371,7 +371,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-10-08",
-        "days_ago": 38,
+        "days_ago": 39,
         "color": "green",
         "blink": false
       },
@@ -385,7 +385,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-10-08",
-        "days_ago": 38,
+        "days_ago": 39,
         "color": "green",
         "blink": false
       },
@@ -399,7 +399,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-10-08",
-        "days_ago": 38,
+        "days_ago": 39,
         "color": "green",
         "blink": false
       },
@@ -413,7 +413,7 @@
         "last_comment_by": "jordijoangimenez",
         "last_comment_date": "2026-10-08",
         "date": "2026-10-08",
-        "days_ago": 38,
+        "days_ago": 39,
         "color": "green",
         "blink": false
       },
@@ -427,7 +427,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-10-08",
-        "days_ago": 38,
+        "days_ago": 39,
         "color": "green",
         "blink": false
       },
@@ -441,7 +441,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-10-08",
-        "days_ago": 38,
+        "days_ago": 39,
         "color": "green",
         "blink": false
       },
@@ -455,7 +455,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-10-08",
-        "days_ago": 38,
+        "days_ago": 39,
         "color": "green",
         "blink": false
       },
@@ -469,7 +469,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-10-09",
-        "days_ago": 37,
+        "days_ago": 38,
         "color": "green",
         "blink": false
       },
@@ -483,7 +483,7 @@
         "last_comment_by": "bart-kroon",
         "last_comment_date": "2026-10-14",
         "date": "2026-10-08",
-        "days_ago": 38,
+        "days_ago": 39,
         "color": "green",
         "blink": false
       },
@@ -497,7 +497,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-10-08",
-        "days_ago": 38,
+        "days_ago": 39,
         "color": "green",
         "blink": false
       },
@@ -511,7 +511,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-10-08",
-        "days_ago": 38,
+        "days_ago": 39,
         "color": "green",
         "blink": false
       },
@@ -525,7 +525,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-10-08",
-        "days_ago": 38,
+        "days_ago": 39,
         "color": "green",
         "blink": false
       },
@@ -539,7 +539,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-10-08",
-        "days_ago": 38,
+        "days_ago": 39,
         "color": "green",
         "blink": false
       },
@@ -553,7 +553,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-10-08",
-        "days_ago": 38,
+        "days_ago": 39,
         "color": "green",
         "blink": false
       },
@@ -567,7 +567,7 @@
         "last_comment_by": "bart-kroon",
         "last_comment_date": "2026-10-14",
         "date": "2026-10-08",
-        "days_ago": 38,
+        "days_ago": 39,
         "color": "green",
         "blink": false
       },
@@ -581,7 +581,7 @@
         "last_comment_by": "bart-kroon",
         "last_comment_date": "2026-10-14",
         "date": "2026-10-08",
-        "days_ago": 38,
+        "days_ago": 39,
         "color": "green",
         "blink": false
       },
@@ -595,7 +595,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-10-08",
-        "days_ago": 38,
+        "days_ago": 39,
         "color": "green",
         "blink": false
       },
@@ -609,7 +609,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-10-08",
-        "days_ago": 38,
+        "days_ago": 39,
         "color": "green",
         "blink": false
       }
@@ -626,7 +626,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-03-24",
-        "days_ago": 236,
+        "days_ago": 237,
         "color": "red",
         "blink": false
       }
@@ -642,7 +642,7 @@
         "last_comment_by": "jordijoangimenez",
         "last_comment_date": "2026-08-23",
         "date": "2026-08-23",
-        "days_ago": 84,
+        "days_ago": 85,
         "color": "green",
         "blink": false
       },
@@ -656,7 +656,7 @@
         "last_comment_by": "jordijoangimenez",
         "last_comment_date": "2026-08-23",
         "date": "2026-08-11",
-        "days_ago": 96,
+        "days_ago": 97,
         "color": "orange",
         "blink": false
       },
@@ -670,7 +670,7 @@
         "last_comment_by": "jordijoangimenez",
         "last_comment_date": "2026-08-23",
         "date": "2026-08-11",
-        "days_ago": 96,
+        "days_ago": 97,
         "color": "orange",
         "blink": false
       },
@@ -684,7 +684,7 @@
         "last_comment_by": "rbouqueau",
         "last_comment_date": "2025-10-31",
         "date": "2021-11-30",
-        "days_ago": 1811,
+        "days_ago": 1812,
         "color": "red",
         "blink": false
       },
@@ -698,7 +698,7 @@
         "last_comment_by": "rbouqueau",
         "last_comment_date": "2021-10-23",
         "date": "2021-10-23",
-        "days_ago": 1849,
+        "days_ago": 1850,
         "color": "red",
         "blink": false
       }
@@ -714,7 +714,7 @@
         "last_comment_by": "jordijoangimenez",
         "last_comment_date": "2026-10-08",
         "date": "2026-10-08",
-        "days_ago": 38,
+        "days_ago": 39,
         "color": "green",
         "blink": false
       }
@@ -730,12 +730,26 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-10-29",
-        "days_ago": 17,
+        "days_ago": 18,
         "color": "green",
         "blink": true
       }
     ],
     "6G Testbed": [
+      {
+        "number": "#15",
+        "status": "Ready",
+        "repo": "6G-Testbed",
+        "title": "Add end-to-end experiment pipeline for One-D-Piece image-token transmission over lossy links with Qwen3-VL evaluation",
+        "url": "https://github.com/5G-MAG/6G-Testbed/pull/15",
+        "user": "Vaderpucong",
+        "last_comment_by": null,
+        "last_comment_date": null,
+        "date": "2026-11-16",
+        "days_ago": 0,
+        "color": "green",
+        "blink": true
+      },
       {
         "number": "#11",
         "status": "Ready",
@@ -746,7 +760,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-09-29",
-        "days_ago": 47,
+        "days_ago": 48,
         "color": "green",
         "blink": false
       },
@@ -760,7 +774,7 @@
         "last_comment_by": "ibouazizi",
         "last_comment_date": "2026-10-08",
         "date": "2026-08-26",
-        "days_ago": 81,
+        "days_ago": 82,
         "color": "green",
         "blink": false
       }
@@ -776,7 +790,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-10-21",
-        "days_ago": 25,
+        "days_ago": 26,
         "color": "green",
         "blink": true
       },
@@ -790,7 +804,7 @@
         "last_comment_by": "jordijoangimenez",
         "last_comment_date": "2026-10-03",
         "date": "2026-10-03",
-        "days_ago": 43,
+        "days_ago": 44,
         "color": "green",
         "blink": false
       }
@@ -806,7 +820,7 @@
         "last_comment_by": "jordijoangimenez",
         "last_comment_date": "2026-10-08",
         "date": "2026-10-08",
-        "days_ago": 38,
+        "days_ago": 39,
         "color": "green",
         "blink": false
       }
@@ -822,7 +836,7 @@
         "last_comment_by": "jordijoangimenez",
         "last_comment_date": "2025-10-22",
         "date": "2024-11-20",
-        "days_ago": 725,
+        "days_ago": 726,
         "color": "red",
         "blink": false
       }
@@ -838,9 +852,9 @@
         "last_comment_by": "dsilhavy",
         "last_comment_date": "2026-10-21",
         "date": "2026-10-16",
-        "days_ago": 30,
+        "days_ago": 31,
         "color": "green",
-        "blink": true
+        "blink": false
       },
       {
         "number": "#57",
@@ -852,9 +866,9 @@
         "last_comment_by": "jordijoangimenez",
         "last_comment_date": "2026-10-20",
         "date": "2026-10-16",
-        "days_ago": 30,
+        "days_ago": 31,
         "color": "green",
-        "blink": true
+        "blink": false
       },
       {
         "number": "#56",
@@ -866,9 +880,9 @@
         "last_comment_by": "jordijoangimenez",
         "last_comment_date": "2026-10-20",
         "date": "2026-10-16",
-        "days_ago": 30,
+        "days_ago": 31,
         "color": "green",
-        "blink": true
+        "blink": false
       },
       {
         "number": "#6",
@@ -880,7 +894,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-09-30",
-        "days_ago": 46,
+        "days_ago": 47,
         "color": "green",
         "blink": false
       },
@@ -894,7 +908,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-09-29",
-        "days_ago": 47,
+        "days_ago": 48,
         "color": "green",
         "blink": false
       },
@@ -908,7 +922,7 @@
         "last_comment_by": null,
         "last_comment_date": null,
         "date": "2026-07-02",
-        "days_ago": 136,
+        "days_ago": 137,
         "color": "orange",
         "blink": false
       },
@@ -922,7 +936,7 @@
         "last_comment_by": "dsilhavy",
         "last_comment_date": "2026-10-30",
         "date": "2026-09-07",
-        "days_ago": 69,
+        "days_ago": 70,
         "color": "green",
         "blink": false
       }
